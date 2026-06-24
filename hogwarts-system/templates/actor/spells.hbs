@@ -1,0 +1,105 @@
+{{! Spells Tab }}
+<section
+  class='tab spells scrollable {{tab.cssClass}}'
+  data-group='primary'
+  data-tab='spells'
+>
+  <div class='spell-learning-cap'>
+    <label>{{localize 'HOGWARTS.Spells.MaxMalus'}}</label>
+    <input type='number' value='{{multiply system.stats.int.value 5}}' readonly disabled />
+  </div>
+
+  <div class='item-drop-target' data-drop-type='spell'>
+  <ol class='items-list'>
+    {{#each spells as |spells spellLevel|}}
+      <li class='item flexrow items-header'>
+        <div class='item-name'>
+          {{#if (eq spellLevel '6')}}
+            {{localize 'HOGWARTS.Item.Spell.SpellLVL' level='5+'}}
+          {{else}}
+            {{localize 'HOGWARTS.Item.Spell.SpellLVL' level=spellLevel}}
+          {{/if}}
+        </div>
+        <div class='item-type'>{{localize 'HOGWARTS.Item.Spell.FIELDS.spellType.label'}}</div>
+        <div class='item-target'>{{localize 'HOGWARTS.Item.Spell.FIELDS.target.label'}}</div>
+        <div class='item-malus'>{{localize 'HOGWARTS.Item.Spell.FIELDS.malus.label'}}</div>
+        <div class='item-extreme'>{{localize 'HOGWARTS.Item.Spell.FIELDS.extremeFormula.label'}}</div>
+        <div class='item-controls'>
+          {{#if @root.editable}}
+            <a
+              class='item-control item-create'
+              data-tooltip='{{localize "DOCUMENT.Create" type='Spell'}}'
+              data-action='createDoc'
+              data-document-class='Item'
+              data-type='spell'
+              data-system.spell-level='{{spellLevel}}'
+            >
+              <i class='fas fa-plus'></i>
+              {{#if (eq spellLevel '6')}}
+                {{localize 'HOGWARTS.Item.Spell.AddLVL' level='5+'}}
+              {{else}}
+                {{localize 'HOGWARTS.Item.Spell.AddLVL' level=spellLevel}}
+              {{/if}}
+            </a>
+          {{/if}}
+        </div>
+      </li>
+      {{#each spells as |item id|}}
+        <li
+          class='item flexrow draggable'
+          data-item-id='{{item._id}}'
+          data-document-class='Item'
+        >
+          <div class='item-name flexrow'>
+            <div class='item-image'>
+              <a class='rollable' data-roll-type='spell' data-action='rollSpell' data-item-id='{{item._id}}'>
+                <img
+                  src='{{item.img}}'
+                  data-tooltip='{{item.name}}'
+                  width='24'
+                  height='24'
+                />
+              </a>
+            </div>
+            <div>{{item.name}}</div>
+          </div>
+          <div class='item-type'>{{item.system.spellType}}</div>
+          <div class='item-target'>{{item.system.targetDisplay}}</div>
+          <div class='item-malus'>{{item.system.malus}}</div>
+          <div class='item-extreme'>
+            {{#unless (eq item.system.malusExtremeFormula 0)}}
+              <input
+                type='checkbox'
+                name='items.{{item._id}}.system.extremeFormula'
+                {{#if item.system.extremeFormula}}checked{{/if}}
+                data-action='updateDoc'
+                data-document-class='Item'
+                data-item-id='{{item._id}}'
+              />
+            {{/unless}}
+          </div>
+          <div class='item-controls'>
+            <a
+              class='item-control item-edit'
+              data-tooltip='{{localize "DOCUMENT.Update" type='spell'}}'
+              data-action='viewDoc'
+            >
+              <i class='fas fa-edit'></i>
+            </a>
+            {{#if @root.editable}}
+              <a
+                class='item-control item-delete'
+                data-tooltip='{{localize "DOCUMENT.Delete" type='spell'}}'
+                data-action='deleteDoc'
+              >
+                <i class='fas fa-trash'></i>
+              </a>
+            {{/if}}
+          </div>
+        </li>
+      {{/each}}
+    {{/each}}
+  </ol>
+  </div>
+
+</section>

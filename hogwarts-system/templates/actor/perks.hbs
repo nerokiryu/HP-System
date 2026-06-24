@@ -1,0 +1,295 @@
+<section class='tab perks scrollable {{tab.cssClass}}'
+  data-group='primary' data-tab='perks'>
+  
+  {{#if (eq actor.type "familiar")}}
+  {{!-- Two sections for familiars: natural and special --}}
+  <div class='perk-section'>
+    <h3>{{localize 'HOGWARTS.Perks.NaturalAbilities'}}</h3>
+    <div class='item-drop-target' data-drop-type='feature'>
+    <ol class='items-list'>
+      <li class='item flexrow items-header'>
+        <div class='item-name'>{{localize 'HOGWARTS.Name'}}</div>
+        <div class='item-pbp'>{{localize 'HOGWARTS.Item.Feature.PBPCost'}}</div>
+        <div class='item-controls'>
+          {{#if @root.editable}}
+            <a class='item-control item-create' data-tooltip='Create item'
+              data-action='createDoc' data-document-class='Item'
+              data-type='feature' data-system.perk-type='abilityNatural'>
+              <i class='fas fa-plus'></i>
+            </a>
+          {{/if}}
+        </div>
+      </li>
+      {{#each perks.naturalAbilities as |item id|}}
+        <li class='item flexrow draggable' data-item-id='{{item._id}}' data-document-class='Item'>
+          <div class='item-name'>
+            <div class='item-image'>
+              <a class='rollable' data-roll-type='item' data-action='roll'>
+                <img src='{{item.img}}' data-tooltip='{{item.name}}' width='24' height='24'/>
+              </a>
+            </div>
+            <h4><a class='rollable' data-action='viewDoc'>{{item.name}}</a></h4>
+          </div>
+          <div class='item-pbp'>{{item.system.pbpCost}}</div>
+          <div class='item-controls'>
+            {{#if @root.editable}}
+              <a class='item-control item-delete' data-tooltip='Delete Item' data-action='deleteDoc'>
+                <i class='fas fa-trash'></i>
+              </a>
+            {{/if}}
+          </div>
+        </li>
+      {{/each}}
+    </ol>
+    </div>
+  </div>
+
+  <div class='perk-section'>
+    <h3>{{localize 'HOGWARTS.Perks.SpecialAbilities'}}</h3>
+    <div class='item-drop-target' data-drop-type='feature'>
+    <ol class='items-list'>
+      <li class='item flexrow items-header'>
+        <div class='item-name'>{{localize 'HOGWARTS.Name'}}</div>
+        <div class='item-pbp'>{{localize 'HOGWARTS.Item.Feature.PBPCost'}}</div>
+        <div class='item-controls'>
+          {{#if @root.editable}}
+            <a class='item-control item-create' data-tooltip='Create item'
+              data-action='createDoc' data-document-class='Item'
+              data-type='feature' data-system.perk-type='abilitySpecial'>
+              <i class='fas fa-plus'></i>
+            </a>
+          {{/if}}
+        </div>
+      </li>
+      {{#each perks.specialAbilities as |item id|}}
+        <li class='item flexrow draggable' data-item-id='{{item._id}}' data-document-class='Item'>
+          <div class='item-name'>
+            <div class='item-image'>
+              <a class='rollable' data-roll-type='item' data-action='roll'>
+                <img src='{{item.img}}' data-tooltip='{{item.name}}' width='24' height='24'/>
+              </a>
+            </div>
+            <h4><a class='rollable' data-action='viewDoc'>{{item.name}}</a></h4>
+          </div>
+          <div class='item-pbp'>{{item.system.pbpCost}}</div>
+          <div class='item-controls'>
+            {{#if @root.editable}}
+              <a class='item-control item-delete' data-tooltip='Delete Item' data-action='deleteDoc'>
+                <i class='fas fa-trash'></i>
+              </a>
+            {{/if}}
+          </div>
+        </li>
+      {{/each}}
+    </ol>
+    </div>
+  </div>
+  {{else}}
+  {{!-- Sections for characters --}}
+  <div class='perk-section'>
+    <h3>{{localize 'HOGWARTS.Perks.FateBoon'}}</h3>
+    <div class='item-drop-target' data-drop-type='feature'>
+    <ol class='items-list'>
+      <li class='item flexrow items-header'>
+        <div class='item-name'>{{localize 'HOGWARTS.Name'}}</div>
+        <div class='item-pbp'>{{localize 'HOGWARTS.Item.Feature.PBPCost'}}</div>
+        <div class='item-controls'>
+          {{#if @root.editable}}
+            <a class='item-control item-create' data-tooltip='Create item'
+              data-action='createDoc' data-document-class='Item'
+              data-type='feature' data-system.perk-type='fateBoon'>
+              <i class='fas fa-plus'></i>
+            </a>
+          {{/if}}
+        </div>
+      </li>
+      {{#each perks.fateBoon as |item id|}}
+        <li class='item flexrow draggable' data-item-id='{{item._id}}' data-document-class='Item'>
+          <div class='item-name'>
+            <div class='item-image'>
+              <a class='rollable' data-roll-type='item' data-action='roll'>
+                <img src='{{item.img}}' data-tooltip='{{item.name}}' width='24' height='24'/>
+              </a>
+            </div>
+            <h4><a class='rollable' data-action='viewDoc'>{{item.name}}</a></h4>
+          </div>
+          <div class='item-pbp'>{{item.system.pbpCost}}</div>
+          <div class='item-controls'>
+            {{#if @root.editable}}
+              <a class='item-control item-delete' data-tooltip='Delete Item' data-action='deleteDoc'>
+                <i class='fas fa-trash'></i>
+              </a>
+            {{/if}}
+          </div>
+        </li>
+      {{/each}}
+    </ol>
+    </div>
+  </div>
+
+  <div class='perk-section'>
+    <h3>{{localize 'HOGWARTS.Perks.FateBane'}}</h3>
+    <div class='item-drop-target' data-drop-type='feature'>
+    <ol class='items-list'>
+      <li class='item flexrow items-header'>
+        <div class='item-name'>{{localize 'HOGWARTS.Name'}}</div>
+        <div class='item-pbp'>{{localize 'HOGWARTS.Item.Feature.PBPCost'}}</div>
+        <div class='item-controls'>
+          {{#if @root.editable}}
+            <a class='item-control item-create' data-tooltip='Create item'
+              data-action='createDoc' data-document-class='Item'
+              data-type='feature' data-system.perk-type='fateBane'>
+              <i class='fas fa-plus'></i>
+            </a>
+          {{/if}}
+        </div>
+      </li>
+      {{#each perks.fateBane as |item id|}}
+        <li class='item flexrow draggable' data-item-id='{{item._id}}' data-document-class='Item'>
+          <div class='item-name'>
+            <div class='item-image'>
+              <a class='rollable' data-roll-type='item' data-action='roll'>
+                <img src='{{item.img}}' data-tooltip='{{item.name}}' width='24' height='24'/>
+              </a>
+            </div>
+            <h4><a class='rollable' data-action='viewDoc'>{{item.name}}</a></h4>
+          </div>
+          <div class='item-pbp'>{{item.system.pbpCost}}</div>
+          <div class='item-controls'>
+            {{#if @root.editable}}
+              <a class='item-control item-delete' data-tooltip='Delete Item' data-action='deleteDoc'>
+                <i class='fas fa-trash'></i>
+              </a>
+            {{/if}}
+          </div>
+        </li>
+      {{/each}}
+    </ol>
+    </div>
+  </div>
+
+  <div class='perk-section'>
+    <h3>{{localize 'HOGWARTS.Perks.Advantages'}}</h3>
+    <div class='item-drop-target' data-drop-type='feature'>
+    <ol class='items-list'>
+      <li class='item flexrow items-header'>
+        <div class='item-name'>{{localize 'HOGWARTS.Name'}}</div>
+        <div class='item-pbp'>{{localize 'HOGWARTS.Item.Feature.PBPCost'}}</div>
+        <div class='item-controls'>
+          {{#if @root.editable}}
+            <a class='item-control item-create' data-tooltip='Create item'
+              data-action='createDoc' data-document-class='Item'
+              data-type='feature' data-system.perk-type='advantage'>
+              <i class='fas fa-plus'></i>
+            </a>
+          {{/if}}
+        </div>
+      </li>
+      {{#each perks.advantages as |item id|}}
+        <li class='item flexrow draggable' data-item-id='{{item._id}}' data-document-class='Item'>
+          <div class='item-name'>
+            <div class='item-image'>
+              <a class='rollable' data-roll-type='item' data-action='roll'>
+                <img src='{{item.img}}' data-tooltip='{{item.name}}' width='24' height='24'/>
+              </a>
+            </div>
+            <h4><a class='rollable' data-action='viewDoc'>{{item.name}}</a></h4>
+          </div>
+          <div class='item-pbp'>{{item.system.pbpCost}}</div>
+          <div class='item-controls'>
+            {{#if @root.editable}}
+              <a class='item-control item-delete' data-tooltip='Delete Item' data-action='deleteDoc'>
+                <i class='fas fa-trash'></i>
+              </a>
+            {{/if}}
+          </div>
+        </li>
+      {{/each}}
+    </ol>
+    </div>
+  </div>
+
+
+  <div class='perk-section'>
+    <h3>{{localize 'HOGWARTS.Perks.Disadvantages'}}</h3>
+    <ol class='items-list'>
+      <li class='item flexrow items-header'>
+        <div class='item-name'>{{localize 'HOGWARTS.Name'}}</div>
+        <div class='item-pbp'>{{localize 'HOGWARTS.Item.Feature.PBPCost'}}</div>
+        <div class='item-controls'>
+          {{#if @root.editable}}
+            <a class='item-control item-create' data-tooltip='Create item'
+              data-action='createDoc' data-document-class='Item'
+              data-type='feature' data-system.perk-type='disadvantage'>
+              <i class='fas fa-plus'></i>
+            </a>
+          {{/if}}
+        </div>
+      </li>
+      {{#each perks.disadvantages as |item id|}}
+        <li class='item flexrow draggable' data-item-id='{{item._id}}' data-document-class='Item'>
+          <div class='item-name'>
+            <div class='item-image'>
+              <a class='rollable' data-roll-type='item' data-action='roll'>
+                <img src='{{item.img}}' data-tooltip='{{item.name}}' width='24' height='24'/>
+              </a>
+            </div>
+            <h4><a class='rollable' data-action='viewDoc'>{{item.name}}</a></h4>
+          </div>
+          <div class='item-pbp'>{{item.system.pbpCost}}</div>
+          <div class='item-controls'>
+            {{#if @root.editable}}
+              <a class='item-control item-delete' data-tooltip='Delete Item' data-action='deleteDoc'>
+                <i class='fas fa-trash'></i>
+              </a>
+            {{/if}}
+          </div>
+        </li>
+      {{/each}}
+    </ol>
+  </div>
+
+  <div class='perk-section'>
+    <h3>{{localize 'HOGWARTS.Perks.HouseAxioms'}}</h3>
+    <div class='item-drop-target' data-drop-type='feature'>
+    <ol class='items-list'>
+      <li class='item flexrow items-header'>
+        <div class='item-name'>{{localize 'HOGWARTS.Name'}}</div>
+        <div class='item-pbp'>{{localize 'HOGWARTS.Item.Feature.PBPCost'}}</div>
+        <div class='item-controls'>
+          {{#if @root.editable}}
+            <a class='item-control item-create' data-tooltip='Create item'
+              data-action='createDoc' data-document-class='Item'
+              data-type='feature' data-system.perk-type='houseAxiom'>
+              <i class='fas fa-plus'></i>
+            </a>
+          {{/if}}
+        </div>
+      </li>
+      {{#each perks.houseAxioms as |item id|}}
+        <li class='item flexrow draggable' data-item-id='{{item._id}}' data-document-class='Item'>
+          <div class='item-name'>
+            <div class='item-image'>
+              <a class='rollable' data-roll-type='item' data-action='roll'>
+                <img src='{{item.img}}' data-tooltip='{{item.name}}' width='24' height='24'/>
+              </a>
+            </div>
+            <h4><a class='rollable' data-action='viewDoc'>{{item.name}}</a></h4>
+          </div>
+          <div class='item-pbp'>{{item.system.pbpCost}}</div>
+          <div class='item-controls'>
+            {{#if @root.editable}}
+              <a class='item-control item-delete' data-tooltip='Delete Item' data-action='deleteDoc'>
+                <i class='fas fa-trash'></i>
+              </a>
+            {{/if}}
+          </div>
+        </li>
+      {{/each}}
+    </ol>
+    </div>
+  </div>
+
+  {{/if}}
+
+</section>

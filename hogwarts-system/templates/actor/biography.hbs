@@ -1,0 +1,391 @@
+{{! Biography Tab }}
+<section
+  class='tab biography scrollable {{tab.cssClass}}'
+  data-group='primary'
+  data-tab='biography'
+>
+  {{#if (eq actor.type "familiar")}}
+  {{! Simplified biography for familiar }}
+  
+  {{! Species }}
+  <div class='bio-section'>
+    <h3 class='collapsible' data-action='toggleBioSection' data-section='species'>
+      <i class='fas fa-chevron-down'></i>
+      {{localize 'HOGWARTS.Actor.Familiar.Species'}}
+    </h3>
+    <div class='bio-content' data-section='species'>
+      <div class='form-group'>
+        <input type='text' name='system.bio.species' value='{{system.bio.species}}' />
+      </div>
+    </div>
+  </div>
+
+  {{! Appearance }}
+  <div class='bio-section'>
+    <h3 class='collapsible' data-action='toggleBioSection' data-section='appearance'>
+      <i class='fas fa-chevron-down'></i>
+      {{localize 'HOGWARTS.Actor.Familiar.Appearance'}}
+    </h3>
+    <div class='bio-content' data-section='appearance'>
+      <div class='form-group'>
+        {{#if editable}}
+          <prose-mirror name="system.bio.appearance" data-document-uuid="{{actor.uuid}}" value="{{system.bio.appearance}}">
+          </prose-mirror>
+        {{else}}
+          {{{system.bio.appearance}}}
+        {{/if}}
+      </div>
+    </div>
+  </div>
+
+  {{! Personality }}
+  <div class='bio-section'>
+    <h3 class='collapsible' data-action='toggleBioSection' data-section='personality'>
+      <i class='fas fa-chevron-down'></i>
+      {{localize 'HOGWARTS.Actor.Familiar.Personality'}}
+    </h3>
+    <div class='bio-content' data-section='personality'>
+      <div class='form-group'>
+        {{#if editable}}
+          <prose-mirror name="system.bio.personality" data-document-uuid="{{actor.uuid}}" value="{{system.bio.personality}}">
+          </prose-mirror>
+        {{else}}
+          {{{system.bio.personality}}}
+        {{/if}}
+      </div>
+    </div>
+  </div>
+
+  {{! Bonds }}
+  <div class='bio-section'>
+    <h3 class='collapsible' data-action='toggleBioSection' data-section='bond'>
+      <i class='fas fa-chevron-down'></i>
+      {{localize 'HOGWARTS.Actor.Familiar.Bond'}}
+    </h3>
+    <div class='bio-content' data-section='bond'>
+      <div class='form-group'>
+        {{#if editable}}
+          <prose-mirror name="system.bio.bond" data-document-uuid="{{actor.uuid}}" value="{{system.bio.bond}}">
+          </prose-mirror>
+        {{else}}
+          {{{system.bio.bond}}}
+        {{/if}}
+      </div>
+    </div>
+  </div>
+
+  {{! Notes }}
+  <div class='bio-section'>
+    <h3 class='collapsible' data-action='toggleBioSection' data-section='notes'>
+      <i class='fas fa-chevron-down'></i>
+      {{localize 'HOGWARTS.Biography.Notes'}}
+    </h3>
+    <div class='bio-content' data-section='notes'>
+      <div class='form-group'>
+        <label>{{localize 'HOGWARTS.Biography.RPNotes'}}</label>
+        {{#if editable}}
+          <prose-mirror name="system.notes.rpNotes" data-document-uuid="{{actor.uuid}}" value="{{system.notes.rpNotes}}">
+          </prose-mirror>
+        {{else}}
+          {{{system.notes.rpNotes}}}
+        {{/if}}
+      </div>
+      {{#if isGM}}
+        <div class='form-group gm-only'>
+          <label>{{localize 'HOGWARTS.Biography.GMNotes'}} ({{localize 'HOGWARTS.Biography.GMOnly'}})</label>
+          {{#if editable}}
+            <prose-mirror name="system.notes.gmNotes" data-document-uuid="{{actor.uuid}}" value="{{system.notes.gmNotes}}">
+            </prose-mirror>
+          {{else}}
+            {{{system.notes.gmNotes}}}
+          {{/if}}
+        </div>
+      {{/if}}
+    </div>
+  </div>
+
+  {{else}}
+  {{! Full biography for character }}
+  
+  {{! Family }}
+  <div class='bio-section'>
+    <h3 class='collapsible' data-action='toggleBioSection' data-section='family'>
+      <i class='fas fa-chevron-down'></i>
+      {{localize 'HOGWARTS.Biography.Family'}}
+    </h3>
+    <div class='bio-content' data-section='family'>
+      <ol class='items-list'>
+        <li class='item flexrow items-header'>
+          <div class='item-name'>{{localize 'HOGWARTS.Biography.Role'}}</div>
+          <div class='item-prop'>{{localize 'HOGWARTS.Biography.Name'}}</div>
+          <div class='item-prop'>{{localize 'HOGWARTS.Biography.Age'}}</div>
+          <div class='item-name' style='flex: 2;'>{{localize 'HOGWARTS.Biography.Details'}}</div>
+          <div class='item-controls'>
+            <a class='item-control' data-action='addFamilyMember' data-tooltip='{{localize "HOGWARTS.Biography.AddFamilyMember"}}'>
+              <i class='fas fa-plus'></i>
+            </a>
+          </div>
+        </li>
+        {{#each system.family as |member index|}}
+          <li class='item flexrow'>
+            <div class='item-name'>
+              <input type='text' name='system.family.{{index}}.role' value='{{member.role}}' placeholder='{{localize "HOGWARTS.Biography.Role"}}' />
+            </div>
+            <div class='item-prop'>
+              <input type='text' name='system.family.{{index}}.name' value='{{member.name}}' placeholder='{{localize "HOGWARTS.Biography.Name"}}' />
+            </div>
+            <div class='item-prop'>
+              <input type='number' name='system.family.{{index}}.age' value='{{member.age}}' placeholder='{{localize "HOGWARTS.Biography.Age"}}' />
+            </div>
+            <div class='item-name' style='flex: 2;'>
+              <textarea name='system.family.{{index}}.details' rows='2' placeholder='{{localize "HOGWARTS.Biography.Details"}}'>{{member.details}}</textarea>
+            </div>
+            <div class='item-controls'>
+              <a class='item-control' data-action='deleteFamilyMember' data-index='{{index}}' data-tooltip='{{localize "HOGWARTS.Biography.DeleteFamilyMember"}}'>
+                <i class='fas fa-trash'></i>
+              </a>
+            </div>
+          </li>
+        {{/each}}
+      </ol>
+    </div>
+  </div>
+
+  {{! Appearance }}
+  <div class='bio-section'>
+    <h3 class='collapsible' data-action='toggleBioSection' data-section='appearance'>
+      <i class='fas fa-chevron-down'></i>
+      {{localize 'HOGWARTS.Biography.Appearance'}}
+    </h3>
+    <div class='bio-content' data-section='appearance'>
+      <div class='form-grid'>
+        <div class='form-group'>
+          <label>{{localize 'HOGWARTS.Biography.Height'}}</label>
+          <input type='text' name='system.appearance.height' value='{{system.appearance.height}}' />
+        </div>
+        <div class='form-group'>
+          <label>{{localize 'HOGWARTS.Biography.Weight'}}</label>
+          <input type='text' name='system.appearance.weight' value='{{system.appearance.weight}}' />
+        </div>
+        <div class='form-group'>
+          <label>{{localize 'HOGWARTS.Biography.Skin'}}</label>
+          <input type='text' name='system.appearance.skin' value='{{system.appearance.skin}}' />
+        </div>
+        <div class='form-group'>
+          <label>{{localize 'HOGWARTS.Biography.HairLength'}}</label>
+          <input type='text' name='system.appearance.hairLength' value='{{system.appearance.hairLength}}' />
+        </div>
+        <div class='form-group'>
+          <label>{{localize 'HOGWARTS.Biography.HairType'}}</label>
+          <input type='text' name='system.appearance.hairType' value='{{system.appearance.hairType}}' />
+        </div>
+        <div class='form-group'>
+          <label>{{localize 'HOGWARTS.Biography.HairColor'}}</label>
+          <input type='text' name='system.appearance.hairColor' value='{{system.appearance.hairColor}}' />
+        </div>
+        <div class='form-group'>
+          <label>{{localize 'HOGWARTS.Biography.HairInspiration'}}</label>
+          <input type='text' name='system.appearance.hairInspiration' value='{{system.appearance.hairInspiration}}' />
+        </div>
+        <div class='form-group'>
+          <label>{{localize 'HOGWARTS.Biography.Eyes'}}</label>
+          <input type='text' name='system.appearance.eyes' value='{{system.appearance.eyes}}' />
+        </div>
+        <div class='form-group'>
+          <label>{{localize 'HOGWARTS.Biography.DominantHand'}}</label>
+          <select name='system.appearance.dominantHand'>
+            <option value='' {{#unless system.appearance.dominantHand}}selected{{/unless}}>--</option>
+            <option value='left' {{#if (eq system.appearance.dominantHand 'left')}}selected{{/if}}>{{localize 'HOGWARTS.Biography.HandLeft'}}</option>
+            <option value='right' {{#if (eq system.appearance.dominantHand 'right')}}selected{{/if}}>{{localize 'HOGWARTS.Biography.HandRight'}}</option>
+            <option value='ambidextrous' {{#if (eq system.appearance.dominantHand 'ambidextrous')}}selected{{/if}}>{{localize 'HOGWARTS.Biography.HandAmbidextrous'}}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{! Character }}
+  <div class='bio-section'>
+    <h3 class='collapsible' data-action='toggleBioSection' data-section='character'>
+      <i class='fas fa-chevron-down'></i>
+      {{localize 'HOGWARTS.Biography.Character'}}
+    </h3>
+    <div class='bio-content' data-section='character'>
+      <div class='form-grid'>
+        <div class='form-group-row'>
+          <div class='form-group'>
+            <label>{{localize 'HOGWARTS.Biography.Qualities'}}</label>
+            <textarea name='system.character.qualities' rows='2'>{{system.character.qualities}}</textarea>
+          </div>
+          <div class='form-group'>
+            <label>{{localize 'HOGWARTS.Biography.Flaws'}}</label>
+            <textarea name='system.character.flaws' rows='2'>{{system.character.flaws}}</textarea>
+          </div>
+        </div>
+        <div class='form-group'>
+          <label>{{localize 'HOGWARTS.Biography.Style'}}</label>
+          <input type='text' name='system.character.style' value='{{system.character.style}}' />
+        </div>
+        <div class='form-group'>
+          <label>{{localize 'HOGWARTS.Biography.FavoriteExpression'}}</label>
+          <input type='text' name='system.character.favoriteExpression' value='{{system.character.favoriteExpression}}' />
+        </div>
+        <div class='form-group'>
+          <label>{{localize 'HOGWARTS.Biography.Accent'}}</label>
+          <input type='text' name='system.character.accent' value='{{system.character.accent}}' />
+        </div>
+        <div class='form-group'>
+          <label>{{localize 'HOGWARTS.Biography.Interests'}}</label>
+          <textarea name='system.character.interests' rows='2'>{{system.character.interests}}</textarea>
+        </div>
+        <div class='form-group-row'>
+          <div class='form-group'>
+            <label>{{localize 'HOGWARTS.Biography.Likes'}}</label>
+            <textarea name='system.character.likes' rows='2'>{{system.character.likes}}</textarea>
+          </div>
+          <div class='form-group'>
+            <label>{{localize 'HOGWARTS.Biography.Dislikes'}}</label>
+            <textarea name='system.character.dislikes' rows='2'>{{system.character.dislikes}}</textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{! Information }}
+  <div class='bio-section'>
+    <h3 class='collapsible' data-action='toggleBioSection' data-section='information'>
+      <i class='fas fa-chevron-down'></i>
+      {{localize 'HOGWARTS.Biography.Information'}}
+    </h3>
+    <div class='bio-content' data-section='information'>
+      <div class='form-grid'>
+        <div class='form-group'>
+          <label>Âge</label>
+          <input type='number' name='system.profile.age' value='{{system.profile.age}}' />
+        </div>
+        <div class='form-group'>
+          <label>{{localize 'HOGWARTS.Biography.Patronus'}}</label>
+          <input type='text' name='system.information.patronus' value='{{system.information.patronus}}' />
+        </div>
+        <div class='form-group'>
+          <label>{{localize 'HOGWARTS.Biography.Origin'}}</label>
+          <input type='text' name='system.information.origin' value='{{system.information.origin}}' />
+        </div>
+        <div class='form-group'>
+          <label>{{localize 'HOGWARTS.Biography.Gender'}}</label>
+          <select name='system.information.gender'>
+            <option value='' {{#unless system.information.gender}}selected{{/unless}}>--</option>
+            <option value='male' {{#if (eq system.information.gender 'male')}}selected{{/if}}>{{localize 'HOGWARTS.Biography.GenderMale'}}</option>
+            <option value='female' {{#if (eq system.information.gender 'female')}}selected{{/if}}>{{localize 'HOGWARTS.Biography.GenderFemale'}}</option>
+            <option value='other' {{#if (eq system.information.gender 'other')}}selected{{/if}}>{{localize 'HOGWARTS.Biography.GenderOther'}}</option>
+          </select>
+        </div>
+        <div class='form-group'>
+          <label>{{localize 'HOGWARTS.Biography.BloodStatus'}}</label>
+          <select name='system.information.bloodStatus'>
+            <option value='' {{#unless system.information.bloodStatus}}selected{{/unless}}>--</option>
+            <option value='muggleborn' {{#if (eq system.information.bloodStatus 'muggleborn')}}selected{{/if}}>{{localize 'HOGWARTS.Biography.BloodStatusMuggleBorn'}}</option>
+            <option value='halfblood' {{#if (eq system.information.bloodStatus 'halfblood')}}selected{{/if}}>{{localize 'HOGWARTS.Biography.BloodStatusHalfBlood'}}</option>
+            <option value='pureblood' {{#if (eq system.information.bloodStatus 'pureblood')}}selected{{/if}}>{{localize 'HOGWARTS.Biography.BloodStatusPureBlood'}}</option>
+          </select>
+        </div>
+        <div class='form-group'>
+          <label>{{localize 'HOGWARTS.Actor.Character.FIELDS.profile.archetype.label'}}</label>
+          <select name='system.profile.archetype'>
+            <option value='' {{#if (eq system.profile.archetype '')}}selected{{/if}}>{{localize 'HOGWARTS.Actor.Character.Archetype.none'}}</option>
+            <option value='canaille' {{#if (eq system.profile.archetype 'canaille')}}selected{{/if}}>{{localize 'HOGWARTS.Actor.Character.Archetype.canaille'}}</option>
+            <option value='cerebral' {{#if (eq system.profile.archetype 'cerebral')}}selected{{/if}}>{{localize 'HOGWARTS.Actor.Character.Archetype.cerebral'}}</option>
+            <option value='honnete' {{#if (eq system.profile.archetype 'honnete')}}selected{{/if}}>{{localize 'HOGWARTS.Actor.Character.Archetype.honnete'}}</option>
+            <option value='manipulateur' {{#if (eq system.profile.archetype 'manipulateur')}}selected{{/if}}>{{localize 'HOGWARTS.Actor.Character.Archetype.manipulateur'}}</option>
+            <option value='naturaliste' {{#if (eq system.profile.archetype 'naturaliste')}}selected{{/if}}>{{localize 'HOGWARTS.Actor.Character.Archetype.naturaliste'}}</option>
+            <option value='sportif' {{#if (eq system.profile.archetype 'sportif')}}selected{{/if}}>{{localize 'HOGWARTS.Actor.Character.Archetype.sportif'}}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{! Boggart }}
+  <div class='bio-section'>
+    <h3 class='collapsible' data-action='toggleBioSection' data-section='boggart'>
+      <i class='fas fa-chevron-down'></i>
+      {{localize 'HOGWARTS.Biography.Boggart'}}
+    </h3>
+    <div class='bio-content' data-section='boggart'>
+      <div class='form-grid'>
+        <div class='form-group'>
+          <label>{{localize 'HOGWARTS.Biography.BoggartVisual'}}</label>
+          <textarea name='system.boggart.visual' rows='3'>{{system.boggart.visual}}</textarea>
+        </div>
+        <div class='form-group'>
+          <label>{{localize 'HOGWARTS.Biography.BoggartDescription'}}</label>
+          <textarea name='system.boggart.description' rows='3'>{{system.boggart.description}}</textarea>
+        </div>
+        <div class='form-group'>
+          <label>{{localize 'HOGWARTS.Biography.Riddikulus'}}</label>
+          <textarea name='system.boggart.riddikulus' rows='3'>{{system.boggart.riddikulus}}</textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{! Biography }}
+  <div class='bio-section'>
+    <h3 class='collapsible' data-action='toggleBioSection' data-section='biography'>
+      <i class='fas fa-chevron-down'></i>
+      {{localize 'HOGWARTS.Biography.Biography'}}
+    </h3>
+    <div class='bio-content' data-section='biography'>
+      <div class='form-group'>
+        <label>{{localize 'HOGWARTS.Biography.Motivation'}}</label>
+        {{#if editable}}
+          <prose-mirror name="system.bio.motivation" data-document-uuid="{{actor.uuid}}" value="{{system.bio.motivation}}" collaborate="true">
+          </prose-mirror>
+        {{else}}
+          {{{system.bio.motivation}}}
+        {{/if}}
+      </div>
+      <div class='form-group'>
+        <label>{{localize 'HOGWARTS.Biography.History'}}</label>
+        {{#if editable}}
+          <prose-mirror name="system.bio.history" data-document-uuid="{{actor.uuid}}" value="{{system.bio.history}}" collaborate="true">
+          </prose-mirror>
+        {{else}}
+          {{{system.bio.history}}}
+        {{/if}}
+      </div>
+    </div>
+  </div>
+
+  {{! Notes }}
+  <div class='bio-section'>
+    <h3 class='collapsible' data-action='toggleBioSection' data-section='notes'>
+      <i class='fas fa-chevron-down'></i>
+      {{localize 'HOGWARTS.Biography.Notes'}}
+    </h3>
+    <div class='bio-content' data-section='notes'>
+      <div class='form-group'>
+        <label>{{localize 'HOGWARTS.Biography.RPNotes'}}</label>
+        {{#if editable}}
+          <prose-mirror name="system.notes.rpNotes" data-document-uuid="{{actor.uuid}}" value="{{system.notes.rpNotes}}" collaborate="true">
+          </prose-mirror>
+        {{else}}
+          {{{system.notes.rpNotes}}}
+        {{/if}}
+      </div>
+      {{#if isGM}}
+        <div class='form-group gm-only'>
+          <label>{{localize 'HOGWARTS.Biography.GMNotes'}} ({{localize 'HOGWARTS.Biography.GMOnly'}})</label>
+          {{#if editable}}
+            <prose-mirror name="system.notes.gmNotes" data-document-uuid="{{actor.uuid}}" value="{{system.notes.gmNotes}}" collaborate="true">
+            </prose-mirror>
+          {{else}}
+            {{{system.notes.gmNotes}}}
+          {{/if}}
+        </div>
+      {{/if}}
+    </div>
+  </div>
+  {{/if}}
+</section>

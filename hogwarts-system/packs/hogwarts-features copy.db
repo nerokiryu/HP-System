@@ -1,0 +1,41 @@
+{"$loki":1,"name":"hogwarts-features","collections":[{"name":"items","data":[
+	{
+		"_id": "axiome-loyaute",
+		"name": "Axiome de Maison — Loyauté",
+		"type": "feature",
+		"img": "icons/skills/loyalty-shield-blue.webp",
+		"system": {
+			"description": "<p>Un serment de fidélité à sa maison : confère un bonus moral dans les situations de groupe et facilite les tests sociaux liés à la loyauté.</p>",
+			"perkType": "houseAxiom",
+			"pbpCost": 1
+		},
+		"flags": {},
+		"sort": 100
+	},
+	{
+		"_id": "axiome-courage",
+		"name": "Axiome de Maison — Courage",
+		"type": "feature",
+		"img": "icons/skills/courage-fist-red.webp",
+		"system": {
+			"description": "<p>Un trait qui pousse à affronter le danger : offre un léger bonus aux jets de bravoure et de résistance à la peur.</p>",
+			"perkType": "houseAxiom",
+			"pbpCost": 1
+		},
+		"flags": {},
+		"sort": 110
+	},
+	{
+		"_id": "axiome-ruse",
+		"name": "Axiome de Maison — Ruse",
+		"type": "feature",
+		"img": "icons/skills/trick-stealth-green.webp",
+		"system": {
+			"description": "<p>Un penchant pour la débrouillardise et la ruse : aide dans les tests d'astuce, d'observation et pour tromper les autres.</p>",
+			"perkType": "houseAxiom",
+			"pbpCost": 1
+		},
+		"flags": {},
+		"sort": 120
+	}
+],"idIndex":["axiome-loyaute","axiome-courage","axiome-ruse"],"binaryIndices":{},"cachedIndex":[],"indexes":[],"uniqueNames":[],"transforms":{}}],"meta":{"generatedBy":"hogwarts-system","version":"1.0.0"}}

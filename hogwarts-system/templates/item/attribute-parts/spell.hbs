@@ -1,0 +1,82 @@
+{{! Attributes Tab }}
+<section
+  class='tab attributes {{tab.cssClass}}'
+  data-group='primary'
+  data-tab='attributes'
+>
+  {{! As you add new fields, add them in here! }}
+  <div class='resource'>
+    <label class='resource-label'>{{localize 'HOGWARTS.Item.Spell.FIELDS.level.label'}}</label>
+    <input
+      type='text'
+      name='system.spellLevel'
+      value='{{system.spellLevel}}'
+      data-dtype='Number'
+    />
+  </div>
+  <div class='resource'>
+    <label class='resource-label'>{{localize 'HOGWARTS.Item.Spell.FIELDS.malus.label'}}</label>
+    <input
+      type='text'
+      name='system.malus'
+      value='{{system.malus}}'
+      data-dtype='Number'
+    />
+  </div>
+  <div class='resource'>
+    <label class='resource-label'>{{localize 'HOGWARTS.Item.Spell.FIELDS.spellType.label'}}</label>
+    <select name='system.spellType'>
+      <option value='E' {{#if (eq system.spellType 'E')}}selected{{/if}}>{{localize 'HOGWARTS.Item.Spell.SpellType.E'}}</option>
+      <option value='M' {{#if (eq system.spellType 'M')}}selected{{/if}}>{{localize 'HOGWARTS.Item.Spell.SpellType.M'}}</option>
+      <option value='S' {{#if (eq system.spellType 'S')}}selected{{/if}}>{{localize 'HOGWARTS.Item.Spell.SpellType.S'}}</option>
+      <option value='X' {{#if (eq system.spellType 'X')}}selected{{/if}}>{{localize 'HOGWARTS.Item.Spell.SpellType.X'}}</option>
+    </select>
+  </div>
+  <div class='resource'>
+    <label class='resource-label'>{{localize 'HOGWARTS.Item.Spell.FIELDS.target.label'}}</label>
+    <select name='system.target' multiple size='6'>
+      <option value='A' {{#if (has system.target 'A')}}selected{{/if}}>{{localize 'HOGWARTS.Item.Spell.Target.A'}}</option>
+      <option value='O' {{#if (has system.target 'O')}}selected{{/if}}>{{localize 'HOGWARTS.Item.Spell.Target.O'}}</option>
+      <option value='P' {{#if (has system.target 'P')}}selected{{/if}}>{{localize 'HOGWARTS.Item.Spell.Target.P'}}</option>
+      <option value='V' {{#if (has system.target 'V')}}selected{{/if}}>{{localize 'HOGWARTS.Item.Spell.Target.V'}}</option>
+      <option value='S' {{#if (has system.target 'S')}}selected{{/if}}>{{localize 'HOGWARTS.Item.Spell.Target.S'}}</option>
+      <option value='X' {{#if (has system.target 'X')}}selected{{/if}}>{{localize 'HOGWARTS.Item.Spell.Target.X'}}</option>
+    </select>
+  </div>
+  <div class='resource'>
+    <label class='resource-label'>{{localize 'HOGWARTS.Item.Spell.FIELDS.incantation.label'}}</label>
+    <input
+      type='text'
+      name='system.incantation'
+      value='{{system.incantation}}'
+      data-dtype='String'
+    />
+  </div>
+  <div class='resource'>
+    <label class='resource-label'>{{localize 'HOGWARTS.Item.Spell.FIELDS.preSchool.label'}}</label>
+    <input
+      type='checkbox'
+      name='system.preSchool'
+      {{#if system.preSchool}}checked{{/if}}
+    />
+  </div>
+  <div class='resource'>
+    <label class='resource-label'>{{localize 'HOGWARTS.Item.Spell.FIELDS.malusExtremeFormula.label'}}</label>
+    <input
+      type='text'
+      name='system.malusExtremeFormula'
+      value='{{system.malusExtremeFormula}}'
+      data-dtype='Number'
+    />
+  </div>
+  {{#unless (eq system.malusExtremeFormula 0)}}
+    <div class='resource'>
+      <label class='resource-label'>{{localize 'HOGWARTS.Item.Spell.FIELDS.extremeFormula.label'}}</label>
+      <input
+        type='checkbox'
+        name='system.extremeFormula'
+        {{#if system.extremeFormula}}checked{{/if}}
+      />
+    </div>
+  {{/unless}}
+</section>

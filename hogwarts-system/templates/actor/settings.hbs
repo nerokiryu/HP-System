@@ -1,0 +1,203 @@
+{{! Settings Tab }}
+<section
+  class='tab settings flexcol scrollable {{tab.cssClass}}'
+  data-group='primary'
+  data-tab='settings'
+>
+  {{! Effects Section }}
+  <div class='settings-section effects-section'>
+    <h3 class='collapsible-header' data-action='toggleSettingsSection' data-section='effects'>
+      <i class='fas fa-chevron-down'></i>
+      {{localize 'HOGWARTS.Actor.Settings.Effects'}}
+    </h3>
+    
+    <div class='settings-content' data-section='effects'>
+    <ol class='effects-list'>
+      {{#each effects as |section sid|}}
+        <li
+          class='effects-header flexrow draggable'
+          data-effect-type='{{section.type}}'
+        >
+          <div class='effect-name flexrow'>
+            {{localize section.label}}
+          </div>
+          <div class='effect-source'>
+            {{localize 'HOGWARTS.Effect.Source'}}
+          </div>
+          <div class='effect-source'>{{localize 'EFFECT.TABS.duration'}}</div>
+          <div class='effect-controls flexrow'>
+            <a
+              class='effect-control'
+              data-action='createDoc'
+              data-document-class='ActiveEffect'
+              data-origin="{{@root.actor.uuid}}"
+              data-img="icons/svg/aura.svg"
+              {{#if (eq section.type "inactive")}}
+                data-disabled="true"
+              {{else if (eq section.type "temporary")}}
+                data-duration.rounds="1"
+              {{/if}}
+              data-tooltip='{{localize "DOCUMENT.Create" type='Effect'}}'
+            >
+              <i class='fas fa-plus'></i>
+              {{localize 'DOCUMENT.New' type='Effect'}}
+            </a>
+          </div>
+        </li>
+
+        <ol class='effect-list'>
+          {{#each section.effects as |effect|}}
+            <li
+              class='effect effect flexrow draggable'
+              data-effect-id='{{effect.id}}'
+              data-parent-id='{{effect.parent.id}}'
+              data-document-class='ActiveEffect'
+            >
+              <div class='effect-name flexrow'>
+                <img class='effect-image' src='{{effect.img}}' height="24" width="24"/>
+                <div>{{effect.name}}</div>
+              </div>
+              <div class='effect-source'>{{effect.sourceName}}</div>
+              <div class='effect-duration'>{{effect.duration.label}}</div>
+              <div class='effect-controls flexrow'>
+                {{#if @root.editable}}
+                <a
+                  class='effect-control'
+                  data-action='toggleEffect'
+                  data-tooltip='{{localize "HOGWARTS.Effect.Toggle"}}'
+                >
+                  <i class='fas {{#if effect.disabled}}fa-check{{else}}fa-times{{/if}}'></i>
+                </a>
+                {{/if}}
+                <a
+                  class='effect-control'
+                  data-action='viewDoc'
+                  data-tooltip='{{localize "DOCUMENT.Update" type='Effect'}}'
+                >
+                  <i class='fas fa-edit'></i>
+                </a>
+                {{#if @root.editable}}
+                <a
+                  class='effect-control'
+                  data-action='deleteDoc'
+                  data-tooltip='{{localize "DOCUMENT.Delete" type='Effect'}}'
+                >
+                  <i class='fas fa-trash'></i>
+                </a>
+                {{/if}}
+              </div>
+            </li>
+        {{/each}}
+      </ol>
+    {{/each}}
+  </ol>
+    </div>
+
+      <details class='effect-attr-reference'>
+      <summary>{{localize 'HOGWARTS.Effect.AttributeReference'}}</summary>
+      <p class='effect-attr-hint'>{{localize 'HOGWARTS.Effect.AttributeReferenceHint'}}</p>
+
+      {{! Attributs du schéma }}
+      <p class='effect-attr-section-title'>{{localize 'HOGWARTS.Effect.SectionSchema'}}</p>
+      <ol class='effect-attr-list'>
+        <li class='effect-attr-row effect-attr-head flexrow'>
+          <div class='effect-attr-key'>{{localize 'HOGWARTS.Effect.AttributeKey'}}</div>
+          <div class='effect-attr-value'>{{localize 'HOGWARTS.Effect.AttributeValue'}}</div>
+          <div class='effect-attr-copy'></div>
+        </li>
+        {{#each effectAttributes as |attr|}}
+          {{#if (eq attr.section 'schema')}}
+            <li class='effect-attr-row flexrow'>
+              <div class='effect-attr-key'><code>{{attr.key}}</code></div>
+              <div class='effect-attr-value'>{{attr.value}}</div>
+              <div class='effect-attr-copy'>
+                <a data-action='copyEffectKey' data-key='{{attr.key}}' data-tooltip='{{localize "HOGWARTS.Effect.CopyKey"}}'>
+                  <i class='fas fa-copy'></i>
+                </a>
+              </div>
+            </li>
+          {{/if}}
+        {{/each}}
+      </ol>
+
+      {{! Compétences }}
+      <p class='effect-attr-section-title'>{{localize 'HOGWARTS.Effect.SectionSkills'}}</p>
+      <ol class='effect-attr-list'>
+        <li class='effect-attr-row effect-attr-head flexrow'>
+          <div class='effect-attr-key'>{{localize 'HOGWARTS.Effect.AttributeKey'}}</div>
+          <div class='effect-attr-value'>{{localize 'HOGWARTS.Effect.AttributeValue'}}</div>
+          <div class='effect-attr-copy'></div>
+        </li>
+        {{#each effectAttributes as |attr|}}
+          {{#if (eq attr.section 'skills')}}
+            <li class='effect-attr-row flexrow'>
+              <div class='effect-attr-key'><code>{{attr.key}}</code></div>
+              <div class='effect-attr-value effect-attr-label'>{{attr.label}}</div>
+              <div class='effect-attr-copy'>
+                <a data-action='copyEffectKey' data-key='{{attr.key}}' data-tooltip='{{localize "HOGWARTS.Effect.CopyKey"}}'>
+                  <i class='fas fa-copy'></i>
+                </a>
+              </div>
+            </li>
+          {{/if}}
+        {{/each}}
+      </ol>
+
+      {{! Clés XP (pseudo-clés) }}
+      <p class='effect-attr-section-title'>{{localize 'HOGWARTS.Effect.SectionXP'}}</p>
+      <p class='effect-attr-hint'>{{localize 'HOGWARTS.Roll.XP.EffectHint'}}</p>
+      <ol class='effect-attr-list'>
+        <li class='effect-attr-row effect-attr-head flexrow'>
+          <div class='effect-attr-key'>{{localize 'HOGWARTS.Effect.AttributeKey'}}</div>
+          <div class='effect-attr-label-col'>{{localize 'HOGWARTS.Effect.AttributeLabel'}}</div>
+          <div class='effect-attr-copy'></div>
+        </li>
+        {{#each effectAttributes as |attr|}}
+          {{#if (eq attr.section 'xp')}}
+            <li class='effect-attr-row flexrow'>
+              <div class='effect-attr-key'><code>{{attr.key}}</code></div>
+              <div class='effect-attr-label-col effect-attr-label'>{{attr.label}}</div>
+              <div class='effect-attr-copy'>
+                <a data-action='copyEffectKey' data-key='{{attr.key}}' data-tooltip='{{localize "HOGWARTS.Effect.CopyKey"}}'>
+                  <i class='fas fa-copy'></i>
+                </a>
+              </div>
+            </li>
+          {{/if}}
+        {{/each}}
+      </ol>
+    </details>
+  </div>
+
+  {{!-- Options Section --}}
+  <div class="settings-section" data-section="options">
+    <div class="section-header collapsible" data-action="toggleSettingsSection">
+      <i class="fas fa-chevron-right toggle-icon"></i>
+      <h3 class="section-title">{{localize "HOGWARTS.Actor.Settings.Options"}}</h3>
+    </div>
+    <div class="settings-content">
+      {{#if (eq actor.type "character")}}
+      <div class="form-group">
+        <label class="checkbox">
+          <input type="checkbox" name="system.options.otherSchool" {{checked actor.system.options.otherSchool}} />
+          {{localize "HOGWARTS.Actor.Settings.OtherSchool"}}
+          <span class="hint">{{localize "HOGWARTS.Actor.Settings.OtherSchoolHint"}}</span>
+        </label>
+      </div>
+      {{/if}}
+      <div class="form-group">
+        <label for="force-house-select">{{localize "HOGWARTS.Actor.Settings.ForceHouse"}}</label>
+        <div class="form-field">
+          <select id="force-house-select" name="flags.hogwarts-system.forceHouse">
+            <option value="">{{localize "HOGWARTS.Actor.Settings.ForceHouseDefault"}}</option>
+            <option value="gryffindor">{{localize "HOGWARTS.House.Gryffindor"}}</option>
+            <option value="slytherin">{{localize "HOGWARTS.House.Slytherin"}}</option>
+            <option value="ravenclaw">{{localize "HOGWARTS.House.Ravenclaw"}}</option>
+            <option value="hufflepuff">{{localize "HOGWARTS.House.Hufflepuff"}}</option>
+          </select>
+          <span class="hint">{{localize "HOGWARTS.Actor.Settings.ForceHouseHint"}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

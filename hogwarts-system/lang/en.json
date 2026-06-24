@@ -1,0 +1,2466 @@
+{
+  "TYPES": {
+    "Actor": {
+      "character": "Character",
+      "npc": "NPC",
+      "familiar": "Familiar",
+      "creature": "Creature"
+    },
+    "Item": {
+      "gear": "Gear",
+      "weapon": "Weapon",
+      "armor": "Armor",
+      "feature": "Feature",
+      "spell": "Spell",
+      "potion": "Potion",
+      "broom": "Broom",
+      "component": "Ingredient"
+    }
+  },
+  "HOGWARTS": {
+    "Stat": {
+      "Str": {
+        "long": "Strength",
+        "abbr": "STR"
+      },
+      "Con": {
+        "long": "Constitution",
+        "abbr": "CON"
+      },
+      "Siz": {
+        "long": "Size",
+        "abbr": "SIZ"
+      },
+      "Dex": {
+        "long": "Dexterity",
+        "abbr": "DEX"
+      },
+      "Int": {
+        "long": "Intelligence",
+        "abbr": "INT"
+      },
+      "Pow": {
+        "long": "Power",
+        "abbr": "POW"
+      },
+      "App": {
+        "long": "Appearance",
+        "abbr": "APP"
+      },
+      "Per": {
+        "long": "Perception",
+        "abbr": "PER"
+      }
+    },
+    "Skill": {
+      "Charms": "Charms",
+      "Transfiguration": "Transfiguration",
+      "Potions": "Potions",
+      "DADA": "Defense Against the Dark Arts",
+      "Herbology": "Herbology",
+      "Flying": "Broom Flying",
+      "History": "History of Magic",
+      "Quidditch": "Quidditch"
+    },
+    "House": {
+      "Gryffindor": "Gryffindor",
+      "Slytherin": "Slytherin",
+      "Ravenclaw": "Ravenclaw",
+      "Hufflepuff": "Hufflepuff"
+    },
+    "SheetLabels": {
+      "Actor": "Hogwarts Actor Sheet",
+      "Item": "Hogwarts Item Sheet"
+    },
+    "Name": "Name",
+    "Actor": {
+      "Tabs": {
+        "Biography": "Biography",
+        "Skills": "Skills",
+        "Features": "Features",
+        "Perks": "Perks",
+        "Gear": "Gear",
+        "Spells": "Spells",
+        "Potions": "Potions",
+        "Familiar": "Familiar",
+        "Secondary": "Secondary",
+        "Settings": "Settings"
+      },
+      "Settings": {
+        "Effects": "Effects",
+        "Options": "Options",
+        "OtherSchool": "Other School",
+        "OtherSchoolHint": "(+1 personal bonus point)",
+        "ForceHouse": "Force sheet house color",
+        "ForceHouseHint": "Override this sheet's house color (blank = use actor's house)",
+        "ForceHouseDefault": "(Use actor's house)"
+      },
+      "Familiar": {
+        "Information": "Information",
+        "Create": "Create Familiar",
+        "ViewLinked": "View Linked Familiar",
+        "Unlink": "Unlink Familiar",
+        "TotalPBPCost": "Total PBP Cost",
+        "Name": "Name",
+        "NamePlaceholder": "Ex: Hedwig",
+        "Species": "Species",
+        "DMG": "Damage",
+        "Age": "Age",
+        "AgePlaceholder": "Ex: 3 years",
+        "Bond": "Bond(s) with master",
+        "Armor": "Armor",
+        "Movement": "Movement",
+        "BondNone": "None",
+        "BondWeak": "Weak",
+        "BondNormal": "Normal",
+        "BondStrong": "Strong",
+        "Intelligence": "Intelligence",
+        "BasicInfo": "Basic Information",
+        "Description": "Description",
+        "Appearance": "Appearance",
+        "Personality": "Personality",
+        "Abilities": "Abilities",
+        "Notes": "Notes"
+      },
+      "Animagus": {
+        "Title": "Animagus",
+        "Form": "Animal Form",
+        "FormHint": "Ex: Cat, Stag, Dog…",
+        "Mastery": "Mastery Level",
+        "MasteryNone": "Uninitiated",
+        "MasteryLearning": "Learning",
+        "MasteryPartial": "Partial Mastery",
+        "MasteryFull": "Full Mastery",
+        "Transformed": "In animal form",
+        "Transform": "Transform",
+        "Revert": "Revert to human form",
+        "Declared": "Registered with the Ministry"
+      },
+      "base": {
+        "FIELDS": {
+          "biography": {
+            "label": "Biography"
+          },
+          "health": {
+            "value": {
+              "label": "Health"
+            },
+            "max": {
+              "label": "Maximum Health"
+            }
+          },
+          "healthNonLethal": {
+            "value": {
+              "label": "Non-lethal Damage"
+            },
+            "max": {
+              "label": "Non-lethal Damage Max"
+            }
+          },
+          "conditions": {
+            "seriousWound": {
+              "label": "Serious Wound"
+            },
+            "agony": {
+              "label": "Agony"
+            }
+          }
+        }
+      },
+      "Character": {
+        "FIELDS": {
+          "profile.year": {
+            "label": "Year"
+          },
+          "profile.house": {
+            "label": "House"
+          },
+          "profile.archetype": {
+            "label": "Archetype"
+          },
+          "fougue.value": {
+            "label": "Heroism Points"
+          },
+          "fougue.max": {
+            "label": "Heroism Points Max"
+          },
+          "stress.value": {
+            "label": "Stress"
+          },
+          "movement": {
+            "label": "Movement"
+          }
+        },
+        "Archetype": {
+          "none": "None",
+          "canaille": "Rogue / Scoundrel",
+          "cerebral": "Cerebral / Model Student",
+          "honnete": "Honest / Virtuous",
+          "manipulateur": "Manipulator / Cunning",
+          "naturaliste": "Naturalist / Ecologist",
+          "sportif": "Athlete / Brawler"
+        },
+        "Fougue": "Heroism Points",
+        "Stress": "Stress",
+        "StressHint": "Stress malus applied to all rolls (0-25%)",
+        "StressLevels": {
+          "0": "No stress",
+          "5": "Mild (-5%)",
+          "10": "Moderate (-10%)",
+          "15": "High (-15%)",
+          "20": "Severe (-20%)",
+          "25": "Traumatic (-25%)"
+        },
+        "Movement": "Movement (m/round)",
+        "DamageBonus": "DMG Bonus",
+        "Initiative": "Initiative"
+      },
+      "NPC": {
+        "FIELDS": {
+          "cr": {
+            "label": "CR"
+          },
+          "damage": {
+            "label": "Damage"
+          },
+          "armor": {
+            "label": "Armor"
+          },
+          "movement": {
+            "label": "Movement"
+          }
+        },
+        "xp": {
+          "label": "XP"
+        }
+      },
+      "Creature": {
+        "FIELDS": {
+          "classification": {
+            "label": "Classification"
+          },
+          "powers": {
+            "label": "Powers & Abilities"
+          },
+          "usage": {
+            "label": "Usage"
+          }
+        },
+        "Classification": "Classification",
+        "ClassX": "Boring",
+        "ClassXX": "Harmless",
+        "ClassXXX": "Dangerous",
+        "ClassXXXX": "Very Dangerous",
+        "ClassXXXXX": "Wizard Killer",
+        "Stats": "Statistics",
+        "DerivedValues": "Derived Values",
+        "DamageBonus": "Damage Bonus",
+        "Luck": "Luck",
+        "MagicResistance": "Magic Resistance",
+        "EffectReduction": "Effect Reduction",
+        "Movement": "Movement",
+        "MovementLand": "Land",
+        "MovementFly": "Fly",
+        "MovementSwim": "Swim",
+        "Armor": "Armor",
+        "ArmorValue": "Damage Reduction",
+        "ArmorLabel": "Armor Type",
+        "Attacks": "Combat",
+        "AttackName": "Attack Name",
+        "Damage": "Damage",
+        "AddAttack": "Add Attack",
+        "DeleteAttack": "Delete Attack",
+        "RollAttack": "Roll Attack",
+        "Skills": "Skills",
+        "AddSkill": "Add Skill",
+        "DeleteSkill": "Delete Skill",
+        "RollSkill": "Roll Skill",
+        "Powers": "Powers & Abilities",
+        "Usage": "Usage"
+      }
+    },
+    "Skills": {
+      "Specialization": "Specialization",
+      "Add": "Add skill",
+      "Delete": "Remove skill",
+      "CannotDeletePreset": "Preset skills cannot be removed.",
+      "NewSkill": "New Skill",
+      "Spent": "Spent",
+      "SpentExceeded": "Cannot spend above remaining cap (max - base).",
+      "SpentCap": "Cap:",
+      "Base": "Base",
+      "Max": "Max",
+      "Value": "Value",
+      "XPCheck": "XP",
+      "Category": {
+        "general": "General Skills",
+        "wizard": "Wizard Skills",
+        "muggle": "Muggle Skills",
+        "school": "School Subjects",
+        "special": "Special Skills"
+      }
+    },
+    "SkillDisplay": {
+      "Acrobatie/Quidditch": "Acrobatie/Quidditch",
+      "Artisanat": "Artisanat",
+      "Athlétisme": "Athletics",
+      "Bagarre": "Brawl",
+      "Bibliothèque": "Library Use",
+      "Commandement": "Command",
+      "Connaissance (...)": "Knowledge (...)",
+      "Déguisement": "Disguise",
+      "Discrétion": "Stealth",
+      "Dressage/Soin": "Handle/Heal",
+      "Empathie": "Empathy",
+      "Esquive": "Dodge",
+      "Fouille/Ménage": "Search/Housekeeping",
+      "Langue étrangère (...)": "Foreign Language (...)",
+      "Langue natale": "Native Language",
+      "Orientation": "Navigate",
+      "Persuasion/Baratin": "Persuade/Fast Talk",
+      "Psychologie": "Psychology",
+      "Secourisme": "First Aid",
+      "Survie": "Survival",
+      "Triche": "Cheat",
+      "Vigilance": "Spot Hidden",
+      "Connaissance (...) (S)": "Knowledge (...) (W)",
+      "Connaissance des Moldus (S)": "Muggle Lore (W)",
+      "Culture générale des sorciers (S)": "Wizarding Culture (W)",
+      "Jeux sorciers (S)": "Wizarding Games (W)",
+      "Langue (Latin) (S)": "Language (Latin) (W)",
+      "Mythes et légendes des sorciers (S)": "Wizarding Myths & Legends (W)",
+      "Bricolage (M)": "DIY (M)",
+      "Conduire (M)": "Drive (M)",
+      "Connaissance (...) (M)": "Knowledge (...) (M)",
+      "Culture générale Moldue (M)": "Muggle Culture (M)",
+      "Jeux Moldus (M)": "Muggle Games (M)",
+      "Langue (Latin) (M)": "Language (Latin) (M)",
+      "Sérrurerie (M)": "Locksmith (M)",
+      "Arithmancie": "Arithmancy",
+      "Art magique": "Magical Art",
+      "Art moldu": "Muggle Art",
+      "Astronomie": "Astronomy",
+      "Botanique": "Herbology",
+      "Défenses contre les forces du mal": "Defense Against the Dark Arts",
+      "Divination": "Divination",
+      "Enchantements": "Charms",
+      "Etude des Moldus": "Muggle Studies",
+      "Etude des runes": "Study of Runes",
+      "Histoire de la magie": "History of Magic",
+      "Mauvais sorts": "Jinxes",
+      "Métamorphose": "Transfiguration",
+      "Musique magique": "Magical Music",
+      "Musique moldue": "Muggle Music",
+      "Potions": "Potions",
+      "Soin aux créatures magiques": "Care of Magical Creatures",
+      "Vol en balai": "Broom Flying"
+    },
+    "Item": {
+      "Tabs": {
+        "Attributes": "Attributes",
+        "Description": "Description",
+        "Effects": "Effects"
+      },
+      "Feature": {
+        "FIELDS": {
+          "perkType": {
+            "label": "Category"
+          }
+        },
+        "PerkType": {
+          "none": "None (Characteristic)",
+          "fateBoon": "Fate's Blessing",
+          "fateBane": "Fate's Curse",
+          "advantage": "Advantage",
+          "disadvantage": "Disadvantage",
+          "ability": "Ability",
+          "abilityNatural": "Natural Ability",
+          "abilitySpecial": "Special Ability",
+          "houseAxiom": "House Axiom"
+        },
+        "PBPCost": "PBP Cost"
+      },
+      "Gear": {
+        "FIELDS": {
+          "rollFormula": {
+            "label": "Roll Formula"
+          },
+          "numDice": {
+            "label": "Num Dice"
+          },
+          "dieSize": {
+            "label": "Die Size"
+          },
+          "rollMod": {
+            "label": "Modifier"
+          },
+          "quantity": {
+            "label": "Quantity"
+          },
+          "weight": {
+            "label": "Weight"
+          }
+        },
+        "Cost": "Cost"
+      },
+      "Weapon": {
+        "FIELDS": {
+          "damage": {
+            "label": "Damage"
+          },
+          "weaponType": {
+            "label": "Weapon Type"
+          },
+          "range": {
+            "label": "Range"
+          }
+        },
+        "WeaponType": {
+          "melee": "Melee",
+          "ranged": "Ranged",
+          "thrown": "Thrown"
+        }
+      },
+      "Armor": {
+        "FIELDS": {
+          "armorValue": {
+            "label": "Protection"
+          }
+        }
+      },
+      "Spell": {
+        "FIELDS": {
+          "level": {
+            "label": "Spell Level"
+          },
+          "malus": {
+            "label": "Malus"
+          },
+          "spellType": {
+            "label": "Spell Type"
+          },
+          "target": {
+            "label": "Target"
+          },
+          "incantation": {
+            "label": "Incantation"
+          },
+          "malusExtremeFormula": {
+            "label": "Extreme Formula Malus"
+          },
+          "extremeFormula": {
+            "label": "Extreme Formula"
+          },
+          "preSchool": {
+            "label": "Instinctive Spell (Pre-school)"
+          }
+        },
+        "SpellType": {
+          "E": "Enchantment (E)",
+          "M": "Transfiguration (M)",
+          "S": "Dark Arts (S)",
+          "X": "Other (X)"
+        },
+        "Target": {
+          "A": "Animal (A)",
+          "O": "Object (O)",
+          "P": "Person (P)",
+          "V": "Plant (V)",
+          "S": "Spell (S)",
+          "X": "Other (X)"
+        },
+        "SpellLVL": "Level {level} Spells",
+        "AddLVL": "Add LVL {level}"
+      },
+      "Potion": {
+        "FIELDS": {
+          "level": {
+            "label": "Potion Level"
+          },
+          "malus": {
+            "label": "Malus"
+          },
+          "target": {
+            "label": "Target"
+          },
+          "ingredientRarity": {
+            "label": "Ingredient Rarity"
+          },
+          "virulence": {
+            "label": "Virulence"
+          },
+          "prepTime": {
+            "label": "Prep. Time"
+          },
+          "duration": {
+            "label": "Effect Duration"
+          },
+          "quantity": {
+            "label": "Doses"
+          }
+        },
+        "Target": {
+          "A": "Animal (A)",
+          "O": "Object (O)",
+          "P": "Person (P)",
+          "V": "Plant (V)",
+          "X": "Other (X)"
+        },
+        "Rarity": {
+          "commun": "Common",
+          "rare": "Rare",
+          "rarissime": "Very Rare"
+        },
+        "PotionLVL": "Level {level} Potions",
+        "AddLVL": "Add level {level}",
+        "Qty": "Doses",
+        "IngredientsTitle": "Required Ingredients",
+        "AddIngredient": "Add an ingredient",
+        "RemoveIngredient": "Remove this ingredient",
+        "IngredientAvailable": "Available",
+        "IngredientName": "Ingredient name",
+        "NoIngredients": "No ingredients specified. Add ingredients to enable crafting tracking.",
+        "Crafted": "Already brewed",
+        "PrepTimePlaceholder": "e.g. 1 hour",
+        "DurationPlaceholder": "e.g. 1d4+1 hours",
+        "Brew": "Brew potion",
+        "Use": "Use a dose",
+        "Brewing": "Brewing",
+        "BrewSuccess": "Potion brewed successfully!",
+        "BrewFailure": "Brewing failed. Ingredients are lost.",
+        "BrewFumble": "Disaster! An unexpected side effect occurs!",
+        "MissingIngredients": "Not all ingredients are available!",
+        "NoDoses": "No doses available!",
+        "Used": "Potion consumed",
+        "Remaining": "dose(s) remaining"
+      },
+      "Broom": {
+        "FIELDS": {
+          "brand": {
+            "label": "Brand"
+          },
+          "characteristics": {
+            "label": "Characteristics and bonuses"
+          },
+          "effects": {
+            "label": "Effects"
+          },
+          "pbpCost": {
+            "label": "PBP Cost"
+          }
+        }
+      },
+      "Component": {
+        "FIELDS": {
+          "rarity": {
+            "label": "Rarity"
+          },
+          "quantity": {
+            "label": "Quantity"
+          },
+          "usedIn": {
+            "label": "Used in potions"
+          },
+          "otherUses": {
+            "label": "Other uses"
+          }
+        },
+        "Rarity": {
+          "commun": "Common",
+          "rare": "Rare",
+          "rarissime": "Very Rare"
+        },
+        "UsedInPlaceholder": "Potions using this ingredient...",
+        "OtherUsesPlaceholder": "Other uses..."
+      }
+    },
+    "Effect": {
+      "Source": "Source",
+      "Toggle": "Toggle Effect",
+      "Temporary": "Temporary Effects",
+      "Passive": "Passive Effects",
+      "Inactive": "Inactive Effects",
+      "AttributeReference": "Effect Attribute Reference",
+      "AttributeReferenceHint": "Keys you can target with an Active Effect, shown with their current value. Use the copy button and paste the key into the effect's Attribute Key field.",
+      "AttributeKey": "Attribute Key",
+      "AttributeValue": "Current Value",
+      "AttributeLabel": "Description",
+      "CopyKey": "Copy key",
+      "KeyCopied": "Copied: {key}",
+      "SectionSchema": "Character Attributes",
+      "SectionSkills": "Skills",
+      "SectionXP": "XP Modifiers (pseudo-keys)"
+    },
+    "Roll": {
+      "ModifierTitle": "Roll Modifier",
+      "ModifierLabel": "Bonus/Penalty",
+      "Result": "Result",
+      "Skill": "Skill",
+      "WithMalus": "with penalty",
+      "Degree": {
+        "Critical": "Critical Success",
+        "Extreme": "Extreme Success",
+        "Hard": "Hard Success",
+        "Success": "Success",
+        "Fail": "Failure",
+        "Fumble": "Fumble"
+      },
+      "UseFougue": "Use a Heroism Point (reverse dice)",
+      "FougueReversed": "Heroism: dice reversed",
+      "Opposition": {
+        "Title": "Opposition Roll",
+        "Active": "Active Characteristic",
+        "Passive": "Passive Characteristic",
+        "Target": "Target"
+      },
+      "XP": {
+        "Title": "Experience Resolution",
+        "NoChecks": "No skills are marked for experience.",
+        "Rolled": "rolled",
+        "EffectHint": "XP effect keys: xp.multiplier, xp.multiplier.{category}, xp.multiplier.skill.{name}, xp.bonus, xp.bonus.{category}, xp.bonus.skill.{name}"
+      },
+      "Learn": {
+        "Title": "Spell Learning",
+        "Roll": "Learning roll (INT×5 − spell malus)",
+        "Critical": "Mastery! The spell is learned without penalty.",
+        "Success": "The spell is learned normally (penalty maintained).",
+        "Fail": "Spell memorised but unexpected effects may occur.",
+        "Fumble": "Psychological block! A teacher is required."
+      },
+      "Difficulty": {
+        "Label": "Difficulty",
+        "Easy": "Easy (+25%)",
+        "Normal": "Normal (0%)",
+        "Hard": "Hard (−10%)",
+        "VeryHard": "Very Hard (−25%)",
+        "Extreme": "Extreme (−50%)"
+      },
+      "Assistance": {
+        "Label": "Assistance",
+        "Hint": "Support bonus from an ally (0 if none)",
+        "None": "None",
+        "Minor": "Minor (+10%)",
+        "Major": "Major (+25%)"
+      }
+    },
+    "Chat": {
+      "ApplyDamage": "Apply Damage",
+      "ApplyHealing": "Apply Healing",
+      "NoTarget": "No target selected",
+      "Damage": "Damage",
+      "Initiative": "Initiative",
+      "Roll": "Roll",
+      "Result": "Result",
+      "Target": "Target",
+      "Total": "Total",
+      "SkillCheck": "Skill Check",
+      "PotionRoll": "Potion Roll",
+      "SpellRoll": "Spell Roll",
+      "Attack": "Attack",
+      "Brewing": "Brewing",
+      "Used": "Used",
+      "Remaining": "Remaining",
+      "Opposition": "Opposition",
+      "Cost": "Cost",
+      "Weight": "Weight",
+      "Quantity": "Quantity",
+      "PBPCost": "PBP Cost",
+      "Type": "Type",
+      "Level": "Level",
+      "Malus": "Penalty",
+      "Brand": "Brand",
+      "Characteristics": "Characteristics and bonuses",
+      "Description": "Description",
+      "Effects": "Effects",
+      "UseFougue": "Use Heroism",
+      "NoFougue": "No Heroism points available",
+      "NotOwner": "You do not control this character",
+      "PostToChat": "Post to Chat"
+    },
+    "Derived": {
+      "Title": "Derived Characteristics",
+      "Taste": "Taste",
+      "Smell": "Smell",
+      "Hearing": "Hearing",
+      "Touch": "Touch",
+      "Sight": "Sight",
+      "Idea": "Idea",
+      "Luck": "Luck"
+    },
+    "Experience": {
+      "Title": "Experience",
+      "CreationPoints": "Creation Points",
+      "PersonalBonusPoints": "Personal Bonus Points"
+    },
+    "Settings": {
+      "TabsUseIcons": "Use icons for actor tabs",
+      "TabsUseIconsHint": "When enabled, actor sheet tabs show FontAwesome icons instead of text labels (client preference).",
+      "UseExtendedTiers": "Extended success tiers (BRP)",
+      "UseExtendedTiersHint": "Enables Extreme (≤1/5) and Hard (≤1/2) success levels in addition to base rules (Critical 01-05, Success, Failure, Fumble 96-00).",
+      "ExcludeSchoolSkillsFromCP": "Exclude school subjects from CP",
+      "ExcludeSchoolSkillsFromCPHint": "When enabled, points spent in 'School Subjects' category skills are not counted toward the Creation Points total."
+    },
+    "Notifications": {
+      "PersonalBonusNegative": "Warning: Personal Bonus Points are negative",
+      "CreationPointsNegative": "Warning: Creation Points are negative"
+    },
+    "Common": {
+      "Negative": "Negative value"
+    },
+    "Currency": {
+      "Title": "Wizarding Money",
+      "Galleons": "Galleons",
+      "Sickles": "Sickles",
+      "Knuts": "Knuts"
+    },
+    "Wand": {
+      "Title": "Wand",
+      "Wood": "Wood",
+      "Core": "Core",
+      "Length": "Length",
+      "Flexibility": "Flexibility",
+      "Affinity": "Affinity",
+      "Description": "Description"
+    },
+    "Broom": {
+      "Brand": "Brand",
+      "Characteristics": "Characteristics and bonuses",
+      "Effects": "Effects",
+      "PBPCost": "PBP Cost"
+    },
+    "Perks": {
+      "FateBoon": "Fate's Blessing",
+      "FateBane": "Fate's Curse",
+      "Advantages": "Advantages",
+      "Disadvantages": "Disadvantages",
+      "HouseAxioms": "House Axioms",
+      "Abilities": "Abilities",
+      "NaturalAbilities": "Natural Abilities",
+      "SpecialAbilities": "Special Abilities"
+    },
+    "Spells": {
+      "MaxMalus": "Maximum penalty for learning spells from higher years"
+    },
+    "Wounds": {
+      "Title": "Wound States",
+      "NonLethal": "Non-lethal Damage",
+      "SeriousWound": "Serious Wound (CON×5)",
+      "Agony": "Agony (CON×3/round)"
+    },
+    "Biography": {
+      "Family": "Family",
+      "Role": "Role",
+      "Name": "Name",
+      "Age": "Age",
+      "Details": "Details",
+      "AddFamilyMember": "Add Member",
+      "DeleteFamilyMember": "Delete",
+      "Appearance": "Appearance",
+      "Height": "Height",
+      "Weight": "Weight",
+      "Skin": "Skin",
+      "HairLength": "Hair Length",
+      "HairType": "Hair Type",
+      "HairColor": "Hair Color",
+      "HairInspiration": "Hair Inspiration",
+      "Eyes": "Eyes",
+      "DominantHand": "Dominant Hand",
+      "HandLeft": "Left",
+      "HandRight": "Right",
+      "HandAmbidextrous": "Ambidextrous",
+      "Character": "Character",
+      "Qualities": "Qualities",
+      "Flaws": "Flaws",
+      "Style": "Clothing Style",
+      "FavoriteExpression": "Favorite Expression",
+      "Accent": "Accent",
+      "Interests": "Interests",
+      "Likes": "Likes",
+      "Dislikes": "Dislikes",
+      "Information": "Information",
+      "Patronus": "Patronus",
+      "Origin": "Origin",
+      "Gender": "Gender",
+      "GenderMale": "Male",
+      "GenderFemale": "Female",
+      "GenderOther": "Other",
+      "BloodStatus": "Blood Status",
+      "BloodStatusMuggleBorn": "Muggle-Born",
+      "BloodStatusHalfBlood": "Half-Blood",
+      "BloodStatusPureBlood": "Pure-Blood",
+      "Boggart": "Boggart",
+      "BoggartVisual": "Visual",
+      "BoggartDescription": "Description",
+      "Riddikulus": "Riddikulus Appearance",
+      "Biography": "Biography",
+      "Motivation": "Motivation",
+      "History": "History",
+      "Notes": "Notes",
+      "RPNotes": "RP Notes",
+      "GMNotes": "GM Notes",
+      "GMOnly": "Visible to GM only"
+    },
+    "HousePoints": {
+      "Title": "House Points",
+      "Gryffindor": "Gryffindor",
+      "Slytherin": "Slytherin",
+      "Ravenclaw": "Ravenclaw",
+      "Hufflepuff": "Hufflepuff",
+      "Add": "Award points",
+      "Remove": "Deduct points",
+      "Reset": "Reset",
+      "Award": "+{amount} point(s) for {house}!",
+      "Deduct": "−{amount} point(s) for {house}!"
+    },
+    "Quidditch": {
+      "Title": "Quidditch",
+      "Position": "Position",
+      "Positions": {
+        "chaser": "Chaser",
+        "keeper": "Keeper",
+        "beater": "Beater",
+        "seeker": "Seeker"
+      },
+      "Broom": "Broom",
+      "Catch": "Catch the Golden Snitch",
+      "Score": "Score",
+      "Block": "Block"
+    },
+    "Packs": {
+      "hogwarts-features": {
+        "adv007Ambidextre": {
+          "name": "Ambidextrous",
+          "description": "<p>Can use both hands without penalty. No penalty for using the non-dominant hand.</p>"
+        },
+        "dis006Begaiement": {
+          "name": "Stutter",
+          "description": "<p>Speech difficulty. -10% to spells requiring incantation under stress.</p>"
+        },
+        "adv005BonneMemoi": {
+          "name": "Good Memory",
+          "description": "<p>Exceptional memory. +10% to Library rolls and academic skills for remembering information.</p>"
+        },
+        "adv001Chanceux": {
+          "name": "Lucky",
+          "description": "<p>The character is naturally lucky. Once per session, they may reroll a failed roll.</p>"
+        },
+        "dis005Fragile": {
+          "name": "Frail Constitution",
+          "description": "<p>Fragile health. -2 maximum hit points.</p>"
+        },
+        "dis003Distrait": {
+          "name": "Easily Distracted",
+          "description": "<p>Easily distracted. -10% to Alertness rolls.</p>"
+        },
+        "adv009Empathique": {
+          "name": "Empathic",
+          "description": "<p>Senses the emotions of others. +10% to Empathy and Psychology rolls.</p>"
+        },
+        "dis007Impulsif": {
+          "name": "Impulsive",
+          "description": "<p>Acts before thinking. Must succeed a POW×3 roll to refrain from acting impulsively in tense situations.</p>"
+        },
+        "dis001Maladroit": {
+          "name": "Clumsy",
+          "description": "<p>Tendency to break things. -10% to DEX rolls for delicate actions.</p>"
+        },
+        "dis004MalChance": {
+          "name": "Unlucky",
+          "description": "<p>Bad luck persists. Once per session, the GM may force a reroll on a successful roll.</p>"
+        },
+        "dis008MauvVue": {
+          "name": "Poor Eyesight",
+          "description": "<p>Deficient vision. -20% to Sight rolls without glasses. If glasses are lost, permanent penalty until recovered.</p>"
+        },
+        "dis002Phobique": {
+          "name": "Phobia",
+          "description": "<p>Irrational fear of something (spiders, heights, water...). Stress +10% in the presence of the stimulus.</p>"
+        },
+        "adv010Animagus": {
+          "name": "Animagus Potential",
+          "description": "<p>Possesses the rare potential to become an Animagus. Requires long and difficult training (level 5+).</p>"
+        },
+        "adv003Reflexes": {
+          "name": "Quick Reflexes",
+          "description": "<p>Reacts faster than normal. +2 to initiative.</p>"
+        },
+        "adv008Resistant": {
+          "name": "Magic Resistant",
+          "description": "<p>Naturally resists spells. +10% to opposition rolls against spells.</p>"
+        },
+        "adv002Robuste": {
+          "name": "Robust",
+          "description": "<p>Solid constitution. +2 maximum hit points.</p>"
+        },
+        "adv004Seduisant": {
+          "name": "Charming",
+          "description": "<p>Natural charisma. +10% to Persuasion/Bluff rolls with people who might be attracted.</p>"
+        },
+        "adv006SensAiguise": {
+          "name": "Keen Senses",
+          "description": "<p>Superior perceptions. +10% to Alertness rolls.</p>"
+        },
+        "axGryCourageux01": {
+          "name": "Courageous",
+          "description": "<p>Once per scenario, the player can show tremendous bravery during an action (rescue, combat to help a friend, etc.). This grants a +30% bonus to all actions during that act.</p>"
+        },
+        "axGryForceAme02": {
+          "name": "Fortitude",
+          "description": "<p>Grants a +25% bonus to rolls resisting fear when fighting malevolent creatures or under a spell of that kind.</p>"
+        },
+        "axGryTemeraire03": {
+          "name": "Reckless",
+          "description": "<p>You tend to confuse courage with recklessness and put yourself in dangerous situations without realising until it's too late.</p>"
+        },
+        "axPouJusticier01": {
+          "name": "Righteous",
+          "description": "<p>Once per scenario, the player can invoke their code of honour to prevent a malicious act. This grants a +30% bonus to all actions during that act.</p>"
+        },
+        "axPouCodeMoral02": {
+          "name": "Moral Code",
+          "description": "<p>You have a strict moral code that dictates your daily actions. For example, you can only act in self-defence, cannot cheat, must keep your word, cannot lie, or must fight injustice. Choose a code in agreement with the GM and stick to it throughout your schooling.</p>"
+        },
+        "axPouPatience03": {
+          "name": "Patience",
+          "description": "<p>You are patient, which grants a +15% bonus to magical research, object enchantments, and long/complex rituals. Also reduces potion preparation time by 1/3.</p>"
+        },
+        "axSerCerebral01": {
+          "name": "Cerebral",
+          "description": "<p>You tend to overthink before acting, losing precious time in perilous situations. This translates to a -1 penalty when determining initiative.</p>"
+        },
+        "axSerErudition02": {
+          "name": "Erudition",
+          "description": "<p>You are naturally gifted in an intellectual skill. Choose a 'knowledge', 'myths & legends', or 'languages' skill. You gain +15% in that skill (can exceed the 50% creation cap). Experience rolls in this skill grant 1/3 extra point(s).</p>"
+        },
+        "axSerSagesse03": {
+          "name": "Wisdom",
+          "description": "<p>Seeking inner peace and harmony, the wise one walks the path of meditation. New Meditation skill at 15% (max mastery: 95%) allowing relaxation, fatigue/stress recovery, surviving horrible weather conditions, or solving riddles.</p>"
+        },
+        "axSepDefautPsy01": {
+          "name": "Psychological Flaw",
+          "description": "<p>You have a psychological limitation that hampers your social interactions. You may be ambitious, grumpy, a liar, proud, unscrupulous, touchy, lazy, a snitch, hot-tempered, envious, kleptomaniac, prejudiced, violent, etc.</p>"
+        },
+        "axSepFourberie02": {
+          "name": "Cunning",
+          "description": "<p>Once per scenario, the player can use cunning to devise a plan to harm a person/group or break the rules. This grants a +30% bonus to all actions during the execution of this plan.</p>"
+        },
+        "axSepQuiVive03": {
+          "name": "On the Alert",
+          "description": "<p>You naturally gain a +15% bonus to all skill rolls aimed at concealing your misdeeds (vigilance and stealth to avoid being spotted, and persuasion/bluff when justifying yourself).</p>"
+        }
+      },
+      "hogwarts-spells": {
+        "sp3001Agrandiss": {
+          "name": "Engorgement",
+          "description": "<p>Enlarges the size of an object up to twice its size. Duration: POWer minutes.</p>"
+        },
+        "sp0001AirChaud": {
+          "name": "Hot Air",
+          "description": "<p>Produces a stream of hot air from the wand.</p>"
+        },
+        "sp4001Alarme": {
+          "name": "Alarm",
+          "description": "<p>Creates a magical perimeter that alerts the caster if anyone crosses it. Duration: POWer hours.</p>"
+        },
+        "sp3002Allegresse": {
+          "name": "Cheering Charm",
+          "description": "<p>Puts the target in a state of intense happiness. They cannot worry for 1d4+1 hours. POW/POW opposition.</p>"
+        },
+        "sp1009Allumette": {
+          "name": "Match to Needle",
+          "description": "<p>Transforms a match into a sewing needle. First transfiguration exercise.</p>"
+        },
+        "sp6005Amnesie": {
+          "name": "Memory Charm (Obliviate)",
+          "description": "<p>Erases specific memories from the target's mind. POW/POW opposition.</p>"
+        },
+        "sp4002AnimalVerr": {
+          "name": "Animal to Glass",
+          "description": "<p>Transfigures an animal into glass (goblet, vase, etc.). Duration: permanent.</p>"
+        },
+        "sp5001AntiApparit": {
+          "name": "Anti-Apparition",
+          "description": "<p>Prevents anyone in the area from Apparating or Disapparating. Duration: POWer hours.</p>"
+        },
+        "sp4007Antivol": {
+          "name": "Anti-Theft",
+          "description": "<p>Enchants an object so it cannot be moved or stolen. Cancels Summoning attempts. Duration: permanent.</p>"
+        },
+        "sp2012Ascension": {
+          "name": "Ascension",
+          "description": "<p>Slowly raises the target into the air (up to 3 meters). Duration: concentration.</p>"
+        },
+        "sp4006Attaque": {
+          "name": "Attack",
+          "description": "<p>Animates nearby objects or creatures to attack a target. Damage: 1d6 per object (min 1).</p>"
+        },
+        "sp4003Attraction": {
+          "name": "Summoning Charm (Accio)",
+          "description": "<p>Attracts an object toward the caster from any known distance. POWer km range.</p>"
+        },
+        "sp6003AvadaKedav": {
+          "name": "Avada Kedavra",
+          "description": "<p>Unforgivable Curse. Instantly kills the target. No defense possible. FORBIDDEN.</p>"
+        },
+        "sp5002Aveuglement": {
+          "name": "Blinding Hex",
+          "description": "<p>Temporarily blinds the target. POW/CON opposition. Duration: POWer rounds.</p>"
+        },
+        "sp4008Beaute": {
+          "name": "Beautification Charm",
+          "description": "<p>Temporarily improves the target's appearance. APP +3 for POWer hours.</p>"
+        },
+        "sp3003Blocage": {
+          "name": "Freezing Charm",
+          "description": "<p>Immobilizes any creature or object in motion. POW/STR or POW/DEX opposition. Duration: POWer rounds.</p>"
+        },
+        "sp2004Jambencoton": {
+          "name": "Leg-Locker Curse",
+          "description": "<p>The target's legs lock together, preventing them from walking. Duration: several rounds or until counter-curse.</p>"
+        },
+        "sp6008BouclierDia": {
+          "name": "Diabolical Shield",
+          "description": "<p>Creates an extremely powerful magical shield that blocks all spells of level 5 or lower.</p>"
+        },
+        "sp0002BoulNeige": {
+          "name": "Snowball",
+          "description": "<p>Creates a magical snowball in the caster's hands.</p>"
+        },
+        "sp6010Breche": {
+          "name": "Breach",
+          "description": "<p>Opens a temporary passage through magical protections. Duration: POWer rounds.</p>"
+        },
+        "sp5007BrasierObsc": {
+          "name": "Dark Blaze",
+          "description": "<p>Creates a magical black fire that cannot be extinguished by normal means. Dispelling spells do not work.</p>"
+        },
+        "sp6009BrasierPour": {
+          "name": "Purple Blaze",
+          "description": "<p>Creates a blaze of purple flames that only allows those deemed worthy to pass. Duration: permanent.</p>"
+        },
+        "sp4010BrumeDoree": {
+          "name": "Golden Mist",
+          "description": "<p>Creates a thick golden mist that disorients anyone who passes through it. Duration: POWer minutes.</p>"
+        },
+        "sp0003Bulles": {
+          "name": "Bubbles",
+          "description": "<p>Makes colorful soap bubbles appear from the wand.</p>"
+        },
+        "sp3012ChaisChat": {
+          "name": "Chair to Cat",
+          "description": "<p>Transfigures a chair into a cat. Duration: permanent.</p>"
+        },
+        "sp3011Chance": {
+          "name": "Luck",
+          "description": "<p>Increases the target's derived Luck skill by +30%. Duration: POWer minutes.</p>"
+        },
+        "sp2008ChangeCol": {
+          "name": "Colour Change",
+          "description": "<p>Changes the colour of an object or the target's hair/eyebrows. Purely cosmetic, variable duration.</p>"
+        },
+        "sp4011CharmeDefen": {
+          "name": "Defensive Charm",
+          "description": "<p>Creates a protective barrier around the target that blocks spells of level 4 or lower.</p>"
+        },
+        "sp2002Protego": {
+          "name": "Shield Charm (Protego)",
+          "description": "<p>Creates an invisible shield that blocks spells of level 2 or lower. Duration: 1 round.</p>"
+        },
+        "sp3004Chatouillis": {
+          "name": "Tickling Charm (Rictusempra)",
+          "description": "<p>Makes the target laugh uncontrollably, inflicting a 60% penalty to all actions. Variable duration (rounds).</p>"
+        },
+        "sp0004ChauffBois": {
+          "name": "Beverage-Warming Charm",
+          "description": "<p>Warms a beverage contained in a vessel.</p>"
+        },
+        "sp3005ChauveFuri": {
+          "name": "Bat-Bogey Hex",
+          "description": "<p>Launches POW Bat-Bogeys at an opponent's face, hindering their movements. Variable duration (rounds).</p>"
+        },
+        "sp1006Incendio": {
+          "name": "Fire-Making Spell (Incendio)",
+          "description": "<p>Ignites a targeted flammable object. Does not work directly on living creatures.</p>"
+        },
+        "sp4004Confusion": {
+          "name": "Confundus Charm",
+          "description": "<p>The target becomes confused, disoriented, and unable to think clearly. POW/POW opposition. Duration: POWer minutes.</p>"
+        },
+        "sp2006Conjonctivi": {
+          "name": "Conjunctivitis Curse",
+          "description": "<p>Swells the target's eyelids, reducing their vision. -25% penalty to sight-based actions for 1d6 rounds.</p>"
+        },
+        "sp3006ContreEnch": {
+          "name": "Counter-Enchantment",
+          "description": "<p>Immediately ends the effects of a magical enchantment or charm on the target.</p>"
+        },
+        "sp5006CordeFlam": {
+          "name": "Flame Rope",
+          "description": "<p>Creates a rope of fire that surrounds and immobilizes the target. POW/DEX opposition to break free. Burns: 1d3/round.</p>"
+        },
+        "sp4005CreatAnimau": {
+          "name": "Animal Creation",
+          "description": "<p>Creates one or more small animals from surrounding matter. Duration: permanent.</p>"
+        },
+        "sp0005Creation": {
+          "name": "Temporary Creation",
+          "description": "<p>Creates a small, simple, and fragile object for a few minutes.</p>"
+        },
+        "sp3007CracheLima": {
+          "name": "Slug-Vomiting Charm",
+          "description": "<p>The target starts vomiting slugs uncontrollably for 1d6 hours.</p>"
+        },
+        "sp5009CrapaudAman": {
+          "name": "Toad to Toadstool",
+          "description": "<p>Transfigures a toad into a death cap mushroom. Duration: permanent.</p>"
+        },
+        "sp1008Crochepied": {
+          "name": "Trip Jinx",
+          "description": "<p>Trips the target. They must succeed a DEX×5 roll or fall.</p>"
+        },
+        "sp3008Deflexion": {
+          "name": "Deflection",
+          "description": "<p>Deflects a spell of level 3 or lower onto another target.</p>"
+        },
+        "sp2001Expelliarm": {
+          "name": "Disarming Charm (Expelliarmus)",
+          "description": "<p>Knocks the object held by the target out of their hands. The most common dueling spell.</p>"
+        },
+        "sp3009Desillusion": {
+          "name": "Disillusionment Charm",
+          "description": "<p>Renders the target nearly invisible by camouflaging them like a chameleon. PER/POW opposition to detect. Duration: POWer minutes.</p>"
+        },
+        "sp1012Detonation": {
+          "name": "Detonation",
+          "description": "<p>Produces a deafening noise from the wand, frightening nearby creatures.</p>"
+        },
+        "sp1004Alohomora": {
+          "name": "Unlocking Charm (Alohomora)",
+          "description": "<p>Opens a simple (non-magical) lock. Complex or enchanted locks resist.</p>"
+        },
+        "sp4009Destruction": {
+          "name": "Destruction",
+          "description": "<p>Violently destroys an object, reducing it to pieces. POW opposition if enchanted object.</p>"
+        },
+        "sp6001Doloris": {
+          "name": "Cruciatus Curse (Crucio)",
+          "description": "<p>Unforgivable Curse. Inflicts excruciating pain on the target. One must desire the other's suffering and take pleasure in it. FORBIDDEN.</p>"
+        },
+        "sp2009Entrave": {
+          "name": "Impediment Jinx (Impedimenta)",
+          "description": "<p>Considerably slows the target. Movement is halved and -10% to DEX rolls for 1d6 rounds.</p>"
+        },
+        "sp5003Expulsion": {
+          "name": "Banishing Charm (Depulso)",
+          "description": "<p>Violently propels the target backward with considerable force. Damage: 2d6.</p>"
+        },
+        "sp5004Extension": {
+          "name": "Extension Charm",
+          "description": "<p>Magically enlarges the interior of an enclosed space without changing its exterior appearance. Duration: permanent.</p>"
+        },
+        "sp1007Extinction": {
+          "name": "Fire-Extinguishing Spell",
+          "description": "<p>Extinguishes a moderate-sized fire (candle, fireplace, torch).</p>"
+        },
+        "sp1005Collaporta": {
+          "name": "Locking Spell (Colloportus)",
+          "description": "<p>Magically locks a door or chest. Moderate resistance to opening.</p>"
+        },
+        "sp5010FeuSemprem": {
+          "name": "Everlasting Fire",
+          "description": "<p>Creates an eternal fire that does not burn and never goes out. Used for lighting. Duration: permanent.</p>"
+        },
+        "sp6006Feudeymon": {
+          "name": "Fiendfyre",
+          "description": "<p>Creates a living demonic fire taking the shape of creatures. Nearly impossible to extinguish. Destroys Horcruxes.</p>"
+        },
+        "sp0006FloconNei": {
+          "name": "Snowflake",
+          "description": "<p>Makes a few snowflakes appear, falling slowly.</p>"
+        },
+        "sp5005HumainAnima": {
+          "name": "Human to Animal",
+          "description": "<p>Transfigures a human into an animal of similar size. POW/POW opposition. Duration: permanent. Forbidden in most schools.</p>"
+        },
+        "sp6002Imperium": {
+          "name": "Imperius Curse (Imperio)",
+          "description": "<p>Unforgivable Curse. Allows total control of a person's will. POW/POW opposition. FORBIDDEN.</p>"
+        },
+        "sp6007Incartable": {
+          "name": "Unplottable Charm",
+          "description": "<p>Makes a location impossible to find on a map or by magic. Duration: permanent.</p>"
+        },
+        "sp1003Wingardiu": {
+          "name": "Levitation Charm (Wingardium Leviosa)",
+          "description": "<p>Levitates a moderate-sized object (max ~10 kg). Duration: concentration.</p>"
+        },
+        "sp1011Ligotage": {
+          "name": "Binding Spell (Incarcerous)",
+          "description": "<p>Magical ropes wrap around the target, immobilizing them. The target may attempt a STR×5 roll to break free.</p>"
+        },
+        "sp1001Lumos": {
+          "name": "Wand-Lighting Charm (Lumos)",
+          "description": "<p>Produces a beam of light from the tip of the wand. Illuminates a radius of about 5 meters.</p>"
+        },
+        "sp0007MagieDome": {
+          "name": "Household Magic",
+          "description": "<p>Performs a simple household task (fold a garment, shelve a book, etc.).</p>"
+        },
+        "sp0008Nettoyage": {
+          "name": "Cleaning Charm (Scourgify)",
+          "description": "<p>Cleans an object or small surface of dirt and dust.</p>"
+        },
+        "sp2011ObjAnimal": {
+          "name": "Object to Animal",
+          "description": "<p>Transforms a small object into an animal of corresponding size. The animal disappears after a few minutes.</p>"
+        },
+        "sp1002Nox": {
+          "name": "Wand-Extinguishing Charm (Nox)",
+          "description": "<p>Extinguishes the light produced by Lumos.</p>"
+        },
+        "sp0009Parapluie": {
+          "name": "Umbrella Charm",
+          "description": "<p>Creates a small protective screen against rain above the caster.</p>"
+        },
+        "sp2010PorteVoix": {
+          "name": "Amplifying Charm (Sonorus)",
+          "description": "<p>Amplifies the caster's voice like a magical megaphone. Duration: concentration.</p>"
+        },
+        "sp6004Portoloin": {
+          "name": "Portkey",
+          "description": "<p>Transforms an object into a Portkey that teleports anyone who touches it at the time set by the caster.</p>"
+        },
+        "sp2005Repoustout": {
+          "name": "Knockback Jinx (Flipendo)",
+          "description": "<p>Violently pushes the target back several meters. Deals 1d3 non-lethal damage.</p>"
+        },
+        "sp2003Riddikulus": {
+          "name": "Boggart-Banishing Spell (Riddikulus)",
+          "description": "<p>Transforms a Boggart into something ridiculous, neutralizing its ability to frighten.</p>"
+        },
+        "sp0010Ruban": {
+          "name": "Ribbon",
+          "description": "<p>Makes a coloured ribbon appear from the wand.</p>"
+        },
+        "sp2007Spongifica": {
+          "name": "Softening Charm (Spongify)",
+          "description": "<p>Makes an object soft and spongy. Useful for cushioning falls or making an obstacle deformable.</p>"
+        },
+        "sp0011Tricot": {
+          "name": "Knitting Charm",
+          "description": "<p>Makes needles knit magically on their own.</p>"
+        },
+        "sp1010EclatLum": {
+          "name": "Light Burst",
+          "description": "<p>Produces a blinding flash of light for an instant. Nearby targets must succeed a PER×3 roll or be dazzled for 1 round.</p>"
+        },
+        "sp3010EcranFumee": {
+          "name": "Smokescreen",
+          "description": "<p>Creates a thick cloud of black smoke over an area of POWer meters. Duration: POWer rounds.</p>"
+        },
+        "sp5008EveilObjets": {
+          "name": "Object Awakening (Piertotum Locomotor)",
+          "description": "<p>Animates a large number of inanimate objects that obey the caster's commands. Duration: concentration.</p>"
+        },
+        "sp1013Annihilare": {
+          "name": "Annihilare",
+          "description": "<p>An ancient variant of the Unlocking Charm, slightly more complex to use but capable of opening doors and locks.</p>"
+        },
+        "sp1014Arrachegon": {
+          "name": "Door-Wrenching Charm",
+          "description": "<p>Tears a door off its hinges. Was widely used before the importation of the Unlocking Charm.</p>"
+        },
+        "sp1015Attelle": {
+          "name": "Splint Charm (Ferula)",
+          "description": "<p>Conjures a splint and prevents a fracture from worsening. Effect: restores 1 hit point.</p>"
+        },
+        "sp1016Cranechauv": {
+          "name": "Bald Scalp Hex (Calvorio)",
+          "description": "<p>Makes the target's hair disappear (APP -1). Sub-type: Hex.</p>"
+        },
+        "sp1017Cranechauv": {
+          "name": "Fluorescent Bald Scalp Hex",
+          "description": "<p>Makes all the target's hair fall out and turns their scalp fluorescent (APP -2). Duration: immediate (hair) and variable hours (fluorescence).</p>"
+        },
+        "sp1018Deliage": {
+          "name": "Unbinding Charm (Emancipare)",
+          "description": "<p>Frees from magical or non-magical bonds. Counters the Binding Spell.</p>"
+        },
+        "sp1019Dunamis": {
+          "name": "Dunamis",
+          "description": "<p>An ancient variant of the Unlocking Charm, slightly more complex to use but capable of opening doors and locks.</p>"
+        },
+        "sp1020Etancheite": {
+          "name": "Waterproofing Charm (Impervius)",
+          "description": "<p>Enchants a surface to repel substances. Duration: variable (hours).</p>"
+        },
+        "sp1021Etincelles": {
+          "name": "Green Sparks (Verdimillious)",
+          "description": "<p>Releases small green sparks that can cause minor damage to insects and plants. Effect: 1 damage. Range: 1.5m.</p>"
+        },
+        "sp1022Explosiond": {
+          "name": "Lock-Blasting Spell (Portaberto)",
+          "description": "<p>Causes a lock to explode, rendering it unusable.</p>"
+        },
+        "sp1023Finestra": {
+          "name": "Window-Shattering Spell (Finestra)",
+          "description": "<p>Shatters a window into tiny fragments without making any noise.</p>"
+        },
+        "sp1024Flambois": {
+          "name": "Fire Mark",
+          "description": "<p>Produces an intense red glow from the wand, allowing the caster to draw a flaming mark.</p>"
+        },
+        "sp1025Fleurmagiq": {
+          "name": "Magical Flowers (Orchideus)",
+          "description": "<p>Makes flowers appear at the tip of the wand. Duration: 2d4+2 hours.</p>"
+        },
+        "sp1026Folleoreil": {
+          "name": "Jelly-Ears Hex (Folloreille)",
+          "description": "<p>Makes the target's ears wriggle frantically, reducing concentration. -5% penalty to spells and concentration tasks. Sub-type: Hex. Duration: variable (rounds).</p>"
+        },
+        "sp1027Hydrophobi": {
+          "name": "Hydrophobia Charm",
+          "description": "<p>Makes an object hydrophobic, repelling all liquids that come in contact. Duration: variable (hours).</p>"
+        },
+        "sp1028Lacer": {
+          "name": "Shoelace-Tying Jinx (Laqueare)",
+          "description": "<p>Ties the target's shoelaces. DEX×3 to stay standing, 1 round to untie.</p>"
+        },
+        "sp1029Larmes": {
+          "name": "Tears Jinx (Lacrimare)",
+          "description": "<p>Makes a person cry, -20% penalty to anything involving vision for 1d4 hours.</p>"
+        },
+        "sp1030Liberare": {
+          "name": "Liberare",
+          "description": "<p>An ancient variant of the Unlocking Charm, slightly more complex to use but capable of opening doors and locks.</p>"
+        },
+        "sp1031Liquidever": {
+          "name": "Liquid-to-Liquid Transfiguration",
+          "description": "<p>Transfigures one liquid into another liquid. Duration: permanent.</p>"
+        },
+        "sp1032LumiereObs": {
+          "name": "Light/Darkness (Lumos/Nox)",
+          "description": "<p>Produces a beam of light (Lumos) or extinguishes all lights in the area (Nox). Duration: voluntary.</p>"
+        },
+        "sp1033Maleficede": {
+          "name": "Leg-Locker Curse (Locomotor Mortis)",
+          "description": "<p>Locks the target's legs together, preventing them from walking. Sub-type: Hex. Duration: variable (rounds).</p>"
+        },
+        "sp1034Objetenboi": {
+          "name": "Object to Matchbox",
+          "description": "<p>Transfigures an object into a matchbox. Duration: permanent.</p>"
+        },
+        "sp1035ObjetenOis": {
+          "name": "Object to Bird (Avifors)",
+          "description": "<p>Transfigures an object into a bird. Duration: permanent.</p>"
+        },
+        "sp1036ObjetversO": {
+          "name": "Object-to-Object Transfiguration",
+          "description": "<p>Transfigures one object into another object of similar size. Duration: permanent.</p>"
+        },
+        "sp1037Objetschan": {
+          "name": "Singing Objects (Cantis)",
+          "description": "<p>Enchants objects to sing. Duration: voluntary.</p>"
+        },
+        "sp1038Oiseauxdel": {
+          "name": "Light Birds",
+          "description": "<p>Conjures small birds made of light from the wand tip. Duration: permanent.</p>"
+        },
+        "sp1039Purificati": {
+          "name": "Purification",
+          "description": "<p>Separates different substances (sorting lentils, removing impurities from powder, removing sand from shoes). Duration: permanent.</p>"
+        },
+        "sp1040QuatrePoin": {
+          "name": "Four-Point Spell (Point Me)",
+          "description": "<p>The wand acts as a compass, indicating north. Duration: 1 round.</p>"
+        },
+        "sp1041Ralentisse": {
+          "name": "Slowing Charm (Leniter)",
+          "description": "<p>Slows small creatures (120cm max) for 1d4+1 rounds. Movement halved. Opposition: POW/DEX.</p>"
+        },
+        "sp1042Rechauffem": {
+          "name": "Warming Charm (Calefare)",
+          "description": "<p>Heats an object by a few degrees or boils a small quantity of liquid (3L). Duration: instant.</p>"
+        },
+        "sp1043Recurage": {
+          "name": "Scouring Charm (Récurvite)",
+          "description": "<p>Cleans dirt by creating soap bubbles or making it disappear. Can also fill a person's mouth with soap. Range: 1.5m. Duration: permanent.</p>"
+        },
+        "sp1044Refroidiss": {
+          "name": "Cooling Charm (Frigidus)",
+          "description": "<p>Cools a liquid or object down to about 5°C. Duration: instant.</p>"
+        },
+        "sp1045Repoussede": {
+          "name": "Hair-Regrowth Charm",
+          "description": "<p>Causes hair to regrow on the target. Counters the Bald Scalp Hex. Duration: permanent.</p>"
+        },
+        "sp1046Revelation": {
+          "name": "Revealing Charm (Aparecium)",
+          "description": "<p>Reveals something hidden by magic or not. Opposition: Level/Level. Duration: instant.</p>"
+        },
+        "sp1047Rotation": {
+          "name": "Rotation Charm (Circumrota)",
+          "description": "<p>Rotates objects up to POW×10 m³ in size. Duration: instant.</p>"
+        },
+        "sp1048Secheresse": {
+          "name": "Drying Charm",
+          "description": "<p>Dries small bodies of water. Duration: permanent.</p>"
+        },
+        "sp1049Sortileged": {
+          "name": "Water-Making Spell (Aguamenti)",
+          "description": "<p>Produces water from the tip of the wand. Variable force, from quenching thirst to extinguishing fires. Duration: permanent.</p>"
+        },
+        "sp1050Sortileged": {
+          "name": "Fire-Making Spell (Incendio)",
+          "description": "<p>Conjures flames that can damage objects and burn matter. Deals 1d4 fire damage with 50% chance to ignite. Duration: voluntary.</p>"
+        },
+        "sp1051Sourisenta": {
+          "name": "Mouse to Snuffbox (Buxulafors)",
+          "description": "<p>Transfigures a mouse into a decorative snuffbox. Duration: permanent.</p>"
+        },
+        "sp1052Surfacemir": {
+          "name": "Mirror Surface (Mirare)",
+          "description": "<p>Creates a silver reflective surface on a support that mirrors everything passing before it. Duration: 2d4+2 hours.</p>"
+        },
+        "sp1053Tergeo": {
+          "name": "Cleaning Spell (Tergeo)",
+          "description": "<p>Creates a siphon from the wand that removes blood, grease, and other stains from a target. Duration: permanent.</p>"
+        },
+        "sp1054Valise": {
+          "name": "Packing Charm (Failamalle)",
+          "description": "<p>Makes belongings pack themselves into a suitcase. Duration: 1 minute.</p>"
+        },
+        "sp1055Ventilatio": {
+          "name": "Airway-Clearing Spell (Anapneo)",
+          "description": "<p>Instantly clears the airways of a choking person. Duration: instant.</p>"
+        },
+        "sp2013Annulation": {
+          "name": "General Counter-Spell (Finite Incantatem)",
+          "description": "<p>Immediately cancels all spell effects. Opposition: POW/POW. Does not work on complete transfigurations. Duration: instant.</p>"
+        },
+        "sp2014Antiouvert": {
+          "name": "Anti-Opening Charm (Colloportus)",
+          "description": "<p>Counters unlocking spells (Alohomora, Annihilare, Dunamis, Liberare). Must be cast differently for each. Duration: POW days.</p>"
+        },
+        "sp2015Brouillard": {
+          "name": "Fog Spell (Nebulus)",
+          "description": "<p>Creates fog from the wand for camouflage. Area: POW×2 meters radius. Duration: variable (hours). Effects: Observation = PER×2.</p>"
+        },
+        "sp2016Charmer": {
+          "name": "Charm Person",
+          "description": "<p>The target becomes entranced by the caster. Opposition: APP/POW. Duration: variable (hours).</p>"
+        },
+        "sp2017Cheveuxdru": {
+          "name": "Hair-Thickening Charm",
+          "description": "<p>Makes hair grow disproportionately, obstructing the target's vision. Observation = PER×2. Duration: permanent.</p>"
+        },
+        "sp2018Colle": {
+          "name": "Sticking Jinx (Agglutino)",
+          "description": "<p>Glues a person's feet or an animal's paws to the ground. Must succeed STR×3 to break free. Duration: variable (hours).</p>"
+        },
+        "sp2019Couleurdes": {
+          "name": "Hair Colour Charm",
+          "description": "<p>Changes the target's hair colour. Duration: permanent.</p>"
+        },
+        "sp2020Couleursde": {
+          "name": "Ink Colour Charm",
+          "description": "<p>Changes ink colour (to blue, yellow, black, etc.). Duration: permanent or instant.</p>"
+        },
+        "sp2021CoupeGriff": {
+          "name": "Nail-Trimming Charm",
+          "description": "<p>Trims claws or nails magically. Duration: instant.</p>"
+        },
+        "sp2022Cuisant": {
+          "name": "Stinging Hex",
+          "description": "<p>Causes burning pain and swells the target's face beyond recognition. Effect: APP -5. Duration: variable (hours).</p>"
+        },
+        "sp2023Danseendia": {
+          "name": "Dancing Feet Spell (Tarentallegra)",
+          "description": "<p>Makes the target dance uncontrollably. -40% to all actions (-20% for magic). Duration: 1d4+2 rounds.</p>"
+        },
+        "sp2024Deplacemen": {
+          "name": "Telekinesis (Mobili)",
+          "description": "<p>Moves an object or unconscious person by telekinesis. Maximum: POW × 5 kg. Duration: voluntary.</p>"
+        },
+        "sp2025Descente": {
+          "name": "Descending Spell (Descendo)",
+          "description": "<p>Causes one or more objects to descend or fall. Duration: instant.</p>"
+        },
+        "sp2026Discretion": {
+          "name": "Silencing Spell (Sonus Evanesco)",
+          "description": "<p>Greatly reduces sounds made by a person. +30% to Stealth. Duration: 1d4+2 hours.</p>"
+        },
+        "sp2027Ectoplasmu": {
+          "name": "Ectoplasm Spell (Ectoplasmus)",
+          "description": "<p>Cleans ectoplasm and harms spirits and poltergeists. Deals 1d4+1 damage to a spirit's existence points.</p>"
+        },
+        "sp2028Elasticite": {
+          "name": "Elasticity Charm (Elasticum)",
+          "description": "<p>Makes limbs elastic, stretching up to 1 meter. Side effect: -1 STR. Duration: 1 hour.</p>"
+        },
+        "sp2029Empoigne": {
+          "name": "Grip Charm",
+          "description": "<p>Enchants an object to be easier to hold firmly. Duration: permanent.</p>"
+        },
+        "sp2030Epoximise": {
+          "name": "Sticking Charm (Epoximise)",
+          "description": "<p>Makes an object extremely sticky. Requires a spell or STR×2 to release. Duration: permanent.</p>"
+        },
+        "sp2031Equilibre": {
+          "name": "Balance Charm (Equilibrium)",
+          "description": "<p>Prevents being knocked off balance. +50% Athletics for climbing, +40% Acrobatics. Duration: 1d4+1 hours.</p>"
+        },
+        "sp2032Etincelles": {
+          "name": "White Sparks (Baubillious)",
+          "description": "<p>Projects white sparks at an opponent, dealing 1 non-lethal damage. Opposition: POW/POW. Duration: instant.</p>"
+        },
+        "sp2033Faitdispar": {
+          "name": "Calvorio Hex (Bald-Head)",
+          "description": "<p>Makes the target's hair disappear (APP -1). Sub-type: Hex.</p>"
+        },
+        "sp2034Ficelage": {
+          "name": "Golden Binding (Fulgaris)",
+          "description": "<p>Binds only the target's hands or wrists with golden bonds. Opposition POW/DEX to break free. Duration: permanent.</p>"
+        },
+        "sp2035Flammesble": {
+          "name": "Bluebell Flames",
+          "description": "<p>Creates a small blue flame that is portable and burns even in humid places. Less hot than normal fire but water-resistant. Duration: POW hours.</p>"
+        },
+        "sp2036Flammesenm": {
+          "name": "Hand Flames",
+          "description": "<p>Generates a fireball in the caster's hand without burning them. Duration: voluntary.</p>"
+        },
+        "sp2037Fouet": {
+          "name": "Whip Spell",
+          "description": "<p>Transforms the wand tip into a whip, usable for attacking or grabbing objects at short range.</p>"
+        },
+        "sp2038Fourrure": {
+          "name": "Fur Spell",
+          "description": "<p>Covers the target in fur. Duration: POW hours.</p>"
+        },
+        "sp2039Freinage": {
+          "name": "Braking Charm",
+          "description": "<p>Enchants brooms to help brake. Grants +1 to 5% bonus to Broom Flying. Duration: permanent.</p>"
+        },
+        "sp2040Giclepus": {
+          "name": "Pus-Squirting Hex",
+          "description": "<p>Causes profuse pus secretions from the target's nose. APP -1; Smell = PER×1. Duration: 1d4-1 hour(s). Sub-type: Hex.</p>"
+        },
+        "sp2041GrandeTete": {
+          "name": "Head-Swelling Hex (Engorgio Skullus)",
+          "description": "<p>Doubles the target's head size and weight. -15% to all physical actions and -1 APP. Sub-type: Hex. Duration: 1d4+2 hours. Can be dispelled with a Deflating Draught.</p>"
+        },
+        "sp2042Herissonen": {
+          "name": "Hedgehog to Pincushion",
+          "description": "<p>Transfigures a hedgehog into a pincushion. Duration: permanent.</p>"
+        },
+        "sp2043Huilegliss": {
+          "name": "Slippery Oil (Scandere)",
+          "description": "<p>Covers a surface with slippery oil. DEX×2 to move across it. Duration: variable (hours).</p>"
+        },
+        "sp2044Illisibili": {
+          "name": "Illegibility Charm (Illegibilus)",
+          "description": "<p>Makes text illegible. Can be lifted by Finite Incantatem. Duration: permanent.</p>"
+        },
+        "sp2045Inversion": {
+          "name": "Swapping Spell",
+          "description": "<p>Swaps the position of two objects within POW×2 meters maximum. Duration: instant.</p>"
+        },
+        "sp2046Lapinenpan": {
+          "name": "Rabbit to Slippers (Soccusfors)",
+          "description": "<p>Transfigures a rabbit into a pair of slippers. Duration: permanent.</p>"
+        },
+        "sp2047Liberation": {
+          "name": "Revulsion Jinx (Lashlabask)",
+          "description": "<p>Forces release or opens bonds, magical or not. Duration: instant.</p>"
+        },
+        "sp2048Locomotion": {
+          "name": "Locomotion Charm (Locomotor)",
+          "description": "<p>Moves objects by levitating and directing them. Duration: variable (rounds).</p>"
+        },
+        "sp2049Maintien": {
+          "name": "Holding Charm",
+          "description": "<p>Holds an object in place, making it harder to move or destroy (increases difficulty by 1 level). Duration: permanent.</p>"
+        },
+        "sp2050Maleficede": {
+          "name": "Melofors Hex (Pumpkin-Head)",
+          "description": "<p>Encases the target's head in a pumpkin, blinding them. Sub-type: Hex. Opposition: STR roll to remove. Duration: instant.</p>"
+        },
+        "sp2051Montage": {
+          "name": "Assembly Charm (Erigo)",
+          "description": "<p>Assembles a structure from parts, like a tent or scaffolding. Duration: instant.</p>"
+        },
+        "sp2052Objetenplu": {
+          "name": "Object to Quill (Scribblifors)",
+          "description": "<p>Transfigures an object into a quill. Duration: permanent.</p>"
+        },
+        "sp2053ObjetenPri": {
+          "name": "Object to Prison (Incarcifos)",
+          "description": "<p>Transforms an object into a prison of the same size. Duration: permanent.</p>"
+        },
+        "sp2054Obliterati": {
+          "name": "Obliteration Charm",
+          "description": "<p>Erases footprints and stains (water, blood, etc.). Range: POW meters. Duration: instant.</p>"
+        },
+        "sp2055OuvreCaiss": {
+          "name": "Trunk-Opening Spell (Cistem Aperio)",
+          "description": "<p>Opens trunks, chests, boxes by violently blowing their lid or doors off. Duration: instant.</p>"
+        },
+        "sp2056Parole": {
+          "name": "Speaking Charm",
+          "description": "<p>Makes an object speak predetermined phrases — isolated words, increasingly rapid and high-pitched. Duration: POW×3 minutes.</p>"
+        },
+        "sp2057Poidsplume": {
+          "name": "Feather-Light Charm",
+          "description": "<p>Makes an object as light as a feather. Duration: POW hours.</p>"
+        },
+        "sp2058Porcepique": {
+          "name": "Porcupine to Pincushion",
+          "description": "<p>Transfigures a porcupine into a pincushion. Duration: permanent.</p>"
+        },
+        "sp2059Ratatinage": {
+          "name": "Shrinking Solution Spell (Reducio)",
+          "description": "<p>Shrinks an object, animal or plant by half for 1d4+2 hours. Counter-spell: Engorgement Charm (Engorgio).</p>"
+        },
+        "sp2060Renverseme": {
+          "name": "Flipping Jinx (Everte Statum)",
+          "description": "<p>Violently trips the target, sending them flying. Deals 1 damage if DEX×3 fails. Duration: instant.</p>"
+        },
+        "sp2061Repoussecr": {
+          "name": "Creature-Repelling Charm (Exumai)",
+          "description": "<p>Repels an animal as far as possible from the caster. Opposition: POW/STR. Maximum: POW×5 m. Duration: instant.</p>"
+        },
+        "sp2062Scarabeeen": {
+          "name": "Beetle to Button (Bullatusfors)",
+          "description": "<p>Transfigures a beetle into a button. Duration: permanent.</p>"
+        },
+        "sp2063Sortileged": {
+          "name": "Gliding Charm",
+          "description": "<p>Enchants an item to glide, following the caster. Duration: POW seconds.</p>"
+        },
+        "sp2064Spiraledev": {
+          "name": "Wind Spiral",
+          "description": "<p>Creates a spiral of wind around the target. Duration: variable (rounds). Effects: Movement halved.</p>"
+        },
+        "sp2065Surdite": {
+          "name": "Deafening Hex (Assurdiato)",
+          "description": "<p>Causes unpleasant buzzing in the target's ears. -50% to hearing Perception. Duration: 1d4 hours. Opposition: POW/POW.</p>"
+        },
+        "sp2066Tetenbulle": {
+          "name": "Bubble-Head Charm",
+          "description": "<p>Creates a bubble of pure air around the head, allowing breathing underwater or protection from bad smells. Duration: 1d4+1 hours.</p>"
+        },
+        "sp2067Videntrail": {
+          "name": "Bowel Hex (Laxativus)",
+          "description": "<p>Forces the target to urgently empty their bowels. Sub-type: Hex. Opposition: POW/CON.</p>"
+        },
+        "sp2068Virage": {
+          "name": "Turning Charm",
+          "description": "<p>Enchants brooms for better turning. Grants +1 to 5% bonus to Broom Flying. Duration: permanent.</p>"
+        },
+        "sp3013Antihoquet": {
+          "name": "Anti-Hiccup Charm",
+          "description": "<p>Counters hiccup spells or regular hiccups. Duration: instant.</p>"
+        },
+        "sp3014Antimalefi": {
+          "name": "Anti-Mucus Counter-Hex",
+          "description": "<p>Counters the effects of the Mucus Hex (Mucus ad Nauseam).</p>"
+        },
+        "sp3015Antitriche": {
+          "name": "Anti-Cheating Charm",
+          "description": "<p>Enchants an object (parchment, quill) to prevent anyone using it from cheating. Duration: 1 day.</p>"
+        },
+        "sp3016Boomerang": {
+          "name": "Boomerang Charm (Cateia)",
+          "description": "<p>Enchants an object to always return to its original position when thrown. Duration: permanent.</p>"
+        },
+        "sp3017Bouchesoud": {
+          "name": "Mouth-Sealing Hex (Oscausi)",
+          "description": "<p>Makes the target's mouth disappear, sealed by skin. Duration: variable (hours). Effects: Muteness.</p>"
+        },
+        "sp3018CarpeRetra": {
+          "name": "Carpe Retractum",
+          "description": "<p>Produces a retractable cord of light to pull objects toward the caster or pull the caster toward fixed targets. Duration: voluntary. Range: POW meters.</p>"
+        },
+        "sp3019Catapultag": {
+          "name": "Catapulting Jinx",
+          "description": "<p>Cast on an object like a broom, violently repels anyone who tries to grab it. Opposition: STR×2. Duration: instant.</p>"
+        },
+        "sp3020Copieillus": {
+          "name": "Illusory Copy",
+          "description": "<p>Creates a visual copy of a person or animal (illusion). PER×1 to see through. Duration: variable (hours). Fades on touch.</p>"
+        },
+        "sp3021Correcteur": {
+          "name": "Broom Correction Charm",
+          "description": "<p>Corrects broom handling. Grants +10% to Broom Flying for the duration. Duration: permanent.</p>"
+        },
+        "sp3022Cridurut": {
+          "name": "Alarm Spell (Cridurut)",
+          "description": "<p>Triggers an alarm if anyone enters the spell's area. Maximum zone: POW meters diameter. Duration: 1 day.</p>"
+        },
+        "sp3023Diminution": {
+          "name": "Shrinking Jinx (Diminuendo)",
+          "description": "<p>Shrinks the target to about 30 centimeters. Duration: POW minutes.</p>"
+        },
+        "sp3024Durcisseme": {
+          "name": "Hardening Charm (Duro)",
+          "description": "<p>Turns small objects into stone. Maximum 5dm³. Duration: 1d6+2 hours.</p>"
+        },
+        "sp3025Ebublio": {
+          "name": "Ebublio Jinx",
+          "description": "<p>Traps the target in a magical bubble. STR×4 to escape. Duration: POW rounds.</p>"
+        },
+        "sp3026Etincelles": {
+          "name": "Blue Sparks",
+          "description": "<p>Projects blue sparks dealing 1d4 non-lethal damage. Opposition: POW/DEX. Can block vision in large quantities. Duration: instant.</p>"
+        },
+        "sp3027Explosiond": {
+          "name": "Object Explosion",
+          "description": "<p>Makes a small object explode violently. Maximum 2dm³. Duration: instant.</p>"
+        },
+        "sp3028Explosiond": {
+          "name": "Exploding Charm (Bombarda)",
+          "description": "<p>Destroys a small object (max 2dm³) by making it explode. Generates a powerful explosion sound. Duration: instant.</p>"
+        },
+        "sp3029Flottement": {
+          "name": "Floating Charm",
+          "description": "<p>Makes something float slowly through the air from one place to another, about 1-2 meters off the ground. Duration: voluntary.</p>"
+        },
+        "sp3030Furoncles": {
+          "name": "Pimple Jinx (Furunculus)",
+          "description": "<p>Covers the target in boils and pustules. -2 HP and APP halved. Sub-type: Hex. Duration: variable (hours).</p>"
+        },
+        "sp3031Gemino": {
+          "name": "Doubling Charm (Gemino)",
+          "description": "<p>Creates a perfect visual copy of an object (without magical properties). Sub-type: Hex. Cannot be stopped except by the caster. Duration: permanent.</p>"
+        },
+        "sp3032Glacius": {
+          "name": "Freezing Spell (Glacius)",
+          "description": "<p>Encases target in ice or freezes liquid surfaces. Duration: 1d6+1 rounds.</p>"
+        },
+        "sp3033GluPerpetu": {
+          "name": "Permanent Sticking Charm",
+          "description": "<p>Fixes an object permanently so no one can remove it. Duration: permanent.</p>"
+        },
+        "sp3034Herbivicus": {
+          "name": "Herbivicus (Plant Growth)",
+          "description": "<p>Accelerates plant growth. Duration: voluntary. Note: ensure sufficient water and nutrients for the plant.</p>"
+        },
+        "sp3035Hibouenjum": {
+          "name": "Owl to Opera Glasses",
+          "description": "<p>Transfigures an owl into opera glasses. Duration: permanent.</p>"
+        },
+        "sp3036Impassibil": {
+          "name": "Impassibility Charm (Impassibilis)",
+          "description": "<p>Prevents anything from passing through the enchanted object. Duration: variable (hours).</p>"
+        },
+        "sp3037Lapifors": {
+          "name": "Lapifors",
+          "description": "<p>Transforms an object into a living rabbit of the same size. Can also transform small animals into rabbits. Duration: permanent.</p>"
+        },
+        "sp3038Lien": {
+          "name": "Protean Charm",
+          "description": "<p>Links objects so that if one is modified, all others change as well. Duration: permanent.</p>"
+        },
+        "sp3039Maleficede": {
+          "name": "Bat-Bogey Hex (Chauve-Furie)",
+          "description": "<p>The target's bogeys transform into bats that attack their face. Sub-type: Hex. Duration: permanent.</p>"
+        },
+        "sp3040Maleficedu": {
+          "name": "Hiccup Hex",
+          "description": "<p>Makes the target hiccup uncontrollably. Opposition: POW/POW. Sub-type: Hex. Duration: variable (hours).</p>"
+        },
+        "sp3041Miseenplac": {
+          "name": "Placement Charm",
+          "description": "<p>Precisely places an object at a distance. Duration: voluntary.</p>"
+        },
+        "sp3042MoucheSard": {
+          "name": "Sardine-Sneezing Hex (Sardina Sternuo)",
+          "description": "<p>Makes the target sneeze sardines. -40% to magic plus pain. Sub-type: Hex. Duration: 2d4+2 hours. CON×3 for effort.</p>"
+        },
+        "sp3043ObjetenDra": {
+          "name": "Object to Dragon (Draconifors)",
+          "description": "<p>Transforms an object into a living dragon of the same size. Duration: permanent.</p>"
+        },
+        "sp3044Objetenpou": {
+          "name": "Object to Chicken (Pullus)",
+          "description": "<p>Transfigures an object into a chicken or goose. Duration: permanent.</p>"
+        },
+        "sp3045Oscausi": {
+          "name": "Lip-Sealing Hex (Oscausi)",
+          "description": "<p>Seals the target's mouth by covering it with skin, making it disappear completely. Duration: permanent.</p>"
+        },
+        "sp3046Permetdefa": {
+          "name": "Tree Levitation (Mobiliarbus)",
+          "description": "<p>Levitates a tree. It follows the caster as long as concentration is maintained. Duration: voluntary.</p>"
+        },
+        "sp3047Personneen": {
+          "name": "Human-to-Animal Transfiguration",
+          "description": "<p>Transforms a person into an animal. Opposition: POW/POW. Duration: permanent.</p>"
+        },
+        "sp3048Pierreench": {
+          "name": "Stone to Dog",
+          "description": "<p>Transforms a stone into a dog of the same size. Duration: permanent.</p>"
+        },
+        "sp3049Pression": {
+          "name": "Crushing Charm (Deprimo)",
+          "description": "<p>Exerts strong pressure on a surface until it buckles or breaks. Opposition: POW/STR. Duration: voluntary.</p>"
+        },
+        "sp3050Remplissag": {
+          "name": "Refilling Charm",
+          "description": "<p>Refills a container with the liquid it previously held. Duration: instant.</p>"
+        },
+        "sp3051RepousseFa": {
+          "name": "Ghost-Repelling Charm (Repello Umbrae)",
+          "description": "<p>Prevents ghosts from entering the enchanted zone. Opposition: POW/POW. Duration: 1 day.</p>"
+        },
+        "sp3052RepousseMo": {
+          "name": "Muggle-Repelling Charm (Repello Moldum)",
+          "description": "<p>Prevents Muggles from entering the enchanted zone. Duration: 1 day.</p>"
+        },
+        "sp3053Repulsion": {
+          "name": "Banishing Charm (Repulso/Depulso)",
+          "description": "<p>Repels an object as far as possible. Can also repel heavy objects (up to POW×5 m). Duration: instant.</p>"
+        },
+        "sp3054Reveil": {
+          "name": "Reviving Spell (Enervatum)",
+          "description": "<p>Wakes anyone asleep (magically or not) and anyone hit by Stupefy. Duration: instant.</p>"
+        },
+        "sp3055Reversion": {
+          "name": "Reversal Spell (Reverte)",
+          "description": "<p>Returns an object to its original position or state. Can move or repair it. Duration: instant.</p>"
+        },
+        "sp3056Rocket": {
+          "name": "Rocket Spell",
+          "description": "<p>Launches the target skyward at high speed. Duration: instant.</p>"
+        },
+        "sp3057Scellement": {
+          "name": "Sealing Charm (Document)",
+          "description": "<p>Seals a document so it can only be read after receiving another tap of the wand. Duration: permanent.</p>"
+        },
+        "sp3058Scellement": {
+          "name": "Room-Sealing Spell (Colloportus)",
+          "description": "<p>Magically seals a room so it cannot be opened. Duration: permanent.</p>"
+        },
+        "sp3059Soins": {
+          "name": "Healing Spell (Episkey)",
+          "description": "<p>Restores 1d4+1 hit points and mends bones. Cannot be cast twice on the same wound. Duration: instant.</p>"
+        },
+        "sp3060Somnambuli": {
+          "name": "Sleepwalking Charm",
+          "description": "<p>Forces a sleeping person to walk during their sleep (magical or not). Duration: POW minutes.</p>"
+        },
+        "sp3061Stupefixio": {
+          "name": "Stunning Spell (Stupefix)",
+          "description": "<p>Paralyses the target and puts them in a catatonic state near coma. Duration: 2d4+2 hours.</p>"
+        },
+        "sp3062Terrasseme": {
+          "name": "Gouging Spell (Defodio)",
+          "description": "<p>Carves deep gashes into a surface. Duration: instant.</p>"
+        },
+        "sp3063Toboggan": {
+          "name": "Slide Charm (Glisseo)",
+          "description": "<p>Transforms stairs into a slide. Duration: variable (hours).</p>"
+        },
+        "sp3064Urticaire": {
+          "name": "Hives Hex",
+          "description": "<p>Causes violent hives all over the target's body. Damage: 1d4-2; APP -2. Sub-type: Hex. Duration: instant.</p>"
+        },
+        "sp3065Waddiwasi": {
+          "name": "Waddiwasi",
+          "description": "<p>Sends an object flying at bullet speed. May damage it. Duration: instant.</p>"
+        },
+        "sp4012Antibrumed": {
+          "name": "Anti-brume dorée",
+          "description": "<p>Permet de contrer les effets du maléfice de Cerveau-en-gelée</p>"
+        },
+        "sp4013Antimalefi": {
+          "name": "Anti-Laughing Counter-Hex",
+          "description": "<p>Counters the Laughing Hex. Duration: instant.</p>"
+        },
+        "sp4014Antiscelle": {
+          "name": "Room-Unsealing Spell",
+          "description": "<p>Counters the Room-Sealing Spell. When cast on an object, prevents it from being stolen. Duration: instant.</p>"
+        },
+        "sp4015Bouledebow": {
+          "name": "Bowling Ball to Balloon",
+          "description": "<p>Transfigures a bowling ball into a balloon. Duration: permanent.</p>"
+        },
+        "sp4016Disparitio": {
+          "name": "Snake Vanishing Spell (Vipera Evanesca)",
+          "description": "<p>Makes a snake disappear. Duration: permanent.</p>"
+        },
+        "sp4017Escargoten": {
+          "name": "Snail to Teapot",
+          "description": "<p>Transfigures a snail into a teapot. Duration: permanent.</p>"
+        },
+        "sp4018Faitappara": {
+          "name": "Tracking Charm (Appare Vestigium)",
+          "description": "<p>Reveals something hidden by magic or not. Opposition: Level/Level. Displays traces of passage and recent magical activity.</p>"
+        },
+        "sp4019FauxSouven": {
+          "name": "False Memory Charm",
+          "description": "<p>Modifies or adds false memories to a person's mind. Duration: permanent.</p>"
+        },
+        "sp4020Fidelitas": {
+          "name": "Fidelius Charm",
+          "description": "<p>Hides a secret within a person (Secret Keeper). Only they can reveal it. Duration: permanent.</p>"
+        },
+        "sp4021Fondantdu": {
+          "name": "Melting Hex (Liquefaciens)",
+          "description": "<p>Causes metal objects to melt. Sub-type: Hex. Duration: instant.</p>"
+        },
+        "sp4022Gel": {
+          "name": "Ice Trap",
+          "description": "<p>Creates an ice plate on the ground that encases the legs of anyone who steps on it. STR×3 to break free. Deals 2 non-lethal damage. Duration: permanent.</p>"
+        },
+        "sp4023GeleFlamme": {
+          "name": "Flame-Freezing Charm",
+          "description": "<p>Makes targeted flames harmless to touch. Duration: variable (days).</p>"
+        },
+        "sp4024GrandeExpl": {
+          "name": "Major Explosion (Bombarda Maxima)",
+          "description": "<p>Causes a major explosion, destroying up to 1m³ of matter. Duration: instant.</p>"
+        },
+        "sp4025Grandeur": {
+          "name": "Aura of Grandeur (Magistratus)",
+          "description": "<p>Surrounds the caster with an aura that inspires fear or attraction. Opposition: POW/POW. Duration: 1d10+2 hours.</p>"
+        },
+        "sp4026Humanite": {
+          "name": "Human Restoration (Homomorphus)",
+          "description": "<p>Restores human form to a werewolf, Animagus, or transfigured human. Opposition: POW/POW. Duration: instant.</p>"
+        },
+        "sp4027Incassable": {
+          "name": "Unbreakable Charm",
+          "description": "<p>Makes an object unbreakable. Duration: POW hours.</p>"
+        },
+        "sp4028Lumieresol": {
+          "name": "Sunlight Spell (Lumos Solem)",
+          "description": "<p>Produces intense sunlight in an arc of POW×2 meters. Blinds target for 1 round (-50% to sight actions). Damages light-sensitive creatures: 1d4+1.</p>"
+        },
+        "sp4029Maleficedu": {
+          "name": "Jinxed Wand Hex",
+          "description": "<p>Curses the target so all their spells are cast with maximum penalty. Sub-type: Hex. Duration: variable (hours).</p>"
+        },
+        "sp4030Maleficedu": {
+          "name": "Laughing Hex (Rictusempra)",
+          "description": "<p>Causes uncontrollable laughter until total exhaustion (0 HP), putting the target in a coma. Sub-type: Hex. Duration: variable (hours).</p>"
+        },
+        "sp4031Marquedest": {
+          "name": "Dark Mark (Morsmordre)",
+          "description": "<p>Conjures the Dark Mark — a giant glowing green skull with a serpent protruding from its mouth. Duration: permanent.</p>"
+        },
+        "sp4032Mimetisme": {
+          "name": "Mimicry (Mimesis)",
+          "description": "<p>The target's skin adapts to the environment. +50% to Stealth. Duration: 1d10+1 hours.</p>"
+        },
+        "sp4033Mutisme": {
+          "name": "Silencing Charm (Silencio)",
+          "description": "<p>Makes the target mute, preventing spellcasting unless wordless magic is known. Duration: 1 month.</p>"
+        },
+        "sp4034Patronus": {
+          "name": "Patronus Charm (Expecto Patronum)",
+          "description": "<p>Summons a Patronus (Opposition: POW×2/POW) that shields against Dementors and similar creatures, or serves as a messenger. Note: requires a pure heart and joyful memory. Duration: voluntary.</p>"
+        },
+        "sp4035Pintadeenc": {
+          "name": "Guinea Fowl to Guinea Pig",
+          "description": "<p>Transfigures a guinea fowl into a guinea pig. Duration: permanent.</p>"
+        },
+        "sp4036Pionenrein": {
+          "name": "Pawn to Queen (Reginafors)",
+          "description": "<p>Transfigures a chess pawn into a queen piece. Duration: permanent.</p>"
+        },
+        "sp4037Protection": {
+          "name": "Shield Charm (Protego)",
+          "description": "<p>Divides attacker's POW by 2. Grants opposition roll even when normally not allowed and reduces physical damage by 2. Duration: 1d8+2 hours.</p>"
+        },
+        "sp4038Reduction": {
+          "name": "Reductor Curse (Reducto)",
+          "description": "<p>Reduces solid objects to dust. Sub-type: Hex. Duration: instant.</p>"
+        },
+        "sp4039Renforceme": {
+          "name": "Reinforcement Charm (Fianto Duri)",
+          "description": "<p>Strengthens existing magical protections, granting extreme formula effects to an already-cast spell. Duration: same as reinforced spell.</p>"
+        },
+        "sp4040Revelasort": {
+          "name": "Spell-Revealing Charm (Specialis Revelio)",
+          "description": "<p>Reveals what spells have been cast on an object or person. Duration: instant.</p>"
+        },
+        "sp4041Reviviscen": {
+          "name": "Reviving Charm (Rennervate)",
+          "description": "<p>Restores energy to a weakened, stunned, or unconscious person. Ineffective against Dark Arts. Duration: voluntary.</p>"
+        },
+        "sp4042Securite": {
+          "name": "Security Alarm",
+          "description": "<p>Alerts the caster if a location is burgled. Used in shops against theft. Duration: 12 hours.</p>"
+        },
+        "sp4043Seduction": {
+          "name": "Seduction Charm",
+          "description": "<p>Charms the target into falling in love with the caster. Acts like a love potion. Opposition: APP/POW. Duration: 1d6+1 hours.</p>"
+        },
+        "sp4044Sortileged": {
+          "name": "Memory Charm (Obliviate)",
+          "description": "<p>Erases or modifies specific memories. Opposition: POW/POW. Duration: permanent.</p>"
+        },
+        "sp4045Sortileged": {
+          "name": "Switching Spell",
+          "description": "<p>Swaps two targets — the first becomes the second and vice versa. Duration: permanent.</p>"
+        },
+        "sp4046Supersenso": {
+          "name": "Super-Sensory Charm",
+          "description": "<p>Heightens all senses. Side effects: sensitivity to loud sounds and bad smells. Duration: variable (minutes).</p>"
+        },
+        "sp4047Tortueentr": {
+          "name": "Tortoise to Trumpet",
+          "description": "<p>Transfigures a tortoise into a trumpet. Duration: permanent.</p>"
+        },
+        "sp5011Alteration": {
+          "name": "Weather Alteration",
+          "description": "<p>Alters the weather, returning it to normal. Counters Meteorribilis. Duration: instant.</p>"
+        },
+        "sp5012Antimalefi": {
+          "name": "Anti-maléfice du",
+          "description": "<p>Permet de contrer les effets du maléfice du Voleur</p>"
+        },
+        "sp5013AntiTransp": {
+          "name": "Anti-Disapparition Jinx",
+          "description": "<p>Prevents a person from teleporting via Apparition. Duration: variable (hours).</p>"
+        },
+        "sp5014Chardonnet": {
+          "name": "Goldfinch to Golden Snitch",
+          "description": "<p>Transfigures a goldfinch into a Golden Snitch. Duration: permanent.</p>"
+        },
+        "sp5015Chaudronen": {
+          "name": "Cauldron to Badger",
+          "description": "<p>Transfigures a cauldron into a badger. Duration: permanent.</p>"
+        },
+        "sp5016Flagrance": {
+          "name": "Flagrante Curse",
+          "description": "<p>Protects an object from theft. Anyone grabbing it without lifting the curse suffers 1d4 burn damage. Sub-type: Hex. Duration: permanent.</p>"
+        },
+        "sp5017Furetenplu": {
+          "name": "Ferret to Feather Duster",
+          "description": "<p>Transfigures a ferret into a feather duster. Duration: permanent.</p>"
+        },
+        "sp5018Gnomeennai": {
+          "name": "Gnome to Garden Gnome",
+          "description": "<p>Transfigures a gnome into a garden gnome statue. Duration: permanent.</p>"
+        },
+        "sp5019Lancesurun": {
+          "name": "Enhanced Locking Spell (Colloportus Maxima)",
+          "description": "<p>Cast on a door or lock, functions as an enhanced lock that requires advanced unlocking magic. Duration: permanent.</p>"
+        },
+        "sp5020Legilimens": {
+          "name": "Legilimency (Legilimens)",
+          "description": "<p>Enters a person's mind to read thoughts and browse memories. Opposition: POW/(POW×1). Duration: voluntary.</p>"
+        },
+        "sp5021Maleficeex": {
+          "name": "Blasting Curse (Confringo)",
+          "description": "<p>Causes an explosion that destroys objects and deals 1d6+1 damage to living beings. Sub-type: Hex. Duration: instant.</p>"
+        },
+        "sp5022Ordureench": {
+          "name": "Rubbish to Raccoon Dog",
+          "description": "<p>Transfigures rubbish into a raccoon dog. Duration: permanent.</p>"
+        },
+        "sp5023Plumeauenf": {
+          "name": "Feather Duster to Ferret",
+          "description": "<p>Transfigures a feather duster into a ferret. Duration: permanent.</p>"
+        },
+        "sp5024Positionin": {
+          "name": "Initial Position (Recall)",
+          "description": "<p>Returns the caster to their initial position (equivalent to POW/2 meters). Duration: instant.</p>"
+        },
+        "sp5025Regenerati": {
+          "name": "Regeneration (Vulnera Sanentur)",
+          "description": "<p>Makes wounds disappear from a lifeless body. Effect: cosmetic healing. Duration: voluntary.</p>"
+        },
+        "sp5026Roiencorbe": {
+          "name": "King to Raven",
+          "description": "<p>Transfigures a chess king into a raven. Duration: permanent.</p>"
+        },
+        "sp5027Sectumsemp": {
+          "name": "Sectumsempra",
+          "description": "<p>Violently slashes the targeted body part as if by a sword. Target rapidly loses blood. Effect: 1d4+1 damage then 1 per round. Sub-type: Hex.</p>"
+        },
+        "sp5028Sortileges": {
+          "name": "Priori Incantatem",
+          "description": "<p>Forces a wand to reveal its last spells. The spell triggers automatically during certain wand-to-wand duels.</p>"
+        },
+        "sp5029Tasseenger": {
+          "name": "Cup to Gerbil",
+          "description": "<p>Transfigures a cup into a gerbil. Duration: permanent.</p>"
+        },
+        "sp5030Tasseenrat": {
+          "name": "Cup to Rat",
+          "description": "<p>Transfigures a cup into a rat. Duration: permanent.</p>"
+        },
+        "sp5031Tatouencou": {
+          "name": "Armadillo to Cushion",
+          "description": "<p>Transfigures an armadillo into a cushion. Duration: permanent.</p>"
+        },
+        "sp5032Tempete": {
+          "name": "Weather Storm (Meteorribilis)",
+          "description": "<p>Creates a miniature storm of POW meters radius (rain or snow) that can injure and immobilize. Duration: POW minutes.</p>"
+        },
+        "sp5033Transplana": {
+          "name": "Apparition",
+          "description": "<p>Teleports to a known, unprotected location. Range: POW × 10 kilometers.</p>"
+        },
+        "sp5034Vinaigreen": {
+          "name": "Vinegar to Wine",
+          "description": "<p>Transfigures vinegar into wine. Note: higher mastery produces better wine quality. Duration: permanent.</p>"
+        },
+        "sp5035Voleur": {
+          "name": "Thief's Curse",
+          "description": "<p>Punishes anyone who keeps an enchanted object too long without buying it. Effects vary by caster. Sub-type: Hex. Duration: permanent.</p>"
+        },
+        "sp6011Cemalefice": {
+          "name": "Ce maléfice provoque une douleur cuisante et gonfle le visage de la",
+          "description": "<p>Ce maléfice provoque une douleur cuisante et gonfle le visage de la cible pour le rendre méconnaissable.</p>"
+        }
+      },
+      "hogwarts-potions": {
+        "po4004AmortentiaP": {
+          "name": "Amortentia",
+          "description": "<p>The most powerful love potion. Creates a passionate obsession toward the giver. POW/POW opposition. Duration: 24 hours.</p>"
+        },
+        "po3001Antidote": {
+          "name": "Antidote to Common Poisons",
+          "description": "<p>Cancels the effect of poisons up to a virulence of 10.</p>"
+        },
+        "po1001CureFurncl": {
+          "name": "Cure for Boils",
+          "description": "<p>Cures boils and minor skin eruptions. Beginner-level preparation taught in first year.</p>"
+        },
+        "po1004EncreInvis": {
+          "name": "Invisible Ink",
+          "description": "<p>Ink that disappears after drying and only becomes visible again when heating the parchment or with a revealing spell.</p>"
+        },
+        "po2006FelixFelic": {
+          "name": "Felix Felicis",
+          "description": "<p>Golden liquid that makes the drinker lucky for 12 hours. Excessive use is toxic. Banned in competition.</p>"
+        },
+        "po4003FelixFelic": {
+          "name": "Felix Felicis",
+          "description": "<p>Liquid luck potion. All rolls benefit from a +30% bonus for 12 hours. Extremely dangerous in excess.</p>"
+        },
+        "po4005MortVivant": {
+          "name": "Draught of Living Death",
+          "description": "<p>Puts the target into a sleep so deep they appear dead. Only a specific antidote can awaken them.</p>"
+        },
+        "po1003Herbicide": {
+          "name": "Herbicide",
+          "description": "<p>Destroys non-magical plants and considerably weakens small magical plants.</p>"
+        },
+        "po3004PhiltrCalm": {
+          "name": "Calming Draught",
+          "description": "<p>Instantly calms the target, suppressing stress and anxiety. Cancels the stress penalty.</p>"
+        },
+        "po2005Mandragore": {
+          "name": "Mandrake Restorative Draught",
+          "description": "<p>Cures petrification. Requires mature Mandrakes. Significant preparation time.</p>"
+        },
+        "po2001Polynectar": {
+          "name": "Polyjuice Potion",
+          "description": "<p>Transforms the drinker into another person whose hair has been added to the potion. Duration: 1 hour. Long and complex preparation.</p>"
+        },
+        "po4002Polynectar": {
+          "name": "Polyjuice Potion",
+          "description": "<p>Allows taking the appearance of another person for 1 hour. Requires an element from the target (hair, etc.).</p>"
+        },
+        "po5003WolfsbaneP": {
+          "name": "Wolfsbane Potion",
+          "description": "<p>Allows the werewolf to retain human consciousness during transformation. Must be taken every day the week before the full moon.</p>"
+        },
+        "po2007Wiggenweld": {
+          "name": "Wiggenweld Potion",
+          "description": "<p>Restores the drinker's hit points (2d6 HP). Wizarding equivalent of a classic healing potion.</p>"
+        },
+        "po2004Aiguisesns": {
+          "name": "Sharpening Potion",
+          "description": "<p>Temporarily improves the drinker's senses. +15% bonus to Perception rolls for 1 hour.</p>"
+        },
+        "po3008Apocyn": {
+          "name": "Apocynum Potion",
+          "description": "<p>Violent poison that causes the loss of 1d6 hit points. High virulence.</p>"
+        },
+        "po1002PotionOubl": {
+          "name": "Forgetfulness Potion",
+          "description": "<p>Makes the target forget recent events (last hour). Delicate dosage.</p>"
+        },
+        "po3002Beaute": {
+          "name": "Beautification Potion",
+          "description": "<p>Improves the target's appearance. Effect: APP +2d4+2. Duration: 1d6 hours.</p>"
+        },
+        "po3007Duplication": {
+          "name": "Duplication Potion",
+          "description": "<p>Duplicates an existing potion (level ≤3). Requires the potion to copy as an ingredient.</p>"
+        },
+        "po3006Guerison": {
+          "name": "Healing Potion",
+          "description": "<p>Heals 1d4 hit points, closes wounds, and reduces minor injuries.</p>"
+        },
+        "po3003Memoire": {
+          "name": "Memory Potion",
+          "description": "<p>Considerably improves the drinker's memory for several hours. INT +5 for memorisation tests.</p>"
+        },
+        "po3005Neutralis": {
+          "name": "Neutralisation Potion",
+          "description": "<p>Renders ineffective the effects of a potion of equal or lower level (max level 3).</p>"
+        },
+        "po4006Regenera": {
+          "name": "Regeneration Potion",
+          "description": "<p>Regenerates damaged tissue. Heals 2d6 hit points over 8 hours. Very painful.</p>"
+        },
+        "po2002Poussos": {
+          "name": "Skele-Gro",
+          "description": "<p>Regenerates broken or missing bones. Painful process taking 8 hours. Essential in magical medicine.</p>"
+        },
+        "po5001Poussos": {
+          "name": "Skele-Gro",
+          "description": "<p>Regrows bones. Extremely painful process (12 hours). Used only for severe fractures or missing bones.</p>"
+        },
+        "po1006Repouslug": {
+          "name": "Slug Repellent",
+          "description": "<p>Repels slugs and crawling creatures within a 3-meter radius. Effective for 24 hours.</p>"
+        },
+        "po2008Enflure": {
+          "name": "Swelling Solution",
+          "description": "<p>Causes the body part it is applied to to swell up. Temporary but spectacular effect. Antidote: Deflating Draught.</p>"
+        },
+        "po1005Somnifere": {
+          "name": "Mild Sleeping Draught",
+          "description": "<p>Puts the drinker into a light sleep for 1d6 hours. Easy to wake.</p>"
+        },
+        "po2003Veritaserum": {
+          "name": "Veritaserum",
+          "description": "<p>Extremely powerful truth serum. The drinker can only tell the truth for 1 hour. Use regulated by the Ministry.</p>"
+        },
+        "po4001Veritaserum": {
+          "name": "Veritaserum",
+          "description": "<p>The most powerful truth serum. Three drops are enough to force anyone to tell the truth. POW/POW opposition.</p>"
+        },
+        "po5002ElixirVie": {
+          "name": "Elixir of Life",
+          "description": "<p>Extends the drinker's life. Requires the Philosopher's Stone. Regular use necessary to maintain the effect.</p>"
+        },
+        "po1007Acne": {
+          "name": "Acné",
+          "description": "<p>qui la boit, diminuant son APParence de 1d4</p>"
+        },
+        "po1008Amnesie": {
+          "name": "Amnésie",
+          "description": "<p>fleuve</p>"
+        },
+        "po1009Antiacne": {
+          "name": "Anti-Acne Potion",
+          "description": "<p>Eliminates boils and acne in seconds. Duration: 24 hours.</p>"
+        },
+        "po1010Antifuronc": {
+          "name": "Anti-furoncle",
+          "description": "<p>Remarque : effet inverse si mal préparé. cornes ; Mucus de</p>"
+        },
+        "po1011Cirassure": {
+          "name": "Broom Polish (Cirassure)",
+          "description": "<p>Grants +5% to Broom Flying / Quidditch. Duration: 1d4+1 hours. Applied to a broomstick.</p>"
+        },
+        "po1012Doxicide": {
+          "name": "Doxicide",
+          "description": "<p>dragon ; Sécrétion de</p>"
+        },
+        "po1013Fertilisan": {
+          "name": "Fertiliser Potion",
+          "description": "<p>A potion that enriches soil and accelerates plant growth. Used by Herbologists.</p>"
+        },
+        "po1014Furoncle": {
+          "name": "Boil-Cure Potion",
+          "description": "<p>Cures boils and skin eruptions. A simple potion often taught to first-year students.</p>"
+        },
+        "po1015Languedemi": {
+          "name": "Honey Tongue Potion",
+          "description": "<p>Gives the drinker a silver tongue, making their speech more persuasive and pleasant.</p>"
+        },
+        "po1016Lissenplis": {
+          "name": "Sleekeazy's Hair Potion",
+          "description": "<p>Smooths and straightens hair, making it sleek and manageable.</p>"
+        },
+        "po1017Pheromones": {
+          "name": "Pheromone Potion",
+          "description": "<p>Enhances the drinker's natural pheromones, making them more attractive to others.</p>"
+        },
+        "po1018Rejutage": {
+          "name": "Re-Juicing Potion",
+          "description": "<p>Restores lost fluids and rehydrates the body. Useful after heavy exertion.</p>"
+        },
+        "po2009Baumeabec": {
+          "name": "Baume à bec",
+          "description": "<p>Plume de paon baume avec un sérum salé et recommencer. Remarque : Ce baume ne doit pas être utilisé pour les Hippogriffes ou les Griffons Une fois à l’air libre, la potion s’étend sous la forme d’un brouillard blanc et épais dans lequel on ne voit rien sur une Bicarbonate de soude ; Sang de</p>"
+        },
+        "po2010Brumeopaqu": {
+          "name": "Opaque Mist Potion",
+          "description": "<p>Creates a thick opaque mist that blocks vision for about twenty meters. Duration: 1 hour.</p>"
+        },
+        "po2011Cafeine": {
+          "name": "Caféine",
+          "description": "<p>Effets secondaires : agitation extrême et difficulté à rester en Poudre de pieuvre ; Sucre place.</p>"
+        },
+        "po2012Cinqsens": {
+          "name": "Five Senses Potion",
+          "description": "<p>Temporarily enhances all five senses, including the ability to see in the dark. Duration: 1 hour.</p>"
+        },
+        "po2013Doigtsagil": {
+          "name": "Nimble Fingers Potion",
+          "description": "<p>Grants increased dexterity and precision to the drinker's hands.</p>"
+        },
+        "po2014Dragonfort": {
+          "name": "Dragon-Strengthening Potion",
+          "description": "<p>Fortifies and strengthens weakened dragons. Can also be used on other magical creatures.</p>"
+        },
+        "po2015Oculicura": {
+          "name": "Oculus Potion (Oculi Cura)",
+          "description": "<p>Heals eye infections, restores impaired vision, and counters conjunctivitis curses.</p>"
+        },
+        "po2016Pimentine": {
+          "name": "Pepperup Potion",
+          "description": "<p>Cures the common cold. Side effects include steam coming from the drinker's ears for several hours.</p>"
+        },
+        "po2017Potionn": {
+          "name": "Potion No. 113",
+          "description": "<p>A mysterious numbered potion with specific medicinal properties.</p>"
+        },
+        "po2018Protection": {
+          "name": "Fire Protection Potion",
+          "description": "<p>Grants temporary immunity to fire and extreme heat. Duration varies by potency.</p>"
+        },
+        "po2019Raconforta": {
+          "name": "Comforting Potion",
+          "description": "<p>Soothes anxiety and provides a warm sense of comfort and well-being to the drinker.</p>"
+        },
+        "po2020Regerminat": {
+          "name": "Regermination Potion (Skele-Gro)",
+          "description": "<p>Stimulates bone and tissue regrowth. Painful but effective for regrowing vanished bones.</p>"
+        },
+        "po2021Soignantep": {
+          "name": "Healing Potion for Creatures",
+          "description": "<p>A healing potion specifically formulated for magical creatures. Restores health and vitality.</p>"
+        },
+        "po2022Volubilis": {
+          "name": "Volubilis Potion",
+          "description": "<p>Alters the drinker's voice, either restoring a lost voice or changing its pitch and tone.</p>"
+        },
+        "po3009Apocyn": {
+          "name": "Apocyn",
+          "description": "<p>VIRulence : 9 Remarque : Mal préparée, l’Apocyn peut devenir mortelle. Redonne 1 point de vie et calme les douleurs les plus</p>"
+        },
+        "po3010Beaute": {
+          "name": "Beauté",
+          "description": "<p>Cap ; Pétale de rose ;</p>"
+        },
+        "po3011Beauteillu": {
+          "name": "Beauté illusoire",
+          "description": "<p>Remarque : Ces potions sont prises par les Harpies pour</p>"
+        },
+        "po3012Dasclepiad": {
+          "name": "Milkweed Balm (Baume d'Asclépiade)",
+          "description": "<p>A blue balm to be applied topically. Heals wounds and skin conditions. Duration: 2d4+4 hours.</p>"
+        },
+        "po3013Infusionin": {
+          "name": "Foul Infusion",
+          "description": "<p>A terrible-tasting infusion with powerful curative properties. Cures multiple ailments despite its repulsive flavour.</p>"
+        },
+        "po3014Memoire": {
+          "name": "Memory Potion",
+          "description": "<p>Enhances the drinker's memory, helping them recall forgotten information with clarity.</p>"
+        },
+        "po3015Neutralisa": {
+          "name": "Neutralisation Potion",
+          "description": "<p>Neutralises the effects of other potions or mild poisons currently affecting the drinker.</p>"
+        },
+        "po3016Poisons": {
+          "name": "Antidote to Common Poisons",
+          "description": "<p>Cures most common poisons. Brewed with Bezoar and other common antidotal ingredients.</p>"
+        },
+        "po3017Pommadante": {
+          "name": "Anti-Inflammation Salve",
+          "description": "<p>A soothing salve that reduces swelling, inflammation, and pain when applied to the affected area.</p>"
+        },
+        "po3018PotionNo": {
+          "name": "Potion No. 7",
+          "description": "<p>A complex numbered potion with powerful and specific effects.</p>"
+        },
+        "po3019Trompettes": {
+          "name": "Trumpet Potion",
+          "description": "<p>A potion involving trumpet-shaped ingredients with specific magical effects.</p>"
+        },
+        "po3020Verificati": {
+          "name": "Verification Potion (Veritaserum)",
+          "description": "<p>Forces the drinker to speak the truth. Extremely regulated by the Ministry of Magic.</p>"
+        },
+        "po3021Verniprote": {
+          "name": "Protective Varnish Potion",
+          "description": "<p>Creates a protective coating when applied to an object, shielding it from damage and corrosion.</p>"
+        },
+        "po4007Encremagiq": {
+          "name": "Encre magique",
+          "description": "<p>Sang de dragon Effet secondaire : Rompre un pacte ou un contrat rédigé à Spécial : Sang des deux contractants l’aide de cette encre magique implique de lourdes conséquences, généralement décrites avec soin lors de leur rédaction. Permet de créer une énergie qui servira à alimenter une Algues séchées ; Baie explosive ; machine, un objet quelconque durant quelques heures, voire</p>"
+        },
+        "po4008Energiemag": {
+          "name": "Énergie magique",
+          "description": "<p>Luciole ; Sang de salamandre ; Poudre interne qui lui permettra de fonctionner de manière de pieuvre autonome. Génère un gaz qui provoque la suffocation de celui ou celle qui le respire Effets : Semblables à l’asphyxie ; mais au lieu de subir des dégâts, la personne tombe dans le coma en cas d’échec au jet de sauvegarde.</p>"
+        },
+        "po4009Gazetrangl": {
+          "name": "Strangling Gas",
+          "description": "<p>Releases a toxic gas that persists for 2d4+2 rounds. Chokes anyone who breathes it in.</p>"
+        },
+        "po4010Morsuresde": {
+          "name": "morsures de",
+          "description": "<p>suffisamment tôt, celle-ci pourrait également empêcher la</p>"
+        },
+        "po4011Occulus": {
+          "name": "Occulus",
+          "description": "<p>Remarque : Cette potion permet de neutraliser les effets du d’absinthe ; Mandragore cuite liquéfiée sortilège de Conjonctivite. Cette potion fait tomber amoureux de la première personne Épine de rose ; Menthe poivrée ; Œuf de</p>"
+        },
+        "po4012Potionlaxa": {
+          "name": "Potion laxative",
+          "description": "<p>minutes après sa consommation Mauve douce VIRulence : 12 Provoque de violentes douleurs, un refroidissement du corps et des convulsions Effet : Intense sensation de froid (1d4-2 dégâts non-létaux), convulsions</p>"
+        },
+        "po4013PotionNo": {
+          "name": "Potion No. 86",
+          "description": "<p>A highly advanced numbered potion with potent and specific magical effects.</p>"
+        },
+        "po5004Babillage": {
+          "name": "Babbling Beverage",
+          "description": "<p>Causes the drinker to babble nonsensically. -50% to speech-related skills. Duration: 1d4 hour(s). Applied orally.</p>"
+        },
+        "po5005Champignon": {
+          "name": "Mushroom Poison",
+          "description": "<p>A poison derived from mushrooms. Incubation time: 1d6 minutes. Virulence: 18. Duration: 2d4+2 hours.</p>"
+        },
+        "po5006Combinaiso": {
+          "name": "Combinaison",
+          "description": "<p>Effet secondaire : de nouveaux effets aléatoires peuvent rouge apparaître. Brin de valériane ; Cervelle de crapaud ; Cette potion permet de stocker un filament de Pensine ou Coprin narcotique ; Fèves</p>"
+        },
+        "po5007Conscience": {
+          "name": "Conscience",
+          "description": "<p>sopophoriques ; Eau de fleuve</p>"
+        },
+        "po5008Damnesiedu": {
+          "name": "d'amnésie du Dr",
+          "description": "<p>contrer les effets des attaques magiques sur l’esprit.</p>"
+        },
+        "po5009Essencedef": {
+          "name": "Essence of Insanity",
+          "description": "<p>Causes erratic and chaotic behaviour. Side effects include hallucinations and paranoia. Ingested orally.</p>"
+        },
+        "po6001Panacee": {
+          "name": "Panacée",
+          "description": "<p>la vie de celui qui la consomme.</p>"
+        },
+        "po6002Potentiela": {
+          "name": "Absolute Potential Potion",
+          "description": "<p>All rolls are treated as if on range 001-010 and each roll acts as though a luck point (Fougue/Tomatagoria) had been spent. Extremely rare and powerful.</p>"
+        }
+      }
+    }
+  }
+}

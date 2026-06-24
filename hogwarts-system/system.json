@@ -1,0 +1,207 @@
+{
+  "id": "hogwarts-system",
+  "title": "Hogwarts System",
+  "description": "The Hogwarts System for FoundryVTT!",
+  "authors": [
+    {
+      "name": "Asacolips",
+      "discord": "asacolips"
+    },
+    {
+      "name": "Lee Talman",
+      "discord": ".pizzaWizard"
+    },
+    {
+      "name": "Joseph M.",
+      "url": "https://joseph-meehan.carrd.co/",
+      "discord": "chaosos"
+    }
+  ],
+  "documentTypes": {
+    "Actor": {
+        "character": {
+            "htmlFields": ["biography", "bio.motivation", "bio.history", "notes.rpNotes", "notes.gmNotes", "familiar.appearance", "familiar.personality", "familiar.abilities", "familiar.notes"]
+        },
+        "npc": {
+            "htmlFields": ["biography"]
+        },
+        "familiar": {
+            "htmlFields": ["biography", "bio.appearance", "bio.personality", "bio.bond", "bio.notes"]
+        },
+        "creature": {
+            "htmlFields": ["biography", "powers", "usage", "notes.gmNotes"]
+        }
+    },
+    "Item": {
+        "feature": {
+            "htmlFields": ["description"]
+        },
+        "gear": {
+            "htmlFields": ["description"]
+        },
+        "weapon": {
+            "htmlFields": ["description"]
+        },
+        "armor": {
+            "htmlFields": ["description"]
+        },
+        "spell": {
+            "htmlFields": ["description"]
+        },
+        "potion": {
+            "htmlFields": ["description"]
+        },
+        "component": {
+            "htmlFields": ["description"]
+        },
+        "broom": {
+            "htmlFields": ["description"]
+        }
+    }
+  },
+  "flags": {
+    "hotReload": {
+      "extensions": ["css", "html", "hbs", "json"],
+      "paths": ["css", "lang", "templates"]
+    }
+  },
+  "url": "",
+  "license": "LICENSE.txt",
+  "readme": "README.md",
+  "bugs": "",
+  "changelog": "CHANGELOG.md",
+  "media": [
+    {
+      "type": "setup",
+      "url": "systems/hogwarts-system/assets/hogwarts-system.png",
+      "thumbnail": "systems/hogwarts-system/assets/hogwarts-system.png"
+    }
+  ],
+  "version": "3.1.0",
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14.360"
+  },
+  "esmodules": ["module/hogwarts-system.mjs"],
+  "styles": ["css/hogwarts-system.css"],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "lang/fr.json"
+    }
+  ],
+  "packs": [
+    {
+      "name": "hogwarts-features",
+      "label": "Hogwarts Features",
+      "path": "packs/hogwarts-features",
+      "type": "Item",
+      "system": "hogwarts-system",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "hogwarts-spells",
+      "label": "Hogwarts Spells",
+      "path": "packs/hogwarts-spells",
+      "type": "Item",
+      "system": "hogwarts-system",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "hogwarts-potions",
+      "label": "Hogwarts Potions",
+      "path": "packs/hogwarts-potions",
+      "type": "Item",
+      "system": "hogwarts-system",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "hogwarts-components",
+      "label": "Hogwarts Components",
+      "path": "packs/hogwarts-components",
+      "type": "Item",
+      "system": "hogwarts-system",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "hogwarts-creatures",
+      "label": "Hogwarts Creatures",
+      "path": "packs/hogwarts-creatures",
+      "type": "Actor",
+      "system": "hogwarts-system",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "Hogwarts System",
+      "color": "#561206",
+      "folders": [
+        {
+          "name": "Hogwarts Options",
+          "color": "#380d05",
+          "packs": [
+            "hogwarts-features"
+          ],
+          "folders": []
+        },
+        {
+          "name": "Hogwarts Magic",
+          "color": "#1a237e",
+          "packs": [
+            "hogwarts-spells",
+            "hogwarts-potions",
+            "hogwarts-components"
+          ],
+          "folders": []
+        },
+        {
+          "name": "Hogwarts Bestiary",
+          "color": "#2e7d32",
+          "packs": [
+            "hogwarts-creatures"
+          ],
+          "folders": []
+        }
+      ]
+    }    
+  ],
+  "socket": false,
+  "manifest": "",
+  "download": "",
+  "background": "systems/hogwarts-system/assets/hogwarts-system.png",
+  "grid": {
+    "type": 1,
+    "distance": 1,
+    "units": "m",
+    "diagonals": 0
+  },
+  "primaryTokenAttribute": "health",
+  "secondaryTokenAttribute": "fougue"
+}

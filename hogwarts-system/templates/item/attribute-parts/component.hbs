@@ -1,0 +1,81 @@
+{{! Attributes Tab for Component (Ingredient) }}
+<section
+  class='tab attributes {{tab.cssClass}}'
+  data-group='primary'
+  data-tab='attributes'
+>
+  <div class='potion-info-grid'>
+    <div class='form-group'>
+      <label>{{localize 'HOGWARTS.Item.Component.FIELDS.rarity.label'}}</label>
+      <select name='system.rarity'>
+        <option value='commun' {{#if (eq system.rarity 'commun')}}selected{{/if}}>{{localize 'HOGWARTS.Item.Component.Rarity.commun'}}</option>
+        <option value='rare' {{#if (eq system.rarity 'rare')}}selected{{/if}}>{{localize 'HOGWARTS.Item.Component.Rarity.rare'}}</option>
+        <option value='rarissime' {{#if (eq system.rarity 'rarissime')}}selected{{/if}}>{{localize 'HOGWARTS.Item.Component.Rarity.rarissime'}}</option>
+      </select>
+    </div>
+    <div class='form-group'>
+      <label>{{localize 'HOGWARTS.Item.Component.FIELDS.quantity.label'}}</label>
+      <input
+        type='number'
+        name='system.quantity'
+        value='{{system.quantity}}'
+        min='0'
+        data-dtype='Number'
+      />
+    </div>
+  </div>
+
+  <div class='resource'>
+    <label class='resource-label'>{{localize 'HOGWARTS.Currency.Title'}}:</label>
+    <div class='grid grid-3col'>
+      <div class='grid-span-1'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Currency.Galleons'}}</label>
+        <input
+          type='number'
+          name='system.cost.galleons'
+          value='{{system.cost.galleons}}'
+          min='0'
+          data-dtype='Number'
+        />
+      </div>
+      <div class='grid-span-1'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Currency.Sickles'}}</label>
+        <input
+          type='number'
+          name='system.cost.sickles'
+          value='{{system.cost.sickles}}'
+          min='0'
+          data-dtype='Number'
+        />
+      </div>
+      <div class='grid-span-1'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Currency.Knuts'}}</label>
+        <input
+          type='number'
+          name='system.cost.knuts'
+          value='{{system.cost.knuts}}'
+          min='0'
+          data-dtype='Number'
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class='form-group'>
+    <label>{{localize 'HOGWARTS.Item.Component.FIELDS.usedIn.label'}}</label>
+    <textarea
+      name='system.usedIn'
+      rows='3'
+      placeholder='{{localize "HOGWARTS.Item.Component.UsedInPlaceholder"}}'
+    >{{system.usedIn}}</textarea>
+  </div>
+
+  <div class='form-group'>
+    <label>{{localize 'HOGWARTS.Item.Component.FIELDS.otherUses.label'}}</label>
+    <textarea
+      name='system.otherUses'
+      rows='2'
+      placeholder='{{localize "HOGWARTS.Item.Component.OtherUsesPlaceholder"}}'
+    >{{system.otherUses}}</textarea>
+  </div>
+</section>

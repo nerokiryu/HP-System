@@ -1,0 +1,56 @@
+<header class='sheet-header'>
+  <img
+    class='profile-img'
+    src='{{item.img}}'
+    data-edit='img'
+    data-action='onEditImage'
+    data-tooltip='{{item.name}}'
+  />
+  <div class='header-fields'>
+    <div class='document-name'>
+      <input name='name' type='text' value='{{item.name}}' placeholder='Name' />
+      <a class='post-to-chat' data-action='postToChat' data-tooltip='{{localize "HOGWARTS.Chat.PostToChat"}}'>
+        <i class='fas fa-comment-dots'></i>
+      </a>
+    </div>
+    {{! You may prefer to have a separate header file instead of this if statement}}
+    {{#if (eq item.type 'gear')}}
+      <div class='grid grid-2col'>
+        <div class='resource'>
+          <label class='resource-label'>{{localize 'HOGWARTS.Item.Gear.FIELDS.quantity.label'}}</label>
+          <input
+            type='text'
+            name='system.quantity'
+            value='{{system.quantity}}'
+            data-dtype='Number'
+          />
+        </div>
+        <div class='resource'>
+          <label class='resource-label'>{{localize 'HOGWARTS.Item.Gear.FIELDS.weight.label'}}</label>
+          <input
+            type='text'
+            name='system.weight'
+            value='{{system.weight}}'
+            data-dtype='Number'
+          />
+        </div>
+      </div>
+    {{else if (eq item.type 'broom')}}
+      <div class='form-group'>
+        <label>{{localize 'HOGWARTS.Broom.Brand'}}</label>
+        <input
+          type='text'
+          name='system.brand'
+          value='{{system.brand}}'
+        />
+      </div>
+      <div class='form-group'>
+        <label>{{localize 'HOGWARTS.Broom.Characteristics'}}</label>
+        <textarea
+          name='system.characteristics'
+          rows='3'
+        >{{system.characteristics}}</textarea>
+      </div>
+    {{/if}}
+  </div>
+</header>

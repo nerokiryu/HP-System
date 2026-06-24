@@ -1,0 +1,181 @@
+{{! Features Tab }}
+<section
+  class='tab features scrollable {{tab.cssClass}}'
+  data-group='primary'
+  data-tab='features'
+>
+  <div class='features-layout'>
+    <div class='features-column'>
+      <h3>{{localize 'HOGWARTS.Actor.Tabs.Features'}}</h3>
+      <div class='abilities flexcol'>
+        {{#each system.stats as |stat key|}}
+          <div class='ability flexrow flex-group-center'>
+            <label
+              class='resource-label flexlarge align-left'
+            >{{localize (lookup @root.config.stats key)}}</label>
+            <input
+              type='text'
+              name='system.stats.{{key}}.value'
+              value='{{stat.value}}'
+              class="ability-score"
+              data-dtype='Number'
+            />
+            <span
+              class='ability-mod rollable'
+              data-action='roll'
+              data-roll='1d100'
+              data-target='@checks.{{key}}'
+              data-label='{{localize (lookup @root.config.stats key)}}'
+            >×5: {{lookup @root.system.checks key}}</span>
+          </div>
+        {{/each}}
+      </div>
+
+      {{#if (eq actor.type 'familiar')}}
+      <div class='familiar-pbp-total'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Actor.Familiar.TotalPBPCost'}}</label>
+        <div class='resource-content'>
+          <span class='total-pbp'>{{totalPbpCost}}</span>
+        </div>
+      </div>
+      {{/if}}
+    </div>
+
+    <div class='features-column'>
+      <h3>{{localize 'HOGWARTS.Derived.Title'}}</h3>
+      <div class='abilities flexcol'>
+        <div class='ability flexrow flex-group-center'>
+          <label class='resource-label flexlarge align-left'>{{localize 'HOGWARTS.Derived.Taste'}}</label>
+          <span class='ability-value'>{{system.derived.taste}}</span>
+          <span class='ability-mod rollable' data-action='roll' data-roll='1d100' data-target='{{system.derived.taste}}' data-label='{{localize "HOGWARTS.Derived.Taste"}}'>
+            <i class='fas fa-dice-d20'></i>
+          </span>
+        </div>
+        <div class='ability flexrow flex-group-center'>
+          <label class='resource-label flexlarge align-left'>{{localize 'HOGWARTS.Derived.Smell'}}</label>
+          <span class='ability-value'>{{system.derived.smell}}</span>
+          <span class='ability-mod rollable' data-action='roll' data-roll='1d100' data-target='{{system.derived.smell}}' data-label='{{localize "HOGWARTS.Derived.Smell"}}'>
+            <i class='fas fa-dice-d20'></i>
+          </span>
+        </div>
+        <div class='ability flexrow flex-group-center'>
+          <label class='resource-label flexlarge align-left'>{{localize 'HOGWARTS.Derived.Hearing'}}</label>
+          <span class='ability-value'>{{system.derived.hearing}}</span>
+          <span class='ability-mod rollable' data-action='roll' data-roll='1d100' data-target='{{system.derived.hearing}}' data-label='{{localize "HOGWARTS.Derived.Hearing"}}'>
+            <i class='fas fa-dice-d20'></i>
+          </span>
+        </div>
+        <div class='ability flexrow flex-group-center'>
+          <label class='resource-label flexlarge align-left'>{{localize 'HOGWARTS.Derived.Touch'}}</label>
+          <span class='ability-value'>{{system.derived.touch}}</span>
+          <span class='ability-mod rollable' data-action='roll' data-roll='1d100' data-target='{{system.derived.touch}}' data-label='{{localize "HOGWARTS.Derived.Touch"}}'>
+            <i class='fas fa-dice-d20'></i>
+          </span>
+        </div>
+        <div class='ability flexrow flex-group-center'>
+          <label class='resource-label flexlarge align-left'>{{localize 'HOGWARTS.Derived.Sight'}}</label>
+          <span class='ability-value'>{{system.derived.sight}}</span>
+          <span class='ability-mod rollable' data-action='roll' data-roll='1d100' data-target='{{system.derived.sight}}' data-label='{{localize "HOGWARTS.Derived.Sight"}}'>
+            <i class='fas fa-dice-d20'></i>
+          </span>
+        </div>
+        <div class='ability flexrow flex-group-center'>
+          <label class='resource-label flexlarge align-left'>{{localize 'HOGWARTS.Derived.Idea'}}</label>
+          <span class='ability-value'>{{system.derived.idea}}</span>
+          <span class='ability-mod rollable' data-action='roll' data-roll='1d100' data-target='{{system.derived.idea}}' data-label='{{localize "HOGWARTS.Derived.Idea"}}'>
+            <i class='fas fa-dice-d20'></i>
+          </span>
+        </div>
+        <div class='ability flexrow flex-group-center'>
+          <label class='resource-label flexlarge align-left'>{{localize 'HOGWARTS.Derived.Luck'}}</label>
+          <span class='ability-value'>{{system.derived.luck}}</span>
+          <span class='ability-mod rollable' data-action='roll' data-roll='1d100' data-target='{{system.derived.luck}}' data-label='{{localize "HOGWARTS.Derived.Luck"}}'>
+            <i class='fas fa-dice-d20'></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{#unless (eq actor.type "familiar")}}
+  <div class='wounds-full-width'>
+    <h3>{{localize 'HOGWARTS.Wounds.Title'}}</h3>
+    <div class='wounds-section flexrow'>
+      <div class='wounds-item'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Wounds.NonLethal'}}</label>
+        <div class='resource-content flexrow flex-group-center'>
+          <input type='number' name='system.healthNonLethal.value' value='{{system.healthNonLethal.value}}' data-dtype='Number' min='0' class='wound-input' />
+          <span class='experience-separator'>/</span>
+          <span class='wound-max'>{{system.healthNonLethal.max}}</span>
+        </div>
+      </div>
+      <div class='wounds-item'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Wounds.SeriousWound'}}</label>
+        <div class='resource-content flexrow flex-group-center'>
+          <input type='checkbox' name='system.conditions.seriousWound' {{#if system.conditions.seriousWound}}checked{{/if}} />
+        </div>
+      </div>
+      <div class='wounds-item'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Wounds.Agony'}}</label>
+        <div class='resource-content flexrow flex-group-center'>
+          <input type='checkbox' name='system.conditions.agony' {{#if system.conditions.agony}}checked{{/if}} />
+        </div>
+      </div>
+      <div class='wounds-item'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Actor.Character.Stress'}}</label>
+        <div class='resource-content flexrow flex-group-center'>
+          <input type='number' name='system.stress.value' value='{{system.stress.value}}' data-dtype='Number' min='0' max='25' class='wound-input' />
+          <span class='experience-separator'>%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='experience-full-width'>
+    <h3>{{localize 'HOGWARTS.Experience.Title'}}</h3>
+    <div class='experience-section'>
+      <div class='experience-item'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Experience.CreationPoints'}}</label>
+        <div class='experience-values'>
+          {{#if creationPointsCurrentDefined}}
+            <span class='experience-current {{#if creationPointsCurrentNegative}}negative{{/if}}' aria-live='polite' aria-atomic='true'>
+              {{creationPointsCurrent}}
+              {{#if creationPointsCurrentNegative}}<i class='fas fa-exclamation-triangle alert-icon' title='{{localize "HOGWARTS.Common.Negative"}}' aria-hidden='true'></i>{{/if}}
+            </span>
+          {{else}}
+            <span class='experience-current'>{{subtract system.experience.creationPoints.max system.experience.creationPoints.spent}}</span>
+          {{/if}}
+          <span class='experience-separator'>/</span>
+          <input
+            type='text'
+            name='system.experience.creationPoints.max'
+            value='{{system.experience.creationPoints.max}}'
+            class='experience-max'
+            data-dtype='Number'
+          />
+        </div>
+      </div>
+      <div class='experience-item'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Experience.PersonalBonusPoints'}}</label>
+        <div class='experience-values'>
+          {{#if personalBonusCurrentDefined}}
+            <span class='experience-current {{#if personalBonusCurrentNegative}}negative{{/if}}' aria-live='polite' aria-atomic='true'>
+              {{personalBonusCurrent}}
+              {{#if personalBonusCurrentNegative}}<i class='fas fa-exclamation-triangle alert-icon' title='{{localize "HOGWARTS.Common.Negative"}}' aria-hidden='true'></i>{{/if}}
+            </span>
+          {{else}}
+            <span class='experience-current'>{{subtract system.experience.personalBonusPoints.max system.experience.personalBonusPoints.spent}}</span>
+          {{/if}}
+          <span class='experience-separator'>/</span>
+          <input
+            type='text'
+            name='system.experience.personalBonusPoints.max'
+            value='{{system.experience.personalBonusPoints.max}}'
+            class='experience-max'
+            data-dtype='Number'
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/unless}}
+</section>

@@ -1,0 +1,172 @@
+{{! Potion Attributes Tab }}
+<section
+  class='tab attributes {{tab.cssClass}}'
+  data-group='primary'
+  data-tab='attributes'
+>
+  <div class='potion-attributes'>
+    {{! Basic Info Row }}
+    <div class='potion-info-grid'>
+      <div class='resource'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Item.Potion.FIELDS.level.label'}}</label>
+        <input
+          type='number'
+          name='system.potionLevel'
+          value='{{system.potionLevel}}'
+          data-dtype='Number'
+          min='1'
+          max='6'
+        />
+      </div>
+      <div class='resource'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Item.Potion.FIELDS.malus.label'}}</label>
+        <input
+          type='number'
+          name='system.malus'
+          value='{{system.malus}}'
+          data-dtype='Number'
+          max='0'
+        />
+      </div>
+      <div class='resource'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Item.Potion.FIELDS.target.label'}}</label>
+        <select name='system.target' multiple size='5'>
+          <option value='A' {{#if (has system.target 'A')}}selected{{/if}}>{{localize 'HOGWARTS.Item.Potion.Target.A'}}</option>
+          <option value='O' {{#if (has system.target 'O')}}selected{{/if}}>{{localize 'HOGWARTS.Item.Potion.Target.O'}}</option>
+          <option value='P' {{#if (has system.target 'P')}}selected{{/if}}>{{localize 'HOGWARTS.Item.Potion.Target.P'}}</option>
+          <option value='V' {{#if (has system.target 'V')}}selected{{/if}}>{{localize 'HOGWARTS.Item.Potion.Target.V'}}</option>
+          <option value='X' {{#if (has system.target 'X')}}selected{{/if}}>{{localize 'HOGWARTS.Item.Potion.Target.X'}}</option>
+        </select>
+      </div>
+      <div class='resource'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Item.Potion.FIELDS.virulence.label'}}</label>
+        <input
+          type='number'
+          name='system.virulence'
+          value='{{system.virulence}}'
+          data-dtype='Number'
+          placeholder='—'
+          min='0'
+        />
+      </div>
+    </div>
+
+    {{! Crafting Info Row }}
+    <div class='potion-info-grid'>
+      <div class='resource'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Item.Potion.FIELDS.ingredientRarity.label'}}</label>
+        <select name='system.ingredientRarity'>
+          <option value='' {{#if (eq system.ingredientRarity '')}}selected{{/if}}>—</option>
+          <option value='commun' {{#if (eq system.ingredientRarity 'commun')}}selected{{/if}}>{{localize 'HOGWARTS.Item.Potion.Rarity.commun'}}</option>
+          <option value='rare' {{#if (eq system.ingredientRarity 'rare')}}selected{{/if}}>{{localize 'HOGWARTS.Item.Potion.Rarity.rare'}}</option>
+          <option value='rarissime' {{#if (eq system.ingredientRarity 'rarissime')}}selected{{/if}}>{{localize 'HOGWARTS.Item.Potion.Rarity.rarissime'}}</option>
+        </select>
+      </div>
+      <div class='resource'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Item.Potion.FIELDS.prepTime.label'}}</label>
+        <input
+          type='text'
+          name='system.prepTime'
+          value='{{system.prepTime}}'
+          placeholder='{{localize "HOGWARTS.Item.Potion.PrepTimePlaceholder"}}'
+        />
+      </div>
+      <div class='resource'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Item.Potion.FIELDS.duration.label'}}</label>
+        <input
+          type='text'
+          name='system.duration'
+          value='{{system.duration}}'
+          placeholder='{{localize "HOGWARTS.Item.Potion.DurationPlaceholder"}}'
+        />
+      </div>
+      <div class='resource'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Item.Potion.FIELDS.quantity.label'}}</label>
+        <input
+          type='number'
+          name='system.quantity'
+          value='{{system.quantity}}'
+          data-dtype='Number'
+          min='0'
+        />
+      </div>
+    </div>
+
+    {{! Ingredients Section }}
+    <div class='potion-ingredients'>
+      <div class='ingredients-header'>
+        <h3>{{localize 'HOGWARTS.Item.Potion.IngredientsTitle'}}</h3>
+        {{#if @root.editable}}
+          <a class='ingredient-control' data-action='addIngredient' data-tooltip='{{localize "HOGWARTS.Item.Potion.AddIngredient"}}'>
+            <i class='fas fa-plus'></i>
+          </a>
+        {{/if}}
+      </div>
+      {{#if system.ingredientList.length}}
+        <ol class='ingredient-list'>
+          {{#each system.ingredientList as |ingredient idx|}}
+            <li class='ingredient-row flexrow {{#if ingredient.available}}available{{/if}}' data-index='{{idx}}'>
+              {{#if @root.editable}}
+                <input
+                  type='checkbox'
+                  name='system.ingredientList.{{idx}}.available'
+                  {{#if ingredient.available}}checked{{/if}}
+                  class='ingredient-check'
+                  data-tooltip='{{localize "HOGWARTS.Item.Potion.IngredientAvailable"}}'
+                />
+              {{else}}
+                <i class='fas {{#if ingredient.available}}fa-check-circle{{else}}fa-circle{{/if}}'></i>
+              {{/if}}
+              <input
+                type='text'
+                name='system.ingredientList.{{idx}}.name'
+                value='{{ingredient.name}}'
+                class='ingredient-name'
+                placeholder='{{localize "HOGWARTS.Item.Potion.IngredientName"}}'
+                {{#unless @root.editable}}disabled{{/unless}}
+              />
+              <input
+                type='number'
+                name='system.ingredientList.{{idx}}.quantity'
+                value='{{ingredient.quantity}}'
+                class='ingredient-qty'
+                min='1'
+                {{#unless @root.editable}}disabled{{/unless}}
+              />
+              <select
+                name='system.ingredientList.{{idx}}.rarity'
+                class='ingredient-rarity'
+                {{#unless @root.editable}}disabled{{/unless}}
+              >
+                <option value='' {{#if (eq ingredient.rarity '')}}selected{{/if}}>—</option>
+                <option value='commun' {{#if (eq ingredient.rarity 'commun')}}selected{{/if}}>{{localize 'HOGWARTS.Item.Potion.Rarity.commun'}}</option>
+                <option value='rare' {{#if (eq ingredient.rarity 'rare')}}selected{{/if}}>{{localize 'HOGWARTS.Item.Potion.Rarity.rare'}}</option>
+                <option value='rarissime' {{#if (eq ingredient.rarity 'rarissime')}}selected{{/if}}>{{localize 'HOGWARTS.Item.Potion.Rarity.rarissime'}}</option>
+              </select>
+              {{#if @root.editable}}
+                <a class='ingredient-control ingredient-delete' data-action='removeIngredient' data-index='{{idx}}' data-tooltip='{{localize "HOGWARTS.Item.Potion.RemoveIngredient"}}'>
+                  <i class='fas fa-trash'></i>
+                </a>
+              {{/if}}
+            </li>
+          {{/each}}
+        </ol>
+      {{else}}
+        <p class='ingredients-empty'>{{localize 'HOGWARTS.Item.Potion.NoIngredients'}}</p>
+      {{/if}}
+    </div>
+
+    {{! Brew Status }}
+    <div class='potion-brew-status'>
+      <label>
+        <input
+          type='checkbox'
+          name='system.crafted'
+          {{#if system.crafted}}checked{{/if}}
+          {{#unless @root.editable}}disabled{{/unless}}
+        />
+        {{localize 'HOGWARTS.Item.Potion.Crafted'}}
+      </label>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,84 @@
+{{! Attributes Tab }}
+<section
+  class='tab attributes {{tab.cssClass}}'
+  data-group='primary'
+  data-tab='attributes'
+>
+  <div class='resource'>
+    <label class='resource-label'>{{localize 'HOGWARTS.Currency.Title'}}:</label>
+    <div class='grid grid-3col'>
+      <div class='grid-span-1'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Currency.Galleons'}}</label>
+        <input
+          type='number'
+          name='system.cost.galleons'
+          value='{{system.cost.galleons}}'
+          min='0'
+          data-dtype='Number'
+        />
+      </div>
+      <div class='grid-span-1'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Currency.Sickles'}}</label>
+        <input
+          type='number'
+          name='system.cost.sickles'
+          value='{{system.cost.sickles}}'
+          min='0'
+          data-dtype='Number'
+        />
+      </div>
+      <div class='grid-span-1'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Currency.Knuts'}}</label>
+        <input
+          type='number'
+          name='system.cost.knuts'
+          value='{{system.cost.knuts}}'
+          min='0'
+          data-dtype='Number'
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class='form-group'>
+    <label>{{localize 'HOGWARTS.Item.Feature.PBPCost'}}</label>
+    <input
+      type='number'
+      name='system.pbpCost'
+      value='{{system.pbpCost}}'
+      step='0.5'
+      data-dtype='Number'
+    />
+  </div>
+
+  <div class='form-group'>
+    <label>{{localize 'HOGWARTS.Item.Weapon.FIELDS.damage.label'}}</label>
+    <input
+      type='text'
+      name='system.damage'
+      value='{{system.damage}}'
+      placeholder='1d6+1'
+      data-dtype='String'
+    />
+  </div>
+
+  <div class='form-group'>
+    <label>{{localize 'HOGWARTS.Item.Weapon.FIELDS.weaponType.label'}}</label>
+    <select name='system.weaponType' data-dtype='String'>
+      <option value='melee' {{#if (eq system.weaponType 'melee')}}selected{{/if}}>{{localize 'HOGWARTS.Item.Weapon.WeaponType.melee'}}</option>
+      <option value='ranged' {{#if (eq system.weaponType 'ranged')}}selected{{/if}}>{{localize 'HOGWARTS.Item.Weapon.WeaponType.ranged'}}</option>
+      <option value='thrown' {{#if (eq system.weaponType 'thrown')}}selected{{/if}}>{{localize 'HOGWARTS.Item.Weapon.WeaponType.thrown'}}</option>
+    </select>
+  </div>
+
+  <div class='form-group'>
+    <label>{{localize 'HOGWARTS.Item.Weapon.FIELDS.range.label'}}</label>
+    <input
+      type='text'
+      name='system.range'
+      value='{{system.range}}'
+      placeholder='10m'
+      data-dtype='String'
+    />
+  </div>
+</section>

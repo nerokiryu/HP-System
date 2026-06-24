@@ -1,0 +1,185 @@
+{{! Sheet Header }}
+<header class='sheet-header'>
+  <img
+    class='profile-img'
+    src='{{actor.img}}'
+    data-edit='img'
+    data-action='onEditImage'
+    data-tooltip='{{actor.name}}'
+    height='100'
+    width='100'
+  />
+  <div class='header-fields'>
+    <div class='name-house-row'>
+      <div class='document-name'>
+        <input
+          name='name'
+          type='text'
+          value='{{actor.name}}'
+          placeholder='Name'
+        />
+      </div>
+      {{#if (eq actor.type 'character')}}
+      <div class='document-house'>
+        <select name='system.profile.house' data-dtype='String'>
+          <option value='gryffindor' {{#if (eq system.profile.house 'gryffindor')}}selected{{/if}}>{{localize 'HOGWARTS.House.Gryffindor'}}</option>
+          <option value='slytherin' {{#if (eq system.profile.house 'slytherin')}}selected{{/if}}>{{localize 'HOGWARTS.House.Slytherin'}}</option>
+          <option value='ravenclaw' {{#if (eq system.profile.house 'ravenclaw')}}selected{{/if}}>{{localize 'HOGWARTS.House.Ravenclaw'}}</option>
+          <option value='hufflepuff' {{#if (eq system.profile.house 'hufflepuff')}}selected{{/if}}>{{localize 'HOGWARTS.House.Hufflepuff'}}</option>
+        </select>
+      </div>
+      {{/if}}
+    </div>
+    {{! The grid classes are defined in scss/global/_grid.scss. To use,
+      use both the "grid" and "grid-Ncol" class where "N" can be any number
+      from 1 to 12 and will create that number of columns.  }}
+    <div class='resources grid grid-4col'>
+
+      {{! "flex-group-center" is also defined in the _grid.scss file
+        and it will add a small amount of padding, a border, and will
+        center all of its child elements content and text. }}
+      <div class='resource flex-group-center'>
+        <label for='system.health.value' class='resource-label'>
+          {{localize 'HOGWARTS.Actor.base.FIELDS.health.value.label'}}
+        </label>
+        <div class='resource-content flexrow flex-center flex-between'>
+          <input
+            type='text'
+            name='system.health.value'
+            value='{{system.health.value}}'
+            data-dtype='Number'
+          />
+          <span> / </span>
+          <span class='resource-max'>{{system.health.max}}</span>
+        </div>
+      </div>
+
+      {{!-- Heroism Points (Points de Fougue) — characters only --}}
+      {{#if (eq actor.type 'character')}}
+      <div class='resource flex-group-center'>
+        <label for='system.fougue.value' class='resource-label'>
+          {{localize 'HOGWARTS.Actor.Character.Fougue'}}
+        </label>
+        <div class='resource-content flexrow flex-center flex-between'>
+          <input
+            type='text'
+            name='system.fougue.value'
+            value='{{system.fougue.value}}'
+            data-dtype='Number'
+          />
+          <span> / </span>
+          <input
+            type='text'
+            name='system.fougue.max'
+            value='{{system.fougue.max}}'
+            data-dtype='Number'
+            class='resource-max-input'
+          />
+        </div>
+      </div>
+      {{/if}}
+      
+      {{!-- Show Armor and Movement only for familiars --}}
+      {{#if (eq actor.type 'familiar')}}
+      <div class='resource flex-group-center'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Actor.Familiar.Armor'}}</label>
+        <div class='resource-content flexrow flex-center flex-between'>
+          <input
+            type='text'
+            name='system.familiar.armor'
+            value='{{system.familiar.armor}}'
+            data-dtype='Number'
+          />
+        </div>
+      </div>
+
+      <div class='resource flex-group-center'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Actor.Familiar.Movement'}}</label>
+        <div class='resource-content flexrow flex-center flex-between'>
+          <input
+            type='text'
+            name='system.familiar.movement'
+            value='{{system.familiar.movement}}'
+            data-dtype='Number'
+          />
+        </div>
+      </div>
+
+
+      <div class='resource flex-group-center'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Actor.Familiar.DMG'}}</label>
+        <div class='resource-content familiar-dmg-content'>
+          <input
+            type='text'
+            name='system.familiar.dmg'
+            value='{{system.familiar.dmg}}'
+            data-dtype='String'
+          />
+          <a class='rollable damage-roll header-dmg-button' data-action='rollDamage' data-roll='{{system.familiar.dmg}}' data-tooltip='Dégâts: {{system.familiar.dmg}}'>
+            <i class='fas fa-dice-d20'></i>
+            {{system.familiar.dmg}}
+          </a>
+        </div>
+      </div>
+      {{/if}}
+      {{#if (eq actor.type 'character')}}
+      <div class='resource flex-group-center resource-compact'>
+          <label class='resource-label'>
+            {{localize 'HOGWARTS.Actor.Character.FIELDS.profile.year.label'}}
+          </label>
+          <div class='resource-content flexrow flex-center flex-between'>
+            <input
+              type='text'
+              name='system.profile.year'
+              value='{{system.profile.year}}'
+              data-dtype='Number'
+            />
+          </div>
+      </div>
+      {{/if}}
+      {{#if (eq actor.type 'character')}}
+      <div class='resource flex-group-center'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Actor.Character.DamageBonus'}}</label>
+        <div class='resource-content flexrow flex-center flex-between'>
+          <a class='rollable damage-roll' data-action='rollDamage' data-roll='{{system.brawlingDamage}}' data-tooltip='{{localize "HOGWARTS.Actor.Character.DamageBonus"}}: {{system.damageBonus}}'>
+            <i class='fas fa-dice-d20'></i>
+            {{system.damageBonus}}
+          </a>
+        </div>
+      </div>
+      {{/if}}
+
+      {{!-- Creature header resources --}}
+      {{#if (eq actor.type 'creature')}}
+      <div class='resource flex-group-center'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Actor.Creature.Armor'}}</label>
+        <div class='resource-content flexrow flex-center flex-between'>
+          <span>{{system.armor.value}} {{#if system.armor.label}}({{system.armor.label}}){{/if}}</span>
+        </div>
+      </div>
+      <div class='resource flex-group-center'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Actor.Creature.Movement'}}</label>
+        <div class='resource-content flexrow flex-center flex-between'>
+          <span>{{system.movementDisplay}}</span>
+        </div>
+      </div>
+      <div class='resource flex-group-center'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Actor.Creature.DamageBonus'}}</label>
+        <div class='resource-content flexrow flex-center flex-between'>
+          <span>{{system.damageBonus}}</span>
+        </div>
+      </div>
+      {{/if}}
+
+      <div class='resource flex-group-center'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Actor.Character.Initiative'}}</label>
+        <div class='resource-content flexrow flex-center flex-between'>
+          <a class='rollable damage-roll' data-action='rollInitiative' data-tooltip='1d6 + DEX'>
+            <i class='fas fa-dice-d20'></i>
+            <span>1d6 + {{system.stats.dex.value}}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,45 @@
+{
+  "name": "hogwarts-system",
+  "version": "3.0.0",
+  "description": "CSS compiler for the Hogwarts system",
+  "scripts": {
+    "build": "sass src/scss/hogwarts-system.scss css/hogwarts-system.css --style=expanded --no-source-map",
+    "watch": "sass src/scss/hogwarts-system.scss css/hogwarts-system.css --style=expanded --source-map --watch",
+    "createSymlinks": "node src/create-symlinks.mjs"
+  },
+  "browserslist": [
+    "last 3 versions"
+  ],
+  "author": "Asacolips",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@foundryvtt/foundryvtt-cli": "^3.0.3",
+    "js-yaml": "^4.1.0",
+    "sass": "^1.53.0"
+  },
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "argparse": "^2.0.1",
+    "braces": "^3.0.3",
+    "chokidar": "^4.0.3",
+    "detect-libc": "^1.0.3",
+    "fill-range": "^7.1.1",
+    "immutable": "^5.1.4",
+    "is-extglob": "^2.1.1",
+    "is-glob": "^4.0.3",
+    "is-number": "^7.0.0",
+    "lokijs": "^1.5.12",
+    "micromatch": "^4.0.8",
+    "node-addon-api": "^7.1.1",
+    "picomatch": "^2.3.1",
+    "readdirp": "^4.1.2",
+    "source-map-js": "^1.2.1",
+    "to-regex-range": "^5.0.1"
+  },
+  "keywords": [],
+  "type": "commonjs"
+}

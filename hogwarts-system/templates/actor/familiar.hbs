@@ -1,0 +1,59 @@
+{{!-- Familiar Section (Familiar) --}}
+<section class='tab familiar scrollable {{tab.cssClass}}' data-group='primary' data-tab='familiar'>
+  
+  {{!-- Familiar Information --}}
+  <div class="familiar-section">
+    <div class="section-header">
+      <h3 class="section-title">{{localize "HOGWARTS.Actor.Familiar.Information"}}</h3>
+    </div>
+    <div class="section-content">
+      {{!-- Display linked familiar (preview) --}}
+      {{#if linkedFamiliar}}
+        <div class="linked-familiar-card" data-action="viewLinkedFamiliar" data-id="{{linkedFamiliar.id}}" tabindex="0" role="button">
+          <img class="linked-familiar-avatar" src="{{linkedFamiliar.img}}" alt="{{linkedFamiliar.name}}" />
+          <div class="linked-familiar-info">
+            <h4 class="linked-familiar-name">{{linkedFamiliar.name}}</h4>
+            <div class="linked-familiar-stats">
+              <span class="familiar-hp">{{localize "HOGWARTS.Actor.base.FIELDS.health.value.label"}}: {{linkedFamiliar.system.health.value}}/{{linkedFamiliar.system.health.max}}</span>
+              <span class="familiar-armor">{{localize "HOGWARTS.Actor.Familiar.Armor"}}: {{linkedFamiliar.system.familiar.armor}}</span>
+              <span class="familiar-movement">{{localize "HOGWARTS.Actor.Familiar.Movement"}}: {{linkedFamiliar.system.familiar.movement}}</span>
+            </div>
+            <div class="linked-familiar-actions">
+              <a class='item-control damage-roll' data-action='rollDamage' data-actor-id='{{linkedFamiliar.id}}' data-roll='{{linkedFamiliar.system.familiar.dmg}}' data-tooltip='{{localize "HOGWARTS.Actor.Familiar.DMG"}}: {{linkedFamiliar.system.familiar.dmg}}'>
+                <i class='fas fa-dice-d20'></i>
+              </a>
+            </div>
+            {{!-- Total PBP cost badge bottom-right --}}
+            <div class="linked-familiar-total" title="{{localize 'HOGWARTS.Actor.Familiar.TotalPBPCost'}}">
+              {{localize 'HOGWARTS.Actor.Familiar.TotalPBPCost'}}: {{linkedFamiliarTotalPbp}}
+            </div>
+            {{!-- Unlink button top-right --}}
+            <a class='linked-familiar-unlink item-control' data-action='unlinkFamiliar' data-tooltip='{{localize "HOGWARTS.Actor.Familiar.Unlink"}}'>
+              <i class='fas fa-unlink'></i>
+            </a>
+          </div>
+        </div>
+      {{/if}}
+      {{#if (eq actor.type 'character')}}
+      <div class="form-group familiar-actions">
+        {{#if actor.system.familiar.linkedActor}}
+          <a class='item-control' data-action='viewLinkedFamiliar' data-id='{{actor.system.familiar.linkedActor}}' data-tooltip='{{localize "HOGWARTS.Actor.Familiar.ViewLinked"}}'>
+            <i class='fas fa-eye'></i> {{localize "HOGWARTS.Actor.Familiar.ViewLinked"}}
+          </a>
+          <a class='item-control' data-action='unlinkFamiliar' data-tooltip='{{localize "HOGWARTS.Actor.Familiar.Unlink"}}'>
+            <i class='fas fa-unlink'></i> {{localize "HOGWARTS.Actor.Familiar.Unlink"}}
+          </a>
+        {{else}}
+          <a class='item-control' data-action='createFamiliar' data-tooltip='{{localize "HOGWARTS.Actor.Familiar.Create"}}'>
+            <i class='fas fa-plus'></i> {{localize "HOGWARTS.Actor.Familiar.Create"}}
+          </a>
+        {{/if}}
+      </div>
+      {{/if}}
+
+    </div>
+  </div>
+
+ 
+
+</section>
