@@ -74,11 +74,6 @@ Hooks.once('init', function () {
     broom: models.HogwartsBroom,
   };
 
-  // Active Effects are never copied to the Actor,
-  // but will still apply to the Actor from within the Item
-  // if the transfer property on the Active Effect is true.
-  CONFIG.ActiveEffect.legacyTransferral = false;
-
   // Register sheet application classes
   collections.Actors.unregisterSheet('core', sheets.ActorSheet);
   collections.Actors.registerSheet('hogwarts-system', HogwartsActorSheet, {

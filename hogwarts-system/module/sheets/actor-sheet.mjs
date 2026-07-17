@@ -1836,6 +1836,10 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
     event.preventDefault();
     const skills = foundry.utils.deepClone(this.actor.system.skills ?? []);
     const results = [];
+    // Collect every Roll so they can be attached to the chat message. This
+    // turns the card into a proper roll message (Dice So Nice animation) and
+    // lets the dice breakdown be revealed on hover.
+    const allRolls = [];
     let updated = false;
 
     // Collect XP modifiers from active (non-disabled) effects.
@@ -1846,9 +1850,13 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
     //   xp.bonus                            → flat bonus added to XP gain for ALL skills
     //   xp.bonus.{category}                 → flat bonus for a specific category
     //   xp.bonus.skill.{name}               → flat bonus for a specific skill (case-insensitive)
+    // Use `appliedEffects` (not `effects`) so that effects transferred from
+    // owned items (features, gear, …) are included, and so that disabled or
+    // suppressed effects are automatically excluded. Reading `actor.effects`
+    // would only see effects placed directly on the actor and would silently
+    // drop any XP modifier coming from an item.
     const xpEffects = [];
-    for (const effect of (this.actor.effects ?? [])) {
-      if (effect.disabled) continue;
+    for (const effect of (this.actor.appliedEffects ?? [])) {
       for (const change of (effect.changes ?? [])) {
         if (change.key?.startsWith('xp.')) {
           xpEffects.push({ key: change.key, value: Number(change.value) || 0, label: effect.name });
@@ -1887,6 +1895,7 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
 
       const roll = new Roll('1d100');
       await roll.evaluate();
+      allRolls.push(roll);
       const r = Number(roll.total) || 0;
       const currentValue = Number(s.value) || 0;
 
@@ -1894,6 +1903,7 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
         // Skill improves: roll 1d6 then apply modifiers
         const increaseRoll = new Roll('1d6');
         await increaseRoll.evaluate();
+        allRolls.push(increaseRoll);
         const rawIncrease = Number(increaseRoll.total) || 1;
         const { multiplier, bonus } = getXPMods(s);
         const increase = Math.max(1, Math.ceil(rawIncrease * multiplier) + bonus);
@@ -1904,6 +1914,7 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
           name: s.name,
           spec: s.spec,
           roll: r,
+          d6: rawIncrease,
           current: currentValue,
           increase,
           rawIncrease: (multiplier !== 1 || bonus !== 0) ? rawIncrease : null,
@@ -1918,6 +1929,7 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
           name: s.name,
           spec: s.spec,
           roll: r,
+          d6: null,
           current: currentValue,
           increase: 0,
           success: false,
@@ -1934,9 +1946,15 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
     await this.actor.update({ 'system.skills': skills });
 
     // Build a chat card with the results
+    const rolledLabel = game.i18n.localize('HOGWARTS.Roll.XP.Rolled');
     let content = `<div class="hogwarts-chat-card"><header class="card-header"><h3>${game.i18n.localize('HOGWARTS.Roll.XP.Title')}</h3><span class="card-type">XP</span></header>`;
     for (const res of results) {
       const nameDisplay = res.spec ? `${res.name} (${res.spec})` : res.name;
+      // Hover tooltip exposing the exact dice that were rolled for this skill.
+      const tip = res.success
+        ? `1d100 → ${res.roll}<br>1d6 → ${res.d6}`
+        : `1d100 → ${res.roll}`;
+      const rollValue = `<span class="roll-value" data-tooltip="${tip}">${res.roll}</span>`;
       if (res.success) {
         let modDisplay = '';
         if (res.rawIncrease !== null) {
@@ -1945,9 +1963,9 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
           if (res.bonus !== null) parts.push(`${res.bonus >= 0 ? '+' : ''}${res.bonus}`);
           modDisplay = ` <em class="xp-mod">(${parts.join(' ')})</em>`;
         }
-        content += `<div class="card-row xp-success">✓ ${nameDisplay}: ${game.i18n.localize('HOGWARTS.Roll.XP.Rolled')} ${res.roll} > ${res.current} → +${res.increase}${modDisplay}</div>`;
+        content += `<div class="card-row xp-success">✓ ${nameDisplay}: ${rolledLabel} ${rollValue} > ${res.current} → +${res.increase}${modDisplay}</div>`;
       } else {
-        content += `<div class="card-row xp-fail">✗ ${nameDisplay}: ${game.i18n.localize('HOGWARTS.Roll.XP.Rolled')} ${res.roll} ≤ ${res.current}</div>`;
+        content += `<div class="card-row xp-fail">✗ ${nameDisplay}: ${rolledLabel} ${rollValue} ≤ ${res.current}</div>`;
       }
     }
     content += `</div>`;
@@ -1955,6 +1973,7 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
     await ChatMessage.create({
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
       content,
+      rolls: allRolls,
       rollMode: game.settings.get('core', 'rollMode'),
     });
   }

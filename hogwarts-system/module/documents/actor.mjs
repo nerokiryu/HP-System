@@ -6,6 +6,11 @@ export class HogwartsActor extends Actor {
 
   /** @override */
   prepareBaseData() {
+    // IMPORTANT (Foundry v14): call super so that Actor#prepareBaseData runs
+    // `_clearData()`, which resets the private `_completedActiveEffectPhases`
+    // set each preparation cycle. Skipping it makes Active Effect application
+    // throw "phase has already completed" on every update after the first.
+    super.prepareBaseData();
     // Data modifications in this step occur before processing embedded
     // documents or derived data.
   }
@@ -18,8 +23,38 @@ export class HogwartsActor extends Actor {
    * is queried and has a roll executed directly from it).
    */
   prepareDerivedData() {
+    super.prepareDerivedData();
     const actorData = this;
     const flags = actorData.flags['hogwarts-system'] || {};
+
+    // Re-apply Active Effect changes that target skill entries.
+    //
+    // Foundry's preparation pipeline runs in the order:
+    //   prepareBaseData → applyActiveEffects → prepareDerivedData
+    // The actor DataModels recompute each skill's `value` (and `spent`) from
+    // `base + spent` inside prepareDerivedData. Because that runs AFTER Active
+    // Effects have been applied, it destructively overwrites any effect that
+    // targets `system.skills.N.value`, so the bonus never shows up.
+    //
+    // Re-applying those specific changes here, on top of the freshly computed
+    // values, restores the intended effect contribution.
+    this._applySkillActiveEffects();
+  }
+
+  /**
+   * Re-apply Active Effect changes whose key targets a skill entry
+   * (`system.skills.*`), after derived data has recomputed skill values.
+   * @protected
+   */
+  _applySkillActiveEffects() {
+    if (!Array.isArray(this.system?.skills)) return;
+    for (const effect of this.appliedEffects) {
+      for (const change of effect.changes) {
+        if (typeof change.key === 'string' && change.key.startsWith('system.skills.')) {
+          effect.apply(this, change);
+        }
+      }
+    }
   }
 
   /**

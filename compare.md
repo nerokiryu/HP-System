@@ -265,13 +265,11 @@
 
 1. **Animagus mastery (ERREUR)** : Remplacer l'enum à 4 niveaux par un champ numérique `value` (0–80) comme toute compétence. La règle dit base 10%, max 80%.
 
-2. **Fougue plafond à 5** : Ajouter une vérification `Math.min(current + 1, 5)` lors du gain de fougue.
+2. **Fougue plafond à 5** : mettre max a 5 par défaut mais laiiser editable
 
 3. **Dégâts non-létaux** : Ajouter un tracker de PV non-létaux sur la fiche personnage (séparé des PV létaux).
 
 4. **Table de résistance** : Implémenter le calcul 50% − (passive×5) + (active×5) pour les jets d'opposition.
-
-5. **Compétences scolaires max (précision)** : Remplacer la logique approximative par la formule exacte : `max = 30 + (année−1) × 15`, plafonné à 100%.
 
 6. **Baguette (données)** : Ajouter sur la fiche un champ baguette avec affiliation et bonus +10%. Ne pas oublier le malus −75% sans baguette et −30% informulé.
 
@@ -279,13 +277,9 @@
 
 7. **Formules extrêmes (FE)** : Ajouter un toggle FC/FE sur chaque sort avec affichage conditionnel des effets et malus.
 
-8. **XP d'actions (coches)** : Ajouter une case à cocher sur chaque compétence pour marquer une réussite importante. En fin de session, un bouton lance les jets d'XP.
+8. **XP d'actions (coches)** : Ajouter une coche sur chaque compétence pour marquer une réussite importante.
 
-9. **Avantages/Désavantages** : Créer un onglet dédiés sur la fiche avec liste des avantages pris, gestion du budget de 6 points, effets via Active Effects.
-
-10. **Blessures graves** : Implémenter le test automatique CON×5 quand les PV perdus ≥ ½ PV actuels, avec KO si raté.
-
-11. **FOR/CON/TAI auto +1/an** : Automatiser le gain annuel basé sur `schoolYear` ≤ 5.
+10. **Blessures graves** : Implémenter le test automatique CON×5 quand les PV perdus ≥ ½ PV actuels, avec KO si raté..
 
 ### Priorité BASSE — Enrichissement du système
 
@@ -295,13 +289,11 @@
 
 14. **Points de maison interactifs** : Widget sur la scène/sidebar avec les 4 sabliers, boutons +/− avec motif (comportement, cours, Quidditch).
 
-15. **Hybrides** : Nouveau type d'acteur ou sous-type avec tabelles des ajustements de stats et capacités.
+15. **Hybrides** : Nouveau sous-type avec tabelles des ajustements de stats et capacités.
 
 16. **Potions complètes** : Ajouter malus de fabrication, virulence, liste d'ingrédients structurée, temps de préparation.
 
 17. **Wizard de création de personnage** : Les 10 étapes de création (stats, sang, archétype, compétences, avantages, sorts, etc.).
-
-18. **Argent et fortune** : Champ gallions/mornilles/noises + niveau de fortune initial.
 
 ---
 
@@ -329,14 +321,11 @@ animagus: new foundry.data.fields.SchemaField({
 })
 ```
 
-### 2. Fougue sans plafond
+### 2. Fougue max 5
 
-**Problème :** Le champ `fougue.value` peut dépasser 5.
+**Problème :** Le champ `fougue.max` n'est pas 5 par défaut.
 
-**Correction :** Dans `actor-character.mjs`, `prepareDerivedData()`, ajouter :
-```js
-this.system.fougue.value = Math.min(this.system.fougue.value, 5);
-```
+**Correction :**
 
 ### 3. PreSchool vs Sorts innés
 
