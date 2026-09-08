@@ -1,0 +1,216 @@
+{
+  "name": "Griffon",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 14,
+      "max": 14
+    },
+    "initiativeBonus": 0,
+    "healthNonLethal": {
+      "value": 0,
+      "max": 14
+    },
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXX",
+    "stats": {
+      "str": {
+        "value": 16,
+        "formula": "3d6+6"
+      },
+      "con": {
+        "value": 14,
+        "formula": "3d6+4"
+      },
+      "siz": {
+        "value": 16,
+        "formula": "3d6+6"
+      },
+      "dex": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "int": {
+        "value": 4,
+        "formula": "1d6+1"
+      },
+      "pow": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "app": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "per": {
+        "value": 12,
+        "formula": "3d6+2"
+      }
+    },
+    "movement": {
+      "land": 8,
+      "fly": 15,
+      "swim": null
+    },
+    "armor": {
+      "value": 0,
+      "label": ""
+    },
+    "attacks": [
+      {
+        "name": "Griffes",
+        "chance": 50,
+        "damage": "2d6"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Athlétisme",
+        "value": 50
+      },
+      {
+        "name": "Discrétion",
+        "value": 60
+      },
+      {
+        "name": "Esquive",
+        "value": 40
+      },
+      {
+        "name": "Orientation",
+        "value": 30
+      },
+      {
+        "name": "Survie",
+        "value": 40
+      },
+      {
+        "name": "Vigilance",
+        "value": 45
+      },
+      {
+        "name": "Voler",
+        "value": 60
+      }
+    ],
+    "powers": "<p>Bond : Les puissantes pattes arrière du Griffon lui\npermettent de faire des bonds gigantesques de près\nde 9 mètres. De plus, les jets d’Athlétisme de\ndifficulté normale et moyenne sont considérés\ncomme réussis automatiquement. Les jet classés\ncomme difficiles sont à considérer comme moyens.\nVoler : Le Griffon peut voler dans les airs avec\nfacilité. Grâce à sa force, il peut également déplacer\nsans mal une charge dans les airs.</p>",
+    "usage": "<p>Poudre d'ongle de griffon : Peut\nêtre utilisée comme ingrédient pour la fabrication\nde potions. Elle entre, par exemple, dans la\ncomposition de la solution de Force.</p>",
+    "magicResistance": {
+      "threshold": 0,
+      "effectReduction": 1
+    },
+    "notes": {
+      "gmNotes": ""
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "hogwarts-system",
+    "systemVersion": "1.0.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "3a341fa44bc2f5fb",
+  "_key": "!actors!3a341fa44bc2f5fb",
+  "prototypeToken": {
+    "name": "Griffon",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": true,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "luminosity": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5
+      },
+      "color": null,
+      "coloration": 1,
+      "attenuation": 0.5,
+      "contrast": 0,
+      "saturation": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "flags": {}
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

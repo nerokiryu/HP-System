@@ -1,0 +1,18 @@
+{
+    "_id": "cp0048centauree",
+    "name": "Centaurée",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>connue pour ses vertus médicinales Le cerveau d’un crapaud qui peut être ut</p>",
+        "rarity": "commun",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Conscience, Décoction hoqueteuse",
+        "otherUses": "Vertus médicinales"
+    }
+}

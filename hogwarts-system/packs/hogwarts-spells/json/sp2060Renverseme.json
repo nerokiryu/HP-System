@@ -1,0 +1,16 @@
+{
+    "_id": "sp2060Renverseme",
+    "name": "Renversement",
+    "type": "spell",
+    "img": "icons/svg/lightning.svg",
+    "system": {
+        "description": "<p>Fait violemment trébucher la cible immobile en l’envoyant voler à une dizaine de mètres en arrière. Cause 1 point de dégât à la cible si elle ne réussit pas un jet de DEXx3.</p>",
+        "spellLevel": 2,
+        "malus": -15,
+        "spellType": "S",
+        "target": "A/P",
+        "incantation": "Everte Statum",
+        "extremeFormula": true,
+        "malusExtremeFormula": -35
+    }
+}

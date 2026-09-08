@@ -1,0 +1,16 @@
+{
+  "_id": "sp2014Antiouvert",
+  "name": "Anti-ouverture",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "description": "<p>manière différente pour chque sortilège d’ouverture. Durée : POU jours</p>",
+    "spellLevel": 2,
+    "malus": -20,
+    "spellType": "E",
+    "target": "O",
+    "incantation": "E -",
+    "extremeFormula": true,
+    "malusExtremeFormula": -25
+  }
+}

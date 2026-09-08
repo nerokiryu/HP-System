@@ -1,0 +1,16 @@
+{
+    "_id": "sp5026Roiencorbe",
+    "name": "Roi en corbeau",
+    "type": "spell",
+    "img": "icons/svg/mystery-man.svg",
+    "system": {
+        "description": "<p>Transforme le roi d’un jeu d’échec en corbeau</p>",
+        "spellLevel": 5,
+        "malus": -55,
+        "spellType": "M",
+        "target": "O",
+        "incantation": "Corvusfors",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

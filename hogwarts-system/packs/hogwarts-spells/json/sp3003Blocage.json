@@ -1,0 +1,16 @@
+{
+  "_id": "sp3003Blocage",
+  "name": "Blocage",
+  "type": "spell",
+  "img": "icons/svg/frozen.svg",
+  "system": {
+    "description": "<p>Immobilise toute créature ou objet en mouvement. Opposition POU/FOR ou POU/DEX. Durée : POUvoir rounds.</p>",
+    "spellLevel": 3,
+    "malus": -25,
+    "spellType": "E",
+    "target": "P",
+    "incantation": "Immobulus",
+    "extremeFormula": true,
+    "malusExtremeFormula": -40
+  }
+}

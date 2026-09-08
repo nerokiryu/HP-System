@@ -1,0 +1,74 @@
+{
+    "_id": "po3016Poisons",
+    "name": "Antidote aux poisons courants",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Permet de contrer ou de considérablement diminuer les effets des poisons les plus communs. Effet : Annule l’effet de poisons jusqu’à une VIRulence 10. Diminue les effets des poisons rares et inconnus de 5 points de VIRulence.</p>",
+        "potionLevel": 3,
+        "malus": -30,
+        "target": "A/P",
+        "virulence": null,
+        "ingredientRarity": "rarissime",
+        "ingredientList": [
+            {
+                "name": "Baies de gui",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Bézoard",
+                "quantity": 1,
+                "rarity": "rarissime",
+                "available": false
+            },
+            {
+                "name": "Huile de ricin",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Corne de licorne",
+                "quantity": 1,
+                "rarity": "rarissime",
+                "available": false
+            },
+            {
+                "name": "Eau de miel",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Ingrédient Standard",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Mandragore cuite",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Menthe poivrée",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Rosée de lune",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "Instantané",
+        "quantity": 0,
+        "crafted": false
+    }
+}

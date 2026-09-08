@@ -1,0 +1,44 @@
+{
+    "_id": "po1002PotionOubl",
+    "name": "Potion d'oubli",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Fait oublier à la cible les événements récents (dernière heure). Dosage délicat.</p>",
+        "potionLevel": 1,
+        "malus": -5,
+        "target": "P",
+        "virulence": null,
+        "ingredientRarity": "commun",
+        "ingredientList": [
+            {
+                "name": "Baies de gui",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Brins de valériane",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Eau du fleuve Léthé",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Ingrédient Standard",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "Permanent",
+        "quantity": 0,
+        "crafted": false
+    }
+}

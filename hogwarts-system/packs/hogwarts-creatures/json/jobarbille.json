@@ -1,0 +1,220 @@
+{
+  "name": "Jobarbille",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 6,
+      "max": 6
+    },
+    "initiativeBonus": 0,
+    "healthNonLethal": {
+      "value": 0,
+      "max": 6
+    },
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XX",
+    "stats": {
+      "str": {
+        "value": 2,
+        "formula": "1d4"
+      },
+      "con": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "siz": {
+        "value": 5,
+        "formula": "2d4"
+      },
+      "dex": {
+        "value": 16,
+        "formula": "3d6+6"
+      },
+      "int": {
+        "value": 2,
+        "formula": "1d4"
+      },
+      "pow": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "app": {
+        "value": 10,
+        "formula": "3d6"
+      },
+      "per": {
+        "value": 9,
+        "formula": "2d6+2"
+      }
+    },
+    "movement": {
+      "land": 5,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0,
+      "label": ""
+    },
+    "attacks": [
+      {
+        "name": "Serres",
+        "chance": 15,
+        "damage": "1"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Acrobatie",
+        "value": 45
+      },
+      {
+        "name": "Athlétisme",
+        "value": 15
+      },
+      {
+        "name": "Discrétion",
+        "value": 50
+      },
+      {
+        "name": "Esquive",
+        "value": 45
+      },
+      {
+        "name": "Orientation",
+        "value": 15
+      },
+      {
+        "name": "Survie",
+        "value": 25
+      },
+      {
+        "name": "Vigilance",
+        "value": 55
+      },
+      {
+        "name": "Voler",
+        "value": 40
+      }
+    ],
+    "powers": "<p>Silence : Le Jobarbille n’émet aucun son jusqu’à\nsa mort et se déplace silencieusement. Les jets\nde discrétion de difficulté normale et moyenne\nqu’il doit effectuer sont considérés comme\nréussis automatiquement. Les jets de discrétion\nclassés comme difficiles sont à considérer\ncomme moyens.\nVoler : Le Jobarbille est capable de voler.</p>",
+    "usage": "<p>Les plumes du Jobarbille sont\nutilisées dans la fabrication des sérums de vérité\net des potions de Mémoire.</p>",
+    "magicResistance": {
+      "threshold": 0,
+      "effectReduction": 1
+    },
+    "notes": {
+      "gmNotes": ""
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "hogwarts-system",
+    "systemVersion": "1.0.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "13004ae2b9efe79d",
+  "_key": "!actors!13004ae2b9efe79d",
+  "prototypeToken": {
+    "name": "Jobarbille",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": true,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "luminosity": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5
+      },
+      "color": null,
+      "coloration": 1,
+      "attenuation": 0.5,
+      "contrast": 0,
+      "saturation": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "flags": {}
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

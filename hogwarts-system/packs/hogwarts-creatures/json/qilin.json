@@ -1,0 +1,224 @@
+{
+  "name": "Qilin",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 14,
+      "max": 14
+    },
+    "initiativeBonus": 0,
+    "healthNonLethal": {
+      "value": 0,
+      "max": 14
+    },
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XX",
+    "stats": {
+      "str": {
+        "value": 16,
+        "formula": "3d6+5"
+      },
+      "con": {
+        "value": 12,
+        "formula": "3d6+2"
+      },
+      "siz": {
+        "value": 16,
+        "formula": "3d6+6"
+      },
+      "dex": {
+        "value": 12,
+        "formula": "3d6+2"
+      },
+      "int": {
+        "value": 18,
+        "formula": "3d6+6"
+      },
+      "pow": {
+        "value": 22,
+        "formula": "3d6+12"
+      },
+      "app": {
+        "value": 20,
+        "formula": "3d6+9"
+      },
+      "per": {
+        "value": 18,
+        "formula": "3d6+6"
+      }
+    },
+    "movement": {
+      "land": 11,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 8,
+      "label": "écailles"
+    },
+    "attacks": [
+      {
+        "name": "Sabots",
+        "chance": 50,
+        "damage": "2d6"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Acrobatie",
+        "value": 60
+      },
+      {
+        "name": "Athlétisme",
+        "value": 65
+      },
+      {
+        "name": "Discrétion",
+        "value": 65
+      },
+      {
+        "name": "Empathie",
+        "value": 80
+      },
+      {
+        "name": "Esquive",
+        "value": 70
+      },
+      {
+        "name": "Orientation",
+        "value": 60
+      },
+      {
+        "name": "Survie",
+        "value": 50
+      },
+      {
+        "name": "Vigilance",
+        "value": 70
+      },
+      {
+        "name": "Tout sortilège lancé a",
+        "value": 75
+      }
+    ],
+    "powers": "",
+    "usage": "<p>S :\nMarche du Qilin : Selon la tradition du monde\ndes Sorciers, le Qilin est utilisé dans une\ncérémonie traditionnelle au cours de laquelle la\ncréature désigne le prochain chef de la\nConfédération magique internationale en\ns'inclinant devant le candidat le plus digne de\nconfiance. Pour faire son choix, la créature est\npeut lire dans le cœur des personnes présentes et\nchoisit celui qui possède le cœur le plus pur.\nSang de Qilin : Le sang de Qilin peut être employé\nafin de voir le futur, même si cette pratique fait\npartie de la Magie Noire.</p>",
+    "magicResistance": {
+      "threshold": 0,
+      "effectReduction": 1
+    },
+    "notes": {
+      "gmNotes": ""
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "hogwarts-system",
+    "systemVersion": "1.0.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "4d681988a53330d7",
+  "_key": "!actors!4d681988a53330d7",
+  "prototypeToken": {
+    "name": "Qilin",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": true,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "luminosity": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5
+      },
+      "color": null,
+      "coloration": 1,
+      "attenuation": 0.5,
+      "contrast": 0,
+      "saturation": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "flags": {}
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

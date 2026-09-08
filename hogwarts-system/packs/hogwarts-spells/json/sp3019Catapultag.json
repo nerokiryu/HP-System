@@ -1,0 +1,16 @@
+{
+    "_id": "sp3019Catapultag",
+    "name": "Catapultage",
+    "type": "spell",
+    "img": "icons/svg/lightning.svg",
+    "system": {
+        "description": "<p>Lancé sur un objet comme un balai magique par exemple, ce sortilège repousse violemment toute personne qui tente de s’en saisir.</p>",
+        "spellLevel": 3,
+        "malus": 0,
+        "spellType": "S",
+        "target": "O",
+        "incantation": "S -",
+        "extremeFormula": true,
+        "malusExtremeFormula": -20
+    }
+}

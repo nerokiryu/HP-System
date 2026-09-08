@@ -1,0 +1,16 @@
+{
+  "_id": "sp4028Lumieresol",
+  "name": "Lumière solaire",
+  "type": "spell",
+  "img": "icons/svg/sun.svg",
+  "system": {
+    "description": "<p>E : 30%/50% 50% à toutes les actions nécessitant la vue. Effet secondaire : Blesse les créatures sensibles à la lumière en leur infligeant 1d4+1 dégâts</p>",
+    "spellLevel": 4,
+    "malus": -40,
+    "spellType": "E",
+    "target": "X",
+    "incantation": "E Lumos Solem",
+    "extremeFormula": true,
+    "malusExtremeFormula": -50
+  }
+}

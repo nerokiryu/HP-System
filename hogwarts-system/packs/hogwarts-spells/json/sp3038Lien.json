@@ -1,0 +1,16 @@
+{
+    "_id": "sp3038Lien",
+    "name": "Lien",
+    "type": "spell",
+    "img": "icons/svg/aura.svg",
+    "system": {
+        "description": "<p>Lie les objets entre eux de telle sorte que si l’un d’eux est modifié, tous les autres le sont également.</p>",
+        "spellLevel": 3,
+        "malus": -25,
+        "spellType": "E",
+        "target": "O",
+        "incantation": "Protéiforme",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

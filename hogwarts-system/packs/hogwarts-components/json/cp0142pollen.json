@@ -1,0 +1,18 @@
+{
+    "_id": "cp0142pollen",
+    "name": "Pollen",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>communes Le polygonium est une plante verte aux propriétés magique qui peut atteindre</p>",
+        "rarity": "commun",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Potion à priser                 -",
+        "otherUses": ""
+    }
+}

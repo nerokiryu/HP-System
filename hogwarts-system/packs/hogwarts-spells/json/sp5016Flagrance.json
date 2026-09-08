@@ -1,0 +1,16 @@
+{
+    "_id": "sp5016Flagrance",
+    "name": "Flagrance",
+    "type": "spell",
+    "img": "icons/svg/lightning.svg",
+    "system": {
+        "description": "<p>Appliqué sur un objet, ce sortilège sert à le protéger du vol. Quand une personne tente de s’emparer de l’objet sans lever le sort, elle subit une brûlure de l’ordre de 1d4 dégâts. Le sort reste effectif tant qu’il n’est pas levé mais n’endommage pas l’objet.</p>",
+        "spellLevel": 5,
+        "malus": 0,
+        "spellType": "S",
+        "target": "O",
+        "incantation": "S -",
+        "extremeFormula": true,
+        "malusExtremeFormula": -55
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "_id": "sp2054Obliterati",
+  "name": "Oblitération",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "description": "<p>C : 15% Durée : - Portée : POUvoir mètres</p>",
+    "spellLevel": 2,
+    "malus": -15,
+    "spellType": "E",
+    "target": "X",
+    "incantation": "",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

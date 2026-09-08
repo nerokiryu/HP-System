@@ -1,0 +1,11 @@
+{
+  "_id": "dis002Phobique",
+  "name": "Phobie",
+  "type": "feature",
+  "img": "icons/svg/skull.svg",
+  "system": {
+    "description": "<p>Peur irrationnelle d'un élément (araignées, hauteurs, eau...). Stress +10% en présence du stimulus.</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -1
+  }
+}

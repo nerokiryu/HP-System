@@ -1,0 +1,18 @@
+{
+    "_id": "cp0011ailesdefee",
+    "name": "Ailes de fée",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>Des ailes multicolores provenant de fées, des petites créatures magiques inoffensives mais extrêmement vaniteuses</p>",
+        "rarity": "rare",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Beauté, Beauté illusoire, Potion fortifiante, Solution scintillante",
+        "otherUses": ""
+    }
+}

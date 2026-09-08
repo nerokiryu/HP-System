@@ -1,0 +1,38 @@
+{
+    "_id": "po3008Apocyn",
+    "name": "Potion d'apocyn",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Poison violent qui cause la perte de 1d6 points de vie. Virulence élevée.</p>",
+        "potionLevel": 3,
+        "malus": -30,
+        "target": "P",
+        "virulence": 15,
+        "ingredientRarity": "rare",
+        "ingredientList": [
+            {
+                "name": "Apocyn",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Eau de source",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Ingrédient Standard",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "Permanent (poison)",
+        "quantity": 0,
+        "crafted": false
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "_id": "sp2017Cheveuxdru",
+    "name": "Cheveux drus",
+    "type": "spell",
+    "img": "icons/svg/aura.svg",
+    "system": {
+        "description": "<p>Permet de faire pousser les cheveux de manière disproportionnée, gênant la vue de la cible. Jet d’observation = PERx2 (au lieu de PERx5).</p>",
+        "spellLevel": 2,
+        "malus": -20,
+        "spellType": "E",
+        "target": "P",
+        "incantation": "E -",
+        "extremeFormula": true,
+        "malusExtremeFormula": -30
+    }
+}

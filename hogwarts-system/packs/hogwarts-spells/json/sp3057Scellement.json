@@ -1,0 +1,16 @@
+{
+  "_id": "sp3057Scellement",
+  "name": "Scellement de peut alors être lu que si on lui donne un nouveau coup de baguette.",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "description": "<p>peut alors être lu que si on lui donne un nouveau coup de baguette. Durée : Permanent</p>",
+    "spellLevel": 3,
+    "malus": -30,
+    "spellType": "E",
+    "target": "O",
+    "incantation": "E -",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

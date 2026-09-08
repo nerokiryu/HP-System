@@ -1,0 +1,38 @@
+{
+    "_id": "po3020Verificati",
+    "name": "Vérification",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Cette potion noire possède un effet très recherché par tous ceux qui fabriquent des potions, car elle permet de vérifier que celles-ci fonctionnent correctement. Quand on verse quelques gouttes d’une potion à l’intérieur d’une potion de vérification, celle-ci change de couleur pour indiquer si la potion possède les effets recherchés. Très pratique pour ne pas consommer de potions ratées et lors d’enchantements magiques.</p>",
+        "potionLevel": 3,
+        "malus": -30,
+        "target": "X",
+        "virulence": null,
+        "ingredientRarity": "commun",
+        "ingredientList": [
+            {
+                "name": "Cristal de roche",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Ingrédient Standard",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Rosée de lune",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "Instantané",
+        "quantity": 0,
+        "crafted": false
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "_id": "po5003WolfsbaneP",
+    "name": "Potion Tue-Loup",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Cette potion soulage et atténue les symptômes les plus terribles de ceux qui deviennent des loups garous à la pleine lune. Durée : 24 heures</p>",
+        "potionLevel": 5,
+        "malus": -80,
+        "target": "P",
+        "virulence": null,
+        "ingredientRarity": "rarissime",
+        "ingredientList": [
+            {
+                "name": "Absinthe",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Aconit",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Dictame",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Sang de salamandre",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Ingrédient Standard",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            }
+        ],
+        "prepTime": "1 semaine",
+        "duration": "1 nuit de pleine lune",
+        "quantity": 0,
+        "crafted": false
+    }
+}

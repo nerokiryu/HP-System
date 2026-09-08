@@ -1,0 +1,18 @@
+{
+    "_id": "cp0193ildeboullu",
+    "name": "Œil de Boullu",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>Des yeux provenant de Boullu, une sorte de créature magique aquatique en forme de boule et possédant deux grandes pattes.</p>",
+        "rarity": "rare",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Engrais magiques, Fertilisant",
+        "otherUses": ""
+    }
+}

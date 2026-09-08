@@ -1,0 +1,18 @@
+{
+    "_id": "cp0027banane",
+    "name": "Banane",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>Un fruit pouvant être consommé mais qui peut aussi être employé dans la fabrication de potions</p>",
+        "rarity": "commun",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Potion de Vieillissement",
+        "otherUses": "Consommable"
+    }
+}

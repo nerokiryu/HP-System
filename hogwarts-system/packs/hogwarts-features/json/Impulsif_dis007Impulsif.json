@@ -1,0 +1,11 @@
+{
+  "_id": "dis007Impulsif",
+  "name": "Impulsif",
+  "type": "feature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>Agit avant de réfléchir. Doit réussir un jet POU×3 pour se retenir d'agir impulsivement dans les situations tendues.</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -1
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "_id": "sp2023Danseendia",
+    "name": "Danse endiablée",
+    "type": "spell",
+    "img": "icons/svg/lightning.svg",
+    "system": {
+        "description": "<p>Fait danser de manière incontrôlable ce qui donne un malus de 40 % à toutes les actions, à l’exception de la magie qui a un malus de 20%.</p>",
+        "spellLevel": 2,
+        "malus": -20,
+        "spellType": "S",
+        "target": "X",
+        "incantation": "S Tarentallegra",
+        "extremeFormula": true,
+        "malusExtremeFormula": -45
+    }
+}

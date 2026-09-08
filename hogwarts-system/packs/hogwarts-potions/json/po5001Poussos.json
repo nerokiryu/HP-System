@@ -1,0 +1,50 @@
+{
+    "_id": "po5001Poussos",
+    "name": "Poussos",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Fait repousser les os et soigne les fractures. Effet secondaire : provoque de violentes douleurs.</p>",
+        "potionLevel": 5,
+        "malus": -70,
+        "target": "P",
+        "virulence": null,
+        "ingredientRarity": "rarissime",
+        "ingredientList": [
+            {
+                "name": "Mandragore",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Crin de licorne",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Dictame",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Sang de salamandre",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Os",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "8 heures (repousse osseuse)",
+        "quantity": 0,
+        "crafted": false
+    }
+}

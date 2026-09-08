@@ -1,0 +1,18 @@
+{
+    "_id": "cp0117limaceacor",
+    "name": "Limace à cornes",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>Des limaces possédant des cornes et qui peuvent être employées comme ingrédient de potion une fois bouillies.</p>",
+        "rarity": "commun",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Anti-Furoncles",
+        "otherUses": ""
+    }
+}

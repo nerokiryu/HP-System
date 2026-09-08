@@ -1,0 +1,18 @@
+{
+    "_id": "cp0200ufspourris",
+    "name": "Œufs pourris",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>Des œufs à différents stades de décomposition</p>",
+        "rarity": "commun",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "",
+        "otherUses": "Dragées surprises de Bertie Crochue"
+    }
+}

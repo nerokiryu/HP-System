@@ -1,0 +1,16 @@
+{
+  "_id": "sp2035Flammesble",
+  "name": "Flammes bleues",
+  "type": "spell",
+  "img": "icons/svg/fire.svg",
+  "system": {
+    "description": "<p>l’eau. Durée : POU heures Génère une boule de feu tenant dans la main du Sorcier sans le brûler.</p>",
+    "spellLevel": 2,
+    "malus": -15,
+    "spellType": "E",
+    "target": "O",
+    "incantation": "E -",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "_id": "sp4033Mutisme",
+    "name": "Mutisme",
+    "type": "spell",
+    "img": "icons/svg/aura.svg",
+    "system": {
+        "description": "<p>Rend la cible muette durant 1 mois, l’empêchant de lancer des sortilèges à moins qu’il ne s’agisse d’informulés.</p>",
+        "spellLevel": 4,
+        "malus": -45,
+        "spellType": "E",
+        "target": "A/P",
+        "incantation": "E Silencio",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

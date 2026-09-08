@@ -1,0 +1,224 @@
+{
+  "name": "Phénix",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 14,
+      "max": 14
+    },
+    "initiativeBonus": 0,
+    "healthNonLethal": {
+      "value": 0,
+      "max": 14
+    },
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXX",
+    "stats": {
+      "str": {
+        "value": 13,
+        "formula": "2d6+6"
+      },
+      "con": {
+        "value": 13,
+        "formula": "2d6+6"
+      },
+      "siz": {
+        "value": 14,
+        "formula": "3d6+3"
+      },
+      "dex": {
+        "value": 16,
+        "formula": "3d6+6"
+      },
+      "int": {
+        "value": 12,
+        "formula": "2d6+6"
+      },
+      "pow": {
+        "value": 22,
+        "formula": "3d6+12"
+      },
+      "app": {
+        "value": 16,
+        "formula": "3d6+6"
+      },
+      "per": {
+        "value": 13,
+        "formula": "2d6+6"
+      }
+    },
+    "movement": {
+      "land": 14,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0,
+      "label": ""
+    },
+    "attacks": [
+      {
+        "name": "Serres",
+        "chance": 45,
+        "damage": "2d3"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Acrobatie",
+        "value": 50
+      },
+      {
+        "name": "Athlétisme",
+        "value": 40
+      },
+      {
+        "name": "Chant",
+        "value": 70
+      },
+      {
+        "name": "Discrétion",
+        "value": 55
+      },
+      {
+        "name": "Esquive",
+        "value": 45
+      },
+      {
+        "name": "Orientation",
+        "value": 50
+      },
+      {
+        "name": "Survie",
+        "value": 30
+      },
+      {
+        "name": "Vigilance",
+        "value": 35
+      },
+      {
+        "name": "Voler",
+        "value": 60
+      }
+    ],
+    "powers": "<p>Chant de bravoure : Le chant du Phénix est\nmagique et instille le courage chez les personnes\nau cœur bon qui l’entendent. Cela se traduit par\nun bonus de 25% à toutes les actions entreprises\ndurant une heure après le chant du Phénix et par\nle gain d’un point de fougue temporaire qui\ndisparaît (s’il n’est pas utilisé) une heure après le\nchant. Chez les personnes mauvaises, le chant du\nPhénix se traduit par un malus de 15% à toutes\nles actions entreprises durant une heure.\nCombustion spontanée : Quand le Phénix arrive\nen fin de vie, il entre en combustion spontanée, ne\nlaissant derrière lui que des cendres et un oisillon\nqui reprendra un nouveau cycle de vie.\nGuérison : Les pouvoirs de guérison des Phénix\nsont bien supérieurs à la moyenne. Quand il est\nblessé, le corps du Phénix se régénère\nmagiquement pour soigner les blessures subies.\nCela se traduit par une régénération de 2 points\nde vie par jour et par une vitesse de régénération\ndes points de vie en cas de repos doublée par\nrapport à une créature classique.\nLarmes curatives : Les larmes du Phénix\npermettent de soigner toutes les maladies\nconnues et les blessures, en redonnant la totalité\ndes points de vie perdus. Permet aussi de\nramener une personne aux portes de la mort.\nRésistance (magie) : La majeure partie des\nsortilèges ne fonctionne pas correctement sur les\nPhénix. Tout sortilège lancé à 50% de chance\nd’échouer sur lui. Lancez 1d100 et si le résultat\nest entre 051 et 000, alors le sortilège est raté. Les\nautres sortilèges voient leurs effets diminués de\nmoitié. De plus, les sorts à durée permanente\npassent à durée variable (minutes).\nSixième sens : Le Phénix est naturellement\nsensible aux dangers qui peuvent le concerner ou\nqui peuvent concerner les personnes qu’il\napprécie. Quand une personne proche du Phénix\nest en danger, il peut le sentir grâce à un jet de\nPERceptionx5 et intervenir pour l’aider.\nTéléportation : Le Phénix possède la capacité\nmagique de se téléporter à volonté. Cette\ntéléportation peut aller de quelques mètres à\nplusieurs milliers de kilomètres.\nVoler : Le Phénix est capable de voler avec facilité\ntout en portant de lourdes charges.</p>",
+    "usage": "<p>Larmes de Phénix : Les larmes de Phénix ont des\npropriétés curatives.\nPlumes de Phénix : Les plumes de Phénix sont\nemployées pour la fabrication de certaines\nbaguettes magiques et pour l’écriture.</p>",
+    "magicResistance": {
+      "threshold": 0,
+      "effectReduction": 1
+    },
+    "notes": {
+      "gmNotes": ""
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "hogwarts-system",
+    "systemVersion": "1.0.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "475c2614c39c99bb",
+  "_key": "!actors!475c2614c39c99bb",
+  "prototypeToken": {
+    "name": "Phénix",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": true,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "luminosity": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5
+      },
+      "color": null,
+      "coloration": 1,
+      "attenuation": 0.5,
+      "contrast": 0,
+      "saturation": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "flags": {}
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

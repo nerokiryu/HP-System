@@ -1,0 +1,16 @@
+{
+    "_id": "sp2029Empoigne",
+    "name": "Empoigne",
+    "type": "spell",
+    "img": "icons/svg/aura.svg",
+    "system": {
+        "description": "<p>Permet d’ensorceler un objet afin que celui-ci soit plus facile à tenir.</p>",
+        "spellLevel": 2,
+        "malus": -20,
+        "spellType": "E",
+        "target": "O",
+        "incantation": "E -",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

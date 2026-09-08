@@ -1,0 +1,18 @@
+{
+    "_id": "cp0081decorce",
+    "name": "d’écorce",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>Écorce d'arbre utilisée comme ingrédient de potions.</p>",
+        "rarity": "commun",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Transfert",
+        "otherUses": "Parfum"
+    }
+}

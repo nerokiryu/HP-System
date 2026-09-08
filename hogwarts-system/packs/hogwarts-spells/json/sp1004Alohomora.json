@@ -1,0 +1,16 @@
+{
+  "_id": "sp1004Alohomora",
+  "name": "Déverrouillage",
+  "type": "spell",
+  "img": "icons/svg/padlock.svg",
+  "system": {
+    "description": "<p>Ouvre une serrure simple (non magique). Les serrures complexes ou enchantées résistent.</p>",
+    "spellLevel": 1,
+    "malus": -5,
+    "spellType": "E",
+    "target": "O",
+    "incantation": "Alohomora",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

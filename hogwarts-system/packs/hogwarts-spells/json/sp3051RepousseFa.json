@@ -1,0 +1,16 @@
+{
+    "_id": "sp3051RepousseFa",
+    "name": "Repousse-Fantômes",
+    "type": "spell",
+    "img": "icons/svg/aura.svg",
+    "system": {
+        "description": "<p>Empêche les fantômes de pénétrer dans la zone enchantée par ce sort (Opposition : POU/POU).</p>",
+        "spellLevel": 3,
+        "malus": -40,
+        "spellType": "E",
+        "target": "X",
+        "incantation": "E Repello Umbrae",
+        "extremeFormula": true,
+        "malusExtremeFormula": -70
+    }
+}

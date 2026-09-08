@@ -1,0 +1,202 @@
+{
+  "name": "Bandimon",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 2,
+      "max": 2
+    },
+    "initiativeBonus": 0,
+    "healthNonLethal": {
+      "value": 0,
+      "max": 2
+    },
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXX",
+    "stats": {
+      "str": {
+        "value": 1,
+        "formula": "1"
+      },
+      "con": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "siz": {
+        "value": 1,
+        "formula": "1"
+      },
+      "dex": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "int": {
+        "value": 1,
+        "formula": "1"
+      },
+      "pow": {
+        "value": 1,
+        "formula": "1"
+      },
+      "app": {
+        "value": 1,
+        "formula": "1"
+      },
+      "per": {
+        "value": 4,
+        "formula": "1d6"
+      }
+    },
+    "movement": {
+      "land": 5,
+      "fly": 10,
+      "swim": null
+    },
+    "armor": {
+      "value": 0,
+      "label": ""
+    },
+    "attacks": [],
+    "skills": [
+      {
+        "name": "Discrétion",
+        "value": 40
+      },
+      {
+        "name": "Esquive",
+        "value": 15
+      },
+      {
+        "name": "Orientation",
+        "value": 20
+      },
+      {
+        "name": "Survie",
+        "value": 20
+      },
+      {
+        "name": "Vigilance",
+        "value": 20
+      }
+    ],
+    "powers": "<p>Sécrétion : Le Bandimon sécrète une substance\nqui pourrit les fondations de la maison.\nRapidité : Peut se déplacer au double de la\nvitesse normale pour une créature de sa taille.</p>",
+    "usage": "<p>La sécrétion diluée de Bandimon\npeut être utilisée comme ingrédient de potions.\nElle entre également dans la composition de\ncertains détergents magiques.</p>",
+    "magicResistance": {
+      "threshold": 0,
+      "effectReduction": 1
+    },
+    "notes": {
+      "gmNotes": ""
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "hogwarts-system",
+    "systemVersion": "1.0.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "1ce37b0e65828224",
+  "_key": "!actors!1ce37b0e65828224",
+  "prototypeToken": {
+    "name": "Bandimon",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": true,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "luminosity": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5
+      },
+      "color": null,
+      "coloration": 1,
+      "attenuation": 0.5,
+      "contrast": 0,
+      "saturation": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "flags": {}
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

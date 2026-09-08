@@ -1,0 +1,16 @@
+{
+  "_id": "sp1005Collaporta",
+  "name": "Fermeture",
+  "type": "spell",
+  "img": "icons/svg/padlock.svg",
+  "system": {
+    "description": "<p>Verrouille magiquement une porte ou un coffre. Résistance modérée à l'ouverture.</p>",
+    "spellLevel": 1,
+    "malus": -5,
+    "spellType": "E",
+    "target": "O",
+    "incantation": "Collaporta",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

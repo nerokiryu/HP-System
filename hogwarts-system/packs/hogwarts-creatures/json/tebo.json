@@ -1,0 +1,216 @@
+{
+  "name": "Tébo",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 14,
+      "max": 14
+    },
+    "initiativeBonus": 0,
+    "healthNonLethal": {
+      "value": 0,
+      "max": 14
+    },
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXX",
+    "stats": {
+      "str": {
+        "value": 17,
+        "formula": "2d6+10"
+      },
+      "con": {
+        "value": 14,
+        "formula": "3d6+4"
+      },
+      "siz": {
+        "value": 14,
+        "formula": "2d6+7"
+      },
+      "dex": {
+        "value": 13,
+        "formula": "2d6+6"
+      },
+      "int": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "pow": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "app": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "per": {
+        "value": 18,
+        "formula": "3d6+7"
+      }
+    },
+    "movement": {
+      "land": 12,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 6,
+      "label": "peau épaisse"
+    },
+    "attacks": [
+      {
+        "name": "Défenses",
+        "chance": 50,
+        "damage": "2d3"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Acrobatie",
+        "value": 50
+      },
+      {
+        "name": "Athlétisme",
+        "value": 50
+      },
+      {
+        "name": "Discrétion",
+        "value": 60
+      },
+      {
+        "name": "Esquive",
+        "value": 45
+      },
+      {
+        "name": "Orientation",
+        "value": 35
+      },
+      {
+        "name": "Survie",
+        "value": 25
+      },
+      {
+        "name": "Vigilance",
+        "value": 50
+      }
+    ],
+    "powers": "<p>Grande charge : Quand il charge, les dégâts\noccasionnés par le Tébo sont augmentés de 1d3\net son pourcentage de Combat de 5%\nInvisibilité : Le Tébo peut se rendre invisible à\nvolonté et redevenir visible quand il le désire.\nMême s’il combat ou qu’il fuit, son invisibilité\nreste active.</p>",
+    "usage": "<p>Peau de Tébo : La peau de Tébo\nest très résistante et permet de fabriquer des\nvêtements donnant une résistance aux dégâts de\n-1 à -3 dégâts.</p>",
+    "magicResistance": {
+      "threshold": 0,
+      "effectReduction": 1
+    },
+    "notes": {
+      "gmNotes": ""
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "hogwarts-system",
+    "systemVersion": "1.0.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "553408a6094a5b9e",
+  "_key": "!actors!553408a6094a5b9e",
+  "prototypeToken": {
+    "name": "Tébo",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": true,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "luminosity": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5
+      },
+      "color": null,
+      "coloration": 1,
+      "attenuation": 0.5,
+      "contrast": 0,
+      "saturation": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "flags": {}
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

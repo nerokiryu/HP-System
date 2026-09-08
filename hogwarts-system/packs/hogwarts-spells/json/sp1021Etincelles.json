@@ -1,0 +1,16 @@
+{
+    "_id": "sp1021Etincelles",
+    "name": "Étincelles vertes",
+    "type": "spell",
+    "img": "icons/svg/sun.svg",
+    "system": {
+        "description": "<p>Libère de petites étincelles vertes qui peuvent causer quelques dommages aux insectes et plantes qu’elles touchent. Effet : 1 dégât</p>",
+        "spellLevel": 1,
+        "malus": 0,
+        "spellType": "E",
+        "target": "A/V",
+        "incantation": "E",
+        "extremeFormula": true,
+        "malusExtremeFormula": -10
+    }
+}

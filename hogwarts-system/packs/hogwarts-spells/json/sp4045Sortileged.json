@@ -1,0 +1,16 @@
+{
+  "_id": "sp4045Sortileged",
+  "name": "Sortilège de le second et le second en le premier.",
+  "type": "spell",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "description": "<p>le second et le second en le premier. Durée : permanente</p>",
+    "spellLevel": 4,
+    "malus": -50,
+    "spellType": "M",
+    "target": "O",
+    "incantation": "M -",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

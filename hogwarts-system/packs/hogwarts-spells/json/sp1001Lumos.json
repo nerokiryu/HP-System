@@ -1,0 +1,16 @@
+{
+  "_id": "sp1001Lumos",
+  "name": "Lumière (Lumos)",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Produit un faisceau lumineux depuis l'extrémité de la baguette. Éclaire un rayon de 5 mètres environ.</p>",
+    "spellLevel": 1,
+    "malus": 0,
+    "spellType": "E",
+    "target": "O",
+    "incantation": "Lumos",
+    "extremeFormula": true,
+    "malusExtremeFormula": -10
+  }
+}

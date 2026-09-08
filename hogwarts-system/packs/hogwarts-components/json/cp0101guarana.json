@@ -1,0 +1,18 @@
+{
+    "_id": "cp0101guarana",
+    "name": "Guarana",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>Plante originaire de la forêt amazonienne dont les graines contiennent 2 à 7% de caféine, Cette plante aux vertus tonifiantes serait 4 fois plus forte que le café</p>",
+        "rarity": "rare",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Caféine, Doigts agiles",
+        "otherUses": "Consommable"
+    }
+}

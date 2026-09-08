@@ -1,0 +1,237 @@
+{
+  "name": "Clabbert",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 6,
+      "max": 6
+    },
+    "initiativeBonus": 0,
+    "healthNonLethal": {
+      "value": 0,
+      "max": 6
+    },
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XX",
+    "stats": {
+      "str": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "con": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "siz": {
+        "value": 5,
+        "formula": "2d4"
+      },
+      "dex": {
+        "value": 18,
+        "formula": "4d6+4"
+      },
+      "int": {
+        "value": 2,
+        "formula": "1d4"
+      },
+      "pow": {
+        "value": 5,
+        "formula": "2d4"
+      },
+      "app": {
+        "value": 2,
+        "formula": "1d4"
+      },
+      "per": {
+        "value": 18,
+        "formula": "4d6+4"
+      }
+    },
+    "movement": {
+      "land": 5,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0,
+      "label": ""
+    },
+    "attacks": [
+      {
+        "name": "Morsure",
+        "chance": 30,
+        "damage": "1"
+      },
+      {
+        "name": "Griffes",
+        "chance": 30,
+        "damage": "1"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Acrobatie",
+        "value": 80
+      },
+      {
+        "name": "Artisanat (fabrication de nid)",
+        "value": 55
+      },
+      {
+        "name": "Athlétisme",
+        "value": 55
+      },
+      {
+        "name": "Camouflage",
+        "value": 50
+      },
+      {
+        "name": "Discrétion",
+        "value": 50
+      },
+      {
+        "name": "Empathie",
+        "value": 50
+      },
+      {
+        "name": "Esquive",
+        "value": 40
+      },
+      {
+        "name": "Fouille",
+        "value": 50
+      },
+      {
+        "name": "Orientation",
+        "value": 60
+      },
+      {
+        "name": "Survie",
+        "value": 55
+      },
+      {
+        "name": "Vigilance",
+        "value": 60
+      }
+    ],
+    "powers": "<p>Agilité du singe : Le Clabbert est capable\nd’escalader des arbres et de s’y déplacer avec\naisance. En règle générale, les jets d’acrobatie de\ndifficulté normale et moyenne que le Clabbert\ndoit effectuer pour escalader quelque chose sont\nconsidérés comme réussis automatiquement. Les\njets d’acrobatie classés comme difficiles sont à\nconsidérer comme de difficulté moyenne.\nArtisanat (création de nid) : Le Clabbert est\ncapable de fabriquer de petits nids faits de\nbranchages et de feuilles dans lesquels il se cache\npour passer ses nuits en toute tranquillité et sans\ndevoir surveiller sans cesse d’éventuels\nprédateurs.\nCamouflage : Le Clabbert sait camoufler son nid\navec talent pour que celui-ci soit difficilement\nrepérable par d’éventuels ennemis.\nNatation : Le Clabbert est un excellent nageur qui\n– grâce à ses pieds palmés – est aussi agile dans\nles l'eau que dans les arbres. En règle générale, les\njets de d’Athlétisme (natation) de difficulté\nnormale et moyenne que le Clabbert doit\neffectuer sont considérés comme réussis\nautomatiquement. Les jets classés comme\ndifficiles sont à considérer comme de difficulté\nmoyennes.\nSixième sens : La pustule sur le front du Clabbert\npossède une magie intrinsèque qui lui donne une\nsorte de sixième sens. Quand un danger approche\ndu Clabbert, comme une créature malveillante, un\nMoldu ou un sorcier mal intentionné, celle-ci\nchange de couleur pour l’avertir de la proximité\ndu danger. Cet avertissement reste cependant\nvague et ne lui permet pas de connaître la nature\ndu danger ni si les sources de danger sont\nmultiples, mais uniquement de savoir qu’un\ndanger est proche. La distance de ce danger n’est\négalement pas très précise mais, en règle\ngénérale, plus la pustule devient colorée et plus\ncelui-ci se rapproche du Clabbert. Ce dernier\nattend rarement que celle-ci soit entièrement\nécarlate pour fuir.</p>",
+    "usage": "<p>Les pustules de Clabberts\npeuvent être utilisées dans la confection de\npotions.</p>",
+    "magicResistance": {
+      "threshold": 0,
+      "effectReduction": 1
+    },
+    "notes": {
+      "gmNotes": ""
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "hogwarts-system",
+    "systemVersion": "1.0.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "696b2eeb4be48e0b",
+  "_key": "!actors!696b2eeb4be48e0b",
+  "prototypeToken": {
+    "name": "Clabbert",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": true,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "luminosity": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5
+      },
+      "color": null,
+      "coloration": 1,
+      "attenuation": 0.5,
+      "contrast": 0,
+      "saturation": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "flags": {}
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

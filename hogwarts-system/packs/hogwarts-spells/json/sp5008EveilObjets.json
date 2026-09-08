@@ -1,0 +1,16 @@
+{
+  "_id": "sp5008EveilObjets",
+  "name": "Éveil d'objets",
+  "type": "spell",
+  "img": "icons/svg/clockwork.svg",
+  "system": {
+    "description": "<p>Anime un grand nombre d'objets inanimés qui obéissent aux ordres du lanceur. Durée : concentration.</p>",
+    "spellLevel": 5,
+    "malus": -100,
+    "spellType": "M",
+    "target": "O",
+    "incantation": "",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

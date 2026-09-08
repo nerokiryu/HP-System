@@ -1,0 +1,16 @@
+{
+    "_id": "sp4042Securite",
+    "name": "Sécurité",
+    "type": "spell",
+    "img": "icons/svg/aura.svg",
+    "system": {
+        "description": "<p>Avertit le lanceur si un lieu est victime d’une effraction. Employé dans les magasins pour prévenir les vols.</p>",
+        "spellLevel": 4,
+        "malus": -35,
+        "spellType": "E",
+        "target": "O",
+        "incantation": "",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

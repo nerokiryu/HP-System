@@ -1,0 +1,18 @@
+{
+    "_id": "cp0184wartizome",
+    "name": "Wartizome",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>Une ancienne plante magique qui était employée dans la confection de potions.</p>",
+        "rarity": "rarissime",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "",
+        "otherUses": ""
+    }
+}

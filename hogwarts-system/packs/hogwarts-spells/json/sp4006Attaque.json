@@ -1,0 +1,16 @@
+{
+  "_id": "sp4006Attaque",
+  "name": "Attaque",
+  "type": "spell",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>Anime des objets ou créatures à proximité pour attaquer une cible. Dégâts : 1d6 par objet (min 1).</p>",
+    "spellLevel": 4,
+    "malus": -50,
+    "spellType": "S",
+    "target": "O",
+    "incantation": "Oppugno",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

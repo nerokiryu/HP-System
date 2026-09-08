@@ -1,0 +1,216 @@
+{
+  "name": "Malagrif tacheté",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 7,
+      "max": 7
+    },
+    "initiativeBonus": 0,
+    "healthNonLethal": {
+      "value": 0,
+      "max": 7
+    },
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXX",
+    "stats": {
+      "str": {
+        "value": 7,
+        "formula": "2d4+2"
+      },
+      "con": {
+        "value": 7,
+        "formula": "2d4+2"
+      },
+      "siz": {
+        "value": 2,
+        "formula": "1d4"
+      },
+      "dex": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "int": {
+        "value": 2,
+        "formula": "1d4"
+      },
+      "pow": {
+        "value": 6,
+        "formula": "2d4+1"
+      },
+      "app": {
+        "value": 2,
+        "formula": "1d6"
+      },
+      "per": {
+        "value": 7,
+        "formula": "2d6"
+      }
+    },
+    "movement": {
+      "land": 3,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0,
+      "label": "chitine"
+    },
+    "attacks": [
+      {
+        "name": "Pinces",
+        "chance": 25,
+        "damage": "1"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Acrobatie",
+        "value": 20
+      },
+      {
+        "name": "Athlétisme",
+        "value": 15
+      },
+      {
+        "name": "Discrétion",
+        "value": 25
+      },
+      {
+        "name": "Esquive",
+        "value": 35
+      },
+      {
+        "name": "Orientation",
+        "value": 20
+      },
+      {
+        "name": "Survie",
+        "value": 15
+      },
+      {
+        "name": "Vigilance",
+        "value": 35
+      }
+    ],
+    "powers": "<p>Venin de malchance: Quand il mord, le Malagrif\nprovoque une sorte de malédiction sur sa victime\nqui attire sur lui la malchance durant 1d6+1\njours. Durant cette période, la compétence\nChance de la cible passe à 5% et celle-ci a plus\ntendance à attirer les catastrophes sur elle. Tout\njet de dés visant à déterminer une cible aléatoire\ndevient inutile et c’est la victime qui sera\nautomatiquement désignée. VIRulence :14</p>",
+    "usage": "<p>-</p>",
+    "magicResistance": {
+      "threshold": 0,
+      "effectReduction": 1
+    },
+    "notes": {
+      "gmNotes": ""
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "hogwarts-system",
+    "systemVersion": "1.0.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "ebe5337138fe1bbf",
+  "_key": "!actors!ebe5337138fe1bbf",
+  "prototypeToken": {
+    "name": "Malagrif tacheté",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": true,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "luminosity": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5
+      },
+      "color": null,
+      "coloration": 1,
+      "attenuation": 0.5,
+      "contrast": 0,
+      "saturation": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "flags": {}
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

@@ -1,0 +1,18 @@
+{
+    "_id": "cp0183vinaigre",
+    "name": "Vinaigre",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>Le vinaigre est un liquide acide utilisé comme condiment ou comme conservateur. Il est obtenu par fermentation, ou l’oxydation artificielle de l'éthanol</p>",
+        "rarity": "commun",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Panacée",
+        "otherUses": "Consommable"
+    }
+}

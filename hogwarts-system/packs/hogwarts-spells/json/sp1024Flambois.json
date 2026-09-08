@@ -1,0 +1,16 @@
+{
+  "_id": "sp1024Flambois",
+  "name": "Flambois",
+  "type": "spell",
+  "img": "icons/svg/fire.svg",
+  "system": {
+    "description": "<p>permettant de dessiner une marque enflammée. Fait apparaître des fleurs à l'extrémité de la baguette.</p>",
+    "spellLevel": 1,
+    "malus": -5,
+    "spellType": "E",
+    "target": "X",
+    "incantation": "E -",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

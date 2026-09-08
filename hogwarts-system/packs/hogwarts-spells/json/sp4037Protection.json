@@ -1,0 +1,16 @@
+{
+  "_id": "sp4037Protection",
+  "name": "Protection",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>E : 30%/50% pas droit et protège des dégâts physiques en les diminuant de 2. (Exception : Avada kedavra). Durée : 1d8+2 heures</p>",
+    "spellLevel": 4,
+    "malus": 0,
+    "spellType": "S",
+    "target": "P",
+    "incantation": "Protego",
+    "extremeFormula": true,
+    "malusExtremeFormula": -50
+  }
+}

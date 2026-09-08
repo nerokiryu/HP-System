@@ -1,0 +1,56 @@
+{
+    "_id": "po1012Doxicide",
+    "name": "Doxicide",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Cette potion s’apparente plus à un poison, qui permet de se débarrasser des Doxys en les paralysant. Peu dangereuse pour les humains, elle peut tout de même provoquer une paralysie partielle (malus de 5% aux actions physiques) si elle touche un humain. (VIR : 5)</p>",
+        "potionLevel": 1,
+        "malus": -10,
+        "target": "A",
+        "virulence": null,
+        "ingredientRarity": "rarissime",
+        "ingredientList": [
+            {
+                "name": "Coquille de Musard",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Essence de ciguë",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Essence de ciguë aquatique",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Foie de dragon",
+                "quantity": 1,
+                "rarity": "rarissime",
+                "available": false
+            },
+            {
+                "name": "Sécrétion de Bandimon",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Teinture de tormentille",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "Permanent",
+        "quantity": 0,
+        "crafted": false
+    }
+}

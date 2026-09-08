@@ -1,0 +1,16 @@
+{
+  "_id": "sp3031Gemino",
+  "name": "Gemino",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>C : 30% Durée : permanente Effet secondaire : Ne peut être arrêté que par le lanceur, sans quoi l’objet continu de se dupliquer sans s’arrêter durant 1d4 jour(s).</p>",
+    "spellLevel": 3,
+    "malus": -30,
+    "spellType": "S",
+    "target": "O",
+    "incantation": "Gemino",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

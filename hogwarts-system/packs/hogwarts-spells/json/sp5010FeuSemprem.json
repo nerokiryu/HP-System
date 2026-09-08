@@ -1,0 +1,16 @@
+{
+  "_id": "sp5010FeuSemprem",
+  "name": "Feu de Sempremais",
+  "type": "spell",
+  "img": "icons/svg/fire.svg",
+  "system": {
+    "description": "<p>Crée un feu éternel qui ne brûle pas et ne s'éteint jamais. Utilisé pour l'éclairage. Durée : permanente.</p>",
+    "spellLevel": 5,
+    "malus": -50,
+    "spellType": "E",
+    "target": "O",
+    "incantation": "",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

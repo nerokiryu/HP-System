@@ -1,0 +1,50 @@
+{
+    "_id": "po1001CureFurncl",
+    "name": "Cure de furoncles",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Guérit les furoncles et les éruptions cutanées mineures. Préparation de niveau débutant enseignée en première année.</p>",
+        "potionLevel": 1,
+        "malus": 0,
+        "target": "P",
+        "virulence": null,
+        "ingredientRarity": "commun",
+        "ingredientList": [
+            {
+                "name": "Crochets de serpent",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Épines de porc-épic",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Limaces à cornes",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Mucus de Veracrasse",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Orties séchées",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "Permanent",
+        "quantity": 0,
+        "crafted": false
+    }
+}

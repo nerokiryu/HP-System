@@ -1,0 +1,50 @@
+{
+    "_id": "po4005MortVivant",
+    "name": "Goutte du Mort-Vivant",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Plonge la cible dans un sommeil si profond qu'elle semble morte. Seul un antidote spécifique peut la réveiller.</p>",
+        "potionLevel": 4,
+        "malus": -50,
+        "target": "P",
+        "virulence": 20,
+        "ingredientRarity": "rarissime",
+        "ingredientList": [
+            {
+                "name": "Armoise",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Asphodèle",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Fève soporifique",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Racine de valériane",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Jus de Sopophore",
+                "quantity": 1,
+                "rarity": "rarissime",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "Permanent (jusqu'à antidote)",
+        "quantity": 0,
+        "crafted": false
+    }
+}

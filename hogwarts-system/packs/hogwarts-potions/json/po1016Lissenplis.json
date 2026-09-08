@@ -1,0 +1,38 @@
+{
+    "_id": "po1016Lissenplis",
+    "name": "Lissenplis",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Cette potion capillaire permet de rendre les cheveux lisses et soyeux. Effet : APParence +1. Durée : 24 heures</p>",
+        "potionLevel": 1,
+        "malus": -10,
+        "target": "P",
+        "virulence": null,
+        "ingredientRarity": "commun",
+        "ingredientList": [
+            {
+                "name": "Cheveux de dragon asiatique",
+                "quantity": 1,
+                "rarity": "rarissime",
+                "available": false
+            },
+            {
+                "name": "Gelée de pétrole",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Gomas Barbadensis",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "24 heures",
+        "quantity": 0,
+        "crafted": false
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "_id": "sp0005Creation",
+  "name": "Création temporaire",
+  "type": "spell",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "description": "<p>Crée un petit objet simple et fragile pour quelques minutes.</p>",
+    "spellLevel": 0,
+    "malus": 0,
+    "spellType": "M",
+    "target": "O",
+    "incantation": "",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

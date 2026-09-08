@@ -1,0 +1,18 @@
+{
+    "_id": "cp0181vigne",
+    "name": "Vigne",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>La vigne est une plante grimpante des régions au climat tempéré, donnant du raisin employé pour faire du vin. Elle symbolise également la joie, l'entraide, la solidarité conjugale et l'amitié et facilite la circulation sanguine.</p>",
+        "rarity": "commun",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Pommade pommadante Grégoire, Régénération sanguine",
+        "otherUses": ""
+    }
+}

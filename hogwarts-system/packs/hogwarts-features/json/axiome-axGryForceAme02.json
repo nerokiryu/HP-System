@@ -1,0 +1,12 @@
+{
+  "_id": "axGryForceAme02",
+  "name": "Force d'âme",
+  "type": "feature",
+  "img": "icons/skills/social_dark.svg",
+  "system": {
+    "description": "<p>Octroie un bonus de 25% aux jets visant à résister à la peur quand vous luttez contre des créatures malveillantes ou que vous subissez un sortilège de ce registre.</p>",
+    "perkType": "houseAxiom",
+    "pbpCost": -1
+  },
+  "flags": {}
+}

@@ -1,0 +1,44 @@
+{
+    "_id": "po3005Neutralis",
+    "name": "Potion de neutralisation",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Rend inopérant les effets d'une potion de même niveau ou inférieur (max niveau 3).</p>",
+        "potionLevel": 3,
+        "malus": -30,
+        "target": "O",
+        "virulence": null,
+        "ingredientRarity": "rarissime",
+        "ingredientList": [
+            {
+                "name": "Eau de source",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Écaille de dragon",
+                "quantity": 1,
+                "rarity": "rarissime",
+                "available": false
+            },
+            {
+                "name": "Ingrédient Standard",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Alcool",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "Instantané",
+        "quantity": 0,
+        "crafted": false
+    }
+}

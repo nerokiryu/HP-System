@@ -1,0 +1,18 @@
+{
+    "_id": "cp0136penseesauv",
+    "name": "Pensée sauvage",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>tricolore, il s’agit d’une petite fleu cultivée dans les jardins des moldus.</p>",
+        "rarity": "commun",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Solution de développement, Veritaserum, Amortentia, Beauté, Beauté illusoire",
+        "otherUses": ""
+    }
+}

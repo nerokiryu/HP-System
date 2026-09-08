@@ -1,0 +1,221 @@
+{
+  "name": "Troll des montagnes",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 24,
+      "max": 24
+    },
+    "initiativeBonus": 0,
+    "healthNonLethal": {
+      "value": 0,
+      "max": 24
+    },
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXX",
+    "stats": {
+      "str": {
+        "value": 28,
+        "formula": "4d6+14"
+      },
+      "con": {
+        "value": 20,
+        "formula": "4d6+6"
+      },
+      "siz": {
+        "value": 28,
+        "formula": "4d6+14"
+      },
+      "dex": {
+        "value": 13,
+        "formula": "2d6+6"
+      },
+      "int": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "pow": {
+        "value": 6,
+        "formula": "1d6+2"
+      },
+      "app": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "per": {
+        "value": 16,
+        "formula": "3d6+5"
+      }
+    },
+    "movement": {
+      "land": 17,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 4,
+      "label": "peau épaisse"
+    },
+    "attacks": [
+      {
+        "name": "Gourdin",
+        "chance": 50,
+        "damage": "3d6"
+      },
+      {
+        "name": "Armes de jet",
+        "chance": 45,
+        "damage": ""
+      }
+    ],
+    "skills": [
+      {
+        "name": "Acrobatie",
+        "value": 50
+      },
+      {
+        "name": "Athlétisme",
+        "value": 50
+      },
+      {
+        "name": "Discrétion",
+        "value": 60
+      },
+      {
+        "name": "Esquive",
+        "value": 45
+      },
+      {
+        "name": "Orientation",
+        "value": 35
+      },
+      {
+        "name": "Survie",
+        "value": 25
+      },
+      {
+        "name": "Vigilance",
+        "value": 50
+      }
+    ],
+    "powers": "<p>Augmentation de force : Le Troll peut\naugmenter momentanément sa force physique de\n6 unités pour une durée de POUvoir minutes.\nCette capacité fatigue cependant le Troll, qui\ndevra ensuite se reposer pour récupérer durant\nune heure. Il peut utiliser cette capacité jusqu’à\ntrois fois par jour. S’il ne se repose pas après avoir\nutilisé cette capacité, l’Hybride-Troll est\nincapable de la réutiliser jusqu’à ce qu’il se soit\nreposé.\nArme improvisée : Le Troll peut utiliser tout\nobjet qui l’entoure comme une arme. Troncs\nd’arbre, rochers et autre poteaux téléphoniques\noccasionnent alors des dégâts normaux, sans\nmalus à l’attaque. Ces armes sont cependant\nmoins solides que des armes classiques et\nfinissent immanquablement par se briser.\nAttaque en rotation (gourdin) : Quand il manie\nun gourdin (ou tout autre arme improvisée s’en\napprochant), le Troll peut effectuer une attaque\nen rotation qui touchera toutes les créatures\nprises dans l’arc de cercle de cette attaque. Les\ndégâts occasionnés restent identiques à ceux\nd’une attaque classique mais peuvent toucher\nplusieurs cibles.\nGrande endurance : Le Troll fait partie des\ncréatures les plus endurantes connues. Capable\nde courir durant des heures, voire même des\njours sans s’arrêter.\nGuérison : Les pouvoirs de guérison des Trolls\nsont bien supérieurs à la moyenne. Quand il est\nblessé, le corps du Troll se régénère\nmagiquement pour soigner les blessures subies.\nCela se traduit par une régénération de 3 points\nde vie par jour et par une vitesse de régénération\n\ndes points de vie en cas de repos triplée par\nrapport à un être humain classique.\nLangage rudimentaire : Le Troll est capable de\nconverser avec ses congénères par des\ngrognements gutturaux.\nOdeur corporelle : Le Troll dégage naturellement\nune forte odeur qui est considérée comme\ndésagréable pour les autres. Celle-ci rend les jets\nde PERception (odorat) plus simple pour le\nrepérer, diminuant la difficulté d’une catégorie.\nLes jets de perception difficiles passent à moyens,\nles moyens à faciles et les faciles à réussite\nautomatique.\nPiétinement : Quand il charge une cible, le Troll\npeut décider de la piétiner en traversant la case\noccupée par celle-ci. Le piétinement occasionne\n2d6+2 dégâts à toutes les cibles qui voient leur\ncase d’occupation traversée par le troll en train\nde charger.\nTROLL DES FORETS\nLe Troll des forêts possède une peau verte et des\ncheveux qui le font ressembler arbre quand il\nreste totalement immobile. Moins violent que son\nhomologue des montagnes il n’en est pas moins\nredoutable.\nCaract. Jets de dés Moyenne</p>",
+    "usage": "",
+    "magicResistance": {
+      "threshold": 0,
+      "effectReduction": 1
+    },
+    "notes": {
+      "gmNotes": ""
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "hogwarts-system",
+    "systemVersion": "1.0.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "7a948b68eeea695e",
+  "_key": "!actors!7a948b68eeea695e",
+  "prototypeToken": {
+    "name": "Troll des montagnes",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": true,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "luminosity": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5
+      },
+      "color": null,
+      "coloration": 1,
+      "attenuation": 0.5,
+      "contrast": 0,
+      "saturation": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "flags": {}
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

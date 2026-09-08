@@ -1,0 +1,224 @@
+{
+  "name": "Leucrotta",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 22,
+      "max": 22
+    },
+    "initiativeBonus": 0,
+    "healthNonLethal": {
+      "value": 0,
+      "max": 22
+    },
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XX",
+    "stats": {
+      "str": {
+        "value": 22,
+        "formula": "3d6+12"
+      },
+      "con": {
+        "value": 14,
+        "formula": "3d6+3"
+      },
+      "siz": {
+        "value": 29,
+        "formula": "6d6+8"
+      },
+      "dex": {
+        "value": 12,
+        "formula": "3d6+2"
+      },
+      "int": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "pow": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "app": {
+        "value": 12,
+        "formula": "3d6+2"
+      },
+      "per": {
+        "value": 16,
+        "formula": "3d6+6"
+      }
+    },
+    "movement": {
+      "land": 13,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 1,
+      "label": "peau"
+    },
+    "attacks": [
+      {
+        "name": "Sabots",
+        "chance": 45,
+        "damage": "2d6"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Acrobatie",
+        "value": 45
+      },
+      {
+        "name": "Athlétisme",
+        "value": 70
+      },
+      {
+        "name": "Discrétion",
+        "value": 30
+      },
+      {
+        "name": "Empathie",
+        "value": 20
+      },
+      {
+        "name": "Esquive",
+        "value": 25
+      },
+      {
+        "name": "Imitation",
+        "value": 70
+      },
+      {
+        "name": "Orientation",
+        "value": 20
+      },
+      {
+        "name": "Survie",
+        "value": 25
+      },
+      {
+        "name": "Vigilance",
+        "value": 85
+      }
+    ],
+    "powers": "<p>Alternance des genres : Le Leucrotta change de\nsexe au cours de sa vie, alternant les périodes où\nil est mâle et les périodes où il est femelle.\nForce prodigieuse : : Le Leucrotta possède une\nforce phénoménale et peut déplacer, porter ou\ntirer des charges colossales.\nGrande vigilance : le Leucrotta ne ferme jamais\nles yeux. Cette caractéristique fait qu’il est\ntoujours attentif à ce qui l’entoure. Octroie un\nbonus de 25% dans la compétence vigilance.\nImitation : Le Leucrotta a la capacité d’imiter\nparfaitement les voix et les sons des personnes\nqui l’entourent.\nImmunité (acier) : Le Leucrotta est insensible à\nl’acier, qui ne peut ni le blesser, ni le tuer.</p>",
+    "usage": "<p>-</p>",
+    "magicResistance": {
+      "threshold": 0,
+      "effectReduction": 1
+    },
+    "notes": {
+      "gmNotes": ""
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "hogwarts-system",
+    "systemVersion": "1.0.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "4b9ea96bafccf4a0",
+  "_key": "!actors!4b9ea96bafccf4a0",
+  "prototypeToken": {
+    "name": "Leucrotta",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": true,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "luminosity": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5
+      },
+      "color": null,
+      "coloration": 1,
+      "attenuation": 0.5,
+      "contrast": 0,
+      "saturation": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "flags": {}
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "_id": "sp2007Spongifica",
+  "name": "Spongification",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "description": "<p>Rend un objet mou et spongieux. Utile pour amortir des chutes ou rendre un obstacle déformable.</p>",
+    "spellLevel": 2,
+    "malus": -10,
+    "spellType": "M",
+    "target": "O",
+    "incantation": "Spongify",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "_id": "sp3043ObjetenDra",
+    "name": "Objet en Dragon",
+    "type": "spell",
+    "img": "icons/svg/mystery-man.svg",
+    "system": {
+        "description": "<p>Transforme un objet en dragon vivant de même taille. Durée : permanente</p>",
+        "spellLevel": 3,
+        "malus": -30,
+        "spellType": "M",
+        "target": "O",
+        "incantation": "Draconifors",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

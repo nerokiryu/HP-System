@@ -1,0 +1,16 @@
+{
+  "_id": "sp5006CordeFlam",
+  "name": "Corde de flammes",
+  "type": "spell",
+  "img": "icons/svg/fire.svg",
+  "system": {
+    "description": "<p>Crée une corde de feu qui entoure et immobilise la cible. Opposition POU/DEX pour se libérer. Brûlures : 1d3/round.</p>",
+    "spellLevel": 5,
+    "malus": -55,
+    "spellType": "E",
+    "target": "P",
+    "incantation": "",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

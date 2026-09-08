@@ -1,0 +1,16 @@
+{
+    "_id": "sp5021Maleficeex",
+    "name": "Maléfice explosif",
+    "type": "spell",
+    "img": "icons/svg/lightning.svg",
+    "system": {
+        "description": "<p>Provoque un effet d’explosion qui détruit des objets (magiques ou non) et qui blesse les êtres vivants en leur infligeant 1d6+1 dégâts.</p>",
+        "spellLevel": 5,
+        "malus": 0,
+        "spellType": "S",
+        "target": "X",
+        "incantation": "Confringo",
+        "extremeFormula": true,
+        "malusExtremeFormula": -50
+    }
+}

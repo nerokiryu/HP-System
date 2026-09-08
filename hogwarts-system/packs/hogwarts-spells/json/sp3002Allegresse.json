@@ -1,0 +1,16 @@
+{
+  "_id": "sp3002Allegresse",
+  "name": "Allégresse",
+  "type": "spell",
+  "img": "icons/svg/sun.svg",
+  "system": {
+    "description": "<p>Met la cible dans un état de bonheur intense. Elle ne peut s'inquiéter durant 1d4+1 heures. Opposition POU/POU.</p>",
+    "spellLevel": 3,
+    "malus": -25,
+    "spellType": "E",
+    "target": "P",
+    "incantation": "Felicitas",
+    "extremeFormula": true,
+    "malusExtremeFormula": -35
+  }
+}

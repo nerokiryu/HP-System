@@ -1,0 +1,16 @@
+{
+    "_id": "sp4013Antimalefi",
+    "name": "Anti-maléfice du rire",
+    "type": "spell",
+    "img": "icons/svg/aura.svg",
+    "system": {
+        "description": "<p>Permet de contrer les effets du maléfice du rire</p>",
+        "spellLevel": 4,
+        "malus": -40,
+        "spellType": "E",
+        "target": "P",
+        "incantation": "E -",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

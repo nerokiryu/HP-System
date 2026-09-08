@@ -1,0 +1,16 @@
+{
+  "_id": "sp0004ChauffBois",
+  "name": "Chauffe-boisson",
+  "type": "spell",
+  "img": "icons/svg/fire.svg",
+  "system": {
+    "description": "<p>Réchauffe une boisson contenue dans un récipient.</p>",
+    "spellLevel": 0,
+    "malus": 0,
+    "spellType": "E",
+    "target": "O",
+    "incantation": "",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

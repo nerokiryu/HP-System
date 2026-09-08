@@ -1,0 +1,18 @@
+{
+    "_id": "cp0199ufsdoccamy",
+    "name": "Œufs d’Occamy",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>Les œufs d’Occamy ont des propriétés magiques. Ils sont composés de l’argent le plus délicat et le plus pur.</p>",
+        "rarity": "rarissime",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Felix Felicis",
+        "otherUses": ""
+    }
+}

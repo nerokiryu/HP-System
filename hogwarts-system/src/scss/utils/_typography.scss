@@ -1,0 +1,44 @@
+$font-primary: 'Roboto', sans-serif;
+$font-secondary: 'Roboto', sans-serif;
+
+/* Collapsible section header styling (global) */
+h3.collapsible {
+	cursor: pointer;
+	user-select: none;
+	position: relative;
+	padding-right: 18px; /* room for icon */
+}
+
+
+
+/* The content immediately following a collapsible header can be hidden */
+h3.collapsible + .collapsible-content {
+	transition: max-height 0.2s ease, opacity 0.2s ease;
+	overflow: hidden;
+}
+
+h3.collapsible.collapsed + .collapsible-content {
+	max-height: 0 !important;
+	opacity: 0;
+	padding: 0 !important;
+}
+
+/* Inputs: align text color with system text colors */
+.hogwarts-system input,
+.hogwarts-system textarea,
+.hogwarts-system select,
+.hogwarts-system button,
+.hogwarts-system .form-field,
+.hogwarts-system .form-control {
+	color: var(--hogwarts-system-c-dark) !important;
+}
+
+.hogwarts-system input::placeholder,
+.hogwarts-system textarea::placeholder {
+	color: var(--hogwarts-system-c-faint) !important;
+}
+
+/* Make contenteditable regions use the same text color */
+.hogwarts-system [contenteditable] {
+	color: var(--hogwarts-system-c-dark);
+}

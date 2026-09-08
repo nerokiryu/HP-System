@@ -1,0 +1,16 @@
+{
+  "_id": "sp2055OuvreCaiss",
+  "name": "Ouvre-Caisse",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "description": "<p>C : 10% couvercle ou leur(s) porte(s). Durée : -</p>",
+    "spellLevel": 2,
+    "malus": -10,
+    "spellType": "E",
+    "target": "O",
+    "incantation": "E Cistem Aperio",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

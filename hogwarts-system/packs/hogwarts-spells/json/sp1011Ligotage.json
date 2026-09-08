@@ -1,0 +1,16 @@
+{
+  "_id": "sp1011Ligotage",
+  "name": "Ligotage",
+  "type": "spell",
+  "img": "icons/svg/net.svg",
+  "system": {
+    "description": "<p>Des cordes magiques s'enroulent autour de la cible, l'immobilisant. La cible peut tenter un jet de FOR×5 pour se libérer.</p>",
+    "spellLevel": 1,
+    "malus": -10,
+    "spellType": "E",
+    "target": "P",
+    "incantation": "Incarcerous",
+    "extremeFormula": true,
+    "malusExtremeFormula": -20
+  }
+}

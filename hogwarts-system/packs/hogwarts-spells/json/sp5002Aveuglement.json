@@ -1,0 +1,16 @@
+{
+  "_id": "sp5002Aveuglement",
+  "name": "Aveuglement",
+  "type": "spell",
+  "img": "icons/svg/blind.svg",
+  "system": {
+    "description": "<p>Aveugle temporairement la cible. Opposition POU/CON. Durée : POUvoir rounds.</p>",
+    "spellLevel": 5,
+    "malus": -50,
+    "spellType": "S",
+    "target": "P",
+    "incantation": "",
+    "extremeFormula": true,
+    "malusExtremeFormula": -65
+  }
+}

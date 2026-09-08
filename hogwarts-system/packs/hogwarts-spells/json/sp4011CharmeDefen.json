@@ -1,0 +1,16 @@
+{
+  "_id": "sp4011CharmeDefen",
+  "name": "Charme défensif",
+  "type": "spell",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>Crée une barrière protectrice autour de la cible qui bloque les sorts de niveau 4 ou inférieur.</p>",
+    "spellLevel": 4,
+    "malus": -40,
+    "spellType": "E",
+    "target": "P",
+    "incantation": "",
+    "extremeFormula": true,
+    "malusExtremeFormula": -55
+  }
+}

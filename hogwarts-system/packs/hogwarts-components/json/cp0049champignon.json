@@ -1,0 +1,18 @@
+{
+    "_id": "cp0049champignon",
+    "name": "Champignon vénéneux",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>Champignon toxique pouvant provoquer des empoisonnements graves.</p>",
+        "rarity": "rare",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Potion de Mort Vivante",
+        "otherUses": "Poison"
+    }
+}

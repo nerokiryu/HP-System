@@ -1,0 +1,16 @@
+{
+    "_id": "sp1029Larmes",
+    "name": "Larmes",
+    "type": "spell",
+    "img": "icons/svg/lightning.svg",
+    "system": {
+        "description": "<p>Fait pleurer une personne, malus de 20% à tout ce qui implique la vision durant 1d4 heures</p>",
+        "spellLevel": 1,
+        "malus": 0,
+        "spellType": "S",
+        "target": "P",
+        "incantation": "S Lacrimare",
+        "extremeFormula": true,
+        "malusExtremeFormula": -20
+    }
+}

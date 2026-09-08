@@ -1,0 +1,16 @@
+{
+  "_id": "sp2045Inversion",
+  "name": "Inversion",
+  "type": "spell",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "description": "<p>E : 10%/30% Durée : -</p>",
+    "spellLevel": 2,
+    "malus": -30,
+    "spellType": "M",
+    "target": "O",
+    "incantation": "",
+    "extremeFormula": true,
+    "malusExtremeFormula": -30
+  }
+}

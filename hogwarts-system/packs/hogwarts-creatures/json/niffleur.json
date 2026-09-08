@@ -1,0 +1,220 @@
+{
+  "name": "Niffleur",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 8,
+      "max": 8
+    },
+    "initiativeBonus": 0,
+    "healthNonLethal": {
+      "value": 0,
+      "max": 8
+    },
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXX",
+    "stats": {
+      "str": {
+        "value": 9,
+        "formula": "2d6+2"
+      },
+      "con": {
+        "value": 9,
+        "formula": "2d6+2"
+      },
+      "siz": {
+        "value": 7,
+        "formula": "2d4+2"
+      },
+      "dex": {
+        "value": 12,
+        "formula": "3d6+2"
+      },
+      "int": {
+        "value": 5,
+        "formula": "2d4"
+      },
+      "pow": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "app": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "per": {
+        "value": 18,
+        "formula": "3d6+8"
+      }
+    },
+    "movement": {
+      "land": 10,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0,
+      "label": ""
+    },
+    "attacks": [
+      {
+        "name": "Griffes",
+        "chance": 30,
+        "damage": "1"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Acrobatie",
+        "value": 25
+      },
+      {
+        "name": "Athlétisme",
+        "value": 50
+      },
+      {
+        "name": "Discrétion",
+        "value": 45
+      },
+      {
+        "name": "Esquive",
+        "value": 35
+      },
+      {
+        "name": "Fouille",
+        "value": 60
+      },
+      {
+        "name": "Orientation",
+        "value": 40
+      },
+      {
+        "name": "Survie",
+        "value": 30
+      },
+      {
+        "name": "Vigilance",
+        "value": 45
+      }
+    ],
+    "powers": "<p>Faufiler : Le corps du Niffleur peut s’aplatir pour\nse faufiler dans des espaces de moins d’un\nmillimètre d’épaisseur.\nForer : le Niffleur peut forer des trous profonds\ngrâce à un jet d’Athlétisme\nFouille : Le Niffleur possède la compétence\nfouille, lui permettant de trouver des trésors.\nPoche ventrale : Le Niffleur possède – comme\nd’autre marsupiaux – une poche ventrale dans\nlaquelle il cache ses découvertes. Celle-ci est bien\nplus grande à l’intérieur qu’il n’y paraît.\nSixième sens : Le Niffleur est capable, grâce à un\njet de PERceptionx4, de sentir la présence de\nrichesses dans son environnement immédiat.</p>",
+    "usage": "<p>Chasseur de trésors</p>",
+    "magicResistance": {
+      "threshold": 0,
+      "effectReduction": 1
+    },
+    "notes": {
+      "gmNotes": ""
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "hogwarts-system",
+    "systemVersion": "1.0.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "f619f8a3d87e7ed8",
+  "_key": "!actors!f619f8a3d87e7ed8",
+  "prototypeToken": {
+    "name": "Niffleur",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": true,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "luminosity": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5
+      },
+      "color": null,
+      "coloration": 1,
+      "attenuation": 0.5,
+      "contrast": 0,
+      "saturation": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "flags": {}
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

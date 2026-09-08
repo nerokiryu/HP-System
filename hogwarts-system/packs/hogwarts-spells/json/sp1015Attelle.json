@@ -1,0 +1,16 @@
+{
+  "_id": "sp1015Attelle",
+  "name": "Attelle",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "description": "<p>Effet : Rend 1 point de vie. Durée : -</p>",
+    "spellLevel": 1,
+    "malus": 0,
+    "spellType": "E",
+    "target": "A/P",
+    "incantation": "E",
+    "extremeFormula": true,
+    "malusExtremeFormula": -20
+  }
+}

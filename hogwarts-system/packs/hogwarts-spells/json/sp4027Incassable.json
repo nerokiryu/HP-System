@@ -1,0 +1,16 @@
+{
+    "_id": "sp4027Incassable",
+    "name": "Incassable",
+    "type": "spell",
+    "img": "icons/svg/aura.svg",
+    "system": {
+        "description": "<p>Rend un objet incassable</p>",
+        "spellLevel": 4,
+        "malus": -40,
+        "spellType": "E",
+        "target": "O",
+        "incantation": "E -",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

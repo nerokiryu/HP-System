@@ -1,0 +1,16 @@
+{
+    "_id": "sp2044Illisibili",
+    "name": "Illisibilité",
+    "type": "spell",
+    "img": "icons/svg/mystery-man.svg",
+    "system": {
+        "description": "<p>Rend un texte illisible. Peut être levé par un sortilège Finite Incantatem.</p>",
+        "spellLevel": 2,
+        "malus": -15,
+        "spellType": "M",
+        "target": "O",
+        "incantation": "Illegibilus",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

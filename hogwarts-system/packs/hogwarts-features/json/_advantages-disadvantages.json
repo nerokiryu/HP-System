@@ -1,0 +1,200 @@
+[
+  {
+    "_id": "adv001Chanceux",
+    "name": "Chanceux",
+    "type": "feature",
+    "img": "icons/svg/sun.svg",
+    "system": {
+      "description": "<p>Le personnage est naturellement chanceux. Une fois par session, il peut relancer un jet raté.</p>",
+      "perkType": "advantage",
+      "pbpCost": 2
+    }
+  },
+  {
+    "_id": "adv002Robuste",
+    "name": "Robuste",
+    "type": "feature",
+    "img": "icons/svg/shield.svg",
+    "system": {
+      "description": "<p>Constitution solide. +2 points de vie maximum.</p>",
+      "perkType": "advantage",
+      "pbpCost": 2
+    }
+  },
+  {
+    "_id": "adv003Reflexes",
+    "name": "Réflexes rapides",
+    "type": "feature",
+    "img": "icons/svg/lightning.svg",
+    "system": {
+      "description": "<p>Réagit plus vite que la normale. +2 à l'initiative.</p>",
+      "perkType": "advantage",
+      "pbpCost": 1
+    }
+  },
+  {
+    "_id": "adv004Seduisant",
+    "name": "Séduisant",
+    "type": "feature",
+    "img": "icons/svg/sun.svg",
+    "system": {
+      "description": "<p>Charisme naturel. +10% aux jets de Persuasion/Baratin avec les personnes susceptibles d'être attirées.</p>",
+      "perkType": "advantage",
+      "pbpCost": 1
+    }
+  },
+  {
+    "_id": "adv005BonneMemoi",
+    "name": "Bonne mémoire",
+    "type": "feature",
+    "img": "icons/svg/book.svg",
+    "system": {
+      "description": "<p>Mémoire exceptionnelle. +10% aux jets de Bibliothèque et aux compétences scolaires pour se souvenir d'informations.</p>",
+      "perkType": "advantage",
+      "pbpCost": 1
+    }
+  },
+  {
+    "_id": "adv006SensAiguise",
+    "name": "Sens aiguisés",
+    "type": "feature",
+    "img": "icons/svg/eye.svg",
+    "system": {
+      "description": "<p>Perceptions supérieures. +10% aux jets de Vigilance.</p>",
+      "perkType": "advantage",
+      "pbpCost": 1
+    }
+  },
+  {
+    "_id": "adv007Ambidextre",
+    "name": "Ambidextre",
+    "type": "feature",
+    "img": "icons/svg/sword.svg",
+    "system": {
+      "description": "<p>Peut utiliser les deux mains sans malus. Pas de pénalité pour l'utilisation de la main non-directrice.</p>",
+      "perkType": "advantage",
+      "pbpCost": 1
+    }
+  },
+  {
+    "_id": "adv008Resistant",
+    "name": "Résistant à la magie",
+    "type": "feature",
+    "img": "icons/svg/shield.svg",
+    "system": {
+      "description": "<p>Résiste naturellement aux sorts. +10% aux jets d'opposition contre les sorts.</p>",
+      "perkType": "advantage",
+      "pbpCost": 2
+    }
+  },
+  {
+    "_id": "adv009Empathique",
+    "name": "Empathique",
+    "type": "feature",
+    "img": "icons/svg/eye.svg",
+    "system": {
+      "description": "<p>Ressent les émotions des autres. +10% aux jets d'Empathie et de Psychologie.</p>",
+      "perkType": "advantage",
+      "pbpCost": 1
+    }
+  },
+  {
+    "_id": "adv010Animagus",
+    "name": "Potentiel Animagus",
+    "type": "feature",
+    "img": "icons/svg/pawprint.svg",
+    "system": {
+      "description": "<p>Possède le potentiel rare de devenir Animagus. Nécessite un apprentissage long et difficile (niveau 5+).</p>",
+      "perkType": "advantage",
+      "pbpCost": 3
+    }
+  },
+  {
+    "_id": "dis001Maladroit",
+    "name": "Maladroit",
+    "type": "feature",
+    "img": "icons/svg/downgrade.svg",
+    "system": {
+      "description": "<p>Tendance à tout casser. -10% aux jets de DEX pour les actions délicates.</p>",
+      "perkType": "disadvantage",
+      "pbpCost": -1
+    }
+  },
+  {
+    "_id": "dis002Phobique",
+    "name": "Phobie",
+    "type": "feature",
+    "img": "icons/svg/skull.svg",
+    "system": {
+      "description": "<p>Peur irrationnelle d'un élément (araignées, hauteurs, eau...). Stress +10% en présence du stimulus.</p>",
+      "perkType": "disadvantage",
+      "pbpCost": -1
+    }
+  },
+  {
+    "_id": "dis003Distrait",
+    "name": "Distrait",
+    "type": "feature",
+    "img": "icons/svg/daze.svg",
+    "system": {
+      "description": "<p>Facilement distrait. -10% aux jets de Vigilance.</p>",
+      "perkType": "disadvantage",
+      "pbpCost": -1
+    }
+  },
+  {
+    "_id": "dis004MalChance",
+    "name": "Malchanceux",
+    "type": "feature",
+    "img": "icons/svg/skull.svg",
+    "system": {
+      "description": "<p>La malchance s'acharne. Une fois par session, le MJ peut forcer une relance sur un jet réussi.</p>",
+      "perkType": "disadvantage",
+      "pbpCost": -2
+    }
+  },
+  {
+    "_id": "dis005Fragile",
+    "name": "Constitution fragile",
+    "type": "feature",
+    "img": "icons/svg/downgrade.svg",
+    "system": {
+      "description": "<p>Santé fragile. -2 points de vie maximum.</p>",
+      "perkType": "disadvantage",
+      "pbpCost": -2
+    }
+  },
+  {
+    "_id": "dis006Begaiement",
+    "name": "Bégaiement",
+    "type": "feature",
+    "img": "icons/svg/sound.svg",
+    "system": {
+      "description": "<p>Difficulté d'élocution. -10% aux sorts nécessitant une incantation sous stress.</p>",
+      "perkType": "disadvantage",
+      "pbpCost": -1
+    }
+  },
+  {
+    "_id": "dis007Impulsif",
+    "name": "Impulsif",
+    "type": "feature",
+    "img": "icons/svg/lightning.svg",
+    "system": {
+      "description": "<p>Agit avant de réfléchir. Doit réussir un jet POU×3 pour se retenir d'agir impulsivement dans les situations tendues.</p>",
+      "perkType": "disadvantage",
+      "pbpCost": -1
+    }
+  },
+  {
+    "_id": "dis008MauvVue",
+    "name": "Mauvaise vue",
+    "type": "feature",
+    "img": "icons/svg/blind.svg",
+    "system": {
+      "description": "<p>Vue déficiente. -20% aux jets de Vue sans lunettes. Si les lunettes sont perdues, malus permanent jusqu'à récupération.</p>",
+      "perkType": "disadvantage",
+      "pbpCost": -1
+    }
+  }
+]

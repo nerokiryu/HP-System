@@ -1,0 +1,16 @@
+{
+    "_id": "sp1025Fleurmagiq",
+    "name": "Fleur magique",
+    "type": "spell",
+    "img": "icons/svg/mystery-man.svg",
+    "system": {
+        "description": "<p>Fait apparaître des fleurs à l'extrémité de la baguette.</p>",
+        "spellLevel": 1,
+        "malus": -10,
+        "spellType": "M",
+        "target": "X",
+        "incantation": "M",
+        "extremeFormula": true,
+        "malusExtremeFormula": -10
+    }
+}

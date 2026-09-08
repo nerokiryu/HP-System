@@ -1,0 +1,16 @@
+{
+  "_id": "sp2001Expelliarm",
+  "name": "Désarmement",
+  "type": "spell",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>Fait sauter l'objet tenu par la cible de ses mains. Le sort le plus courant en duel.</p>",
+    "spellLevel": 2,
+    "malus": -10,
+    "spellType": "E",
+    "target": "P",
+    "incantation": "Expelliarmus",
+    "extremeFormula": true,
+    "malusExtremeFormula": -20
+  }
+}

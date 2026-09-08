@@ -1,0 +1,362 @@
+.tab.biography,
+.biography-container {
+  padding: 10px;
+  
+  .bio-section {
+    margin-bottom: 20px;
+    
+    h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      border-bottom: 2px solid var(--hogwarts-accent-500);
+      color: var(--hogwarts-accent-500);
+      font-size: 1.2em;
+      
+      &.collapsible {
+        cursor: pointer;
+        user-select: none;
+        transition: color 0.2s;
+        
+        &:hover {
+          color: var(--hogwarts-accent-900);
+        }
+        
+        i {
+          margin-right: 8px;
+          font-size: 0.9em;
+          transition: transform 0.2s;
+        }
+      }
+    }
+    
+    .bio-content {
+      transition: all 0.3s ease;
+    }
+    
+    .items-list {
+      margin-bottom: 10px;
+      
+      .item {
+        .item-name input,
+        .item-prop input {
+          width: 100%;
+          padding: 2px 5px;
+          border: 1px solid #ccc;
+          background: transparent;
+          font-size: 12px;
+          
+            &:focus {
+            outline: none;
+            border-color: var(--hogwarts-accent-500);
+          }
+        }
+        
+        .item-name textarea,
+        .item-prop textarea {
+          width: 100%;
+          padding: 2px 5px;
+          border: 1px solid #ccc;
+          background: transparent;
+          font-size: 12px;
+          resize: vertical;
+          font-family: inherit;
+          
+            &:focus {
+            outline: none;
+            border-color: var(--hogwarts-accent-500);
+          }
+        }
+      }
+    }
+  }
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    
+    .form-group-row {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      
+      .form-group {
+        margin: 0;
+      }
+    }
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+      font-size: 0.9em;
+    }
+    
+    input, textarea {
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-family: inherit;
+      
+      &:focus {
+        outline: none;
+        border-color: var(--hogwarts-accent-500);
+      }
+    }
+    
+    textarea {
+      resize: vertical;
+      min-height: 60px;
+    }
+  }
+  
+  .gm-only {
+    border: 2px dashed #ff8800;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    
+    label {
+      color: #ff8800;
+    }
+  }
+}
+
+// Skills categories with collapsible sections
+.tab.skills {
+  .skill-actions {
+    justify-content: flex-end;
+    gap: 8px;
+    padding-bottom: 8px;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.85em;
+      color: var(--hogwarts-accent-500);
+      border: 1px solid var(--hogwarts-accent-500);
+      transition: background 0.2s, color 0.2s;
+
+      &:hover {
+        background: var(--hogwarts-accent-500);
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .skill-category {
+    margin-bottom: 20px;
+    
+    h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--hogwarts-accent-500);
+    color: var(--hogwarts-accent-500);
+    font-size: 1.2em;
+      
+      &.collapsible {
+        cursor: pointer;
+        user-select: none;
+        transition: color 0.2s;
+        
+        &:hover {
+          color: var(--hogwarts-accent-900);
+        }
+        
+        i {
+          margin-right: 8px;
+          font-size: 0.9em;
+          transition: transform 0.2s;
+        }
+      }
+    }
+    
+    .skill-category-content {
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+// Features tab layout
+.tab.features {
+  .features-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 10px;
+  }
+  
+  .features-column {
+    h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      padding-bottom: 5px;
+      border-bottom: 2px solid var(--hogwarts-accent-500);
+      color: var(--hogwarts-accent-500);
+      font-size: 1.2em;
+    }
+    
+    .ability {
+      align-items: center;
+      padding: 8px;
+      margin-bottom: 6px;
+      background: rgba(0, 0, 0, 0.05);
+      border-radius: 4px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      
+      &:hover {
+        background: rgba(var(--hogwarts-accent-rgb), 0.05);
+        border-color: rgba(var(--hogwarts-accent-rgb), 0.2);
+      }
+      
+      .resource-label {
+        flex: 1;
+        font-weight: 500;
+        color: var(--hogwarts-system-c-dark);
+      }
+      
+      .ability-score {
+        width: 60px;
+        text-align: center;
+        padding: 4px 8px;
+          border: 1px solid rgba(0, 0, 0, 0.2);
+          border-radius: 3px;
+          background: rgba(0, 0, 0, 0.18);
+          color: #f0e6d2;
+          /* contour aux couleurs de la maison */
+          border-color: rgba(var(--hogwarts-accent-rgb), 0.35);
+          box-shadow: 0 0 0 3px rgba(var(--hogwarts-accent-rgb), 0.06) inset;
+        font-weight: 600;
+        margin: 0 10px;
+      }
+      
+      .ability-value {
+        width: 60px;
+        text-align: center;
+        padding: 4px 8px;
+        border: 1px solid rgba(var(--hogwarts-accent-rgb), 0.25);
+        border-radius: 3px;
+        background: rgba(var(--hogwarts-accent-rgb), 0.08);
+        font-weight: 600;
+        margin: 0 10px;
+        color: var(--hogwarts-system-c-tan);
+      }
+      
+      .ability-mod {
+        min-width: 80px;
+        text-align: center;
+        padding: 4px 8px;
+        font-weight: 500;
+        color: var(--hogwarts-accent-500);
+
+        &.rollable {
+          cursor: pointer;
+          transition: all 0.2s ease;
+
+          &:hover {
+            color: var(--hogwarts-accent-900);
+            transform: scale(1.05);
+          }
+
+          i {
+            margin-right: 4px;
+          }
+        }
+      }
+    }
+  }
+
+  .experience-full-width {
+    margin-top: 20px;
+    padding: 0 10px;
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      padding-bottom: 5px;
+      border-bottom: 2px solid var(--hogwarts-accent-500);
+      color: var(--hogwarts-accent-500);
+      font-size: 1.2em;
+    }
+  }
+  
+  .experience-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 15px;
+    background: rgba(var(--hogwarts-accent-rgb), 0.05);
+    border: 2px solid rgba(var(--hogwarts-accent-rgb), 0.2);
+    border-radius: 6px;
+    
+    .experience-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px;
+      background: rgba(var(--hogwarts-accent-rgb), 0.08);
+      border-radius: 4px;
+      
+      .resource-label {
+        flex: 1;
+        font-weight: 500;
+        color: var(--hogwarts-system-c-dark);
+      }
+      
+      .experience-values {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        
+          .experience-current {
+          min-width: 50px;
+          text-align: right;
+          font-size: 1.2em;
+          font-weight: 700;
+          color: var(--hogwarts-accent-500);
+        }
+        
+        .experience-separator {
+          font-size: 1.2em;
+          font-weight: 700;
+          color: #666;
+        }
+        
+        .experience-max {
+          width: 60px;
+          text-align: center;
+          padding: 4px 8px;
+          border: 1px solid rgba(0, 0, 0, 0.2);
+          border-radius: 3px;
+            background: rgba(0, 0, 0, 0.18);
+            color: #f0e6d2;
+            border-color: rgba(var(--hogwarts-accent-rgb), 0.35);
+            box-shadow: 0 0 0 3px rgba(var(--hogwarts-accent-rgb), 0.06) inset;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  // Specific: assombrir le champ 'characteristics' des items/balais
+  .form-group textarea[name='system.characteristics'] {
+    background: rgba(0, 0, 0, 0.18);
+    color: #f0e6d2;
+      border: 1px solid rgba(0, 0, 0, 0.18);
+      /* ajout d'un contour couleur maison */
+      outline: 2px solid rgba(var(--hogwarts-accent-rgb), 0.06);
+      box-shadow: 0 0 0 2px rgba(var(--hogwarts-accent-rgb), 0.04) inset;
+  }
+}
+

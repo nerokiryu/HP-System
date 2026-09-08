@@ -1,0 +1,116 @@
+{
+    "_id": "po4010Morsuresde",
+    "name": "Traitement des morsures de chiens fous",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Une potion complexe, contenant de nombreux ingrédients et pouvant soigner tous les types de morsures de chien. Empêche les infections et la transmission de maladie. Prise suffisamment tôt, celle-ci pourrait également empêcher la transmission de la lycanthropie. Durée : -</p>",
+        "potionLevel": 4,
+        "malus": -40,
+        "target": "A/P",
+        "virulence": null,
+        "ingredientRarity": "rare",
+        "ingredientList": [
+            {
+                "name": "Agripaume",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Bétoine",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Centaurée",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Distillat de camphre",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Essence de myrrhe",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Essence de Rue",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Fougère",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Mélisse",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Menthe",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Millepertuis",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Plantain",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Poudre de chair de vipère",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Sauge",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Verveine",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Vin blanc",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "White spirit",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "Permanent",
+        "quantity": 0,
+        "crafted": false
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "_id": "sp6002Imperium",
+  "name": "Imperium",
+  "type": "spell",
+  "img": "icons/svg/skull.svg",
+  "system": {
+    "description": "<p>Sortilège Impardonnable. Permet de contrôler totalement la volonté d'une personne. Opposition POU/POU. INTERDIT.</p>",
+    "spellLevel": 6,
+    "malus": -110,
+    "spellType": "S",
+    "target": "P",
+    "incantation": "Impero",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

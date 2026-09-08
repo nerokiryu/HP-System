@@ -1,0 +1,44 @@
+{
+    "_id": "po3014Memoire",
+    "name": "Mémoire",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Permet d’accéder plus facilement à ses souvenirs. Effet : +50% aux jets d’Idée pour se rappeler un souvenir Remarque : Cette potion est souvent employée avant d’extraire un souvenir pour le placer dans une Pensine.</p>",
+        "potionLevel": 3,
+        "malus": -30,
+        "target": "P",
+        "virulence": null,
+        "ingredientRarity": "rare",
+        "ingredientList": [
+            {
+                "name": "Ginkgo biloba",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Rosée de lune",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Sirop d'ellébore",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Valériane",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "1d4+1 heures",
+        "quantity": 0,
+        "crafted": false
+    }
+}

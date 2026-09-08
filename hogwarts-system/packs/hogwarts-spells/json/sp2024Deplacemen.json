@@ -1,0 +1,16 @@
+{
+    "_id": "sp2024Deplacemen",
+    "name": "Déplacement",
+    "type": "spell",
+    "img": "icons/svg/aura.svg",
+    "system": {
+        "description": "<p>Permet de déplacer un objet ou une personne inconsciente par télékinésie.</p>",
+        "spellLevel": 2,
+        "malus": 0,
+        "spellType": "E",
+        "target": "X",
+        "incantation": "Mobili « nom »",
+        "extremeFormula": true,
+        "malusExtremeFormula": -45
+    }
+}

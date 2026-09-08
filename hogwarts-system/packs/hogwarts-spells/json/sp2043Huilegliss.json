@@ -1,0 +1,16 @@
+{
+  "_id": "sp2043Huilegliss",
+  "name": "Huile glissante",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "description": "<p>E : 15%/35% Durée : variable (heures)</p>",
+    "spellLevel": 2,
+    "malus": 0,
+    "spellType": "E",
+    "target": "O",
+    "incantation": "E Scandere",
+    "extremeFormula": true,
+    "malusExtremeFormula": -35
+  }
+}

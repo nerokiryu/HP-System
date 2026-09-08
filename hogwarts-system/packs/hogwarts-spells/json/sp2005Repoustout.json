@@ -1,0 +1,16 @@
+{
+  "_id": "sp2005Repoustout",
+  "name": "Repoustout",
+  "type": "spell",
+  "img": "icons/svg/thrust.svg",
+  "system": {
+    "description": "<p>Repousse violemment la cible à plusieurs mètres. Inflige 1d3 dégâts non-létaux.</p>",
+    "spellLevel": 2,
+    "malus": -10,
+    "spellType": "S",
+    "target": "P",
+    "incantation": "Flipendo",
+    "extremeFormula": true,
+    "malusExtremeFormula": -20
+  }
+}

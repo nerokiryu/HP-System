@@ -1,0 +1,56 @@
+{
+    "_id": "po4002Polynectar",
+    "name": "Polynectar",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Fait prendre temporairement l’apparence d’une autre personne. Durée : 1d6+2 heures. Remarques : Doit contenir une partie du corps de la personne dont on veut prendre l’apparence. Cette potion est inadaptée aux métamorphoses animales. Si le sujet meurt avant que la potion s'estompe, il conservera les traits de la personne imitée</p>",
+        "potionLevel": 4,
+        "malus": -60,
+        "target": "P",
+        "virulence": null,
+        "ingredientRarity": "rarissime",
+        "ingredientList": [
+            {
+                "name": "Chrysope",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Corne de Bicorne",
+                "quantity": 1,
+                "rarity": "rarissime",
+                "available": false
+            },
+            {
+                "name": "Peau de serpent d'arbre du Cap",
+                "quantity": 1,
+                "rarity": "rarissime",
+                "available": false
+            },
+            {
+                "name": "Sangsue",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Sisymbre",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Touffes de Polygonum",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            }
+        ],
+        "prepTime": "1 mois",
+        "duration": "1 heure",
+        "quantity": 0,
+        "crafted": false
+    }
+}

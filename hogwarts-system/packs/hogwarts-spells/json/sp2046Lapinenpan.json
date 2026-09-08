@@ -1,0 +1,16 @@
+{
+    "_id": "sp2046Lapinenpan",
+    "name": "Lapin en pantoufles",
+    "type": "spell",
+    "img": "icons/svg/mystery-man.svg",
+    "system": {
+        "description": "<p>Métamorphose un lapin en paire de pantoufles</p>",
+        "spellLevel": 2,
+        "malus": -20,
+        "spellType": "M",
+        "target": "A",
+        "incantation": "M Soccusfors",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

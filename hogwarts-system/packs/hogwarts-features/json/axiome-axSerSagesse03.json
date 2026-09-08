@@ -1,0 +1,12 @@
+{
+  "_id": "axSerSagesse03",
+  "name": "Sagesse",
+  "type": "feature",
+  "img": "icons/skills/social_dark.svg",
+  "system": {
+    "description": "<p>En recherche de paix intérieure et d'harmonie avec l'univers, le sage cherche sa voie sur le chemin de la méditation. Nouvelle compétence de méditation à 15% (degré de maîtrise maximal : 95%) permettant de se relaxer, de récupérer de la fatigue et du stress, de survivre dans des conditions météorologiques horribles, de résoudre une énigme…</p>",
+    "perkType": "houseAxiom",
+    "pbpCost": -0.5
+  },
+  "flags": {}
+}

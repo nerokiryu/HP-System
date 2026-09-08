@@ -1,0 +1,18 @@
+{
+    "_id": "cp0124menthepoiv",
+    "name": "Menthe poivrée",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>La menthe poivrée est une plante herbacée qui provient d’un croisement entre la menthe aquatique et la menthe terrestre, et qui est connue pour posséder plus de principe actif que ses deux parentes.</p>",
+        "rarity": "commun",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Amortentia, Antidote aux Poisons Courants, Élixir d’Euphorie, Philtre calmant, Philtre calmant pour Chartier, Philtre d’amour avancé, Philtre d’amour ordinaire, Potion à priser, Potion de haine, Volubilis",
+        "otherUses": "Dragées surprises de Bertie Crochue, Crapaud à la menthe (confiserie)"
+    }
+}

@@ -1,0 +1,235 @@
+{
+  "name": "Cornelongue roumain",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 34,
+      "max": 34
+    },
+    "initiativeBonus": 0,
+    "healthNonLethal": {
+      "value": 0,
+      "max": 34
+    },
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXXX",
+    "stats": {
+      "str": {
+        "value": 35,
+        "formula": "4d6+21"
+      },
+      "con": {
+        "value": 28,
+        "formula": "5d6+10"
+      },
+      "siz": {
+        "value": 41,
+        "formula": "6d6+20"
+      },
+      "dex": {
+        "value": 15,
+        "formula": "4d6+1"
+      },
+      "int": {
+        "value": 16,
+        "formula": "3d6+6"
+      },
+      "pow": {
+        "value": 20,
+        "formula": "3d6+10"
+      },
+      "app": {
+        "value": 20,
+        "formula": "3d6+9"
+      },
+      "per": {
+        "value": 18,
+        "formula": "5d6+1"
+      }
+    },
+    "movement": {
+      "land": 20,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 10,
+      "label": "écailles épaisses"
+    },
+    "attacks": [
+      {
+        "name": "Cornes",
+        "chance": 50,
+        "damage": "4d6"
+      },
+      {
+        "name": "Griffes",
+        "chance": 50,
+        "damage": "3d6"
+      },
+      {
+        "name": "Morsure",
+        "chance": 50,
+        "damage": "2d6"
+      },
+      {
+        "name": "Souffle",
+        "chance": 60,
+        "damage": "6d6"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Acrobatie",
+        "value": 50
+      },
+      {
+        "name": "Athlétisme",
+        "value": 60
+      },
+      {
+        "name": "Esquive",
+        "value": 50
+      },
+      {
+        "name": "Discrétion",
+        "value": 15
+      },
+      {
+        "name": "Orientation",
+        "value": 45
+      },
+      {
+        "name": "Survie",
+        "value": 60
+      },
+      {
+        "name": "Vigilance",
+        "value": 60
+      },
+      {
+        "name": "Voler",
+        "value": 70
+      }
+    ],
+    "powers": "<p>Balayage de queue : Le dragon peut effectuer un\npuissant balayage à l’aide de sa queue afin de\nfaire tomber ses adversaires. Le balayage frappe\ntous les adversaires qui se trouvent au contact\navec le dragon, occasionnant 2d4 dégâts. Ceux-ci\ndoivent réussir un jet de FORx2 pour ne pas se\nretrouver au sol et un jet de POUx3 pour ne pas\nlâcher ce qu’ils tiennent dans les mains.\nGuérison : Les pouvoirs de guérison des dragons\nsont bien supérieurs à la moyenne. Quand il est\nblessé, le corps du Dragon se régénère\nmagiquement pour soigner les blessures subies.\nCela se traduit par une régénération de 2 points\nde vie par jour et par une vitesse de régénération\ndes points de vie en cas de repos doublée par\nrapport à une créature classique.\nPiétinement : Quand il charge une cible ou quand\nil atterrit sur elle, le dragon peut décider de la\npiétiner en traversant la case occupée par celle-\nci. Le piétinement occasionne 3d6 dégâts à toutes\nles cibles qui voient leur case d’occupation\ntraversée par le dragon en train de charger ou de\nse laisser tomber.\nRésistance (magie) : La majeure partie des\nsortilèges ne fonctionne pas correctement sur les\ndragons. Tout sortilège lancé a 50% de chance\nd’échouer sur lui. Lancez 1d100 et, si le résultat\nest entre 051 et 000, alors le sortilège est raté. Les\nautres sortilèges voient leurs effets diminués de\nmoitié, voire plus, comme pour le sortilège de\nStupéfixion. Seuls les sortilèges visant les yeux\nsont pleinement effectifs. De plus, les sorts à\ndurée permanente passent à durée variable\n(minutes).\nSouffle de feu : Le dragon est capable de produire\nun souffle de feu dévastateur qui peut réduire en\ncendres ses ennemis. Celui-ci se déploie de sa\ngueule sous la forme d’un cône de 15 mètres de\nlong et de 6 mètres de rayon. Toutes les créatures\nse trouvant à l’intérieur du cône subissent 6d6\ndégâts. La cible doit également réussir un jet de\nPOUx2 pour ne pas voir ses affaires s’enflammer,\nsubissant 1d6+1 dégâts chaque nouveau round\npassé dans cet état. Une cible qui a pris feu risque\négalement de mourir asphyxiée.\nVenin : Le venin des dragons affecte une victime\nqui a subi les dégâts d’une morsure et provoque\nune perte de points de vie de la part de la cible\njusqu’à la mort de celle-ci. La virulence augmente\navec l’âge du dragon. Incubation : 3 rounds ;\nEffet : perte de 1d4 point de vie par heure jusqu’à\nla mort ; Effet secondaire : fièvre, douleurs et\ninflammation ; VIRulence = 14-20\nVoler : Le dragon est capable de voler dans les\nairs avec facilité malgré sa grande taille.</p>",
+    "usage": "",
+    "magicResistance": {
+      "threshold": 0,
+      "effectReduction": 1
+    },
+    "notes": {
+      "gmNotes": ""
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "hogwarts-system",
+    "systemVersion": "1.0.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "3fb8d483b180d9e4",
+  "_key": "!actors!3fb8d483b180d9e4",
+  "prototypeToken": {
+    "name": "Cornelongue roumain",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": true,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "luminosity": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5
+      },
+      "color": null,
+      "coloration": 1,
+      "attenuation": 0.5,
+      "contrast": 0,
+      "saturation": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "flags": {}
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

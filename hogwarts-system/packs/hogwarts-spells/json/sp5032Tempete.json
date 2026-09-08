@@ -1,0 +1,16 @@
+{
+    "_id": "sp5032Tempete",
+    "name": "Tempête",
+    "type": "spell",
+    "img": "icons/svg/mystery-man.svg",
+    "system": {
+        "description": "<p>Sortilège d'altération climatique permettant de créer une tempête miniature de POU mètres de rayon autour du lanceur. La tempête peut apparaître sous la forme de pluie ou de neige et peu blesser, immobiliser ou endommager les personnes et objets qui s’y trouvent.</p>",
+        "spellLevel": 5,
+        "malus": 0,
+        "spellType": "M",
+        "target": "X",
+        "incantation": "M Meteorribilis",
+        "extremeFormula": true,
+        "malusExtremeFormula": -70
+    }
+}

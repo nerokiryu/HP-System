@@ -1,0 +1,16 @@
+{
+    "_id": "sp3041Miseenplac",
+    "name": "Mise en place",
+    "type": "spell",
+    "img": "icons/svg/aura.svg",
+    "system": {
+        "description": "<p>Permet de placer un objet à distance.</p>",
+        "spellLevel": 3,
+        "malus": -25,
+        "spellType": "E",
+        "target": "O",
+        "incantation": "E -",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

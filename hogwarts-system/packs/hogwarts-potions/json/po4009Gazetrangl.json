@@ -1,0 +1,44 @@
+{
+    "_id": "po4009Gazetrangl",
+    "name": "Gaz étrangleur",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Génère un gaz qui provoque la suffocation de celui ou celle qui le respire Effets : Semblables à l’asphyxie ; mais au lieu de subir des dégâts, la personne tombe dans le coma en cas d’échec au jet de sauvegarde. Effets secondaires : Coma Durée des effets : Le gaz persiste durant 2d4+2 rounds Zone : Dôme de 3m de rayon puis +1,5m d’extension tous les rounds jusqu’à 12m Durée des effets secondaires : 1d6+1 heures Remarque : La sensation en le respirant est identique à celle de se faire étrangler d’où le nom du gaz.</p>",
+        "potionLevel": 4,
+        "malus": -40,
+        "target": "A/P",
+        "virulence": null,
+        "ingredientRarity": "rarissime",
+        "ingredientList": [
+            {
+                "name": "Ciguë",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Soufre natif",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Charbon",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Ingrédient Standard",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "1d4+1 rounds",
+        "quantity": 0,
+        "crafted": false
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "_id": "sp3032Glacius",
+    "name": "Glacius",
+    "type": "spell",
+    "img": "icons/svg/aura.svg",
+    "system": {
+        "description": "<p>Fait apparaître un bloc de glace autour de l’objet ou de la créature visée afin de l’immobiliser. Il peut aussi permettre de geler des surfaces liquides, afin de pouvoir marcher dessus.</p>",
+        "spellLevel": 3,
+        "malus": 0,
+        "spellType": "E",
+        "target": "X",
+        "incantation": "E Glacius",
+        "extremeFormula": true,
+        "malusExtremeFormula": -40
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "_id": "sp5027Sectumsemp",
+  "name": "Sectumsempra",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>Effet : perte de 1d4+1 points de vie puis 1 point de vie par round.</p>",
+    "spellLevel": 5,
+    "malus": -70,
+    "spellType": "S",
+    "target": "A/P",
+    "incantation": "Sectumsempra",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

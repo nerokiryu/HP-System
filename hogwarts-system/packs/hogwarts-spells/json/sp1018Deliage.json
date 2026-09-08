@@ -1,0 +1,16 @@
+{
+    "_id": "sp1018Deliage",
+    "name": "Déliage",
+    "type": "spell",
+    "img": "icons/svg/aura.svg",
+    "system": {
+        "description": "<p>Permet de se défaire de liens magiques ou non. Contre les effets du sort de Ficelage.</p>",
+        "spellLevel": 1,
+        "malus": -10,
+        "spellType": "E",
+        "target": "P",
+        "incantation": "E Emancipare",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

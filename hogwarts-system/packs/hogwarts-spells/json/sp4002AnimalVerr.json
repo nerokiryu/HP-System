@@ -1,0 +1,16 @@
+{
+  "_id": "sp4002AnimalVerr",
+  "name": "Animal en verre",
+  "type": "spell",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "description": "<p>Métamorphose un animal en verre (gobelet, vase, etc.). Durée : permanente.</p>",
+    "spellLevel": 4,
+    "malus": -30,
+    "spellType": "M",
+    "target": "A",
+    "incantation": "Vera Verto",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

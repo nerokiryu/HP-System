@@ -1,0 +1,16 @@
+{
+  "_id": "sp1006Incendio",
+  "name": "Combustion",
+  "type": "spell",
+  "img": "icons/svg/fire.svg",
+  "system": {
+    "description": "<p>Enflamme un objet inflammable ciblé. Ne fonctionne pas sur les créatures vivantes directement.</p>",
+    "spellLevel": 1,
+    "malus": -5,
+    "spellType": "E",
+    "target": "O",
+    "incantation": "Incendio",
+    "extremeFormula": true,
+    "malusExtremeFormula": -15
+  }
+}

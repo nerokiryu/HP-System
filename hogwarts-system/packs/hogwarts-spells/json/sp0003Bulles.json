@@ -1,0 +1,16 @@
+{
+  "_id": "sp0003Bulles",
+  "name": "Bulles",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "description": "<p>Fait apparaître des bulles de savon colorées depuis la baguette.</p>",
+    "spellLevel": 0,
+    "malus": 0,
+    "spellType": "E",
+    "target": "O",
+    "incantation": "",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

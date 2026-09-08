@@ -1,0 +1,16 @@
+{
+    "_id": "sp2058Porcepique",
+    "name": "Porc-épique en pelote à épingles",
+    "type": "spell",
+    "img": "icons/svg/mystery-man.svg",
+    "system": {
+        "description": "<p>Métamorphose un porc-épic en pelote à épingles.</p>",
+        "spellLevel": 2,
+        "malus": -20,
+        "spellType": "M",
+        "target": "A",
+        "incantation": "",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

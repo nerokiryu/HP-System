@@ -1,0 +1,18 @@
+{
+    "_id": "cp0105huilederos",
+    "name": "Huile de rose",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>L’huile de rose est une huile essentielle extraite des pétales de rose. Elle est utilisée comme ingrédient de potion et vendue chez l’apothicaire pour 8 Gallions la bouteille</p>",
+        "rarity": "commun",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Transfert",
+        "otherUses": ""
+    }
+}

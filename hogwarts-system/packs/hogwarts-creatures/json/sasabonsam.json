@@ -1,0 +1,220 @@
+{
+  "name": "Sasabonsam",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 10,
+      "max": 10
+    },
+    "initiativeBonus": 0,
+    "healthNonLethal": {
+      "value": 0,
+      "max": 10
+    },
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXX",
+    "stats": {
+      "str": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "con": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "siz": {
+        "value": 12,
+        "formula": "3d6+2"
+      },
+      "dex": {
+        "value": 14,
+        "formula": "3d6+3"
+      },
+      "int": {
+        "value": 5,
+        "formula": "2d4"
+      },
+      "pow": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "app": {
+        "value": 5,
+        "formula": "2d4"
+      },
+      "per": {
+        "value": 14,
+        "formula": "3d6+3"
+      }
+    },
+    "movement": {
+      "land": 11,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0,
+      "label": ""
+    },
+    "attacks": [
+      {
+        "name": "Griffes",
+        "chance": 40,
+        "damage": "1d4"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Acrobatie",
+        "value": 45
+      },
+      {
+        "name": "Athlétisme",
+        "value": 45
+      },
+      {
+        "name": "Discrétion",
+        "value": 55
+      },
+      {
+        "name": "Esquive",
+        "value": 40
+      },
+      {
+        "name": "Fouille",
+        "value": 25
+      },
+      {
+        "name": "Orientation",
+        "value": 40
+      },
+      {
+        "name": "Survie",
+        "value": 35
+      },
+      {
+        "name": "Vigilance",
+        "value": 55
+      }
+    ],
+    "powers": "<p>Détection du sang : Un Sasabonsam possède la\ncapacité innée de sentir la présence de sang dans\nun rayon de POUvoirx10 mètres. Grâce à un jet de\nPERceptionx4, il peut déterminer si une source de\nsang se trouve alentours. Cela ne lui donne pas la\nnature du sang, ni la quantité, ni le lieu précis où\nse trouve cette source de nourriture, mais est\nressenti comme un vague pressentiment dans\nune certaine direction.\nFolie sanguine : Quand ils voient ou sentent du\nsang, les Sasabonsams perdent rapidement leur\nself-contrôle et se mettent à attaquer toute\ncréature vivante passant à portée. Quand il est en\ncontact avec du sang, le Sasabonsam doit réussir\nun jet de POUvoirx1 pour ne pas laisser libre\ncours à sa folie.\nGrande dextérité : Le Sasabonsam est capable de\nse déplacer très rapidement et possède donc une\nvaleur de mouvement supérieure à celle de\ncréatures de même taille.\nMorsure vampirique : Quand un Sasabonsam\nmord une personne pour se repaître de son sang\net si celle-ci ne meurt pas, elle est infectée par le\nune variété de vampirisme qui la fait mourir petit\nà petit. Les morsures de Sasabonsam sont\nconsidérées comme curables, contrairement à\ncelle des vampires. Une fois infecté, une cible\nperd 1 point de CONstitution par semaine. Une\nfois sa valeur de CONStitution arrivée à 0, elle\nmeurt.\nRégime alimentaire : Les Sasabonsams boivent\ndu sang, bien qu’ils soient apparemment aussi\ncapables de manger d’autres aliments.\nVampirisme : Le Sasabonsam peut aspirer le\nsang de ses victimes, qui se voient\nconsidérablement affaiblies (perte de 1d6+1 en\nFORce et 1d4+1 en CONstitution). Quand il vient\nde se nourrir, le Sasabonsam bénéficie d’un\nbonus de 10% à tous ses jets pour une durée\nd’une heure. Si la caractéristique FORce ou la\nCONstitution de celui qui subit le vampirisme\npasse à 0, il meurt sur le coup.</p>",
+    "usage": "<p>Mascottes : Les Sasabonsams\nsont utilisées comme mascottes pour l’équipe\nnationale nigériane de Quidditch.\nHISTOIRE : Pendant les attaques de mascottes à\nla Coupe du Monde de Quidditch 2014, les\nSasabonsams sont devenus fous en raison de la\nquantité de sang versé et ont commencé à\nattaquer les spectateurs.</p>",
+    "magicResistance": {
+      "threshold": 0,
+      "effectReduction": 1
+    },
+    "notes": {
+      "gmNotes": ""
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "hogwarts-system",
+    "systemVersion": "1.0.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "dc99d8b34bfbd2a1",
+  "_key": "!actors!dc99d8b34bfbd2a1",
+  "prototypeToken": {
+    "name": "Sasabonsam",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": true,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "luminosity": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5
+      },
+      "color": null,
+      "coloration": 1,
+      "attenuation": 0.5,
+      "contrast": 0,
+      "saturation": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "flags": {}
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

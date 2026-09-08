@@ -1,0 +1,18 @@
+{
+    "_id": "cp0074cristalder",
+    "name": "Cristal de roche",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>Le Cristal de roche est une pierre incolore et limpide de la famille des quartz.</p>",
+        "rarity": "commun",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Remède à la Dragoncelle",
+        "otherUses": "Divination"
+    }
+}

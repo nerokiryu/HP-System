@@ -1,0 +1,16 @@
+{
+    "_id": "sp5012Antimalefi",
+    "name": "Anti-maléfice du Voleur",
+    "type": "spell",
+    "img": "icons/svg/aura.svg",
+    "system": {
+        "description": "<p>Permet de contrer les effets du maléfice du Voleur.</p>",
+        "spellLevel": 5,
+        "malus": -60,
+        "spellType": "E",
+        "target": "P",
+        "incantation": "",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

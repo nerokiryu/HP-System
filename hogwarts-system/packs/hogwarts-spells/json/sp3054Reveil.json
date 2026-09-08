@@ -1,0 +1,16 @@
+{
+    "_id": "sp3054Reveil",
+    "name": "Réveil",
+    "type": "spell",
+    "img": "icons/svg/aura.svg",
+    "system": {
+        "description": "<p>Réveille toute personne endormie, par magie ou non, et toute personne touchée par le sort de Stupéfixion.</p>",
+        "spellLevel": 3,
+        "malus": -20,
+        "spellType": "E",
+        "target": "P",
+        "incantation": "Enervatum",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

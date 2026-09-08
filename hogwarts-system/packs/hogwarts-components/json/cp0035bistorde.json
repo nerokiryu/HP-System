@@ -1,0 +1,18 @@
+{
+    "_id": "cp0035bistorde",
+    "name": "Bistorde",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>Une plante herbacée magique dont les fleurs jaunes sont connues pour contrer les effets des morsures de serpent.</p>",
+        "rarity": "rare",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "",
+        "otherUses": ""
+    }
+}

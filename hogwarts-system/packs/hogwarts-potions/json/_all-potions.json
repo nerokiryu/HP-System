@@ -1,0 +1,3954 @@
+[
+    {
+        "_id": "po1001CureFurncl",
+        "name": "Cure de furoncles",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Guérit les furoncles et les éruptions cutanées mineures. Préparation de niveau débutant enseignée en première année.</p>",
+            "potionLevel": 1,
+            "malus": 0,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "commun",
+            "ingredientList": [
+                {
+                    "name": "Crochets de serpent",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Épines de porc-épic",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Limaces à cornes",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Mucus de Veracrasse",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Orties séchées",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Permanent",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po1002PotionOubl",
+        "name": "Potion d'oubli",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Fait oublier à la cible les événements récents (dernière heure). Dosage délicat.</p>",
+            "potionLevel": 1,
+            "malus": -5,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "commun",
+            "ingredientList": [
+                {
+                    "name": "Baies de gui",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Brins de valériane",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Eau du fleuve Léthé",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Ingrédient Standard",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Permanent",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po1003Herbicide",
+        "name": "Herbicide",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Abîme ou détruit les plantes</p>",
+            "potionLevel": 1,
+            "malus": 0,
+            "target": "V",
+            "virulence": null,
+            "ingredientRarity": "commun",
+            "ingredientList": [
+                {
+                    "name": "Épines de poisson-diable",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Ingrédient Standard",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Jus de Horglup",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Mucus de Veracrasse",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Permanent",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po1004EncreInvis",
+        "name": "Encre invisible",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Encre qui disparaît après séchage et ne redevient visible qu'en chauffant le parchemin ou avec un sort de révélation.</p>",
+            "potionLevel": 1,
+            "malus": 0,
+            "target": "O",
+            "virulence": null,
+            "ingredientRarity": "commun",
+            "ingredientList": [
+                {
+                    "name": "Jus de citron",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Ingrédient Standard",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Permanent",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po1005Somnifere",
+        "name": "Somnifère léger",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Plonge le buveur dans un sommeil léger pendant 1d6 heures. Facile à réveiller.</p>",
+            "potionLevel": 1,
+            "malus": -5,
+            "target": "P",
+            "virulence": 5,
+            "ingredientRarity": "commun",
+            "ingredientList": [
+                {
+                    "name": "Brin de valériane",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Ingrédient Standard",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Lavande",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "1d4+1 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po1006Repouslug",
+        "name": "Repousse-limaces",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Éloigne les limaces et créatures rampantes dans un rayon de 3 mètres. Efficace 24 heures.</p>",
+            "potionLevel": 1,
+            "malus": 0,
+            "target": "A",
+            "virulence": null,
+            "ingredientRarity": "commun",
+            "ingredientList": [
+                {
+                    "name": "Ingrédient Standard",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Limaces à cornes",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Sel",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "24 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po1007Acne",
+        "name": "Acné",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Cette potion provoque une éruption d’acné sur la personne qui la boit, diminuant son APParence de 1d4</p>",
+            "potionLevel": 1,
+            "malus": -10,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Beurre",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Bubonox",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Mucus de Veracrasse",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Ortie",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Sébum",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Permanent",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po1008Amnesie",
+        "name": "Amnésie",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Cette potion provoque une perte de mémoire chez celui qui en boit. En cela, elle possède des effets relativement semblables à ceux du sortilège d’oubliettes.</p>",
+            "potionLevel": 1,
+            "malus": -10,
+            "target": "A/P",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Baies de gui",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Brins de valériane",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Eau du fleuve Léthé",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Ingrédient Standard",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Permanent",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po1009Antiacne",
+        "name": "Anti-acné",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Élimine toute trace d’acné sur la personne Effet : octroie +1 en APParence Durée : 24 heures</p>",
+            "potionLevel": 1,
+            "malus": -10,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Dent de dragon",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Pus de Bubobulb",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "24 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po1010Antifuronc",
+        "name": "Anti-furoncle",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Élimine les furoncles en quelques minutes. Remarque : effet inverse si mal préparé.</p>",
+            "potionLevel": 1,
+            "malus": -10,
+            "target": "A/P",
+            "virulence": null,
+            "ingredientRarity": "commun",
+            "ingredientList": [
+                {
+                    "name": "Crochets de serpent",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Épines de porc-épic",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Limaces à cornes",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Mucus de Veracrasse",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Orties séchées",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Permanent",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po1011Cirassure",
+        "name": "Cirassure",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Cire à appliquer sur un balai. Elle permet de manipuler celui- ci plus aisément durant les quelques heures qui suivent son application Effets : Vol en balai / Quidditch +5% Durée des effets : 1d4+1 heures</p>",
+            "potionLevel": 1,
+            "malus": -10,
+            "target": "=",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Carapace de Pagure",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Cire",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Feuille de mandragore",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Plume de hibou Grand-Duc",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "1d4+1 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po1012Doxicide",
+        "name": "Doxicide",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Cette potion s’apparente plus à un poison, qui permet de se débarrasser des Doxys en les paralysant. Peu dangereuse pour les humains, elle peut tout de même provoquer une paralysie partielle (malus de 5% aux actions physiques) si elle touche un humain. (VIR : 5)</p>",
+            "potionLevel": 1,
+            "malus": -10,
+            "target": "A",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Coquille de Musard",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Essence de ciguë",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Essence de ciguë aquatique",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Foie de dragon",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Sécrétion de Bandimon",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Teinture de tormentille",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Permanent",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po1013Fertilisan",
+        "name": "Fertilisant",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Rend les plantes plus résistantes aux maladies et aux parasites, et augmente un peu la vitesse de croissance de celles-ci</p>",
+            "potionLevel": 1,
+            "malus": -10,
+            "target": "V",
+            "virulence": null,
+            "ingredientRarity": "commun",
+            "ingredientList": [
+                {
+                    "name": "Bouse de dragon",
+                    "quantity": 2,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Kelp",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Œil de Boullu",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Os",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Rate de rat",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Permanent",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po1014Furoncle",
+        "name": "Furoncle",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Provoque l’apparition douloureuse de furoncles sur le corps de la personne. Effet : -1 point de vie et -1 en APParence. Remarque : Fabriquée à partir des ingrédients de la recette anti-furoncle</p>",
+            "potionLevel": 1,
+            "malus": -10,
+            "target": "A/P",
+            "virulence": null,
+            "ingredientRarity": "commun",
+            "ingredientList": [
+                {
+                    "name": "Crochets de serpent",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Épines de porc-épic",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Limaces à cornes",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Mucus de Veracrasse",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Orties séchées",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Permanent",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po1015Languedemi",
+        "name": "Langue de miel",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>La voix du personnage devient suave. Effet : compétences de persuasion +20%, Durée : 1d4+1 heures</p>",
+            "potionLevel": 1,
+            "malus": -10,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Alcool",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Cannelle",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Gingembre",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Herbe des chantres",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Mauve douce",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Miel",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Plantain",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Sauge",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "1d4+1 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po1016Lissenplis",
+        "name": "Lissenplis",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Cette potion capillaire permet de rendre les cheveux lisses et soyeux. Effet : APParence +1. Durée : 24 heures</p>",
+            "potionLevel": 1,
+            "malus": -10,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "commun",
+            "ingredientList": [
+                {
+                    "name": "Cheveux de dragon asiatique",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Gelée de pétrole",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Gomas Barbadensis",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "24 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po1017Pheromones",
+        "name": "Phéromones",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Permet d’attirer les insectes sur plus de deux kilomètres alentours. Remarque : Il existe une potion par espèce d’insecte.</p>",
+            "potionLevel": 1,
+            "malus": -10,
+            "target": "A",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Alcool",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Bourrache",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Lavande",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Mauve douce",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Sang de dragon",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Sauge",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Teinture de Thym",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "1d4+1 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po1018Rejutage",
+        "name": "Rejutage",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Quelques gouttes de cette potion de couleur rouge-sang redonnent à une plante morte la capacité de produire du jus.</p>",
+            "potionLevel": 1,
+            "malus": -10,
+            "target": "V",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Algue séchée",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Bouse de dragon",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Eau de source",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Lewisie",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Tête de coquelicot",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Permanent",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po2001Polynectar",
+        "name": "Polynectar",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Fait prendre temporairement l’apparence d’une autre personne. Durée : 1d6+2 heures. Remarques : Doit contenir une partie du corps de la personne dont on veut prendre l’apparence. Cette potion est inadaptée aux métamorphoses animales. Si le sujet meurt avant que la potion s'estompe, il conservera les traits de la personne imitée</p>",
+            "potionLevel": 2,
+            "malus": -15,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Chrysope",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Corne de Bicorne",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Peau de serpent d'arbre du Cap",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Sangsue",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Sisymbre",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Touffes de Polygonum",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "1 mois",
+            "duration": "1 heure",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po2002Poussos",
+        "name": "Poussos",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Fait repousser les os et soigne les fractures. Effet secondaire : provoque de violentes douleurs.</p>",
+            "potionLevel": 2,
+            "malus": -15,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Chou mordeur de Chine",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Œil de poisson-ballon",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Œil de scarabée",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Thorax de scarabées",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Instantané",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po2003Veritaserum",
+        "name": "Veritaserum",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Le Veritaserum est un puissant sérum de vérité qui oblige le consommateur à dire la vérité. Effet secondaire : Fait parler d'une voix monocorde. Remarques : le Veritaserum n'est pas infaillible. Il est plus efficace sur des personnes vulnérables, insuffisamment compétentes pour s'en protéger ou inconscientes du fait qu'on va l'utiliser sur elles. Un sorcier peut se sceller la gorge et produire de fausses déclarations, transformer la potion en un breuvage inoffensif ou utiliser l'occlumancie pour en contrer les effets. Une potion de veritasérum doit mijoter durant 1 cycle lunaire</p>",
+            "potionLevel": 2,
+            "malus": -20,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Armoise",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Crin de licorne",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Jobarbille",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Sang de salamandre",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                }
+            ],
+            "prepTime": "1 mois (cycle lunaire complet)",
+            "duration": "1 heure",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po2004Aiguisesns",
+        "name": "Potion aiguise-sens",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Améliore temporairement les sens du buveur. Bonus de +15% aux jets de Perception pendant 1 heure.</p>",
+            "potionLevel": 2,
+            "malus": -10,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "commun",
+            "ingredientList": [
+                {
+                    "name": "Bile de tatou",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Gingembre",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Scarabée",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "1d4+1 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po2005Mandragore",
+        "name": "Philtre de Mandragore",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Cette potion – créée à partir de mandragores ayant atteint leur maturité – guérit celui qui la consomme des effets de la pétrification.</p>",
+            "potionLevel": 2,
+            "malus": -15,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Mandragore",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Ingrédient Standard",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Instantané",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po2006FelixFelic",
+        "name": "Felix Felicis",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Cette potion, qu’il faut presque six mois pour fabriquer, donne une chance extraordinaire aux personnes qui la consomment. Effet : compétence chance x10 Durée : 1d6+1 heures. Effets secondaires : Étourdissements, tendance à l'imprudence et un excès de confiance en soi.</p>",
+            "potionLevel": 2,
+            "malus": -25,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Crin d'Abraxan",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Œuf d'Occamy",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Trèfle à quatre feuilles",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Rosée de lune",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "6 mois",
+            "duration": "12 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po2007Wiggenweld",
+        "name": "Potion Wiggenweld",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Restaure les points de vie du buveur (2d6 PV). Équivalent sorcier d'une potion de soin classique.</p>",
+            "potionLevel": 2,
+            "malus": -10,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "commun",
+            "ingredientList": [
+                {
+                    "name": "Aconit",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Baie explosive",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Bave de dards de Billywig",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Dictame",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Écorce de Wiggentree",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Instantané",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po2008Enflure",
+        "name": "Solution d'enflure",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Fait gonfler la partie du corps sur laquelle elle est appliquée. Effet temporaire mais spectaculaire. Antidote : solution de ratatinage.</p>",
+            "potionLevel": 2,
+            "malus": -10,
+            "target": "P",
+            "virulence": 10,
+            "ingredientRarity": "commun",
+            "ingredientList": [
+                {
+                    "name": "Foie de chauve-souris",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Œil de poisson ballon",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Ortie séchée",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "1d4+1 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po2009Baumeabec",
+        "name": "Baume à bec",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Un baume spécial qui permet de soigner les becs endommagés des créatures magiques ou non Utilisation : Ce baume doit être utilisé toutes les heures durant 10 heures. Si les lésions ne disparaissent pas, mixer le baume avec un sérum salé et recommencer. Remarque : Ce baume ne doit pas être utilisé pour les Hippogriffes ou les Griffons</p>",
+            "potionLevel": 2,
+            "malus": -20,
+            "target": "A",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Cire d'abeille",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Dent de dragon",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Os",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Plume de paon",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "10 heures (application)",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po2010Brumeopaqu",
+        "name": "Brume opaque",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Une fois à l’air libre, la potion s’étend sous la forme d’un brouillard blanc et épais dans lequel on ne voit rien sur une vingtaine de mètres. Durée : 1 heure</p>",
+            "potionLevel": 2,
+            "malus": -20,
+            "target": "X",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Bicarbonate de soude",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Sang de salamandre",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Sel d'ammoniaque",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Sucre",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "1 heure",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po2011Cafeine",
+        "name": "Caféine",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Empêche le consommateur de dormir durant 24 heures. La fatigue le rattrape cependant d’un coup une fois les effets dissipés. Effets secondaires : agitation extrême et difficulté à rester en place.</p>",
+            "potionLevel": 2,
+            "malus": -20,
+            "target": "A/P",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Corne de dragon",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Graines de café",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Guarana",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Piment rouge africain",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Poudre de pieuvre",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Sucre",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "24 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po2012Cinqsens",
+        "name": "Cinq sens",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Cette potion permet de doter le consommateur de perceptions extraordinaires. Toutes les compétences liées à la perception se font sur PERx5. Permet également de voir dans le noir. Durée : 1 heure</p>",
+            "potionLevel": 2,
+            "malus": -20,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Langue de Boursouf",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Œil d'anguille",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Peau de serpent d'arbre du Cap",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Sang de dragon",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Zinc",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "1 heure",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po2013Doigtsagil",
+        "name": "Doigts agiles",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Cette potion permet d’ajouter temporairement 1d6 points à la caractéristique dextérité du consommateur Durée : 1d4+1 heures.</p>",
+            "potionLevel": 2,
+            "malus": -20,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Bulbe sauteur",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Dards de Billywig",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Guarana",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Impatiente du Cap",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Jus d'araignées sauteuses",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "1d4+1 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po2014Dragonfort",
+        "name": "Dragonfortant",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Une potion qui permet de fortifier et de soigner les dragons. Effet : redonne 2d4+2 points de vie à un dragon Effets secondaires : soigne les maladies Durée : -</p>",
+            "potionLevel": 2,
+            "malus": -20,
+            "target": "A",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Plume de hibou grand-duc",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Plume de paon",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Verrues de crapaud violet géant",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Instantané",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po2015Oculicura",
+        "name": "Oculi cura",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Permet de soigner les blessures et irritations des yeux. Effets : redonne 1 point de vie si les dégâts subis se trouvent au niveau des yeux. Annule les malus subis à la vision. Contre : Contre les effets du sortilège de Larmes ou de Conjonctivite Utilisation : Cette potion verte s’utilise sous la forme de gouttes</p>",
+            "potionLevel": 2,
+            "malus": -20,
+            "target": "A/P",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Armoise",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Dictame",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Œil de dragon",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Permanent",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po2016Pimentine",
+        "name": "Pimentine",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Soigne les personnes du rhume. Effet secondaire : fait fumer les oreilles du consommateur durant 1d6+2 heures.</p>",
+            "potionLevel": 2,
+            "malus": -20,
+            "target": "A/P",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Corne de Bicorne",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Impatiente du Cap",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Racine de mandragore",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": [
+                "Instantané"
+            ],
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po2017Potionn",
+        "name": "Potion n°113",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Un poison considéré comme extrêmement toxique. La personne ingérant ce poison est prise de vertiges, de palpitations et de violents maux de ventre. Puis, une fois ces premiers symptômes passés, se met à répéter toutes les conversations entendues en partant de la dernière pour revenir en arrière dans le temps. Effet : vertiges, douleurs et palpitations durant 1d10 minutes Effets secondaires : reproduit les conversations passées durant 1d10+5 minutes Durée : 1d10+1d10+5 minutes VIRulence : 10 Remarque : Mal préparé, ce poison peut rendre muet à vie la personne qui le consomme, voir même la tuer sur le coup.</p>",
+            "potionLevel": 2,
+            "malus": -20,
+            "target": "A/P",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Plumes de Jobarbille",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Sirop d'arnica",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "1d10+1d10+5 minutes",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po2018Protection",
+        "name": "Potion de protection contre le feu",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Une potion qui permet de se prémunir contre le feu et ses effets. Effet : Rend le consommateur insensible au feu durant une certaine période. Cet effet ne protège cependant pas ses affaires. Durée : 2d4+2 heures</p>",
+            "potionLevel": 2,
+            "malus": -20,
+            "target": "A/P",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Champignon explosif",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Sang de salamandre",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Poudre de verrue",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "2d4+2 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po2019Raconforta",
+        "name": "Raconfortant",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Une potion qui permet de fortifier et de soigner les rats. Effet : Redonne 1d4+1 points de vie à un rat. Effets secondaires : Soigne les maladies mais fait anormalement grandir le rat si elle est consommée en excès.</p>",
+            "potionLevel": 2,
+            "malus": -20,
+            "target": "A",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Menthe poivrée",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Cannelle",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Camomille",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Miel",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "1d4+1 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po2020Regerminat",
+        "name": "Regermination",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Quelques gouttes de cette potion verte redonnent à une plante morte la capacité de germer</p>",
+            "potionLevel": 2,
+            "malus": -20,
+            "target": "V",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Algue séchée",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Bouse de dragon",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Eau de source",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Lewisie",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Mandragore",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Permanent",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po2021Soignantep",
+        "name": "Pommade soignante pour sabot",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Une pommade qui permet de soigner les blessures aux sabots de certaines créatures magiques ou non. Utilisation : Une ou deux utilisation suffisent à complètement restaurer la zone blessée. Remarque : Ne doit jamais, sous aucun prétexte, être employée sur un Licheur</p>",
+            "potionLevel": 2,
+            "malus": -20,
+            "target": "A",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Beurre de karité",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Cire d'abeille",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Griffes de dragon",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Huile de ricin",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Permanent",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po2022Volubilis",
+        "name": "Volubilis",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Permet de restaurer le volume de la voix d'une personne et neutralise également les effets du sortilège de langue de plomb.</p>",
+            "potionLevel": 2,
+            "malus": -20,
+            "target": "A/P",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Eau de miel",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Ellébore",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Mandragore cuite",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Menthe poivrée",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Sirop d'ellébore",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "1d4+1 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po3001Antidote",
+        "name": "Antidote aux poisons",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Annule l'effet de poisons jusqu'à une virulence de 10.</p>",
+            "potionLevel": 3,
+            "malus": -30,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Bézoard",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Baie de gui",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Corne de licorne",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Ingrédient Standard",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Instantané",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po3002Beaute",
+        "name": "Potion de beauté",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Améliore l'apparence de la cible. Effet : APP +2d4+2. Durée : 1d6 heures.</p>",
+            "potionLevel": 3,
+            "malus": -30,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Ailes de fée",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Alchémille",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Pétale de rose",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Rosée du matin",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "1d4+1 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po3003Memoire",
+        "name": "Potion de mémoire",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Améliore considérablement la mémoire du consommateur pendant plusieurs heures. INT +5 pour les tests de mémorisation.</p>",
+            "potionLevel": 3,
+            "malus": -30,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Ginkgo biloba",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Rosée de lune",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Sirop d'ellébore",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Valériane",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "1d4+1 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po3004PhiltrCalm",
+        "name": "Philtre calmant",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Permet de calmer une personne qui a subi un choc, un traumatisme ou un choc émotionnel. Effet : Supprime le stress en diminuant les effets de celui-ci de 15%. Les diminutions sont cumulables en cas de consommation de plusieurs doses. Remarque : Si des animaux comme des chats et des chiens la consomment, ceux-ci sont plongés dans le sommeil durant 2d6+2 heures Effets secondaires : Ajouter trop de menthe poivrée peut donner au buveur une sensation de brûlure dans la bouche et causer pleurs et sanglots incontrôlables</p>",
+            "potionLevel": 3,
+            "malus": -30,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Camomille",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Lavande",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Passiflore",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Valériane",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "1d4+1 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po3005Neutralis",
+        "name": "Potion de neutralisation",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Rend inopérant les effets d'une potion de même niveau ou inférieur (max niveau 3).</p>",
+            "potionLevel": 3,
+            "malus": -30,
+            "target": "O",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Eau de source",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Écaille de dragon",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Ingrédient Standard",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Alcool",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Instantané",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po3006Guerison",
+        "name": "Potion de guérison",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Soigne 1d4 points de vie, referme les plaies et résorbe les blessures mineures.</p>",
+            "potionLevel": 3,
+            "malus": -30,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Dictame",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Mandragore",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Sang de salamandre",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Valériane",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Instantané",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po3007Duplication",
+        "name": "Potion de duplication",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Duplique une potion existante (niveau ≤3). Nécessite la potion à copier comme ingrédient.</p>",
+            "potionLevel": 3,
+            "malus": -30,
+            "target": "O",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Alcool",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Cheveu de la personne à dupliquer",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Jonc des jumeaux",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Poudre de pierre de lune",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "1d4+1 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po3008Apocyn",
+        "name": "Potion d'apocyn",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Poison violent qui cause la perte de 1d6 points de vie. Virulence élevée.</p>",
+            "potionLevel": 3,
+            "malus": -30,
+            "target": "P",
+            "virulence": 15,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Apocyn",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Eau de source",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Ingrédient Standard",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Permanent (poison)",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po3009Apocyn",
+        "name": "Apocyn",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Poison pour animaux magiques ou non qui provoque de violentes douleurs tout en leur faisant perdre 1d4 points de vie. VIRulence : 9 Remarque : Mal préparée, l’Apocyn peut devenir mortelle.</p>",
+            "potionLevel": 3,
+            "malus": -30,
+            "target": "A",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Apocyn",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Eau de source",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Ingrédient Standard",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Permanent (poison)",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po3010Beaute",
+        "name": "Beauté",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Augmente considérablement l’APParence de la personne. Effet : APParence +2d4+2 Durée : 24 heures.</p>",
+            "potionLevel": 3,
+            "malus": -30,
+            "target": "A/P",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Ailes de fée",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Alchémille",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Crin de licorne",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Peau de serpent d'arbre du Cap",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Pétale de rose",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Gingembre",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Rosée du matin",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "24 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po3011Beauteillu",
+        "name": "Beauté illusoire",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Cache la laideur de la personne et lui monte son APParence à 14 durant 24 heures. Remarque : Ces potions sont prises par les Harpies pour masquer leur physique.</p>",
+            "potionLevel": 3,
+            "malus": -30,
+            "target": "A/P",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Ailes de fée",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Alchémille",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Crin de licorne",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Peau de serpent d'arbre du Cap",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Pétale de rose",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Gingembre",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Rosée du matin",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "24 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po3012Dasclepiad",
+        "name": "Baume d'asclépiade tubéreuse",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Redonne 1 point de vie et calme les douleurs les plus violentes durant quelques heures Durées des effets : 2d4+4 heures</p>",
+            "potionLevel": 3,
+            "malus": -30,
+            "target": "A/P",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Asclépiade tubéreuse",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Cire d'abeille",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "2d4+4 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po3013Infusionin",
+        "name": "Infusion infecte",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Mélange de divers ingrédients de potions nauséabonds, cette potion s’apparente plus à un poison. Effet : provoque de violentes nausées et des douleurs à l’estomac, ce qui occasionne un malus de 30% à toutes les actions. Fait perdre 1d4-1 points de vie. VIRulence : 12</p>",
+            "potionLevel": 3,
+            "malus": -30,
+            "target": "A/P",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Calocère cornue",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Champignon vénéneux",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Chou puant",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Jus de Horglup",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Plume de vautour",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Poudre de raifort",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "1d4+1 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po3014Memoire",
+        "name": "Mémoire",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Permet d’accéder plus facilement à ses souvenirs. Effet : +50% aux jets d’Idée pour se rappeler un souvenir Remarque : Cette potion est souvent employée avant d’extraire un souvenir pour le placer dans une Pensine.</p>",
+            "potionLevel": 3,
+            "malus": -30,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Ginkgo biloba",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Rosée de lune",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Sirop d'ellébore",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Valériane",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "1d4+1 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po3015Neutralisa",
+        "name": "Neutralisation",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Rend inopérant tous les effets d’une potion de même niveau ou inférieur. Les potions de niveau 4 et 5 ne peuvent pas être contrées par cette potion</p>",
+            "potionLevel": 3,
+            "malus": -30,
+            "target": "O",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Alcool",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Corne de Grapcorne",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Eau de source",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Écaille de dragon",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Ingrédient Standard",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Moly",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Instantané",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po3016Poisons",
+        "name": "Antidote aux poisons courants",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Permet de contrer ou de considérablement diminuer les effets des poisons les plus communs. Effet : Annule l’effet de poisons jusqu’à une VIRulence 10. Diminue les effets des poisons rares et inconnus de 5 points de VIRulence.</p>",
+            "potionLevel": 3,
+            "malus": -30,
+            "target": "A/P",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Baies de gui",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Bézoard",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Huile de ricin",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Corne de licorne",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Eau de miel",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Ingrédient Standard",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Mandragore cuite",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Menthe poivrée",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Rosée de lune",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Instantané",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po3017Pommadante",
+        "name": "Pommade pommadante Grégoire",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Cette pommade persuade celui qui l’utilise que celui qui la lui a offerte est son meilleur ami. Durée : 1d4 jours</p>",
+            "potionLevel": 3,
+            "malus": -30,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Baie de gui",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Brin de valériane",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Eau du fleuve Léthé",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Muguet",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Sang de dragon",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Vigne",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "1d4 jours",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po3018PotionNo",
+        "name": "Potion No. 7",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>bouger durant 1d4 heure(s) au bout d’une minute Tentacula vénéneuse VIRulence : 11 Remarque : Mal préparée, cette potion provoque la mort de celui qui la consomme en arrêtant son cœur. Cette potion possède des effets différents en fonction du support où elle est appliquée : Effets : Sur un objet, elle permet de le faire rétrécir, diminuant sa caractéristique TAIlle par 2. Sur un animal, une</p>",
+            "potionLevel": 3,
+            "malus": -30,
+            "target": "A/P",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Ingrédient Standard",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Rose de Jéricho",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Valériane",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "1 heure",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po3019Trompettes",
+        "name": "Essence de trompettes d'anges",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Un poison rendant la cible confuse en l’empêchant de se concentrer efficacement. La cible oublie ce qu’il s’est passé après la consommation de la potion une fois qu’elle se réveille. Effets : provoque des vertiges et des difficultés à se concentrer, ce qui occasionne un malus de 30% à toutes les actions visant à se concentrer. Effets secondaires : perte des souvenirs d’après la prise de la potion jusqu’au réveil. Durée : 1d6+1 heures VIRulence : 12</p>",
+            "potionLevel": 3,
+            "malus": -30,
+            "target": "A/P",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Trompettes des anges",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "1d6+1 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po3020Verificati",
+        "name": "Vérification",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Cette potion noire possède un effet très recherché par tous ceux qui fabriquent des potions, car elle permet de vérifier que celles-ci fonctionnent correctement. Quand on verse quelques gouttes d’une potion à l’intérieur d’une potion de vérification, celle-ci change de couleur pour indiquer si la potion possède les effets recherchés. Très pratique pour ne pas consommer de potions ratées et lors d’enchantements magiques.</p>",
+            "potionLevel": 3,
+            "malus": -30,
+            "target": "X",
+            "virulence": null,
+            "ingredientRarity": "commun",
+            "ingredientList": [
+                {
+                    "name": "Cristal de roche",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Ingrédient Standard",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Rosée de lune",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Instantané",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po3021Verniprote",
+        "name": "Verni protecteur",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Un verni protecteur pour balai qui permet de garder les runes actives tout en les protégeant des dégâts dus aux intempéries.</p>",
+            "potionLevel": 3,
+            "malus": -30,
+            "target": "O",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Cire d'abeille",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Résine",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Sang de dragon",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Permanent",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po4001Veritaserum",
+        "name": "Veritaserum",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Le Veritaserum est un puissant sérum de vérité qui oblige le consommateur à dire la vérité. Effet secondaire : Fait parler d'une voix monocorde. Remarques : le Veritaserum n'est pas infaillible. Il est plus efficace sur des personnes vulnérables, insuffisamment compétentes pour s'en protéger ou inconscientes du fait qu'on va l'utiliser sur elles. Un sorcier peut se sceller la gorge et produire de fausses déclarations, transformer la potion en un breuvage inoffensif ou utiliser l'occlumancie pour en contrer les effets. Une potion de veritasérum doit mijoter durant 1 cycle lunaire</p>",
+            "potionLevel": 4,
+            "malus": -50,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Armoise",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Crin de licorne",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Jobarbille",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Sang de salamandre",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                }
+            ],
+            "prepTime": "1 mois (cycle lunaire complet)",
+            "duration": "1 heure",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po4002Polynectar",
+        "name": "Polynectar",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Fait prendre temporairement l’apparence d’une autre personne. Durée : 1d6+2 heures. Remarques : Doit contenir une partie du corps de la personne dont on veut prendre l’apparence. Cette potion est inadaptée aux métamorphoses animales. Si le sujet meurt avant que la potion s'estompe, il conservera les traits de la personne imitée</p>",
+            "potionLevel": 4,
+            "malus": -60,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Chrysope",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Corne de Bicorne",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Peau de serpent d'arbre du Cap",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Sangsue",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Sisymbre",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Touffes de Polygonum",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "1 mois",
+            "duration": "1 heure",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po4003FelixFelic",
+        "name": "Felix Felicis",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Cette potion, qu’il faut presque six mois pour fabriquer, donne une chance extraordinaire aux personnes qui la consomment. Effet : compétence chance x10 Durée : 1d6+1 heures. Effets secondaires : Étourdissements, tendance à l'imprudence et un excès de confiance en soi.</p>",
+            "potionLevel": 4,
+            "malus": -70,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Crin d'Abraxan",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Œuf d'Occamy",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Trèfle à quatre feuilles",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Rosée de lune",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "6 mois",
+            "duration": "12 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po4004AmortentiaP",
+        "name": "Amortentia",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Cette potion produit une forte attirance ou une obsession en copiant le sentiment d’amour. Il s’agit de l’un des philtres d’amour les plus puissants qui existent. L'Amortentia peut être identifiée grâce à sa couleur nacrée, sa vapeur qui s'élève en spirales et l'odeur attirante qu'elle dégage, différente pour chacun. Effets : Copie le sentiment d’amour Temps d’incubation : 1 heure VIRulence : 15 Durée : 1 jour</p>",
+            "potionLevel": 4,
+            "malus": -50,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Armotentia",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Pétale de rose",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Poudre de pierre de lune",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Crin de licorne",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "24 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po4005MortVivant",
+        "name": "Goutte du Mort-Vivant",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Plonge la cible dans un sommeil si profond qu'elle semble morte. Seul un antidote spécifique peut la réveiller.</p>",
+            "potionLevel": 4,
+            "malus": -50,
+            "target": "P",
+            "virulence": 20,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Armoise",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Asphodèle",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Fève soporifique",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Racine de valériane",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Jus de Sopophore",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Permanent (jusqu'à antidote)",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po4006Regenera",
+        "name": "Potion de régénération",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Régénère les tissus endommagés. Soigne 2d6 points de vie sur 8 heures. Très douloureuse.</p>",
+            "potionLevel": 4,
+            "malus": -50,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Bourgeon de châtaignier",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Bourgeon de sorbier",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Dictame",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Sang de salamandre",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Mandragore",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Instantané",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po4007Encremagiq",
+        "name": "Encre magique",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Cette encre magique possède certaines propriétés particulières qui sont employées pour rédiger des pactes magiques sous forme de contrats. De tels contrats peuvent concerner deux personnes qui se lient ou décrivent le fonctionnement d’un objet magique. Effet secondaire : Rompre un pacte ou un contrat rédigé à l’aide de cette encre magique implique de lourdes conséquences, généralement décrites avec soin lors de leur rédaction.</p>",
+            "potionLevel": 4,
+            "malus": -40,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Acanthe",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Encre de seiche",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Sang de dragon",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Permanent",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po4008Energiemag",
+        "name": "Énergie magique",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Permet de créer une énergie qui servira à alimenter une machine, un objet quelconque durant quelques heures, voire plus. Permet également de doter un objet d’une énergie interne qui lui permettra de fonctionner de manière autonome.</p>",
+            "potionLevel": 4,
+            "malus": -40,
+            "target": "O",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Algue séchée",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Gingembre",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Guarana",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Sang de Re'em",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "1d4+1 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po4009Gazetrangl",
+        "name": "Gaz étrangleur",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Génère un gaz qui provoque la suffocation de celui ou celle qui le respire Effets : Semblables à l’asphyxie ; mais au lieu de subir des dégâts, la personne tombe dans le coma en cas d’échec au jet de sauvegarde. Effets secondaires : Coma Durée des effets : Le gaz persiste durant 2d4+2 rounds Zone : Dôme de 3m de rayon puis +1,5m d’extension tous les rounds jusqu’à 12m Durée des effets secondaires : 1d6+1 heures Remarque : La sensation en le respirant est identique à celle de se faire étrangler d’où le nom du gaz.</p>",
+            "potionLevel": 4,
+            "malus": -40,
+            "target": "A/P",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Ciguë",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Soufre natif",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Charbon",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Ingrédient Standard",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "1d4+1 rounds",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po4010Morsuresde",
+        "name": "Traitement des morsures de chiens fous",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Une potion complexe, contenant de nombreux ingrédients et pouvant soigner tous les types de morsures de chien. Empêche les infections et la transmission de maladie. Prise suffisamment tôt, celle-ci pourrait également empêcher la transmission de la lycanthropie. Durée : -</p>",
+            "potionLevel": 4,
+            "malus": -40,
+            "target": "A/P",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Agripaume",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Bétoine",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Centaurée",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Distillat de camphre",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Essence de myrrhe",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Essence de Rue",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Fougère",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Mélisse",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Menthe",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Millepertuis",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Plantain",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Poudre de chair de vipère",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Sauge",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Verveine",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Vin blanc",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "White spirit",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Permanent",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po4011Occulus",
+        "name": "Occulus",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Permet de soigner les blessures et irritations des yeux. Effets : redonne 1 point de vie si les dégâts subis se trouvent au niveau des yeux. Annule les malus subis à la vision. Contre : Contre les effets du sortilège de Larmes ou de Conjonctivite Utilisation : Cette potion verte s’utilise sous la forme de gouttes</p>",
+            "potionLevel": 4,
+            "malus": -40,
+            "target": "A/P",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Armoise",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Dictame",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Œil de dragon",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Cristal de roche",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Permanent",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po4012Potionlaxa",
+        "name": "Potion laxative",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Oblige le consommateur à vider son système intestinal Effets : Les effets de cette potion apparaissent après 2d4+2 minutes après sa consommation VIRulence : 12</p>",
+            "potionLevel": 4,
+            "malus": -40,
+            "target": "A/P",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Aigremoine",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Ingrédient Standard",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Séné",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "1d4+1 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po4013PotionNo",
+        "name": "Potion No. 86",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Provoque de violentes douleurs, un refroidissement du corps et des convulsions Effet : Intense sensation de froid (1d4-2 dégâts non-létaux), convulsions Effets secondaires : Faiblesse intense (malus de 50% à toutes ses actions) Durée : 2d6+3 minutes / 1d6+1 heures VIRulence : 12</p>",
+            "potionLevel": 4,
+            "malus": -40,
+            "target": "A/P",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Ingrédient Standard",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Nux Myristica",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Permanent",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po5001Poussos",
+        "name": "Poussos",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Fait repousser les os et soigne les fractures. Effet secondaire : provoque de violentes douleurs.</p>",
+            "potionLevel": 5,
+            "malus": -70,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Mandragore",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Crin de licorne",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Dictame",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Sang de salamandre",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Os",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "8 heures (repousse osseuse)",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po5002ElixirVie",
+        "name": "Élixir de longue vie",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Prolonge la vie du consommateur. Nécessite la Pierre Philosophale. Usage régulier nécessaire pour maintenir l'effet.</p>",
+            "potionLevel": 5,
+            "malus": -90,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Sang de licorne",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Plume de phénix",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Reishi",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Résine",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Rose de Jéricho",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                }
+            ],
+            "prepTime": "1 an",
+            "duration": "Permanent",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po5003WolfsbaneP",
+        "name": "Potion Tue-Loup",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Cette potion soulage et atténue les symptômes les plus terribles de ceux qui deviennent des loups garous à la pleine lune. Durée : 24 heures</p>",
+            "potionLevel": 5,
+            "malus": -80,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Absinthe",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Aconit",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Dictame",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Sang de salamandre",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Ingrédient Standard",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "1 semaine",
+            "duration": "1 nuit de pleine lune",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po5004Babillage",
+        "name": "Babillage",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Celui qui consomme cette potion se met à avoir des propos incompréhensibles. Sous-type : Maléfice Effet : -50% dans les compétences liées à la parole Durée : 1d4 heure(s).</p>",
+            "potionLevel": 5,
+            "malus": -30,
+            "target": "A/P",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Achillée sternutatoire",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Ingrédient Standard",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Nux Myristica",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "1d4+1 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po5005Champignon",
+        "name": "Breuvage de champignons mortels",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Un poison pouvant être mortel et qui cause de grands dommages à la santé de celui qui le consomme Effets : perte de 1 point de vie / heure Effet secondaire : Perte de 1d4-2 points de CONstitution Temps d’incubation : 1d6 minutes VIRulence : 18 Durée : 2d4+2 heures / -</p>",
+            "potionLevel": 5,
+            "malus": -50,
+            "target": "A/P",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Calice de la mort",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "2d4+2 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po5006Combinaiso",
+        "name": "Combinaison",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Cette potion n’a pas d’effet particulier si ce n’est qu’elle permet de combiner les effets de différentes potions et sorts dans une seule potion. Effet secondaire : de nouveaux effets aléatoires peuvent apparaître.</p>",
+            "potionLevel": 5,
+            "malus": -60,
+            "target": "O",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Acanthe",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Chèvrefeuille",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Crin de cheval",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Goudron",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Résine",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Tourbillon rouge",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                }
+            ],
+            "prepTime": "1 mois",
+            "duration": "Permanent",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po5007Conscience",
+        "name": "Conscience",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Cette potion permet de stocker un filament de Pensine ou l’esprit d’une créature préalablement extrait pour doter un objet d’une conscience (Intelligence 1d6)</p>",
+            "potionLevel": 5,
+            "malus": -50,
+            "target": "O",
+            "virulence": null,
+            "ingredientRarity": "rare",
+            "ingredientList": [
+                {
+                    "name": "Brin de valériane",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Cervelle de crapaud",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Coprin narcotique",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Fèves sopophoriques",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Eau du fleuve Léthé",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Racine de rêve",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Rosée de lune",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Permanent",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po5008Damnesiedu",
+        "name": "Onguent d'amnésie du Dr Oubbly",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Cette potion permet d'atténuer les effets des pensées pour contrer les effets des attaques magiques sur l’esprit.</p>",
+            "potionLevel": 5,
+            "malus": -50,
+            "target": "A/P",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Brin de valériane",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Eau du fleuve Léthé",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Gelée de pétrole",
+                    "quantity": 1,
+                    "rarity": "commun",
+                    "available": false
+                },
+                {
+                    "name": "Infusion d'absinthe",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Lotos",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Venin de Démonzémerveille",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "Permanent",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po5009Essencedef",
+        "name": "Essence de folie",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Provoque la folie chez celui ou celle qui la consomme Effet : Malus de 30% à toutes les actions nécessitant des interactions avec une autre personne Effet secondaire : Comportement erratique et chaotique. Prise de décisions illogiques voir dangereuses Durée : 2d4+2 heures.</p>",
+            "potionLevel": 5,
+            "malus": -50,
+            "target": "A/P",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Absinthe",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Amanite tue-mouche",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Belladone",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Nux Myristica",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                }
+            ],
+            "prepTime": "",
+            "duration": "1d4+1 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po6001Panacee",
+        "name": "Panacée",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Une potion qui peut soigner toutes les afflictions et prolonger la vie de celui qui la consomme.</p>",
+            "potionLevel": 6,
+            "malus": -90,
+            "target": "A/P",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Bézoard",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Corne de licorne",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Dictame",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Larme de phénix",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Mandragore",
+                    "quantity": 1,
+                    "rarity": "rare",
+                    "available": false
+                },
+                {
+                    "name": "Sang de licorne",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                }
+            ],
+            "prepTime": "1 an",
+            "duration": "Instantané",
+            "quantity": 0,
+            "crafted": false
+        }
+    },
+    {
+        "_id": "po6002Potentiela",
+        "name": "Potentiel-absolu",
+        "type": "potion",
+        "img": "icons/svg/potion.svg",
+        "system": {
+            "description": "<p>Une potion permettant d’éveiller le potentiel de son consommateur en lui permettant de réussir des actions légendaires. Effet : La zone des réussites critiques de chaque action passe à 001-010 et chaque jet se fait comme si un point de fougue avait été employé (possibilité d’inverser le résultat du dé) sans les effets en cas d’échec. Durée : 1 heure</p>",
+            "potionLevel": 6,
+            "malus": -60,
+            "target": "P",
+            "virulence": null,
+            "ingredientRarity": "rarissime",
+            "ingredientList": [
+                {
+                    "name": "Sang de Re'em",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Sang de licorne",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Plume de phénix",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Crin d'Abraxan",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                },
+                {
+                    "name": "Œuf d'Occamy",
+                    "quantity": 1,
+                    "rarity": "rarissime",
+                    "available": false
+                }
+            ],
+            "prepTime": "6 mois",
+            "duration": "1d4+1 heures",
+            "quantity": 0,
+            "crafted": false
+        }
+    }
+]

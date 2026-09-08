@@ -1,0 +1,16 @@
+{
+  "_id": "sp1032LumiereObs",
+  "name": "Lumière/Obscurité",
+  "type": "spell",
+  "img": "icons/svg/sun.svg",
+  "system": {
+    "description": "<p>E : 0%/10% Durée : volontaire</p>",
+    "spellLevel": 1,
+    "malus": 0,
+    "spellType": "E",
+    "target": "X",
+    "incantation": "Lumos/Nox",
+    "extremeFormula": true,
+    "malusExtremeFormula": -10
+  }
+}

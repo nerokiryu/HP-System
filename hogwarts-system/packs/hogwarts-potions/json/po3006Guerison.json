@@ -1,0 +1,44 @@
+{
+    "_id": "po3006Guerison",
+    "name": "Potion de guérison",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Soigne 1d4 points de vie, referme les plaies et résorbe les blessures mineures.</p>",
+        "potionLevel": 3,
+        "malus": -30,
+        "target": "P",
+        "virulence": null,
+        "ingredientRarity": "rarissime",
+        "ingredientList": [
+            {
+                "name": "Dictame",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Mandragore",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Sang de salamandre",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Valériane",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "Instantané",
+        "quantity": 0,
+        "crafted": false
+    }
+}

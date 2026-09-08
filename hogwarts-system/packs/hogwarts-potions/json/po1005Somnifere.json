@@ -1,0 +1,38 @@
+{
+    "_id": "po1005Somnifere",
+    "name": "Somnifère léger",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Plonge le buveur dans un sommeil léger pendant 1d6 heures. Facile à réveiller.</p>",
+        "potionLevel": 1,
+        "malus": -5,
+        "target": "P",
+        "virulence": 5,
+        "ingredientRarity": "commun",
+        "ingredientList": [
+            {
+                "name": "Brin de valériane",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Ingrédient Standard",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Lavande",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "1d4+1 heures",
+        "quantity": 0,
+        "crafted": false
+    }
+}

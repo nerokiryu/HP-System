@@ -1,0 +1,18 @@
+{
+    "_id": "cp0156salpetre",
+    "name": "Salpêtre",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>Le salpêtre est sel de nitrate de potassium également connu sous le nom de sel de pierre. Employé depuis le Moyen-Âge pour ses propriétés particulières et est employé dans la confection de la poudre noire.</p>",
+        "rarity": "rare",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Lumière aveuglante",
+        "otherUses": ""
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "_id": "sp4041Reviviscen",
+    "name": "Reviviscence",
+    "type": "spell",
+    "img": "icons/svg/aura.svg",
+    "system": {
+        "description": "<p>Permet de redonner de l'énergie à une personne très affaiblie, étourdie ou bien inconsciente. Bien qu'il soit efficace contre la plupart des sorts, il n'a pas d'effets concluants contre les actes de magie noire.</p>",
+        "spellLevel": 4,
+        "malus": -40,
+        "spellType": "E",
+        "target": "P",
+        "incantation": "E Revigor",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

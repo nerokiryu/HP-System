@@ -1,0 +1,16 @@
+{
+  "_id": "sp3042MoucheSard",
+  "name": "Mouche-Sardine",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>Sous-type : Maléfice Durée : 2d4+2 heures. (Jet de CON x3 pour fournir un effort).</p>",
+    "spellLevel": 3,
+    "malus": 0,
+    "spellType": "S",
+    "target": "A/P",
+    "incantation": "S Sardina Sternuo",
+    "extremeFormula": true,
+    "malusExtremeFormula": -40
+  }
+}

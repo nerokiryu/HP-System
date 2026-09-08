@@ -1,0 +1,16 @@
+{
+  "_id": "sp4005CreatAnimau",
+  "name": "Création d'animaux",
+  "type": "spell",
+  "img": "icons/svg/pawprint.svg",
+  "system": {
+    "description": "<p>Crée un ou plusieurs petits animaux à partir de la matière environnante. Durée : permanente.</p>",
+    "spellLevel": 4,
+    "malus": -70,
+    "spellType": "M",
+    "target": "O",
+    "incantation": "Animalis creatio",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

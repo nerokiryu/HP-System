@@ -1,0 +1,16 @@
+{
+    "_id": "sp4040Revelasort",
+    "name": "Révélasort de Scarpin",
+    "type": "spell",
+    "img": "icons/svg/aura.svg",
+    "system": {
+        "description": "<p>Ce sort permet d'identifier les sorts jetés sur un objet ou les ingrédients d'une potion. Lancé une seconde fois, il permet d'identifier les effets de ces mêmes sorts ou potions.</p>",
+        "spellLevel": 4,
+        "malus": -45,
+        "spellType": "E",
+        "target": "A",
+        "incantation": "E Specialis revelio",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

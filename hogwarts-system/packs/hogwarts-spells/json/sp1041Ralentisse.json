@@ -1,0 +1,16 @@
+{
+  "_id": "sp1041Ralentisse",
+  "name": "Ralentissement",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>E : 5%/25% 2. (Opposition : POU/DEX)</p>",
+    "spellLevel": 1,
+    "malus": -5,
+    "spellType": "S",
+    "target": "A",
+    "incantation": "Leniter",
+    "extremeFormula": true,
+    "malusExtremeFormula": -25
+  }
+}

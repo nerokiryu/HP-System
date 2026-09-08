@@ -1,0 +1,16 @@
+{
+  "_id": "sp2067Videntrail",
+  "name": "Videntraille",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>Sous-type : Maléfice</p>",
+    "spellLevel": 2,
+    "malus": -20,
+    "spellType": "S",
+    "target": "A/P",
+    "incantation": "S Laxativus",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

@@ -1,0 +1,18 @@
+{
+    "_id": "cp0054chiendente",
+    "name": "Chiendent étoilé",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>mauvaise herbe verte drue – qui possè vertus médicinales Une plante magique provenant de Chine</p>",
+        "rarity": "rare",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Élixir malveillant",
+        "otherUses": "Vertus médicinales"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "_id": "sp2026Discretion",
+    "name": "Discrétion",
+    "type": "spell",
+    "img": "icons/svg/aura.svg",
+    "system": {
+        "description": "<p>Diminue considérablement les sons émis par une personne. Effet : donne un bonus de 30 % à la discrétion.</p>",
+        "spellLevel": 2,
+        "malus": -20,
+        "spellType": "E",
+        "target": "A/P",
+        "incantation": "Sonus evanesco",
+        "extremeFormula": true,
+        "malusExtremeFormula": -45
+    }
+}

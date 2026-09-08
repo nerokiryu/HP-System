@@ -1,0 +1,18 @@
+{
+    "_id": "cp0126millepertu",
+    "name": "Millepertuis",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>Également connu sous le nom d’herbe de Saint- Jean, cette plante subtropicale aux fleurs jaunes est connue pour ses vertus médicinales dans le traitement de la dépression.</p>",
+        "rarity": "commun",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Cataplasme contre les morsures de Murlap, Potion Tue-Loup, Traitement des morsures de chiens fous",
+        "otherUses": "Vertus médicinales"
+    }
+}

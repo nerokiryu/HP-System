@@ -1,0 +1,18 @@
+{
+    "_id": "cp0022armotentia",
+    "name": "Armotentia",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>Substance liquide mystérieuse employée dans la fabrication de potions</p>",
+        "rarity": "rarissime",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Mélange de bile de tatou, Élixir malveillant",
+        "otherUses": ""
+    }
+}

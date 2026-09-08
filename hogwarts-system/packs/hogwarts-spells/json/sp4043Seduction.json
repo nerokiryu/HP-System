@@ -1,0 +1,16 @@
+{
+  "_id": "sp4043Seduction",
+  "name": "Séduction",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "description": "<p>E : 30%/50% Contrer les effets du sort : vu qu’il agit comme un philtre d’amour, les effets de ce sortilège peuvent être partiellement ou totalement dissipés par des antidotes aux philtres d’amour.</p>",
+    "spellLevel": 4,
+    "malus": 0,
+    "spellType": "E",
+    "target": "P",
+    "incantation": "",
+    "extremeFormula": true,
+    "malusExtremeFormula": -50
+  }
+}

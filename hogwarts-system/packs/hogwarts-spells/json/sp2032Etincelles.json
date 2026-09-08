@@ -1,0 +1,16 @@
+{
+    "_id": "sp2032Etincelles",
+    "name": "Étincelles blanches",
+    "type": "spell",
+    "img": "icons/svg/sun.svg",
+    "system": {
+        "description": "<p>Projette des étincelles blanches sur un adversaire, lui occasionnant 1 dégât non létal. (Opposition : POU/POU).</p>",
+        "spellLevel": 2,
+        "malus": -10,
+        "spellType": "E",
+        "target": "X",
+        "incantation": "E Baubillious",
+        "extremeFormula": true,
+        "malusExtremeFormula": -30
+    }
+}

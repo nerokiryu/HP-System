@@ -1,0 +1,16 @@
+{
+    "_id": "sp5018Gnomeennai",
+    "name": "Gnome en nain de jardin",
+    "type": "spell",
+    "img": "icons/svg/mystery-man.svg",
+    "system": {
+        "description": "<p>Transforme un gnome en nain de jardin</p>",
+        "spellLevel": 5,
+        "malus": -50,
+        "spellType": "M",
+        "target": "A",
+        "incantation": "M Gnomusfors",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

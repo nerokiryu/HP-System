@@ -1,0 +1,16 @@
+{
+    "_id": "sp2037Fouet",
+    "name": "Fouet",
+    "type": "spell",
+    "img": "icons/svg/mystery-man.svg",
+    "system": {
+        "description": "<p>Change le bout de sa baguette en fouet, qui peut être employé comme tel pour attaque quelqu’un, se saisir d’un objet, etc.</p>",
+        "spellLevel": 2,
+        "malus": -20,
+        "spellType": "M",
+        "target": "X",
+        "incantation": "",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

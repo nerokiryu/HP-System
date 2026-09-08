@@ -1,0 +1,16 @@
+{
+    "_id": "sp1019Dunamis",
+    "name": "Dunamis",
+    "type": "spell",
+    "img": "icons/svg/aura.svg",
+    "system": {
+        "description": "<p>Une variante ancienne du sortilège d’ouverture, un peu plus complexe à employer mais permettant d’ouvrir les portes et les serrures.</p>",
+        "spellLevel": 1,
+        "malus": -25,
+        "spellType": "E",
+        "target": "O",
+        "incantation": "E Dunamis",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

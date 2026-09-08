@@ -1,0 +1,216 @@
+{
+  "name": "Rougarou",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 14,
+      "max": 14
+    },
+    "initiativeBonus": 0,
+    "healthNonLethal": {
+      "value": 0,
+      "max": 14
+    },
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXX",
+    "stats": {
+      "str": {
+        "value": 16,
+        "formula": "3d6+5"
+      },
+      "con": {
+        "value": 12,
+        "formula": "3d6+2"
+      },
+      "siz": {
+        "value": 16,
+        "formula": "3d6+5"
+      },
+      "dex": {
+        "value": 16,
+        "formula": "2d6+9"
+      },
+      "int": {
+        "value": 10,
+        "formula": "3d6"
+      },
+      "pow": {
+        "value": 10,
+        "formula": "3d6"
+      },
+      "app": {
+        "value": 12,
+        "formula": "3d6+2"
+      },
+      "per": {
+        "value": 14,
+        "formula": "3d6+3"
+      }
+    },
+    "movement": {
+      "land": 12,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0,
+      "label": ""
+    },
+    "attacks": [
+      {
+        "name": "Griffes",
+        "chance": 45,
+        "damage": "1d6+1d3"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Athlétisme",
+        "value": 55
+      },
+      {
+        "name": "Discrétion",
+        "value": 50
+      },
+      {
+        "name": "Esquive",
+        "value": 40
+      },
+      {
+        "name": "Orientation",
+        "value": 35
+      },
+      {
+        "name": "Pistage",
+        "value": 55
+      },
+      {
+        "name": "Survie",
+        "value": 45
+      },
+      {
+        "name": "Vigilance",
+        "value": 55
+      }
+    ],
+    "powers": "<p>Baisse d’intelligence : Bien que le Rougarou soit\nhumain à la base, celui-ci voit son intelligence\ndiminuer quand il est sous sa forme canine,\nlaissant ses instincts prendre le dessus.\nBestialité : Un Rougarou attaque tout humain qui\ncroise sa route. Quand il est en présence d'une\nproie potentielle, le Rougarou doit réussir un jet\nde POUx1 pour ne pas l’attaquer.\nMaladie du Rougarou : Le Rougarou peut\ntransmettre sa maladie à sa proie, qui deviendra\nà son tour un Rougarou. VIRulence : 12\nPerception (odorat) : Quand il utilise un jet de\nPERception (odorat), le Rougarou effectue un jet\nde PERx5 (au lieu de PERx1).\nPistage : Le Rougarou peut suivre une piste\nrepérée par un jet de PERception.</p>",
+    "usage": "<p>Poil de Ragarou : Employés\ncomme cœur de baguette</p>",
+    "magicResistance": {
+      "threshold": 0,
+      "effectReduction": 1
+    },
+    "notes": {
+      "gmNotes": ""
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "hogwarts-system",
+    "systemVersion": "1.0.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "8ab63c7c335251db",
+  "_key": "!actors!8ab63c7c335251db",
+  "prototypeToken": {
+    "name": "Rougarou",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": true,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "luminosity": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5
+      },
+      "color": null,
+      "coloration": 1,
+      "attenuation": 0.5,
+      "contrast": 0,
+      "saturation": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "flags": {}
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "_id": "sp2013Annulation",
+  "name": "Annulation de fonctionne cependant pas sur les métamorphoses complètes.",
+  "type": "spell",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "description": "<p>fonctionne cependant pas sur les métamorphoses complètes. Durée : -</p>",
+    "spellLevel": 2,
+    "malus": -15,
+    "spellType": "M",
+    "target": "V",
+    "incantation": "M Réparifagex /P/",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

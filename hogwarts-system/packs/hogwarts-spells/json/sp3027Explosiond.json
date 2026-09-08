@@ -1,0 +1,16 @@
+{
+    "_id": "sp3027Explosiond",
+    "name": "Explosion d’objets",
+    "type": "spell",
+    "img": "icons/svg/aura.svg",
+    "system": {
+        "description": "<p>Détruit un petit objet magique ou non en le faisant exploser. Génère un puissant son d’explosion. Maximum 2dm3 (≈ 1 brique d’un litre de lait)</p>",
+        "spellLevel": 3,
+        "malus": 0,
+        "spellType": "E",
+        "target": "O",
+        "incantation": "E Bombarda",
+        "extremeFormula": true,
+        "malusExtremeFormula": -30
+    }
+}

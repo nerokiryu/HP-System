@@ -1,0 +1,16 @@
+{
+  "_id": "sp5007BrasierObsc",
+  "name": "Brasier obscur",
+  "type": "spell",
+  "img": "icons/svg/fire.svg",
+  "system": {
+    "description": "<p>Crée un feu noir magique qui ne peut être éteint par des moyens normaux. Les sorts de dissipation ne fonctionnent pas.</p>",
+    "spellLevel": 5,
+    "malus": -60,
+    "spellType": "E",
+    "target": "O",
+    "incantation": "",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

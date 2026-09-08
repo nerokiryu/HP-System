@@ -1,0 +1,16 @@
+{
+    "_id": "sp2021CoupeGriff",
+    "name": "Coupe-Griffes",
+    "type": "spell",
+    "img": "icons/svg/aura.svg",
+    "system": {
+        "description": "<p>Permet de couper les griffes d’une créature magique ou non.</p>",
+        "spellLevel": 2,
+        "malus": -10,
+        "spellType": "E",
+        "target": "A",
+        "incantation": "E -",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

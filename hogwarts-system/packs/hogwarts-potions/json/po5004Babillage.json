@@ -1,0 +1,38 @@
+{
+    "_id": "po5004Babillage",
+    "name": "Babillage",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Celui qui consomme cette potion se met à avoir des propos incompréhensibles. Sous-type : Maléfice Effet : -50% dans les compétences liées à la parole Durée : 1d4 heure(s).</p>",
+        "potionLevel": 5,
+        "malus": -30,
+        "target": "A/P",
+        "virulence": null,
+        "ingredientRarity": "rare",
+        "ingredientList": [
+            {
+                "name": "Achillée sternutatoire",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Ingrédient Standard",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Nux Myristica",
+                "quantity": 1,
+                "rarity": "rarissime",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "1d4+1 heures",
+        "quantity": 0,
+        "crafted": false
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "_id": "axPouCodeMoral02",
+  "name": "Code moral",
+  "type": "feature",
+  "img": "icons/skills/social_dark.svg",
+  "system": {
+    "description": "<p>Vous possédez un code moral strict qui dicte vos actions dans votre vie quotidienne. Vous ne pouvez, par exemple, agir qu'en cas de légitime défense ou vous ne pouvez pas tricher, vous devez impérativement respecter la parole donnée, vous ne pouvez pas mentir ou vous êtes obligé de combattre les injustices. Choisissez un code moral, en accord avec le Maître du Jeu, et tenez-vous-y durant toute votre scolarité.</p>",
+    "perkType": "houseAxiom",
+    "pbpCost": 0.5
+  },
+  "flags": {}
+}

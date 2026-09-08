@@ -1,0 +1,50 @@
+{
+    "_id": "po2013Doigtsagil",
+    "name": "Doigts agiles",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Cette potion permet d’ajouter temporairement 1d6 points à la caractéristique dextérité du consommateur Durée : 1d4+1 heures.</p>",
+        "potionLevel": 2,
+        "malus": -20,
+        "target": "P",
+        "virulence": null,
+        "ingredientRarity": "rare",
+        "ingredientList": [
+            {
+                "name": "Bulbe sauteur",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Dards de Billywig",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Guarana",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Impatiente du Cap",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Jus d'araignées sauteuses",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "1d4+1 heures",
+        "quantity": 0,
+        "crafted": false
+    }
+}

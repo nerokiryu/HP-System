@@ -1,0 +1,216 @@
+{
+  "name": "Crabe de feu",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 8,
+      "max": 8
+    },
+    "initiativeBonus": 0,
+    "healthNonLethal": {
+      "value": 0,
+      "max": 8
+    },
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXX",
+    "stats": {
+      "str": {
+        "value": 10,
+        "formula": "3d6"
+      },
+      "con": {
+        "value": 10,
+        "formula": "3d6"
+      },
+      "siz": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "dex": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "int": {
+        "value": 2,
+        "formula": "1d4"
+      },
+      "pow": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "app": {
+        "value": 14,
+        "formula": "3d6+3"
+      },
+      "per": {
+        "value": 7,
+        "formula": "2d6"
+      }
+    },
+    "movement": {
+      "land": 4,
+      "fly": 6,
+      "swim": null
+    },
+    "armor": {
+      "value": 3,
+      "label": "Carapace"
+    },
+    "attacks": [
+      {
+        "name": "Pince",
+        "chance": 25,
+        "damage": "1"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Acrobatie",
+        "value": 20
+      },
+      {
+        "name": "Athlétisme",
+        "value": 25
+      },
+      {
+        "name": "Discrétion",
+        "value": 20
+      },
+      {
+        "name": "Esquive",
+        "value": 40
+      },
+      {
+        "name": "Orientation",
+        "value": 20
+      },
+      {
+        "name": "Survie",
+        "value": 30
+      },
+      {
+        "name": "Vigilance",
+        "value": 30
+      }
+    ],
+    "powers": "<p>Carapace minérale : La carapace du Crabe de feu\nest faite de pierres précieuses qui la rendent très\nrésistante et qui lui permet de se protéger de la\nmajeure partie des attaques de ses prédateurs.\nNéanmoins, cette carapace rend ses\ndéplacements plus difficiles. De plus, la carapace\ndu Crabe de feu est extrêmement coupante et\npeut blesser celui qui la manipule sans savoir\ncomment faire. Toute personne manipulant un\nCrabe de feu doit réussir un jet de DEXx4 pour ne\npas se piquer aux formations minérales qui\ncomposent sa carapace et ainsi perdre 1 point de\nvie.\nInsensibilité au feu : le Crabe de feu est\nnaturellement résistant au feu, qu’il soit naturel\nou magique, et ne peut pas être blessé par les\nflammes qu’il génère quand il attaque ses\nennemis et ses prédateurs.\nJet de flamme : Quand il est attaqué, le Crabe de\nfeu peut projeter un jet de flammes sur son\nennemi. Celui-ci occasionne 1d6-1 dégâts de feu à\nson adversaire ,qui doit également réussir un jet\nde POUx5 (jet de chance) pour ne pas risquer de\nprendre feu. Ce jet de flammes peut uniquement\nêtre projeté sur une distance de 2 mètres.\nNatation : Le Crabe de feu est un excellent\nnageur, qui est plus agile dans l’eau que sur terre.\nQuand il se déplace dans l’eau, sa valeur de\nmouvement est augmentée de 2 unités pour\npasser à 6.</p>",
+    "usage": "<p>Même s’il est interdit d’en faire le\ncommerce, on peut trouver des chaudrons de\nluxe créés dans des carapaces de Crabes de feu en\nvente sur certains marchés illégaux.</p>",
+    "magicResistance": {
+      "threshold": 0,
+      "effectReduction": 1
+    },
+    "notes": {
+      "gmNotes": ""
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "hogwarts-system",
+    "systemVersion": "1.0.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "333525169d3c01e7",
+  "_key": "!actors!333525169d3c01e7",
+  "prototypeToken": {
+    "name": "Crabe de feu",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": true,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "luminosity": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5
+      },
+      "color": null,
+      "coloration": 1,
+      "attenuation": 0.5,
+      "contrast": 0,
+      "saturation": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "flags": {}
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "_id": "sp5030Tasseenrat",
+    "name": "Tasse en rat",
+    "type": "spell",
+    "img": "icons/svg/mystery-man.svg",
+    "system": {
+        "description": "<p>Transforme une tasse en rat</p>",
+        "spellLevel": 5,
+        "malus": -50,
+        "spellType": "M",
+        "target": "O",
+        "incantation": "Rattusfors",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

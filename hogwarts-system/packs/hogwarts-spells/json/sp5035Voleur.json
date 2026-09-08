@@ -1,0 +1,16 @@
+{
+  "_id": "sp5035Voleur",
+  "name": "Voleur",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>Sous-type : Maléfice Durée : permanente</p>",
+    "spellLevel": 5,
+    "malus": -60,
+    "spellType": "S",
+    "target": "O",
+    "incantation": "",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

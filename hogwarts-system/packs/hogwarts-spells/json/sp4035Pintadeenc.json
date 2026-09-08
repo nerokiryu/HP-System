@@ -1,0 +1,16 @@
+{
+    "_id": "sp4035Pintadeenc",
+    "name": "Pintade en cochon d'Inde",
+    "type": "spell",
+    "img": "icons/svg/mystery-man.svg",
+    "system": {
+        "description": "<p>Métamorphose une pintade en cochon d’Inde</p>",
+        "spellLevel": 4,
+        "malus": -40,
+        "spellType": "M",
+        "target": "A",
+        "incantation": "Caviidafors",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

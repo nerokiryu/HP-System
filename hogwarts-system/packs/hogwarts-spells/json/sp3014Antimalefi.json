@@ -1,0 +1,16 @@
+{
+    "_id": "sp3014Antimalefi",
+    "name": "Anti-maléfice de Crottes-de-nez",
+    "type": "spell",
+    "img": "icons/svg/aura.svg",
+    "system": {
+        "description": "<p>Permet de contrer les effets du maléfice de Crottes-de-nez.</p>",
+        "spellLevel": 3,
+        "malus": -25,
+        "spellType": "E",
+        "target": "P",
+        "incantation": "E -",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

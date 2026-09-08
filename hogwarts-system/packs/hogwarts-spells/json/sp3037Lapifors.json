@@ -1,0 +1,16 @@
+{
+    "_id": "sp3037Lapifors",
+    "name": "Lapifors",
+    "type": "spell",
+    "img": "icons/svg/mystery-man.svg",
+    "system": {
+        "description": "<p>Transforme un objet en lapin vivant de même taille. Peut également transformer de petit animaux en lapin.</p>",
+        "spellLevel": 3,
+        "malus": -30,
+        "spellType": "M",
+        "target": "O",
+        "incantation": "M Lapifors",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "_id": "sp6007Incartable",
+  "name": "Incartable",
+  "type": "spell",
+  "img": "icons/svg/padlock.svg",
+  "system": {
+    "description": "<p>Rend un lieu impossible à localiser sur une carte ou par magie. Durée : permanente.</p>",
+    "spellLevel": 6,
+    "malus": -75,
+    "spellType": "E",
+    "target": "O",
+    "incantation": "",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

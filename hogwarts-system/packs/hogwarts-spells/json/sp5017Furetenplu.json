@@ -1,0 +1,16 @@
+{
+    "_id": "sp5017Furetenplu",
+    "name": "Furet en plumeau",
+    "type": "spell",
+    "img": "icons/svg/mystery-man.svg",
+    "system": {
+        "description": "<p>Transforme un furet en plumeau</p>",
+        "spellLevel": 5,
+        "malus": -50,
+        "spellType": "M",
+        "target": "A",
+        "incantation": "Peniculusfors",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "_id": "sp2062Scarabeeen",
+  "name": "Scarabée en bouton",
+  "type": "spell",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "description": "<p>C : 20% Durée : permanente</p>",
+    "spellLevel": 2,
+    "malus": -20,
+    "spellType": "M",
+    "target": "A",
+    "incantation": "Bullatusfors",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

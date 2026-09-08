@@ -1,0 +1,18 @@
+{
+    "_id": "cp0104huilederic",
+    "name": "Huile de ricin",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>Une huile jaune qui a très mauvais goût. L’huile de ricin est en vente chez l’apothicaire au prix de quatre Gallions pour quatorze fioles</p>",
+        "rarity": "commun",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Antidote aux philtres d’amour, Élixir malveillant, Pommade soignante pour sabot, Transfert",
+        "otherUses": ""
+    }
+}

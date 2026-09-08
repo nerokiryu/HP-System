@@ -1,0 +1,38 @@
+{
+    "_id": "po3021Verniprote",
+    "name": "Verni protecteur",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Un verni protecteur pour balai qui permet de garder les runes actives tout en les protégeant des dégâts dus aux intempéries.</p>",
+        "potionLevel": 3,
+        "malus": -30,
+        "target": "O",
+        "virulence": null,
+        "ingredientRarity": "rare",
+        "ingredientList": [
+            {
+                "name": "Cire d'abeille",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Résine",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Sang de dragon",
+                "quantity": 1,
+                "rarity": "rarissime",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "Permanent",
+        "quantity": 0,
+        "crafted": false
+    }
+}

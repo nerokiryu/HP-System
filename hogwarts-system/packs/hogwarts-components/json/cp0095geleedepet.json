@@ -1,0 +1,18 @@
+{
+    "_id": "cp0095geleedepet",
+    "name": "Gelée de pétrole",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>Un mélange semi-solide d’hydrocarbures couramment utilisé comme onguent cutané.</p>",
+        "rarity": "commun",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Lissenplis, Onguent d’amnésie du Dr Oubbly",
+        "otherUses": "Onguent pour la peau"
+    }
+}

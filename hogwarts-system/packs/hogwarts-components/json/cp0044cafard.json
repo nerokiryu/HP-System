@@ -1,0 +1,18 @@
+{
+    "_id": "cp0044cafard",
+    "name": "Cafard",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>nuisible mais qui peut être utilisé dans préparation de potions Un champignon très toxique que l’on trou</p>",
+        "rarity": "commun",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Actuellement inconnue",
+        "otherUses": ""
+    }
+}

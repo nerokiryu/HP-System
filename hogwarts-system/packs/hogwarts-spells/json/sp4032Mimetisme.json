@@ -1,0 +1,16 @@
+{
+    "_id": "sp4032Mimetisme",
+    "name": "Mimétisme",
+    "type": "spell",
+    "img": "icons/svg/mystery-man.svg",
+    "system": {
+        "description": "<p>La peau du personnage s’adapte à son environnement. Effet : bonus de 50% à la discrétion.</p>",
+        "spellLevel": 4,
+        "malus": -50,
+        "spellType": "M",
+        "target": "P",
+        "incantation": "M Mimesis",
+        "extremeFormula": true,
+        "malusExtremeFormula": 0
+    }
+}

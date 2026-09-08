@@ -1,0 +1,18 @@
+{
+    "_id": "cp0077dentdeloup",
+    "name": "Dent de loup",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>Une dent provenant d’un loup. Il n’est pas précisé s’il s’agit d’une canine ou non</p>",
+        "rarity": "rare",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "",
+        "otherUses": ""
+    }
+}

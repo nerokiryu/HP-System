@@ -1,0 +1,14 @@
+# Dépendances
+node_modules/
+
+# Artefacts de build
+hogwarts-system.zip
+*.tgz
+
+# Métadonnées Windows (fichiers alternatifs NTFS créés au téléchargement)
+*:Zone.Identifier
+
+# Divers
+.DS_Store
+Thumbs.db
+*.log

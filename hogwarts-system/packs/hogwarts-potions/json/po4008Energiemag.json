@@ -1,0 +1,44 @@
+{
+    "_id": "po4008Energiemag",
+    "name": "Énergie magique",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Permet de créer une énergie qui servira à alimenter une machine, un objet quelconque durant quelques heures, voire plus. Permet également de doter un objet d’une énergie interne qui lui permettra de fonctionner de manière autonome.</p>",
+        "potionLevel": 4,
+        "malus": -40,
+        "target": "O",
+        "virulence": null,
+        "ingredientRarity": "rare",
+        "ingredientList": [
+            {
+                "name": "Algue séchée",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Gingembre",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Guarana",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Sang de Re'em",
+                "quantity": 1,
+                "rarity": "rarissime",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "1d4+1 heures",
+        "quantity": 0,
+        "crafted": false
+    }
+}

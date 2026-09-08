@@ -1,0 +1,16 @@
+{
+    "_id": "sp4038Reduction",
+    "name": "Réduction",
+    "type": "spell",
+    "img": "icons/svg/lightning.svg",
+    "system": {
+        "description": "<p>Détruit des objets solides en les faisant tomber en poussière.</p>",
+        "spellLevel": 4,
+        "malus": -35,
+        "spellType": "S",
+        "target": "O",
+        "incantation": "Reducto",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

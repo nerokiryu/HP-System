@@ -1,0 +1,18 @@
+{
+    "_id": "cp0143polygonum",
+    "name": "Polygonum",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>dizaines de centimètres de long. Assez on en trouve en grand nombre dans la F Interdite. Le Porridge du Pasteur est une plante avec des propriétés magiques. Elle a d</p>",
+        "rarity": "commun",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Polynectar",
+        "otherUses": "Hydromel de polygonium"
+    }
+}

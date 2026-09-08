@@ -1,0 +1,16 @@
+{
+  "_id": "sp2008ChangeCol",
+  "name": "Changement de couleur",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "description": "<p>Change la couleur d'un objet ou des cheveux/sourcils de la cible. Purement cosmétique, durée variable.</p>",
+    "spellLevel": 2,
+    "malus": -5,
+    "spellType": "M",
+    "target": "O",
+    "incantation": "Colovaria",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

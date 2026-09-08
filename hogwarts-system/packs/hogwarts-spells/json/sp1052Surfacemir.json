@@ -1,0 +1,16 @@
+{
+    "_id": "sp1052Surfacemir",
+    "name": "Surface miroir",
+    "type": "spell",
+    "img": "icons/svg/aura.svg",
+    "system": {
+        "description": "<p>Fait apparaître une surface argentée sur un support, qui reflète tout ce qui passe devant.</p>",
+        "spellLevel": 1,
+        "malus": 0,
+        "spellType": "E",
+        "target": "X",
+        "incantation": "Mirare",
+        "extremeFormula": true,
+        "malusExtremeFormula": -20
+    }
+}

@@ -1,0 +1,224 @@
+{
+  "name": "Sombral",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 24,
+      "max": 24
+    },
+    "initiativeBonus": 0,
+    "healthNonLethal": {
+      "value": 0,
+      "max": 24
+    },
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXX",
+    "stats": {
+      "str": {
+        "value": 20,
+        "formula": "3d6+10"
+      },
+      "con": {
+        "value": 20,
+        "formula": "3d6+9"
+      },
+      "siz": {
+        "value": 26,
+        "formula": "5d6+9"
+      },
+      "dex": {
+        "value": 14,
+        "formula": "3d6+3"
+      },
+      "int": {
+        "value": 4,
+        "formula": "1d6+1"
+      },
+      "pow": {
+        "value": 9,
+        "formula": "2d6+2"
+      },
+      "app": {
+        "value": 10,
+        "formula": "1d6+6"
+      },
+      "per": {
+        "value": 20,
+        "formula": "4d6+6"
+      }
+    },
+    "movement": {
+      "land": 12,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0,
+      "label": ""
+    },
+    "attacks": [
+      {
+        "name": "Sabots",
+        "chance": 45,
+        "damage": "2d6"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Acrobatie",
+        "value": 60
+      },
+      {
+        "name": "Athlétisme",
+        "value": 60
+      },
+      {
+        "name": "Discrétion",
+        "value": 55
+      },
+      {
+        "name": "Empathie",
+        "value": 10
+      },
+      {
+        "name": "Esquive",
+        "value": 30
+      },
+      {
+        "name": "Orientation",
+        "value": 70
+      },
+      {
+        "name": "Survie",
+        "value": 30
+      },
+      {
+        "name": "Vigilance",
+        "value": 55
+      },
+      {
+        "name": "Voler",
+        "value": 70
+      }
+    ],
+    "powers": "<p>Invisible : Le Sombral ne peut être vu que d’une\npersonne ayant vécu émotionnellement la mort\nd’une personne et ayant compris la signification\nde celle-ci.\nPiétinement : Quand il charge une cible, le\nSombral peut décider de la piétiner en traversant\nla case occupée par celle-ci. Le piétinement\noccasionne 2d6 dégâts à toutes les cibles qui\nvoient leur case d’occupation traversée par le\nSombral en train de charger.\nVoler : Le Sombral est capable de voler dans les\nairs avec facilité. Grâce à sa force, il peut\négalement déplacer sans mal une charge dans les\nairs ou porter un cavalier de la taille d’un sorcier.</p>",
+    "usage": "<p>Le crin de Sombral peut être\nutiliser pour la fabrication de divers objets\nmagiques, comme les baguettes par exemple.</p>",
+    "magicResistance": {
+      "threshold": 0,
+      "effectReduction": 1
+    },
+    "notes": {
+      "gmNotes": ""
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "hogwarts-system",
+    "systemVersion": "1.0.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "b7873c1c63c86cd6",
+  "_key": "!actors!b7873c1c63c86cd6",
+  "prototypeToken": {
+    "name": "Sombral",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": true,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "luminosity": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5
+      },
+      "color": null,
+      "coloration": 1,
+      "attenuation": 0.5,
+      "contrast": 0,
+      "saturation": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "flags": {}
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "_id": "sp3001Agrandiss",
+  "name": "Agrandissement",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Agrandit la taille d'un objet jusqu'à deux fois sa taille. Durée : POUvoir minutes.</p>",
+    "spellLevel": 3,
+    "malus": -20,
+    "spellType": "E",
+    "target": "O",
+    "incantation": "",
+    "extremeFormula": true,
+    "malusExtremeFormula": -40
+  }
+}

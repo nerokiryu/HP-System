@@ -1,0 +1,16 @@
+{
+  "_id": "sp3034Herbivicus",
+  "name": "Herbivicus",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "description": "<p>Remarque : Faire attention à ce que la plante ait suffisamment d’eau et de nourriture afin qu’elle ne meure pas. Métamorphose un hibou en jumelles de théâtre</p>",
+    "spellLevel": 3,
+    "malus": -30,
+    "spellType": "E",
+    "target": "P",
+    "incantation": "E Herbivicus",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

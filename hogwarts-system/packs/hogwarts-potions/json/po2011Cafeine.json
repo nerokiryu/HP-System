@@ -1,0 +1,56 @@
+{
+    "_id": "po2011Cafeine",
+    "name": "Caféine",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Empêche le consommateur de dormir durant 24 heures. La fatigue le rattrape cependant d’un coup une fois les effets dissipés. Effets secondaires : agitation extrême et difficulté à rester en place.</p>",
+        "potionLevel": 2,
+        "malus": -20,
+        "target": "A/P",
+        "virulence": null,
+        "ingredientRarity": "rare",
+        "ingredientList": [
+            {
+                "name": "Corne de dragon",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Graines de café",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Guarana",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Piment rouge africain",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Poudre de pieuvre",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Sucre",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "24 heures",
+        "quantity": 0,
+        "crafted": false
+    }
+}

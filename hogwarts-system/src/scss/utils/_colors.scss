@@ -1,0 +1,72 @@
+:root {
+  --hogwarts-system-c-dark: #191813;
+  --hogwarts-system-c-faint: #c9c7b8;
+  --hogwarts-system-c-beige: #b5b3a4;
+  --hogwarts-system-c-tan: #444444;
+  --hogwarts-system-c-white: #ffffff;
+  --hogwarts-system-c-black: #000000;
+  --hogwarts-system-c-groove: #eeede0;
+
+  /* Accent colours (default: Gryffindor) */
+  --hogwarts-accent-100: #e06b6b;
+  --hogwarts-accent-500: #c0392b;
+  --hogwarts-accent-900: #7b241c;
+  --hogwarts-accent-rgb: 192,57,43; /* rgb for rgba() usages */
+}
+
+.theme-dark {
+  --hogwarts-system-c-dark: #c9c7b8;
+  --hogwarts-system-c-faint: #8a8878;
+  --hogwarts-system-c-beige: #444444;
+  --hogwarts-system-c-tan: #b5b3a4;
+  --hogwarts-system-c-white: #000000;
+  --hogwarts-system-c-black: #ffffff;
+  --hogwarts-system-c-groove: #11121f;
+}
+
+$c-white: var(--hogwarts-system-c-white);
+$c-black: var(--hogwarts-system-c-black);
+
+$c-dark: var(--hogwarts-system-c-dark);
+$c-faint: var(--hogwarts-system-c-faint);
+$c-beige: var(--hogwarts-system-c-beige);
+$c-tan: var(--hogwarts-system-c-tan);
+
+$c-groove: var(--hogwarts-system-c-groove);
+
+/* Per-house overrides. The actor sheet will get a class `house-{name}` on its root element
+   (e.g. `.hogwarts-system.house-slytherin`) which will switch the accent colours while
+   preserving their relative nuances. */
+.hogwarts-system.house-gryffindor,
+.hogwarts-system.house-gryffondor {
+  --hogwarts-accent-100: #e06b6b;
+  --hogwarts-accent-500: #c0392b;
+  --hogwarts-accent-900: #7b241c;
+  --hogwarts-accent-rgb: 192,57,43;
+}
+.hogwarts-system.house-slytherin,
+.hogwarts-system.house-serpentard {
+  --hogwarts-accent-100: #8fd3a0;
+  --hogwarts-accent-500: #2e8b57;
+  --hogwarts-accent-900: #1f5b3a;
+  --hogwarts-accent-rgb: 46,139,87;
+}
+.hogwarts-system.house-serdaigle,
+.hogwarts-system.house-ravenclaw {
+  --hogwarts-accent-100: #7fb9ff;
+  --hogwarts-accent-500: #2a6fb0;
+  --hogwarts-accent-900: #1b436f;
+  --hogwarts-accent-rgb: 42,111,176;
+}
+.hogwarts-system.house-poufsouffle,
+.hogwarts-system.house-hufflepuff {
+  --hogwarts-accent-100: #ffe082;
+  --hogwarts-accent-500: #d4af37;
+  --hogwarts-accent-900: #a67c00;
+  --hogwarts-accent-rgb: 212,175,55;
+}
+
+/* Convenience SCSS variables mapping to the accent CSS variables */
+$c-accent: var(--hogwarts-accent-500);
+$c-accent-light: var(--hogwarts-accent-100);
+$c-accent-dark: var(--hogwarts-accent-900);

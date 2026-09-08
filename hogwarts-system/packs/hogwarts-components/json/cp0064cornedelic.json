@@ -1,0 +1,18 @@
+{
+    "_id": "cp0064cornedelic",
+    "name": "Corne de licorne",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>La corne de licorne est connue pour ses propriétés purifiantes pouvant aider à contrer les poisons. Une corne de licorne est vendue 21 Gallion chez les apothicaires.</p>",
+        "rarity": "rarissime",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Antidote aux poisons courants, Occulus, Philtre de Paix, Potion contre la toux, Remède à la Dragoncelle, Veritaserum, Wiggenweld",
+        "otherUses": ""
+    }
+}

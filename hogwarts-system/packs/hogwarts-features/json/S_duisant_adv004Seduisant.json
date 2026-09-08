@@ -1,0 +1,11 @@
+{
+  "_id": "adv004Seduisant",
+  "name": "Séduisant",
+  "type": "feature",
+  "img": "icons/svg/sun.svg",
+  "system": {
+    "description": "<p>Charisme naturel. +10% aux jets de Persuasion/Baratin avec les personnes susceptibles d'être attirées.</p>",
+    "perkType": "advantage",
+    "pbpCost": 1
+  }
+}

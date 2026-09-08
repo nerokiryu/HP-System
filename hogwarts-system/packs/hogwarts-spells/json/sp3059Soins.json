@@ -1,0 +1,16 @@
+{
+    "_id": "sp3059Soins",
+    "name": "Soins",
+    "type": "spell",
+    "img": "icons/svg/aura.svg",
+    "system": {
+        "description": "<p>Redonne 1d4+1 points de vie à une personne blessée et ressoude les os après les avoir remis en place. Une fois lancé, ce sortilège ne peut plus faire effet sur cette blessure.</p>",
+        "spellLevel": 3,
+        "malus": 0,
+        "spellType": "E",
+        "target": "A/P",
+        "incantation": "E Episkey",
+        "extremeFormula": true,
+        "malusExtremeFormula": -45
+    }
+}

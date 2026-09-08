@@ -1,0 +1,16 @@
+{
+  "_id": "sp0009Parapluie",
+  "name": "Parapluie",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "description": "<p>Crée un petit écran protecteur contre la pluie au-dessus du lanceur.</p>",
+    "spellLevel": 0,
+    "malus": 0,
+    "spellType": "E",
+    "target": "P",
+    "incantation": "Impervius",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

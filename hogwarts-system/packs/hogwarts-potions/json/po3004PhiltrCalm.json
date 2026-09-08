@@ -1,0 +1,44 @@
+{
+    "_id": "po3004PhiltrCalm",
+    "name": "Philtre calmant",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Permet de calmer une personne qui a subi un choc, un traumatisme ou un choc émotionnel. Effet : Supprime le stress en diminuant les effets de celui-ci de 15%. Les diminutions sont cumulables en cas de consommation de plusieurs doses. Remarque : Si des animaux comme des chats et des chiens la consomment, ceux-ci sont plongés dans le sommeil durant 2d6+2 heures Effets secondaires : Ajouter trop de menthe poivrée peut donner au buveur une sensation de brûlure dans la bouche et causer pleurs et sanglots incontrôlables</p>",
+        "potionLevel": 3,
+        "malus": -30,
+        "target": "P",
+        "virulence": null,
+        "ingredientRarity": "rare",
+        "ingredientList": [
+            {
+                "name": "Camomille",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Lavande",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Passiflore",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Valériane",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "1d4+1 heures",
+        "quantity": 0,
+        "crafted": false
+    }
+}

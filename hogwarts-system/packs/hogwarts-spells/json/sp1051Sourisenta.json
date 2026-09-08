@@ -1,0 +1,16 @@
+{
+    "_id": "sp1051Sourisenta",
+    "name": "Souris en tabatière",
+    "type": "spell",
+    "img": "icons/svg/mystery-man.svg",
+    "system": {
+        "description": "<p>Métamorphose une souris en tabatière</p>",
+        "spellLevel": 1,
+        "malus": -10,
+        "spellType": "M",
+        "target": "A",
+        "incantation": "M Buxulafors",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

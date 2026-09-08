@@ -1,0 +1,18 @@
+{
+    "_id": "cp0134pattedelez",
+    "name": "Patte de lézard",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>Une patte provenant d’un lézard De la peau provenant de serpents d’arb</p>",
+        "rarity": "commun",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Beauté, Beauté illusoire",
+        "otherUses": ""
+    }
+}

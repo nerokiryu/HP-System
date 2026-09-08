@@ -1,0 +1,18 @@
+{
+    "_id": "cp0089figuedebar",
+    "name": "Figue de Barbarie / figuier",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>plante magique dont les fleurs prenne l’apparence de fruits que l’on appell Des feuilles de mandragore, une plant racine ressemble à un bébé que l’on e un pot. Leur cri est mortel pour celu sans protection. Une plante magique verte, aux dents p possédant des vignes mobiles qui tent d’attraper des proies vivantes. Le po</p>",
+        "rarity": "rare",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Cirassure, Animagus, Gaz étrangleur",
+        "otherUses": "Vertus médicinales"
+    }
+}

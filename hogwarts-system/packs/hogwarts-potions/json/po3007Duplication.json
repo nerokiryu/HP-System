@@ -1,0 +1,44 @@
+{
+    "_id": "po3007Duplication",
+    "name": "Potion de duplication",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Duplique une potion existante (niveau ≤3). Nécessite la potion à copier comme ingrédient.</p>",
+        "potionLevel": 3,
+        "malus": -30,
+        "target": "O",
+        "virulence": null,
+        "ingredientRarity": "rare",
+        "ingredientList": [
+            {
+                "name": "Alcool",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Cheveu de la personne à dupliquer",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Jonc des jumeaux",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Poudre de pierre de lune",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "1d4+1 heures",
+        "quantity": 0,
+        "crafted": false
+    }
+}

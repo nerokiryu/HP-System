@@ -1,0 +1,32 @@
+{
+    "_id": "po4013PotionNo",
+    "name": "Potion No. 86",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Provoque de violentes douleurs, un refroidissement du corps et des convulsions Effet : Intense sensation de froid (1d4-2 dégâts non-létaux), convulsions Effets secondaires : Faiblesse intense (malus de 50% à toutes ses actions) Durée : 2d6+3 minutes / 1d6+1 heures VIRulence : 12</p>",
+        "potionLevel": 4,
+        "malus": -40,
+        "target": "A/P",
+        "virulence": null,
+        "ingredientRarity": "rarissime",
+        "ingredientList": [
+            {
+                "name": "Ingrédient Standard",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Nux Myristica",
+                "quantity": 1,
+                "rarity": "rarissime",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "Permanent",
+        "quantity": 0,
+        "crafted": false
+    }
+}

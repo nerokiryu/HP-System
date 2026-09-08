@@ -1,0 +1,44 @@
+{
+    "_id": "po3001Antidote",
+    "name": "Antidote aux poisons",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Annule l'effet de poisons jusqu'à une virulence de 10.</p>",
+        "potionLevel": 3,
+        "malus": -30,
+        "target": "P",
+        "virulence": null,
+        "ingredientRarity": "rarissime",
+        "ingredientList": [
+            {
+                "name": "Bézoard",
+                "quantity": 1,
+                "rarity": "rarissime",
+                "available": false
+            },
+            {
+                "name": "Baie de gui",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Corne de licorne",
+                "quantity": 1,
+                "rarity": "rarissime",
+                "available": false
+            },
+            {
+                "name": "Ingrédient Standard",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "Instantané",
+        "quantity": 0,
+        "crafted": false
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "_id": "sp3026Etincelles",
+    "name": "Étincelles bleues",
+    "type": "spell",
+    "img": "icons/svg/sun.svg",
+    "system": {
+        "description": "<p>Projette des étincelles bleues sur un adversaire, lui occasionnant 1d4 dégâts non létaux. (Opposition : POU/DEX). En grande quantité, ces étincelles peuvent rendre l’atmosphère difficilement respirable et bloquer la vue en créant un brouillard</p>",
+        "spellLevel": 3,
+        "malus": -20,
+        "spellType": "E",
+        "target": "X",
+        "incantation": "E -",
+        "extremeFormula": true,
+        "malusExtremeFormula": -40
+    }
+}

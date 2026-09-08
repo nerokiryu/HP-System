@@ -1,0 +1,16 @@
+{
+  "_id": "sp0007MagieDome",
+  "name": "Magie domestique",
+  "type": "spell",
+  "img": "icons/svg/house.svg",
+  "system": {
+    "description": "<p>Effectue une petite tâche ménagère simple (plier un vêtement, ranger un livre, etc.).</p>",
+    "spellLevel": 0,
+    "malus": 0,
+    "spellType": "E",
+    "target": "O",
+    "incantation": "",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

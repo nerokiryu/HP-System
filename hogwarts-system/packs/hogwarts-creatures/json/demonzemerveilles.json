@@ -1,0 +1,220 @@
+{
+  "name": "Démonzémerveilles",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 20,
+      "max": 20
+    },
+    "initiativeBonus": 0,
+    "healthNonLethal": {
+      "value": 0,
+      "max": 20
+    },
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXX",
+    "stats": {
+      "str": {
+        "value": 22,
+        "formula": "4d6+8"
+      },
+      "con": {
+        "value": 18,
+        "formula": "5d6"
+      },
+      "siz": {
+        "value": 24,
+        "formula": "4d6+10"
+      },
+      "dex": {
+        "value": 15,
+        "formula": "4d6+1"
+      },
+      "int": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "pow": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "app": {
+        "value": 13,
+        "formula": "2d6+6"
+      },
+      "per": {
+        "value": 16,
+        "formula": "4d6+2"
+      }
+    },
+    "movement": {
+      "land": 13,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 3,
+      "label": "peau épaisse"
+    },
+    "attacks": [
+      {
+        "name": "griffe",
+        "chance": 60,
+        "damage": "3d6"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Acrobatie",
+        "value": 65
+      },
+      {
+        "name": "Athlétisme",
+        "value": 60
+      },
+      {
+        "name": "Discrétion",
+        "value": 35
+      },
+      {
+        "name": "Esquive",
+        "value": 40
+      },
+      {
+        "name": "Orientation",
+        "value": 50
+      },
+      {
+        "name": "Survie",
+        "value": 45
+      },
+      {
+        "name": "Vigilance",
+        "value": 55
+      },
+      {
+        "name": "Voler",
+        "value": 65
+      }
+    ],
+    "powers": "<p>Aspiration de souvenirs : En entrant sa langue\nen forme de trompe dans les oreilles d'une\npersonne, le Démonzémerveille est capable\nd'aspirer ses souvenirs et de s’en nourrir. Cette\ncapacité fonctionne un peu comme le sortilège\nd’oubliette et le Démonzémerveille peut\n37\n\ntotalement effacer la mémoire de sa proie, la\nlaissant tel un légume incapable de la moindre\naction. Dans les cas bénins, seuls quelques jours\npeuvent manquer à la mémoire de la cible, mais\nplus le temps passé à se faire aspirer ses\nsouvenirs est long et plus les jours, les mois, voire\nles années peuvent s’effacer. Actuellement, seule\nla compétence Occlumencie permet de se\npréserver de cette capacité.\nCoque : Quand il est sous forme de coque, le\nDémonzémerveille possède une incroyable\nrésistance aux dégâts. Celle-ci passe à -10 et les\npiques qui recouvrent sa coque occasionnent 1d4\ndégâts à ceux qui tentent de la manipuler. Un jet\nde DEXtéritéx3 est nécessaire pour ne pas subir\nces dégâts.\nGuérison : Les pouvoirs de guérison du\nDémonzémerveille sont bien supérieurs à la\nmoyenne. Quand il est blessé, le corps du\nDémonzémerveille se régénère magiquement\npour soigner les blessures subies. Cela se traduit\npar une régénération de 2 points de vie par jour\net par une vitesse de régénération des points de\nvie en cas de repos doublée par rapport à une\ncréature classique.\nRéduction : Le Démonzémerveille est capable de\nrétrécir son corps quand il se replie sur lui-même\npour atteindre la taille d’un vif-d’or et ainsi tenir\ndans une main. Il peut reprendre sa forme dès\nqu’il le souhaite ou s’il sent qu’on le lance dans les\nairs. Sous cette forme, il bénéficie de la\ncompétence coque.\nRésistance (magie) : La majeure partie des\nsortilèges ne fonctionne pas correctement sur le\nDémonzémerveille. Tout sortilège lancé a 50% de\nchances d’échouer sur lui. Lancez 1d100 et, si le\nrésultat est entre 051 et 000, alors le sortilège est\nraté. Les autres sortilèges voient leurs effets\ndiminués de moitié. De plus, les sortilèges à durée\npermanente voient leurs effets passer à une\ndurée variable (minutes)\nVenin : Le venin de Démonzémerveille possède\nun effet similaire à sa capacité à aspirer les\nsouvenirs, à une différence près. Le venin se\ncontente de retirer les mauvais souvenirs pour\nune certaine période donnée. Ce venin agit durant\nune dizaine de rounds s’il n’est pas contré par un\nantidote et efface à chaque fois 10d6 jours de\nmauvais souvenirs. Bien dosé, il peut être utilisé\ncomme traitement. VIRulence : 18</p>",
+    "usage": "<p>Le venin de Démonzémerveille\npeut être utilisé dans la fabrication de certaines\npotions liées à la mémoire. Utilisé pur, il peut\neffacer les mauvais souvenirs contenus dans la\nmémoire de ceux qui en sont victimes.</p>",
+    "magicResistance": {
+      "threshold": 0,
+      "effectReduction": 1
+    },
+    "notes": {
+      "gmNotes": ""
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "hogwarts-system",
+    "systemVersion": "1.0.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "289f4871aa32c496",
+  "_key": "!actors!289f4871aa32c496",
+  "prototypeToken": {
+    "name": "Démonzémerveilles",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": true,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "luminosity": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5
+      },
+      "color": null,
+      "coloration": 1,
+      "attenuation": 0.5,
+      "contrast": 0,
+      "saturation": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "flags": {}
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "_id": "sp4003Attraction",
+  "name": "Attraction",
+  "type": "spell",
+  "img": "icons/svg/up.svg",
+  "system": {
+    "description": "<p>Attire un objet vers le lanceur depuis n'importe quelle distance connue. POUvoir km de portée.</p>",
+    "spellLevel": 4,
+    "malus": -30,
+    "spellType": "E",
+    "target": "O",
+    "incantation": "Accio",
+    "extremeFormula": true,
+    "malusExtremeFormula": -50
+  }
+}

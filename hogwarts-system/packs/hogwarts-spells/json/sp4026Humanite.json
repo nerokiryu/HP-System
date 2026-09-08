@@ -1,0 +1,16 @@
+{
+    "_id": "sp4026Humanite",
+    "name": "Humanité",
+    "type": "spell",
+    "img": "icons/svg/aura.svg",
+    "system": {
+        "description": "<p>Rend sa forme humaine à un garou, un animagus ou à un humain métamorphosé (Opposition : POU/POU).</p>",
+        "spellLevel": 4,
+        "malus": -40,
+        "spellType": "E",
+        "target": "P",
+        "incantation": "Homomorphus",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

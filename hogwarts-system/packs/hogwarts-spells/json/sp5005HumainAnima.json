@@ -1,0 +1,16 @@
+{
+  "_id": "sp5005HumainAnima",
+  "name": "Humain en animal",
+  "type": "spell",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "description": "<p>Métamorphose un humain en un animal de taille similaire. Opposition POU/POU. Durée : permanente. Interdit dans la plupart des écoles.</p>",
+    "spellLevel": 5,
+    "malus": -45,
+    "spellType": "M",
+    "target": "P",
+    "incantation": "",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

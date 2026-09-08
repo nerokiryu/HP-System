@@ -1,0 +1,18 @@
+{
+    "_id": "cp0168soufrenati",
+    "name": "Soufre natif",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>Du soufre sous sa forme cristalline pure. Réduit en poudre, il peut être employé comme ingrédient de potion</p>",
+        "rarity": "rare",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Panacée, Lumière aveuglante, Potion à priser",
+        "otherUses": ""
+    }
+}

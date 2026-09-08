@@ -1,0 +1,44 @@
+{
+    "_id": "po2002Poussos",
+    "name": "Poussos",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Fait repousser les os et soigne les fractures. Effet secondaire : provoque de violentes douleurs.</p>",
+        "potionLevel": 2,
+        "malus": -15,
+        "target": "P",
+        "virulence": null,
+        "ingredientRarity": "rare",
+        "ingredientList": [
+            {
+                "name": "Chou mordeur de Chine",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Œil de poisson-ballon",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Œil de scarabée",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Thorax de scarabées",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "Instantané",
+        "quantity": 0,
+        "crafted": false
+    }
+}

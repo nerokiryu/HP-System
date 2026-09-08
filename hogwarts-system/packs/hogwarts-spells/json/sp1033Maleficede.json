@@ -1,0 +1,16 @@
+{
+    "_id": "sp1033Maleficede",
+    "name": "Maléfice de Jambencoton",
+    "type": "spell",
+    "img": "icons/svg/lightning.svg",
+    "system": {
+        "description": "<p>Impose un malus de 50 % à toute action utilisant les jambes.</p>",
+        "spellLevel": 1,
+        "malus": -15,
+        "spellType": "S",
+        "target": "P",
+        "incantation": "S Digitus Wibbly",
+        "extremeFormula": true,
+        "malusExtremeFormula": -25
+    }
+}

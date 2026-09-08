@@ -1,0 +1,18 @@
+{
+    "_id": "cp0092foiededrag",
+    "name": "Foie de dragon",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>Du foie prélevé sur un dragon. Cet ingrédient est très difficile à se procurer mais extrêmement utile dans la fabrication de potions.</p>",
+        "rarity": "rarissime",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Doxycide, Potion d’atténuation",
+        "otherUses": ""
+    }
+}

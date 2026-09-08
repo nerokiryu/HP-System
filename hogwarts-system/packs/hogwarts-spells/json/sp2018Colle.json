@@ -1,0 +1,16 @@
+{
+    "_id": "sp2018Colle",
+    "name": "Colle",
+    "type": "spell",
+    "img": "icons/svg/lightning.svg",
+    "system": {
+        "description": "<p>Colle les pieds d’une personne ou les pattes d’un animal au sol. Ceux- ci doivent réussir un jet de FORx3 pour se libérer.</p>",
+        "spellLevel": 2,
+        "malus": 0,
+        "spellType": "S",
+        "target": "X",
+        "incantation": "S",
+        "extremeFormula": true,
+        "malusExtremeFormula": -30
+    }
+}

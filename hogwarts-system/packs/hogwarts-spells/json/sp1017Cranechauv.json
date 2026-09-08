@@ -1,0 +1,16 @@
+{
+    "_id": "sp1017Cranechauv",
+    "name": "Crâne chauve fluo",
+    "type": "spell",
+    "img": "icons/svg/lightning.svg",
+    "system": {
+        "description": "<p>Fait tomber tous les poils de la cible et rend le crâne fluorescent (APP - 2).</p>",
+        "spellLevel": 1,
+        "malus": -10,
+        "spellType": "S",
+        "target": "P",
+        "incantation": "Capilum",
+        "extremeFormula": true,
+        "malusExtremeFormula": -10
+    }
+}

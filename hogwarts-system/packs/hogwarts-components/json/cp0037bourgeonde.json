@@ -1,0 +1,18 @@
+{
+    "_id": "cp0037bourgeonde",
+    "name": "Bourgeon de sorbier",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>Des bourgeons de feuille de sorbier qui possèdent un effet augmentant la régénération sanguine.</p>",
+        "rarity": "commun",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Potion de restauration n°1, Potion de restauration n°2, Potion de restauration n°3, Régénération sanguine",
+        "otherUses": ""
+    }
+}

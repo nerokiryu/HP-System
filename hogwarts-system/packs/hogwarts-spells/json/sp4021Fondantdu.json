@@ -1,0 +1,16 @@
+{
+    "_id": "sp4021Fondantdu",
+    "name": "Fondant féerique en fée",
+    "type": "spell",
+    "img": "icons/svg/mystery-man.svg",
+    "system": {
+        "description": "<p>Transforme un fondant féérique en fée.</p>",
+        "spellLevel": 4,
+        "malus": -40,
+        "spellType": "M",
+        "target": "O",
+        "incantation": "Brasicafors",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

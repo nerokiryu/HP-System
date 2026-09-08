@@ -1,0 +1,18 @@
+{
+    "_id": "cp0194ildedragon",
+    "name": "Œil de dragon",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>Œil provenant d’un dragon</p>",
+        "rarity": "rarissime",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Oculi cura",
+        "otherUses": ""
+    }
+}

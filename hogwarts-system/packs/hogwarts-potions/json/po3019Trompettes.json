@@ -1,0 +1,26 @@
+{
+    "_id": "po3019Trompettes",
+    "name": "Essence de trompettes d'anges",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Un poison rendant la cible confuse en l’empêchant de se concentrer efficacement. La cible oublie ce qu’il s’est passé après la consommation de la potion une fois qu’elle se réveille. Effets : provoque des vertiges et des difficultés à se concentrer, ce qui occasionne un malus de 30% à toutes les actions visant à se concentrer. Effets secondaires : perte des souvenirs d’après la prise de la potion jusqu’au réveil. Durée : 1d6+1 heures VIRulence : 12</p>",
+        "potionLevel": 3,
+        "malus": -30,
+        "target": "A/P",
+        "virulence": null,
+        "ingredientRarity": "rare",
+        "ingredientList": [
+            {
+                "name": "Trompettes des anges",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "1d6+1 heures",
+        "quantity": 0,
+        "crafted": false
+    }
+}

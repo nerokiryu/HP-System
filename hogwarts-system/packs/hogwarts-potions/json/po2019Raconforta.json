@@ -1,0 +1,44 @@
+{
+    "_id": "po2019Raconforta",
+    "name": "Raconfortant",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Une potion qui permet de fortifier et de soigner les rats. Effet : Redonne 1d4+1 points de vie à un rat. Effets secondaires : Soigne les maladies mais fait anormalement grandir le rat si elle est consommée en excès.</p>",
+        "potionLevel": 2,
+        "malus": -20,
+        "target": "A",
+        "virulence": null,
+        "ingredientRarity": "rare",
+        "ingredientList": [
+            {
+                "name": "Menthe poivrée",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Cannelle",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Camomille",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Miel",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "1d4+1 heures",
+        "quantity": 0,
+        "crafted": false
+    }
+}

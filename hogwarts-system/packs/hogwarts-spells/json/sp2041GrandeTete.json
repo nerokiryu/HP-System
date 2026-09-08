@@ -1,0 +1,16 @@
+{
+  "_id": "sp2041GrandeTete",
+  "name": "Grande-Tête",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>E : 10%/30% Durée : 1d4+2 heures Remarque : L’effet peut être dissipé avec un philtre dégonflant</p>",
+    "spellLevel": 2,
+    "malus": 0,
+    "spellType": "S",
+    "target": "A/P",
+    "incantation": "S Caput augmento",
+    "extremeFormula": true,
+    "malusExtremeFormula": -30
+  }
+}

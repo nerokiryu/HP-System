@@ -1,0 +1,216 @@
+{
+  "name": "Re'em",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 22,
+      "max": 22
+    },
+    "initiativeBonus": 0,
+    "healthNonLethal": {
+      "value": 0,
+      "max": 22
+    },
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXX",
+    "stats": {
+      "str": {
+        "value": 24,
+        "formula": "4d6+10"
+      },
+      "con": {
+        "value": 16,
+        "formula": "3d6+6"
+      },
+      "siz": {
+        "value": 26,
+        "formula": "4d6+12"
+      },
+      "dex": {
+        "value": 18,
+        "formula": "3d6+7"
+      },
+      "int": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "pow": {
+        "value": 12,
+        "formula": "3d6+2"
+      },
+      "app": {
+        "value": 12,
+        "formula": "3d6+2"
+      },
+      "per": {
+        "value": 18,
+        "formula": "3d6+7"
+      }
+    },
+    "movement": {
+      "land": 6,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 3,
+      "label": "peau épaisse"
+    },
+    "attacks": [
+      {
+        "name": "Cornes",
+        "chance": 50,
+        "damage": "3d6"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Acrobatie",
+        "value": 30
+      },
+      {
+        "name": "Athlétisme",
+        "value": 65
+      },
+      {
+        "name": "Discrétion",
+        "value": 40
+      },
+      {
+        "name": "Esquive",
+        "value": 45
+      },
+      {
+        "name": "Orientation",
+        "value": 35
+      },
+      {
+        "name": "Survie",
+        "value": 25
+      },
+      {
+        "name": "Vigilance",
+        "value": 55
+      }
+    ],
+    "powers": "<p>Charge dévastatrice : Lorsqu’il charge, le Re’em ne\npeut pratiquement pas être stoppé et cause de gros\ndommages aux personnes et objets sur son chemin.\nLes dégâts passent à 3d6+4.\nGuérison : Les pouvoirs de guérison des Re’em sont\nbien supérieurs à la moyenne. Quand il est blessé, le\ncorps du Re’em se régénère magiquement pour\nsoigner les blessures subies. Cela se traduit par une\nrégénération de 1 point de vie par jour et par une\nvitesse de régénération des points de vie en cas de\nrepos doublée par rapport à une créature classique.</p>",
+    "usage": "<p>Sang de Re’em : Le sang de Re’em\nest magique et confère une force surhumaine à toute\npersonne qui le boit durant plusieurs heures. Très\nrare, il n’est cependant pas disponible sur le marché.</p>",
+    "magicResistance": {
+      "threshold": 0,
+      "effectReduction": 1
+    },
+    "notes": {
+      "gmNotes": ""
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "hogwarts-system",
+    "systemVersion": "1.0.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "8cdc2dfdff565749",
+  "_key": "!actors!8cdc2dfdff565749",
+  "prototypeToken": {
+    "name": "Re'em",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": true,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "luminosity": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5
+      },
+      "color": null,
+      "coloration": 1,
+      "attenuation": 0.5,
+      "contrast": 0,
+      "saturation": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "flags": {}
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

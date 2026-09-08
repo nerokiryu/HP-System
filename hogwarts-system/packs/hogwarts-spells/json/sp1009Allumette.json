@@ -1,0 +1,16 @@
+{
+  "_id": "sp1009Allumette",
+  "name": "Allumette en aiguille",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Transforme une allumette en aiguille à coudre. Premier exercice de métamorphose.</p>",
+    "spellLevel": 1,
+    "malus": -5,
+    "spellType": "M",
+    "target": "O",
+    "incantation": "",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

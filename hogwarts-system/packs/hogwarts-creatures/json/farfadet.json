@@ -1,0 +1,210 @@
+{
+  "name": "Farfadet",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 2,
+      "max": 2
+    },
+    "initiativeBonus": 0,
+    "healthNonLethal": {
+      "value": 0,
+      "max": 2
+    },
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXX",
+    "stats": {
+      "str": {
+        "value": 2,
+        "formula": "1d4"
+      },
+      "con": {
+        "value": 2,
+        "formula": "1d4"
+      },
+      "siz": {
+        "value": 2,
+        "formula": "1d4"
+      },
+      "dex": {
+        "value": 20,
+        "formula": "4d6+6"
+      },
+      "int": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "pow": {
+        "value": 10,
+        "formula": "3d6"
+      },
+      "app": {
+        "value": 10,
+        "formula": "3d6"
+      },
+      "per": {
+        "value": 10,
+        "formula": "3d6"
+      }
+    },
+    "movement": {
+      "land": 5,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0,
+      "label": ""
+    },
+    "attacks": [],
+    "skills": [
+      {
+        "name": "Acrobatie",
+        "value": 60
+      },
+      {
+        "name": "Athlétisme",
+        "value": 25
+      },
+      {
+        "name": "Discrétion",
+        "value": 60
+      },
+      {
+        "name": "Esquive",
+        "value": 55
+      },
+      {
+        "name": "Orientation",
+        "value": 25
+      },
+      {
+        "name": "Survie",
+        "value": 10
+      },
+      {
+        "name": "Vigilance",
+        "value": 55
+      }
+    ],
+    "powers": "<p>Langage : Le farfadet peut parler la langue\nhumaine.\nOr des farfadets : Tous les farfadets peuvent\ncréer de l’or à volonté. Comme dans les contes et\nles légendes, ils aiment à stocker celui-ci dans des\nchaudrons qu’ils disposent sous les arc-en-ciel.\nCelui-ci disparaît au bout de quelques heures.</p>",
+    "usage": "<p>Or des farfadets</p>",
+    "magicResistance": {
+      "threshold": 0,
+      "effectReduction": 1
+    },
+    "notes": {
+      "gmNotes": ""
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "hogwarts-system",
+    "systemVersion": "1.0.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "21a1a3806e71f986",
+  "_key": "!actors!21a1a3806e71f986",
+  "prototypeToken": {
+    "name": "Farfadet",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": true,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "luminosity": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5
+      },
+      "color": null,
+      "coloration": 1,
+      "attenuation": 0.5,
+      "contrast": 0,
+      "saturation": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "flags": {}
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

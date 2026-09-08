@@ -1,0 +1,38 @@
+{
+    "_id": "po2015Oculicura",
+    "name": "Oculi cura",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Permet de soigner les blessures et irritations des yeux. Effets : redonne 1 point de vie si les dégâts subis se trouvent au niveau des yeux. Annule les malus subis à la vision. Contre : Contre les effets du sortilège de Larmes ou de Conjonctivite Utilisation : Cette potion verte s’utilise sous la forme de gouttes</p>",
+        "potionLevel": 2,
+        "malus": -20,
+        "target": "A/P",
+        "virulence": null,
+        "ingredientRarity": "rarissime",
+        "ingredientList": [
+            {
+                "name": "Armoise",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Dictame",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Œil de dragon",
+                "quantity": 1,
+                "rarity": "rarissime",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "Permanent",
+        "quantity": 0,
+        "crafted": false
+    }
+}

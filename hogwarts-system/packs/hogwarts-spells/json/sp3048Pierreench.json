@@ -1,0 +1,16 @@
+{
+    "_id": "sp3048Pierreench",
+    "name": "Pierre en chien",
+    "type": "spell",
+    "img": "icons/svg/mystery-man.svg",
+    "system": {
+        "description": "<p>Transforme une pierre en chien de même taille</p>",
+        "spellLevel": 3,
+        "malus": -30,
+        "spellType": "M",
+        "target": "O",
+        "incantation": "",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "_id": "adv010Animagus",
+  "name": "Potentiel Animagus",
+  "type": "feature",
+  "img": "icons/svg/pawprint.svg",
+  "system": {
+    "description": "<p>Possède le potentiel rare de devenir Animagus. Nécessite un apprentissage long et difficile (niveau 5+).</p>",
+    "perkType": "advantage",
+    "pbpCost": 3
+  }
+}

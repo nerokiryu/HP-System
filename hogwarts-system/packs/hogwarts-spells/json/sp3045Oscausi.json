@@ -1,0 +1,16 @@
+{
+    "_id": "sp3045Oscausi",
+    "name": "Oscausi",
+    "type": "spell",
+    "img": "icons/svg/lightning.svg",
+    "system": {
+        "description": "<p>Scelle la peau de la bouche d’une personne en la recouvrant de peau, la faisant totalement disparaître Effet principal : empêche la cible de parler</p>",
+        "spellLevel": 3,
+        "malus": -40,
+        "spellType": "S",
+        "target": "P",
+        "incantation": "Oscausi",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

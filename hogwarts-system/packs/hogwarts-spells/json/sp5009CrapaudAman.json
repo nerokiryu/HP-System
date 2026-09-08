@@ -1,0 +1,16 @@
+{
+  "_id": "sp5009CrapaudAman",
+  "name": "Crapaud en amanite",
+  "type": "spell",
+  "img": "icons/svg/mushroom.svg",
+  "system": {
+    "description": "<p>Métamorphose un crapaud en champignon amanite. Durée : permanente.</p>",
+    "spellLevel": 5,
+    "malus": -45,
+    "spellType": "M",
+    "target": "A",
+    "incantation": "Amanitafors",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

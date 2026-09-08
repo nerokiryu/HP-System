@@ -1,0 +1,228 @@
+{
+  "name": "Sphinx",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 20,
+      "max": 20
+    },
+    "initiativeBonus": 0,
+    "healthNonLethal": {
+      "value": 0,
+      "max": 20
+    },
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXX",
+    "stats": {
+      "str": {
+        "value": 20,
+        "formula": "3d6+10"
+      },
+      "con": {
+        "value": 14,
+        "formula": "3d6+4"
+      },
+      "siz": {
+        "value": 26,
+        "formula": "4d6+12"
+      },
+      "dex": {
+        "value": 14,
+        "formula": "3d6+4"
+      },
+      "int": {
+        "value": 20,
+        "formula": "3d6+10"
+      },
+      "pow": {
+        "value": 9,
+        "formula": "2d6+2"
+      },
+      "app": {
+        "value": 13,
+        "formula": "2d6+6"
+      },
+      "per": {
+        "value": 14,
+        "formula": "3d6+4"
+      }
+    },
+    "movement": {
+      "land": 16,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0,
+      "label": "peau épaisse"
+    },
+    "attacks": [
+      {
+        "name": "Griffes",
+        "chance": 50,
+        "damage": "3d6"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Acrobatie",
+        "value": 50
+      },
+      {
+        "name": "Athlétisme",
+        "value": 65
+      },
+      {
+        "name": "Connaissance (énigmes)",
+        "value": 70
+      },
+      {
+        "name": "Discrétion",
+        "value": 45
+      },
+      {
+        "name": "Empathie",
+        "value": 40
+      },
+      {
+        "name": "Esquive",
+        "value": 30
+      },
+      {
+        "name": "Orientation",
+        "value": 50
+      },
+      {
+        "name": "Psychologie",
+        "value": 50
+      },
+      {
+        "name": "Survie",
+        "value": 60
+      },
+      {
+        "name": "Vigilance",
+        "value": 55
+      }
+    ],
+    "powers": "<p>Bond : Les puissantes pattes arrière du Sphinx lui\npermettent de faire des bonds gigantesques de\nprès de 9 mètres. De plus, les jets d’Athlétisme de\ndifficulté normale et moyenne sont considérés\ncomme réussis automatiquement. Les jets classés\ncomme difficiles sont à considérer comme\nmoyens.\nConnaissance (énigmes) : Le Sphinx possède\nune excellente connaissance des énigmes et\ncharades en tous genres et aime à les proposer\naux personnes qu’il croise. Quand il rencontre un\nêtre intelligent, il effectue un jet dans cette\ncompétence. Plus la réussite de cette compétence\nest élevée et plus l’énigme est difficile. En cas de\nmauvaise réponse, le Sphinx entre dans une rage\nfolle et attaque le fautif.\nGardien : Le Sphinx adore garder des lieux ou des\nobjets et accepte volontiers de le faire pour les\nsorciers. Il devient violent quand on tente de\ns’emparer de ce qu’il protège.\nGrande vigilance : Quand il garde un lieu ou un\nobjet, un Sphinx est extrêmement difficile à\nduper. Toutes les jets de PERception visant à\nrepérer un intrus en train de s’approcher de ce\nqu’il garde se font comme PERx5 et ce peu\nimporte s’il s’agit d’un jet pour la vue, l’ouïe,\nl’odorat, etc.\nGuérison : Les pouvoirs de guérison des Sphinx\nsont bien supérieurs à la moyenne. Quand il est\nblessé, le corps du Sphinx se régénère\nmagiquement pour soigner les blessures subies.\nCela se traduit par une régénération de 1 point de\nvie par jour et par une vitesse de régénération des\npoints de vie en cas de repos doublée par rapport\nà un être humain ou une créature classique.\nLangage humain : Le Sphinx est capable de\nparler la langue des humains, même s’il ne\ns’exprime généralement que par des devinettes,\ndes énigmes ou des charades.\nRésistance (magie) : La majeure partie des\nsortilèges ne fonctionnent pas correctement sur\nles Sphinx. Tout sortilège lancé a 10% de chances\nd’échouer sur eux. Lancez 1d100 et, si le résultat\nest entre 091 et 000, alors le sortilège est raté. Les\nautres sortilèges voient leurs effets diminués de\ntrois-quarts. De plus, la durée des sortilèges\npermanents passe à une durée variable (minutes)</p>",
+    "usage": "<p>Les Sphinx sont généralement\nutilisés – avec leur accord – comme gardiens de\ntrésors et de lieux.</p>",
+    "magicResistance": {
+      "threshold": 0,
+      "effectReduction": 1
+    },
+    "notes": {
+      "gmNotes": ""
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "hogwarts-system",
+    "systemVersion": "1.0.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "7e06db4a61024d69",
+  "_key": "!actors!7e06db4a61024d69",
+  "prototypeToken": {
+    "name": "Sphinx",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": true,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "luminosity": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5
+      },
+      "color": null,
+      "coloration": 1,
+      "attenuation": 0.5,
+      "contrast": 0,
+      "saturation": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "flags": {}
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

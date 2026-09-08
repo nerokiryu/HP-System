@@ -1,0 +1,16 @@
+{
+  "_id": "sp6009BrasierPour",
+  "name": "Brasier pourpre",
+  "type": "spell",
+  "img": "icons/svg/fire.svg",
+  "system": {
+    "description": "<p>Crée un brasier de flammes pourpres qui ne laisse passer que ceux jugés dignes. Durée : permanente.</p>",
+    "spellLevel": 6,
+    "malus": -75,
+    "spellType": "E",
+    "target": "O",
+    "incantation": "",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

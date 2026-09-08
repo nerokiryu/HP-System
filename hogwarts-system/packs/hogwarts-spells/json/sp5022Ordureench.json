@@ -1,0 +1,16 @@
+{
+    "_id": "sp5022Ordureench",
+    "name": "Ordure en chien viverrin",
+    "type": "spell",
+    "img": "icons/svg/mystery-man.svg",
+    "system": {
+        "description": "<p>Métamorphose un tas d’ordures en chien viverrin</p>",
+        "spellLevel": 5,
+        "malus": -55,
+        "spellType": "M",
+        "target": "O",
+        "incantation": "Nycterofors",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

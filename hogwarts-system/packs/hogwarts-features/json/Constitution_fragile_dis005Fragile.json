@@ -1,0 +1,11 @@
+{
+  "_id": "dis005Fragile",
+  "name": "Constitution fragile",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Santé fragile. -2 points de vie maximum.</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -2
+  }
+}

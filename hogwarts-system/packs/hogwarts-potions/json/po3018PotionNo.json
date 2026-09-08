@@ -1,0 +1,38 @@
+{
+    "_id": "po3018PotionNo",
+    "name": "Potion No. 7",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>bouger durant 1d4 heure(s) au bout d’une minute Tentacula vénéneuse VIRulence : 11 Remarque : Mal préparée, cette potion provoque la mort de celui qui la consomme en arrêtant son cœur. Cette potion possède des effets différents en fonction du support où elle est appliquée : Effets : Sur un objet, elle permet de le faire rétrécir, diminuant sa caractéristique TAIlle par 2. Sur un animal, une</p>",
+        "potionLevel": 3,
+        "malus": -30,
+        "target": "A/P",
+        "virulence": null,
+        "ingredientRarity": "rare",
+        "ingredientList": [
+            {
+                "name": "Ingrédient Standard",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Rose de Jéricho",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Valériane",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "1 heure",
+        "quantity": 0,
+        "crafted": false
+    }
+}

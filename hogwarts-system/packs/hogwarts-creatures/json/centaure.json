@@ -1,0 +1,278 @@
+{
+  "name": "Centaure",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 16,
+      "max": 16
+    },
+    "initiativeBonus": 0,
+    "healthNonLethal": {
+      "value": 0,
+      "max": 16
+    },
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXX",
+    "stats": {
+      "str": {
+        "value": 16,
+        "formula": "3d6+6"
+      },
+      "con": {
+        "value": 12,
+        "formula": "3d6+2"
+      },
+      "siz": {
+        "value": 16,
+        "formula": "3d6+6"
+      },
+      "dex": {
+        "value": 12,
+        "formula": "3d6+2"
+      },
+      "int": {
+        "value": 9,
+        "formula": "2d6+2"
+      },
+      "pow": {
+        "value": 9,
+        "formula": "2d6+2"
+      },
+      "app": {
+        "value": 9,
+        "formula": "2d6+2"
+      },
+      "per": {
+        "value": 12,
+        "formula": "3d6+1"
+      }
+    },
+    "movement": {
+      "land": 12,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 2,
+      "label": "cuir naturel"
+    },
+    "attacks": [
+      {
+        "name": "Corps-à-corps",
+        "chance": 90,
+        "damage": "2d6"
+      },
+      {
+        "name": "Arc",
+        "chance": 90,
+        "damage": "1d8+1d6"
+      },
+      {
+        "name": "Épée longue",
+        "chance": 90,
+        "damage": "1d10+1d6"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Acrobatie",
+        "value": 60
+      },
+      {
+        "name": "arc et\nde flèches)",
+        "value": 70
+      },
+      {
+        "name": "Athlétisme",
+        "value": 75
+      },
+      {
+        "name": "Camouflage",
+        "value": 60
+      },
+      {
+        "name": "Commandement",
+        "value": 60
+      },
+      {
+        "name": "Discrétion",
+        "value": 60
+      },
+      {
+        "name": "Soin",
+        "value": 55
+      },
+      {
+        "name": "Empathie",
+        "value": 50
+      },
+      {
+        "name": "Esquive",
+        "value": 70
+      },
+      {
+        "name": "Fouille",
+        "value": 50
+      },
+      {
+        "name": "Orientation",
+        "value": 60
+      },
+      {
+        "name": "baratin",
+        "value": 60
+      },
+      {
+        "name": "Psychologie",
+        "value": 55
+      },
+      {
+        "name": "Survie",
+        "value": 75
+      },
+      {
+        "name": "Vigilance",
+        "value": 70
+      },
+      {
+        "name": "Astronomie",
+        "value": 90
+      },
+      {
+        "name": "Connaissance (Nature)",
+        "value": 60
+      },
+      {
+        "name": "Connaissance des Moldus",
+        "value": 30
+      },
+      {
+        "name": "Connaissance des sorciers",
+        "value": 40
+      },
+      {
+        "name": "Divination",
+        "value": 85
+      }
+    ],
+    "powers": "<p>Astronomie : Les Centaures possèdent de solides\nconnaissances en astronomie et emploient celles-\nci pour connaître le mouvement des étoiles.\nCamouflage : Les Centaures possèdent des\nmoyens de passer inaperçus aux yeux des Moldus\net des sorciers inattentifs.\nDivination : Les Centaures peuvent prévoir\nl’avenir grâce au mouvement des astres. Ils\nn’emploient cependant pas cette connaissance\npour changer les évènements importants de\nl’histoire.\nGuérison : Les pouvoirs de guérison des\nCentaures sont bien supérieurs à la moyenne.\nQuand il est blessé, le corps du Centaure se\nrégénère magiquement pour soigner les\nblessures subies. Cela se traduit par une\nrégénération de 3 points de vie par jour et par une\nvitesse de régénération des points de vie en cas\nde repos doublée par rapport à un être humain\nclassique.\nTir à l’arc : Les Centaures sont d’excellents\narchers qui peuvent combattre sans gêne dans les\nforêts et zone encombrées. Dans de telles\nconditions, leurs jets de compétences se sont\ntoujours considérés comme étant de difficulté\nfacile.</p>",
+    "usage": "<p>-</p>",
+    "magicResistance": {
+      "threshold": 0,
+      "effectReduction": 1
+    },
+    "notes": {
+      "gmNotes": ""
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "hogwarts-system",
+    "systemVersion": "1.0.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "8c650d40e4e70813",
+  "_key": "!actors!8c650d40e4e70813",
+  "prototypeToken": {
+    "name": "Centaure",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": true,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "luminosity": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5
+      },
+      "color": null,
+      "coloration": 1,
+      "attenuation": 0.5,
+      "contrast": 0,
+      "saturation": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "flags": {}
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

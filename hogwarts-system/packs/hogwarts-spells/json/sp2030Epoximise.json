@@ -1,0 +1,16 @@
+{
+    "_id": "sp2030Epoximise",
+    "name": "Epoximise",
+    "type": "spell",
+    "img": "icons/svg/mystery-man.svg",
+    "system": {
+        "description": "<p>Rend un objet extrêmement collant, obligeant la cible à user d’un sortilège ou de force pour s’en défaire. (Opposition : FORx2).</p>",
+        "spellLevel": 2,
+        "malus": -30,
+        "spellType": "M",
+        "target": "O",
+        "incantation": "M Epoximise",
+        "extremeFormula": true,
+        "malusExtremeFormula": -30
+    }
+}

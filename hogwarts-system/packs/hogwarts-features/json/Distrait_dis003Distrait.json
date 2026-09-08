@@ -1,0 +1,11 @@
+{
+  "_id": "dis003Distrait",
+  "name": "Distrait",
+  "type": "feature",
+  "img": "icons/svg/daze.svg",
+  "system": {
+    "description": "<p>Facilement distrait. -10% aux jets de Vigilance.</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -1
+  }
+}

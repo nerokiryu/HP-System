@@ -1,0 +1,16 @@
+{
+  "_id": "sp4001Alarme",
+  "name": "Alarme",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>Crée un périmètre magique qui alerte le lanceur si quelqu'un le franchit. Durée : POUvoir heures.</p>",
+    "spellLevel": 4,
+    "malus": -55,
+    "spellType": "E",
+    "target": "O",
+    "incantation": "Cave Inimicum",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

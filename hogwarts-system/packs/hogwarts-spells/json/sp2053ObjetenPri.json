@@ -1,0 +1,16 @@
+{
+  "_id": "sp2053ObjetenPri",
+  "name": "Objet en Prison",
+  "type": "spell",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "description": "<p>C : 30% Durée : permanente</p>",
+    "spellLevel": 2,
+    "malus": -30,
+    "spellType": "M",
+    "target": "O",
+    "incantation": "Incarcifos",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "_id": "sp4024GrandeExpl",
+  "name": "Grande Explosion",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "description": "<p>d’explosion. Maximum 1m3 E : 30%/50% Durée : -</p>",
+    "spellLevel": 4,
+    "malus": -40,
+    "spellType": "E",
+    "target": "O",
+    "incantation": "Explodere",
+    "extremeFormula": true,
+    "malusExtremeFormula": -50
+  }
+}

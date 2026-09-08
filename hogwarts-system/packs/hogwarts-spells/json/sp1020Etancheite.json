@@ -1,0 +1,16 @@
+{
+    "_id": "sp1020Etancheite",
+    "name": "Étanchéité",
+    "type": "spell",
+    "img": "icons/svg/aura.svg",
+    "system": {
+        "description": "<p>Enchante une surface. Repousse les substances qui s’y trouvent.</p>",
+        "spellLevel": 1,
+        "malus": -5,
+        "spellType": "E",
+        "target": "O",
+        "incantation": "Impervius",
+        "extremeFormula": true,
+        "malusExtremeFormula": -15
+    }
+}

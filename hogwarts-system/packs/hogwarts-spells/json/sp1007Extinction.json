@@ -1,0 +1,16 @@
+{
+  "_id": "sp1007Extinction",
+  "name": "Extinction",
+  "type": "spell",
+  "img": "icons/svg/fire.svg",
+  "system": {
+    "description": "<p>Éteint un feu de taille modérée (bougie, cheminée, torche).</p>",
+    "spellLevel": 1,
+    "malus": 0,
+    "spellType": "E",
+    "target": "O",
+    "incantation": "Aguamenti",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

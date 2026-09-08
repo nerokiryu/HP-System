@@ -1,0 +1,16 @@
+{
+    "_id": "sp4017Escargoten",
+    "name": "Escargot en théière",
+    "type": "spell",
+    "img": "icons/svg/mystery-man.svg",
+    "system": {
+        "description": "<p>Métamorphose un escargot en théière</p>",
+        "spellLevel": 4,
+        "malus": -40,
+        "spellType": "M",
+        "target": "A",
+        "incantation": "M Theaollafors",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

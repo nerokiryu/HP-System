@@ -1,0 +1,11 @@
+{
+  "_id": "adv003Reflexes",
+  "name": "Réflexes rapides",
+  "type": "feature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>Réagit plus vite que la normale. +2 à l'initiative.</p>",
+    "perkType": "advantage",
+    "pbpCost": 1
+  }
+}

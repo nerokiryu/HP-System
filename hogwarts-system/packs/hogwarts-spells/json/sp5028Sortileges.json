@@ -1,0 +1,16 @@
+{
+  "_id": "sp5028Sortileges",
+  "name": "sortilèges / Priori",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "description": "<p>Incantatem se lance de lui-même.</p>",
+    "spellLevel": 5,
+    "malus": -50,
+    "spellType": "E",
+    "target": "X",
+    "incantation": "Prior Incanto",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

@@ -1,0 +1,44 @@
+{
+    "_id": "po2003Veritaserum",
+    "name": "Veritaserum",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Le Veritaserum est un puissant sérum de vérité qui oblige le consommateur à dire la vérité. Effet secondaire : Fait parler d'une voix monocorde. Remarques : le Veritaserum n'est pas infaillible. Il est plus efficace sur des personnes vulnérables, insuffisamment compétentes pour s'en protéger ou inconscientes du fait qu'on va l'utiliser sur elles. Un sorcier peut se sceller la gorge et produire de fausses déclarations, transformer la potion en un breuvage inoffensif ou utiliser l'occlumancie pour en contrer les effets. Une potion de veritasérum doit mijoter durant 1 cycle lunaire</p>",
+        "potionLevel": 2,
+        "malus": -20,
+        "target": "P",
+        "virulence": null,
+        "ingredientRarity": "rarissime",
+        "ingredientList": [
+            {
+                "name": "Armoise",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Crin de licorne",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Jobarbille",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Sang de salamandre",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            }
+        ],
+        "prepTime": "1 mois (cycle lunaire complet)",
+        "duration": "1 heure",
+        "quantity": 0,
+        "crafted": false
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "_id": "sp1043Recurage",
+  "name": "Récurage",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "description": "<p>Portée : 1,5m Durée : permanente</p>",
+    "spellLevel": 1,
+    "malus": -5,
+    "spellType": "E",
+    "target": "P",
+    "incantation": "E Récurvite",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

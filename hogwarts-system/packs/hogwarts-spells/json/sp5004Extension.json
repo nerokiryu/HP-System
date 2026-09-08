@@ -1,0 +1,16 @@
+{
+  "_id": "sp5004Extension",
+  "name": "Extension",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Agrandit magiquement l'intérieur d'un espace clos sans changer son apparence extérieure. Durée : permanente.</p>",
+    "spellLevel": 5,
+    "malus": -60,
+    "spellType": "E",
+    "target": "O",
+    "incantation": "",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

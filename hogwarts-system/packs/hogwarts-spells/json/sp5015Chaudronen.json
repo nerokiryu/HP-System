@@ -1,0 +1,16 @@
+{
+    "_id": "sp5015Chaudronen",
+    "name": "Chaudron en blaireau",
+    "type": "spell",
+    "img": "icons/svg/mystery-man.svg",
+    "system": {
+        "description": "<p>Transforme un chaudron en blaireau</p>",
+        "spellLevel": 5,
+        "malus": -45,
+        "spellType": "M",
+        "target": "O",
+        "incantation": "Melesfors",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

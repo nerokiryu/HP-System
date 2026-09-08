@@ -1,0 +1,16 @@
+{
+  "_id": "sp3018CarpeRetra",
+  "name": "Carpe Retractum",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "description": "<p>C : 30% Durée : Volontaire Remarque : Une fois l’objet saisi, le Sorcier doit faire preuve de FORce pour pouvoir tirer ce dernier, la corde magique ne servant qu’à relier l’objet visé et la baguette du Sorcier.</p>",
+    "spellLevel": 3,
+    "malus": -30,
+    "spellType": "E",
+    "target": "O",
+    "incantation": "E Carpe Retractum",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

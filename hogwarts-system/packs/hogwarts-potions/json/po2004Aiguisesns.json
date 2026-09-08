@@ -1,0 +1,38 @@
+{
+    "_id": "po2004Aiguisesns",
+    "name": "Potion aiguise-sens",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Améliore temporairement les sens du buveur. Bonus de +15% aux jets de Perception pendant 1 heure.</p>",
+        "potionLevel": 2,
+        "malus": -10,
+        "target": "P",
+        "virulence": null,
+        "ingredientRarity": "commun",
+        "ingredientList": [
+            {
+                "name": "Bile de tatou",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Gingembre",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Scarabée",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "1d4+1 heures",
+        "quantity": 0,
+        "crafted": false
+    }
+}

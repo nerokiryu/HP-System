@@ -1,0 +1,16 @@
+{
+  "_id": "sp2066Tetenbulle",
+  "name": "Têtenbulle",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "description": "<p>0%/20% par de mauvaises odeurs. Durée : 1d4+1 heures</p>",
+    "spellLevel": 2,
+    "malus": 0,
+    "spellType": "E",
+    "target": "A/P",
+    "incantation": "E -",
+    "extremeFormula": true,
+    "malusExtremeFormula": -20
+  }
+}

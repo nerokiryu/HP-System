@@ -1,0 +1,18 @@
+{
+    "_id": "cp0096gingembre",
+    "name": "Gingembre",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>Plante à fleurs dont le rhizome, la racine de gingembre, est utilisé en cuisine comme épice hautement aromatisée et en médecine pour ses vertus tonifiantes. Le gingembre est également l’un des ingrédients de la bièraubeurre et des salamandres au gingembre.</p>",
+        "rarity": "commun",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Aiguise-Méninges, Beauté, Beauté illusoire, Langue de miel, Philtre dégonflant, Potion anti-paralysie, Remontant de Pomfresh",
+        "otherUses": "Bièraubeurre, Confiserie (salamandre au gingembre), Cuisine, Vertus médicinales"
+    }
+}

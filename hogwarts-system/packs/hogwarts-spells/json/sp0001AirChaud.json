@@ -1,0 +1,16 @@
+{
+  "_id": "sp0001AirChaud",
+  "name": "Air Chaud",
+  "type": "spell",
+  "img": "icons/svg/fire.svg",
+  "system": {
+    "description": "<p>Produit un courant d'air chaud depuis la baguette.</p>",
+    "spellLevel": 0,
+    "malus": 0,
+    "spellType": "E",
+    "target": "O",
+    "incantation": "",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

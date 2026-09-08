@@ -1,0 +1,16 @@
+{
+    "_id": "sp3056Rocket",
+    "name": "Rocket",
+    "type": "spell",
+    "img": "icons/svg/aura.svg",
+    "system": {
+        "description": "<p>Envoie un objet voler dans les airs à POUvoir mètres de haut à très grande vitesse</p>",
+        "spellLevel": 3,
+        "malus": -30,
+        "spellType": "E",
+        "target": "O",
+        "incantation": "",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

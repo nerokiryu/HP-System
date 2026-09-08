@@ -1,0 +1,230 @@
+{
+  "name": "Grapcorne",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 24,
+      "max": 24
+    },
+    "initiativeBonus": 0,
+    "healthNonLethal": {
+      "value": 0,
+      "max": 24
+    },
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXX",
+    "stats": {
+      "str": {
+        "value": 28,
+        "formula": "5d6+10"
+      },
+      "con": {
+        "value": 18,
+        "formula": "5d6"
+      },
+      "siz": {
+        "value": 30,
+        "formula": "4d6+16"
+      },
+      "dex": {
+        "value": 19,
+        "formula": "4d6+5"
+      },
+      "int": {
+        "value": 14,
+        "formula": "3d6+4"
+      },
+      "pow": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "app": {
+        "value": 17,
+        "formula": "2d6+10"
+      },
+      "per": {
+        "value": 16,
+        "formula": "4d6+2"
+      }
+    },
+    "movement": {
+      "land": 18,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 15,
+      "label": "peau épaisse"
+    },
+    "attacks": [
+      {
+        "name": "Cornes",
+        "chance": 60,
+        "damage": "4d6"
+      },
+      {
+        "name": "Griffes",
+        "chance": 60,
+        "damage": "2d6"
+      },
+      {
+        "name": "Morsure",
+        "chance": 60,
+        "damage": "3d6"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Acrobatie",
+        "value": 65
+      },
+      {
+        "name": "Athlétisme",
+        "value": 75
+      },
+      {
+        "name": "Esquive",
+        "value": 15
+      },
+      {
+        "name": "Discrétion",
+        "value": 30
+      },
+      {
+        "name": "Orientation",
+        "value": 55
+      },
+      {
+        "name": "Pistage",
+        "value": 70
+      },
+      {
+        "name": "Survie",
+        "value": 60
+      },
+      {
+        "name": "Vigilance",
+        "value": 65
+      }
+    ],
+    "powers": "<p>Agressivité : Un Grapcorne ne peut s’empêcher\nd’attaquer toute créature qui croise sa route et\nqu’il considère automatiquement comme une\nproie ou comme une menace. Quand il est en\nprésence d'une proie ou d'un adversaire\npotentiel, le Grapcorne doit réussir un jet de\nPOUx1 pour ne pas attaquer la proie. Quand il est\nconfronté à plus puissant que lui, le Grapcorne\npeut cependant momentanément laisser de côté\nson agressivité et « jouer » à l’animal domestique\nle temps qu’une opportunité de contrattaquer se\nprésente.\nAthlétisme : Le Grapcorne possède des capacités\nphysiques extraordinaires. En règle générale, les\njets d’Athlétisme de difficulté normale et\nmoyenne que le Grapcorne doit effectuer sont\nconsidérés comme réussis automatiquement. Les\njets d’Athlétisme classés comme difficiles sont à\nconsidérer comme moyens.\nGrande endurance : Le Grapcorne fait partie des\ncréatures les plus endurantes connues. Capable\nde courir durant des heures, voire même des\njours sans même être essoufflé ni ressentir la\nmoindre fatigue physique.\nGuérison : Les pouvoirs de guérison des\nGrapcornes sont bien supérieurs à la moyenne.\nQuand il est blessé, le corps du Grapcorne se\nrégénère magiquement pour soigner les\nblessures subies. Cela se traduit par une\nrégénération de 1 point de vie par jour et par une\nvitesse de régénération des points de vie en cas\nde repos doublée par rapport à une créature\nclassique.\nPeau épaisse : La peau du Grapcorne est très\népaisse et le protège de la majeure partie des\ndégâts qu’on pourrait lui occasionner, comme\ncelle des dragons. Cependant, celle-ci possède\négalement un effet qu’on pourrait qualifier de\ndissipatif pour les sortilèges. Tout sortilège lancé\navec succès sur un Grapcorne aura\nautomatiquement 80% de chances d’échouer en\nétant arrêté par cette peau épaisse. Quand un\nsortilège est lancé sur le Grapcorne, lancer un\nd100. Si le résultat se situe entre 021 et 000 –\nbornes comprises – alors le sort est sans effet.\nDans le cas d’une réussite, diminuer l’effet du\nsortilège de moitié (temps, effets, etc.). Les\nsortilèges à durée permanente deviennent des\nsortilèges à durée variable (minutes).\nPistage : Le Grapcorne est capable de suivre une\npiste repérée par un jet de PERception.</p>",
+    "usage": "",
+    "magicResistance": {
+      "threshold": 0,
+      "effectReduction": 1
+    },
+    "notes": {
+      "gmNotes": ""
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "hogwarts-system",
+    "systemVersion": "1.0.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "76daeb34fc20ce0d",
+  "_key": "!actors!76daeb34fc20ce0d",
+  "prototypeToken": {
+    "name": "Grapcorne",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": true,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "luminosity": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5
+      },
+      "color": null,
+      "coloration": 1,
+      "attenuation": 0.5,
+      "contrast": 0,
+      "saturation": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "flags": {}
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

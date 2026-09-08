@@ -1,0 +1,225 @@
+{
+  "name": "Hippogriffe",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 18,
+      "max": 18
+    },
+    "initiativeBonus": 0,
+    "healthNonLethal": {
+      "value": 0,
+      "max": 18
+    },
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXX",
+    "stats": {
+      "str": {
+        "value": 16,
+        "formula": "3d6+6"
+      },
+      "con": {
+        "value": 14,
+        "formula": "3d6+4"
+      },
+      "siz": {
+        "value": 20,
+        "formula": "5d6+3"
+      },
+      "dex": {
+        "value": 14,
+        "formula": "3d6+4"
+      },
+      "int": {
+        "value": 6,
+        "formula": "2d4+1"
+      },
+      "pow": {
+        "value": 12,
+        "formula": "3d6+2"
+      },
+      "app": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "per": {
+        "value": 14,
+        "formula": "3d6+4"
+      }
+    },
+    "movement": {
+      "land": 8,
+      "fly": 20,
+      "swim": null
+    },
+    "armor": {
+      "value": 0,
+      "label": "peau épaisse"
+    },
+    "attacks": [
+      {
+        "name": "Bec",
+        "chance": 45,
+        "damage": "2d6"
+      },
+      {
+        "name": "Pattes",
+        "chance": 40,
+        "damage": "1d6"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Acrobatie",
+        "value": 65
+      },
+      {
+        "name": "Athlétisme",
+        "value": 55
+      },
+      {
+        "name": "Discrétion",
+        "value": 55
+      },
+      {
+        "name": "Esquive",
+        "value": 40
+      },
+      {
+        "name": "Orientation",
+        "value": 30
+      },
+      {
+        "name": "Survie",
+        "value": 50
+      },
+      {
+        "name": "Vigilance",
+        "value": 50
+      },
+      {
+        "name": "Voler",
+        "value": 70
+      }
+    ],
+    "powers": "<p>Attaque en piqué : La méthode de chasse de\nl’Hippogriffe consiste à plonger sur sa proie\ndepuis les airs en profitant de sa vitesse pour\ntuer sa proie en une seule et unique attaque.\nQuand il effectue une attaque en piqué,\nl’Hippogriffe bénéficie d’un bonus à l’attaque\nde griffe ou de bec de 10%. Les dégâts\noccasionnés par une telle attaque augmentent\nde 1d6+2.\nPerception accrue (vue) : La grande faculté\nvisuelle de l’Hippogriffe lui permet de voir bien\nplus loin qu’une créature classique. De plus, les\njets de PERception (vue) s’effectuent comme\nPERx6 et non PERx5.\nVoler : L’Hippogriffe est capable de voler dans\nles airs avec facilité. Grâce à sa force hors du\ncommun, il peut également déplacer sans mal\nde lourdes charges et porter plusieurs cavaliers.\nDe plus, les jets de vol de difficulté normale et\nmoyenne qu’il doit effectuer sont considérés\ncomme réussis automatiquement. Les jets de\nvol classés comme difficiles sont à considérer\ncomme moyens.</p>",
+    "usage": "<p>Dressé correctement,\nl’Hippogriffe peut devenir une monture fidèle et\ncapable de porter plusieurs cavaliers sur de\nlongues distances.</p>",
+    "magicResistance": {
+      "threshold": 0,
+      "effectReduction": 1
+    },
+    "notes": {
+      "gmNotes": ""
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "hogwarts-system",
+    "systemVersion": "1.0.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "75825c33a14c9b12",
+  "_key": "!actors!75825c33a14c9b12",
+  "prototypeToken": {
+    "name": "Hippogriffe",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": true,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "luminosity": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5
+      },
+      "color": null,
+      "coloration": 1,
+      "attenuation": 0.5,
+      "contrast": 0,
+      "saturation": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "flags": {}
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

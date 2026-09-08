@@ -1,0 +1,18 @@
+{
+    "_id": "cp0059cigueaquat",
+    "name": "Ciguë aquatique",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>Plante aquatique toxique pouvant être utilisée comme ingrédient de potions.</p>",
+        "rarity": "rare",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Poison de vieillissement, Ratatinage, Cirassure, Baume à bec, Baume d'asclépiade tubéreuse",
+        "otherUses": "Vertu médicinale"
+    }
+}

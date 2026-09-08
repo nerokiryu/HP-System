@@ -1,0 +1,16 @@
+{
+  "_id": "sp6004Portoloin",
+  "name": "Portoloin",
+  "type": "spell",
+  "img": "icons/svg/door-exit.svg",
+  "system": {
+    "description": "<p>Transforme un objet en Portoloin qui téléporte quiconque le touche à l'heure prévue par le lanceur.</p>",
+    "spellLevel": 6,
+    "malus": -90,
+    "spellType": "E",
+    "target": "O",
+    "incantation": "Portus",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

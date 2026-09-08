@@ -1,0 +1,4674 @@
+[
+    {
+        "_id": "sp0001AirChaud",
+        "name": "Air Chaud",
+        "type": "spell",
+        "img": "icons/svg/fire.svg",
+        "system": {
+            "description": "<p>Produit un courant d'air chaud depuis la baguette.</p>",
+            "spellLevel": 0,
+            "malus": 0,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp0002BoulNeige",
+        "name": "Boule de neige",
+        "type": "spell",
+        "img": "icons/svg/ice-aura.svg",
+        "system": {
+            "description": "<p>Crée une boule de neige magique entre les mains du lanceur.</p>",
+            "spellLevel": 0,
+            "malus": 0,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp0003Bulles",
+        "name": "Bulles",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Fait apparaître des bulles de savon colorées depuis la baguette.</p>",
+            "spellLevel": 0,
+            "malus": 0,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp0004ChauffBois",
+        "name": "Chauffe-boisson",
+        "type": "spell",
+        "img": "icons/svg/fire.svg",
+        "system": {
+            "description": "<p>Réchauffe une boisson contenue dans un récipient.</p>",
+            "spellLevel": 0,
+            "malus": 0,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp0005Creation",
+        "name": "Création temporaire",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Crée un petit objet simple et fragile pour quelques minutes.</p>",
+            "spellLevel": 0,
+            "malus": 0,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp0006FloconNei",
+        "name": "Flocon de neige",
+        "type": "spell",
+        "img": "icons/svg/ice-aura.svg",
+        "system": {
+            "description": "<p>Fait apparaître quelques flocons de neige tombant lentement.</p>",
+            "spellLevel": 0,
+            "malus": 0,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp0007MagieDome",
+        "name": "Magie domestique",
+        "type": "spell",
+        "img": "icons/svg/house.svg",
+        "system": {
+            "description": "<p>Effectue une petite tâche ménagère simple (plier un vêtement, ranger un livre, etc.).</p>",
+            "spellLevel": 0,
+            "malus": 0,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp0008Nettoyage",
+        "name": "Nettoyage",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Nettoie un objet ou une petite surface de la saleté et de la poussière.</p>",
+            "spellLevel": 0,
+            "malus": 0,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "Tergeo",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp0009Parapluie",
+        "name": "Parapluie",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Crée un petit écran protecteur contre la pluie au-dessus du lanceur.</p>",
+            "spellLevel": 0,
+            "malus": 0,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "Impervius",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp0010Ruban",
+        "name": "Ruban",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Fait apparaître un ruban coloré depuis la baguette.</p>",
+            "spellLevel": 0,
+            "malus": 0,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp0011Tricot",
+        "name": "Tricot",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Fait tricoter des aiguilles magiquement de façon autonome.</p>",
+            "spellLevel": 0,
+            "malus": 0,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1001Lumos",
+        "name": "Lumière (Lumos)",
+        "type": "spell",
+        "img": "icons/svg/light.svg",
+        "system": {
+            "description": "<p>Produit un faisceau lumineux depuis l'extrémité de la baguette. Éclaire un rayon de 5 mètres environ.</p>",
+            "spellLevel": 1,
+            "malus": 0,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "Lumos",
+            "extremeFormula": true,
+            "malusExtremeFormula": -10
+        }
+    },
+    {
+        "_id": "sp1002Nox",
+        "name": "Obscurité (Nox)",
+        "type": "spell",
+        "img": "icons/svg/blind.svg",
+        "system": {
+            "description": "<p>Éteint la lumière produite par Lumos.</p>",
+            "spellLevel": 1,
+            "malus": 0,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "Nox",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1003Wingardiu",
+        "name": "Lévitation d'objet",
+        "type": "spell",
+        "img": "icons/svg/up.svg",
+        "system": {
+            "description": "<p>Fait léviter un objet de taille modérée (max ~10 kg). Durée : concentration.</p>",
+            "spellLevel": 1,
+            "malus": -5,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "Wingardium Leviosa",
+            "extremeFormula": true,
+            "malusExtremeFormula": -15
+        }
+    },
+    {
+        "_id": "sp1004Alohomora",
+        "name": "Déverrouillage",
+        "type": "spell",
+        "img": "icons/svg/padlock.svg",
+        "system": {
+            "description": "<p>Ouvre une serrure simple (non magique). Les serrures complexes ou enchantées résistent.</p>",
+            "spellLevel": 1,
+            "malus": -5,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "Alohomora",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1005Collaporta",
+        "name": "Fermeture",
+        "type": "spell",
+        "img": "icons/svg/padlock.svg",
+        "system": {
+            "description": "<p>Verrouille magiquement une porte ou un coffre. Résistance modérée à l'ouverture.</p>",
+            "spellLevel": 1,
+            "malus": -5,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "Collaporta",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1006Incendio",
+        "name": "Combustion",
+        "type": "spell",
+        "img": "icons/svg/fire.svg",
+        "system": {
+            "description": "<p>Enflamme un objet inflammable ciblé. Ne fonctionne pas sur les créatures vivantes directement.</p>",
+            "spellLevel": 1,
+            "malus": -5,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "Incendio",
+            "extremeFormula": true,
+            "malusExtremeFormula": -15
+        }
+    },
+    {
+        "_id": "sp1007Extinction",
+        "name": "Extinction",
+        "type": "spell",
+        "img": "icons/svg/fire.svg",
+        "system": {
+            "description": "<p>Éteint un feu de taille modérée (bougie, cheminée, torche).</p>",
+            "spellLevel": 1,
+            "malus": 0,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "Aguamenti",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1008Crochepied",
+        "name": "Croche-pied",
+        "type": "spell",
+        "img": "icons/svg/falling.svg",
+        "system": {
+            "description": "<p>Fait trébucher la cible. Celle-ci doit réussir un jet de DEX×5 ou tomber.</p>",
+            "spellLevel": 1,
+            "malus": -5,
+            "spellType": "S",
+            "target": "P",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1009Allumette",
+        "name": "Allumette en aiguille",
+        "type": "spell",
+        "img": "icons/svg/upgrade.svg",
+        "system": {
+            "description": "<p>Transforme une allumette en aiguille à coudre. Premier exercice de métamorphose.</p>",
+            "spellLevel": 1,
+            "malus": -5,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1010EclatLum",
+        "name": "Éclat lumineux",
+        "type": "spell",
+        "img": "icons/svg/light.svg",
+        "system": {
+            "description": "<p>Produit un flash lumineux aveuglant pendant un instant. Les cibles proches doivent réussir un jet de PER×3 ou être éblouies 1 round.</p>",
+            "spellLevel": 1,
+            "malus": -5,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1011Ligotage",
+        "name": "Ligotage",
+        "type": "spell",
+        "img": "icons/svg/net.svg",
+        "system": {
+            "description": "<p>Des cordes magiques s'enroulent autour de la cible, l'immobilisant. La cible peut tenter un jet de FOR×5 pour se libérer.</p>",
+            "spellLevel": 1,
+            "malus": -10,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "Incarcerous",
+            "extremeFormula": true,
+            "malusExtremeFormula": -20
+        }
+    },
+    {
+        "_id": "sp1012Detonation",
+        "name": "Détonation",
+        "type": "spell",
+        "img": "icons/svg/explosion.svg",
+        "system": {
+            "description": "<p>Produit un bruit assourdissant depuis la baguette, effrayant les créatures proches.</p>",
+            "spellLevel": 1,
+            "malus": -5,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1013Annihilare",
+        "name": "Annihilare",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Une variante ancienne du sortilège d’ouverture, un peu plus complexe à employer mais permettant d’ouvrir les portes et les serrures.</p>",
+            "spellLevel": 1,
+            "malus": -20,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "E",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1014Arrachegon",
+        "name": "Arrache-gonds",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Sortilège permettant d’arracher une porte de ses gonds et qui était beaucoup utilisé avant l'importation du sortilège d’ouverture.</p>",
+            "spellLevel": 1,
+            "malus": -10,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "E",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1015Attelle",
+        "name": "Attelle",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Effet : Rend 1 point de vie. Durée : -</p>",
+            "spellLevel": 1,
+            "malus": 0,
+            "spellType": "E",
+            "target": "A/P",
+            "incantation": "E",
+            "extremeFormula": true,
+            "malusExtremeFormula": -20
+        }
+    },
+    {
+        "_id": "sp1016Cranechauv",
+        "name": "Crâne chauve",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Fait disparaître les cheveux de la cible (APP - 1).</p>",
+            "spellLevel": 1,
+            "malus": -5,
+            "spellType": "S",
+            "target": "P",
+            "incantation": "S Calvorio",
+            "extremeFormula": true,
+            "malusExtremeFormula": -5
+        }
+    },
+    {
+        "_id": "sp1017Cranechauv",
+        "name": "Crâne chauve fluo",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Fait tomber tous les poils de la cible et rend le crâne fluorescent (APP - 2).</p>",
+            "spellLevel": 1,
+            "malus": -10,
+            "spellType": "S",
+            "target": "P",
+            "incantation": "Capilum",
+            "extremeFormula": true,
+            "malusExtremeFormula": -10
+        }
+    },
+    {
+        "_id": "sp1018Deliage",
+        "name": "Déliage",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Permet de se défaire de liens magiques ou non. Contre les effets du sort de Ficelage.</p>",
+            "spellLevel": 1,
+            "malus": -10,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "E Emancipare",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1019Dunamis",
+        "name": "Dunamis",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Une variante ancienne du sortilège d’ouverture, un peu plus complexe à employer mais permettant d’ouvrir les portes et les serrures.</p>",
+            "spellLevel": 1,
+            "malus": -25,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "E Dunamis",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1020Etancheite",
+        "name": "Étanchéité",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Enchante une surface. Repousse les substances qui s’y trouvent.</p>",
+            "spellLevel": 1,
+            "malus": -5,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "Impervius",
+            "extremeFormula": true,
+            "malusExtremeFormula": -15
+        }
+    },
+    {
+        "_id": "sp1021Etincelles",
+        "name": "Étincelles vertes",
+        "type": "spell",
+        "img": "icons/svg/sun.svg",
+        "system": {
+            "description": "<p>Libère de petites étincelles vertes qui peuvent causer quelques dommages aux insectes et plantes qu’elles touchent. Effet : 1 dégât</p>",
+            "spellLevel": 1,
+            "malus": 0,
+            "spellType": "E",
+            "target": "A/V",
+            "incantation": "E",
+            "extremeFormula": true,
+            "malusExtremeFormula": -10
+        }
+    },
+    {
+        "_id": "sp1022Explosiond",
+        "name": "Explosion de serrure",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Sortilège qui provoque l'explosion d'une serrure, la rendant inutilisable.</p>",
+            "spellLevel": 1,
+            "malus": -10,
+            "spellType": "S",
+            "target": "O",
+            "incantation": "S",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1023Finestra",
+        "name": "Finestra",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Permet de faire voler la vitre d'une fenêtre en minuscules éclats. Ce sort ne cause cependant aucun bruit.</p>",
+            "spellLevel": 1,
+            "malus": -5,
+            "spellType": "S",
+            "target": "O",
+            "incantation": "Finestra",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1024Flambois",
+        "name": "Flambois",
+        "type": "spell",
+        "img": "icons/svg/fire.svg",
+        "system": {
+            "description": "<p>permettant de dessiner une marque enflammée. Fait apparaître des fleurs à l'extrémité de la baguette.</p>",
+            "spellLevel": 1,
+            "malus": -5,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "E -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1025Fleurmagiq",
+        "name": "Fleur magique",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Fait apparaître des fleurs à l'extrémité de la baguette.</p>",
+            "spellLevel": 1,
+            "malus": -10,
+            "spellType": "M",
+            "target": "X",
+            "incantation": "M",
+            "extremeFormula": true,
+            "malusExtremeFormula": -10
+        }
+    },
+    {
+        "_id": "sp1026Folleoreil",
+        "name": "Folleoreille",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Fait remuer frénétiquement les oreilles d’une personne, ce qui diminue considérablement sa concentration. Donne un malus de 5% pour jeter des sorts et pour toute autre action nécessitant de se concentrer.</p>",
+            "spellLevel": 1,
+            "malus": -5,
+            "spellType": "S",
+            "target": "P",
+            "incantation": "S",
+            "extremeFormula": true,
+            "malusExtremeFormula": -20
+        }
+    },
+    {
+        "_id": "sp1027Hydrophobi",
+        "name": "Hydrophobie",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Permet de rendre un objet hydrophobe durant un certain temps. Celui- ci repousse alors tous les liquides qui entrent en contact avec lui.</p>",
+            "spellLevel": 1,
+            "malus": -20,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "E -",
+            "extremeFormula": true,
+            "malusExtremeFormula": -10
+        }
+    },
+    {
+        "_id": "sp1028Lacer",
+        "name": "Lacer",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Attache les lacets de la cible, jet de DEXx3 pour rester debout et un round pour les détacher.</p>",
+            "spellLevel": 1,
+            "malus": -10,
+            "spellType": "S",
+            "target": "P",
+            "incantation": "Laqueare",
+            "extremeFormula": true,
+            "malusExtremeFormula": -30
+        }
+    },
+    {
+        "_id": "sp1029Larmes",
+        "name": "Larmes",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Fait pleurer une personne, malus de 20% à tout ce qui implique la vision durant 1d4 heures</p>",
+            "spellLevel": 1,
+            "malus": 0,
+            "spellType": "S",
+            "target": "P",
+            "incantation": "S Lacrimare",
+            "extremeFormula": true,
+            "malusExtremeFormula": -20
+        }
+    },
+    {
+        "_id": "sp1030Liberare",
+        "name": "Liberare",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Une variante ancienne du sortilège d’ouverture, un peu plus complexe à employer mais permettant d’ouvrir les portes et les serrures.</p>",
+            "spellLevel": 1,
+            "malus": -25,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "E Liberare",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1031Liquidever",
+        "name": "Liquide vers Liquide",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Permet de métamorphoser un liquide en un autre. Durée : permanente.</p>",
+            "spellLevel": 1,
+            "malus": -10,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "M -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1032LumiereObs",
+        "name": "Lumière/Obscurité",
+        "type": "spell",
+        "img": "icons/svg/sun.svg",
+        "system": {
+            "description": "<p>E : 0%/10% Durée : volontaire</p>",
+            "spellLevel": 1,
+            "malus": 0,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "Lumos/Nox",
+            "extremeFormula": true,
+            "malusExtremeFormula": -10
+        }
+    },
+    {
+        "_id": "sp1033Maleficede",
+        "name": "Maléfice de Jambencoton",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Impose un malus de 50 % à toute action utilisant les jambes.</p>",
+            "spellLevel": 1,
+            "malus": -15,
+            "spellType": "S",
+            "target": "P",
+            "incantation": "S Digitus Wibbly",
+            "extremeFormula": true,
+            "malusExtremeFormula": -25
+        }
+    },
+    {
+        "_id": "sp1034Objetenboi",
+        "name": "Objet en boîte d’allumettes",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Métamorphose un petit objet en boîte d’allumettes</p>",
+            "spellLevel": 1,
+            "malus": -15,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "M",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1035ObjetenOis",
+        "name": "Objet en Oiseau",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Transforme un objet en oiseau vivant de même taille ou en une volée d’oiseaux.</p>",
+            "spellLevel": 1,
+            "malus": -10,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "Avifors",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1036ObjetversO",
+        "name": "Objet vers Objet",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Permet de métamorphoser un objet en un autre.</p>",
+            "spellLevel": 1,
+            "malus": -10,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1037Objetschan",
+        "name": "Objets chantant",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Permet de faire chanter les objets enchantés</p>",
+            "spellLevel": 1,
+            "malus": -5,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "Cantis",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1038Oiseauxdel",
+        "name": "Oiseaux de lumière",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Permet de faire jaillir de petits oiseaux de lumière de sa baguette.</p>",
+            "spellLevel": 1,
+            "malus": -15,
+            "spellType": "M",
+            "target": "X",
+            "incantation": "M -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1039Purificati",
+        "name": "Purification",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Sépare des substances différentes (permet de trier ses lentilles, de retirer les impuretés d’une poudre, de retirer le sable de ses chaussures)</p>",
+            "spellLevel": 1,
+            "malus": -20,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1040QuatrePoin",
+        "name": "Quatre-Points",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Ce sort agit comme une boussole et permet de savoir où est le nord.</p>",
+            "spellLevel": 1,
+            "malus": -10,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "E",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1041Ralentisse",
+        "name": "Ralentissement",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>E : 5%/25% 2. (Opposition : POU/DEX)</p>",
+            "spellLevel": 1,
+            "malus": -5,
+            "spellType": "S",
+            "target": "A",
+            "incantation": "Leniter",
+            "extremeFormula": true,
+            "malusExtremeFormula": -25
+        }
+    },
+    {
+        "_id": "sp1042Rechauffem",
+        "name": "Réchauffement",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>E : 0%/15% Durée : -</p>",
+            "spellLevel": 1,
+            "malus": 0,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "Calefare",
+            "extremeFormula": true,
+            "malusExtremeFormula": -15
+        }
+    },
+    {
+        "_id": "sp1043Recurage",
+        "name": "Récurage",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Portée : 1,5m Durée : permanente</p>",
+            "spellLevel": 1,
+            "malus": -5,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "E Récurvite",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1044Refroidiss",
+        "name": "Refroidissement",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>E : 0%/15% Durée : -</p>",
+            "spellLevel": 1,
+            "malus": 0,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "Frigidus",
+            "extremeFormula": true,
+            "malusExtremeFormula": -15
+        }
+    },
+    {
+        "_id": "sp1045Repoussede",
+        "name": "Repousse des cheveux",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Permet de faire rapidement repousser les cheveux</p>",
+            "spellLevel": 1,
+            "malus": -10,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "E -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1046Revelation",
+        "name": "Révélation",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Fait apparaître quelque chose qui a été caché par magie ou non (Opposition : Niv / Niv).</p>",
+            "spellLevel": 1,
+            "malus": 0,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "Aparecium",
+            "extremeFormula": true,
+            "malusExtremeFormula": -30
+        }
+    },
+    {
+        "_id": "sp1047Rotation",
+        "name": "Rotation",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Permet de faire pivoter des objets d’une taille maximale de POUx10 m3</p>",
+            "spellLevel": 1,
+            "malus": -10,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "Circumrota",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1048Secheresse",
+        "name": "Sécheresse",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Permet d’assécher de petites étendues d’eau.</p>",
+            "spellLevel": 1,
+            "malus": -15,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "E -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1049Sortileged",
+        "name": "Sortilège d’eau",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Produit de l’eau qui sort à l’extrémité de la baguette. La puissance du jet est variable, et peut aussi bien servir à étancher la soif qu'à éteindre un incendie.</p>",
+            "spellLevel": 1,
+            "malus": -5,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "Aguamenti",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1050Sortileged",
+        "name": "Sortilège de feu",
+        "type": "spell",
+        "img": "icons/svg/fire.svg",
+        "system": {
+            "description": "<p>chance d’enflammer. Durée : volontaire</p>",
+            "spellLevel": 1,
+            "malus": -10,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "Incendio",
+            "extremeFormula": true,
+            "malusExtremeFormula": -25
+        }
+    },
+    {
+        "_id": "sp1051Sourisenta",
+        "name": "Souris en tabatière",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Métamorphose une souris en tabatière</p>",
+            "spellLevel": 1,
+            "malus": -10,
+            "spellType": "M",
+            "target": "A",
+            "incantation": "M Buxulafors",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1052Surfacemir",
+        "name": "Surface miroir",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Fait apparaître une surface argentée sur un support, qui reflète tout ce qui passe devant.</p>",
+            "spellLevel": 1,
+            "malus": 0,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "Mirare",
+            "extremeFormula": true,
+            "malusExtremeFormula": -20
+        }
+    },
+    {
+        "_id": "sp1053Tergeo",
+        "name": "Tergeo",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Créer un siphon depuis la baguette qui débarrasse une cible du sang, de la graisse et d’autres taches et saletés.</p>",
+            "spellLevel": 1,
+            "malus": -5,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "Tergeo",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1054Valise",
+        "name": "Valise",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Permet de faire que ses affaires se rangent toutes seules.</p>",
+            "spellLevel": 1,
+            "malus": -5,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "E",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp1055Ventilatio",
+        "name": "Ventilation",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Libère instantanément les voies respiratoires d’une personne en train de s’étouffer.</p>",
+            "spellLevel": 1,
+            "malus": -5,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "Anapneo",
+            "extremeFormula": true,
+            "malusExtremeFormula": -10
+        }
+    },
+    {
+        "_id": "sp2001Expelliarm",
+        "name": "Désarmement",
+        "type": "spell",
+        "img": "icons/svg/sword.svg",
+        "system": {
+            "description": "<p>Fait sauter l'objet tenu par la cible de ses mains. Le sort le plus courant en duel.</p>",
+            "spellLevel": 2,
+            "malus": -10,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "Expelliarmus",
+            "extremeFormula": true,
+            "malusExtremeFormula": -20
+        }
+    },
+    {
+        "_id": "sp2002Protego",
+        "name": "Charme du bouclier",
+        "type": "spell",
+        "img": "icons/svg/shield.svg",
+        "system": {
+            "description": "<p>Crée un bouclier invisible qui bloque les sorts de niveau inférieur ou égal à 2. Durée : 1 round.</p>",
+            "spellLevel": 2,
+            "malus": -10,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "Protego",
+            "extremeFormula": true,
+            "malusExtremeFormula": -20
+        }
+    },
+    {
+        "_id": "sp2003Riddikulus",
+        "name": "Riddikulus",
+        "type": "spell",
+        "img": "icons/svg/comedy.svg",
+        "system": {
+            "description": "<p>Transforme un Épouvantard en quelque chose de ridicule, neutralisant sa capacité à effrayer.</p>",
+            "spellLevel": 2,
+            "malus": -10,
+            "spellType": "E",
+            "target": "A",
+            "incantation": "Riddikulus",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2004Jambencoton",
+        "name": "Bloque-Jambe",
+        "type": "spell",
+        "img": "icons/svg/paralysis.svg",
+        "system": {
+            "description": "<p>Les jambes de la cible se bloquent ensemble, l'empêchant de marcher. Durée : quelques rounds ou jusqu'à contre-sort.</p>",
+            "spellLevel": 2,
+            "malus": -10,
+            "spellType": "S",
+            "target": "P",
+            "incantation": "Locomotor Mortis",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2005Repoustout",
+        "name": "Repoustout",
+        "type": "spell",
+        "img": "icons/svg/thrust.svg",
+        "system": {
+            "description": "<p>Repousse violemment la cible à plusieurs mètres. Inflige 1d3 dégâts non-létaux.</p>",
+            "spellLevel": 2,
+            "malus": -10,
+            "spellType": "S",
+            "target": "P",
+            "incantation": "Flipendo",
+            "extremeFormula": true,
+            "malusExtremeFormula": -20
+        }
+    },
+    {
+        "_id": "sp2006Conjonctivi",
+        "name": "Conjonctivite",
+        "type": "spell",
+        "img": "icons/svg/blind.svg",
+        "system": {
+            "description": "<p>Enfle les paupières de la cible, réduisant sa vision. Malus de -25% aux actions nécessitant la vue pendant 1d6 rounds.</p>",
+            "spellLevel": 2,
+            "malus": -15,
+            "spellType": "S",
+            "target": "P",
+            "incantation": "Conjunctivitis",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2007Spongifica",
+        "name": "Spongification",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Rend un objet mou et spongieux. Utile pour amortir des chutes ou rendre un obstacle déformable.</p>",
+            "spellLevel": 2,
+            "malus": -10,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "Spongify",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2008ChangeCol",
+        "name": "Changement de couleur",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Change la couleur d'un objet ou des cheveux/sourcils de la cible. Purement cosmétique, durée variable.</p>",
+            "spellLevel": 2,
+            "malus": -5,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "Colovaria",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2009Entrave",
+        "name": "Entrave",
+        "type": "spell",
+        "img": "icons/svg/net.svg",
+        "system": {
+            "description": "<p>Ralentit considérablement la cible. Son mouvement est réduit de moitié et elle subit -10% aux jets de DEX pendant 1d6 rounds.</p>",
+            "spellLevel": 2,
+            "malus": -10,
+            "spellType": "S",
+            "target": "P",
+            "incantation": "Impedimenta",
+            "extremeFormula": true,
+            "malusExtremeFormula": -20
+        }
+    },
+    {
+        "_id": "sp2010PorteVoix",
+        "name": "Porte-voix",
+        "type": "spell",
+        "img": "icons/svg/sound.svg",
+        "system": {
+            "description": "<p>Amplifie la voix du lanceur comme un mégaphone magique. Durée : concentration.</p>",
+            "spellLevel": 2,
+            "malus": -5,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "Sonorus",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2011ObjAnimal",
+        "name": "Objet en animal",
+        "type": "spell",
+        "img": "icons/svg/upgrade.svg",
+        "system": {
+            "description": "<p>Transforme un petit objet en un animal correspondant à sa taille. L'animal disparaît après quelques minutes.</p>",
+            "spellLevel": 2,
+            "malus": -15,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2012Ascension",
+        "name": "Ascension",
+        "type": "spell",
+        "img": "icons/svg/up.svg",
+        "system": {
+            "description": "<p>Fait monter lentement la cible dans les airs (jusqu'à 3 mètres). Durée : concentration.</p>",
+            "spellLevel": 2,
+            "malus": -10,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "Ascendio",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2013Annulation",
+        "name": "Annulation de fonctionne cependant pas sur les métamorphoses complètes.",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>fonctionne cependant pas sur les métamorphoses complètes. Durée : -</p>",
+            "spellLevel": 2,
+            "malus": -15,
+            "spellType": "M",
+            "target": "V",
+            "incantation": "M Réparifagex /P/",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2014Antiouvert",
+        "name": "Anti-ouverture",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>manière différente pour chque sortilège d’ouverture. Durée : POU jours</p>",
+            "spellLevel": 2,
+            "malus": -20,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "E -",
+            "extremeFormula": true,
+            "malusExtremeFormula": -25
+        }
+    },
+    {
+        "_id": "sp2015Brouillard",
+        "name": "Brouillard",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Fait sortir du brouillard par l’extrémité de la baguette permettant de se camoufler. Zone : Ce brouillard se répand sur POUx2 mètres de rayon. Durée : Variable (heures). Effets : Observation = PERceptionx2</p>",
+            "spellLevel": 2,
+            "malus": 0,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "Nebulus",
+            "extremeFormula": true,
+            "malusExtremeFormula": -20
+        }
+    },
+    {
+        "_id": "sp2016Charmer",
+        "name": "Charmer",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Charme une cible et la rend amoureuse de soi durant 1d6+1 rounds. Le sort ne peut plus être lancé pendant une période équivalente à celle passée sous le charme. (Opposition : APP/POU)</p>",
+            "spellLevel": 2,
+            "malus": 0,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "Delecto",
+            "extremeFormula": true,
+            "malusExtremeFormula": -30
+        }
+    },
+    {
+        "_id": "sp2017Cheveuxdru",
+        "name": "Cheveux drus",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Permet de faire pousser les cheveux de manière disproportionnée, gênant la vue de la cible. Jet d’observation = PERx2 (au lieu de PERx5).</p>",
+            "spellLevel": 2,
+            "malus": -20,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "E -",
+            "extremeFormula": true,
+            "malusExtremeFormula": -30
+        }
+    },
+    {
+        "_id": "sp2018Colle",
+        "name": "Colle",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Colle les pieds d’une personne ou les pattes d’un animal au sol. Ceux- ci doivent réussir un jet de FORx3 pour se libérer.</p>",
+            "spellLevel": 2,
+            "malus": 0,
+            "spellType": "S",
+            "target": "X",
+            "incantation": "S",
+            "extremeFormula": true,
+            "malusExtremeFormula": -30
+        }
+    },
+    {
+        "_id": "sp2019Couleurdes",
+        "name": "Couleur des cheveux",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Permet de changer la couleur des cheveux d’une personne</p>",
+            "spellLevel": 2,
+            "malus": -15,
+            "spellType": "M",
+            "target": "P",
+            "incantation": "Crinus Muto",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2020Couleursde",
+        "name": "Couleurs d’encre",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>vers bleu, vers jaune, vers noir et ainsi de suite) Durée : Permanent ou - Remarque : Cet enchantement est utilisé pour enchanter l’encre multicolore vendue en magasin.</p>",
+            "spellLevel": 2,
+            "malus": -20,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "E -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2021CoupeGriff",
+        "name": "Coupe-Griffes",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Permet de couper les griffes d’une créature magique ou non.</p>",
+            "spellLevel": 2,
+            "malus": -10,
+            "spellType": "E",
+            "target": "A",
+            "incantation": "E -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2022Cuisant",
+        "name": "Cuisant",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Ce maléfice provoque une douleur cuisante et gonfle le visage de la cible pour le rendre méconnaissable. Effet : APP-5.</p>",
+            "spellLevel": 2,
+            "malus": -30,
+            "spellType": "S",
+            "target": "P",
+            "incantation": "",
+            "extremeFormula": true,
+            "malusExtremeFormula": -30
+        }
+    },
+    {
+        "_id": "sp2023Danseendia",
+        "name": "Danse endiablée",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Fait danser de manière incontrôlable ce qui donne un malus de 40 % à toutes les actions, à l’exception de la magie qui a un malus de 20%.</p>",
+            "spellLevel": 2,
+            "malus": -20,
+            "spellType": "S",
+            "target": "X",
+            "incantation": "S Tarentallegra",
+            "extremeFormula": true,
+            "malusExtremeFormula": -45
+        }
+    },
+    {
+        "_id": "sp2024Deplacemen",
+        "name": "Déplacement",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Permet de déplacer un objet ou une personne inconsciente par télékinésie.</p>",
+            "spellLevel": 2,
+            "malus": 0,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "Mobili « nom »",
+            "extremeFormula": true,
+            "malusExtremeFormula": -45
+        }
+    },
+    {
+        "_id": "sp2025Descente",
+        "name": "Descente",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Un sort permettant de faire descendre ou tomber un ou plusieurs objets.</p>",
+            "spellLevel": 2,
+            "malus": -15,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "E Descendo",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2026Discretion",
+        "name": "Discrétion",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Diminue considérablement les sons émis par une personne. Effet : donne un bonus de 30 % à la discrétion.</p>",
+            "spellLevel": 2,
+            "malus": -20,
+            "spellType": "E",
+            "target": "A/P",
+            "incantation": "Sonus evanesco",
+            "extremeFormula": true,
+            "malusExtremeFormula": -45
+        }
+    },
+    {
+        "_id": "sp2027Ectoplasmu",
+        "name": "Ectoplasmus",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>E : 10% / Effet : cause 1d4+1 points de dégâts aux points d’existence d'un Esprit 30% ou d'un Non-Être</p>",
+            "spellLevel": 2,
+            "malus": -25,
+            "spellType": "E",
+            "target": "A/P",
+            "incantation": "E Ectoplasmus",
+            "extremeFormula": true,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2028Elasticite",
+        "name": "Élasticité",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Effet principal : Rend les membres élastiques ce qui leurs permet de s’allonger d’un mètre de long Effet secondaire : Diminue la FORce de 1 point</p>",
+            "spellLevel": 2,
+            "malus": -15,
+            "spellType": "M",
+            "target": "P",
+            "incantation": "Elasticum",
+            "extremeFormula": true,
+            "malusExtremeFormula": -35
+        }
+    },
+    {
+        "_id": "sp2029Empoigne",
+        "name": "Empoigne",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Permet d’ensorceler un objet afin que celui-ci soit plus facile à tenir.</p>",
+            "spellLevel": 2,
+            "malus": -20,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "E -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2030Epoximise",
+        "name": "Epoximise",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Rend un objet extrêmement collant, obligeant la cible à user d’un sortilège ou de force pour s’en défaire. (Opposition : FORx2).</p>",
+            "spellLevel": 2,
+            "malus": -30,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "M Epoximise",
+            "extremeFormula": true,
+            "malusExtremeFormula": -30
+        }
+    },
+    {
+        "_id": "sp2031Equilibre",
+        "name": "Équilibre",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Empêche le personnage d’être déséquilibré. Donne un bonus de 50% en Athlétisme pour escalader et 40% en acrobatie.</p>",
+            "spellLevel": 2,
+            "malus": -25,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "E Equilibrium",
+            "extremeFormula": true,
+            "malusExtremeFormula": -45
+        }
+    },
+    {
+        "_id": "sp2032Etincelles",
+        "name": "Étincelles blanches",
+        "type": "spell",
+        "img": "icons/svg/sun.svg",
+        "system": {
+            "description": "<p>Projette des étincelles blanches sur un adversaire, lui occasionnant 1 dégât non létal. (Opposition : POU/POU).</p>",
+            "spellLevel": 2,
+            "malus": -10,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "E Baubillious",
+            "extremeFormula": true,
+            "malusExtremeFormula": -30
+        }
+    },
+    {
+        "_id": "sp2033Faitdispar",
+        "name": "Fait disparaître les cheveux de la cible (APP - 1).",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Fait disparaître les cheveux de la cible (APP - 1).</p>",
+            "spellLevel": 2,
+            "malus": 0,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2034Ficelage",
+        "name": "Ficelage",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Contrairement au Sort de ligotage, le sortilège de ficelage ne bloque que les mains ou les poignets de la cible grâce à des liens dorés. Pour se libérer, la cible doit réussir un jet en opposition (POU/DEX).</p>",
+            "spellLevel": 2,
+            "malus": 0,
+            "spellType": "M",
+            "target": "P",
+            "incantation": "M",
+            "extremeFormula": true,
+            "malusExtremeFormula": -20
+        }
+    },
+    {
+        "_id": "sp2035Flammesble",
+        "name": "Flammes bleues",
+        "type": "spell",
+        "img": "icons/svg/fire.svg",
+        "system": {
+            "description": "<p>l’eau. Durée : POU heures Génère une boule de feu tenant dans la main du Sorcier sans le brûler.</p>",
+            "spellLevel": 2,
+            "malus": -15,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "E -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2036Flammesenm",
+        "name": "Flammes en main",
+        "type": "spell",
+        "img": "icons/svg/fire.svg",
+        "system": {
+            "description": "<p>Génère une boule de feu tenant dans la main du Sorcier sans le brûler.</p>",
+            "spellLevel": 2,
+            "malus": -20,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2037Fouet",
+        "name": "Fouet",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Change le bout de sa baguette en fouet, qui peut être employé comme tel pour attaque quelqu’un, se saisir d’un objet, etc.</p>",
+            "spellLevel": 2,
+            "malus": -20,
+            "spellType": "M",
+            "target": "X",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2038Fourrure",
+        "name": "Fourrure",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Durée : POU heures Enchante les balais pour les aider à freiner. Plus le sortilège est maîtrisé et plus le balai freine avec efficacité. Effets : octroie un bonus en vol en balai allant de 1 à 5% quand le balais</p>",
+            "spellLevel": 2,
+            "malus": -15,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "E -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2039Freinage",
+        "name": "Freinage",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>est utilisé Durée : Permanente.</p>",
+            "spellLevel": 2,
+            "malus": -20,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "E -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2040Giclepus",
+        "name": "Gicle-pus",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Provoque de fortes sécrétions de pus depuis le nez de la victime Effets : APParence -1 ; Odorat = PERceptionx1</p>",
+            "spellLevel": 2,
+            "malus": -20,
+            "spellType": "S",
+            "target": "P",
+            "incantation": "S -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2041GrandeTete",
+        "name": "Grande-Tête",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>E : 10%/30% Durée : 1d4+2 heures Remarque : L’effet peut être dissipé avec un philtre dégonflant</p>",
+            "spellLevel": 2,
+            "malus": 0,
+            "spellType": "S",
+            "target": "A/P",
+            "incantation": "S Caput augmento",
+            "extremeFormula": true,
+            "malusExtremeFormula": -30
+        }
+    },
+    {
+        "_id": "sp2042Herissonen",
+        "name": "Hérisson en pelote à épingles",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Métamorphose un hérisson en pelote à épingles</p>",
+            "spellLevel": 2,
+            "malus": -40,
+            "spellType": "M",
+            "target": "A",
+            "incantation": "Hystrifors",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2043Huilegliss",
+        "name": "Huile glissante",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>E : 15%/35% Durée : variable (heures)</p>",
+            "spellLevel": 2,
+            "malus": 0,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "E Scandere",
+            "extremeFormula": true,
+            "malusExtremeFormula": -35
+        }
+    },
+    {
+        "_id": "sp2044Illisibili",
+        "name": "Illisibilité",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Rend un texte illisible. Peut être levé par un sortilège Finite Incantatem.</p>",
+            "spellLevel": 2,
+            "malus": -15,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "Illegibilus",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2045Inversion",
+        "name": "Inversion",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>E : 10%/30% Durée : -</p>",
+            "spellLevel": 2,
+            "malus": -30,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "",
+            "extremeFormula": true,
+            "malusExtremeFormula": -30
+        }
+    },
+    {
+        "_id": "sp2046Lapinenpan",
+        "name": "Lapin en pantoufles",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Métamorphose un lapin en paire de pantoufles</p>",
+            "spellLevel": 2,
+            "malus": -20,
+            "spellType": "M",
+            "target": "A",
+            "incantation": "M Soccusfors",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2047Liberation",
+        "name": "Libération",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Ce maléfice sert à faire lâcher prise ou à ouvrir des liens, magiques ou non. Durée : -</p>",
+            "spellLevel": 2,
+            "malus": -30,
+            "spellType": "S",
+            "target": "A/P",
+            "incantation": "Lashlabask",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2048Locomotion",
+        "name": "Locomotion",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Permet de faire déplacer des objets.</p>",
+            "spellLevel": 2,
+            "malus": -15,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "Locomotor",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2049Maintien",
+        "name": "Maintien",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Permet de maintenir en place un objet, le rendant plus difficile à déplacer ou détruire (augmente la difficulté de 1 unité FORx3àFORx2 par exemple)</p>",
+            "spellLevel": 2,
+            "malus": -20,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2050Maleficede",
+        "name": "Maléfice de Melofors",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>C : 20% Effet : Aveugle la cible Sous-type : Maléfice Opposition : Jet de FORce x1 pour briser la citrouille et la retirer, ou anti-maléfice pour la dissiper Durée : Permanente</p>",
+            "spellLevel": 2,
+            "malus": -20,
+            "spellType": "S",
+            "target": "P",
+            "incantation": "S Melofors",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2051Montage",
+        "name": "Montage",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Permet de monter une structure en pièce détachée comme une tente ou un échafaudage</p>",
+            "spellLevel": 2,
+            "malus": -20,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "E Erigo",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2052Objetenplu",
+        "name": "Objet en plume",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>C : 20% Durée : permanente</p>",
+            "spellLevel": 2,
+            "malus": -20,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "M Scribblifors",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2053ObjetenPri",
+        "name": "Objet en Prison",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>C : 30% Durée : permanente</p>",
+            "spellLevel": 2,
+            "malus": -30,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "Incarcifos",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2054Obliterati",
+        "name": "Oblitération",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>C : 15% Durée : - Portée : POUvoir mètres</p>",
+            "spellLevel": 2,
+            "malus": -15,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2055OuvreCaiss",
+        "name": "Ouvre-Caisse",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>C : 10% couvercle ou leur(s) porte(s). Durée : -</p>",
+            "spellLevel": 2,
+            "malus": -10,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "E Cistem Aperio",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2056Parole",
+        "name": "Parole",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>C : 20% des mots isolés, de plus en plus rapprochés et de plus en plus aigus. Durée : POUx3 minutes Permet de rendre un objet aussi léger qu’une plume.</p>",
+            "spellLevel": 2,
+            "malus": -20,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "E -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2057Poidsplume",
+        "name": "Poids-plume",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>C : 25% Durée : POU heures Métamorphose un porc-épic en pelote à épingles</p>",
+            "spellLevel": 2,
+            "malus": -25,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "E -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2058Porcepique",
+        "name": "Porc-épique en pelote à épingles",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Métamorphose un porc-épic en pelote à épingles.</p>",
+            "spellLevel": 2,
+            "malus": -20,
+            "spellType": "M",
+            "target": "A",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2059Ratatinage",
+        "name": "Ratatinage",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Fait rétrécir un objet, un animal ou une plante en divisant sa taille par 2 durant 1d4+2 heures. Les effets du sort se dissipent ensuite d’eux- mêmes ou peuvent être dissipés par une contre-incantation. (POU/POU).</p>",
+            "spellLevel": 2,
+            "malus": -25,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "E Reducio",
+            "extremeFormula": true,
+            "malusExtremeFormula": -25
+        }
+    },
+    {
+        "_id": "sp2060Renverseme",
+        "name": "Renversement",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Fait violemment trébucher la cible immobile en l’envoyant voler à une dizaine de mètres en arrière. Cause 1 point de dégât à la cible si elle ne réussit pas un jet de DEXx3.</p>",
+            "spellLevel": 2,
+            "malus": -15,
+            "spellType": "S",
+            "target": "A/P",
+            "incantation": "Everte Statum",
+            "extremeFormula": true,
+            "malusExtremeFormula": -35
+        }
+    },
+    {
+        "_id": "sp2061Repoussecr",
+        "name": "Repousse créature",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Repousse instantanément un animal magique ou non le plus loin possible du sorcier. (Opposition : POU/FOR).</p>",
+            "spellLevel": 2,
+            "malus": -25,
+            "spellType": "E",
+            "target": "A",
+            "incantation": "E « Nom » Exumai",
+            "extremeFormula": true,
+            "malusExtremeFormula": -25
+        }
+    },
+    {
+        "_id": "sp2062Scarabeeen",
+        "name": "Scarabée en bouton",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>C : 20% Durée : permanente</p>",
+            "spellLevel": 2,
+            "malus": -20,
+            "spellType": "M",
+            "target": "A",
+            "incantation": "Bullatusfors",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2063Sortileged",
+        "name": "Sortilège de planage",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Fait léviter un objet au-dessus du sol pendant POUvoir secondes. Le Sorcier peut donner une trajectoire en ligne droite à l’objet en lévitation, qui la suivra le temps de fonctionnement de celui-ci</p>",
+            "spellLevel": 2,
+            "malus": -15,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "E -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2064Spiraledev",
+        "name": "Spirale de vent",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>10%/25% Durée : Variable (rounds). Effets : Déplacements divisés par 2.</p>",
+            "spellLevel": 2,
+            "malus": 0,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "Ventus",
+            "extremeFormula": true,
+            "malusExtremeFormula": -25
+        }
+    },
+    {
+        "_id": "sp2065Surdite",
+        "name": "Surdité",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>10%/30% pour l’écoute. Durée : 1d4 heures. Opposition : POU/POU</p>",
+            "spellLevel": 2,
+            "malus": -15,
+            "spellType": "S",
+            "target": "P",
+            "incantation": "Assurdiato",
+            "extremeFormula": true,
+            "malusExtremeFormula": -30
+        }
+    },
+    {
+        "_id": "sp2066Tetenbulle",
+        "name": "Têtenbulle",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>0%/20% par de mauvaises odeurs. Durée : 1d4+1 heures</p>",
+            "spellLevel": 2,
+            "malus": 0,
+            "spellType": "E",
+            "target": "A/P",
+            "incantation": "E -",
+            "extremeFormula": true,
+            "malusExtremeFormula": -20
+        }
+    },
+    {
+        "_id": "sp2067Videntrail",
+        "name": "Videntraille",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Sous-type : Maléfice</p>",
+            "spellLevel": 2,
+            "malus": -20,
+            "spellType": "S",
+            "target": "A/P",
+            "incantation": "S Laxativus",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp2068Virage",
+        "name": "Virage",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>est utilisé Durée : Permanente.</p>",
+            "spellLevel": 2,
+            "malus": -20,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "E -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3001Agrandiss",
+        "name": "Agrandissement",
+        "type": "spell",
+        "img": "icons/svg/upgrade.svg",
+        "system": {
+            "description": "<p>Agrandit la taille d'un objet jusqu'à deux fois sa taille. Durée : POUvoir minutes.</p>",
+            "spellLevel": 3,
+            "malus": -20,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "",
+            "extremeFormula": true,
+            "malusExtremeFormula": -40
+        }
+    },
+    {
+        "_id": "sp3002Allegresse",
+        "name": "Allégresse",
+        "type": "spell",
+        "img": "icons/svg/sun.svg",
+        "system": {
+            "description": "<p>Met la cible dans un état de bonheur intense. Elle ne peut s'inquiéter durant 1d4+1 heures. Opposition POU/POU.</p>",
+            "spellLevel": 3,
+            "malus": -25,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "Felicitas",
+            "extremeFormula": true,
+            "malusExtremeFormula": -35
+        }
+    },
+    {
+        "_id": "sp3003Blocage",
+        "name": "Blocage",
+        "type": "spell",
+        "img": "icons/svg/frozen.svg",
+        "system": {
+            "description": "<p>Immobilise toute créature ou objet en mouvement. Opposition POU/FOR ou POU/DEX. Durée : POUvoir rounds.</p>",
+            "spellLevel": 3,
+            "malus": -25,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "Immobulus",
+            "extremeFormula": true,
+            "malusExtremeFormula": -40
+        }
+    },
+    {
+        "_id": "sp3004Chatouillis",
+        "name": "Chatouillis",
+        "type": "spell",
+        "img": "icons/svg/wing.svg",
+        "system": {
+            "description": "<p>Fait rire la cible de manière incontrôlée, infligeant un malus de 60% à toutes ses actions. Durée variable (rounds).</p>",
+            "spellLevel": 3,
+            "malus": -30,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "Rictusempera",
+            "extremeFormula": true,
+            "malusExtremeFormula": -40
+        }
+    },
+    {
+        "_id": "sp3005ChauveFuri",
+        "name": "Chauve-Furie",
+        "type": "spell",
+        "img": "icons/svg/wing.svg",
+        "system": {
+            "description": "<p>Lance POU Chauves-Furies au visage d'un adversaire, entravant ses mouvements. Durée variable (rounds).</p>",
+            "spellLevel": 3,
+            "malus": -30,
+            "spellType": "S",
+            "target": "P",
+            "incantation": "",
+            "extremeFormula": true,
+            "malusExtremeFormula": -40
+        }
+    },
+    {
+        "_id": "sp3006ContreEnch",
+        "name": "Contre-Enchantement",
+        "type": "spell",
+        "img": "icons/svg/shield.svg",
+        "system": {
+            "description": "<p>Met immédiatement fin aux effets d'un envoûtement magique ou d'un enchantement sur la cible.</p>",
+            "spellLevel": 3,
+            "malus": -30,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "Surgito",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3007CracheLima",
+        "name": "Crache-Limace",
+        "type": "spell",
+        "img": "icons/svg/skull.svg",
+        "system": {
+            "description": "<p>La cible se met à vomir des limaces de manière ininterrompue pendant 1d6 heures.</p>",
+            "spellLevel": 3,
+            "malus": -25,
+            "spellType": "S",
+            "target": "P",
+            "incantation": "Limacius Eructo",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3008Deflexion",
+        "name": "Déflexion",
+        "type": "spell",
+        "img": "icons/svg/shield.svg",
+        "system": {
+            "description": "<p>Permet de dévier un sort de niveau 3 ou inférieur sur une autre cible.</p>",
+            "spellLevel": 3,
+            "malus": -30,
+            "spellType": "S",
+            "target": "S",
+            "incantation": "Flexus",
+            "extremeFormula": true,
+            "malusExtremeFormula": -45
+        }
+    },
+    {
+        "_id": "sp3009Desillusion",
+        "name": "Désillusion",
+        "type": "spell",
+        "img": "icons/svg/invisible.svg",
+        "system": {
+            "description": "<p>Rend la cible quasi invisible en la camouflant comme un caméléon. Opposition PER/POU pour détecter. Durée : POUvoir minutes.</p>",
+            "spellLevel": 3,
+            "malus": -25,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "",
+            "extremeFormula": true,
+            "malusExtremeFormula": -40
+        }
+    },
+    {
+        "_id": "sp3010EcranFumee",
+        "name": "Écran de fumée",
+        "type": "spell",
+        "img": "icons/svg/fog.svg",
+        "system": {
+            "description": "<p>Crée un épais nuage de fumée noire sur une zone de POUvoir mètres. Durée : POUvoir rounds.</p>",
+            "spellLevel": 3,
+            "malus": -25,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "Fumos",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3011Chance",
+        "name": "Chance",
+        "type": "spell",
+        "img": "icons/svg/sun.svg",
+        "system": {
+            "description": "<p>Augmente la compétence dérivée Chance de la cible de +30%. Durée : POUvoir minutes.</p>",
+            "spellLevel": 3,
+            "malus": -30,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "Felixempra",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3012ChaisChat",
+        "name": "Chaise en chat",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Métamorphose une chaise en chat. Durée : permanente.</p>",
+            "spellLevel": 3,
+            "malus": -35,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "Felifors",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3013Antihoquet",
+        "name": "Anti-hoquet",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Permet de contrer les effets d’un sortilège de hoquet ou d’un hoquet classique.</p>",
+            "spellLevel": 3,
+            "malus": -20,
+            "spellType": "E",
+            "target": "A/P",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3014Antimalefi",
+        "name": "Anti-maléfice de Crottes-de-nez",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Permet de contrer les effets du maléfice de Crottes-de-nez.</p>",
+            "spellLevel": 3,
+            "malus": -25,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "E -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3015Antitriche",
+        "name": "Anti-triche",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Lancé sur un objet, comme un parchemin ou une plume, cet enchantement empêche celui qui emploie l’objet d’avoir recours à la triche.</p>",
+            "spellLevel": 3,
+            "malus": -30,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "E -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3016Boomerang",
+        "name": "Boomerang",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>C :30% Durée : Permanente</p>",
+            "spellLevel": 3,
+            "malus": -30,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "Cateia",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3017Bouchesoud",
+        "name": "Bouche soudée",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Fait disparaître la bouche d’une personne ou d’un animal. La bouche semble alors n'avoir jamais existé, de la peau la recouvrant.</p>",
+            "spellLevel": 3,
+            "malus": 0,
+            "spellType": "S",
+            "target": "A/P",
+            "incantation": "S",
+            "extremeFormula": true,
+            "malusExtremeFormula": -35
+        }
+    },
+    {
+        "_id": "sp3018CarpeRetra",
+        "name": "Carpe Retractum",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>C : 30% Durée : Volontaire Remarque : Une fois l’objet saisi, le Sorcier doit faire preuve de FORce pour pouvoir tirer ce dernier, la corde magique ne servant qu’à relier l’objet visé et la baguette du Sorcier.</p>",
+            "spellLevel": 3,
+            "malus": -30,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "E Carpe Retractum",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3019Catapultag",
+        "name": "Catapultage",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Lancé sur un objet comme un balai magique par exemple, ce sortilège repousse violemment toute personne qui tente de s’en saisir.</p>",
+            "spellLevel": 3,
+            "malus": 0,
+            "spellType": "S",
+            "target": "O",
+            "incantation": "S -",
+            "extremeFormula": true,
+            "malusExtremeFormula": -20
+        }
+    },
+    {
+        "_id": "sp3020Copieillus",
+        "name": "Copie illusoire",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Quand il est lancé, ce sort copie une personne ou un animal pour en créer une copie conforme mais qui n’est en réalité qu’une illusion. Celle- ci peut être envoyée à une distance maximale de POUvoir x 10 mètres avant de se dissiper. Pour percer cette illusion, un jet de PERception x1 doit être effectué.</p>",
+            "spellLevel": 3,
+            "malus": 0,
+            "spellType": "E",
+            "target": "A/P",
+            "incantation": "E -",
+            "extremeFormula": true,
+            "malusExtremeFormula": -30
+        }
+    },
+    {
+        "_id": "sp3021Correcteur",
+        "name": "Correcteur de trajectoire",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Annule complètement les tremblements naturels de celui qui manie le balai et stabilise sa trajectoire de vol.</p>",
+            "spellLevel": 3,
+            "malus": -30,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "E -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3022Cridurut",
+        "name": "Cridurut",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Déclenche une alarme si une personne entre dans la zone d’effet du sortilège. Zone maximale POU mètres de diamètre.</p>",
+            "spellLevel": 3,
+            "malus": -25,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "Cridurut",
+            "extremeFormula": true,
+            "malusExtremeFormula": -35
+        }
+    },
+    {
+        "_id": "sp3023Diminution",
+        "name": "Diminution",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Diminue la taille de la cible jusqu’à ce qu’elle ne mesure plus qu’une trentaine de centimètres.</p>",
+            "spellLevel": 3,
+            "malus": -15,
+            "spellType": "S",
+            "target": "X",
+            "incantation": "Diminuedo",
+            "extremeFormula": true,
+            "malusExtremeFormula": -40
+        }
+    },
+    {
+        "_id": "sp3024Durcisseme",
+        "name": "Durcissement",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Change les petits objets en pierre Maximum 5dm3.</p>",
+            "spellLevel": 3,
+            "malus": 0,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "Duro",
+            "extremeFormula": true,
+            "malusExtremeFormula": -25
+        }
+    },
+    {
+        "_id": "sp3025Ebublio",
+        "name": "Ebublio",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>C : 30% Durée : POUvoir rounds</p>",
+            "spellLevel": 3,
+            "malus": -30,
+            "spellType": "S",
+            "target": "A/P",
+            "incantation": "Ebublio",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3026Etincelles",
+        "name": "Étincelles bleues",
+        "type": "spell",
+        "img": "icons/svg/sun.svg",
+        "system": {
+            "description": "<p>Projette des étincelles bleues sur un adversaire, lui occasionnant 1d4 dégâts non létaux. (Opposition : POU/DEX). En grande quantité, ces étincelles peuvent rendre l’atmosphère difficilement respirable et bloquer la vue en créant un brouillard</p>",
+            "spellLevel": 3,
+            "malus": -20,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "E -",
+            "extremeFormula": true,
+            "malusExtremeFormula": -40
+        }
+    },
+    {
+        "_id": "sp3027Explosiond",
+        "name": "Explosion d’objets",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Détruit un petit objet magique ou non en le faisant exploser. Génère un puissant son d’explosion. Maximum 2dm3 (≈ 1 brique d’un litre de lait)</p>",
+            "spellLevel": 3,
+            "malus": 0,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "E Bombarda",
+            "extremeFormula": true,
+            "malusExtremeFormula": -30
+        }
+    },
+    {
+        "_id": "sp3028Explosiond",
+        "name": "Explosion de caisse",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Cistem Aperio est un sort utilisé pour ouvrir des caisses en faisant exploser leur couvercle.</p>",
+            "spellLevel": 3,
+            "malus": -30,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "E Cistem Aperio",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3029Flottement",
+        "name": "Flottement",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>C : 30% sort cesse une fois l’objet arrivé à destination. Durée : -</p>",
+            "spellLevel": 3,
+            "malus": -30,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3030Furoncles",
+        "name": "Furoncles",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Répand sur le corps des furoncles et des pustules immondes. Fait perdre 2 points de vie et diminue l’APP de moitié. Les points de vie perdus ne peuvent être regagnés qu’en dissipant le sort et en se reposant.</p>",
+            "spellLevel": 3,
+            "malus": 0,
+            "spellType": "S",
+            "target": "P",
+            "incantation": "S",
+            "extremeFormula": true,
+            "malusExtremeFormula": -35
+        }
+    },
+    {
+        "_id": "sp3031Gemino",
+        "name": "Gemino",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>C : 30% Durée : permanente Effet secondaire : Ne peut être arrêté que par le lanceur, sans quoi l’objet continu de se dupliquer sans s’arrêter durant 1d4 jour(s).</p>",
+            "spellLevel": 3,
+            "malus": -30,
+            "spellType": "S",
+            "target": "O",
+            "incantation": "Gemino",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3032Glacius",
+        "name": "Glacius",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Fait apparaître un bloc de glace autour de l’objet ou de la créature visée afin de l’immobiliser. Il peut aussi permettre de geler des surfaces liquides, afin de pouvoir marcher dessus.</p>",
+            "spellLevel": 3,
+            "malus": 0,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "E Glacius",
+            "extremeFormula": true,
+            "malusExtremeFormula": -40
+        }
+    },
+    {
+        "_id": "sp3033GluPerpetu",
+        "name": "Glu-Perpétuelle",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Permet de garder un objet fixé de sorte que personne ne puisse l’enlever. Durée : permanente</p>",
+            "spellLevel": 3,
+            "malus": -30,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "E -",
+            "extremeFormula": true,
+            "malusExtremeFormula": -40
+        }
+    },
+    {
+        "_id": "sp3034Herbivicus",
+        "name": "Herbivicus",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Remarque : Faire attention à ce que la plante ait suffisamment d’eau et de nourriture afin qu’elle ne meure pas. Métamorphose un hibou en jumelles de théâtre</p>",
+            "spellLevel": 3,
+            "malus": -30,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "E Herbivicus",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3035Hibouenjum",
+        "name": "Hibou en jumelles de théâtre",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Métamorphose un hibou en jumelles de théâtre</p>",
+            "spellLevel": 3,
+            "malus": -35,
+            "spellType": "M",
+            "target": "A",
+            "incantation": "M Strigiforma",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3036Impassibil",
+        "name": "Impassibilité",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Empêche quoi que ce soit de passer à travers l’objet enchanté.</p>",
+            "spellLevel": 3,
+            "malus": -25,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "Impassibilis",
+            "extremeFormula": true,
+            "malusExtremeFormula": -40
+        }
+    },
+    {
+        "_id": "sp3037Lapifors",
+        "name": "Lapifors",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Transforme un objet en lapin vivant de même taille. Peut également transformer de petit animaux en lapin.</p>",
+            "spellLevel": 3,
+            "malus": -30,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "M Lapifors",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3038Lien",
+        "name": "Lien",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Lie les objets entre eux de telle sorte que si l’un d’eux est modifié, tous les autres le sont également.</p>",
+            "spellLevel": 3,
+            "malus": -25,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "Protéiforme",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3039Maleficede",
+        "name": "Maléfice des Jambespongieuses",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Impose un malus de 50 % à toute action utilisant les jambes et diminue la vitesse de déplacement de la cible.</p>",
+            "spellLevel": 3,
+            "malus": -35,
+            "spellType": "S",
+            "target": "A/P",
+            "incantation": "S -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3040Maleficedu",
+        "name": "Maléfice du saucisson",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Immobilise totalement une personne ou un animal en liant ses mains et ses pieds ensemble.</p>",
+            "spellLevel": 3,
+            "malus": -30,
+            "spellType": "S",
+            "target": "A/P",
+            "incantation": "Petrificus totalus",
+            "extremeFormula": true,
+            "malusExtremeFormula": -40
+        }
+    },
+    {
+        "_id": "sp3041Miseenplac",
+        "name": "Mise en place",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Permet de placer un objet à distance.</p>",
+            "spellLevel": 3,
+            "malus": -25,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "E -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3042MoucheSard",
+        "name": "Mouche-Sardine",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Sous-type : Maléfice Durée : 2d4+2 heures. (Jet de CON x3 pour fournir un effort).</p>",
+            "spellLevel": 3,
+            "malus": 0,
+            "spellType": "S",
+            "target": "A/P",
+            "incantation": "S Sardina Sternuo",
+            "extremeFormula": true,
+            "malusExtremeFormula": -40
+        }
+    },
+    {
+        "_id": "sp3043ObjetenDra",
+        "name": "Objet en Dragon",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Transforme un objet en dragon vivant de même taille. Durée : permanente</p>",
+            "spellLevel": 3,
+            "malus": -30,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "Draconifors",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3044Objetenpou",
+        "name": "Objet en poulet/oie",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Métamorphose un objet en poulet ou en oie</p>",
+            "spellLevel": 3,
+            "malus": -30,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "M",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3045Oscausi",
+        "name": "Oscausi",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Scelle la peau de la bouche d’une personne en la recouvrant de peau, la faisant totalement disparaître Effet principal : empêche la cible de parler</p>",
+            "spellLevel": 3,
+            "malus": -40,
+            "spellType": "S",
+            "target": "P",
+            "incantation": "Oscausi",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3046Permetdefa",
+        "name": "Permet de faire léviter un arbre. Celui-ci suit ensuite le sorcier tant qu’il",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Permet de faire léviter un arbre. Celui-ci suit ensuite le sorcier tant qu’il reste concentré sur le sortilège.</p>",
+            "spellLevel": 3,
+            "malus": 0,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3047Personneen",
+        "name": "Personne en Animal",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Transforme quelqu’un en animal. (Opposition : POU/POU).</p>",
+            "spellLevel": 3,
+            "malus": -60,
+            "spellType": "M",
+            "target": "P",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3048Pierreench",
+        "name": "Pierre en chien",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Transforme une pierre en chien de même taille</p>",
+            "spellLevel": 3,
+            "malus": -30,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3049Pression",
+        "name": "Pression",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Exerce une forte pression sur une surface jusqu’à ce que celle-ci se creuse ou cède. La durée du sortilège dépend de la résistance des objets : POU/FOR.</p>",
+            "spellLevel": 3,
+            "malus": -30,
+            "spellType": "S",
+            "target": "O",
+            "incantation": "Deprimo",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3050Remplissag",
+        "name": "Remplissage",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Permet de remplir un contenant avec le contenu liquide qui le remplissait auparavant.</p>",
+            "spellLevel": 3,
+            "malus": -30,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "E -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3051RepousseFa",
+        "name": "Repousse-Fantômes",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Empêche les fantômes de pénétrer dans la zone enchantée par ce sort (Opposition : POU/POU).</p>",
+            "spellLevel": 3,
+            "malus": -40,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "E Repello Umbrae",
+            "extremeFormula": true,
+            "malusExtremeFormula": -70
+        }
+    },
+    {
+        "_id": "sp3052RepousseMo",
+        "name": "Repousse-Moldus",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Empêche les moldus de pénétrer dans la zone enchantée par ce sort.</p>",
+            "spellLevel": 3,
+            "malus": -40,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "E Repello Moldum",
+            "extremeFormula": true,
+            "malusExtremeFormula": -50
+        }
+    },
+    {
+        "_id": "sp3053Repulsion",
+        "name": "Répulsion",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>: 25%/45% également être utilisé pour repousser de lourds objets (jusqu’à POUvoirx3 Kg). Durée : -</p>",
+            "spellLevel": 3,
+            "malus": 0,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "Depulso",
+            "extremeFormula": true,
+            "malusExtremeFormula": -45
+        }
+    },
+    {
+        "_id": "sp3054Reveil",
+        "name": "Réveil",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Réveille toute personne endormie, par magie ou non, et toute personne touchée par le sort de Stupéfixion.</p>",
+            "spellLevel": 3,
+            "malus": -20,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "Enervatum",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3055Reversion",
+        "name": "Réversion",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Ce sortilège permet de ramener un objet dans sa position ou son état d'origine. Peut faire bouger l’objet ou le réparer.</p>",
+            "spellLevel": 3,
+            "malus": -25,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "Reverte",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3056Rocket",
+        "name": "Rocket",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Envoie un objet voler dans les airs à POUvoir mètres de haut à très grande vitesse</p>",
+            "spellLevel": 3,
+            "malus": -30,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3057Scellement",
+        "name": "Scellement de peut alors être lu que si on lui donne un nouveau coup de baguette.",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>peut alors être lu que si on lui donne un nouveau coup de baguette. Durée : Permanent</p>",
+            "spellLevel": 3,
+            "malus": -30,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "E -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3058Scellement",
+        "name": "Scellement de pièce",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Scelle une pièce magiquement d’un coup de baguette. Celle-ci ne peut dès lors plus être ouverte autrement qu’en levant le sortilège.</p>",
+            "spellLevel": 3,
+            "malus": -30,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "E -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3059Soins",
+        "name": "Soins",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Redonne 1d4+1 points de vie à une personne blessée et ressoude les os après les avoir remis en place. Une fois lancé, ce sortilège ne peut plus faire effet sur cette blessure.</p>",
+            "spellLevel": 3,
+            "malus": 0,
+            "spellType": "E",
+            "target": "A/P",
+            "incantation": "E Episkey",
+            "extremeFormula": true,
+            "malusExtremeFormula": -45
+        }
+    },
+    {
+        "_id": "sp3060Somnambuli",
+        "name": "Somnambulisme",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Oblige une personne endormie à se déplacer pendant son sommeil (qu’il soit magique ou non)</p>",
+            "spellLevel": 3,
+            "malus": -30,
+            "spellType": "E",
+            "target": "A/P",
+            "incantation": "E -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3061Stupefixio",
+        "name": "Stupéfixion",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Paralyse la cible et la met dans un état de catatonie proche du coma.</p>",
+            "spellLevel": 3,
+            "malus": 0,
+            "spellType": "S",
+            "target": "A/P",
+            "incantation": "Stupefix",
+            "extremeFormula": true,
+            "malusExtremeFormula": -50
+        }
+    },
+    {
+        "_id": "sp3062Terrasseme",
+        "name": "Terrassement",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Ce sort permet de creuser de profondes entailles sur une surface.</p>",
+            "spellLevel": 3,
+            "malus": -30,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "Defodio",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3063Toboggan",
+        "name": "Toboggan",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Transforme un escalier en toboggan.</p>",
+            "spellLevel": 3,
+            "malus": -30,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "Glisseo",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3064Urticaire",
+        "name": "Urticaire",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Durée : - Permet d'envoyer un objet à un endroit à la vitesse d'une balle de fusil, peut détruire l’objet ou l’endommager.</p>",
+            "spellLevel": 3,
+            "malus": -35,
+            "spellType": "S",
+            "target": "P",
+            "incantation": "S -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp3065Waddiwasi",
+        "name": "Waddiwasi",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Permet d'envoyer un objet à un endroit à la vitesse d'une balle de fusil, peut détruire l’objet ou l’endommager.</p>",
+            "spellLevel": 3,
+            "malus": -30,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "Waddiwasi",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4001Alarme",
+        "name": "Alarme",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Crée un périmètre magique qui alerte le lanceur si quelqu'un le franchit. Durée : POUvoir heures.</p>",
+            "spellLevel": 4,
+            "malus": -55,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "Cave Inimicum",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4002AnimalVerr",
+        "name": "Animal en verre",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Métamorphose un animal en verre (gobelet, vase, etc.). Durée : permanente.</p>",
+            "spellLevel": 4,
+            "malus": -30,
+            "spellType": "M",
+            "target": "A",
+            "incantation": "Vera Verto",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4003Attraction",
+        "name": "Attraction",
+        "type": "spell",
+        "img": "icons/svg/up.svg",
+        "system": {
+            "description": "<p>Attire un objet vers le lanceur depuis n'importe quelle distance connue. POUvoir km de portée.</p>",
+            "spellLevel": 4,
+            "malus": -30,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "Accio",
+            "extremeFormula": true,
+            "malusExtremeFormula": -50
+        }
+    },
+    {
+        "_id": "sp4004Confusion",
+        "name": "Confusion",
+        "type": "spell",
+        "img": "icons/svg/daze.svg",
+        "system": {
+            "description": "<p>La cible est confuse, désorientée et incapable de réfléchir clairement. Opposition POU/POU. Durée : POUvoir minutes.</p>",
+            "spellLevel": 4,
+            "malus": -40,
+            "spellType": "S",
+            "target": "P",
+            "incantation": "Confundo",
+            "extremeFormula": true,
+            "malusExtremeFormula": -55
+        }
+    },
+    {
+        "_id": "sp4005CreatAnimau",
+        "name": "Création d'animaux",
+        "type": "spell",
+        "img": "icons/svg/pawprint.svg",
+        "system": {
+            "description": "<p>Crée un ou plusieurs petits animaux à partir de la matière environnante. Durée : permanente.</p>",
+            "spellLevel": 4,
+            "malus": -70,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "Animalis creatio",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4006Attaque",
+        "name": "Attaque",
+        "type": "spell",
+        "img": "icons/svg/sword.svg",
+        "system": {
+            "description": "<p>Anime des objets ou créatures à proximité pour attaquer une cible. Dégâts : 1d6 par objet (min 1).</p>",
+            "spellLevel": 4,
+            "malus": -50,
+            "spellType": "S",
+            "target": "O",
+            "incantation": "Oppugno",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4007Antivol",
+        "name": "Antivol",
+        "type": "spell",
+        "img": "icons/svg/padlock.svg",
+        "system": {
+            "description": "<p>Enchante un objet pour qu'il ne puisse être déplacé ou volé. Annule les tentatives d'attraction. Durée : permanente.</p>",
+            "spellLevel": 4,
+            "malus": -40,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4008Beaute",
+        "name": "Beauté",
+        "type": "spell",
+        "img": "icons/svg/sun.svg",
+        "system": {
+            "description": "<p>Améliore temporairement l'apparence de la cible. APP +3 pendant POUvoir heures.</p>",
+            "spellLevel": 4,
+            "malus": -40,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4009Destruction",
+        "name": "Destruction",
+        "type": "spell",
+        "img": "icons/svg/explosion.svg",
+        "system": {
+            "description": "<p>Détruit violemment un objet, le réduisant en morceaux. Opposition POU si objet enchanté.</p>",
+            "spellLevel": 4,
+            "malus": -30,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "Destructum",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4010BrumeDoree",
+        "name": "Brume dorée",
+        "type": "spell",
+        "img": "icons/svg/fog.svg",
+        "system": {
+            "description": "<p>Crée une brume dorée épaisse qui désoriente quiconque la traverse. Durée : POUvoir minutes.</p>",
+            "spellLevel": 4,
+            "malus": -40,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4011CharmeDefen",
+        "name": "Charme défensif",
+        "type": "spell",
+        "img": "icons/svg/shield.svg",
+        "system": {
+            "description": "<p>Crée une barrière protectrice autour de la cible qui bloque les sorts de niveau 4 ou inférieur.</p>",
+            "spellLevel": 4,
+            "malus": -40,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "",
+            "extremeFormula": true,
+            "malusExtremeFormula": -55
+        }
+    },
+    {
+        "_id": "sp4012Antibrumed",
+        "name": "Anti-brume dorée",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Permet de contrer les effets du maléfice de Cerveau-en-gelée</p>",
+            "spellLevel": 4,
+            "malus": -40,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "E -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4013Antimalefi",
+        "name": "Anti-maléfice du rire",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Permet de contrer les effets du maléfice du rire</p>",
+            "spellLevel": 4,
+            "malus": -40,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "E -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4014Antiscelle",
+        "name": "Anti-scellement de pièce",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Lancé sur un objet, cet enchantement empêche celui-ci d’être volé. Effet : Empêche tout autre Sorcier que le lanceur d’utiliser le sortilège</p>",
+            "spellLevel": 4,
+            "malus": -40,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "E -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4015Bouledebow",
+        "name": "Boule de bowling en ballon",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Métamorphose une boule de bowling en ballon</p>",
+            "spellLevel": 4,
+            "malus": -40,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "Follisfors",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4016Disparitio",
+        "name": "Disparition de serpent",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Fait disparaître un serpent conjuré par magie</p>",
+            "spellLevel": 4,
+            "malus": -40,
+            "spellType": "M",
+            "target": "X",
+            "incantation": "M",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4017Escargoten",
+        "name": "Escargot en théière",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Métamorphose un escargot en théière</p>",
+            "spellLevel": 4,
+            "malus": -40,
+            "spellType": "M",
+            "target": "A",
+            "incantation": "M Theaollafors",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4018Faitappara",
+        "name": "Fait apparaître quelque chose qui a été caché par magie ou non",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Fait apparaître quelque chose qui a été caché par magie ou non (Opposition : Niv / Niv).</p>",
+            "spellLevel": 4,
+            "malus": -20,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4019FauxSouven",
+        "name": "Faux-Souvenir",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Ce sortilège permet de modifier, voir même d’ajouter de faux souvenirs dans la mémoire d’une personne.</p>",
+            "spellLevel": 4,
+            "malus": -40,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4020Fidelitas",
+        "name": "Fidelitas",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Permet de cacher un secret au cœur d'une personne connue sous le nom de Gardien du Secret. Il est alors le seul à pouvoir divulguer ce secret.</p>",
+            "spellLevel": 4,
+            "malus": -50,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "E",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4021Fondantdu",
+        "name": "Fondant féerique en fée",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Transforme un fondant féérique en fée.</p>",
+            "spellLevel": 4,
+            "malus": -40,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "Brasicafors",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4022Gel",
+        "name": "Gel",
+        "type": "spell",
+        "img": "icons/svg/ice-aura.svg",
+        "system": {
+            "description": "<p>réussir un jet de FOR x3. Effet : Occasionne 2 dégâts non létaux Durée : Permanente Rend les flammes visées inoffensives.</p>",
+            "spellLevel": 4,
+            "malus": -40,
+            "spellType": "E",
+            "target": "A/P",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4023GeleFlamme",
+        "name": "Gèle-Flamme",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Rend les flammes visées inoffensives.</p>",
+            "spellLevel": 4,
+            "malus": -40,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "M -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4024GrandeExpl",
+        "name": "Grande Explosion",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>d’explosion. Maximum 1m3 E : 30%/50% Durée : -</p>",
+            "spellLevel": 4,
+            "malus": -40,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "Explodere",
+            "extremeFormula": true,
+            "malusExtremeFormula": -50
+        }
+    },
+    {
+        "_id": "sp4025Grandeur",
+        "name": "Grandeur",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>E : 30%/50% peur ou de l’attirance devant sa personne. Opposition : POU/POU. Durée : 1d10+2 heures</p>",
+            "spellLevel": 4,
+            "malus": 0,
+            "spellType": "S",
+            "target": "X",
+            "incantation": "Magistratus",
+            "extremeFormula": true,
+            "malusExtremeFormula": -50
+        }
+    },
+    {
+        "_id": "sp4026Humanite",
+        "name": "Humanité",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Rend sa forme humaine à un garou, un animagus ou à un humain métamorphosé (Opposition : POU/POU).</p>",
+            "spellLevel": 4,
+            "malus": -40,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "Homomorphus",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4027Incassable",
+        "name": "Incassable",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Rend un objet incassable</p>",
+            "spellLevel": 4,
+            "malus": -40,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "E -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4028Lumieresol",
+        "name": "Lumière solaire",
+        "type": "spell",
+        "img": "icons/svg/sun.svg",
+        "system": {
+            "description": "<p>E : 30%/50% 50% à toutes les actions nécessitant la vue. Effet secondaire : Blesse les créatures sensibles à la lumière en leur infligeant 1d4+1 dégâts</p>",
+            "spellLevel": 4,
+            "malus": -40,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "E Lumos Solem",
+            "extremeFormula": true,
+            "malusExtremeFormula": -50
+        }
+    },
+    {
+        "_id": "sp4029Maleficedu",
+        "name": "Maléfice du lancent tous avec leur malus maximal",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>lancent tous avec leur malus maximal Sous-type : Maléfice Durée : Variable (heures)</p>",
+            "spellLevel": 4,
+            "malus": -40,
+            "spellType": "S",
+            "target": "A/P",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4030Maleficedu",
+        "name": "Maléfice du rire",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>épuisement total (0 point de vie), plongeant la cible dans le coma. Sous-type : Maléfice Durée : Permanente Fait apparaître la marque des ténèbres.</p>",
+            "spellLevel": 4,
+            "malus": -40,
+            "spellType": "S",
+            "target": "P",
+            "incantation": "S -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4031Marquedest",
+        "name": "Marque des ténèbres",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Fait apparaître la marque des ténèbres.</p>",
+            "spellLevel": 4,
+            "malus": -40,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "E Morsmordre",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4032Mimetisme",
+        "name": "Mimétisme",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>La peau du personnage s’adapte à son environnement. Effet : bonus de 50% à la discrétion.</p>",
+            "spellLevel": 4,
+            "malus": -50,
+            "spellType": "M",
+            "target": "P",
+            "incantation": "M Mimesis",
+            "extremeFormula": true,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4033Mutisme",
+        "name": "Mutisme",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Rend la cible muette durant 1 mois, l’empêchant de lancer des sortilèges à moins qu’il ne s’agisse d’informulés.</p>",
+            "spellLevel": 4,
+            "malus": -45,
+            "spellType": "E",
+            "target": "A/P",
+            "incantation": "E Silencio",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4034Patronus",
+        "name": "Patronus",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Remarque : Si ce sortilège est lancé par une personne qui ne possède pas un cœur pur, des asticots de lumière jaillissent de la baguette du sorcier pour venir le dévorer.</p>",
+            "spellLevel": 4,
+            "malus": -50,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "E",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4035Pintadeenc",
+        "name": "Pintade en cochon d'Inde",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Métamorphose une pintade en cochon d’Inde</p>",
+            "spellLevel": 4,
+            "malus": -40,
+            "spellType": "M",
+            "target": "A",
+            "incantation": "Caviidafors",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4036Pionenrein",
+        "name": "Pion en reine",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Métamorphose un pion d’échec en reine</p>",
+            "spellLevel": 4,
+            "malus": -30,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "M Reginafors",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4037Protection",
+        "name": "Protection",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>E : 30%/50% pas droit et protège des dégâts physiques en les diminuant de 2. (Exception : Avada kedavra). Durée : 1d8+2 heures</p>",
+            "spellLevel": 4,
+            "malus": 0,
+            "spellType": "S",
+            "target": "P",
+            "incantation": "Protego",
+            "extremeFormula": true,
+            "malusExtremeFormula": -50
+        }
+    },
+    {
+        "_id": "sp4038Reduction",
+        "name": "Réduction",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Détruit des objets solides en les faisant tomber en poussière.</p>",
+            "spellLevel": 4,
+            "malus": -35,
+            "spellType": "S",
+            "target": "O",
+            "incantation": "Reducto",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4039Renforceme",
+        "name": "Renforcement",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Fianto Duri est un sortilège qui est utilisé pour renforcer les protections magiques déjà existante. Une fois lancé, ce sortilège donne l’effet des formules extrêmes à un sortilège déjà lancé.</p>",
+            "spellLevel": 4,
+            "malus": -40,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "Fianto Duri",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4040Revelasort",
+        "name": "Révélasort de Scarpin",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Ce sort permet d'identifier les sorts jetés sur un objet ou les ingrédients d'une potion. Lancé une seconde fois, il permet d'identifier les effets de ces mêmes sorts ou potions.</p>",
+            "spellLevel": 4,
+            "malus": -45,
+            "spellType": "E",
+            "target": "A",
+            "incantation": "E Specialis revelio",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4041Reviviscen",
+        "name": "Reviviscence",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Permet de redonner de l'énergie à une personne très affaiblie, étourdie ou bien inconsciente. Bien qu'il soit efficace contre la plupart des sorts, il n'a pas d'effets concluants contre les actes de magie noire.</p>",
+            "spellLevel": 4,
+            "malus": -40,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "E Revigor",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4042Securite",
+        "name": "Sécurité",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Avertit le lanceur si un lieu est victime d’une effraction. Employé dans les magasins pour prévenir les vols.</p>",
+            "spellLevel": 4,
+            "malus": -35,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4043Seduction",
+        "name": "Séduction",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>E : 30%/50% Contrer les effets du sort : vu qu’il agit comme un philtre d’amour, les effets de ce sortilège peuvent être partiellement ou totalement dissipés par des antidotes aux philtres d’amour.</p>",
+            "spellLevel": 4,
+            "malus": 0,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "",
+            "extremeFormula": true,
+            "malusExtremeFormula": -50
+        }
+    },
+    {
+        "_id": "sp4044Sortileged",
+        "name": "Sortilège de A/O",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Opposition : POU/POU. Durée : permanente</p>",
+            "spellLevel": 4,
+            "malus": -50,
+            "spellType": "M",
+            "target": "A",
+            "incantation": "M Evanesco",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4045Sortileged",
+        "name": "Sortilège de le second et le second en le premier.",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>le second et le second en le premier. Durée : permanente</p>",
+            "spellLevel": 4,
+            "malus": -50,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "M -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4046Supersenso",
+        "name": "Super-sensoriel",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>forts et aux mauvaises odeurs Durée : Variable (minute)</p>",
+            "spellLevel": 4,
+            "malus": -35,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp4047Tortueentr",
+        "name": "Tortue en trompette",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Métamorphose une tortue en trompette</p>",
+            "spellLevel": 4,
+            "malus": -40,
+            "spellType": "M",
+            "target": "A",
+            "incantation": "M Bucinafors",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp5001AntiApparit",
+        "name": "Anti-Apparition",
+        "type": "spell",
+        "img": "icons/svg/padlock.svg",
+        "system": {
+            "description": "<p>Empêche quiconque dans la zone d'apparaître ou de transplaner. Durée : POUvoir heures.</p>",
+            "spellLevel": 5,
+            "malus": -55,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp5002Aveuglement",
+        "name": "Aveuglement",
+        "type": "spell",
+        "img": "icons/svg/blind.svg",
+        "system": {
+            "description": "<p>Aveugle temporairement la cible. Opposition POU/CON. Durée : POUvoir rounds.</p>",
+            "spellLevel": 5,
+            "malus": -50,
+            "spellType": "S",
+            "target": "P",
+            "incantation": "",
+            "extremeFormula": true,
+            "malusExtremeFormula": -65
+        }
+    },
+    {
+        "_id": "sp5003Expulsion",
+        "name": "Expulsion",
+        "type": "spell",
+        "img": "icons/svg/explosion.svg",
+        "system": {
+            "description": "<p>Projette violemment la cible en arrière avec une force considérable. Dégâts : 2d6.</p>",
+            "spellLevel": 5,
+            "malus": -50,
+            "spellType": "S",
+            "target": "P",
+            "incantation": "Expulso",
+            "extremeFormula": true,
+            "malusExtremeFormula": -65
+        }
+    },
+    {
+        "_id": "sp5004Extension",
+        "name": "Extension",
+        "type": "spell",
+        "img": "icons/svg/upgrade.svg",
+        "system": {
+            "description": "<p>Agrandit magiquement l'intérieur d'un espace clos sans changer son apparence extérieure. Durée : permanente.</p>",
+            "spellLevel": 5,
+            "malus": -60,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp5005HumainAnima",
+        "name": "Humain en animal",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Métamorphose un humain en un animal de taille similaire. Opposition POU/POU. Durée : permanente. Interdit dans la plupart des écoles.</p>",
+            "spellLevel": 5,
+            "malus": -45,
+            "spellType": "M",
+            "target": "P",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp5006CordeFlam",
+        "name": "Corde de flammes",
+        "type": "spell",
+        "img": "icons/svg/fire.svg",
+        "system": {
+            "description": "<p>Crée une corde de feu qui entoure et immobilise la cible. Opposition POU/DEX pour se libérer. Brûlures : 1d3/round.</p>",
+            "spellLevel": 5,
+            "malus": -55,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp5007BrasierObsc",
+        "name": "Brasier obscur",
+        "type": "spell",
+        "img": "icons/svg/fire.svg",
+        "system": {
+            "description": "<p>Crée un feu noir magique qui ne peut être éteint par des moyens normaux. Les sorts de dissipation ne fonctionnent pas.</p>",
+            "spellLevel": 5,
+            "malus": -60,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp5008EveilObjets",
+        "name": "Éveil d'objets",
+        "type": "spell",
+        "img": "icons/svg/clockwork.svg",
+        "system": {
+            "description": "<p>Anime un grand nombre d'objets inanimés qui obéissent aux ordres du lanceur. Durée : concentration.</p>",
+            "spellLevel": 5,
+            "malus": -100,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp5009CrapaudAman",
+        "name": "Crapaud en amanite",
+        "type": "spell",
+        "img": "icons/svg/mushroom.svg",
+        "system": {
+            "description": "<p>Métamorphose un crapaud en champignon amanite. Durée : permanente.</p>",
+            "spellLevel": 5,
+            "malus": -45,
+            "spellType": "M",
+            "target": "A",
+            "incantation": "Amanitafors",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp5010FeuSemprem",
+        "name": "Feu de Sempremais",
+        "type": "spell",
+        "img": "icons/svg/fire.svg",
+        "system": {
+            "description": "<p>Crée un feu éternel qui ne brûle pas et ne s'éteint jamais. Utilisé pour l'éclairage. Durée : permanente.</p>",
+            "spellLevel": 5,
+            "malus": -50,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp5011Alteration",
+        "name": "Altération M",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>celle-ci reviennent à la normale. Contre les effets de Meteorribilis. Durée : -</p>",
+            "spellLevel": 5,
+            "malus": -65,
+            "spellType": "M",
+            "target": "X",
+            "incantation": "Meteorribilis",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp5012Antimalefi",
+        "name": "Anti-maléfice du Voleur",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Permet de contrer les effets du maléfice du Voleur.</p>",
+            "spellLevel": 5,
+            "malus": -60,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp5013AntiTransp",
+        "name": "Anti-Transplanage",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Empêche une personne de se téléporter en utilisant le transplanage.</p>",
+            "spellLevel": 5,
+            "malus": -60,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "E -",
+            "extremeFormula": true,
+            "malusExtremeFormula": -70
+        }
+    },
+    {
+        "_id": "sp5014Chardonnet",
+        "name": "Chardonnet en vif d’or",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Transforme un chardonnet en vif d’or</p>",
+            "spellLevel": 5,
+            "malus": -50,
+            "spellType": "M",
+            "target": "A",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp5015Chaudronen",
+        "name": "Chaudron en blaireau",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Transforme un chaudron en blaireau</p>",
+            "spellLevel": 5,
+            "malus": -45,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "Melesfors",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp5016Flagrance",
+        "name": "Flagrance",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Appliqué sur un objet, ce sortilège sert à le protéger du vol. Quand une personne tente de s’emparer de l’objet sans lever le sort, elle subit une brûlure de l’ordre de 1d4 dégâts. Le sort reste effectif tant qu’il n’est pas levé mais n’endommage pas l’objet.</p>",
+            "spellLevel": 5,
+            "malus": 0,
+            "spellType": "S",
+            "target": "O",
+            "incantation": "S -",
+            "extremeFormula": true,
+            "malusExtremeFormula": -55
+        }
+    },
+    {
+        "_id": "sp5017Furetenplu",
+        "name": "Furet en plumeau",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Transforme un furet en plumeau</p>",
+            "spellLevel": 5,
+            "malus": -50,
+            "spellType": "M",
+            "target": "A",
+            "incantation": "Peniculusfors",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp5018Gnomeennai",
+        "name": "Gnome en nain de jardin",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Transforme un gnome en nain de jardin</p>",
+            "spellLevel": 5,
+            "malus": -50,
+            "spellType": "M",
+            "target": "A",
+            "incantation": "M Gnomusfors",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp5019Lancesurun",
+        "name": "Lancé sur un objet comme une porte ou une serrure, ce sortilège",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Lancé sur un objet comme une porte ou une serrure, ce sortilège fonctionne comme un contre sort d’ouverture comme Alohomora, Annihilare, Dunamis, ou Liberare. Il doit néanmoins être lancé de</p>",
+            "spellLevel": 5,
+            "malus": 0,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp5020Legilimens",
+        "name": "Legilimens",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Permet d’entrer dans l’esprit d’une personne, de lire ses pensées et de parcourir ses souvenirs.</p>",
+            "spellLevel": 5,
+            "malus": -80,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "E Legilimens",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp5021Maleficeex",
+        "name": "Maléfice explosif",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Provoque un effet d’explosion qui détruit des objets (magiques ou non) et qui blesse les êtres vivants en leur infligeant 1d6+1 dégâts.</p>",
+            "spellLevel": 5,
+            "malus": 0,
+            "spellType": "S",
+            "target": "X",
+            "incantation": "Confringo",
+            "extremeFormula": true,
+            "malusExtremeFormula": -50
+        }
+    },
+    {
+        "_id": "sp5022Ordureench",
+        "name": "Ordure en chien viverrin",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Métamorphose un tas d’ordures en chien viverrin</p>",
+            "spellLevel": 5,
+            "malus": -55,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "Nycterofors",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp5023Plumeauenf",
+        "name": "Plumeau en furet",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Transforme un plumeau en furet</p>",
+            "spellLevel": 5,
+            "malus": -50,
+            "spellType": "M",
+            "target": "A",
+            "incantation": "Furofors",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp5024Positionin",
+        "name": "Position initiale",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Permet de faire revenir des objets dans leur position initiale, réparant ceux-ci par la même occasion. Fonctionne sur une zone donnée équivalente à POU/2 mètres Durée : -</p>",
+            "spellLevel": 5,
+            "malus": 0,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "E",
+            "extremeFormula": true,
+            "malusExtremeFormula": -70
+        }
+    },
+    {
+        "_id": "sp5025Regenerati",
+        "name": "Régénération",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Effet : Fait disparaître les blessures subies par un corps sans vie Durée : Volontaire / jusqu’à disparition complète des blessures</p>",
+            "spellLevel": 5,
+            "malus": -70,
+            "spellType": "E",
+            "target": "A/P",
+            "incantation": "Vulnera",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp5026Roiencorbe",
+        "name": "Roi en corbeau",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Transforme le roi d’un jeu d’échec en corbeau</p>",
+            "spellLevel": 5,
+            "malus": -55,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "Corvusfors",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp5027Sectumsemp",
+        "name": "Sectumsempra",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Effet : perte de 1d4+1 points de vie puis 1 point de vie par round.</p>",
+            "spellLevel": 5,
+            "malus": -70,
+            "spellType": "S",
+            "target": "A/P",
+            "incantation": "Sectumsempra",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp5028Sortileges",
+        "name": "sortilèges / Priori",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Incantatem se lance de lui-même.</p>",
+            "spellLevel": 5,
+            "malus": -50,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "Prior Incanto",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp5029Tasseenger",
+        "name": "Tasse en gerbille",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Transforme une tasse en gerbille</p>",
+            "spellLevel": 5,
+            "malus": -50,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "M Gerbillafors",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp5030Tasseenrat",
+        "name": "Tasse en rat",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Transforme une tasse en rat</p>",
+            "spellLevel": 5,
+            "malus": -50,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "Rattusfors",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp5031Tatouencou",
+        "name": "Tatou en coussin",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Transforme un tatou en coussin</p>",
+            "spellLevel": 5,
+            "malus": -50,
+            "spellType": "M",
+            "target": "A",
+            "incantation": "Coxinusfors",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp5032Tempete",
+        "name": "Tempête",
+        "type": "spell",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>Sortilège d'altération climatique permettant de créer une tempête miniature de POU mètres de rayon autour du lanceur. La tempête peut apparaître sous la forme de pluie ou de neige et peu blesser, immobiliser ou endommager les personnes et objets qui s’y trouvent.</p>",
+            "spellLevel": 5,
+            "malus": 0,
+            "spellType": "M",
+            "target": "X",
+            "incantation": "M Meteorribilis",
+            "extremeFormula": true,
+            "malusExtremeFormula": -70
+        }
+    },
+    {
+        "_id": "sp5033Transplana",
+        "name": "Transplanage",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Permet de se téléporter dans un endroit connu et non protégé.</p>",
+            "spellLevel": 5,
+            "malus": -60,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "E -",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp5034Vinaigreen",
+        "name": "Vinaigre en Vin",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Remarque : Plus la différence entre sa maîtrise en métamorphose et le résultat du dé est grande, et plus le vin est de qualité. Lancé sur un objet, ce sort punit celui qui le garde trop longtemps sans l'acheter. Les effets peuvent varier en fonction des désirs de celui qui le lance.</p>",
+            "spellLevel": 5,
+            "malus": -50,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp5035Voleur",
+        "name": "Voleur",
+        "type": "spell",
+        "img": "icons/svg/lightning.svg",
+        "system": {
+            "description": "<p>Sous-type : Maléfice Durée : permanente</p>",
+            "spellLevel": 5,
+            "malus": -60,
+            "spellType": "S",
+            "target": "O",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp6001Doloris",
+        "name": "Doloris",
+        "type": "spell",
+        "img": "icons/svg/skull.svg",
+        "system": {
+            "description": "<p>Sortilège Impardonnable. Inflige une douleur atroce à la cible. Il faut vouloir la souffrance de l'autre et y prendre du plaisir. INTERDIT.</p>",
+            "spellLevel": 6,
+            "malus": -100,
+            "spellType": "S",
+            "target": "P",
+            "incantation": "Endoloris",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp6002Imperium",
+        "name": "Imperium",
+        "type": "spell",
+        "img": "icons/svg/skull.svg",
+        "system": {
+            "description": "<p>Sortilège Impardonnable. Permet de contrôler totalement la volonté d'une personne. Opposition POU/POU. INTERDIT.</p>",
+            "spellLevel": 6,
+            "malus": -110,
+            "spellType": "S",
+            "target": "P",
+            "incantation": "Impero",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp6003AvadaKedav",
+        "name": "Avada Kedavra",
+        "type": "spell",
+        "img": "icons/svg/skull.svg",
+        "system": {
+            "description": "<p>Sortilège Impardonnable. Tue instantanément la cible. Aucune défense possible. INTERDIT.</p>",
+            "spellLevel": 6,
+            "malus": -120,
+            "spellType": "S",
+            "target": "P",
+            "incantation": "Avada kedavra",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp6004Portoloin",
+        "name": "Portoloin",
+        "type": "spell",
+        "img": "icons/svg/door-exit.svg",
+        "system": {
+            "description": "<p>Transforme un objet en Portoloin qui téléporte quiconque le touche à l'heure prévue par le lanceur.</p>",
+            "spellLevel": 6,
+            "malus": -90,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "Portus",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp6005Amnesie",
+        "name": "Amnésie",
+        "type": "spell",
+        "img": "icons/svg/daze.svg",
+        "system": {
+            "description": "<p>Efface des souvenirs spécifiques de la mémoire de la cible. Opposition POU/POU.</p>",
+            "spellLevel": 6,
+            "malus": -60,
+            "spellType": "E",
+            "target": "P",
+            "incantation": "Oubliettes",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp6006Feudeymon",
+        "name": "Feudeymon",
+        "type": "spell",
+        "img": "icons/svg/fire.svg",
+        "system": {
+            "description": "<p>Crée un feu démoniaque vivant prenant la forme de créatures. Quasi impossible à éteindre. Détruit les Horcruxes.</p>",
+            "spellLevel": 6,
+            "malus": -90,
+            "spellType": "S",
+            "target": "O",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp6007Incartable",
+        "name": "Incartable",
+        "type": "spell",
+        "img": "icons/svg/padlock.svg",
+        "system": {
+            "description": "<p>Rend un lieu impossible à localiser sur une carte ou par magie. Durée : permanente.</p>",
+            "spellLevel": 6,
+            "malus": -75,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp6008BouclierDia",
+        "name": "Bouclier diabolique",
+        "type": "spell",
+        "img": "icons/svg/shield.svg",
+        "system": {
+            "description": "<p>Crée un bouclier magique extrêmement puissant qui bloque tous les sorts de niveau 5 ou inférieur.</p>",
+            "spellLevel": 6,
+            "malus": -80,
+            "spellType": "S",
+            "target": "P",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp6009BrasierPour",
+        "name": "Brasier pourpre",
+        "type": "spell",
+        "img": "icons/svg/fire.svg",
+        "system": {
+            "description": "<p>Crée un brasier de flammes pourpres qui ne laisse passer que ceux jugés dignes. Durée : permanente.</p>",
+            "spellLevel": 6,
+            "malus": -75,
+            "spellType": "E",
+            "target": "O",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp6010Breche",
+        "name": "Brèche",
+        "type": "spell",
+        "img": "icons/svg/door-exit.svg",
+        "system": {
+            "description": "<p>Ouvre un passage temporaire à travers les protections magiques. Durée : POUvoir rounds.</p>",
+            "spellLevel": 6,
+            "malus": -85,
+            "spellType": "M",
+            "target": "O",
+            "incantation": "Partis Temporus",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    },
+    {
+        "_id": "sp6011Cemalefice",
+        "name": "Cuisant",
+        "type": "spell",
+        "img": "icons/svg/aura.svg",
+        "system": {
+            "description": "<p>Ce maléfice provoque une douleur cuisante et gonfle le visage de la cible pour le rendre méconnaissable.</p>",
+            "spellLevel": 2,
+            "malus": -20,
+            "spellType": "E",
+            "target": "X",
+            "incantation": "",
+            "extremeFormula": false,
+            "malusExtremeFormula": 0
+        }
+    }
+]

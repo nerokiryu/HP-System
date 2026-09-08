@@ -1,0 +1,224 @@
+{
+  "name": "Demiguise",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 12,
+      "max": 12
+    },
+    "initiativeBonus": 0,
+    "healthNonLethal": {
+      "value": 0,
+      "max": 12
+    },
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXX",
+    "stats": {
+      "str": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "con": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "siz": {
+        "value": 12,
+        "formula": "3d6+2"
+      },
+      "dex": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "int": {
+        "value": 5,
+        "formula": "2d4"
+      },
+      "pow": {
+        "value": 14,
+        "formula": "3d6+3"
+      },
+      "app": {
+        "value": 5,
+        "formula": "2d4"
+      },
+      "per": {
+        "value": 16,
+        "formula": "4d6+2"
+      }
+    },
+    "movement": {
+      "land": 6,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0,
+      "label": ""
+    },
+    "attacks": [
+      {
+        "name": "Griffes",
+        "chance": 15,
+        "damage": "1"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Acrobatie",
+        "value": 15
+      },
+      {
+        "name": "Athlétisme",
+        "value": 15
+      },
+      {
+        "name": "Discrétion",
+        "value": 65
+      },
+      {
+        "name": "Empathie",
+        "value": 25
+      },
+      {
+        "name": "Esquive",
+        "value": 30
+      },
+      {
+        "name": "Fouille",
+        "value": 20
+      },
+      {
+        "name": "Orientation",
+        "value": 40
+      },
+      {
+        "name": "Survie",
+        "value": 15
+      },
+      {
+        "name": "Vigilance",
+        "value": 60
+      }
+    ],
+    "powers": "<p>Perception (futur probable) : La Demiguise est\ncapable de percevoir les évènements du futur\nproche le plus probable, ce qui la rend très difficile à\ncapturer.\nInvisibilité : La Demiguise peut devenir invisible. Ce\npouvoir s’active de lui-même quand elle se sent en\ndanger. La Demiguise ne redevient visible que\nquand elle se sent à nouveau en sécurité. Certains\nsorciers entraînés peuvent détecter la présence de\nDemiguises (PERx1).</p>",
+    "usage": "<p>Les poils tressés de Demiguise sont\nutilisés dans la conception de capes d’invisibilité</p>",
+    "magicResistance": {
+      "threshold": 0,
+      "effectReduction": 1
+    },
+    "notes": {
+      "gmNotes": ""
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "hogwarts-system",
+    "systemVersion": "1.0.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "cc366396fab49329",
+  "_key": "!actors!cc366396fab49329",
+  "prototypeToken": {
+    "name": "Demiguise",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": true,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "luminosity": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5
+      },
+      "color": null,
+      "coloration": 1,
+      "attenuation": 0.5,
+      "contrast": 0,
+      "saturation": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "flags": {}
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

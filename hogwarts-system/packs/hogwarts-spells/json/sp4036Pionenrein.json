@@ -1,0 +1,16 @@
+{
+    "_id": "sp4036Pionenrein",
+    "name": "Pion en reine",
+    "type": "spell",
+    "img": "icons/svg/mystery-man.svg",
+    "system": {
+        "description": "<p>Métamorphose un pion d’échec en reine</p>",
+        "spellLevel": 4,
+        "malus": -30,
+        "spellType": "M",
+        "target": "O",
+        "incantation": "M Reginafors",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

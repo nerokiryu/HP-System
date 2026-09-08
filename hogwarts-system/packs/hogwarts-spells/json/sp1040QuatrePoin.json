@@ -1,0 +1,16 @@
+{
+    "_id": "sp1040QuatrePoin",
+    "name": "Quatre-Points",
+    "type": "spell",
+    "img": "icons/svg/aura.svg",
+    "system": {
+        "description": "<p>Ce sort agit comme une boussole et permet de savoir où est le nord.</p>",
+        "spellLevel": 1,
+        "malus": -10,
+        "spellType": "E",
+        "target": "X",
+        "incantation": "E",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

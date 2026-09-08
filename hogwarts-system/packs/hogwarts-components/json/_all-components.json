@@ -1,0 +1,3602 @@
+[
+    {
+        "_id": "cp0001absinthe",
+        "name": "Absinthe",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Plante couverte de poils soyeux et formant de petites fleurs jaunes en forme de tubes. Cette plante est connue pour ses propriétés hallucinogènes.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Essence de folie, Potion Tue-Loup",
+            "otherUses": "Alcool"
+        }
+    },
+    {
+        "_id": "cp0002acanthe",
+        "name": "Acanthe",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Plante épineuse aux fleurs violettes et qui aime le soleil, l’acanthe est une plante symbolisant les liens éternels entre deux personnes.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Combinaison, Élixirs éternels, Encre magique",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0003achilleest",
+        "name": "Achillée sternutatoire",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Plante à la tige verte et aux feuilles blanches servant d’ingrédient de potions</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Philtre de Confusion, Philtre d’Embrouille, Potion à priser",
+            "otherUses": "Feuilles comme répulsif à insectes, Poison pour bœufs, moutons et chevaux"
+        }
+    },
+    {
+        "_id": "cp0004aconit",
+        "name": "Aconit",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une plante aux fleurs violettes également connue sous les noms de napel ou de tue-loup. Ses feuilles sont extrêmement toxiques, même si toutes les parties de la plante représentent un danger. Les racines sont vendues 1 Gallion chacune chez les apothicaires.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Babillage, Élixir malveillant, Mélange de bile de tatou, Poison pernicieux, Potion de l’œil vif, Potion Tue-loup, Wiggenweld",
+            "otherUses": "Poison"
+        }
+    },
+    {
+        "_id": "cp0005agripaume",
+        "name": "Agripaume",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Plante européenne aux fleurs roses connue pour ses propriétés thérapeutiques</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Cataplasme contre les morsures de Murlap, Traitement des morsures de chiens fous",
+            "otherUses": "Propriétés médicinales"
+        }
+    },
+    {
+        "_id": "cp0006agrippa",
+        "name": "Agrippa",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une substance pourpre aux propriétés magiques. Elle est utilisée comme ingrédient dans la fabrication de potions comme pour la potion Agrippa, dont les effets sont inconnus</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potion Agrippa",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0007aigremoine",
+        "name": "Aigremoine",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>L’aigremoine est une plante herbeuse aux longues tiges rouges et velues et aux fleurs jaunes</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potion laxative",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0008ailedebill",
+        "name": "Aile de Billywig",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Des ailes transparentes qui proviennent d’un Billywig, un petit insecte magique très rapide et dont la piqûre peut faire léviter les gens</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potion d’Hilarité, Potion de mélancolie",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0009ailedechau",
+        "name": "Aile de chauve-souris",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une aile provenant de chauve-souris classiques. Vendue généralement 5 Gallions chacune chez tout bon apothicaire</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Mélange de bile de tatou",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0010ailedechou",
+        "name": "Aile de chouette",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une aile provenant d’une chouette</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0011ailesdefee",
+        "name": "Ailes de fée",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Des ailes multicolores provenant de fées, des petites créatures magiques inoffensives mais extrêmement vaniteuses</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Beauté, Beauté illusoire, Potion fortifiante, Solution scintillante",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0012alchemille",
+        "name": "Alchémille",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Petite plante herbacée avec des feuilles caractéristiques en forme d’éventail, elle possède de petites dents aux extrémités, couvertes de poils doux qui font perler l’eau sur eux.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Beauté, Beauté illusoire, Solution de développement",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0013alcool",
+        "name": "Alcool",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Un alcool neutre qui permet de fabriquer certaines potions ou qui peut être bu.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Détergents magiques, Duplication, Elixir 7, Langue de Miel, Nettoie-Tout magique, Neutralisation, Phéromones",
+            "otherUses": "Consommable"
+        }
+    },
+    {
+        "_id": "cp0014algueseche",
+        "name": "Algue séchée",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une plante aquatique qui, une fois séchée, peut être utilisée comme ingrédient de potion. Les algues séchées possèdent énormément de nutriments et permettent de fournir une grande quantité d’énergie quand elles sont consommées.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Engrais magiques, Énergie magique, Regermination, Rejutage",
+            "otherUses": "Consommable (pour certaines)"
+        }
+    },
+    {
+        "_id": "cp0015aloevera",
+        "name": "Aloe vera",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une plante commune employée pour soigner la peau et les coups de soleil. Intervient dans la composition de déodorant Lowdour.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": "Déodorant Lowdour, Soins de la peau"
+        }
+    },
+    {
+        "_id": "cp0016amanitetue",
+        "name": "Amanite tue-mouche",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Champignon hallucinogène connu pour son chapeau rouge à points blancs</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Essence de folie",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0017anjelica",
+        "name": "Anjelica",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une plante aux propriétés magiques employée dans la fabrication de potions. Il est possible que le nom de cette plante soit une faute d’orthographe de « Angelica archangelica », une plante du monde réel qui est cultivée pour ses tiges et ses racines comestibles au parfum doux.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": "Comestible"
+        }
+    },
+    {
+        "_id": "cp0018antimoine",
+        "name": "Antimoine",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Un élément chimique connu pour ses vertus toxiques. On le trouve sous forme de cristaux solides de couleur bleue. Sous sa forme liquide, il est employé comme ingrédient de potions.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": "Poison (inhalation/ingestion)"
+        }
+    },
+    {
+        "_id": "cp0019apocyn",
+        "name": "Apocyn",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Plantes aux fleurs blanches poussant en arbuste et pouvant représenter un danger pour les animaux. Distillée, elle peut être employée comme poison.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Apocyn",
+            "otherUses": "Poison (ingestion)"
+        }
+    },
+    {
+        "_id": "cp0020araignee",
+        "name": "Araignée",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>De petites araignées non-venimeuses qu’on trouve un peu partout.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": "Nourriture pour familier"
+        }
+    },
+    {
+        "_id": "cp0021armoise",
+        "name": "Armoise",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une herbe très amère employée dans la fabrication de potions et comme médecine depuis les temps anciens.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Élixir d’Euphorie, Mélange de bile de tatou, Oculi cura, Philtre de Mort Vivante, Potion d’atténuation, Potion de soin",
+            "otherUses": "Antipuce, Médecine magique ou non- magique"
+        }
+    },
+    {
+        "_id": "cp0022armotentia",
+        "name": "Armotentia",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Substance liquide mystérieuse employée dans la fabrication de potions</p>",
+            "rarity": "rarissime",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Mélange de bile de tatou, Élixir malveillant",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0023asclepiade",
+        "name": "Asclépiade tubéreuse",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Plante herbacée vivace pouvant atteidre 1 mètre de hauteur, avec des fleurs orange ou jaunes</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Baume d'asclépiade tubéreuse",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0024baiedactee",
+        "name": "Baie d'Actée en épi",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Plante originaire d’Europe, d’Asie et d’Amérique du Nord dont les baies rouges et blanches sont extrêmement toxiques quand elles sont consommées.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Actée en épi",
+            "otherUses": "Vertus médicinales"
+        }
+    },
+    {
+        "_id": "cp0025baiedegui",
+        "name": "Baie de gui",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Le gui est une plante parasite qui ne possède pas de racines mais se fixe sur un arbre hôte dont elle absorbe la sève à travers un ou des suçoirs.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Amnésie, Antidote aux poisons communs, Pommade pommadante Grégoire",
+            "otherUses": "Poison (ingestion)"
+        }
+    },
+    {
+        "_id": "cp0026baieexplos",
+        "name": "Baie explosive",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Des baies magiques dont le jus est connu pour ses vertus revigorantes</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Énergie magique, Wiggenweld",
+            "otherUses": "Jus aux vertus revigorantes"
+        }
+    },
+    {
+        "_id": "cp0027banane",
+        "name": "Banane",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Un fruit pouvant être consommé mais qui peut aussi être employé dans la fabrication de potions</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potion de Vieillissement",
+            "otherUses": "Consommable"
+        }
+    },
+    {
+        "_id": "cp0028bavededard",
+        "name": "Bave de dards de Billywig",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>La bave produite par le dard d’un Billiwig, un petit insecte magique dont la piqûre peut faire léviter une personne.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Wiggenweld",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0029becdepoule",
+        "name": "Bec de poulet",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Les becs récupérés sur des poulets</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0030belladone",
+        "name": "Belladone",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une plante dont les feuilles et les baies sont très toxiques lorsqu’ils sont ingérés. La belladone est connue pour causer délires et les hallucinations. En essence, elle est employée pour la fabrication de potions</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": "Essence de folie, Poison hallucinogène"
+        }
+    },
+    {
+        "_id": "cp0031beurre",
+        "name": "Beurre",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Produit laitier extrait, par barattage, de la crème issue du lait</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Aliments magiques, Acné",
+            "otherUses": "Consommable"
+        }
+    },
+    {
+        "_id": "cp0032beurredeka",
+        "name": "Beurre de karité",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une huile végétale comestible extraite des fruits du karité, un arbre poussant principalement dans les savanes arborées de l'Afrique de l'Ouest et centrale</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Pommade soignante pour sabot",
+            "otherUses": "Consommable"
+        }
+    },
+    {
+        "_id": "cp0033bicarbonat",
+        "name": "Bicarbonate de soude",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Composé chimique inorganique se présentant sous la forme d’une poudre blanche</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Brume opaque, Glue",
+            "otherUses": "Digestif, Détergeant"
+        }
+    },
+    {
+        "_id": "cp0034biledetato",
+        "name": "Bile de tatou",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>De la bile provenant d’un tatou</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Aiguise-Méninges, Mélange de bile de tatou",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0035bistorde",
+        "name": "Bistorde",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une plante herbacée magique dont les fleurs jaunes sont connues pour contrer les effets des morsures de serpent.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0036bourgeonde",
+        "name": "Bourgeon de châtaignier",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Des bourgeons de feuille de châtaignier qui possèdent un effet augmentant la régénération sanguine.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potion de restauration n°1, Potion de restauration n°2, Potion de restauration n°3, Régénération sanguine",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0037bourgeonde",
+        "name": "Bourgeon de sorbier",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Des bourgeons de feuille de sorbier qui possèdent un effet augmentant la régénération sanguine.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potion de restauration n°1, Potion de restauration n°2, Potion de restauration n°3, Régénération sanguine",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0038bourrache",
+        "name": "Bourrache",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une plante commune connue pour ses fleurs parfaites avec cinq pétales étroits à pointe triangulaire. Les fleurs sont le plus souvent de couleur bleue, bien que des fleurs roses puissent parfois être trouvées</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Phéromones",
+            "otherUses": "Usage culinaire, Répulsif à limaces"
+        }
+    },
+    {
+        "_id": "cp0039branchiflo",
+        "name": "Branchiflore",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>La Branchiflore est une plante magique originaire du bassin méditerranéen. Elle a l’apparence d’un enchevêtrement de queues de rat grises et gluantes</p>",
+            "rarity": "rarissime",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": "Permet de respirer sous l’eau, Ingrédient de boisson"
+        }
+    },
+    {
+        "_id": "cp0040bubonox",
+        "name": "Bubonox",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>bouillie, peut être employée pour la cré potions. Un bulbe provenant d’une Gloire des Neig plante aux fleurs violettes en forme d’é</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Acné",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0041bulbesaute",
+        "name": "Bulbe sauteur",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>particularité de sauter partout</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Doigts agiles",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0042betoine",
+        "name": "Bétoine",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une plante herbacées connue pour ses propriétés médicinales comme sa capacité à cautériser les plaies.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Traitement des morsures de chiens fous",
+            "otherUses": "Vertus médicinales"
+        }
+    },
+    {
+        "_id": "cp0043bezoard",
+        "name": "Bézoard",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Corps étranger ressemblant à une pierre qui se trouve dans l’estomac des chèvres et qui sert d’antidote à la plupart des poisons et potions</p>",
+            "rarity": "rarissime",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Antidote aux poisons courants",
+            "otherUses": "Contrepoison"
+        }
+    },
+    {
+        "_id": "cp0044cafard",
+        "name": "Cafard",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>nuisible mais qui peut être utilisé dans préparation de potions Un champignon très toxique que l’on trou</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Actuellement inconnue",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0045calocereco",
+        "name": "Calocère cornue",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>champignon n’a pas la réputation d’être ou vénéneux bien qu’il soit classé comme comestible La camomille est une plante médicinale a jaunes et qui est utilisée en usage inte</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Infusion infecte                     -",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0046camomille",
+        "name": "Camomille",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>les spasmes et les problèmes digestifs. camomille peut également lutter contre l paralysie. La cannelle est une épice obtenue à part l’écorce interne d’arbres du genre Cinna</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potion anti-paralysie, Langue de miel",
+            "otherUses": "Tisane, Condiment"
+        }
+    },
+    {
+        "_id": "cp0047cannelle",
+        "name": "Cannelle",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Elle est utilisée comme condiment dans l aliments sucrés et salés et comme ingréd potion Plante aux propriétés magiques poussant</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potion anti-paralysie",
+            "otherUses": "L’un des arômes des Dragées"
+        }
+    },
+    {
+        "_id": "cp0048centauree",
+        "name": "Centaurée",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>connue pour ses vertus médicinales Le cerveau d’un crapaud qui peut être ut</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Conscience, Décoction hoqueteuse",
+            "otherUses": "Vertus médicinales"
+        }
+    },
+    {
+        "_id": "cp0049champignon",
+        "name": "Champignon vénéneux",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Champignon toxique pouvant provoquer des empoisonnements graves.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potion de Mort Vivante",
+            "otherUses": "Poison"
+        }
+    },
+    {
+        "_id": "cp0050charbon",
+        "name": "Charbon",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>partir de la combustion partielle de organique des végétaux Une variété particulière de chardon m</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Lumière aveuglante, Vérification",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0051chardoneco",
+        "name": "Chardon écossais",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Plante épineuse emblématique, utilisée comme ingrédient de potions.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potion anti-toux",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0052chardoneto",
+        "name": "Chardon étoilé",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Plante magique ayant aujourd'hui disparu. Ses fleurs d'étoile sont caractéristiques de la plante.</p>",
+            "rarity": "rarissime",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Poison de vieillissement",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0053chenilles",
+        "name": "Chenilles",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Des larves de papillons de jour ou de Des cheveux qui proviennent de dragon asiatiques. Leur récupération est dif</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Ratatinage",
+            "otherUses": "Nourriture animaux"
+        }
+    },
+    {
+        "_id": "cp0054chiendente",
+        "name": "Chiendent étoilé",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>mauvaise herbe verte drue – qui possè vertus médicinales Une plante magique provenant de Chine</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Élixir malveillant",
+            "otherUses": "Vertus médicinales"
+        }
+    },
+    {
+        "_id": "cp0055choupuant",
+        "name": "Chou puant",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Plante magique à l'odeur nauséabonde, utilisée comme ingrédient de potions.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Infusion infecte                -, Lumière aveuglante",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0056chrysanthe",
+        "name": "Chrysanthème",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>symboliser la positivité, la constanc l’amour et la vérité. Des insectes verts non magiques connu</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Véritasérum                     -, Polynectar",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0057chrysope",
+        "name": "Chrysope",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>leurs grandes ailes qui s’entrelacent volent. Une plante herbacée produisant des fl</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Vérification",
+            "otherUses": "Nourriture pour familier"
+        }
+    },
+    {
+        "_id": "cp0058chevrefeui",
+        "name": "Chèvrefeuille",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>chèvrefeuille est une plante symbolis loyauté, la fidélité Une variété particulière de chiendent</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Encre magique",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0059cigueaquat",
+        "name": "Ciguë aquatique",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Plante aquatique toxique pouvant être utilisée comme ingrédient de potions.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Poison de vieillissement, Ratatinage, Cirassure, Baume à bec, Baume d'asclépiade tubéreuse",
+            "otherUses": "Vertu médicinale"
+        }
+    },
+    {
+        "_id": "cp0060cigue",
+        "name": "Cigüe",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>blanches, connue pour sa haute toxici La ciguë aquatique est une plante don</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Doxicide, Doxycide",
+            "otherUses": "Poison mortel, Poison mortel (ingestion)"
+        }
+    },
+    {
+        "_id": "cp0061ciredabeil",
+        "name": "Cire d’abeille",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>abeilles. Un petit crustacé vivant dans les arb</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Pommade soignante pour sabot, Transfert, Verni protecteur",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0062cloporte",
+        "name": "Cloporte",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une essence obtenue à partir de cloportes et servant d’ingrédient de potion</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0063cloudegiro",
+        "name": "Clou de Girofle",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>cautérisantes et qui peut être utilis Le cœur provenant d’un crocodile Ce champignon de couleur blanche-gris développe en touffes de plusieurs ind</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potion de cautérisation, Philtre calmant, Philtre calmant pour Chartier, Conscience",
+            "otherUses": "Cuisine"
+        }
+    },
+    {
+        "_id": "cp0064cornedelic",
+        "name": "Corne de licorne",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>La corne de licorne est connue pour ses propriétés purifiantes pouvant aider à contrer les poisons. Une corne de licorne est vendue 21 Gallion chez les apothicaires.</p>",
+            "rarity": "rarissime",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Antidote aux poisons courants, Occulus, Philtre de Paix, Potion contre la toux, Remède à la Dragoncelle, Veritaserum, Wiggenweld",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0065cornederup",
+        "name": "Corne d’Éruptif",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une corne provenant d'un Éruptif, une créature magique ressemblant à un rhinocéros. Réduite en poudre, elle peut être employée dans la fabrication de potions.</p>",
+            "rarity": "rarissime",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potion jaillissante             -, Pimentine, Duplication                     -, Polynectar, Aliments magiques, Caféine",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0066cornesdadd",
+        "name": "Cornes d'Adder",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Des cornes provenant d’Adder, une variété de vipère extrêmement venimeuses. Cet ingrédient apparaît dans la chanson Double-trouble.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0067cornesdadd",
+        "name": "Cornes d’Adder",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Des cornes provenant d’Adder, une variété de vipère extrêmement venimeuses. Cet ingrédient apparaît dans la chanson Double-trouble.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0068cranson",
+        "name": "Cranson",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Plante qui pousse dans les marais salés ou le long du littoral dans le nord et l’ouest de l’Europe et en Grande-Bretagne. Riche en vitamine C, elle est utilisée pour aider à guérir ou prévenir le scorbut.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Aliments magiques, Philtre de Confusion, Philtre d’Embrouille, Philtre revigorant",
+            "otherUses": "Lutter contre le scorbut"
+        }
+    },
+    {
+        "_id": "cp0069crapaudcor",
+        "name": "Crapaud cornu",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une variété particulière de crapaud qui se distingue par la présence de cornes sur sa tête</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": "Animal domestique"
+        }
+    },
+    {
+        "_id": "cp0070crindechev",
+        "name": "Crin de cheval",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Du crin provenant de chevaux classiques</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Combinaison",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0071crindegron",
+        "name": "Crin de Gronian",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Du crin provenant d’un Gronian, un cheval ailé magique de grande taille connu pour son incroyable rapidité</p>",
+            "rarity": "rarissime",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potion Exstimulo",
+            "otherUses": "Cœur de baguette"
+        }
+    },
+    {
+        "_id": "cp0072crindelico",
+        "name": "Crin de licorne",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Du crin provenant de licorne et servant principalement à la fabrication de baguette magique et de potions. Chaque poil coûte entre 7 et 15 Gallions à l’achat.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Beauté, Beauté illusoire, Potion Exstimulo",
+            "otherUses": "Cœur de baguette"
+        }
+    },
+    {
+        "_id": "cp0073crindabrax",
+        "name": "Crin d’Abraxan",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Du crin d’un blanc étincelant provenant d’un Abraxan, un cheval ailé géant</p>",
+            "rarity": "rarissime",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potion Exstimulo",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0074cristalder",
+        "name": "Cristal de roche",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Le Cristal de roche est une pierre incolore et limpide de la famille des quartz.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Remède à la Dragoncelle",
+            "otherUses": "Divination"
+        }
+    },
+    {
+        "_id": "cp0075crochetsde",
+        "name": "Crochets de serpent",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Les crocs de serpent, lorsqu’ils sont écrasés, sont un ingrédient utilisé dans la préparation de certaines potions. Cet ingrédient commun ne doit pas être récolté sur des serpents venimeux.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Anti-Furoncles, Potion de l’Œil Vif, Potion de puissance",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0076dentdedrag",
+        "name": "Dent de dragon",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Des dents provenant de dragon. Du fait que celles-ci repoussent en permanence, elles peuvent être trouvée plus simplement que les autres ingrédients provenant de cette créature. Réduites en poudre, elles peuvent être utilisées pour la fabrication de potions.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Anti-Acné, Baume à bec, Brume de Pensine",
+            "otherUses": "Anti-Acné, Booste la mémoire (poudre)"
+        }
+    },
+    {
+        "_id": "cp0077dentdeloup",
+        "name": "Dent de loup",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une dent provenant d’un loup. Il n’est pas précisé s’il s’agit d’une canine ou non</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0078dentdelion",
+        "name": "Dent-de-lion",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une fleur commune qui peut être utilisée pour fabriquer des potions. Cette fleur est également connue sous le nom de « Pissenlit »,</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": "Jus de Pissenlit, Comestible, Plante d’ornement"
+        }
+    },
+    {
+        "_id": "cp0079dictame",
+        "name": "Dictame",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Le Dictame est une plante verte de petite taille qui est connue pour ses vertus thérapeutiques. Il se mange également cru pour cicatriser les plaies peu profondes</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Babillage, Essence de Dictame, Oculi cura, Potion d’atténuation, Wiggenweld",
+            "otherUses": "Propriétés médicinales, Cœur de baguette"
+        }
+    },
+    {
+        "_id": "cp0080digitale",
+        "name": "Digitale",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Plantes herbacées aux fleurs vives dont la couleur varie de diverses teintes pourpres à diverses nuances de gris clair. Cette plante est également toxique</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": "Poison (ingestion)"
+        }
+    },
+    {
+        "_id": "cp0081decorce",
+        "name": "d’écorce",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Écorce d'arbre utilisée comme ingrédient de potions.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Transfert",
+            "otherUses": "Parfum"
+        }
+    },
+    {
+        "_id": "cp0082eaudemiel",
+        "name": "Eau de miel",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une solution de miel dilué dans de l’eau et qui prend diverses teintees en fonction du taux de dilution</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Antidote aux poisons communs, Langue de miel, Philtre revigorant, Volubilis, Wiggenweld",
+            "otherUses": "Consommable"
+        }
+    },
+    {
+        "_id": "cp0083eaudesel",
+        "name": "Eau de sel",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Du sel dilué dans de l’eau</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": "Traitement de la galle des écailles"
+        }
+    },
+    {
+        "_id": "cp0084eaudesourc",
+        "name": "Eau de source",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>De l’eau pure provenant d’une source</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Neutralisation, Occulus, Potion d’hilarité, Potion de mélancolie, Regermination, Rejutage, Remontant de Pomfresh, Vérification, Veritaserum",
+            "otherUses": "Consommable"
+        }
+    },
+    {
+        "_id": "cp0085ellebore",
+        "name": "Ellébore",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une plante blanche extrêmement toxique qui, employée en sirop, peut être utilisée comme ingrédient de potion.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potion No. 86, Volubilis, Philtre de paix",
+            "otherUses": "Poison mortel"
+        }
+    },
+    {
+        "_id": "cp0086essenceder",
+        "name": "Essence de rue",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Essence extraite de rue, une plante formant des arbrisseaux à fleurs jaunes et également connue sous le nom d’herbe de grâce.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Felix Felicis, Remontant de Pomfresh, Traitement des morsures de chiens fous",
+            "otherUses": "Antipoison, Vertus médicinales"
+        }
+    },
+    {
+        "_id": "cp0087farine",
+        "name": "Farine",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Poudre obtenue par le broyage de grains de céréales</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Glue",
+            "otherUses": "Consommable"
+        }
+    },
+    {
+        "_id": "cp0088figuedebar",
+        "name": "Figue de Barbarie",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Fruit du figuier de Barbarie aux propriétés médicinales.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potion de soin",
+            "otherUses": "Comestible"
+        }
+    },
+    {
+        "_id": "cp0089figuedebar",
+        "name": "Figue de Barbarie / figuier",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>plante magique dont les fleurs prenne l’apparence de fruits que l’on appell Des feuilles de mandragore, une plant racine ressemble à un bébé que l’on e un pot. Leur cri est mortel pour celu sans protection. Une plante magique verte, aux dents p possédant des vignes mobiles qui tent d’attraper des proies vivantes. Le po</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Cirassure, Animagus, Gaz étrangleur",
+            "otherUses": "Vertus médicinales"
+        }
+    },
+    {
+        "_id": "cp0090finesherbe",
+        "name": "Fines herbes",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Un mélange d’herbes communes qui peut être employé pour la cuisine et pour la fabrication de potions.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": "Cuisine"
+        }
+    },
+    {
+        "_id": "cp0091fluideexpl",
+        "name": "Fluide explosif",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Le Fluide explosif se trouve dans la corne d’Éruptif. Il fait exploser tout ce qui en est imprégné</p>",
+            "rarity": "rarissime",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potion jaillissante",
+            "otherUses": "Explosif"
+        }
+    },
+    {
+        "_id": "cp0092foiededrag",
+        "name": "Foie de dragon",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Du foie prélevé sur un dragon. Cet ingrédient est très difficile à se procurer mais extrêmement utile dans la fabrication de potions.</p>",
+            "rarity": "rarissime",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Doxycide, Potion d’atténuation",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0093fougere",
+        "name": "Fougère",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Les fougères sont des plantes de sous-bois, aimant généralement les lieux plutôt ombragés et qui forment des frondes à leurs extrémités</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Cataplasme contre les morsures de Murlap, Regermination, Traitement des morsures de chiens fous",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0094fecule",
+        "name": "Fécule",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Des flocons de pomme de terre séchée employés dans certaines potions ou en cuisine</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Glue",
+            "otherUses": "Consommable"
+        }
+    },
+    {
+        "_id": "cp0095geleedepet",
+        "name": "Gelée de pétrole",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Un mélange semi-solide d’hydrocarbures couramment utilisé comme onguent cutané.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Lissenplis, Onguent d’amnésie du Dr Oubbly",
+            "otherUses": "Onguent pour la peau"
+        }
+    },
+    {
+        "_id": "cp0096gingembre",
+        "name": "Gingembre",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Plante à fleurs dont le rhizome, la racine de gingembre, est utilisé en cuisine comme épice hautement aromatisée et en médecine pour ses vertus tonifiantes. Le gingembre est également l’un des ingrédients de la bièraubeurre et des salamandres au gingembre.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Aiguise-Méninges, Beauté, Beauté illusoire, Langue de miel, Philtre dégonflant, Potion anti-paralysie, Remontant de Pomfresh",
+            "otherUses": "Bièraubeurre, Confiserie (salamandre au gingembre), Cuisine, Vertus médicinales"
+        }
+    },
+    {
+        "_id": "cp0097girofleede",
+        "name": "Giroflée des murailles",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Plante aux fleurs jaunes ou oranges poussant sur les vieux murs.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potion d'allégresse",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0098goudron",
+        "name": "Goudron",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Matière noire, visqueuse et hautement inflammable employée pour traiter la galle des écailles chez les dragons.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Combinaison, Élixir malveillant",
+            "otherUses": "Traitement de la galle des écailles"
+        }
+    },
+    {
+        "_id": "cp0099grainedefe",
+        "name": "Graine de feu",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Graines orange-rouge provenant d’un buisson ardent et dégageant une forte chaleur.</p>",
+            "rarity": "rarissime",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Antidote aux poisons rares, Crache-Flammes",
+            "otherUses": "Éclore les œufs de dragon"
+        }
+    },
+    {
+        "_id": "cp0100grainesdec",
+        "name": "Graines de café",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Graines torréfiées de diverses variétés de caféier</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Caféine",
+            "otherUses": "Consommable"
+        }
+    },
+    {
+        "_id": "cp0101guarana",
+        "name": "Guarana",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Plante originaire de la forêt amazonienne dont les graines contiennent 2 à 7% de caféine, Cette plante aux vertus tonifiantes serait 4 fois plus forte que le café</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Caféine, Doigts agiles",
+            "otherUses": "Consommable"
+        }
+    },
+    {
+        "_id": "cp0102herbedarge",
+        "name": "Herbedargen",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une plante aux fleurs jaunes de la famille des roses</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0103huiledenee",
+        "name": "Huile de Neem",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>De l’huile extraite de noix de Margousier, un arbre originaire d’Inde et poussant dans les régions tropicales et semi-tropicales</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Fergus Fungal Budge, Transfert, Verni protecteur",
+            "otherUses": "Répulsif à insectes, Insecticide"
+        }
+    },
+    {
+        "_id": "cp0104huilederic",
+        "name": "Huile de ricin",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une huile jaune qui a très mauvais goût. L’huile de ricin est en vente chez l’apothicaire au prix de quatre Gallions pour quatorze fioles</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Antidote aux philtres d’amour, Élixir malveillant, Pommade soignante pour sabot, Transfert",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0105huilederos",
+        "name": "Huile de rose",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>L’huile de rose est une huile essentielle extraite des pétales de rose. Elle est utilisée comme ingrédient de potion et vendue chez l’apothicaire pour 8 Gallions la bouteille</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Transfert",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0106infusionde",
+        "name": "Infusion d'écorce",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Préparation à base d'écorce d'arbre infusée dans l'eau chaude.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potion de soin",
+            "otherUses": "Vertus médicinales"
+        }
+    },
+    {
+        "_id": "cp0107ingredient",
+        "name": "Ingrédient Standard",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Un mélange d’herbes communes connues pour leurs propriétés magiques très utiles pour la fabrication de potions</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Amnésie, Antidote aux poisons courants, Herbicide, Neutralisation, Potion de l’œil vif, Somnifère, Somnifère pour Croup",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0108joncdesjum",
+        "name": "Jonc des jumeaux",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Plante aquatique rare aux propriétés magiques liées à la dualité.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Duplication",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0109jusdegrena",
+        "name": "Jus de grenade",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Du jus provenant des fruits de la grenade</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": "Consommable"
+        }
+    },
+    {
+        "_id": "cp0110jusdehorgl",
+        "name": "Jus de Horglup",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Du jus provenant de l’écrasement de Horglup, une créature semblable à un champignon doté de tentacules.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Herbicide, Infusion infecte, Wiggenweld",
+            "otherUses": "Propriétés curatives"
+        }
+    },
+    {
+        "_id": "cp0111jusdesangs",
+        "name": "Jus de sangsues",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Des sangsues réduites à l’état de jus</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Poison de vieillissement, Ratatinage",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0112jusdoignon",
+        "name": "Jus d’oignon",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Du jus obtenu en pressant des oignons</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Fergus Fungal Budge",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0113kelp",
+        "name": "Kelp",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Le kelp est une famille d’algues brunes géantes pouvant mesurer jusqu’à 60m et former de véritables forêts sous-marines</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Aliments magiques, Fertilisant",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0114languedech",
+        "name": "Langue de chien",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>La langue provenant d’un chien</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0115lavande",
+        "name": "Lavande",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>La lavande est une fleur violette connue pour sa belle couleur et son parfum apaisant qui attire les insectes pollinisateurs.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Crache-Flammes, Détergents magiques, Nettoie-Tout magique, Phéromones, Philtre calmant, Philtre calmant pour Chartier, Philtre dégonflant, Somnifère, Somnifère pour Croup",
+            "otherUses": "Cuisine, Parfum, Repousse insecte"
+        }
+    },
+    {
+        "_id": "cp0116limacedefe",
+        "name": "Limace de feu",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Des limaces enflammées qui sont capables de mettre le feu à des forêts entières.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Énergie magique",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0117limaceacor",
+        "name": "Limace à cornes",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Des limaces possédant des cornes et qui peuvent être employées comme ingrédient de potion une fois bouillies.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Anti-Furoncles",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0118liveche",
+        "name": "Livèche",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une plante qui ressemble au céleri et dont les fruits et les graines sont utilisés en cuisine. Cette plante est également connue pour ses vertus médicinales depuis des siècles, en particulier pour faciliter la digestion</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Philtre de Confusion, Philtre d’Embrouille, Philtre revigorant, Remontant de Pomfresh",
+            "otherUses": "Propriétés médicinales, Cuisine (fruits/graines)"
+        }
+    },
+    {
+        "_id": "cp0119lotos",
+        "name": "Lotos",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Arbuste des pays arides dont le fruit ressemble à une baie au goût de datte. Cette plante possède de solides propriétés narcotiques et on lui prête la capacité à faire oublier certains évènements quand elle est consommée.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Onguent d’amnésie du Dr Oubbly, Potion d’ataraxie, Sommeil sans rêve",
+            "otherUses": "Propriété narcotiques"
+        }
+    },
+    {
+        "_id": "cp0120luciole",
+        "name": "Luciole",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>La luciole est un insecte non magique pouvant émettre une légère lueur.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Énergie magique",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0121mandragore",
+        "name": "Mandragore",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Les racines cuites de mandragore, une plante connue pour son hurlement pouvant tuer un homme. Il s’agit d’un ingrédient commun mais très puissant.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Antidote aux poisons courants, Engrais magiques, Occulus, Mémoire, Philtre de mandragore, Wiggenweld, Volubilis",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0122mauvedouce",
+        "name": "Mauve douce",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une plante utilisée en divination. Il est possible de la brûler et de déceler des formes ou des symboles dans la fumée qui s’en élève pour en déduire des choses, mais les centaures sont bien plus doués à cet exercice que les humains</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Langue de miel, Phéromones, Potion contre la toux, Potion laxative, Vérification",
+            "otherUses": "Bièraubeurre, Divination"
+        }
+    },
+    {
+        "_id": "cp0123menthe",
+        "name": "Menthe",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Les menthes sont des plantes vivaces herbacées au feuillage généralement très aromatique.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Cataplasme contre les morsures de Murlap, Crache-Flammes, Élixir d’Euphorie, Potion contre la toux, Regermination, Traitement des morsures de chiens fous, Wiggenweld",
+            "otherUses": "Cuisine, Propriétés médicinales"
+        }
+    },
+    {
+        "_id": "cp0124menthepoiv",
+        "name": "Menthe poivrée",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>La menthe poivrée est une plante herbacée qui provient d’un croisement entre la menthe aquatique et la menthe terrestre, et qui est connue pour posséder plus de principe actif que ses deux parentes.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Amortentia, Antidote aux Poisons Courants, Élixir d’Euphorie, Philtre calmant, Philtre calmant pour Chartier, Philtre d’amour avancé, Philtre d’amour ordinaire, Potion à priser, Potion de haine, Volubilis",
+            "otherUses": "Dragées surprises de Bertie Crochue, Crapaud à la menthe (confiserie)"
+        }
+    },
+    {
+        "_id": "cp0125miel",
+        "name": "Miel",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Substance sucrée élaborée par les abeilles à miel à partir de nectar</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potion contre la toux",
+            "otherUses": "Consommation"
+        }
+    },
+    {
+        "_id": "cp0126millepertu",
+        "name": "Millepertuis",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Également connu sous le nom d’herbe de Saint- Jean, cette plante subtropicale aux fleurs jaunes est connue pour ses vertus médicinales dans le traitement de la dépression.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Cataplasme contre les morsures de Murlap, Potion Tue-Loup, Traitement des morsures de chiens fous",
+            "otherUses": "Vertus médicinales"
+        }
+    },
+    {
+        "_id": "cp0127moly",
+        "name": "Moly",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Le Moly est une plante puissante facilement reconnaissables à ses tiges noires et à ses fleurs blanches, et qui peut être consommée pour contrer les enchantements. Elle est également utilisée comme ingrédient de potion.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Neutralisation, Potion de Wiggenweld",
+            "otherUses": "Contre-enchantement"
+        }
+    },
+    {
+        "_id": "cp0128mortius",
+        "name": "Mortius",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Un champignon particulièrement toxique et potentiellement mortel, qui peut être employé dans la fabrication de potions.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": "Poison mortel"
+        }
+    },
+    {
+        "_id": "cp0129muguet",
+        "name": "Muguet",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Ces fleurs aux clochettes blanches dégagent un doux parfum et symbolisent l’amitié et la pureté.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Pommade pommadante Grégoire, Vérification",
+            "otherUses": "Décoratif"
+        }
+    },
+    {
+        "_id": "cp0130melisse",
+        "name": "Mélisse",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une plante verte qui forme de petits buissons et qui est connue depuis des siècles pour ses vertus médicinales.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Décoction hoqueteuse, Traitement des morsures de chiens fous",
+            "otherUses": "Calme le hoquet, Vertus médicinales, Plante d’ornement"
+        }
+    },
+    {
+        "_id": "cp0131nuxmyristi",
+        "name": "Nux Myristica",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une ancienne plante magique qui a disparu aujourd’hui</p>",
+            "rarity": "rarissime",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0132ortieseche",
+        "name": "Ortie séchée",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Plante herbacée connue pour ses feuilles hérissées de poils raides et qui sécrètent un liquide très irritant.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Acné, Anti-Furoncles, Enflure, Philtre dégonflant",
+            "otherUses": "Consommable"
+        }
+    },
+    {
+        "_id": "cp0133os",
+        "name": "Os",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Des os provenant d’animaux</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Baume à bec, Fertilisant",
+            "otherUses": "Nourriture pour animaux"
+        }
+    },
+    {
+        "_id": "cp0134pattedelez",
+        "name": "Patte de lézard",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une patte provenant d’un lézard De la peau provenant de serpents d’arb</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Beauté, Beauté illusoire",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0135pellicule",
+        "name": "Pellicule",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>son crâne, et qui peuvent être employé fabrication de certaines potions Également connue sous le nom de Pensée</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Polynectar                      -, Brume de Pensine",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0136penseesauv",
+        "name": "Pensée sauvage",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>tricolore, il s’agit d’une petite fleu cultivée dans les jardins des moldus.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Solution de développement, Veritaserum, Amortentia, Beauté, Beauté illusoire",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0137plantain",
+        "name": "Plantain",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>feuilles en forme de lance et connu de Moyen-âge pour ses vertus médicinales Une plume provenant d’un hibou grand-d</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Langue de miel, Traitement des morsures de, Cirassure",
+            "otherUses": "Infusions"
+        }
+    },
+    {
+        "_id": "cp0138plumedepao",
+        "name": "Plume de paon",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>la pièce Une plume provenant d’un phénix, une c capable de s’enflammer et de renaître cendres. Une plume bleue provenant d’un Jobarbi</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Dragonfortant, Élixirs éternels, Énergie magique, Brume de Pensine, Duplication, Mémoire",
+            "otherUses": "Plume à écrire, Cœur de baguette"
+        }
+    },
+    {
+        "_id": "cp0139plumedephe",
+        "name": "Plume de phénix",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Plume extrêmement rare provenant d'un phénix, aux propriétés régénératives puissantes.</p>",
+            "rarity": "rarissime",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Élixirs éternels",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0140poilsdecha",
+        "name": "Poils de chat",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Des poils provenant de chat Des poils provenant d’un Croup, un ani magique ressemblant à un chien mais po une queue fourchue Des poils provenant d’un loup garou so</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Somnifère pour Croup",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0141poivremoul",
+        "name": "Poivre moulu",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>espèces de poivriers Un mélange de divers pollens provenant</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potion à priser",
+            "otherUses": "Condiment"
+        }
+    },
+    {
+        "_id": "cp0142pollen",
+        "name": "Pollen",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>communes Le polygonium est une plante verte aux propriétés magique qui peut atteindre</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potion à priser                 -",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0143polygonum",
+        "name": "Polygonum",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>dizaines de centimètres de long. Assez on en trouve en grand nombre dans la F Interdite. Le Porridge du Pasteur est une plante avec des propriétés magiques. Elle a d</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Polynectar",
+            "otherUses": "Hydromel de polygonium"
+        }
+    },
+    {
+        "_id": "cp0144paquerette",
+        "name": "Pâquerette",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Fleur sauvage commune de couleur jaune et blanche dont les racines sont utilisées dans la préparation de potions. Les fleurs peuvent aussi être utilisées pour fabriquer de l’alcool.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Baume des pâquerettes, Poison de vieillissement, Ratatinage",
+            "otherUses": "Plante ornementale, Alcool : pression de pâquerettes"
+        }
+    },
+    {
+        "_id": "cp0145petaledero",
+        "name": "Pétale de rose",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Des épines provenant de rose</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Amortentia, Philtre d’amour avancé, Philtre d’amour ordinaire, Potion de haine",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0146queuederup",
+        "name": "Queue d'Éruptif",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Les queues d'Éruptif sont longues et tressées comme une corde.</p>",
+            "rarity": "rarissime",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potion jaillissante",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0147queuederat",
+        "name": "Queue de rat",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une queue de rat qui entre dans la composition de nombreuses potions</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Hérisser les Cheveux",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0148racinedere",
+        "name": "Racine de Rêve",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Plante originaire du Cap Est d’Afrique du Sud, la racine de Rêve est consommée depuis des siècles et entrant des rituels spirituels permettant de faire des rêves éveillés</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Conscience, Gaz étrangleur, Potion d’ataraxie, Sommeil sans rêve",
+            "otherUses": "Méditation"
+        }
+    },
+    {
+        "_id": "cp0149ratederat",
+        "name": "Rate de rat",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Organe provenant de rat et entrant dans la composition de nombreuses potions</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Engrais magiques, Fertilisant, Poison de vieillissement, Ratatinage",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0150ratedetrit",
+        "name": "Rate de triton",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>La rate qui provient de tritons, de petites créatures qui ressemblent à des salamandres.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Aiguise-Méninges, Potion de vieillissement",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0151reishi",
+        "name": "Reishi",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Le Reishi est un petit champignon brun orangé qui est également connu sous le nom de champignon de l’immortalité ou champignon de l’éternité.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Élixirs éternels",
+            "otherUses": "Vertus médicinales"
+        }
+    },
+    {
+        "_id": "cp0152rosedejeri",
+        "name": "Rose de Jéricho",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une fleur particulière du désert qui possède la faculté de sécher entièrement en l’absence d’eau avant de revivre aux premières pluies. Cette capacité lui a valu le surnom de fleur éternelle.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Élixirs éternels",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0153roseedelun",
+        "name": "Rosée de lune",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Plante dont les propriétés magiques ont été découvertes au Moyen-Âge par la druidesse irlandaise Cliodna.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Antidote aux poisons communs, Conscience, Wiggenweld",
+            "otherUses": "Bièraubeurre"
+        }
+    },
+    {
+        "_id": "cp0154roseedumat",
+        "name": "Rosée du matin",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Précipitation d'eau due à la liquéfaction de la vapeur d'eau contenue dans l'air</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Beauté, Beauté illusoire",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0155resine",
+        "name": "Résine",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Matière collante produite par distillation de résines et goudrons, ou pouvant être obtenue à partir de bois résineux</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Glue, Combinaison, Élixir malveillant, Élixirs éternels, Transfert",
+            "otherUses": "Inflammable"
+        }
+    },
+    {
+        "_id": "cp0156salpetre",
+        "name": "Salpêtre",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Le salpêtre est sel de nitrate de potassium également connu sous le nom de sel de pierre. Employé depuis le Moyen-Âge pour ses propriétés particulières et est employé dans la confection de la poudre noire.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Lumière aveuglante",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0157sangdedrag",
+        "name": "Sang de dragon",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Du sang qui provient de l’une des nombreuses espèces de dragon existante. Très difficile à se procurer vu la dangerosité de la créature dont il est issu, il augmente considérablement la puissance magique d’une potion quand il est utilisé correctement lors de leur création.</p>",
+            "rarity": "rarissime",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Cinq sens, Encre magique, Phéromones, Pommade pommadante Grégoire, Potion de restauration n°3, Régénération sanguine, Remède à la Dragoncelle",
+            "otherUses": "Nettoyant pour four, Détachant, Soin des verrues, 9 autres usages non-précisés"
+        }
+    },
+    {
+        "_id": "cp0158sangdelico",
+        "name": "Sang de licorne",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Le sang d’une licorne, une créature magique très puissante. Il se présente sous la forme d’un liquide argenté épais. Bu pur, il permet de survivre à la mort, mais vous condamne à une demi-vie. La vente du sang de licorne est interdite</p>",
+            "rarity": "rarissime",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": "Survivre à la mort si consommer pur"
+        }
+    },
+    {
+        "_id": "cp0159sangdeleza",
+        "name": "Sang de lézard",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Du sang prélevé sur des lézards et qui peut être employé dans la fabrication de potions.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potion de restauration n°1",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0160sangdereem",
+        "name": "Sang de Re’em",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Du sang de Re'em, une créature magique semblable à un bœuf et qui possède une force extraordinaire.</p>",
+            "rarity": "rarissime",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potion Exstimulo",
+            "otherUses": "Octroie une force surhumaine à celui qui le boit"
+        }
+    },
+    {
+        "_id": "cp0161sangsue",
+        "name": "Sangsue",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une variété de parasites aquatiques ressemblant à une limace et qui se ventouse à la peau de ses victimes pour boire leur sang.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Polynectar",
+            "otherUses": "Médecine médiévale"
+        }
+    },
+    {
+        "_id": "cp0162sanguinair",
+        "name": "Sanguinaire",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une plante herbacée donnant des fleurs blanches ressemblant à des marguerites. Elle est connue également sous le nom de Sang-Dragon et est considérée comme toxique car elle tue les cellules des êtres vivants la consommant</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Poison pernicieux, Potion de Sang-de-Dragon",
+            "otherUses": "Poison"
+        }
+    },
+    {
+        "_id": "cp0163sauge",
+        "name": "Sauge",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une plante non-magique aux feuilles vertes en forme de lance et qui peut être brûlée pour aider à la divination. Cette plante est très appréciée des Centaures pour leur méditation</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Brume de Pensine, Cataplasme contre les morsures de Murlap, Langue de miel, Mémoire, Potion à priser, Phéromones, Traitement des morsures de chiens fous",
+            "otherUses": "Divination"
+        }
+    },
+    {
+        "_id": "cp0164sauleblanc",
+        "name": "Saule blanc",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Le saule blanc est un grand arbre qui peut atteindre 25 m de haut et dont l’écorce blanche est employée pour ses propriétés anti-inflammatoire.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potion de restauration n°1, Potion de restauration n°2, Potion de restauration n°3",
+            "otherUses": "Tisane"
+        }
+    },
+    {
+        "_id": "cp0165siropdelle",
+        "name": "Sirop d'ellébore",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Sous le nom ellébore, également orthographié hellébore, on retrouve de nombreuses fleurs dont les plus connues sont l’ellébore noire et la blanche. En sirop, l’ellébore possèderait des effets purgatifs et des vertus médicinales.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potion No.86, Philtre de Paix, Volubilis",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0166siropdarni",
+        "name": "Sirop d’arnica",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une plante donnant des fleurs jaune ou orange et qui est connue pour sa toxicité en cas d’ingestion. En sirop, cette plante est utilisée comme ingrédient de potion.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potion n°113",
+            "otherUses": "Poison (ingestion), Irritant en cas de contact"
+        }
+    },
+    {
+        "_id": "cp0167sisymbre",
+        "name": "Sisymbre",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une petite plante verte donnant des fleurs violettes et connue pour ses vertus médicinales. Elle entre notamment dans la composition du Polynectar, à condition d'être cueillie pendant la pleine lune</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Polynectar",
+            "otherUses": "Vertus médicinales"
+        }
+    },
+    {
+        "_id": "cp0168soufrenati",
+        "name": "Soufre natif",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Du soufre sous sa forme cristalline pure. Réduit en poudre, il peut être employé comme ingrédient de potion</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Panacée, Lumière aveuglante, Potion à priser",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0169sucre",
+        "name": "Sucre",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Extrait de la canne à sucre, de la betterave sucrière ou d’autres plantes, le sucre est une substance de saveur douce qu’en emploie généralement en cuisine.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Brume opaque, Caféine",
+            "otherUses": "Consommable"
+        }
+    },
+    {
+        "_id": "cp0170sebum",
+        "name": "Sébum",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>De la graisse produite naturellement par le corps humain et donnant de l’acné</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Acné",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0171tentacula",
+        "name": "Tentacula",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une plante magique verte, aux dents pointues et possédant des vignes mobiles qui tentent d’attraper des proies vivantes. Le poison qu’elle contient peut provoquer la mort de celui qui se fait mordre. Chaque feuille est vendue 10 Gallions chacune.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Gaz étrangleur, Potion No. 7",
+            "otherUses": "Poison mortel"
+        }
+    },
+    {
+        "_id": "cp0172tomatagori",
+        "name": "Tomatagoria",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une plante légendaire donnant de petites fleurs bleues et poussant dans la neige et la glace.</p>",
+            "rarity": "rarissime",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potentiel-absolu",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0173urine",
+        "name": "Urine",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Déchet produit par le corps qui entrerait dans la composition de la Panacée</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Panacée",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0174valeriane",
+        "name": "Valériane",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>La valériane est une plante au fleurs rose ou blanche qui est connue pour ses vertus relaxantes et apaisantes</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potion anti-paralysie",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0175vase",
+        "name": "Vase",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>De la vase provenant d’étang et stockée sous la forme de gélatine</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0176venindecra",
+        "name": "Venin de crapaud cornu",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une variété particulière de crapaud qui se distingue par la présence de cornes sur sa tête</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": "Animal domestique"
+        }
+    },
+    {
+        "_id": "cp0177venindeser",
+        "name": "Venin de serpent des arbres",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Venin extrait du serpent des arbres du Cap, utilisé dans la fabrication de potions.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potion de rétrécissement",
+            "otherUses": "Poison"
+        }
+    },
+    {
+        "_id": "cp0178vermarin",
+        "name": "Ver marin",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Vers non magiques de couleur blanche, brune ou rougeâtre vivant dans l’eau. Ils sont connus pour sécréter un minéral qui forme un tube de pierre autour de leur corps.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0179vernidujap",
+        "name": "Verni du Japon",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Arbre de la famille des Sumacs. Sa sève est utilisée pour la production de la laque.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Verni protecteur",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0180verveine",
+        "name": "Verveine",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Plante donnant de petite fleurs violettes connue pour ses vertus médicinales.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Traitement des morsures de chiens fous",
+            "otherUses": "Vertus médicinales"
+        }
+    },
+    {
+        "_id": "cp0181vigne",
+        "name": "Vigne",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>La vigne est une plante grimpante des régions au climat tempéré, donnant du raisin employé pour faire du vin. Elle symbolise également la joie, l'entraide, la solidarité conjugale et l'amitié et facilite la circulation sanguine.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Pommade pommadante Grégoire, Régénération sanguine",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0182vinblanc",
+        "name": "Vin blanc",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Un alcool fait à partir de raisin</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Traitement des morsures de chiens fous",
+            "otherUses": "Consommable"
+        }
+    },
+    {
+        "_id": "cp0183vinaigre",
+        "name": "Vinaigre",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Le vinaigre est un liquide acide utilisé comme condiment ou comme conservateur. Il est obtenu par fermentation, ou l’oxydation artificielle de l'éthanol</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Panacée",
+            "otherUses": "Consommable"
+        }
+    },
+    {
+        "_id": "cp0184wartizome",
+        "name": "Wartizome",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une ancienne plante magique qui était employée dans la confection de potions.</p>",
+            "rarity": "rarissime",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0185whitespiri",
+        "name": "White-spirit",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Le White-spirit est un liquide clair dérivé de la paraffine qui est couramment utilisé comme solvant dans la peinture</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": "Traitement de la galle des écailles"
+        }
+    },
+    {
+        "_id": "cp0186zinc",
+        "name": "Zinc",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Le zinc est un oligo-élément qu’on trouve à l’état naturel. Des carences en zinc peuvent diminuer les sens de l’odorat et du goût</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Cinq sens",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0187ecailleded",
+        "name": "Écaille de dragon",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Des écailles provenant de diverses espèces de dragons</p>",
+            "rarity": "rarissime",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Encre magique, Neutralisation, Regermination, Verni protecteur",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0188ecailleded",
+        "name": "Écaille de dragon de feu",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Des écailles provenant de diverses espèces de dragons</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Encre magique, Neutralisation, Regermination, Verni protecteur",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0189eleusine",
+        "name": "Éleusine",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Herbe annuelle de petite taille, présente dans les régions tropicales et subtropicales, connue pour ses vertus médicinales</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": "Vertus médicinales"
+        }
+    },
+    {
+        "_id": "cp0190epinederos",
+        "name": "Épine de rose",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Des épines provenant de rose</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Amortentia, Philtre d’amour avancé, Philtre d’amour ordinaire, Potion de haine",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0191epinedesha",
+        "name": "Épine de Sharak",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Des épines provenant d’un Sharak, un poisson peuplant les eaux de l’océan Atlantique. Peut être employé dans une variante du remède contre les furoncles</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Anti-Furoncles",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0192eponge",
+        "name": "Éponge",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Les éponges peuvent être d’origine animale – éponges de mer – ou végétale – Luffa.</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Duplication, Solution de développement, Vérification",
+            "otherUses": "Nettoyage"
+        }
+    },
+    {
+        "_id": "cp0193ildeboullu",
+        "name": "Œil de Boullu",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Des yeux provenant de Boullu, une sorte de créature magique aquatique en forme de boule et possédant deux grandes pattes.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Engrais magiques, Fertilisant",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0194ildedragon",
+        "name": "Œil de dragon",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Œil provenant d’un dragon</p>",
+            "rarity": "rarissime",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Oculi cura",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0195ildescarab",
+        "name": "Œil de scarabée",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Une espèce d’insectes. Réduit en poudre, ils entrent dans la composition de certaines potions. Leurs yeux sont généralement vendus 5 Noises la poignée chez les apothicaires</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Aiguise-Méninge, Essence de folie, Potion de Bombœil, Poussos",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0196ildetriton",
+        "name": "Œil de triton",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Un œil provenant d’un triton, une petite créature qui ressemble à une salamandre.</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0197ildanguill",
+        "name": "Œil d’anguille",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Œil prélevé sur une anguille</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Potion de Bombœil",
+            "otherUses": "Soin contre l’éclabouille"
+        }
+    },
+    {
+        "_id": "cp0198ufdedoxy",
+        "name": "Œuf de Doxy",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Des œufs noirs pondus par un Doxy, un petit parasite ailé dont la morsure est empoisonnée</p>",
+            "rarity": "rare",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Poison pernicieux, Potion fortifiante",
+            "otherUses": "Poison si consommé"
+        }
+    },
+    {
+        "_id": "cp0199ufsdoccamy",
+        "name": "Œufs d’Occamy",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Les œufs d’Occamy ont des propriétés magiques. Ils sont composés de l’argent le plus délicat et le plus pur.</p>",
+            "rarity": "rarissime",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "Felix Felicis",
+            "otherUses": ""
+        }
+    },
+    {
+        "_id": "cp0200ufspourris",
+        "name": "Œufs pourris",
+        "type": "component",
+        "img": "icons/svg/leaf.svg",
+        "system": {
+            "description": "<p>Des œufs à différents stades de décomposition</p>",
+            "rarity": "commun",
+            "quantity": 1,
+            "cost": {
+                "galleons": 0,
+                "sickles": 0,
+                "knuts": 0
+            },
+            "usedIn": "",
+            "otherUses": "Dragées surprises de Bertie Crochue"
+        }
+    }
+]

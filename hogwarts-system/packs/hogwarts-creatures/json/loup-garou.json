@@ -1,0 +1,216 @@
+{
+  "name": "Loup-garou",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 8,
+      "max": 8
+    },
+    "initiativeBonus": 0,
+    "healthNonLethal": {
+      "value": 0,
+      "max": 8
+    },
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXXX",
+    "stats": {
+      "str": {
+        "value": 12,
+        "formula": "2d6+5"
+      },
+      "con": {
+        "value": 10,
+        "formula": "3d6"
+      },
+      "siz": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "dex": {
+        "value": 16,
+        "formula": "2d6+9"
+      },
+      "int": {
+        "value": 10,
+        "formula": "3d6"
+      },
+      "pow": {
+        "value": 10,
+        "formula": "3d6"
+      },
+      "app": {
+        "value": 12,
+        "formula": "3d6+2"
+      },
+      "per": {
+        "value": 12,
+        "formula": "3d6+2"
+      }
+    },
+    "movement": {
+      "land": 12,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0,
+      "label": ""
+    },
+    "attacks": [
+      {
+        "name": "Morsure",
+        "chance": 40,
+        "damage": "1d6"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Athlétisme",
+        "value": 50
+      },
+      {
+        "name": "Discrétion",
+        "value": 55
+      },
+      {
+        "name": "Esquive",
+        "value": 40
+      },
+      {
+        "name": "Orientation",
+        "value": 45
+      },
+      {
+        "name": "Pistage",
+        "value": 55
+      },
+      {
+        "name": "Survie",
+        "value": 45
+      },
+      {
+        "name": "Vigilance",
+        "value": 55
+      }
+    ],
+    "powers": "<p>Baisse d’intelligence : Bien que le Loup-garou\nsoit humain à la base, celui-ci voit son intelligence\ndiminuer quand il est sous sa forme canine,\nlaissant ses instincts prendre le dessus.\nHaine envers les humains : Le Loup-garou est\nnaturellement violent envers les humains. Quand\nil croise un humain, il ne peut s’empêcher de\nl’attaquer pour tenter de le tuer.\nPerception (odorat) : Quand il utilise un jet de\nPERception (odorat), le Loup-garou effectue un\njet de PERx5 (au lieu de PERx1).\nPistage : Le Loup-garou est capable de suivre une\npiste préalablement repérée par un jet de\nPERception.</p>",
+    "usage": "<p>-</p>",
+    "magicResistance": {
+      "threshold": 0,
+      "effectReduction": 1
+    },
+    "notes": {
+      "gmNotes": ""
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "hogwarts-system",
+    "systemVersion": "1.0.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "32cbfaf5f46bbb41",
+  "_key": "!actors!32cbfaf5f46bbb41",
+  "prototypeToken": {
+    "name": "Loup-garou",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": true,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "luminosity": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5
+      },
+      "color": null,
+      "coloration": 1,
+      "attenuation": 0.5,
+      "contrast": 0,
+      "saturation": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "flags": {}
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

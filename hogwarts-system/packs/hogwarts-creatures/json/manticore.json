@@ -1,0 +1,216 @@
+{
+  "name": "Manticore",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 18,
+      "max": 18
+    },
+    "initiativeBonus": 0,
+    "healthNonLethal": {
+      "value": 0,
+      "max": 18
+    },
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXX",
+    "stats": {
+      "str": {
+        "value": 16,
+        "formula": "3d6+6"
+      },
+      "con": {
+        "value": 16,
+        "formula": "3d6+6"
+      },
+      "siz": {
+        "value": 20,
+        "formula": "4d6+6"
+      },
+      "dex": {
+        "value": 16,
+        "formula": "3d6+6"
+      },
+      "int": {
+        "value": 16,
+        "formula": "3d6+6"
+      },
+      "pow": {
+        "value": 9,
+        "formula": "2d6+2"
+      },
+      "app": {
+        "value": 12,
+        "formula": "2d6+6"
+      },
+      "per": {
+        "value": 12,
+        "formula": "2d6+6"
+      }
+    },
+    "movement": {
+      "land": 15,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0,
+      "label": "peau épaisse"
+    },
+    "attacks": [
+      {
+        "name": "Griffes",
+        "chance": 50,
+        "damage": "2d6"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Acrobatie",
+        "value": 50
+      },
+      {
+        "name": "Athlétisme",
+        "value": 65
+      },
+      {
+        "name": "Discrétion",
+        "value": 45
+      },
+      {
+        "name": "Esquive",
+        "value": 30
+      },
+      {
+        "name": "Orientation",
+        "value": 50
+      },
+      {
+        "name": "Survie",
+        "value": 60
+      },
+      {
+        "name": "Vigilance",
+        "value": 55
+      }
+    ],
+    "powers": "<p>Bestialité : Une Manticore ne peut s’empêcher\nd’attaquer toute créature qui croise sa route.\nQuand elle est en présence d'une proie\npotentielle, La Manticore doit réussir un jet de\nPOUx1 pour ne pas attaquer la proie.\nBond : Les puissantes pattes arrière de la\nManticore lui permettent de faire des bonds\ngigantesques de près de 9 mètres. De plus, les jets\nd’Athlétisme de difficulté normale et moyenne\nsont considérés comme réussis\nautomatiquement. Les jet classés comme\ndifficiles sont à considérer comme moyens.\nGuérison : Les pouvoirs de guérison des\nManticores sont bien supérieurs à la moyenne.\nQuand elle est blessée, le corps de la Manticore se\nrégénère magiquement pour soigner les\nblessures subies. Cela se traduit par une\nrégénération de 1 point de vie par jour et par une\nvitesse de régénération des points de vie en cas\nde repos double par rapport à un être humain ou\nune créature classique.\nImmunité à son propre venin : La Manticore est\nimmunisée à son propre poison, si bien qu’elle\npeut dévorer sans risque les proies qu’elle vient\nde tuer en les empoisonnant.\nLangage humain : La Manticore est capable de\nparler la langue des humains, même s’il est rare\nque quelqu’un ait le temps de tenir une\nconversation avec elle.\nRésistance (magie) : la majeure partie des\nsortilèges ne fonctionnent pas correctement sur\nles Manticores. Tout sortilège lancé à 90% de\nchance d’échouer sur elle. Lancez 1d100 et, si le\nrésultat est entre 010 et 000, alors le sortilège est\nraté. Les autres sortilèges voient leurs effets\ndiminués de trois quarts. De plus, les sorts à\ndurée permanente voient leur durée passer à\nvariable (minutes).\nVenin mortel : Le dard de la Manticore contient\nun poison mortel qu’elle injecte à ses ennemis et\nses proies quand elle les attaque. Très violent et\nrapide, ce venin ne possède aucun antidote connu\nà ce jour et provoque une mort immédiate de la\ncible s’il n’est pas contré par son système\nimmunitaire. VIRulence : 22</p>",
+    "usage": "<p>-</p>",
+    "magicResistance": {
+      "threshold": 0,
+      "effectReduction": 1
+    },
+    "notes": {
+      "gmNotes": ""
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "hogwarts-system",
+    "systemVersion": "1.0.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "97bf0781ec42ca02",
+  "_key": "!actors!97bf0781ec42ca02",
+  "prototypeToken": {
+    "name": "Manticore",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": true,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "luminosity": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5
+      },
+      "color": null,
+      "coloration": 1,
+      "attenuation": 0.5,
+      "contrast": 0,
+      "saturation": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "flags": {}
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "name": "Nundu",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 23,
+      "max": 23
+    },
+    "initiativeBonus": 0,
+    "healthNonLethal": {
+      "value": 0,
+      "max": 23
+    },
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXXX",
+    "stats": {
+      "str": {
+        "value": 30,
+        "formula": "4d6+16"
+      },
+      "con": {
+        "value": 16,
+        "formula": "4d6+2"
+      },
+      "siz": {
+        "value": 30,
+        "formula": "4d6+16"
+      },
+      "dex": {
+        "value": 22,
+        "formula": "2d6+15"
+      },
+      "int": {
+        "value": 13,
+        "formula": "2d6+6"
+      },
+      "pow": {
+        "value": 14,
+        "formula": "3d6+4"
+      },
+      "app": {
+        "value": 16,
+        "formula": "3d6+5"
+      },
+      "per": {
+        "value": 18,
+        "formula": "4d6+4"
+      }
+    },
+    "movement": {
+      "land": 16,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 8,
+      "label": "peau épaisse"
+    },
+    "attacks": [
+      {
+        "name": "Griffes",
+        "chance": 60,
+        "damage": "2d6"
+      },
+      {
+        "name": "Morsure",
+        "chance": 60,
+        "damage": "3d6"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Acrobatie",
+        "value": 70
+      },
+      {
+        "name": "Athlétisme",
+        "value": 70
+      },
+      {
+        "name": "Esquive",
+        "value": 60
+      },
+      {
+        "name": "Discrétion",
+        "value": 100
+      },
+      {
+        "name": "Pistage",
+        "value": 70
+      },
+      {
+        "name": "Orientation",
+        "value": 55
+      },
+      {
+        "name": "Survie",
+        "value": 55
+      },
+      {
+        "name": "Vigilance",
+        "value": 70
+      }
+    ],
+    "powers": "<p>Bond : Les puissantes pattes arrière du Nundu lui\npermettent de faire des bonds gigantesques de\nprès de 12 mètres. De plus, les jets d’Athlétisme\nde difficulté normale et moyenne sont considérés\ncomme réussis automatiquement. Les jets classés\ncomme difficiles sont à considérer comme\nmoyens.\nGrand chasseur : Le Nundu est parfaitement\nmaître de ses sens. Quand il effectue un jet de\nPERception pour repérer une proie, il le fait\ntoujours comme PERx5, et ce peu importe le sens\nemployé.\nGrande discrétion : Le Nundu est le seul animal\nau monde à maîtriser la compétence discrétion à\n100%.\nGrande endurance : Le Nundu fait partie des\ncréatures les plus endurantes connues. Capable\nde courir durant des heures, voire même des\njours sans s’arrêter, il peut traverser des forêts\nentières sans même être essoufflé ni ressentir la\nmoindre fatigue physique.\nGuérison : Les pouvoirs de guérison des Nundus\nsont bien supérieurs à la moyenne. Quand il est\nblessé, le corps du Nundu se régénère\nmagiquement pour soigner les blessures subies.\nCela se traduit par une régénération de 3 points\nde vie par jour et par une vitesse de régénération\ndes points de vie en cas de repos doublée par\nrapport à une créature classique.\nPistage : Le Nundu est capable de suivre une\npiste préalablement repérée par un jet de\nPERception.\nRésistance (magie) : La majeure partie des\nsortilèges ne fonctionne pas correctement sur les\nNundus. Tout sortilège lancé à 95% de chance\nd’échouer sur lui. Lancez 1d100 et, si le résultat\nest entre 006 et 000, alors le sortilège est raté. Les\nautres sortilèges voient leurs effets diminués de\n¾. De plus, les sortilèges permanent passent à\ndurée variable (minutes).\nSouffle de maladie : Le Nundu est capable de\nproduire un souffle véhiculant une terrible\nmaladie qui tue les personnes affectées en\nquelques jours. Aucun remède n’est connu pour\ncette maladie. Le souffle se déploie de sa gueule\nsous la forme d’un cône de 3 mètres de long et de\n1,5 mètres de rayon. Toutes les créatures se\ntrouvant à l’intérieur du cône doivent alors\nréussir un jet de CONstitution en contre de la\nmaladie, qui possède une VIRulence de 25.\nVenin : Le venin des Nundus affecte une victime\nqui a subi les dégâts d’une morsure et provoque\nl’inoculation de la même maladie que le souffle, à\nla différence que la VIRulence est plus grande car\ndéjà en contact avec l’organisme. Celle-ci passe à\n28.</p>",
+    "usage": "<p>-</p>",
+    "magicResistance": {
+      "threshold": 0,
+      "effectReduction": 1
+    },
+    "notes": {
+      "gmNotes": ""
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "hogwarts-system",
+    "systemVersion": "1.0.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "e1c2ef085491488a",
+  "_key": "!actors!e1c2ef085491488a",
+  "prototypeToken": {
+    "name": "Nundu",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": true,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "luminosity": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5
+      },
+      "color": null,
+      "coloration": 1,
+      "attenuation": 0.5,
+      "contrast": 0,
+      "saturation": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "flags": {}
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

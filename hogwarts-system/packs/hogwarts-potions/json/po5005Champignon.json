@@ -1,0 +1,26 @@
+{
+    "_id": "po5005Champignon",
+    "name": "Breuvage de champignons mortels",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Un poison pouvant être mortel et qui cause de grands dommages à la santé de celui qui le consomme Effets : perte de 1 point de vie / heure Effet secondaire : Perte de 1d4-2 points de CONstitution Temps d’incubation : 1d6 minutes VIRulence : 18 Durée : 2d4+2 heures / -</p>",
+        "potionLevel": 5,
+        "malus": -50,
+        "target": "A/P",
+        "virulence": null,
+        "ingredientRarity": "rare",
+        "ingredientList": [
+            {
+                "name": "Calice de la mort",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "2d4+2 heures",
+        "quantity": 0,
+        "crafted": false
+    }
+}

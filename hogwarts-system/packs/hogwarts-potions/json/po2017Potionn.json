@@ -1,0 +1,32 @@
+{
+    "_id": "po2017Potionn",
+    "name": "Potion n°113",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Un poison considéré comme extrêmement toxique. La personne ingérant ce poison est prise de vertiges, de palpitations et de violents maux de ventre. Puis, une fois ces premiers symptômes passés, se met à répéter toutes les conversations entendues en partant de la dernière pour revenir en arrière dans le temps. Effet : vertiges, douleurs et palpitations durant 1d10 minutes Effets secondaires : reproduit les conversations passées durant 1d10+5 minutes Durée : 1d10+1d10+5 minutes VIRulence : 10 Remarque : Mal préparé, ce poison peut rendre muet à vie la personne qui le consomme, voir même la tuer sur le coup.</p>",
+        "potionLevel": 2,
+        "malus": -20,
+        "target": "A/P",
+        "virulence": null,
+        "ingredientRarity": "rare",
+        "ingredientList": [
+            {
+                "name": "Plumes de Jobarbille",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Sirop d'arnica",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "1d10+1d10+5 minutes",
+        "quantity": 0,
+        "crafted": false
+    }
+}

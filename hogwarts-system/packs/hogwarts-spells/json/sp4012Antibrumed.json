@@ -1,0 +1,16 @@
+{
+  "_id": "sp4012Antibrumed",
+  "name": "Anti-brume dorée",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "description": "<p>Permet de contrer les effets du maléfice de Cerveau-en-gelée</p>",
+    "spellLevel": 4,
+    "malus": -40,
+    "spellType": "E",
+    "target": "X",
+    "incantation": "E -",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

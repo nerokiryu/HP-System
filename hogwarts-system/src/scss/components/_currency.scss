@@ -1,0 +1,384 @@
+// Wand Section
+.wand-section {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: linear-gradient(135deg, rgba(var(--hogwarts-accent-rgb), 0.1), rgba(101, 67, 33, 0.1));
+  border: 2px solid rgba(var(--hogwarts-accent-rgb), 0.3);
+  border-radius: 8px;
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--hogwarts-accent-500);
+    color: var(--hogwarts-accent-500);
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  .wand-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-weight: 600;
+        color: var(--hogwarts-accent-500);
+        margin-bottom: 4px;
+        font-size: 0.9em;
+      }
+
+      input, textarea {
+        padding: 6px 10px;
+        border: 1px solid rgba(var(--hogwarts-accent-rgb), 0.18);
+        border-radius: 4px;
+        background: rgba(0, 0, 0, 0.18);
+        color: #f0e6d2;
+        transition: all 0.2s ease;
+
+        &:focus {
+          outline: none;
+          border-color: var(--hogwarts-accent-500);
+          box-shadow: 0 0 4px rgba(var(--hogwarts-accent-rgb), 0.3);
+        }
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 60px;
+      }
+
+      &.form-group-full {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+}
+
+// Brooms Section - Now styled as a proper section
+.brooms-section {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: linear-gradient(135deg, rgba(101, 67, 33, 0.1), rgba(139, 0, 0, 0.1));
+  border: 2px solid rgba(101, 67, 33, 0.3);
+  border-radius: 8px;
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #654321;
+    color: #654321;
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  .items-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .items-header {
+      height: 28px;
+      margin: 2px 0;
+      padding: 5px;
+      align-items: center;
+      background: rgba(101, 67, 33, 0.15);
+      border: 1px solid rgba(101, 67, 33, 0.3);
+      border-radius: 4px;
+      font-weight: bold;
+
+      > * {
+        font-size: 13px;
+        text-align: center;
+      }
+
+      .item-name {
+        text-align: left;
+        padding-left: 5px;
+      }
+    }
+
+    .item {
+      align-items: center;
+      padding: 5px;
+      border-bottom: 1px solid rgba(101, 67, 33, 0.2);
+      transition: background 0.2s ease;
+
+      &:hover {
+        background: rgba(101, 67, 33, 0.05);
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+// Brooms Section (old table styles kept for backward compatibility)
+.brooms-section-old {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: linear-gradient(135deg, rgba(101, 67, 33, 0.1), rgba(139, 0, 0, 0.1));
+  border: 2px solid rgba(101, 67, 33, 0.3);
+  border-radius: 8px;
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #654321;
+    color: #654321;
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  .items-list {
+    margin-bottom: 10px;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      thead {
+        background: rgba(101, 67, 33, 0.2);
+
+        th {
+          padding: 8px;
+          text-align: left;
+          font-weight: 600;
+          color: #654321;
+          border-bottom: 2px solid rgba(101, 67, 33, 0.3);
+          font-size: 0.9em;
+
+          &:last-child {
+            width: 80px;
+            text-align: center;
+          }
+        }
+      }
+
+      tbody {
+        tr.item {
+          border-bottom: 1px solid rgba(101, 67, 33, 0.2);
+
+          &:hover {
+            background: rgba(101, 67, 33, 0.05);
+          }
+
+          td {
+            padding: 8px;
+            vertical-align: top;
+
+            input[type="text"],
+            input[type="number"],
+            textarea {
+              width: 100%;
+              padding: 4px 8px;
+              border: 1px solid rgba(101, 67, 33, 0.3);
+              border-radius: 4px;
+              background: rgba(255, 255, 255, 0.9);
+              transition: all 0.2s ease;
+
+              &:focus {
+                outline: none;
+                border-color: #654321;
+                box-shadow: 0 0 4px rgba(101, 67, 33, 0.3);
+              }
+            }
+
+            textarea {
+              resize: vertical;
+              min-height: 50px;
+              font-family: inherit;
+            }
+
+            input[type="number"] {
+              width: 60px;
+              text-align: center;
+            }
+
+            &.item-controls {
+              text-align: center;
+              width: 40px;
+
+              a {
+                color: var(--hogwarts-accent-500);
+                transition: color 0.2s ease;
+
+                &:hover {
+                  color: var(--hogwarts-accent-900);
+                }
+              }
+            }
+          }
+        }
+
+        tr.item-description {
+          border-bottom: 1px solid rgba(101, 67, 33, 0.2);
+          background: rgba(101, 67, 33, 0.05);
+
+          td {
+            padding: 8px;
+            padding-left: 30px;
+            font-style: italic;
+            color: #654321;
+
+            label {
+              font-weight: 600;
+              margin-right: 5px;
+            }
+
+            textarea {
+              width: 100%;
+              padding: 4px 8px;
+              border: 1px solid rgba(101, 67, 33, 0.3);
+              border-radius: 4px;
+              background: rgba(255, 255, 255, 0.9);
+              resize: vertical;
+              min-height: 50px;
+              font-family: inherit;
+
+              &:focus {
+                outline: none;
+                border-color: #654321;
+                box-shadow: 0 0 4px rgba(101, 67, 33, 0.3);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .item-controls-footer {
+    text-align: center;
+    margin-top: 10px;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 12px;
+      background: linear-gradient(135deg, #654321, #8b4513);
+      color: white;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: linear-gradient(135deg, #8b4513, #a0522d);
+        transform: translateY(-1px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      i {
+        font-size: 1em;
+      }
+    }
+  }
+}
+
+// Currency Section
+.currency-section {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: linear-gradient(135deg, rgba(218, 165, 32, 0.15), rgba(184, 134, 11, 0.15));
+  border: 2px solid rgba(184, 134, 11, 0.4);
+  border-radius: 8px;
+  
+  h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #b8860b;
+    color: #b8860b;
+    font-size: 1.2em;
+    text-align: center;
+  }
+  
+  .currency-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .currency-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 6px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+    
+    &.galleons {
+      border-color: rgba(218, 165, 32, 0.5);
+      background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(218, 165, 32, 0.2));
+    }
+    
+    &.sickles {
+      border-color: rgba(192, 192, 192, 0.5);
+      background: linear-gradient(135deg, rgba(192, 192, 192, 0.2), rgba(169, 169, 169, 0.2));
+    }
+    
+    &.knuts {
+      border-color: rgba(205, 127, 50, 0.5);
+      background: linear-gradient(135deg, rgba(205, 127, 50, 0.2), rgba(184, 115, 51, 0.2));
+    }
+    
+    label {
+      font-weight: 600;
+      font-size: 13px;
+      margin-bottom: 8px;
+      color: #333;
+      text-align: center;
+    }
+    
+    input {
+      width: 80px;
+      text-align: center;
+      padding: 6px;
+      font-size: 16px;
+      font-weight: 700;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+      background: white;
+      
+      &:focus {
+        outline: none;
+        border-color: #b8860b;
+        box-shadow: 0 0 5px rgba(184, 134, 11, 0.3);
+      }
+    }
+    
+    .currency-icon {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      font-size: 18px;
+      opacity: 0.4;
+    }
+  }
+  
+  .currency-conversion {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    
+    small {
+      color: #666;
+      font-style: italic;
+      font-size: 12px;
+    }
+  }
+}

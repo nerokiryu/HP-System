@@ -1,0 +1,56 @@
+{
+    "_id": "po6001Panacee",
+    "name": "Panacée",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Une potion qui peut soigner toutes les afflictions et prolonger la vie de celui qui la consomme.</p>",
+        "potionLevel": 6,
+        "malus": -90,
+        "target": "A/P",
+        "virulence": null,
+        "ingredientRarity": "rarissime",
+        "ingredientList": [
+            {
+                "name": "Bézoard",
+                "quantity": 1,
+                "rarity": "rarissime",
+                "available": false
+            },
+            {
+                "name": "Corne de licorne",
+                "quantity": 1,
+                "rarity": "rarissime",
+                "available": false
+            },
+            {
+                "name": "Dictame",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Larme de phénix",
+                "quantity": 1,
+                "rarity": "rarissime",
+                "available": false
+            },
+            {
+                "name": "Mandragore",
+                "quantity": 1,
+                "rarity": "rare",
+                "available": false
+            },
+            {
+                "name": "Sang de licorne",
+                "quantity": 1,
+                "rarity": "rarissime",
+                "available": false
+            }
+        ],
+        "prepTime": "1 an",
+        "duration": "Instantané",
+        "quantity": 0,
+        "crafted": false
+    }
+}

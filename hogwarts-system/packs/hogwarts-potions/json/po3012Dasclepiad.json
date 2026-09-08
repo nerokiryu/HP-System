@@ -1,0 +1,32 @@
+{
+    "_id": "po3012Dasclepiad",
+    "name": "Baume d'asclépiade tubéreuse",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Redonne 1 point de vie et calme les douleurs les plus violentes durant quelques heures Durées des effets : 2d4+4 heures</p>",
+        "potionLevel": 3,
+        "malus": -30,
+        "target": "A/P",
+        "virulence": null,
+        "ingredientRarity": "rare",
+        "ingredientList": [
+            {
+                "name": "Asclépiade tubéreuse",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Cire d'abeille",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "2d4+4 heures",
+        "quantity": 0,
+        "crafted": false
+    }
+}

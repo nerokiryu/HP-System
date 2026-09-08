@@ -1,0 +1,16 @@
+{
+    "_id": "sp1039Purificati",
+    "name": "Purification",
+    "type": "spell",
+    "img": "icons/svg/mystery-man.svg",
+    "system": {
+        "description": "<p>Sépare des substances différentes (permet de trier ses lentilles, de retirer les impuretés d’une poudre, de retirer le sable de ses chaussures)</p>",
+        "spellLevel": 1,
+        "malus": -20,
+        "spellType": "M",
+        "target": "O",
+        "incantation": "",
+        "extremeFormula": false,
+        "malusExtremeFormula": 0
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "_id": "po4012Potionlaxa",
+    "name": "Potion laxative",
+    "type": "potion",
+    "img": "icons/svg/potion.svg",
+    "system": {
+        "description": "<p>Oblige le consommateur à vider son système intestinal Effets : Les effets de cette potion apparaissent après 2d4+2 minutes après sa consommation VIRulence : 12</p>",
+        "potionLevel": 4,
+        "malus": -40,
+        "target": "A/P",
+        "virulence": null,
+        "ingredientRarity": "rare",
+        "ingredientList": [
+            {
+                "name": "Aigremoine",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Ingrédient Standard",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            },
+            {
+                "name": "Séné",
+                "quantity": 1,
+                "rarity": "commun",
+                "available": false
+            }
+        ],
+        "prepTime": "",
+        "duration": "1d4+1 heures",
+        "quantity": 0,
+        "crafted": false
+    }
+}

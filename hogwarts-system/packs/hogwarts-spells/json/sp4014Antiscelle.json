@@ -1,0 +1,16 @@
+{
+  "_id": "sp4014Antiscelle",
+  "name": "Anti-scellement de pièce",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "description": "<p>Lancé sur un objet, cet enchantement empêche celui-ci d’être volé. Effet : Empêche tout autre Sorcier que le lanceur d’utiliser le sortilège</p>",
+    "spellLevel": 4,
+    "malus": -40,
+    "spellType": "E",
+    "target": "X",
+    "incantation": "E -",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

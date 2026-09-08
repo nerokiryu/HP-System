@@ -1,0 +1,16 @@
+{
+    "_id": "sp3024Durcisseme",
+    "name": "Durcissement",
+    "type": "spell",
+    "img": "icons/svg/aura.svg",
+    "system": {
+        "description": "<p>Change les petits objets en pierre Maximum 5dm3.</p>",
+        "spellLevel": 3,
+        "malus": 0,
+        "spellType": "E",
+        "target": "O",
+        "incantation": "Duro",
+        "extremeFormula": true,
+        "malusExtremeFormula": -25
+    }
+}

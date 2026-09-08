@@ -1,0 +1,16 @@
+{
+  "_id": "sp2038Fourrure",
+  "name": "Fourrure",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "description": "<p>Durée : POU heures Enchante les balais pour les aider à freiner. Plus le sortilège est maîtrisé et plus le balai freine avec efficacité. Effets : octroie un bonus en vol en balai allant de 1 à 5% quand le balais</p>",
+    "spellLevel": 2,
+    "malus": -15,
+    "spellType": "E",
+    "target": "P",
+    "incantation": "E -",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

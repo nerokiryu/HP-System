@@ -1,0 +1,16 @@
+{
+    "_id": "sp2028Elasticite",
+    "name": "Élasticité",
+    "type": "spell",
+    "img": "icons/svg/mystery-man.svg",
+    "system": {
+        "description": "<p>Effet principal : Rend les membres élastiques ce qui leurs permet de s’allonger d’un mètre de long Effet secondaire : Diminue la FORce de 1 point</p>",
+        "spellLevel": 2,
+        "malus": -15,
+        "spellType": "M",
+        "target": "P",
+        "incantation": "Elasticum",
+        "extremeFormula": true,
+        "malusExtremeFormula": -35
+    }
+}

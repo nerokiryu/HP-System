@@ -1,0 +1,16 @@
+{
+  "_id": "sp1008Crochepied",
+  "name": "Croche-pied",
+  "type": "spell",
+  "img": "icons/svg/falling.svg",
+  "system": {
+    "description": "<p>Fait trébucher la cible. Celle-ci doit réussir un jet de DEX×5 ou tomber.</p>",
+    "spellLevel": 1,
+    "malus": -5,
+    "spellType": "S",
+    "target": "P",
+    "incantation": "",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

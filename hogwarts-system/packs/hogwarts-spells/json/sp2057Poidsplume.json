@@ -1,0 +1,16 @@
+{
+  "_id": "sp2057Poidsplume",
+  "name": "Poids-plume",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "description": "<p>C : 25% Durée : POU heures Métamorphose un porc-épic en pelote à épingles</p>",
+    "spellLevel": 2,
+    "malus": -25,
+    "spellType": "E",
+    "target": "O",
+    "incantation": "E -",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

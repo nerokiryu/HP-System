@@ -1,0 +1,16 @@
+{
+  "_id": "sp1012Detonation",
+  "name": "Détonation",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Produit un bruit assourdissant depuis la baguette, effrayant les créatures proches.</p>",
+    "spellLevel": 1,
+    "malus": -5,
+    "spellType": "E",
+    "target": "P",
+    "incantation": "",
+    "extremeFormula": false,
+    "malusExtremeFormula": 0
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "name": "Acromentule âgée",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 20,
+      "max": 20
+    },
+    "initiativeBonus": 0,
+    "healthNonLethal": {
+      "value": 0,
+      "max": 20
+    },
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXXX",
+    "stats": {
+      "str": {
+        "value": 20,
+        "formula": "4d6+6"
+      },
+      "con": {
+        "value": 16,
+        "formula": "3d6+6"
+      },
+      "siz": {
+        "value": 20,
+        "formula": "4d6+6"
+      },
+      "dex": {
+        "value": 10,
+        "formula": "3d6+2"
+      },
+      "int": {
+        "value": 9,
+        "formula": "2d6+2"
+      },
+      "pow": {
+        "value": 7,
+        "formula": "2d4+2"
+      },
+      "app": {
+        "value": 14,
+        "formula": "3d6+3"
+      },
+      "per": {
+        "value": 14,
+        "formula": "3d6+4"
+      }
+    },
+    "movement": {
+      "land": 12,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 2,
+      "label": "Chitine"
+    },
+    "attacks": [
+      {
+        "name": "Morsure",
+        "chance": 40,
+        "damage": "2d6"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Acrobatie",
+        "value": 70
+      },
+      {
+        "name": "Athlétisme",
+        "value": 60
+      },
+      {
+        "name": "Commandement",
+        "value": 50
+      },
+      {
+        "name": "Esquive",
+        "value": 55
+      },
+      {
+        "name": "Discrétion",
+        "value": 80
+      },
+      {
+        "name": "Orientation",
+        "value": 50
+      },
+      {
+        "name": "Survie",
+        "value": 65
+      },
+      {
+        "name": "Vigilance",
+        "value": 65
+      }
+    ],
+    "powers": "<p>Bestialité : Une Acromentule ne peut s’empêcher\nd’attaquer toute créature qui croise sa route.\nQuand elle est en présence d'une proie\n\npotentielle, l’Acromentule doit réussir un jet de\nPOUx1\nDéplacement sur la toile : Quand elle se déplace\nsur sa toile, l’Acromentule ne doit pas lutter\ncontre l’effet collant de celle-ci.\nIntelligence : Les Acromentules sont considérées\ncomme très intelligentes mais ne peuvent lutter\ncontre leur bestialité\nPattes d'araignée : L'Acromentule possède la\ncapacité d’escalader des surfaces difficiles, même\ndes plafonds la tête en bas sans devoir effectuer\nde jet de compétence.\nSens de la toile : L’Acromentule sait exactement\noù se trouve la proie prise dans sa toile.\nToiles : Pour capturer ses proies, l’Acromentule\ncréer des toiles en forme de dôme qui piègent ses\nvictimes. Toute personne se trouvant en contact\navec l’une des toiles de l’Acromentule doit réussir\nun jet de FOR/FOR sur la table des oppositions.\nValeur de FOR de la toile =14.\nVenin : Le venin des Acromentules affecte une\nvictime qui a subi une morsure et provoque une\nperte de points de vie de la part de la cible jusqu’à\nla mort de celle-ci. La virulence augmente avec\nl’âge de l’araignée. Incubation : 5 rounds ; Effet :\nperte de 1d4+1 points de vie par minute jusqu’à\nla mort ; Effet secondaire : fièvre ; VIR = 17</p>",
+    "usage": "<p>Le venin d’Acromentule peut être\nutilisé pour des poisons et des potions.</p>",
+    "magicResistance": {
+      "threshold": 0,
+      "effectReduction": 1
+    },
+    "notes": {
+      "gmNotes": ""
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "hogwarts-system",
+    "systemVersion": "1.0.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "a128002491334ba6",
+  "_key": "!actors!a128002491334ba6",
+  "prototypeToken": {
+    "name": "Acromentule âgée",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": true,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "luminosity": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5
+      },
+      "color": null,
+      "coloration": 1,
+      "attenuation": 0.5,
+      "contrast": 0,
+      "saturation": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "flags": {}
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

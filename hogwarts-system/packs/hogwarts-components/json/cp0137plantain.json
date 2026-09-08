@@ -1,0 +1,18 @@
+{
+    "_id": "cp0137plantain",
+    "name": "Plantain",
+    "type": "component",
+    "img": "icons/svg/leaf.svg",
+    "system": {
+        "description": "<p>feuilles en forme de lance et connu de Moyen-âge pour ses vertus médicinales Une plume provenant d’un hibou grand-d</p>",
+        "rarity": "commun",
+        "quantity": 1,
+        "cost": {
+            "galleons": 0,
+            "sickles": 0,
+            "knuts": 0
+        },
+        "usedIn": "Langue de miel, Traitement des morsures de, Cirassure",
+        "otherUses": "Infusions"
+    }
+}
