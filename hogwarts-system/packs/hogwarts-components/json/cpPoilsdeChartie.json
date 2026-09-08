@@ -1,0 +1,13 @@
+{
+  "_id": "cpPoilsdeChartie",
+  "name": "Poils de Chartier",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des poils provenant d’un Chartier, un animal magique ressemblant à un furet mais doué de parole</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Philtre calmant pour Chartier",
+    "otherUses": ""
+  }
+}

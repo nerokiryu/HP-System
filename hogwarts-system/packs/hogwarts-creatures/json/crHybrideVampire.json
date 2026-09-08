@@ -1,0 +1,69 @@
+{
+  "_id": "crHybrideVampire",
+  "name": "Hybride-Vampire",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 12,
+      "max": 12
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 12
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "",
+    "stats": {
+      "str": {
+        "value": 15,
+        "formula": "Humain +1"
+      },
+      "con": {
+        "value": 11,
+        "formula": "Humain -2"
+      },
+      "siz": {
+        "value": 13,
+        "formula": "Humain ±0"
+      },
+      "dex": {
+        "value": 14,
+        "formula": "Humain+1"
+      },
+      "int": {
+        "value": 11,
+        "formula": "Humain ±0"
+      },
+      "pow": {
+        "value": 15,
+        "formula": "Humain +1"
+      },
+      "app": {
+        "value": 15,
+        "formula": "Humain +1"
+      },
+      "per": {
+        "value": 14,
+        "formula": "Humain±0"
+      }
+    },
+    "movement": {
+      "land": 8,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Griffes 30% (1) Crocs 40% (1d4-1) , les dégâts de griffes occasionnent 1 dégât et ceux de morsure 1d4-1 dégâts. Détection du sang : Un Hybride-Vampire possède la capacité innée de sentir la présence de sang, mais de manière différente de leur ancêtre. Un Hybride- Vampire est capable de déterminer si une personne est blessée et qu’elle saigne si elle se trouve à 12 mètres de lui grâce à un jet de PERceptionx3. Cela ne le renseigne cependant pas sur la nature de la blessure ni sur sa gravité. Fascination : Les Hybrides-Vampires possèdent un fort pouvoir d’attraction sur les êtres humains, comme leurs ancêtres, même si cette capacité n’est pas aussi développée que chez ces derniers. Quand ils parviennent à capter le regard de leur cible, celle-ci peut perdre ses moyens, ressentant un mélange d’attirance, de peur et de soumission qui les empêche d’agir. Ce pouvoir fonctionne à peu près comme le sortilège Delecto ou le sortilège de Séduction, duquel ils sont directement inspirés et qui possèdent des effets relativement similaires. Le regard d’un Hybride-Vampire charme une cible et la fascine tant que les regards ne se lâchent pas. Une fois que le contact visuel est rompu, les effets perdurent encore durant 1 round, à moins que le personnage ne subisse un contresort ou ne boive une potion qui en dissiperait les effets. La fascination ne peut cependant pas être utilisée sur une cible qui se trouve en train de combattre ou qui se trouve à plus de 3 mètres de l’Hybride-Vampire. (Opposition : APPx4/POU) Longévité : Les Hybrides-Vampires vivent en moyenne plus longtemps que les Sorciers classiques. En règle générale, un Hybride-Vampire peut largement dépasser les 100 ans. Morsure vampirique : Comme les Vampires, les Hybrides-Vampires peuvent mordre une personne pour se repaître de son sang. Néanmoins, ceux-ci ne peuvent pas transmettre le vampirisme. Quand il emploie la morsure vampirique, il peut choisir de n’infliger qu’un point de dégâts au lieu du 1d4-1 dégâts de la morsure classique. Pouvoir du sang : Quand il a consommé du sang humain (un litre minimum), l’Hybride-Vampire entre dans une sorte de transe dans laquelle il voit sa valeur de mouvement augmenter de 1 et sa valeur de POUvoir augmenter de 1. Cependant, il devient également plus agressif et fermé à la négociation ou l’empathie, qui se voient diminués de 5%. Cette transe dure 1 heure environ après la consommation d’un litre de sang. Régime alimentaire : Les Hybrides-Vampires peuvent consommer du sang, même s’ils ne sont pas autant attirés par celui-ci que leurs ancêtre. Sinon, ils se nourrissent comme des Sorciers classiques.",
+    "skills": "Identiques à celles d’un Sorcier classique.",
+    "powers": "<p>Armes naturelles (Griffes et Crocs) : Comme le Vampire, l’Hybride-Vampire peut occasionner des dégâts létaux à l’aide de ses ongles, qui sont plus solides que ceux des autres êtres humains, ainsi qu’avec ses canines pointues. Lors d’un jet de</p>",
+    "notes": "<p>Ail : Les Hybrides-Vampires ne craignent pas l’ail. Bien qu’ils n’en apprécient ni l’odeur, ni le goût, celui-ci ne les fait pas fuir. Soleil : Les Hybrides-Vampires sont importunés par le soleil, qui les éblouit et qui les gêne (malus de 10% à toutes les actions nécessitant la vue lors d’ensoleillement). Celui-ci ne leur cause cependant pas de dégâts autre que des coups de soleil bien plus fréquents que la moyenne. HYBRIDE VELANE Un Hybride-Vélane est un humain qui possède une ancêtre Vélane. La grande majorité des Hybrides- Vélanes sont de de sexe féminin, même si quelques rares cas font état d’hybrides de sexe masculin. De leur ancêtre Vélane, ces hybrides tirent une grande beauté physique et, dans une moindre mesure, une capacité à charmer les personnes de sexe opposé. De leur parent Sorcier, les Hybrides-Vélanes possèdent la capacité d’employer la magie et possèdent le droit d’utiliser des baguettes. Contrairement aux autres Hybrides, les Hybrides- Vélanes sont moins la cible de la haine des autres Sorciers, principalement parce qu’il est plus difficile de détecter leur métissage. Leur grande beauté physique et leur ressemblance avec les Sorciers classiques jouent également en leur faveur, et leur permet d’éviter la maltraitance et le racisme de nombreux Sorciers et Sorcières.</p>"
+  }
+}

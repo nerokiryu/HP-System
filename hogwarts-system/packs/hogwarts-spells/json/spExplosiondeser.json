@@ -1,0 +1,19 @@
+{
+  "_id": "spExplosiondeser",
+  "name": "Explosion de serrure",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Sortilège qui provoque l'explosion d'une serrure, la rendant inutilisable.</p><p>Durée : -</p><p>Formule extrême : -</p>",
+    "spellLevel": 1,
+    "spellType": "S",
+    "target": [
+      "O"
+    ],
+    "incantation": "Portaberto",
+    "malus": -10,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "spFondantfeeriqu",
+  "name": "Fondant féerique en fée",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Transforme un fondant féérique en fée</p><p>Durée : permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 5,
+    "spellType": "M",
+    "target": [
+      "O"
+    ],
+    "incantation": "Fatafors",
+    "malus": -50,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "_id": "crSireneetTriton",
+  "name": "Sirene et Triton",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 14,
+      "max": 14
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 14
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "",
+    "stats": {
+      "str": {
+        "value": 11,
+        "formula": "3d6"
+      },
+      "con": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "siz": {
+        "value": 15,
+        "formula": "3d6+4"
+      },
+      "dex": {
+        "value": 18,
+        "formula": "4d6+4"
+      },
+      "int": {
+        "value": 14,
+        "formula": "3d6+3"
+      },
+      "pow": {
+        "value": 14,
+        "formula": "3d6+3"
+      },
+      "app": {
+        "value": 24,
+        "formula": "4d6+10"
+      },
+      "per": {
+        "value": 15,
+        "formula": "3d6+4"
+      }
+    },
+    "movement": {
+      "land": 15,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 1
+    },
+    "attacks": "Morsure : 30% (1+1d3) Griffes : 30% (1+1d3) Armes de poing: 50% (variable)",
+    "skills": "",
+    "powers": "",
+    "notes": ""
+  }
+}

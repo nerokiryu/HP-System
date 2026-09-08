@@ -1,0 +1,19 @@
+{
+  "_id": "spInvisibiliteAn",
+  "name": "Invisibilité (Animal)",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Un animal devient invisible. PERception x1 pour percer l’invisibilité.</p><p>Effet : bonus de 60% en discrétion.</p><p>Durée : 1 jour.</p><p>Formule extrême : Bonus de 75% en Discrétion</p>",
+    "spellLevel": 3,
+    "spellType": "S",
+    "target": [
+      "A"
+    ],
+    "incantation": "Animalis evanesco",
+    "malus": -30,
+    "extremeFormula": true,
+    "malusExtremeFormula": -40,
+    "malusMastered": -20
+  }
+}

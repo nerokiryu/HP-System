@@ -1,0 +1,13 @@
+{
+  "_id": "cpCrindAbraxan00",
+  "name": "Crin d’Abraxan",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Du crin d’un blanc étincelant provenant d’un</p><p>Abraxan, un cheval ailé géant</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Potion Exstimulo",
+    "otherUses": "-"
+  }
+}

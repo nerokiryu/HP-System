@@ -1,0 +1,19 @@
+{
+  "_id": "spFlammesbleues0",
+  "name": "Flammes bleues",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Créer une petite flamme bleue qui possède la capacité d’être transportable et de pouvoir brûler même dans des endroits humides.</p><p>Ce feu peut brûler, mais moins qu’un feu classique, et est résistant à l’eau.</p><p>Durée : POU heures</p>",
+    "spellLevel": 2,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "",
+    "malus": -15,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

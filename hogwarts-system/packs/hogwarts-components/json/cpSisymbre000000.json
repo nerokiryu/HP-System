@@ -1,0 +1,13 @@
+{
+  "_id": "cpSisymbre000000",
+  "name": "Sisymbre",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une petite plante verte donnant des fleurs violettes et connue pour ses vertus médicinales.</p><p>Elle entre notamment dans la composition du</p><p>Polynectar, à condition d'être cueillie pendant la pleine lune</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Polynectar",
+    "otherUses": "• Vertus médicinales"
+  }
+}

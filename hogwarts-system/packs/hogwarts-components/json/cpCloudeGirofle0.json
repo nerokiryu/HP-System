@@ -1,0 +1,13 @@
+{
+  "_id": "cpCloudeGirofle0",
+  "name": "Clou de Girofle",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une baie connue pour ses propriétés cautérisantes et qui peut être utilisée en cuisine</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Potion de cautérisation",
+    "otherUses": "• Cuisine"
+  }
+}

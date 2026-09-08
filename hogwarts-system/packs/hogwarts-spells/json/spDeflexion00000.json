@@ -1,0 +1,19 @@
+{
+  "_id": "spDeflexion00000",
+  "name": "Déflexion",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Permet de dévier un sort de niveau 3 ou inférieur sur une autre cible (Opposition : Pou/Pou).</p><p>Durée : -</p><p>Formule extrême : permet de dévier un sort de niveau 4 ou inférieur</p>",
+    "spellLevel": 3,
+    "spellType": "S",
+    "target": [
+      "S"
+    ],
+    "incantation": "Flexus",
+    "malus": -35,
+    "extremeFormula": true,
+    "malusExtremeFormula": -45,
+    "malusMastered": -25
+  }
+}

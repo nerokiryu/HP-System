@@ -1,0 +1,19 @@
+{
+  "_id": "spAntiSortgenera",
+  "name": "Anti-Sort général",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Supprime immédiatement les effets de tous les sortilèges (Opposition :</p><p>POU / POU).</p><p>Ne permet pas de contrer les sortilèges possédant le sous-type :</p><p>Maléfice . Ces sortilèges particuliers nécessitent un contre-maléfice spécifique.</p><p>Durée : -</p><p>Formule extrême : -</p>",
+    "spellLevel": 2,
+    "spellType": "E",
+    "target": [
+      "S"
+    ],
+    "incantation": "Finite incantatem",
+    "malus": -20,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

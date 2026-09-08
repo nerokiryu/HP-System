@@ -1,0 +1,19 @@
+{
+  "_id": "spParole00000000",
+  "name": "Parole",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet de faire prononcer des phrases prédéterminées à un objet.</p><p>Lorsqu’il dure trop longtemps, le sortilège finit par ne lancer plus que des mots isolés, de plus en plus rapprochés et de plus en plus aigus.</p><p>Durée : POUx3 minutes</p>",
+    "spellLevel": 2,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "",
+    "malus": -20,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

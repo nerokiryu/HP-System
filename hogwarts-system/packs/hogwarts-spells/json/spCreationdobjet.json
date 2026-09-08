@@ -1,0 +1,19 @@
+{
+  "_id": "spCreationdobjet",
+  "name": "Création d’objets simples",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Permet de créer des objets à partir d’une matière de base. Ces objets peuvent être des objets simples ou des morceaux d’objets plus volumineux (rouages par exemple). Durée : permanente. Remarque : nécessite une bonne connaissance de l’objet à créer car celui-ci doit être visualisé mentalement avant de lancer le sort.</p><p>Formule extrême : -</p>",
+    "spellLevel": 3,
+    "spellType": "M",
+    "target": [
+      "X"
+    ],
+    "incantation": "",
+    "malus": -25,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

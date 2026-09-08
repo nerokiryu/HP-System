@@ -1,0 +1,57 @@
+{
+  "_id": "poVerification00",
+  "name": "Vérification",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Cette potion noire possède un effet très recherché par tous ceux qui fabriquent des potions, car elle permet de vérifier que celles-ci fonctionnent correctement. Quand on verse quelques gouttes d’une potion à l’intérieur d’une potion de vérification, celle-ci change de couleur pour indiquer si la potion possède les effets recherchés. Très pratique pour ne pas consommer de potions ratées et lors d’enchantements magiques.</p>",
+    "potionLevel": 3,
+    "malus": -30,
+    "target": "X",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Charbon",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Chrysope",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Corne de dragon",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Eau de source",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Éponge",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Mauve douche",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Muguet",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

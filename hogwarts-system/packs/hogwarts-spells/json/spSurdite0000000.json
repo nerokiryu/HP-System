@@ -1,0 +1,19 @@
+{
+  "_id": "spSurdite0000000",
+  "name": "Surdité",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Provoque un bourdonnement désagréable dans les oreilles de la cible, ce qui l’empêche d’entendre correctement ; malus de 50% en perception pour l’écoute.</p><p>Durée : 1d4 heures. Opposition : POU/POU</p><p>Formule extrême : Malus de 60% et durée +1 heure</p>",
+    "spellLevel": 2,
+    "spellType": "S",
+    "target": [
+      "P"
+    ],
+    "incantation": "Assurdiato",
+    "malus": -20,
+    "extremeFormula": true,
+    "malusExtremeFormula": -30,
+    "malusMastered": -10
+  }
+}

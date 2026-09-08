@@ -1,0 +1,13 @@
+{
+  "_id": "cpCamomille00000",
+  "name": "Camomille",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>La camomille est une plante médicinale aux fleurs jaunes et qui est utilisée en usage interne contre les spasmes et les problèmes digestifs. La camomille peut également lutter contre la paralysie.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Potion anti-paralysie",
+    "otherUses": "• Tisane"
+  }
+}

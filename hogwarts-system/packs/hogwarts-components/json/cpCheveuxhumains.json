@@ -1,0 +1,13 @@
+{
+  "_id": "cpCheveuxhumains",
+  "name": "Cheveux humains",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des cheveux provenant d’un humain et qui interviennent dans des potions de métamorphose avancées</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Animagus\nPolynectar",
+    "otherUses": "-"
+  }
+}

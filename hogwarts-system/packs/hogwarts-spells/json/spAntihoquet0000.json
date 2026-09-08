@@ -1,0 +1,20 @@
+{
+  "_id": "spAntihoquet0000",
+  "name": "Anti-hoquet",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet de contrer les effets d’un sortilège de hoquet ou d’un hoquet classique.</p><p>Durée : -</p><p>Formule extrême : -</p>",
+    "spellLevel": 3,
+    "spellType": "E",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "",
+    "malus": -20,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "cpPoudredechaird",
+  "name": "Poudre de chair de vipère",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>La poudre de chair de vipère est une poudre faite à partir du séchage et de l’écrasement de la chair d’une vipère.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Traitement des morsures de chiens fous",
+    "otherUses": "-"
+  }
+}

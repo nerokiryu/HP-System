@@ -1,0 +1,69 @@
+{
+  "_id": "crLeucrotta00000",
+  "name": "Leucrotta",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>-</p>",
+    "health": {
+      "value": 22,
+      "max": 22
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 22
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XX",
+    "stats": {
+      "str": {
+        "value": 23,
+        "formula": "3d6+12"
+      },
+      "con": {
+        "value": 14,
+        "formula": "3d6+3"
+      },
+      "siz": {
+        "value": 29,
+        "formula": "6d6+8"
+      },
+      "dex": {
+        "value": 13,
+        "formula": "3d6+2"
+      },
+      "int": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "pow": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "app": {
+        "value": 13,
+        "formula": "3d6+2"
+      },
+      "per": {
+        "value": 17,
+        "formula": "3d6+6"
+      }
+    },
+    "movement": {
+      "land": 13,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 1
+    },
+    "attacks": "Cornes/Sabots : 45% (2d6)",
+    "skills": "Acrobatie : 45% ; Athlétisme : 70% ; Discrétion 30% ; Empathie : 20% ; Esquive : 25% ; Imitation : 70% ; Orientation : 20% ; Survie : 25% ; Vigilance : 85%",
+    "powers": "<p>Alternance des genres : Le Leucrotta change de sexe au cours de sa vie, alternant les périodes où il est mâle et les périodes où il est femelle. Force prodigieuse : : Le Leucrotta possède une force phénoménale et peut déplacer, porter ou tirer des charges colossales. Grande vigilance : le Leucrotta ne ferme jamais les yeux. Cette caractéristique fait qu’il est toujours attentif à ce qui l’entoure. Octroie un bonus de 25% dans la compétence vigilance. Imitation : Le Leucrotta a la capacité d’imiter parfaitement les voix et les sons des personnes qui l’entourent. Immunité (acier) : Le Leucrotta est insensible à l’acier, qui ne peut ni le blesser, ni le tuer.</p>",
+    "notes": ""
+  }
+}

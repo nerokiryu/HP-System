@@ -1,0 +1,19 @@
+{
+  "_id": "spHumainenanimal",
+  "name": "Humain en animal",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Métamorphose un humain en animal</p><p>Remarque : Ce genre de sortilège est interdit à l’utilisation dans la majeure partie des écoles de magie</p><p>Durée : -</p><p>Formule extrême : -</p>",
+    "spellLevel": 5,
+    "spellType": "M",
+    "target": [
+      "P"
+    ],
+    "incantation": "",
+    "malus": -45,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

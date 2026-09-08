@@ -1,0 +1,69 @@
+{
+  "_id": "crSerpentdeMer00",
+  "name": "Serpent de Mer",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>-</p>",
+    "health": {
+      "value": 18,
+      "max": 18
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 18
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXX",
+    "stats": {
+      "str": {
+        "value": 23,
+        "formula": "3d6+12"
+      },
+      "con": {
+        "value": 20,
+        "formula": "4d6+6"
+      },
+      "siz": {
+        "value": 40,
+        "formula": "4d6+26"
+      },
+      "dex": {
+        "value": 13,
+        "formula": "2d6+6"
+      },
+      "int": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "pow": {
+        "value": 9,
+        "formula": "2d6+2"
+      },
+      "app": {
+        "value": 19,
+        "formula": "3d6+8"
+      },
+      "per": {
+        "value": 17,
+        "formula": "3d6+6"
+      }
+    },
+    "movement": {
+      "land": 30,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 3
+    },
+    "attacks": "Morsure 55% (4d6)",
+    "skills": "Acrobatie : 60% ; Athlétisme : 65% ; Discrétion 60% ; Esquive : 40% ; Orientation : 65% ; Survie : 60% ; Vigilance : 55%",
+    "powers": "<p>Vagues : S’il se sent menacé, le Serpent de mer peut faire usage de sa taille pour provoquer de violentes vagues qui envoient les bateaux au loin. Natation sinueuse : Quand il nage, le Serpent de mer le fait en sinuant très rapidement, ce qui le rend plus difficile à toucher. Cela se traduit par un 15% de chance d’éviter un sortilège lancé lorsqu’il se déplace : jetez 1d100 ; si le résultat est de 001 à 015, alors le sortilège frappe à côté.</p>",
+    "notes": ""
+  }
+}

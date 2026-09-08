@@ -1,0 +1,13 @@
+{
+  "_id": "cpCrocsdeCisburi",
+  "name": "Crocs de Cisburine",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des crocs de Cisburine, une variété magique d’acarien infestant d’autres créatures magiques.</p><p>Les apothicaires vendent généralement un croc 14</p><p>Mornilles.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Wiggenweld",
+    "otherUses": "-"
+  }
+}

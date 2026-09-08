@@ -1,0 +1,21 @@
+{
+  "_id": "poPotionTueLoup0",
+  "name": "Potion Tue-Loup",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Cette potion soulage et atténue les symptômes les plus terribles de ceux qui deviennent des loups garous à la pleine lune.</p><p>Durée : 24 heures</p>",
+    "potionLevel": 5,
+    "malus": -50,
+    "target": "P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Aconit",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "cpufdeRunespoor0",
+  "name": "Œuf de Runespoor",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Ils entrent dans la composition de potions qui stimulent l’agilité mentale</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Élixir cérébral de Baruffio\nSolution scintillante",
+    "otherUses": "-"
+  }
+}

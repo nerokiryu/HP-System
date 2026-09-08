@@ -1,0 +1,13 @@
+{
+  "_id": "cpResine00000000",
+  "name": "Résine",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Matière collante produite par distillation de résines et goudrons, ou pouvant être obtenue à partir de bois résineux</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Glue\nCombinaison\nÉlixir malveillant\nÉlixirs éternels\nTransfert",
+    "otherUses": "• Inflammable"
+  }
+}

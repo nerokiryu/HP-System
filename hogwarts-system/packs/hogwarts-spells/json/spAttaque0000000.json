@@ -1,0 +1,20 @@
+{
+  "_id": "spAttaque0000000",
+  "name": "Attaque",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Oblige des objets ou des animaux à attaquer une cible et à lui causer des dégâts. Occasionne 1d4 dégâts à une cible. DEXx3 pour ½ dégâts. (Minimum 1).</p><p>Durée : -</p><p>Formule extrême : -</p>",
+    "spellLevel": 4,
+    "spellType": "S",
+    "target": [
+      "A",
+      "O"
+    ],
+    "incantation": "Oppugno",
+    "malus": -50,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "_id": "spGlacius0000000",
+  "name": "Glacius",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Fait apparaître un bloc de glace autour de l’objet ou de la créature visée afin de l’immobiliser. Il peut aussi permettre de geler des surfaces liquides, afin de pouvoir marcher dessus.</p><p>Durée : 1d6+1 rounds</p><p>Formule extrême : 1d6+1 heures</p>",
+    "spellLevel": 3,
+    "spellType": "E",
+    "target": [
+      "A",
+      "O",
+      "P"
+    ],
+    "incantation": "Glacius",
+    "malus": -30,
+    "extremeFormula": true,
+    "malusExtremeFormula": -40,
+    "malusMastered": -20
+  }
+}

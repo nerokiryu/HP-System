@@ -1,0 +1,19 @@
+{
+  "_id": "spVinaigreenVin0",
+  "name": "Vinaigre en Vin",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Transmute le vinaigre en vin</p><p>Formule extrême : -</p><p>Remarque : Plus la différence entre sa maîtrise en métamorphose et le résultat du dé est grande, et plus le vin est de qualité.</p>",
+    "spellLevel": 5,
+    "spellType": "E",
+    "target": [
+      "X"
+    ],
+    "incantation": "",
+    "malus": -50,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

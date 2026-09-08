@@ -1,0 +1,13 @@
+{
+  "_id": "cpMauvedouce0000",
+  "name": "Mauve douce",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une plante utilisée en divination. Il est possible de la brûler et de déceler des formes ou des symboles dans la fumée qui s’en élève pour en déduire des choses, mais les centaures sont bien plus doués à cet exercice que les humains</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Langue de miel\nPhéromones\nPotion contre la toux\nPotion laxative\nVérification",
+    "otherUses": "• Bièraubeurre • Divination"
+  }
+}

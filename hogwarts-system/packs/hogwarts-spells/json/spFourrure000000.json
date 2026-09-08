@@ -1,0 +1,19 @@
+{
+  "_id": "spFourrure000000",
+  "name": "Fourrure",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Couvre la cible de fourrure</p><p>Durée : POU heures</p>",
+    "spellLevel": 2,
+    "spellType": "E",
+    "target": [
+      "P"
+    ],
+    "incantation": "",
+    "malus": -15,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "spTourtereauenle",
+  "name": "Tourtereau en lettre d’amour",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Transforme un tourtereau en lettre d’amour parlante</p><p>Durée : permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 5,
+    "spellType": "M",
+    "target": [
+      "A"
+    ],
+    "incantation": "",
+    "malus": -45,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

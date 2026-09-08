@@ -1,0 +1,21 @@
+{
+  "_id": "poPhiltredemandr",
+  "name": "Philtre de mandragore",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Cette potion – créée à partir de mandragores ayant atteint leur maturité – guérit celui qui la consomme des effets de la pétrification.</p>",
+    "potionLevel": 5,
+    "malus": -50,
+    "target": "A/P",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Mandragore cuite",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

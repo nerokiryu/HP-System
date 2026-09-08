@@ -1,0 +1,13 @@
+{
+  "_id": "cpSauleblanc0000",
+  "name": "Saule blanc",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Le saule blanc est un grand arbre qui peut atteindre 25 m de haut et dont l’écorce blanche est employée pour ses propriétés anti-inflammatoire.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Potion de restauration n°1\nPotion de restauration n°2\nPotion de restauration n°3",
+    "otherUses": "• Tisane"
+  }
+}

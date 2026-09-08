@@ -1,0 +1,13 @@
+{
+  "_id": "cpGalanthusNival",
+  "name": "Galanthus Nivalis",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une plante aux fleurs blanches connue pour ses vertus médicinales. Elle est aussi employée chez les Moldus pour certains traitements contre la maladie de l’Alzheimer</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Mémoire\nPotion Exstimulo",
+    "otherUses": "• Entre dans la composition de certains onguents"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "cpDictame0000000",
+  "name": "Dictame",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Le Dictame est une plante verte de petite taille qui est connue pour ses vertus thérapeutiques. Il se mange également cru pour cicatriser les plaies peu profondes</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Babillage\nEssence de Dictame\nOculi cura\nPotion d’atténuation\nWiggenweld",
+    "otherUses": "• Propriétés médicinales • Cœur de baguette"
+  }
+}

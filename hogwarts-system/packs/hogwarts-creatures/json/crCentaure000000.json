@@ -1,0 +1,69 @@
+{
+  "_id": "crCentaure000000",
+  "name": "Centaure",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>-</p>",
+    "health": {
+      "value": 16,
+      "max": 16
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 16
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXX REMARQUES : Bien que les Centaures soient classés XXXX par le Ministère de la Magie, il ne s’agit en aucun cas d’une indication de dangerosité. Cette classification indique qu’il faut considérer les Centaures avec le respect et les égards qui leurs sont dus. Les Centaures sont classés dans les animaux à leur demande par suite de la décision du Ministère de la Magie de ne pas inclure les Sirènes et les Tritons au statut d’êtres.",
+    "stats": {
+      "str": {
+        "value": 17,
+        "formula": "3d6+6"
+      },
+      "con": {
+        "value": 13,
+        "formula": "3d6+2"
+      },
+      "siz": {
+        "value": 17,
+        "formula": "3d6+6"
+      },
+      "dex": {
+        "value": 13,
+        "formula": "3d6+2"
+      },
+      "int": {
+        "value": 9,
+        "formula": "2d6+2"
+      },
+      "pow": {
+        "value": 9,
+        "formula": "2d6+2"
+      },
+      "app": {
+        "value": 9,
+        "formula": "2d6+2"
+      },
+      "per": {
+        "value": 12,
+        "formula": "3d6+1"
+      }
+    },
+    "movement": {
+      "land": 12,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 2
+    },
+    "attacks": "Corps-à-corps : 90% (2d6) Arc : 90% (1d8+1d6) Épée longue : 90% (1d10+1d6)",
+    "skills": "DE BASE Acrobatie : 60% ; Artisanat (fabrication d’arc et de flèches) : 70% ; Athlétisme : 75% ; Camouflage : 60% ; Commandement : 60% ; Discrétion 60% ; Dressage/Soin : 55% ; Empathie : 50% ; Esquive : 70% ; Fouille : 50% ; Orientation : 60% ; Persuasion/baratin : 60% ; Psychologie : 55% ; Survie : 75% ; Vigilance : 70% COMPETENCE PARTICULIERES : Astronomie : 90% ; Connaissance (Nature) : 60% ; Connaissance des Moldus : 30% ; Connaissance des sorciers : 40% ; Divination : 85%",
+    "powers": "<p>Astronomie : Les Centaures possèdent de solides connaissances en astronomie et emploient celles- ci pour connaître le mouvement des étoiles. Camouflage : Les Centaures possèdent des moyens de passer inaperçus aux yeux des Moldus et des sorciers inattentifs. Divination : Les Centaures peuvent prévoir l’avenir grâce au mouvement des astres. Ils n’emploient cependant pas cette connaissance pour changer les évènements importants de l’histoire. Guérison : Les pouvoirs de guérison des Centaures sont bien supérieurs à la moyenne. Quand il est blessé, le corps du Centaure se régénère magiquement pour soigner les blessures subies. Cela se traduit par une régénération de 3 points de vie par jour et par une vitesse de régénération des points de vie en cas de repos doublée par rapport à un être humain classique. Tir à l’arc : Les Centaures sont d’excellents archers qui peuvent combattre sans gêne dans les forêts et zone encombrées. Dans de telles conditions, leurs jets de compétences se sont toujours considérés comme étant de difficulté facile.</p>",
+    "notes": ""
+  }
+}

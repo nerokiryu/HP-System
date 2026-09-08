@@ -1,0 +1,19 @@
+{
+  "_id": "spFondantduchaud",
+  "name": "Fondant du chaudron en chou",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Métamorphose un fondant du chaudron en chou</p><p>Durée : permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 4,
+    "spellType": "M",
+    "target": [
+      "O"
+    ],
+    "incantation": "Brasicafors",
+    "malus": -40,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

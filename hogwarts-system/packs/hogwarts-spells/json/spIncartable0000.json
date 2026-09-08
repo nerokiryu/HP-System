@@ -1,0 +1,19 @@
+{
+  "_id": "spIncartable0000",
+  "name": "Incartable",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Rend un lieu incartable. Dès lors, celui-ci ne peut plus être détecté ou indiqué sur une carte.</p>",
+    "spellLevel": 6,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "",
+    "malus": -75,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

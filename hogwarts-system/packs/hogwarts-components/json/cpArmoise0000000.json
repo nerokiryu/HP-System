@@ -1,0 +1,13 @@
+{
+  "_id": "cpArmoise0000000",
+  "name": "Armoise",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une herbe très amère employée dans la fabrication de potions et comme médecine depuis les temps anciens.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Élixir d’Euphorie\nMélange de bile de tatou\nOculi cura\nPhiltre de Mort Vivante\nPotion d’atténuation\nPotion de soin",
+    "otherUses": "• Antipuce • Médecine magique ou non- magique"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "spTricot00000000",
+  "name": "Tricot",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Enchante des aiguilles pour qu’elles tricotent d’elles-mêmes un vêtement</p><p>Durée : -</p><p>Formule extrême : -</p>",
+    "spellLevel": 0,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "",
+    "malus": -5,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

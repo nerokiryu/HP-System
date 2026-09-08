@@ -1,0 +1,13 @@
+{
+  "_id": "cpEaudesel000000",
+  "name": "Eau de sel",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Du sel dilué dans de l’eau</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "• Traitement de la galle des écailles"
+  }
+}

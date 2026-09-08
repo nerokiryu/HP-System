@@ -1,0 +1,69 @@
+{
+  "_id": "crTrolldesRivier",
+  "name": "Troll des Rivieres",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 21,
+      "max": 21
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 21
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "",
+    "stats": {
+      "str": {
+        "value": 23,
+        "formula": "4d6+9"
+      },
+      "con": {
+        "value": 19,
+        "formula": "4d6+5"
+      },
+      "siz": {
+        "value": 22,
+        "formula": "4d6+8"
+      },
+      "dex": {
+        "value": 15,
+        "formula": "2d6+8"
+      },
+      "int": {
+        "value": 5,
+        "formula": "1d6+1"
+      },
+      "pow": {
+        "value": 6,
+        "formula": "1d6+2"
+      },
+      "app": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "per": {
+        "value": 18,
+        "formula": "3d6+7"
+      }
+    },
+    "movement": {
+      "land": 16,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 4
+    },
+    "attacks": "Gourdin : 50% (3d6) Armes de jet : 45% (variable)",
+    "skills": "Acrobatie : 55% ; Athlétisme : 50% ; Discrétion : 60%; Esquive : 40%, Orientation : 30% ; Survie : 30% ; Vigilance : 40%",
+    "powers": "<p>Augmentation de force : Le Troll peut augmenter momentanément sa force physique de 6 unités pour une durée de POUvoir minutes. Cette capacité fatigue cependant le Troll, qui devra ensuite se reposer pour récupérer durant une heure. Il peut utiliser cette capacité jusqu’à trois fois par jour. S’il ne se repose pas après avoir utilisé cette capacité, l’Hybride-Troll est incapable de la réutiliser jusqu’à ce qu’il se soit reposé.</p>",
+    "notes": ""
+  }
+}

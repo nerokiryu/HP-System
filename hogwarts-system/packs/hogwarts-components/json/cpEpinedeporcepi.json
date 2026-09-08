@@ -1,0 +1,13 @@
+{
+  "_id": "cpEpinedeporcepi",
+  "name": "Épine de porc- épic",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des épines qui proviennent d’un porc-épic et qui lui servent à se défendre contre ses prédateurs.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Anti-Furoncles\nÉlixir d’Euphorie\nHérisser les Cheveux\nPhiltre de paix",
+    "otherUses": "-"
+  }
+}

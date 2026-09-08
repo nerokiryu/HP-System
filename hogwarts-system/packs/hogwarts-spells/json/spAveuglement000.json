@@ -1,0 +1,19 @@
+{
+  "_id": "spAveuglement000",
+  "name": "Aveuglement",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>La personne devient invisible.</p><p>Effet : Octroie un bonus de 60% en discrétion.</p><p>Durée : 1d4+1 heures</p><p>Formule extrême : bonus de 75% en Discrétion et durée de 2d4+2 heures</p>",
+    "spellLevel": 5,
+    "spellType": "S",
+    "target": [
+      "P"
+    ],
+    "incantation": "",
+    "malus": -60,
+    "extremeFormula": true,
+    "malusExtremeFormula": -70,
+    "malusMastered": -40
+  }
+}

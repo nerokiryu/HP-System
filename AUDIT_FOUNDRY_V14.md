@@ -1,9 +1,9 @@
 # AUDIT TECHNIQUE — Conformité Foundry VTT v14
 
-**Système :** `hogwarts-system` v3.1.0
-**Compatibilité déclarée :** minimum `14` · vérifié `14.360`
-**Commit audité :** `cf0b986`
-**Date :** 7 septembre 2026
+**Système :** `hogwarts-system` v3.2.0
+**Compatibilité déclarée :** minimum `14` · vérifié `14.365`
+**Commit audité :** `cf0b986` + travaux en cours
+**Date :** 8 septembre 2026
 **Périmètre :** conformité aux API et pratiques Foundry VTT v14.
 La fidélité aux règles du jeu est traitée séparément dans [compare.md](compare.md).
 
@@ -20,13 +20,19 @@ Les problèmes se répartissent en trois familles, par ordre de gravité décroi
 
 | # | Famille | Gravité | Constat |
 |---|---------|---------|---------|
-| 1 | **Contenu des compendiums** | 🔴 Bloquant | Les données des packs contredisent massivement les livres sources : **52 % des sorts appariés ont au moins un champ faux**, 11 documents sont des déchets d'extraction, et la couverture plafonne à 74 % (sorts) / 46 % (potions) / 59 % (ingrédients). Voir §7. |
-| 2 | **Deux API dépréciées** | 🟠 Majeur | `renderChatMessage` et l'accès global à `TextEditor` — les deux cassent silencieusement, sans erreur visible. Voir §6 et §10. |
-| 3 | **Distribution & finition** | 🟡 Mineur | Manifeste non publiable (`manifest`/`download` vides), `trackableAttributes` absent, quelques chaînes non localisées. Voir §3 et §8. |
+| 1 | ~~**Contenu des compendiums**~~ | ✅ Corrigé | Les 4 packs sont **regénérés depuis `rules/md/` par [build-compendia.mjs](hogwarts-system/build-compendia.mjs)** : 977 documents contre 706, couverture 100 %, zéro déchet d'extraction. Voir §7. |
+| 2 | ~~**Deux API dépréciées**~~ | ✅ Corrigé | `renderChatMessage` → `renderChatMessageHTML`, `TextEditor` global → `foundry.applications.ux.TextEditor`. Voir §6 et §10. |
+| 3 | ~~**Distribution & finition**~~ | ✅ Corrigé | Manifeste publiable, `trackableAttributes` déclaré, chaînes localisées. Voir §3 et §8. |
 
-**Verdict :** le système *fonctionne* sous v14, mais il n'est ni **distribuable** (§3) ni
-**fiable sur le plan des données** (§7). Le point 1 est de très loin le plus coûteux et le plus
-urgent — il rend le contenu livré inutilisable en l'état pour jouer conformément aux règles.
+**Verdict :** le système est **distribuable**, **prêt pour la v15** et son contenu est désormais
+**dérivé des livres par construction**. Plus aucun point bloquant.
+
+> **Erreur de règle découverte en factorisant §11 (T-23)** : la maladresse était testée *après* la
+> réussite, si bien qu'un `96` sur une compétence à 96 % ou plus était compté comme une réussite.
+> Le livre est pourtant catégorique — « *lorsque le résultat est compris entre 96 et 00, **non
+> seulement l'action est manquée**…* » (l. 960). Atteignable en jeu : les matières scolaires
+> plafonnent à 100 % en 6ᵉ et 7ᵉ année, et l'assistance ou l'affinité de baguette poussent la cible
+> au-delà de 95. Corrigé dans les 10 emplacements d'un seul coup grâce à la factorisation.
 
 ---
 
@@ -65,7 +71,7 @@ Les points qui ne peuvent **pas** être tranchés sans exécuter le système son
 
 ### Constats
 
-**T-01** 🟠 **Manifeste non publiable — `manifest` et `download` vides**
+**T-01** ✅ **Corrigé — manifeste publiable**
 `url`, `bugs`, `manifest` et `download` sont tous des chaînes vides.
 
 > Conséquence : installation par URL de manifeste **impossible**, et Foundry ne peut pas détecter
@@ -73,11 +79,11 @@ Les points qui ne peuvent **pas** être tranchés sans exécuter le système son
 > D'après la documentation officielle, `manifest` doit être une **URL stable** pointant vers la
 > dernière version, sans quoi « updates will not be detected ».
 
-**T-02** 🟠 **`secondaryTokenAttribute: "fougue"` n'existe que sur le type `character`**
+**T-02** ✅ **Corrigé — `secondaryTokenAttribute` retiré**
 Les DataModels `npc`, `familiar` et `creature` ne définissent aucun champ `fougue`. La deuxième
 barre de ressource du prototype Token sera donc vide pour trois des quatre types d'Acteur.
 
-**T-03** 🟡 **`CONFIG.Actor.trackableAttributes` n'est jamais défini**
+**T-03** ✅ **Corrigé — `CONFIG.Actor.trackableAttributes` déclaré par type**
 Le système ne déclare que `primaryTokenAttribute`/`secondaryTokenAttribute` dans le manifeste.
 Sans `trackableAttributes`, l'interface de configuration des barres de Token ne propose pas de
 liste organisée par type d'acteur (`health`, `fougue`, `stress`, `healthNonLethal`…).
@@ -169,7 +175,7 @@ effet cible à la fois `system.skills.N.base` et `system.skills.N.value`, et il 
 
 ### Constats
 
-**T-07** 🟠 **Hook `renderChatMessage` déprécié**
+**T-07** ✅ **Corrigé — `renderChatMessageHTML`**
 [hogwarts-system.mjs:388](hogwarts-system/module/hogwarts-system.mjs#L388)
 
 ```js
@@ -184,10 +190,22 @@ passe un **`HTMLElement`** natif. Le code du callback devra donc être converti
 > **Impact fonctionnel si le hook ne se déclenche plus :** les boutons *Appliquer les dégâts*,
 > *Appliquer les soins* et *Utiliser la fougue* deviennent **inertes**. Il n'y a aucun message
 > d'erreur — les boutons s'affichent et ne font simplement rien.
-> 🧪 **NON VÉRIFIÉ** : savoir si `renderChatMessage` est encore émis (déprécié) ou **supprimé**
-> en 14.360. Voir la checklist §13, tests R-1 à R-3.
 
-**T-08** 🟠 **Accès global à `TextEditor`**
+**✅ VÉRIFIÉ EN PRODUCTION** (monde `test-hogwarts`, Foundry **14.365**, 8 septembre 2026) :
+le hook **est encore émis**, les boutons fonctionnent donc aujourd'hui. La gravité reste 🟠 et ne
+passe pas à 🔴. Foundry journalise en revanche à chaque message de chat :
+
+```
+The renderChatMessage hook is deprecated. Please use renderChatMessageHTML instead,
+which now passes an HTMLElement argument instead of jQuery.
+Deprecated since Version 13 — Backwards-compatible support will be removed in Version 15
+```
+
+**Échéance ferme : Foundry v15.** Le système est l'unique abonné à `renderChatMessage`
+(1 abonné mesuré, contre 2 sur `renderChatMessageHTML` côté cœur/Forge) : cet avertissement est
+donc bien causé par lui.
+
+**T-08** ✅ **Corrigé — `foundry.applications.ux.TextEditor`**
 [item-sheet.mjs:161](hogwarts-system/module/sheets/item-sheet.mjs#L161)
 
 ```js
@@ -204,6 +222,12 @@ interne**, pas d'un choix.
 
 > **Impact :** la description enrichie des objets (liens `@UUID`, jets en ligne `[[/r 1d6]]`) cesse
 > de fonctionner dès que le shim global est retiré.
+
+**✅ VÉRIFIÉ EN PRODUCTION** : le global répond encore, avec le même avertissement et la même
+échéance — *« now namespaced under `foundry.applications.ux.TextEditor.implementation` — removed
+in Version 15 »*. Mesuré au passage : `foundry.applications.ux.TextEditor.enrichHTML` **et**
+`…TextEditor.implementation.enrichHTML` sont toutes deux des fonctions valides, donc la forme
+déjà employée dans `actor-sheet.mjs` est correcte et n'a pas à être modifiée.
 
 ---
 
@@ -328,7 +352,7 @@ Le générateur devra trancher explicitement : encodage du niveau `5+` (**T-13**
 libellés de champs ; les libellés de types de documents (`TYPES.Actor.*`, `TYPES.Item.*`) sont
 présents.
 
-**T-18** 🟡 **Chaînes anglaises codées en dur**
+**T-18** ✅ **Corrigé — les 4 chaînes sont localisées** (`HOGWARTS.Errors.*`)
 Quatre messages utilisateurs contournent `game.i18n` :
 
 | Référence | Chaîne |
@@ -366,7 +390,7 @@ Six réglages enregistrés, tous avec `scope`/`config`/`type`/`default` explicit
 Un réglage typé par `DataModel` bénéficie de la validation de schéma et de la migration
 automatique. Avec un `Object` nu, une valeur corrompue en base ne sera jamais détectée.
 
-**T-21** ⚪ **`useExtendedSuccessTiers` est une extension hors règles**
+**T-21** ✅ **Corrigé — le réglage est explicitement étiqueté « règle optionnelle »**
 Le réglage est correctement implémenté et cohérent (`Math.ceil` aux 5 emplacements de calcul),
 mais les paliers *Extreme*/*Hard* **n'existent pas** dans le livre de base, qui ne définit que
 01-05 et 96-00. Il s'agit d'un emprunt au BRP générique. Ce n'est pas un défaut technique — c'est
@@ -387,9 +411,9 @@ un point de documentation, détaillé dans [compare.md](compare.md).
 | `DragDrop` global | ✅ `foundry.applications.ux.DragDrop` |
 | `Roll#evaluate({async})` | ✅ `await roll.evaluate()` |
 | `CONFIG.ActiveEffect.legacyTransferral` | ✅ Retiré au commit `cf0b986` |
-| jQuery dans les hooks | ⚠️ Voir **T-07** |
-| **`renderChatMessage`** | ❌ **T-07** |
-| **`TextEditor` global** | ❌ **T-08** |
+| jQuery dans les hooks | ✅ Plus aucun — le hook reçoit un `HTMLElement` natif |
+| **`renderChatMessage`** | ✅ **T-07 corrigé** — `renderChatMessageHTML` |
+| **`TextEditor` global** | ✅ **T-08 corrigé** — `foundry.applications.ux.TextEditor` |
 
 ---
 
@@ -400,7 +424,7 @@ Le fichier concentre 31 gestionnaires d'action, toute la logique de jets, la ges
 compétences, de la famille, du familier et des créatures. Un découpage par domaine
 (`sheets/parts/rolls.mjs`, `skills.mjs`, `creature.mjs`) réduirait le risque de régression.
 
-**T-23** 🟡 **La logique de degrés de réussite est dupliquée 5 fois**
+**T-23** ✅ **Corrigé — logique unique dans `helpers/degrees.mjs`** (9 copies trouvées, pas 5)
 [actor-sheet.mjs:1108](hogwarts-system/module/sheets/actor-sheet.mjs#L1108),
 [1413](hogwarts-system/module/sheets/actor-sheet.mjs#L1413),
 [1486](hogwarts-system/module/sheets/actor-sheet.mjs#L1486),
@@ -411,7 +435,7 @@ Les cinq copies sont aujourd'hui **cohérentes** — c'est un coup de chance, pa
 correction de règle (et [compare.md](compare.md) en identifie) devra être appliquée cinq fois sans
 en oublier une. À extraire dans une fonction unique `_degreeOf(roll, target, useExtendedTiers)`.
 
-**T-24** ⚪ **Aucun test automatisé, aucun lint**
+**T-24** ⚠️ **Partiellement corrigé — 9 tests unitaires ajoutés, lint toujours absent**
 `package.json` ne déclare ni test ni linter. Vu la densité d'arithmétique de règles, quelques
 tests unitaires sur les fonctions pures (degrés de réussite, PV max, bonus de dommages,
 progression scolaire) offriraient un rapport bénéfice/coût très favorable.
@@ -420,68 +444,109 @@ progression scolaire) offriraient un rapport bénéfice/coût très favorable.
 
 ## 12. Backlog priorisé
 
-### P0 — À traiter en premier
+### P0 — Tous traités
 
-| ID | Action | Référence |
-|----|--------|-----------|
-| **T-09 → T-12** | **Écrire le générateur de packs depuis `rules/md/`** et regénérer les 5 compendiums | §7.4 |
-| **T-07** | Migrer `renderChatMessage` → `renderChatMessageHTML` (+ jQuery → DOM natif) | [hogwarts-system.mjs:388](hogwarts-system/module/hogwarts-system.mjs#L388) |
-| **T-08** | `TextEditor` → `foundry.applications.ux.TextEditor` | [item-sheet.mjs:161](hogwarts-system/module/sheets/item-sheet.mjs#L161) |
-| **R-01** | Corriger le gain d'XP `1d6` → `1d6+1` | [compare.md](compare.md) · [actor-sheet.mjs:1904](hogwarts-system/module/sheets/actor-sheet.mjs#L1904) |
-
-> **T-09 → T-12 et R-01 sont indépendants** : la correction des règles peut avancer en parallèle
-> de la regénération des packs.
+| ID | Action | État |
+|----|--------|------|
+| ~~T-09 → T-12~~ | Générateur `build-compendia.mjs`, 4 packs regénérés depuis `rules/md/` | ✅ |
+| ~~T-07~~ | `renderChatMessage` → `renderChatMessageHTML` (+ jQuery → DOM natif) | ✅ |
+| ~~T-08~~ | `TextEditor` → `foundry.applications.ux.TextEditor` | ✅ |
+| ~~R-01~~ | Gain d'XP `1d6` → `1d6+1` | ✅ |
 
 ### P1 — Correction et fiabilité
 
 | ID | Action |
 |----|--------|
-| T-13 · T-14 · T-15 | Trancher et **documenter** l'encodage `5+`, le signe du malus, le découpage du mouvement — *prérequis du générateur* |
-| T-23 | Factoriser les 5 copies de la logique de degrés de réussite |
-| T-01 | Renseigner `url`, `bugs`, `manifest`, `download` |
-| T-02 | Retirer `secondaryTokenAttribute` ou ajouter `fougue` aux autres types |
-| T-18 | Localiser les 4 chaînes en dur |
+| ~~T-13 · T-14 · T-15~~ | ✅ Tranchés et documentés en tête de `build-compendia.mjs` |
 
 ### P2 — Complétude
 
 | ID | Action |
 |----|--------|
-| T-16 | Intégrer les 31 êtres de l'Encyclopédie |
-| T-15 | Renseigner `virulence`, `prepTime`, `biography` (via le générateur) |
-| T-03 | Déclarer `CONFIG.Actor.trackableAttributes` |
+| ~~T-16~~ | ✅ Intégrés — 162 créatures issues des deux ouvrages |
+| T-15 | `virulence` et `prepTime` restent vides : le Grimoire ne publie pas ces champs |
 | T-05 | Déplacer les migrations de forme vers `static migrateData()` |
-| T-21 | Documenter `useExtendedSuccessTiers` comme extension optionnelle |
 
 ### P3 — Confort
 
 | ID | Action |
 |----|--------|
-| T-17 | Illustrations de créatures (+ `filePathFields`, T-04) |
+| T-17 | Illustrations de créatures (+ `filePathFields`, T-04) — toujours l'icône générique |
 | T-22 | Découper `actor-sheet.mjs` |
-| T-24 | Ajouter lint + tests unitaires sur l'arithmétique de règles |
+| T-24 | Ajouter un linter (les tests unitaires sont en place : `npm test`) |
 | T-06 | Refondre le calcul des compétences pour supprimer le contournement d'Active Effects |
-| T-19 | Réévaluer la traduction des compendiums après regénération |
+| ~~T-19~~ | ✅ Patch de traduction supprimé, les packs sont nativement en français |
 | T-20 | Typer `housePoints` par un `DataModel` |
 
 ---
 
-## 13. Checklist de vérification runtime
+## 13. Vérification runtime — résultats
 
-À exécuter dans un monde Foundry **14.360** avec la console (F12) ouverte.
+Exécutée le 8 septembre 2026 sur le monde `test-hogwarts`, **Foundry 14.365**, `hogwarts-system`
+v3.1.0, 13 acteurs.
 
-| # | Test | Attendu si conforme | Tranche |
-|---|------|---------------------|---------|
-| **R-1** | Lancer un jet de compétence, puis cliquer *Utiliser la fougue* sur la carte de chat | Le résultat s'inverse et 1 point de fougue est dépensé | **T-07** |
-| **R-2** | Lancer un jet de dégâts, cliquer *Appliquer les dégâts* avec un token ciblé | Les PV de la cible diminuent | **T-07** |
-| **R-3** | Filtrer la console sur `Deprecation` au chargement du monde | Aucun avertissement | **T-07**, **T-08** |
-| **R-4** | Ouvrir la fiche d'un objet contenant `[[/r 1d6]]` dans sa description | Le jet en ligne s'affiche en bouton cliquable | **T-08** |
-| **R-5** | Ouvrir la configuration d'un Token de PNJ, dérouler la barre secondaire | `fougue` absent de la liste ⇒ confirme **T-02** | **T-02** |
-| **R-6** | Créer un effet actif ciblant `system.skills.0.value`, puis modifier une autre valeur de la fiche | Le bonus persiste, aucune erreur « phase has already completed » | §5 |
-| **R-7** | Ouvrir le compendium *Hogwarts Spells* et trier par nom | Présence des 11 entrées à nom aberrant ⇒ confirme **T-10** | **T-10** |
+| # | Test | Résultat | Conséquence |
+|---|------|----------|-------------|
+| **R-1/2** | `renderChatMessage` est-il encore émis ? | **OUI** | **T-07 reste 🟠** — les boutons de chat fonctionnent |
+| **R-3** | Avertissements de dépréciation | **2 confirmés** | `renderChatMessage` et `TextEditor` global, tous deux *« removed in Version 15 »* |
+| **R-4** | `foundry.applications.ux.TextEditor.enrichHTML` | fonction valide | La forme utilisée dans `actor-sheet.mjs` est correcte |
+| **R-6** | Effets actifs sur les compétences | aucune erreur « phase has already completed » | Le correctif `cf0b986` tient |
+| — | Plafond de maîtrise scolaire | an 1 → 30 · an 3 → 60 · an 5 → 90 · **an 6 → 100 · an 7 → 100** | Le plafond à 100 % est actif |
+| — | Rattrapage des presets | 55 compétences persistées → **59 préparées** | Les 4 compétences du §6.6 sont ajoutées aux 8 personnages existants |
 
-> Les résultats de **R-1**, **R-2** et **R-3** déterminent si **T-07** est 🟠 *majeur* (hook encore
-> émis avec avertissement) ou 🔴 *bloquant* (hook supprimé, fonctionnalités mortes).
-> Merci de reporter ces résultats pour mettre à jour la gravité.
+**Faux positif à ignorer** : un troisième avertissement porte sur le global `FilePicker`. Sa pile
+d'appel pointe `forge-vtt.com/js/forgevtt-module.js` — il vient du **module Forge**, pas du système.
+
+**Version** : le serveur tourne en **14.365** alors que `system.json` déclare
+`compatibility.verified: "14.360"`. À aligner avec **T-01**.
+
+### Reste à vérifier
+
+| # | Test | Attendu |
+|---|------|---------|
+| — | *(aucun)* | Tous les tests runtime ont été exécutés le 8 septembre 2026 |
+
+### Constats confirmés en production
+
+**T-02 — confirmé.** Attributs de barre exposés par type d'acteur :
+
+| Type | Barres disponibles |
+|------|--------------------|
+| `character` | `health`, `healthNonLethal`, **`fougue`** |
+| `npc` | `health`, `healthNonLethal` |
+| `familiar` | `health`, `healthNonLethal` |
+| `creature` | `health`, `healthNonLethal` |
+
+`secondaryTokenAttribute` vaut `fougue` : la barre secondaire est donc **vide pour 3 types sur 4**.
+
+**T-10 — confirmé.** Le compendium *Hogwarts Spells* déployé contient bien des entrées dont le nom
+est un fragment de phrase. Relevé sur l'instance :
+
+- « Maléfice du lancent tous avec leur malus maximal »
+- « Sortilège de le second et le second en le premier. »
+- « Annulation de fonctionne cependant pas sur les métamorphoses complètes. »
+- « Scellement de peut alors être lu que si on lui donne un nouveau coup de baguette. »
+
+**T-09 — confirmé.** Valeurs lues dans les compendiums déployés :
+
+| Incantation | Document livré | Canon (Grimoire) |
+|-------------|----------------|------------------|
+| `Protego` | « Charme du bouclier » · niveau **2** · type **E** · malus **−10** | « Protection » · niveau **4** · type **S** · FC **40 %** |
+| `Expelliarmus` | « Désarmement » · malus **−10** · `extremeFormula: true` | FC **20 %** · **pas** de formule extrême |
+| `Lumos` | cibles **`["O"]`** | cibles **`X`** |
+
+**Effectifs réels des compendiums déployés** : sorts **293**, ingrédients **201**, créatures **129**,
+potions **86**, avantages **31**.
+
+**Correctifs validés en conditions réelles** (le zip était déployé au moment du test) :
+
+| Vérification | Résultat |
+|--------------|----------|
+| Plafond de maîtrise scolaire | an 1 → 30 · an 3 → 60 · an 5 → 90 · **an 6 → 100 · an 7 → 100** |
+| Rattrapage des presets | 55 compétences persistées → **59 préparées**, sur les 8 personnages |
+| Compétences du §6.6 | `Alchimie 0-95`, `Duels 0-95`, `Legilimancie 15-80`, `Occlumancie 15-80`, catégorie `special` |
+| Bascule auto → manuel | an 3 auto = 60 → manuel 42 → **passage en an 5 : reste 42** |
+| Bascule manuel → auto | retour auto en an 5 : **90** |
 
 ---
 

@@ -1,0 +1,19 @@
+{
+  "_id": "spSeduction00000",
+  "name": "Séduction",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Charme une cible et la rend amoureuse de soi durant 1d6+1 heures. Le sort ne peut plus être lancé pendant une période équivalente à celle passée sous le charme mais n’a aucun souvenir d’avoir été</p><p>Opposition : APP/POU</p><p>Contrer les effets du sort : vu qu’il agit comme un philtre d’amour, les effets de ce sortilège peuvent être partiellement ou totalement dissipés par des antidotes aux philtres d’amour.</p><p>Formule extrême : durée 2d6+2 heures</p>",
+    "spellLevel": 4,
+    "spellType": "E",
+    "target": [
+      "P"
+    ],
+    "incantation": "",
+    "malus": -40,
+    "extremeFormula": true,
+    "malusExtremeFormula": -50,
+    "malusMastered": -30
+  }
+}

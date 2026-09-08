@@ -1,0 +1,13 @@
+{
+  "_id": "cpCornedebicorne",
+  "name": "Corne de bicorne",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une corne provenant d’un bicorne, une créature magique ressemblant au croisement entre une vache et une panthère. Réduite en poudre, elle peut être employée comme ingrédient de potions.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Pimentine\nDuplication\nPolynectar",
+    "otherUses": "-"
+  }
+}

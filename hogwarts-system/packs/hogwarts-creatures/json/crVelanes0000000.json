@@ -1,0 +1,69 @@
+{
+  "_id": "crVelanes0000000",
+  "name": "Velanes",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>Cheveux de Vélane: Les cheveux de Vélane peuvent être employés comme ingrédient magique et entrent dans la composition de baguettes magiques comme coeur. Le célèbre fabricant de baguettes Garrick Ollivander a noté qu'il ne l'avait personnellement jamais utilisé, car il trouvait le résultat capricieux. RELATION AVEC LES SORCIERS : Nombre de Vélanes se marient avec des Sorciers et donnent naissance à des hybrides Vélanes-Sorciers. Elles sont donc assez bien intégrées au monde de la magie. En 1994, les mascottes de l’équipe nationale bulgare de Quidditch lors de la Coupe du monde de Quidditch étaient des Vélanes. Celles-ci ont dansé pour hypnotiser les joueurs ainsi que les fans de l’autre équipe ; même l’arbitre a été affecté. CLASSIFICATION SELON LE MDLM : XXX LES HYBRIDES Les hybrides ne représentent pas réellement une catégorie à part entière, puisqu’ils sont issus du croisement entre deux êtres appartenant à des espèces différentes. Néanmoins, leurs</p>",
+    "health": {
+      "value": 12,
+      "max": 12
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 12
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "",
+    "stats": {
+      "str": {
+        "value": 9,
+        "formula": "2d6+2"
+      },
+      "con": {
+        "value": 9,
+        "formula": "2d6+2"
+      },
+      "siz": {
+        "value": 13,
+        "formula": "2d6+6"
+      },
+      "dex": {
+        "value": 13,
+        "formula": "2d6+6"
+      },
+      "int": {
+        "value": 11,
+        "formula": "2d6+4"
+      },
+      "pow": {
+        "value": 13,
+        "formula": "2d6+6"
+      },
+      "app": {
+        "value": 20,
+        "formula": "2d6+13"
+      },
+      "per": {
+        "value": 13,
+        "formula": "2d6+6"
+      }
+    },
+    "movement": {
+      "land": 8,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Griffes 30% (1d4-1) Bec (1d6-1)",
+    "skills": "Acrobatie : 70% ; Athlétisme : 60% ; Danse : 70% ; Discrétion 10% ; Empathie : 60% ; Esquive : 60% ; Fouille/Ménage : 20% ; Langue maternelle : 50% ; Langue étrangère (au choix) : 40% ; Orientation : 20% ; Persuasion/baratin : 60% ; Psychologie : 70% ; Survie : 5% ; Vigilance : 45%",
+    "powers": "<p>Armes naturelles (Bec et Crocs) : La Vélane, quand elle se métamorphose sous l’effet de la colère, peut occasionner des dégâts létaux à l’aide de ses ongles, qui sont plus solides que ceux des autres êtres humains, ainsi qu’avec son bec. Lors d’un jet dans la compétence Bagarre, les dégâts de griffes occasionnent 1d4-1 dégâts et ceux de bec 1d6-1 dégâts. Boule de feu : La Vélane possède la capacité de lancer des boules de feu. Celle-ci possèdent une portée de POUvoir mètres et occasionnent 1d4+2 dégâts. En plus de cela, elles possèdent 50% de chance d’enflammer la cible touchée. Danse de séduction : Quand elle danse, la Vélane déploie toute la puissance de sa magie de fascination. Il devient dès lors très difficile de résister aux effets de celle-ci. Considérez que la valeur d’APParence pour les jets d’opposition est doublée. Fascination hypnotique : Les Vélanes possèdent un fort pouvoir d’attraction sur les êtres humains de sexe mâle. Quand elles parviennent à capter le regard de leur cible, celle-ci peut perdre ses moyens, ressentant une attirance sans limite pour elle et la faisant paraître plus belle que la plus belle des femmes à ses yeux. Sous son emprise, la cible se met en avant, peut aller jusqu’à mettre sa vie en danger pour l’impressionner, et mentira pour se targuer de prouesses plus fantaisistes les unes que les autres. Ce pouvoir fonctionne à peu près comme le sortilège Delecto ou le sortilège de Séduction, duquel ils sont directement inspirés et qui possèdent des effets relativement similaires, mais sans commune mesure avec ce pouvoir. Quand une personne aperçoit une Vélane, il doit réussir un jet en opposition APPxPOU pour résister aux effets de la fascination. Si le jet est réussi, il est immunisé à la fascination pour 24 heures, sauf si la Vélane danse. Dans ce cas, un autre jet en opposition devra être effectué avec la nouvelle valeur d'apparence de la « danse de la séduction ». Les effets de la fascination perdurent tant que la cible voit la Vélane, puis se dissipent en 1d4+2 minutes une fois que le contact visuel est rompu. Magie intrinsèque : La magie des Vélanes est quelque peu différente de celle des Sorciers. Elles sont capables de faire usage de la magie sans recourir à une baguette et sans prononcer d’incantation. Métamorphose colérique : Quand elle se met en colère, une Vélane voit sa beauté magique disparaître. Son visage s’allonge en tête d’oiseau pointue et au bec cruel. De longues ailes écailleuses éclatent de leurs épaules et se déploient dans son dos.</p>",
+    "notes": "<p>Défaut psychologique (colère) : Les Vélanes ont une nette tendance à se mettre en colère et pour des raisons qui peuvent paraître futiles. Tous les jets pour rester maître de soi sont augmentés d’une catégorie de difficulté. Les jets de résistance faciles passent à moyens, les moyens à difficiles, etc.</p>"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "spObjetversObjet",
+  "name": "Objet vers Objet",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Permet de métamorphoser un objet en un autre.</p><p>Durée : permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 1,
+    "spellType": "M",
+    "target": [
+      "O"
+    ],
+    "incantation": "",
+    "malus": -10,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

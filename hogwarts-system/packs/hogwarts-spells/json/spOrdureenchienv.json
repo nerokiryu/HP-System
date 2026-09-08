@@ -1,0 +1,19 @@
+{
+  "_id": "spOrdureenchienv",
+  "name": "Ordure en chien viverrin",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Métamorphose un tas d’ordures en chien viverrin</p><p>Durée : permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 5,
+    "spellType": "M",
+    "target": [
+      "O"
+    ],
+    "incantation": "Nycterofors",
+    "malus": -55,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

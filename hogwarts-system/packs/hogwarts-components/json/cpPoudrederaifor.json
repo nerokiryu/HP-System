@@ -1,0 +1,13 @@
+{
+  "_id": "cpPoudrederaifor",
+  "name": "Poudre de raifort",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Le raifort est une plante qui, une fois ses grosses racines blanches réduites en poudre, peut servir d'ingrédient de potion</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Infusion infecte\nPotion d'Hilarité\nPotion de mélancolie",
+    "otherUses": "• Parfum des Dragées surprises de Bertie Crochue • Condiment en cuisine"
+  }
+}

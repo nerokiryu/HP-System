@@ -1,0 +1,19 @@
+{
+  "_id": "spLumieresdedetr",
+  "name": "Lumières de détresse",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Projette en l’air des étincelles rouges qui restent suspendues pour signaler sa position lorsqu’on est en danger.</p><p>Durée : variable (rounds)</p><p>Formule extrême : durée variable (minutes)</p>",
+    "spellLevel": 2,
+    "spellType": "E",
+    "target": [
+      "X"
+    ],
+    "incantation": "Periculum",
+    "malus": -10,
+    "extremeFormula": true,
+    "malusExtremeFormula": -15,
+    "malusMastered": 0
+  }
+}

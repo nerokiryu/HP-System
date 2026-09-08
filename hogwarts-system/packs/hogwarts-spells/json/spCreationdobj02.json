@@ -1,0 +1,19 @@
+{
+  "_id": "spCreationdobj02",
+  "name": "Création d’objets complexes",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Permet de créer des objets complexes à partir d’une matière de base.</p><p>Durée : permanente.</p><p>Remarque : nécessite une excellente connaissance de l’objet à créer et de ses caractéristiques internes car celui-ci doit être visualisé mentalement avant de lancer le sort.</p><p>Formule extrême : -</p>",
+    "spellLevel": 4,
+    "spellType": "M",
+    "target": [
+      "O"
+    ],
+    "incantation": "",
+    "malus": -40,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

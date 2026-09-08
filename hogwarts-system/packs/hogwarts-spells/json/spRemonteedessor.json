@@ -1,0 +1,19 @@
+{
+  "_id": "spRemonteedessor",
+  "name": "Remontée des sortilèges / Priori Incantatum",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Sort qui sert à dévoiler la dernière action d'une baguette magique. Fait remonter les sortilèges en sens inverse. Durée : - Remarque : lorsque deux baguettes jumelles lancent un sort l'une contre l'autre, Priori</p><p>Incantatem se lance de lui-même.</p><p>Formule extrême : -</p>",
+    "spellLevel": 5,
+    "spellType": "E",
+    "target": [
+      "X"
+    ],
+    "incantation": "Prior Incanto",
+    "malus": -50,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

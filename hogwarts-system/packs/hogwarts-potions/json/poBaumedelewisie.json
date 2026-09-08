@@ -1,0 +1,21 @@
+{
+  "_id": "poBaumedelewisie",
+  "name": "Baume de lewisie brûlante",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Ce baume de couleur bleue est à appliquer sur les plaies et les contusions</p><p>Effet : soigne 1d4 point de vie, referme les plaies et résorbe des contusions.</p><p>Effet secondaire : Intense sensation de brûlure</p>",
+    "potionLevel": 3,
+    "malus": -30,
+    "target": "A/P",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Lewisie",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

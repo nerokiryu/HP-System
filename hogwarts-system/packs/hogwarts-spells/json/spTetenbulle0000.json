@@ -1,0 +1,20 @@
+{
+  "_id": "spTetenbulle0000",
+  "name": "Têtenbulle",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet de créer une bulle d’air pur autour de sa tête, permettant de respirer sous l’eau durant 1d4+1 heures ou de ne pas être incommodé par de mauvaises odeurs.</p><p>Durée : 1d4+1 heures</p><p>Formule extrême : Durée +1 heure</p>",
+    "spellLevel": 2,
+    "spellType": "E",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "",
+    "malus": -15,
+    "extremeFormula": true,
+    "malusExtremeFormula": -20,
+    "malusMastered": 0
+  }
+}

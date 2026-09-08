@@ -1,0 +1,39 @@
+{
+  "_id": "poPotionderest03",
+  "name": "Potion de restauration n°3",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Restaure 1d4+1 points de vie perdus de manière non létale et 1 point de vie perdu de manière létale</p><p>Efface la majeure partie des contusions, coupures et autres petites blessures</p>",
+    "potionLevel": 5,
+    "malus": -50,
+    "target": "P",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Bourgeon de châtaigner",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Bourgeon de sorbier",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Saule blanc",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Sang de dragon",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

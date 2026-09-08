@@ -135,10 +135,41 @@
   }
 
   .item-prop {
+    // `.item` centre ses enfants : sans `stretch`, la cellule garde la hauteur du
+    // texte et ses bordures deviennent de courts traits flottants au lieu de
+    // séparateurs de colonnes.
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     border-left: 1px solid #c9c7b8;
     border-right: 1px solid #c9c7b8;
     font-size: 12px;
+
+    > input {
+      width: 100%;
+    }
+  }
+
+  .skill-max-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    input[type='number'] {
+      width: 3.5em;
+    }
+
+    .skill-max-toggle {
+      flex: 0 0 auto;
+      opacity: 0.75;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 
   .item-type,
@@ -432,4 +463,23 @@
 .item-controls .disabled {
   opacity: 0.3;
   pointer-events: none;
+}
+
+// Combat tracker: declared action phase (Chap. 2.4)
+.combatant-controls .hogwarts-phase {
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 1;
+  min-width: 16px;
+  border-radius: 3px;
+  border: 1px solid currentColor;
+
+  &.phase-1 { color: #1a6fb4; }
+  &.phase-2 { color: #2e7d32; }
+  &.phase-3 { color: #a05a00; }
+
+  &.surprised {
+    background: rgba(204, 51, 51, 0.18);
+    border-color: #cc3333;
+  }
 }

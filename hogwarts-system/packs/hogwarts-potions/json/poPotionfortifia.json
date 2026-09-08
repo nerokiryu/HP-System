@@ -1,0 +1,33 @@
+{
+  "_id": "poPotionfortifia",
+  "name": "Potion fortifiante",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Ce breuvage peu ragoûtant redonne des forces à celui qui la boit.</p><p>Effet : redonne 1 point de vie.</p><p>Effet secondaire : Octroie 1d4 points de vie temporaires qui disparaissent à raison de 1 par heure.</p><p>Remarque : Si le consommateur se blesse durant les effets de cette potion, ce sont tout d’abord les points de vie temporaire qui sont supprimés. Ceux-ci agissent en quelque sorte comme une réserve de points de vie supplémentaires.</p>",
+    "potionLevel": 3,
+    "malus": -30,
+    "target": "A/P",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Aile de fée",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Hippocampe volant Œuf de Doxy",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Thorax de libellule",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

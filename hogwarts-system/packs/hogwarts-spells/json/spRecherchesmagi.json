@@ -1,0 +1,22 @@
+{
+  "_id": "spRecherchesmagi",
+  "name": "Recherches magiques",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Permet de développer une nouvelle application d’un sortilège existant ou de créer un sort original.</p>",
+    "spellLevel": 6,
+    "spellType": "X",
+    "target": [
+      "A",
+      "O",
+      "P",
+      "V"
+    ],
+    "incantation": "",
+    "malus": 0,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

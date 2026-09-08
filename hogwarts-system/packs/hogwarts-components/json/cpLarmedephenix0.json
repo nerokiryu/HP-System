@@ -1,0 +1,13 @@
+{
+  "_id": "cpLarmedephenix0",
+  "name": "Larme de phénix",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Les larmes de phénix sont extrêmement rares et possèdent de puissantes propriétés curatives</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Élixirs éternels",
+    "otherUses": "• Propriétés curatives"
+  }
+}

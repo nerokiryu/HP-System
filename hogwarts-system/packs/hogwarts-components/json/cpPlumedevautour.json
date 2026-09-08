@@ -1,0 +1,13 @@
+{
+  "_id": "cpPlumedevautour",
+  "name": "Plume de vautour",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une plume provenant d’un vautour, un rapace charognard qui se nourrit de carcasses d’animaux morts</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Infusion infecte",
+    "otherUses": "-"
+  }
+}

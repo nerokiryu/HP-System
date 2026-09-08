@@ -1,0 +1,51 @@
+{
+  "_id": "poPhiltredeMortV",
+  "name": "Philtre de Mort Vivante",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Également connue sous le nom de Goutte de Mort vivant, cette potion endort la cible.</p><p>Durée : 2d4+2 jours.</p><p>VIRulence : 18 ;</p><p>Remarques : Mal préparée, cette potion peut même tuer celui qui la consomme. L’antidote est la potion Wiggenweld.</p>",
+    "potionLevel": 5,
+    "malus": -50,
+    "target": "P",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Eau standard pour potion",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Poudre de racine d’Asphodèle",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Infusion d'armoise (ou d’absinthe)",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Racine de valériane",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Fèves sopophoriques",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Cervelle de paresseux",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

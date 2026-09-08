@@ -1,0 +1,69 @@
+{
+  "_id": "crEpouvantard000",
+  "name": "Épouvantard",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 12,
+      "max": 12
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 12
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "",
+    "stats": {
+      "str": {
+        "value": 3,
+        "formula": "Variable"
+      },
+      "con": {
+        "value": 3,
+        "formula": "Variable"
+      },
+      "siz": {
+        "value": 3,
+        "formula": "Variable"
+      },
+      "dex": {
+        "value": 3,
+        "formula": "Variable"
+      },
+      "int": {
+        "value": 3,
+        "formula": "Variable"
+      },
+      "pow": {
+        "value": 3,
+        "formula": "Variable"
+      },
+      "app": {
+        "value": 3,
+        "formula": "Variable"
+      },
+      "per": {
+        "value": 15,
+        "formula": "2d6+6"
+      }
+    },
+    "movement": {
+      "land": 8,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Varie",
+    "skills": "Identiques à celles de la créature incarnée mais amoindries.",
+    "powers": "<p>Amortalité : Comme tous les Non-Êtres, les Epouventards sont considérés comme amortels, ce qui signifie qu’ils n’ont jamais été vivants et qu’ils ne peuvent pas mourir de mort naturelle. Ils peuvent cependant être détruits ou conjurés par d’autres méthodes magiques. Détection des peurs : Un Épouvantard peut détecter les peurs les plus profondes d’une personne grâce à un jet de PERceptionx5. Cette perception est instantanée quand une personne se trouve en face de lui, mais peut causer quelques problèmes quand un groupe de personnes l’entoure, mélangeant diverses formes intermédiaires. Forme terrifiante : L’apparence véritable d'un Épouvantard est inconnue. Dès qu’elle est en présence d’une personne, cette créature est capable de changer d'apparence en un instant, incarnant alors la forme la plus terrifiante possible pour cette personne qui lui fait face. Néanmoins, lorsqu'un Épouvantard se retrouve face à un groupe de personnes et qu'il tente de toutes les effrayer en même temps, il arrive qu'il prenne une forme alternative combinant plusieurs craintes. Sous sa forme terrifiante, la créature peut totalement paralyser d’effroi une personne qui doit réussir un jet de POUvoir x3 pour y résister. Dans le cas contraire, elle est incapable de la moindre action autre que celle de fuir la créature. Les changements d’apparence d'un Épouvantard sont instantanés et émettent un bruit ressemblant à un claquement de fouet. Incarnation affaiblie : L’Épouvantard ne se contente pas de prendre l’apparence d’une créature, il s’incarne en elle en quelque sorte, si bien qu’il peut devenir extrêmement dangereux. Un Épouvantard s’incarnant en Spectre de la Mort, en Dragon ou en Détraqueur possèdera les mêmes capacités que ceux- ci et pourra alors en faire usage sans restriction ou presque. En effet, même s’il devient la réplique exacte de la créature issue des peurs de sa proie, ses seront amoindries. Cet affaiblissement sera toujours fonction de la puissance première de l’Épouvantard. Plus celui-ci s’est nourri des peurs de ses proies et plus cet affaiblissement est faible. Les plus anciens et plus puissants des Épouvantard sont presque aussi puissantes que les créatures qu’ils incarnent et doivent alors être éliminés. Régime alimentaire (peur) : Un Épouvantard se nourrit de la peur de sa proie, ce qui lui permet de grandir de manière indéfinie. On citera, par exemple, le cas d’un Épouvantard sévissant en Ecosse au XXème siècle. Totalement noir et possédant des yeux d'un blanc éblouissant, il fut surnommé le Croque-mitaine Hurlant car il effrayait tous les habitants de Strathtully. Il se nourrit tant de leurs peurs, qu’il acquit une stature proche d’un dragon adulte. NEUTRALISATION : Les Épouvantard peuvent être vaincus par l’enchantement Riddikulus. Maîtriser ce sortilège nécessite une grande concentration mentale car il demande au lanceur de trouver la forme la plus ridicule possible pour l’Épouvantard. Privé de sa capacité terrifiante celui-ci s’affaiblit sous les rires de sa cible pour disparaître en une volutes de fumée.</p>",
+    "notes": ""
+  }
+}

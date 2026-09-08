@@ -1,0 +1,13 @@
+{
+  "_id": "cpPlantain000000",
+  "name": "Plantain",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Le plantain est une plante herbacée possédant des feuilles en forme de lance et connu depuis le</p><p>Moyen-âge pour ses vertus médicinales</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Cataplasme contre les morsures de Murlap\nLangue de miel\nTraitement des morsures de chiens fous",
+    "otherUses": "• Vertus médicinales • Infusions"
+  }
+}

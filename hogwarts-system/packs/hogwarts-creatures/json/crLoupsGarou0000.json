@@ -1,0 +1,69 @@
+{
+  "_id": "crLoupsGarou0000",
+  "name": "Loups-Garou",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 12,
+      "max": 12
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 12
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "",
+    "stats": {
+      "str": {
+        "value": 16,
+        "formula": "Humain +3"
+      },
+      "con": {
+        "value": 11,
+        "formula": "Humain -2"
+      },
+      "siz": {
+        "value": 13,
+        "formula": "Humain ±0"
+      },
+      "dex": {
+        "value": 14,
+        "formula": "Humain+1"
+      },
+      "int": {
+        "value": 11,
+        "formula": "Humain ±0"
+      },
+      "pow": {
+        "value": 13,
+        "formula": "Humain ±0"
+      },
+      "app": {
+        "value": 12,
+        "formula": "Humain -1"
+      },
+      "per": {
+        "value": 14,
+        "formula": "Humain+1"
+      }
+    },
+    "movement": {
+      "land": 9,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "+10%",
+    "skills": "Identiques à celles du Sorcier ou du Moldu avant sa transformation",
+    "powers": "<p>Auto-scarification : Quand il ne trouve personne à attaquer lors de sa transformation, le Loup-garou s’attaquera lui-même par pure frustration, s’infligeant des blessures qui laisseront de nombreuses cicatrices. Blessures : Toute morsure ou égratignure provenant d’un Loup-garou, sous forme humaine ou animale, laissera des cicatrices permanentes. Sans traitement adapté, les blessures de Loup-garou sont mortelles. Haine (humains) : Les Loup-garou vouent une haine sans borne aux humains quand ils sont sous leur forme lupuline. Transformés, ils attaqueront tout humain qui se présentera devant eux afin de les tuer et de s’en nourrir. Lycanthropie : Un Loup-garou se transforme à chaque pleine lune en une créature semblable à un loup. Les seules différences avec un loup classique sont son museau plus court, sa queue moins fournie et les pupilles de ses yeux. Pour connaître les</p>",
+    "notes": ""
+  }
+}

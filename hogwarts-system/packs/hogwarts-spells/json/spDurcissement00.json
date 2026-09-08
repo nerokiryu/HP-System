@@ -1,0 +1,19 @@
+{
+  "_id": "spDurcissement00",
+  "name": "Durcissement",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Change les petits objets en pierre</p><p>Maximum 5dm3.</p><p>Durée : 1d6+2 heures</p><p>Formule extrême : 10dm3 et durée +1 heure</p>",
+    "spellLevel": 3,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "Duro",
+    "malus": -15,
+    "extremeFormula": true,
+    "malusExtremeFormula": -25,
+    "malusMastered": -5
+  }
+}

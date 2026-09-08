@@ -1,0 +1,13 @@
+{
+  "_id": "cpSangdedragon00",
+  "name": "Sang de dragon",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Du sang qui provient de l’une des nombreuses espèces de dragon existante. Très difficile à se procurer vu la dangerosité de la créature dont il est issu, il augmente considérablement la puissance magique d’une potion quand il est utilisé correctement lors de leur création.</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Cinq sens\nEncre magique\nPhéromones\nPommade pommadante Grégoire\nPotion de restauration n°3\nRégénération sanguine\nRemède à la Dragoncelle",
+    "otherUses": "• Nettoyant pour four • Détachant • Soin des verrues • 9 autres usages non-précisés"
+  }
+}

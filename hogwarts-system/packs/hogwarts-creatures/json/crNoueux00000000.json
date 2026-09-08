@@ -1,0 +1,69 @@
+{
+  "_id": "crNoueux00000000",
+  "name": "Noueux",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>Les piquants de Noueux sont utilisés dans la fabrication de potions, comme la potion d'Hilarité par exemple.</p>",
+    "health": {
+      "value": 8,
+      "max": 8
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 8
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXX",
+    "stats": {
+      "str": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "con": {
+        "value": 9,
+        "formula": "2d6+2"
+      },
+      "siz": {
+        "value": 7,
+        "formula": "2d4+2"
+      },
+      "dex": {
+        "value": 11,
+        "formula": "3d6"
+      },
+      "int": {
+        "value": 4,
+        "formula": "2d4-1"
+      },
+      "pow": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "app": {
+        "value": 6,
+        "formula": "2d6-1"
+      },
+      "per": {
+        "value": 9,
+        "formula": "2d6+2"
+      }
+    },
+    "movement": {
+      "land": 4,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 1
+    },
+    "attacks": "Morsure/Griffes 30% (1)",
+    "skills": "Acrobatie : 25% ; Athlétisme : 30% ; Discrétion 50% ; Esquive : 35% ; Fouille : 30% ; Orientation : 20% ; Survie : 20% ; Vigilance : 50%",
+    "powers": "<p>Fouille : Le Noueux possède la compétence fouille. Piquants : Les piquants du dos du Noueux forment une défense naturelle très efficace contre ceux qui tentent de le manipuler sans gants épais. Tenter de manipuler un Noueux sans gants inflige 1 point de dégât. Ravages : Quand on offre de la nourriture à un Noueux, il devient fou de colère et se met à ravager tout ce qui se trouve autour de lui. Dans cet accès de fureur, sa valeur de FORce est doublée et les dégâts qu’il occasionne passent à 1d3.</p>",
+    "notes": ""
+  }
+}

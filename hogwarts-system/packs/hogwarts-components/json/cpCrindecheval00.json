@@ -1,0 +1,13 @@
+{
+  "_id": "cpCrindecheval00",
+  "name": "Crin de cheval",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Du crin provenant de chevaux classiques</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Combinaison",
+    "otherUses": "-"
+  }
+}

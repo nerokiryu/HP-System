@@ -1,0 +1,69 @@
+{
+  "_id": "crEruptif0000000",
+  "name": "Eruptif",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>La corne, le venin mortel explosif et la queue des Éruptifs sont utilisée dans la fabrication de diverses potions. Ce sont des ingrédients qui sont classés B dans la catégorie du matériel commercialisable et sont donc règlementés par le Ministère de la Magie.</p>",
+    "health": {
+      "value": 23,
+      "max": 23
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 23
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXX",
+    "stats": {
+      "str": {
+        "value": 34,
+        "formula": "6d6+13"
+      },
+      "con": {
+        "value": 15,
+        "formula": "4d6+1"
+      },
+      "siz": {
+        "value": 30,
+        "formula": "4d6+16"
+      },
+      "dex": {
+        "value": 16,
+        "formula": "2d6+9"
+      },
+      "int": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "pow": {
+        "value": 15,
+        "formula": "4d6+1"
+      },
+      "app": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "per": {
+        "value": 18,
+        "formula": "4d6+4"
+      }
+    },
+    "movement": {
+      "land": 18,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 10
+    },
+    "attacks": "Corne 55% (5d6+2)",
+    "skills": "Acrobatie : 10% ; Athlétisme : 95% ; Discrétion 10% ; Esquive : 10% ; Orientation : 20% ; Survie : 30% ; Vigilance : 40%",
+    "powers": "<p>Charge inarrêtable : Lorsqu’il charge, l’Eruptif ne peut être stoppé. Le seul moyen d’arrêter cette créature est que celle-ci décide d’elle-même de s’arrêter ou que plusieurs centaines de sorciers s’associent pour lui lancer des sortilèges simultanément. Grande endurance : l’Eruptif fait partie des créatures les plus endurantes connues. Capable de courir durant des heures, voir même des jours sans s’arrêter, il peut traverser des villes entières en semant le chaos et la destruction sans même être essoufflé ni ressentir la moindre fatigue physique. Peau épaisse : La peau de l’Eruptif est très épaisse et le protège de la majeure partie des dégâts qu’on pourrait lui occasionner, comme celle des dragons. Cependant, celle-ci possède également un effet qu’on pourrait qualifier de dissipatif pour les sortilèges. Tout sortilège lancé avec succès sur un Eruptif aura automatiquement 75% de chances d’échouer, étant arrêté par cette peau épaisse. Quand un sortilège est lancé sur l’Eruptif, lancer un d100. Si le résultat se situe entre 026 et 000 – bornes comprises – alors le sort est sans effet. Dans le cas d’une réussite, diminuer l’effet du sortilège de moitié (temps, effets, etc.). Les sortilèges à durée permanente deviennent des sortilèges à durée variable (minutes). Sérénité : En temps normal, l’Eruptif est considéré comme une créatique pacifique et sereine, qu’il est extrêmement difficile d’énerver ou de faire charger. Il faut énormément d’efforts pour provoquer cette créature et la faire sortir de ses gonds. S’attaquer à son petit ou le capturer reste l’un des seuls moyens de la pousser à bout. Venin mortel explosif : La Corne de l’Eruptif sécrète une substance mortelle et explosive qui détruit tout ce qu’elle rencontre. Quand un objet ou un être vivant entre en contact avec la corne de l’Eruptif, il est tué sur le coup sous l’effet du venin explosif qu’elle contient. Sauvegarde : aucune ; Effet : Explosion de la cible et mort immédiate</p>",
+    "notes": ""
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "_id": "spFiletargenteCo",
+  "name": "Filet argenté / Corde argentée",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Lance un filet ou une corde argenté(e) en direction de la cible. Celle-ci peut effectuer un jet de DEXx4 pour éviter l'objet. Si le jet est manqué, un nouveau jet de DEXx3 peut être tenté chaque round pour s’échapper.</p><p>Durée : Variable (rounds)</p><p>Formule extrême : -</p>",
+    "spellLevel": 2,
+    "spellType": "M",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "",
+    "malus": -20,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

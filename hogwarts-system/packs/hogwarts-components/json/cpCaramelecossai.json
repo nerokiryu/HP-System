@@ -1,0 +1,13 @@
+{
+  "_id": "cpCaramelecossai",
+  "name": "Caramel écossais (Butterscotch)",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une préparation faite à base de sucre roux et de beurre, proche du caramel.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "• Ingrédient principal de la bièraubeurre"
+  }
+}

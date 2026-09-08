@@ -1,0 +1,13 @@
+{
+  "_id": "cpildanguille000",
+  "name": "Œil d’anguille",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Œil prélevé sur une anguille</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Potion de Bombœil",
+    "otherUses": "• Soin contre l’éclabouille"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "cpAsclepiadetube",
+  "name": "Asclépiade tubéreuse",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Plante herbacée vivace pouvant atteidre 1 mètre de hauteur, avec des fleurs orange ou jaunes</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Baume d'asclépiade tubéreuse",
+    "otherUses": ""
+  }
+}

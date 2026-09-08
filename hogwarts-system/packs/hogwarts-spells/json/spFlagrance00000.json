@@ -1,0 +1,19 @@
+{
+  "_id": "spFlagrance00000",
+  "name": "Flagrance",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Appliqué sur un objet, ce sortilège sert à le protéger du vol. Quand une personne tente de s’emparer de l’objet sans lever le sort, elle subit une brûlure de l’ordre de 1d4 dégâts. Le sort reste effectif tant qu’il n’est pas levé mais n’endommage pas l’objet.</p><p>Sous-type : Maléfice</p><p>Durée : permanente</p><p>Formule extrême : 2d4 dégâts infligés</p>",
+    "spellLevel": 5,
+    "spellType": "S",
+    "target": [
+      "O"
+    ],
+    "incantation": "",
+    "malus": -45,
+    "extremeFormula": true,
+    "malusExtremeFormula": -55,
+    "malusMastered": -30
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "cpPlumedeFocifer",
+  "name": "Plume de Focifère",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Plume provenant d’un oiseau dont le chant peut provoquer la folie</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Essence de folie",
+    "otherUses": "-"
+  }
+}

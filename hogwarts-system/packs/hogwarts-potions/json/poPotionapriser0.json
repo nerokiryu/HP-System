@@ -1,0 +1,51 @@
+{
+  "_id": "poPotionapriser0",
+  "name": "Potion à priser",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Provoque de violents et incontrôlables reniflements. Effets :</p><p>Malus de 20% à la magie et autres activités. Durée 1d4 heures</p>",
+    "potionLevel": 3,
+    "malus": -30,
+    "target": "A/P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Achillée sternutatoire",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Menthe poivrée",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Poivre",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Pollen",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Sauge",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "soufre natif",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

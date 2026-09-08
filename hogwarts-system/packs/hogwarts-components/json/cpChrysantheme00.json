@@ -1,0 +1,13 @@
+{
+  "_id": "cpChrysantheme00",
+  "name": "Chrysanthème",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une fleur commune des jardins considérée comme la fleur des défunts, mais qui peut symboliser la positivité, la constance dans l’amour et la vérité.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Véritasérum",
+    "otherUses": "-"
+  }
+}

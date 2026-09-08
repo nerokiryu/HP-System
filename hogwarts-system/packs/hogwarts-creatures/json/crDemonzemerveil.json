@@ -1,0 +1,69 @@
+{
+  "_id": "crDemonzemerveil",
+  "name": "Demonzemerveilles",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 21,
+      "max": 21
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 21
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "",
+    "stats": {
+      "str": {
+        "value": 22,
+        "formula": "4d6+8"
+      },
+      "con": {
+        "value": 18,
+        "formula": "5d6"
+      },
+      "siz": {
+        "value": 24,
+        "formula": "4d6+10"
+      },
+      "dex": {
+        "value": 15,
+        "formula": "4d6+1"
+      },
+      "int": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "pow": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "app": {
+        "value": 13,
+        "formula": "2d6+6"
+      },
+      "per": {
+        "value": 16,
+        "formula": "4d6+2"
+      }
+    },
+    "movement": {
+      "land": 13,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 3
+    },
+    "attacks": "Morsure/griffe 60% (3d6)",
+    "skills": "Acrobatie : 65% ; Athlétisme : 60% ; Discrétion 35% ; Esquive : 40% ; Orientation : 50% ; Survie : 45% ; Vigilance : 55% ; Voler : 65%",
+    "powers": "<p>Aspiration de souvenirs : En entrant sa langue en forme de trompe dans les oreilles d'une personne, le Démonzémerveille est capable d'aspirer ses souvenirs et de s’en nourrir. Cette capacité fonctionne un peu comme le sortilège d’oubliette et le Démonzémerveille peut</p>",
+    "notes": ""
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "_id": "crCaipora0000000",
+  "name": "Caipora",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 0,
+      "max": 0
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 0
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XX",
+    "stats": {
+      "str": {
+        "value": 7,
+        "formula": "(2d6)"
+      },
+      "con": {
+        "value": 10,
+        "formula": "0"
+      },
+      "siz": {
+        "value": 4,
+        "formula": "1d4+1"
+      },
+      "dex": {
+        "value": 14,
+        "formula": "3d6+3"
+      },
+      "int": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "pow": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "app": {
+        "value": 4,
+        "formula": "1d4+1"
+      },
+      "per": {
+        "value": 14,
+        "formula": "3d6+3"
+      }
+    },
+    "movement": {
+      "land": 8,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Bâton 30% (1d4+1)",
+    "skills": "Acrobatie : 55% ; Camouflage : 35% ; Connaissance (forêt) : 55%, Discrétion 60% ; Empathie : 50+25% ; Équitation : 50% ; Esquive : 50% ; Fouille : 35% ; Imitation : 55% ; Orientation : 55% ; Vigilance : 65% visant à interagir avec ces animaux. Équitation : Même s’il ne possède pas de corps physique, le Caipora aime chevaucher les animaux qui peuplent sa forêt. Quand il chevauche un animal, il bénéficie de la valeur de mouvement de celui-ci. Imitation : Le Caipora peut imiter parfaitement les sons des animaux qui peuplent la forêt pour tromper ou piéger les chasseurs qui y évoluent. Intangible : Comme tous les esprits, le Caipora ne possède pas de corps physique, ce qui l’immunise à de nombreux sortilèges et affections. Par exemple, celui-ci est insensible aux poisons qui affectent les vivants. La majeure partie des sorts agissant sur la matière ne sont d'ailleurs d’aucun effet sur lui. Le Caipora peut également traverser la matière à volonté. Interactions tangibles : Bien qu’intangible de nature, le Caipora peut interagir avec son environnement physique comme le ferait un esprit frappeur. Il peut entre autres lancer des objets ou les faire tomber, donner des coups de bâton, effacer ses traces ou celles d’autres animaux, etc. Ces interactions restent cependant ciblées et courtes. ESPRITS GARDIENS DE CASTELBRUXIO : Les Caipora sont employés comme gardiens dans l’école de Sorciers de Castelbruxio. Dans celle-ci, ils jouent le rôle de gardiens, repoussant les menaces de créatures vivant dans la forêt. En tant qu’esprits gardiens de cette école, ils bénéficient de quelques modifications de Empathie (sorciers) : Bonus de 10% en empathie avec les Sorcier Imitation : Les imitations du Caipora englobent les sons et bruits de l’école et des élèves. L’imitation de la voix humaine leur reste cependant difficile.",
+    "powers": "<p>Camouflage : Le Caipora sait se camoufler et camoufler ses pièges avec talent pour que ceux-ci soient difficilement repérables. Connaissances (forêt) : Le Caipora possède de solides connaissances concernant la forêt, ses habitants et la nourriture qu’on peut y trouver et consommer sans risque. Empathie animale : Le Caipora possède une faculté innée à se lier et à comprendre les animaux qui vivent proche de son lieu de vie. Dès lors, il bénéficie d’un bonus de 25% dans toutes les</p>",
+    "notes": "<p>On dit que le Caipora apprécie la fumée et qu’il est attiré par elle. Faire un feu qui génère de la fumée est un moyen de détourner son attention ailleurs et ainsi de se prémunir contre leurs farces, même si tous ne se laissent pas avoir par la supercherie.</p>"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "_id": "poCataplasmecont",
+  "name": "Cataplasme contre les morsures de Murlap",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Permet de soigner instantanément les morsures de Murlap et les effets secondaires qui en découlent</p>",
+    "potionLevel": 2,
+    "malus": -20,
+    "target": "P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Agripaume",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Distillat de camphre",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Fougère",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Menthe",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Millepertuis",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Plantain",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Sauge",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

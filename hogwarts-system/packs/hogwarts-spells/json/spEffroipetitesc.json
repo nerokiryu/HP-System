@@ -1,0 +1,19 @@
+{
+  "_id": "spEffroipetitesc",
+  "name": "Effroi petites créatures",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Fais fuir certains animaux fantastiques considérés comme de la vermine.</p><p>Durée : 1d4+1 heures</p><p>Formule extrême : 2d4+1 heures de durée</p>",
+    "spellLevel": 1,
+    "spellType": "S",
+    "target": [
+      "A"
+    ],
+    "incantation": "« Nom » pesternomi",
+    "malus": -20,
+    "extremeFormula": true,
+    "malusExtremeFormula": -25,
+    "malusMastered": -10
+  }
+}

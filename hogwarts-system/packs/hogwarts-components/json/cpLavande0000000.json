@@ -1,0 +1,13 @@
+{
+  "_id": "cpLavande0000000",
+  "name": "Lavande",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>La lavande est une fleur violette connue pour sa belle couleur et son parfum apaisant qui attire les insectes pollinisateurs.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Crache-Flammes\nDétergents magiques\nNettoie-Tout magique\nPhéromones\nPhiltre calmant\nPhiltre calmant pour Chartier\nPhiltre dégonflant\nSomnifère\nSomnifère pour Croup",
+    "otherUses": "• Cuisine • Parfum • Repousse insecte"
+  }
+}

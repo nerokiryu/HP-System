@@ -1,0 +1,13 @@
+{
+  "_id": "cpildedragon0000",
+  "name": "Œil de dragon",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Œil provenant d’un dragon</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Oculi cura",
+    "otherUses": ""
+  }
+}

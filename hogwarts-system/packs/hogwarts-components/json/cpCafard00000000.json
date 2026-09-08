@@ -1,0 +1,13 @@
+{
+  "_id": "cpCafard00000000",
+  "name": "Cafard",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Insecte non-magique considéré comme un nuisible mais qui peut être utilisé dans la préparation de potions</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "-"
+  }
+}

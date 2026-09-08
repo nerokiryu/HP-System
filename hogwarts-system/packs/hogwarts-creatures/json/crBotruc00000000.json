@@ -1,0 +1,69 @@
+{
+  "_id": "crBotruc00000000",
+  "name": "Botruc",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>Dressé, le Botruc peut crocheter les serrures avec efficacité</p>",
+    "health": {
+      "value": 3,
+      "max": 3
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 3
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XX",
+    "stats": {
+      "str": {
+        "value": 1,
+        "formula": "1"
+      },
+      "con": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "siz": {
+        "value": 1,
+        "formula": "1"
+      },
+      "dex": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "int": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "pow": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "app": {
+        "value": 1,
+        "formula": "1"
+      },
+      "per": {
+        "value": 4,
+        "formula": "1d6"
+      }
+    },
+    "movement": {
+      "land": 2,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Morsure/Griffe 25% (1)",
+    "skills": "Acrobatie 50% ; Athlétisme 30% ; Discrétion 60% ; Esquive 50%, Orientation 30% ; Survie 20% ; Vigilance 20% ; (Crochetage : 50%)",
+    "powers": "<p>Immobilité : Quand il est dans son arbre et parfaitement immobile, le Botruc possède un bonus de discrétion de 20%</p>",
+    "notes": ""
+  }
+}

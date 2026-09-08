@@ -1,0 +1,69 @@
+{
+  "_id": "crVlad0000000000",
+  "name": "Vlad",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>Son sang peut être employé dans la confection de potions et de poisons.</p>",
+    "health": {
+      "value": 11,
+      "max": 11
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 11
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXX",
+    "stats": {
+      "str": {
+        "value": 6,
+        "formula": ""
+      },
+      "con": {
+        "value": 14,
+        "formula": ""
+      },
+      "siz": {
+        "value": 8,
+        "formula": ""
+      },
+      "dex": {
+        "value": 14,
+        "formula": ""
+      },
+      "int": {
+        "value": 7,
+        "formula": ""
+      },
+      "pow": {
+        "value": 10,
+        "formula": ""
+      },
+      "app": {
+        "value": 8,
+        "formula": ""
+      },
+      "per": {
+        "value": 17,
+        "formula": ""
+      }
+    },
+    "movement": {
+      "land": 12,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Morsure 40% (1)",
+    "skills": "Acrobatie : 60%; Athlétisme : 20% ; Discrétion : 65%; Esquive : 45%, Orientation : 60% ; Survie : 25% ; Vigilance : 45% ; Voler : 75%",
+    "powers": "<p>Ouïe : Les jets de PERception (ouïe) se font comme PERx5. Ultrasons : La chauve-souris est capable d’employer les ultrasons pour se repérer dans son environnement. Cette capacité remplace les jets de PERception (vue). Vampirisation : Si le sang de Vlad entre en contact avec celui de la victime, il peut être infecté par celui-ci et se changer en vampire. Cette infection possède une VIRulence de 10. Un jet de sauvegarde réussie contre cette infection l’élimine totalement. L’infection met une semaine avant de changer totalement la cible en vampire. Il est possible – dans ce laps de temps – de soigner la victime à l’aide de potions pour la rétablir totalement. Une fois que l’infection a changé la cible en vampire, il n’y a plus de possibilité de retourner en arrière. Vampirisme : Vlad peut aspirer le sang de ses victimes, qui se voient considérablement affaiblies (perte de 1d6+1 en FORce et 1d4+1 en CONstitution). Quand il vient de se nourrir, Vlad bénéficie d’un bonus de 10% à tous ses jets pour une durée d’une heure. Si la FORce ou la CONstitution de celui qui subit le vampirisme passe à 0, il meurt sur le coup. Vision du sang : Vlad peut employer une vision spéciale propre aux vampires qui lui permet de voir la circulation du sang chez sa victime. Cette capacité s’approche d’une vison thermique mais pour les vaisseaux sanguins.</p>",
+    "notes": ""
+  }
+}

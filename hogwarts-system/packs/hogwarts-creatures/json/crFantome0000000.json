@@ -1,0 +1,69 @@
+{
+  "_id": "crFantome0000000",
+  "name": "Fantome",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>Même si la pratique est discutable, certains fantômes sont employés pour la fabrication de miroirs hantés. Le processus qui consiste à piéger un fantôme dans un miroir reste quelque peu flou, mais ceux-ci sont vendus au Chemin de Traverse par Janus Galloglass par exemple, ce qui pourrait signifier que la pratique est considérée comme légale par le Ministère de la Magie.</p>",
+    "health": {
+      "value": 10,
+      "max": 10
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 10
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "X",
+    "stats": {
+      "str": {
+        "value": 10,
+        "formula": "0"
+      },
+      "con": {
+        "value": 10,
+        "formula": "0"
+      },
+      "siz": {
+        "value": 10,
+        "formula": "Sorcier/ère"
+      },
+      "dex": {
+        "value": 10,
+        "formula": "Sorcier/ère"
+      },
+      "int": {
+        "value": 10,
+        "formula": "Sorcier/ère"
+      },
+      "pow": {
+        "value": 10,
+        "formula": "Sorcier/ère"
+      },
+      "app": {
+        "value": 10,
+        "formula": "Sorcier/ère"
+      },
+      "per": {
+        "value": 10,
+        "formula": "Sorcier/ère"
+      }
+    },
+    "movement": {
+      "land": 8,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "-",
+    "skills": "Identiques à celles possédées avant la transformation en fantôme, mais ne peuvent plus évoluer par la suite (voir stagnation)",
+    "powers": "<p>Déplacements sans limite : Les fantômes évoluent en apesanteur et peuvent voler dans n'importe quelle direction. Ils peuvent également se déplacer avec les courants d'air et d'eau. Hypothermie : Si une partie ou la totalité d'un fantôme traverse une créature vivante, celle-ci ressentira une sensation de gel comme si elle avait été plongée dans de l'eau glacée. Immatériel: Les fantômes sont capables de traverser des objets solides sans causer de dommages à eux-mêmes ou au matériau. Contrairement à d’autres esprits, les fantômes ne peuvent influencer la matière ni interagir directement avec celle-ci. Modification des flammes : La présence de fantôme peut rendre les flammes bleues. Perception (goût) : Un fantôme a la capacité de « presque » goûter les choses, ce qui est amplifié par l'utilisation d'aliments piquants et pourris Perturbation : Les fantômes créent des perturbations dans l'eau, le feu et l'air. La température baisse à proximité immédiate d'un fantôme, effet qui s'intensifie si beaucoup se rassemblent au même endroit. Sécrétion d’ectoplasme : Les fantômes sécrètent un ectoplasme au fil du temps dans des endroits qu'ils fréquentent. Celui-ci peut bloquer certains passages mais peut être détruit par un sortilège d’Ectoplasmus. Stagnation : Les fantômes, de par leur nature, n’évoluent plus et ne peuvent apprendre de nouvelles connaissances. Ils peuvent cependant engranger quelques nouveaux souvenirs d’évènements importants ,même si la notion « d’importance » pour eux diffère quelque peu de celle des êtres vivants. ANCRAGE : Tous les fantômes possèdent un élément d’ancrage dans le monde des vivants. C’est cet ancrage qui leur permet de rester dans le monde des Sorciers et, sans lui, ils cesseront tout simplement d’exister. Briser l’ancrage d’un fantôme est équivalent à lui retirer la totalité de ses points d’existence. Les fantômes sont liés au lieu de leur mort et hantent celui-ci.</p>",
+    "notes": "<p>Les fantômes ne peuvent pas être détruits par des sortilèges ou armes s’attaquant à la matière. Ils peuvent néanmoins être pétrifiés par le regard d'un basilic ou être affectés par certaines potions (comme le philtre de mandragore). Les fantômes peuvent également être repoussés par le sortilège de lumière et peuvent être « blessés » par le sortilège d’ectoplasmus. FETE DE MORT : Les fantômes semblent célébrer leur mort comme les vivants le font pour leur naissance. Ils ont néanmoins tendance à être très sensibles aux circonstances de leur mort, montrant souvent une grande hésitation lorsqu'on leur demande comment celle-ci est survenue. Ce qui semble être une fête typique du jour de la mort implique un dîner aux chandelles composé de nourriture rance et moisie. GESTION DES FANTOMES : Le Ministère de la Magie semble posséder un certain pouvoir juridique sur les fantômes. Mimi Geignarde par exemple, a été forcée de retourner sur son lieu de mort, qui était l'école de sorcellerie de Poudlard, lorsqu'elle a perturbé le mariage du frère d'Olive Hornby. Le Ministère de la Magie possède un département particulier : la Division Spirituelle, qui s’occupe exclusivement de la régulation et du contrôle des Créatures Magiques comme les fantômes.</p>"
+  }
+}

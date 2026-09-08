@@ -1,0 +1,13 @@
+{
+  "_id": "cpThoraxdelibell",
+  "name": "Thorax de libellule",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Le thorax provenant d’une libellule. Réduit en poudre, il permet de fabriquer des potions.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Engrais magiques\nPotion fortifiante",
+    "otherUses": "-"
+  }
+}

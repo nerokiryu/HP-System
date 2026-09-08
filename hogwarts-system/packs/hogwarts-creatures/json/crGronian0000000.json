@@ -1,0 +1,69 @@
+{
+  "_id": "crGronian0000000",
+  "name": "Gronian",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>Monture</p>",
+    "health": {
+      "value": 27,
+      "max": 27
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 27
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XX à XXXX",
+    "stats": {
+      "str": {
+        "value": 25,
+        "formula": "3d6+14"
+      },
+      "con": {
+        "value": 20,
+        "formula": "3d6+9"
+      },
+      "siz": {
+        "value": 27,
+        "formula": "5d6+9"
+      },
+      "dex": {
+        "value": 27,
+        "formula": "5d6+9"
+      },
+      "int": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "pow": {
+        "value": 9,
+        "formula": "2d6+2"
+      },
+      "app": {
+        "value": 17,
+        "formula": "3d6+6"
+      },
+      "per": {
+        "value": 17,
+        "formula": "3d6+6"
+      }
+    },
+    "movement": {
+      "land": 16,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Sabots : 45% (2d6)",
+    "skills": "Acrobatie : 55% ; Athlétisme : 70% ; Discrétion 25% ; Empathie : 15% ; Esquive : 30% ; Orientation : 15% ; Survie : 25% ; Vigilance : 55% ; Voler : 75%",
+    "powers": "<p>Grande vitesse : Le Gronian est capable de se déplacer deux fois plus rapidement qu’une créature de sa carrure, et ce sans la moindre difficulté. Quand il le décide, il peut doubler sa valeur de mouvement durant 1d4+1 heures. Il doit ensuite se reposer durant 1 heure pour retrouver son énergie Piétinement : Quand il charge une cible, le Gronian peut décider de la piétiner en traversant la case occupée par celle-ci. Le piétinement occasionne 2d6 dégâts à toutes les cibles qui voient leur case d’occupation traversée par le Gronian en train de charger. Voler : Le Gronian est capable de voler dans les airs avec facilité. Grâce à sa force, il peut également déplacer sans mal une charge dans les airs ou porter un cavalier.</p>",
+    "notes": ""
+  }
+}

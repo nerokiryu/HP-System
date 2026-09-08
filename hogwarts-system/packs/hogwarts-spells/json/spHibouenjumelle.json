@@ -1,0 +1,19 @@
+{
+  "_id": "spHibouenjumelle",
+  "name": "Hibou en jumelles de théâtre",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Métamorphose un hibou en jumelles de théâtre</p><p>Durée : permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 3,
+    "spellType": "M",
+    "target": [
+      "A"
+    ],
+    "incantation": "Strigiforma",
+    "malus": -35,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

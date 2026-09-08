@@ -1,0 +1,39 @@
+{
+  "_id": "poPotionExstimul",
+  "name": "Potion Exstimulo",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Cette potion, particulièrement prisée des Sorciers, augmente la puissance de leurs sortilèges durant une certaine période.</p><p>Les effets sont alors considérés comme augmentés de 25% pour ce qui est de la durée et des effets appliqués.</p><p>Effet : Effets des sorts lancés augmentés de 25%</p><p>Durée : 2d4+10 minutes</p><p>Effets secondaires : Fatigue durant 1 heure après la fin des effets</p>",
+    "potionLevel": 4,
+    "malus": -40,
+    "target": "P",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Crin de Licorne, Gronian ou d’Abraxan",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Lewisie",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Galantus nivalis",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Sang de Re’em",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

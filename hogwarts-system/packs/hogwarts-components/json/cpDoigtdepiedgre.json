@@ -1,0 +1,13 @@
+{
+  "_id": "cpDoigtdepiedgre",
+  "name": "Doigt de pied grenouille",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Un doigt de pied provenant de la patte d’une grenouille commune</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "-"
+  }
+}

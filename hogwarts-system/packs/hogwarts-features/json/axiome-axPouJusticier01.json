@@ -2,7 +2,7 @@
   "_id": "axPouJusticier01",
   "name": "Justicier",
   "type": "feature",
-  "img": "icons/skills/social_dark.svg",
+  "img": "icons/svg/statue.svg",
   "system": {
     "description": "<p>Le joueur peut – une fois par scénario – appliquer son code de l'honneur pour empêcher un acte malveillant. Cela se traduira par un bonus à toutes ses actions de 30% durant cet acte.</p>",
     "perkType": "houseAxiom",

@@ -1,0 +1,13 @@
+{
+  "_id": "cpAchilleesternu",
+  "name": "Achillée sternutatoire",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Plante à la tige verte et aux feuilles blanches servant d’ingrédient de potions</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Philtre de Confusion\nPhiltre d’Embrouille\nPotion à priser",
+    "otherUses": "• Feuilles comme répulsif à insectes • Poison pour bœufs, moutons et chevaux"
+  }
+}

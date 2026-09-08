@@ -1,0 +1,19 @@
+{
+  "_id": "spAntimalefice16",
+  "name": "Anti-maléfice de Cerveau-en-gelée",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet de contrer les effets du maléfice de Cerveau-en-gelée</p><p>Formule extrême : -</p>",
+    "spellLevel": 4,
+    "spellType": "E",
+    "target": [
+      "P"
+    ],
+    "incantation": "",
+    "malus": -40,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

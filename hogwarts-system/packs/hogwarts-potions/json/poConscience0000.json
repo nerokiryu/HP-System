@@ -1,0 +1,57 @@
+{
+  "_id": "poConscience0000",
+  "name": "Conscience",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Cette potion permet de stocker un filament de Pensine ou l’esprit d’une créature préalablement extrait pour doter un objet d’une conscience (Intelligence 1d6)</p>",
+    "potionLevel": 5,
+    "malus": -50,
+    "target": "O",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Brin de valériane",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Cervelle de crapaud",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Coprin narcotique",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Fèves sopophoriques",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Eau de fleuve Lethé",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Racine de rêve",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Rosée de lune",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

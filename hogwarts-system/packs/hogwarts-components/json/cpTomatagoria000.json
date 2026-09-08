@@ -1,0 +1,13 @@
+{
+  "_id": "cpTomatagoria000",
+  "name": "Tomatagoria",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une plante légendaire donnant de petites fleurs bleues et poussant dans la neige et la glace.</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Potentiel-absolu",
+    "otherUses": ""
+  }
+}

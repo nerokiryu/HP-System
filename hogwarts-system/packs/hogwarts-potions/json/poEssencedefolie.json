@@ -1,0 +1,45 @@
+{
+  "_id": "poEssencedefolie",
+  "name": "Essence de folie",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Provoque la folie chez celui ou celle qui la consomme</p><p>Effet : Malus de 30% à toutes les actions nécessitant des interactions avec une autre personne</p><p>Effet secondaire : Comportement erratique et chaotique.</p><p>Prise de décisions illogiques voir dangereuses</p><p>Durée : 2d4+2 heures.</p>",
+    "potionLevel": 5,
+    "malus": -50,
+    "target": "A/P",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Absinthe",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Amanite tue-mouche",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Cervelle de crapaud",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Œil d’insecte",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Plume de Focifère",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

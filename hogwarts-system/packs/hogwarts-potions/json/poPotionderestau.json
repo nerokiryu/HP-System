@@ -1,0 +1,39 @@
+{
+  "_id": "poPotionderestau",
+  "name": "Potion de restauration n°1",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Restaure 1d4-2 point(s) de vie perdu(s) de manière non létale</p><p>Atténue légèrement les contusions, coupures et autres petites blessures</p>",
+    "potionLevel": 3,
+    "malus": -30,
+    "target": "P",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Bourgeon de châtaigner",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Bourgeon de sorbier",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Saule blanc",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Sang de lézard",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "_id": "crHorglup0000000",
+  "name": "Horglup",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>-</p>",
+    "health": {
+      "value": 4,
+      "max": 4
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 4
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "X",
+    "stats": {
+      "str": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "con": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "siz": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "dex": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "int": {
+        "value": 1,
+        "formula": "1"
+      },
+      "pow": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "app": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "per": {
+        "value": 7,
+        "formula": "2d6"
+      }
+    },
+    "movement": {
+      "land": 1,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Épines 10% (1)",
+    "skills": "Acrobatie : 10%, Athlétisme : 15% ; Discrétion : 35% ; Esquive : 5%, Orientation : 5% ; Survie : 5% ; Vigilance : 25%",
+    "powers": "<p>Reproduction explosive : Les Horglups sont capables de se reproduire très rapidement grâce aux spores qu’ils émettent. Les jeunes Horglup se développent rapidement pour atteindre l’âge adulte au bout de trois jours seulement. Ils sont alors prêts à se reproduire à leur tour. Le venin de Musard permet de tuer les adultes et les spores pour qu’elles ne puissent donner naissance à de nouveaux Horglups. Spores : Quand on le manipule, le Horglup relâche des spores qui irritent les yeux et les voies respiratoires de ceux qui sont en contact avec eux. Cela se traduit par un malus de 10% à chacune des actions durant 1 heure et des jets de PERception (vue) qui se font comme PERx1 au lieu de PERx5, également durant 1 heure. Une exposition prolongée à ces spores peut provoquer des dégâts durables.</p>",
+    "notes": ""
+  }
+}

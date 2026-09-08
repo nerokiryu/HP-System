@@ -1,0 +1,13 @@
+{
+  "_id": "cpBulbedeGloired",
+  "name": "Bulbe de Gloire des Neiges",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Un bulbe provenant d’une Gloire des Neiges, une plante aux fleurs violettes en forme d’étoiles possédant des vertus médicinales pour les</p><p>Moldus.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Felix Felicis",
+    "otherUses": "• Vertus médicinales"
+  }
+}

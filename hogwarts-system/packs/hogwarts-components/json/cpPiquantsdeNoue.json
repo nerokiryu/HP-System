@@ -1,0 +1,13 @@
+{
+  "_id": "cpPiquantsdeNoue",
+  "name": "Piquants de Noueux",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des piquants qui proviennent d’un Noueux, une créature ressemblant à s’y méprendre à un hérisson</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Potion d’Hilarité\nPotion de mélancolie",
+    "otherUses": "-"
+  }
+}

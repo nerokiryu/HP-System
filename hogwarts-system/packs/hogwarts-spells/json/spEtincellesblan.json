@@ -1,0 +1,22 @@
+{
+  "_id": "spEtincellesblan",
+  "name": "Étincelles blanches",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Projette des étincelles blanches sur un adversaire, lui occasionnant 1 dégât non létal. (Opposition : POU/POU).</p><p>Durée : -</p><p>Formule extrême : 2 dégâts non létaux occasionnés</p>",
+    "spellLevel": 2,
+    "spellType": "E",
+    "target": [
+      "A",
+      "O",
+      "P",
+      "V"
+    ],
+    "incantation": "Baubillious",
+    "malus": -25,
+    "extremeFormula": true,
+    "malusExtremeFormula": -30,
+    "malusMastered": -20
+  }
+}

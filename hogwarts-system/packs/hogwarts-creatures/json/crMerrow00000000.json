@@ -1,0 +1,69 @@
+{
+  "_id": "crMerrow00000000",
+  "name": "Merrow",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 13,
+      "max": 13
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 13
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXX",
+    "stats": {
+      "str": {
+        "value": 13,
+        "formula": "3d6+2"
+      },
+      "con": {
+        "value": 11,
+        "formula": "3d6"
+      },
+      "siz": {
+        "value": 15,
+        "formula": "3d6+4"
+      },
+      "dex": {
+        "value": 17,
+        "formula": "3d6+6"
+      },
+      "int": {
+        "value": 13,
+        "formula": "3d6+2"
+      },
+      "pow": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "app": {
+        "value": 14,
+        "formula": "3d6+3"
+      },
+      "per": {
+        "value": 13,
+        "formula": "3d6+2"
+      }
+    },
+    "movement": {
+      "land": 15,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 1
+    },
+    "attacks": "Morsure : 30% (1) Griffes : 30% (1) Armes de poing: 50% (variable)",
+    "skills": "Acrobatie : 60% ; Art (Musique) : 60% ; Athlétisme : 60% ; Commandement : 50% ; Discrétion 60% ; Dressage/Soin : 60% ; Empathie : 50% ; Esquive : 70% ; Fouille : 40% ; Orientation : 55% ; Persuasion/baratin : 60% ; Psychologie : 45% ; Survie : 65% ; Vigilance : 65%",
+    "powers": "<p>Art (Musique) : Les Merrows – comme tous les êtres de l’eau – maîtrisent certains instruments de musique. Natation : Le Merrow est un excellent nageur. En règle générale, les jets d’Athlétisme (natation) de difficulté normale et moyenne que le Merrow doit effectuer sont considérés comme réussis automatiquement. Les jets de natation classés comme difficiles sont à considérer comme moyens.</p>",
+    "notes": ""
+  }
+}

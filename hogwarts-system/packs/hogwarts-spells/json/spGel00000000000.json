@@ -1,0 +1,20 @@
+{
+  "_id": "spGel00000000000",
+  "name": "Gel",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet de créer une plaque de glace au sol d’environ 1 mètre de diamètre. Quand un être vivant touche celle-ci, la glace se déploie pour lui emprisonner les jambes ou les pattes. Pour se libérer, la cible doit réussir un jet de FOR x3.</p><p>Effet : Occasionne 2 dégâts non létaux</p><p>Durée : Permanente</p>",
+    "spellLevel": 4,
+    "spellType": "E",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "",
+    "malus": -40,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

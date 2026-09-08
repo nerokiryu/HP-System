@@ -1,0 +1,27 @@
+{
+  "_id": "poSolutiondeforc",
+  "name": "Solution de force",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Potion augmentant grandement la force physique du consommateur pour une certaine durée.</p><p>Effet : Ajoute 2d6+2 points à la caractéristique FORce du personnage.</p><p>Durée : 1d6+1 heures.</p>",
+    "potionLevel": 5,
+    "malus": -50,
+    "target": "A/P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Griffe de griffon",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Sang de Salamandre",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

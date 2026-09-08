@@ -1,0 +1,22 @@
+{
+  "_id": "spDeceleration00",
+  "name": "Décélération",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Diminue grandement la vitesse de chute d’un animal, d’un objet, d’une personne ou d’un végétal. Celui-ci ne subit alors plus que 1d3-1 dégâts (minimum 1). Durée : -</p><p>Formule extrême : -</p>",
+    "spellLevel": 2,
+    "spellType": "E",
+    "target": [
+      "A",
+      "O",
+      "P",
+      "V"
+    ],
+    "incantation": "Aresto Momentum",
+    "malus": -20,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

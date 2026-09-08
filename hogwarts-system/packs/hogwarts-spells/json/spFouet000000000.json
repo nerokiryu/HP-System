@@ -1,0 +1,22 @@
+{
+  "_id": "spFouet000000000",
+  "name": "Fouet",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Change le bout de sa baguette en fouet, qui peut être employé comme tel pour attaque quelqu’un, se saisir d’un objet, etc.</p><p>Durée : -</p><p>Formule extrême : -</p>",
+    "spellLevel": 2,
+    "spellType": "M",
+    "target": [
+      "A",
+      "O",
+      "P",
+      "V"
+    ],
+    "incantation": "",
+    "malus": -20,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

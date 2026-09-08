@@ -4,32 +4,6 @@
  */
 export class HogwartsItem extends Item {
   /**
-   * Augment the basic Item data model with additional dynamic data.
-   */
-  prepareData() {
-    super.prepareData();
-    this._applyCompendiumTranslation();
-  }
-
-  /**
-   * If this item lives inside a system compendium pack, apply the localized
-   * name and description from the active language file so both the list view
-   * and the open sheet display translated content.
-   * Only active while the item is NOT imported into a world (this.pack is set).
-   */
-  _applyCompendiumTranslation() {
-    if (!this.pack) return;
-    const packName = this.pack.split('.').at(-1);
-    const trans = foundry.utils.getProperty(
-      game.i18n.translations,
-      `HOGWARTS.Packs.${packName}.${this._id}`
-    );
-    if (!trans) return;
-    if (trans.name) this.name = trans.name;
-    if (trans.description && this.system) this.system.description = trans.description;
-  }
-
-  /**
    * Prepare a data object which defines the data schema used by dice roll commands against this Item
    * @override
    */

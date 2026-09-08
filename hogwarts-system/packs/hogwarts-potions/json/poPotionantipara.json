@@ -1,0 +1,45 @@
+{
+  "_id": "poPotionantipara",
+  "name": "Potion anti- paralysie",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Permet de contrer les effets de la paralysie engendrés par un sortilège, un poison ou un venin</p><p>Effets : Annule les effets de la paralysie au bout d’un round</p><p>Durées des effets : -</p><p>Remarque : permet de contrer les effets du maléfice du</p><p>Saucisson</p>",
+    "potionLevel": 2,
+    "malus": -20,
+    "target": "A/P",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Camomille",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "cannelle",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "gingembre",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Teinture de thym",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "valériane",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

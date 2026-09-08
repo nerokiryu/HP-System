@@ -1,0 +1,13 @@
+{
+  "_id": "cpJusdesangsues0",
+  "name": "Jus de sangsues",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des sangsues réduites à l’état de jus</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Poison de vieillissement\nRatatinage",
+    "otherUses": "-"
+  }
+}

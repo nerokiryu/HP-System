@@ -1,0 +1,13 @@
+{
+  "_id": "cpInfusiondeverv",
+  "name": "Infusion de verveine",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une infusion préparée à partir de verveine, une plante aux vertus médicinales.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Philtre revigorant\nRemontant de Pomfresh",
+    "otherUses": "• Consommable"
+  }
+}

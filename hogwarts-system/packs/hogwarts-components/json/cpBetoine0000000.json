@@ -1,0 +1,13 @@
+{
+  "_id": "cpBetoine0000000",
+  "name": "Bétoine",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une plante herbacées connue pour ses propriétés médicinales comme sa capacité à cautériser les plaies.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Traitement des morsures de chiens fous",
+    "otherUses": "• Vertus médicinales"
+  }
+}

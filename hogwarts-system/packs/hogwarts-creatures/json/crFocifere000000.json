@@ -1,0 +1,69 @@
+{
+  "_id": "crFocifere000000",
+  "name": "Focifere",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>Plume fantaisie</p>",
+    "health": {
+      "value": 4,
+      "max": 4
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 4
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXX",
+    "stats": {
+      "str": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "con": {
+        "value": 4,
+        "formula": "1d4+1"
+      },
+      "siz": {
+        "value": 4,
+        "formula": "1d4+1"
+      },
+      "dex": {
+        "value": 15,
+        "formula": "3d6+4"
+      },
+      "int": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "pow": {
+        "value": 11,
+        "formula": "3d6"
+      },
+      "app": {
+        "value": 15,
+        "formula": "3d6+4"
+      },
+      "per": {
+        "value": 12,
+        "formula": "2d6+6"
+      }
+    },
+    "movement": {
+      "land": 4,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "-",
+    "skills": "Acrobatie : 45% ; Athlétisme : 15% ; Chant : 60% ; Discrétion 15% ; Esquive : 50% ; Orientation : 20% ; Survie : 15% ; Vigilance : 50% ; Voler : 50%",
+    "powers": "<p>Chant de confusion : Une personne qui entend chanter le Focifère pendant plus d’une heure doit réussir un jet de POUvoirx3 pour ne pas en subir les effets. Ceux-ci ressemblent à un sort de confusion : malus de 50% aux actions de réflexion, y compris la magie, et se met à agir étrangement sans s’en rendre compte. Les effets deviennent permanents quand l’écoute est prolongée durant plusieurs semaines.</p>",
+    "notes": ""
+  }
+}

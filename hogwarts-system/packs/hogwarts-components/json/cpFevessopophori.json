@@ -1,0 +1,13 @@
+{
+  "_id": "cpFevessopophori",
+  "name": "Fèves sopophoriques",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Les fèves sopophoriques proviennent d’un arbuste du même nom. Pressées, elles donnent un épais jus argenté qui enlèvera la mémoire du consommateur s’il le boit pur. S’il est utilisé dans la fabrication de potions, il ne semble pas conserver ce pouvoir</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Brume de Pensine\nConscience\nGaz étrangleur\nÉlixir d’Euphorie\nPhiltre de Mort Vivante",
+    "otherUses": "• Propriétés amnésiques si consommé pur"
+  }
+}

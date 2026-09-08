@@ -1,0 +1,13 @@
+{
+  "_id": "cpPoildeBoursouf",
+  "name": "Poil de Boursouf",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des poils provenant d’un Boursouf, une petite créature magique en forme de boule et possédant une langue gigantesque.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Potion d’Hilarité\nPotion de mélancolie",
+    "otherUses": "-"
+  }
+}

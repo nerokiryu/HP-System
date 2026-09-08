@@ -1,0 +1,22 @@
+{
+  "_id": "spDiminution0000",
+  "name": "Diminution",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Diminue la taille de la cible jusqu’à ce qu’elle ne mesure plus qu’une trentaine de centimètres.</p><p>Durée : POU minutes</p><p>Formule extrême : diminue la taille de la cible jusqu’à 1 centimètre pour une durée de POUx 2 minutes.</p>",
+    "spellLevel": 3,
+    "spellType": "S",
+    "target": [
+      "A",
+      "O",
+      "P",
+      "V"
+    ],
+    "incantation": "Diminuedo",
+    "malus": -30,
+    "extremeFormula": true,
+    "malusExtremeFormula": -40,
+    "malusMastered": -20
+  }
+}

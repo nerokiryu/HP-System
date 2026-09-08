@@ -1,0 +1,97 @@
+<section class="house-points-body">
+  <div class="hourglasses">
+    {{#each houses as |h|}}
+      <figure class="hourglass house-{{h.id}} {{#if h.leader}}leader{{/if}} {{#if h.from}}{{#if h.rising}}rising{{else}}falling{{/if}}{{/if}}"
+        {{#if h.from}}data-from-y="{{h.from.y}}" data-from-h="{{h.from.h}}"{{/if}}>
+        <svg viewBox="0 0 100 160" role="img" aria-label="{{h.label}}: {{h.points}}">
+          <defs>
+            <clipPath id="hp-lower-{{h.id}}"><polygon points="46,80 54,80 82,146 18,146" /></clipPath>
+            <pattern id="hp-gems-{{h.id}}" width="7" height="7" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="1.6" class="gem-a" />
+              <circle cx="5.5" cy="5.5" r="1.2" class="gem-b" />
+            </pattern>
+          </defs>
+
+          <polygon class="glass" points="18,14 82,14 54,80 46,80" />
+          <polygon class="glass" points="46,80 54,80 82,146 18,146" />
+
+          <g clip-path="url(#hp-lower-{{h.id}})">
+            <rect class="sand" x="0" y="{{h.lower.y}}" width="100" height="{{h.lower.h}}" />
+            <rect class="gems" fill="url(#hp-gems-{{h.id}})" x="0" y="{{h.lower.y}}" width="100" height="{{h.lower.h}}" />
+          </g>
+
+          <polygon class="shine" points="23,17 28,17 47,79 45,79" />
+          <path class="frame" d="M4,0 h92 v11 h-92 z M4,149 h92 v11 h-92 z" />
+          <path class="frame" d="M8,11 h7 v138 h-7 z M85,11 h7 v138 h-7 z" />
+        </svg>
+
+        <figcaption>
+          <span class="house-name">{{h.label}}</span>
+          <span class="house-total {{#if h.leader}}is-leader{{/if}}">{{h.points}}</span>
+        </figcaption>
+
+        {{#if @root.isGM}}
+          <div class="house-adjust">
+            <input type="number" name="delta-{{h.id}}" min="0" placeholder="0" />
+            <a class="item-control" data-action="adjust" data-house="{{h.id}}" data-sign="+"
+               data-tooltip="{{localize 'HOGWARTS.HousePoints.Add'}}"><i class="fas fa-plus"></i></a>
+            <a class="item-control" data-action="adjust" data-house="{{h.id}}" data-sign="-"
+               data-tooltip="{{localize 'HOGWARTS.HousePoints.Remove'}}"><i class="fas fa-minus"></i></a>
+          </div>
+        {{/if}}
+      </figure>
+    {{/each}}
+  </div>
+
+  {{#if isGM}}
+    <div class="house-target">
+      <label>{{localize 'HOGWARTS.HousePoints.TargetHouse'}}</label>
+      <select name="house">
+        {{#each picker as |h|}}<option value="{{h.id}}" {{#if h.selected}}selected{{/if}}>{{h.label}}</option>{{/each}}
+      </select>
+      <a class="item-control" data-action="resetAll" data-tooltip="{{localize 'HOGWARTS.HousePoints.Reset'}}">
+        <i class="fas fa-rotate-left"></i>
+      </a>
+    </div>
+
+    <p class="notes">{{localize 'HOGWARTS.HousePoints.Hint'}}</p>
+
+    <div class="house-tables">
+      <div class="house-table gains">
+        <h3>{{localize 'HOGWARTS.HousePoints.Gains'}}</h3>
+        <p class="legend">{{localize 'HOGWARTS.HousePoints.LegendGain'}}</p>
+        {{#each gain as |grp|}}
+          <h4>{{grp.label}}</h4>
+          <ul>
+            {{#each grp.actions as |a|}}
+              <li>
+                <a data-action="rollAction" data-kind="{{a.kind}}" data-cat="{{a.cat}}" data-key="{{a.key}}">
+                  <i class="fas fa-dice-d10"></i> {{a.label}}
+                </a>
+                <span class="values">{{a.bad}} / {{a.neutral}} / {{a.good}}</span>
+              </li>
+            {{/each}}
+          </ul>
+        {{/each}}
+      </div>
+
+      <div class="house-table losses">
+        <h3>{{localize 'HOGWARTS.HousePoints.Losses'}}</h3>
+        <p class="legend">{{localize 'HOGWARTS.HousePoints.LegendLoss'}}</p>
+        {{#each loss as |grp|}}
+          <h4>{{grp.label}}</h4>
+          <ul>
+            {{#each grp.actions as |a|}}
+              <li>
+                <a data-action="rollAction" data-kind="{{a.kind}}" data-cat="{{a.cat}}" data-key="{{a.key}}">
+                  <i class="fas fa-dice-d10"></i> {{a.label}}
+                </a>
+                <span class="values">{{a.good}} / {{a.neutral}} / {{a.bad}}</span>
+              </li>
+            {{/each}}
+          </ul>
+        {{/each}}
+      </div>
+    </div>
+  {{/if}}
+</section>

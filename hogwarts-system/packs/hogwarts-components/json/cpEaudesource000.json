@@ -1,0 +1,13 @@
+{
+  "_id": "cpEaudesource000",
+  "name": "Eau de source",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>De l’eau pure provenant d’une source</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Neutralisation\nOcculus\nPotion d’hilarité\nPotion de mélancolie\nRegermination\nRejutage\nRemontant de Pomfresh\nVérification\nVeritaserum",
+    "otherUses": "• Consommable"
+  }
+}

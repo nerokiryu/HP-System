@@ -1,0 +1,69 @@
+{
+  "_id": "poEngraismagique",
+  "name": "Engrais magiques",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Fabriqués à base de bouse de dragons et de nombreux autres ingrédients, ces engrais accroissent extraordinairement la pousse des plantes, leur permettant parfois d’atteindre des tailles hors-normes.</p><p>Remarque : les ingrédients varient en fonction du type d’engrais.</p>",
+    "potionLevel": 1,
+    "malus": -10,
+    "target": "V",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Algue sèche",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Bouse de dragon",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Cervelle de paresseux (ou de macaque)",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Hippocampes volants",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Mandragore cuite liquéfiée",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Œil de Boullu",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Os",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Rates de rat",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Thorax de libellule grillés en poudre",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

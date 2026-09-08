@@ -1,0 +1,19 @@
+{
+  "_id": "spCatapultage000",
+  "name": "Catapultage",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Lancé sur un objet comme un balai magique par exemple, ce sortilège repousse violemment toute personne qui tente de s’en saisir.</p><p>Opposition : FORx2.</p><p>Durée : -</p><p>Formule extrême : Opposition FORce x1</p>",
+    "spellLevel": 3,
+    "spellType": "S",
+    "target": [
+      "O"
+    ],
+    "incantation": "",
+    "malus": -15,
+    "extremeFormula": true,
+    "malusExtremeFormula": -20,
+    "malusMastered": 0
+  }
+}

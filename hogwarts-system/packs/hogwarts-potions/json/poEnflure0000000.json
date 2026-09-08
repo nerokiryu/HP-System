@@ -1,0 +1,33 @@
+{
+  "_id": "poEnflure0000000",
+  "name": "Enflure",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Augmente considérablement la taille d’un animal, d’une personne ou d’une plante en la multipliant par 3</p>",
+    "potionLevel": 2,
+    "malus": -20,
+    "target": "A/P/V",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Foie de chauve-souris",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Œil de poisson ballon",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Ortie séchée",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

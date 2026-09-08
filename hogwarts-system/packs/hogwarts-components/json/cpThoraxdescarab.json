@@ -1,0 +1,13 @@
+{
+  "_id": "cpThoraxdescarab",
+  "name": "Thorax de scarabée",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des thorax de scarabée qui, réduits en poudre, peuvent être employés comme ingrédients de potion.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Aiguise-Méninges\nPoussos",
+    "otherUses": "-"
+  }
+}

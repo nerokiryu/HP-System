@@ -1,0 +1,19 @@
+{
+  "_id": "spPortoloin00000",
+  "name": "Portoloin",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet de changer un objet (généralement anodin et usagé pour ne pas attirer l’attention) en Portoloin. Il suffit alors de toucher d'un seul doigt le Portoloin à l'heure prévue par le lanceur de sort pour être transporté immédiatement à l'endroit prévu.</p><p>Résistance : aucune</p>",
+    "spellLevel": 6,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "Portus",
+    "malus": -90,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "_id": "spChauveFurie000",
+  "name": "Chauve-Furie",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Lance POU Chauves-Furies au visage d’un adversaire, qui se voit entravé dans ses mouvements. Les créatures sont capables de griffer et de mordre, mais dès la fin de l’enchantement, toute trace corporelle disparait.</p><p>Durée : Variable (rounds)</p><p>Formule extrême : permet de viser 2 adversaires et durée +2 rounds</p>",
+    "spellLevel": 3,
+    "spellType": "S",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "",
+    "malus": -30,
+    "extremeFormula": true,
+    "malusExtremeFormula": -40,
+    "malusMastered": -20
+  }
+}

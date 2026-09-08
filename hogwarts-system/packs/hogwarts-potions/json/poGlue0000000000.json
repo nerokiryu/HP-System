@@ -1,0 +1,51 @@
+{
+  "_id": "poGlue0000000000",
+  "name": "Glue",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Basée sur le sortilège de glue, cette potion permet de créer une glue qui colle deux objets ensemble.</p><p>Effet : Glue à 2d6+6 de FORce.</p><p>Durée : 1d4+1 jours</p>",
+    "potionLevel": 1,
+    "malus": -10,
+    "target": "A/O/P",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Bicarbonate de soude",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Eau",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Farine",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Fécule",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Poudre de pieuvre",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Vinaigre",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

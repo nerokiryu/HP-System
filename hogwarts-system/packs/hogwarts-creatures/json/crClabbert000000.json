@@ -1,0 +1,69 @@
+{
+  "_id": "crClabbert000000",
+  "name": "Clabbert",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 7,
+      "max": 7
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 7
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "",
+    "stats": {
+      "str": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "con": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "siz": {
+        "value": 5,
+        "formula": "2d4"
+      },
+      "dex": {
+        "value": 18,
+        "formula": "4d6+4"
+      },
+      "int": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "pow": {
+        "value": 5,
+        "formula": "2d4"
+      },
+      "app": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "per": {
+        "value": 18,
+        "formula": "4d6+4"
+      }
+    },
+    "movement": {
+      "land": 5,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Morsure 30% (1) Griffes 30% (1)",
+    "skills": "",
+    "powers": "",
+    "notes": ""
+  }
+}

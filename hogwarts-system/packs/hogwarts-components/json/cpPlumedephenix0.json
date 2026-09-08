@@ -1,0 +1,13 @@
+{
+  "_id": "cpPlumedephenix0",
+  "name": "Plume de phénix",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une plume provenant d’un phénix, une créature capable de s’enflammer et de renaître de ses cendres.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Élixirs éternels\nÉnergie magique",
+    "otherUses": "• Cœur de baguette"
+  }
+}

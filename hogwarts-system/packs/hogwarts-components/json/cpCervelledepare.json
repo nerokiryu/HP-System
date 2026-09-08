@@ -1,0 +1,13 @@
+{
+  "_id": "cpCervelledepare",
+  "name": "Cervelle de paresseux",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une cervelle provenant d’un paresseux</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Engrais magiques\nPhiltre de Mort Vivante\nWiggenweld",
+    "otherUses": "-"
+  }
+}

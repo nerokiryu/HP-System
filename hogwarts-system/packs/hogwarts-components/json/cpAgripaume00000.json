@@ -1,0 +1,13 @@
+{
+  "_id": "cpAgripaume00000",
+  "name": "Agripaume",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Plante européenne aux fleurs roses connue pour ses propriétés thérapeutiques</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Cataplasme contre les morsures de Murlap\nTraitement des morsures de chiens fous",
+    "otherUses": "• Propriétés médicinales"
+  }
+}

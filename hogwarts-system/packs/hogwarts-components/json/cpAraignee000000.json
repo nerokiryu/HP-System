@@ -1,0 +1,13 @@
+{
+  "_id": "cpAraignee000000",
+  "name": "Araignée",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>De petites araignées non-venimeuses qu’on trouve un peu partout.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "• Nourriture pour familier"
+  }
+}

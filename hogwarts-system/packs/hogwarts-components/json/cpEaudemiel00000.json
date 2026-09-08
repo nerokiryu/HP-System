@@ -1,0 +1,13 @@
+{
+  "_id": "cpEaudemiel00000",
+  "name": "Eau de miel",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une solution de miel dilué dans de l’eau et qui prend diverses teintees en fonction du taux de dilution</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Antidote aux poisons communs\nLangue de miel\nPhiltre revigorant\nVolubilis\nWiggenweld",
+    "otherUses": "• Consommable"
+  }
+}

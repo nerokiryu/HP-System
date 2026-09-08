@@ -1,0 +1,19 @@
+{
+  "_id": "spBloqueJambe000",
+  "name": "Bloque-Jambe",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Permet de coller les jambes d’une personne l’une contre l’autre, ce qui l’empêche de bouger.</p><p>Sous-type : Maléfice</p><p>Durée : variable (rounds)</p><p>Formule extrême : durée variable (heures)</p>",
+    "spellLevel": 2,
+    "spellType": "S",
+    "target": [
+      "P"
+    ],
+    "incantation": "Locomotor mortis",
+    "malus": -20,
+    "extremeFormula": true,
+    "malusExtremeFormula": -30,
+    "malusMastered": -10
+  }
+}

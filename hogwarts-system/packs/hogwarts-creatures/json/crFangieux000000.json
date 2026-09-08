@@ -1,0 +1,69 @@
+{
+  "_id": "crFangieux000000",
+  "name": "Fangieux",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 11,
+      "max": 11
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 11
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXX",
+    "stats": {
+      "str": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "con": {
+        "value": 15,
+        "formula": "3d6+4"
+      },
+      "siz": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "dex": {
+        "value": 11,
+        "formula": "3d6"
+      },
+      "int": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "pow": {
+        "value": 5,
+        "formula": "2d4"
+      },
+      "app": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "per": {
+        "value": 11,
+        "formula": "3d6"
+      }
+    },
+    "movement": {
+      "land": 5,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 1
+    },
+    "attacks": "Morsure : 25% (1d3)",
+    "skills": "Acrobatie : 30% ; Athlétisme : 25% ; Discrétion 40% ; Esquive : 35% ; Orientation : 25% ; Survie : 40% ; Vigilance : 55%",
+    "powers": "<p>Camouflage naturel : Quand il reste immobile, le Fangieux peut être aisément confondu avec un morceau de bois. Octroie un bonus en discrétion de 30% Natation : Les Fangieux sont d’excellents nageurs. En règle générale, les jets d’Athlétisme (natation) de difficulté normale et moyenne que le Fangieux doit effectuer, sont considérés comme réussis automatiquement. Les jets de natation classés difficiles sont à considérer comme moyens.</p>",
+    "notes": ""
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "spMagiedomestiqu",
+  "name": "Magie domestique",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Magie employée à la maison qui permet de faire la vaisselle, recoudre un bouton, enlever des taches.</p><p>Durée : 1d4+1 heures,</p><p>Remarque : il existe vraisemblablement une multitude de sorts de magie domestique (un pour chaque tâche) mais ceux-ci sont tous réunis sous la même appellation.</p><p>Formule extrême : -</p>",
+    "spellLevel": 0,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "",
+    "malus": -10,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

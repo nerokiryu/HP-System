@@ -1,0 +1,33 @@
+{
+  "_id": "poDragonfortant0",
+  "name": "Dragonfortant",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Une potion qui permet de fortifier et de soigner les dragons.</p><p>Effet : redonne 2d4+2 points de vie à un dragon</p><p>Effets secondaires : soigne les maladies</p><p>Durée : -</p>",
+    "potionLevel": 2,
+    "malus": -20,
+    "target": "A",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Plume de hibou grand-duc",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Plumes de paon",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Verrues de crapaud violet géant",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

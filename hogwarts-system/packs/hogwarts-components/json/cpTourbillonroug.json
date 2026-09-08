@@ -1,0 +1,13 @@
+{
+  "_id": "cpTourbillonroug",
+  "name": "Tourbillon rouge",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une plante de la famille des Deutzia possédant des fleurs roses pourprées à l’extérieur, plus pâles à l’intérieur, et formant un tourbillon combinant les couleurs rouge et blanche.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Combinaison",
+    "otherUses": "• Plante décorative"
+  }
+}

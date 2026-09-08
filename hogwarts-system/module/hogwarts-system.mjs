@@ -1,11 +1,14 @@
 // Import document classes.
 import { HogwartsActor } from './documents/actor.mjs';
 import { HogwartsItem } from './documents/item.mjs';
+import { HogwartsCombat, COMBAT_PHASES, combatantPhase, DEFAULT_PHASE } from './documents/combat.mjs';
 // Import sheet classes.
 import { HogwartsActorSheet } from './sheets/actor-sheet.mjs';
 import { HogwartsItemSheet } from './sheets/item-sheet.mjs';
+import { HousePointsApp } from './applications/house-points.mjs';
 // Import helper/utility classes and constants.
 import { HOGWARTS } from './helpers/config.mjs';
+import { degreeOf } from './helpers/degrees.mjs';
 // Import DataModel classes
 import * as models from './data/_module.mjs';
 
@@ -46,12 +49,23 @@ Hooks.once('init', function () {
     // Include a system-local `initiativeBonus` so Active Effects can add a dedicated
     // initiative modifier without altering the DEX stat itself. Use a simple token
     // reference (no JS operators) so the Roll parser can parse the formula.
-    formula: '1d6 + @stats.dex.value + @system.initiativeBonus',
+    formula: '1d6 + @stats.dex.total + @system.initiativeBonus',
     decimals: 2,
+  };
+
+  // Bars offered in token configuration. `fougue` only exists on characters, so
+  // it is declared per type rather than through `secondaryTokenAttribute`.
+  const commonBars = ['health.value', 'healthNonLethal.value'];
+  CONFIG.Actor.trackableAttributes = {
+    character: { bar: [...commonBars, 'fougue.value'], value: ['stress.value', 'experience.pool'] },
+    npc: { bar: commonBars, value: [] },
+    familiar: { bar: commonBars, value: [] },
+    creature: { bar: commonBars, value: [] },
   };
 
   // Define custom Document and DataModel classes
   CONFIG.Actor.documentClass = HogwartsActor;
+  CONFIG.Combat.documentClass = HogwartsCombat;
 
   // Note that you don't need to declare a DataModel
   // for the base actor/item classes - they are included
@@ -144,6 +158,63 @@ Hooks.once('init', function () {
     type: Boolean,
     default: false
   });
+
+  // The rulebook offers two knockout procedures (Chap. 2.7.1 and 2.7.2).
+  game.settings.register('hogwarts-system', 'knockoutMethod', {
+    name: 'HOGWARTS.Settings.KnockoutMethod',
+    hint: 'HOGWARTS.Settings.KnockoutMethodHint',
+    scope: 'world',
+    config: true,
+    type: String,
+    choices: {
+      classic: 'HOGWARTS.Settings.KnockoutClassic',
+      alternative: 'HOGWARTS.Settings.KnockoutAlternative'
+    },
+    default: 'alternative'
+  });
+
+  game.settings.register('hogwarts-system', 'applyArmorOnDamage', {
+    name: 'HOGWARTS.Settings.ApplyArmorOnDamage',
+    hint: 'HOGWARTS.Settings.ApplyArmorOnDamageHint',
+    scope: 'world',
+    config: true,
+    type: Boolean,
+    default: true
+  });
+
+  // Chap. 2.2 re-rolls initiative at the start of every round.
+  game.settings.register('hogwarts-system', 'rerollInitiativeEachRound', {
+    name: 'HOGWARTS.Settings.RerollInitiative',
+    hint: 'HOGWARTS.Settings.RerollInitiativeHint',
+    scope: 'world',
+    config: true,
+    type: Boolean,
+    default: true
+  });
+
+  // The book states the school term gain twice and the two versions disagree:
+  // §25.1 (l. 28186) gives a flat 1d6+1, §7.3 (l. 6848) a table that tapers off.
+  game.settings.register('hogwarts-system', 'schoolXpMode', {
+    name: 'HOGWARTS.Settings.SchoolXpMode',
+    hint: 'HOGWARTS.Settings.SchoolXpModeHint',
+    scope: 'world',
+    config: true,
+    type: String,
+    choices: {
+      flat: 'HOGWARTS.Settings.SchoolXpFlat',
+      tapered: 'HOGWARTS.Settings.SchoolXpTapered'
+    },
+    default: 'flat'
+  });
+
+  game.settings.registerMenu('hogwarts-system', 'housePointsMenu', {
+    name: 'HOGWARTS.HousePoints.Title',
+    label: 'HOGWARTS.HousePoints.Open',
+    hint: 'HOGWARTS.HousePoints.Hint',
+    icon: 'fas fa-hourglass-half',
+    type: HousePointsApp,
+    restricted: false
+  });
 });
 
 /* -------------------------------------------- */
@@ -201,38 +272,12 @@ Handlebars.registerHelper('skillName', function (name) {
 });
 
 /* -------------------------------------------- */
-/*  Compendium Translation                      */
-/* -------------------------------------------- */
-
-/**
- * Patches the in-memory compendium index with localized names from the active
- * language file (HOGWARTS.Packs.<packName>.<id>.name).
- * Called once on `ready` — does not modify stored data.
- */
-function _patchCompendiumIndex() {
-  const packTranslations = foundry.utils.getProperty(game.i18n.translations, 'HOGWARTS.Packs') ?? {};
-  for (const [packName, entries] of Object.entries(packTranslations)) {
-    const pack = game.packs.find(
-      p => p.metadata.name === packName && p.metadata.system === 'hogwarts-system'
-    );
-    if (!pack) continue;
-    for (const [id, trans] of Object.entries(entries)) {
-      const entry = pack.index.get(id);
-      if (entry && trans.name) entry.name = trans.name;
-    }
-  }
-}
-
-/* -------------------------------------------- */
 /*  Ready Hook                                  */
 /* -------------------------------------------- */
 
 Hooks.once('ready', async function () {
   // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
   Hooks.on('hotbarDrop', (bar, data, slot) => createDocMacro(data, slot));
-
-  // Apply localized names to compendium entries based on the active language
-  _patchCompendiumIndex();
 
 
 
@@ -385,12 +430,118 @@ Hooks.once('ready', async function () {
  * Attach click listeners to Apply Damage / Apply Healing buttons rendered
  * inside hogwarts-chat-card chat messages.
  */
-Hooks.on('renderChatMessage', (message, html) => {
-  // html is a jQuery-like HTMLElement in v14
-  const el = html instanceof HTMLElement ? html : html[0] ?? html;
-  const buttons = el.querySelectorAll('.card-buttons button[data-action]');
-  for (const btn of buttons) {
+Hooks.on('renderChatMessageHTML', (message, html) => {
+  for (const btn of html.querySelectorAll('.card-buttons button[data-action]')) {
     btn.addEventListener('click', (ev) => _onChatCardAction(ev, message));
+  }
+});
+
+/** Open the house points tracker from the token scene controls (Chap. 24.2). */
+/**
+ * Keep the granted hybrid capability items in step with the declared ancestry
+ * (Chap. 17). Only the user who made the change performs the sync, so several
+ * connected clients cannot duplicate the items.
+ */
+Hooks.on('updateActor', async (actor, changed, options, userId) => {
+  if (userId !== game.user.id) return;
+  if (!foundry.utils.hasProperty(changed, 'system.hybrid')) return;
+  await syncHybridCapabilities(actor);
+});
+
+/**
+ * Replace every capability item this system granted with the ones the current
+ * race and generation call for.
+ * @param {Actor} actor
+ */
+export async function syncHybridCapabilities(actor) {
+  if (actor.type !== 'character') return;
+  const FLAG = 'hybridCapability';
+  const stale = actor.items.filter((i) => i.getFlag('hogwarts-system', FLAG)).map((i) => i.id);
+  if (stale.length) await actor.deleteEmbeddedDocuments('Item', stale);
+
+  const { race, generation, yumboe, pickCapability } = actor.system.hybrid ?? {};
+  const catalogue = CONFIG.HOGWARTS.hybridCapabilities?.[race]?.[generation];
+  if (!catalogue) return;
+
+  const raceLabel = game.i18n.localize(CONFIG.HOGWARTS.hybridRaces[race] ?? race);
+  const created = [];
+  for (const capability of catalogue) {
+    if (capability.key === 'Yumboe' && !yumboe) continue;
+    const name = game.i18n.localize(`HOGWARTS.Hybrid.Capability.${capability.key}`);
+    const detail = capability.choose && pickCapability
+      ? game.i18n.format('HOGWARTS.Hybrid.Chosen', { option: pickCapability })
+      : '';
+    const note = capability.note !== undefined
+      ? `<p class="hybrid-note">${game.i18n.localize('HOGWARTS.Hybrid.BookValue')}: ${capability.note}</p>`
+      : '';
+    created.push({
+      name,
+      type: 'feature',
+      system: {
+        perkType: 'abilityNatural',
+        description: `<p><em>${raceLabel}</em></p>${note}${detail ? `<p>${detail}</p>` : ''}`,
+      },
+      flags: { 'hogwarts-system': { [FLAG]: true } },
+    });
+  }
+  if (created.length) await actor.createEmbeddedDocuments('Item', created);
+}
+
+Hooks.on('getSceneControlButtons', (controls) => {
+  const group = controls?.tokens;
+  if (!group?.tools) return;
+  group.tools.housePoints = {
+    name: 'housePoints',
+    order: Object.keys(group.tools).length + 1,
+    title: 'HOGWARTS.HousePoints.Title',
+    icon: 'fas fa-hourglass-half',
+    button: true,
+    visible: true,
+    onChange: () => new HousePointsApp().render(true),
+  };
+});
+
+/**
+ * Add a phase badge to every combatant row (Chap. 2.4). Clicking cycles the
+ * declared phase; Alt-clicking marks the combatant as surprised, which forces
+ * them into the third phase for the opening round.
+ */
+Hooks.on('renderCombatTracker', (app, html) => {
+  const el = html instanceof HTMLElement ? html : html[0] ?? html;
+  const combat = game.combat;
+  if (!combat) return;
+
+  for (const row of el.querySelectorAll('.combatant[data-combatant-id]')) {
+    const combatant = combat.combatants.get(row.dataset.combatantId);
+    const controls = row.querySelector('.combatant-controls');
+    if (!combatant || !controls || controls.querySelector('.hogwarts-phase')) continue;
+
+    const round = combat.round || 1;
+    const phase = combatantPhase(combatant, round);
+    const surprised = !!combatant.getFlag('hogwarts-system', 'surprised');
+
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = `inline-control combatant-control hogwarts-phase phase-${phase}${surprised ? ' surprised' : ''}`;
+    btn.textContent = String(phase);
+    btn.dataset.tooltip = `${game.i18n.localize(COMBAT_PHASES[phase])}`
+      + (surprised ? ` — ${game.i18n.localize('HOGWARTS.Combat.Surprised')}` : '')
+      + `<br>${game.i18n.localize('HOGWARTS.Combat.PhaseHint')}`;
+
+    if (combatant.isOwner) {
+      btn.addEventListener('click', async (ev) => {
+        ev.preventDefault();
+        ev.stopPropagation();
+        if (ev.altKey) {
+          return combatant.setFlag('hogwarts-system', 'surprised', !surprised);
+        }
+        const current = Number(combatant.getFlag('hogwarts-system', 'phase')) || DEFAULT_PHASE;
+        await combatant.setFlag('hogwarts-system', 'phase', (current % 3) + 1);
+      });
+    } else {
+      btn.disabled = true;
+    }
+    controls.prepend(btn);
   }
 });
 
@@ -410,7 +561,12 @@ async function _onChatCardAction(event, message) {
     return _onUseFougue(btn, message);
   }
 
-  // ── Apply Damage / Apply Healing ──────────────────────────────────────
+  // ── Constitution save prompted by a wound threshold ───────────────────
+  if (action === 'roll-con') {
+    return _onRollConstitution(btn);
+  }
+
+  // ── Apply Damage / Healing / Non-lethal / Knockout ────────────────────
   const value = Number(btn.dataset.value) || 0;
   if (!value) return;
 
@@ -430,25 +586,243 @@ async function _onChatCardAction(event, message) {
   for (const token of tokens) {
     const actor = token.actor;
     if (!actor) continue;
-
-    if (action === 'apply-damage') {
-      const current = Number(actor.system.health?.value) ?? 0;
-      const newVal = Math.max(0, current - value);
-      await actor.update({ 'system.health.value': newVal });
-    } else if (action === 'apply-healing') {
+    if (action === 'apply-damage') await _applyLethalDamage(actor, value);
+    else if (action === 'apply-nonlethal') await _applyNonLethalDamage(actor, value);
+    else if (action === 'apply-knockout') await _applyKnockout(actor, value);
+    else if (action === 'apply-healing') {
       const current = Number(actor.system.health?.value) ?? 0;
       const max = Number(actor.system.health?.max) ?? current;
-      const newVal = Math.min(max, current + value);
-      await actor.update({ 'system.health.value': newVal });
+      await actor.update({ 'system.health.value': Math.min(max, current + value) });
     }
   }
 
-  // Provide feedback
-  const count = tokens.length;
-  const actionLabel = action === 'apply-damage'
-    ? game.i18n.localize('HOGWARTS.Chat.ApplyDamage')
-    : game.i18n.localize('HOGWARTS.Chat.ApplyHealing');
-  ui.notifications.info(`${actionLabel}: ${value} → ${count} cible(s)`);
+  const labels = {
+    'apply-damage': 'HOGWARTS.Chat.ApplyDamage',
+    'apply-healing': 'HOGWARTS.Chat.ApplyHealing',
+    'apply-nonlethal': 'HOGWARTS.Chat.ApplyNonLethal',
+    'apply-knockout': 'HOGWARTS.Chat.ApplyKnockout',
+  };
+  ui.notifications.info(`${game.i18n.localize(labels[action] ?? labels['apply-damage'])}: ${value} → ${tokens.length} cible(s)`);
+}
+
+/**
+ * Armour damage reduction for an actor, by actor type (Chap. 2.8.1).
+ * Characters sum their worn armour items; NPCs and creatures carry a flat value.
+ * @param {Actor} actor
+ * @returns {number}
+ */
+function _actorArmor(actor) {
+  if (!game.settings.get('hogwarts-system', 'applyArmorOnDamage')) return 0;
+  const sys = actor.system ?? {};
+  if (typeof sys.armor === 'number') return sys.armor;          // character (derived), npc
+  if (typeof sys.armor?.value === 'number') return sys.armor.value; // creature
+  return 0;
+}
+
+/**
+ * Apply lethal damage and report every wound threshold the rules define.
+ * Thresholds are only reported — the Constitution saves are rolled from the card.
+ * @param {Actor} actor
+ * @param {number} raw - Damage before armour
+ */
+async function _applyLethalDamage(actor, raw) {
+  const armor = _actorArmor(actor);
+  const dealt = Math.max(0, raw - armor);
+  const before = Number(actor.system.health?.value) || 0;
+  const after = Math.max(0, before - dealt);
+
+  const updates = { 'system.health.value': after };
+  const notes = [];
+  if (armor > 0) notes.push(game.i18n.format('HOGWARTS.Wound.ArmorAbsorbed', { armor, dealt }));
+
+  // An unconscious target taking any further damage dies outright (Chap. 1.10.2).
+  const wasUnconscious = actor.system.conditions?.unconscious === true;
+
+  if (after <= 0 || (wasUnconscious && dealt > 0)) {
+    updates['system.conditions.agony'] = false;
+    await actor.update(updates);
+    await _setDeadStatus(actor);
+    return _postWoundCard(actor, dealt, notes, [], wasUnconscious && after > 0
+      ? 'HOGWARTS.Wound.DeathWhileUnconscious'
+      : 'HOGWARTS.Wound.Death');
+  }
+
+  const saves = [];
+  // Losing half of CURRENT hit points in a single blow (Chap. 1.8.1)
+  if (dealt > 0 && dealt >= Math.ceil(before / 2)) {
+    updates['system.conditions.seriousWound'] = true;
+    saves.push({ mult: 5, key: 'HOGWARTS.Wound.SeriousWound', unit: 'minutes' });
+  }
+  // At 1 hit point, a Constitution save is required every round (Chap. 1.8.2)
+  if (after === 1) {
+    updates['system.conditions.agony'] = true;
+    saves.push({ mult: 3, key: 'HOGWARTS.Wound.Agony', unit: 'hours' });
+  }
+
+  await actor.update(updates);
+  return _postWoundCard(actor, dealt, notes, saves);
+}
+
+/**
+ * Apply non-lethal damage to its separate pool (Chap. 1.10.2).
+ * @param {Actor} actor
+ * @param {number} raw
+ * @param {object} [options]
+ * @param {boolean} [options.silent] - Skip the chat card and return the outcome instead,
+ *                                    so a knockout attempt can post a single card.
+ */
+async function _applyNonLethalDamage(actor, raw, { silent = false } = {}) {
+  const armor = _actorArmor(actor);
+  const dealt = Math.max(0, raw - armor);
+  const hp = Number(actor.system.health?.value) || 0;
+  const before = Number(actor.system.healthNonLethal?.value) || 0;
+  const total = before + dealt;
+
+  const notes = [];
+  if (armor > 0) notes.push(game.i18n.format('HOGWARTS.Wound.ArmorAbsorbed', { armor, dealt }));
+
+  const updates = {
+    'system.healthNonLethal.value': total,
+    'system.conditions.staggered': total === hp,
+    'system.conditions.unconscious': total > hp,
+  };
+  await actor.update(updates);
+
+  let outcome = null;
+  if (total > hp) outcome = 'HOGWARTS.Wound.Unconscious';
+  else if (total === hp) outcome = 'HOGWARTS.Wound.Staggered';
+  if (silent) return { dealt, notes, outcome };
+  return _postWoundCard(actor, dealt, notes, [], outcome, 'HOGWARTS.Chat.ApplyNonLethal');
+}
+
+/**
+ * Deliberate knockout attempt (Chap. 2.7). Non-lethal damage is applied, then
+ * the configured procedure decides whether the target goes down.
+ * @param {Actor} actor
+ * @param {number} raw
+ */
+async function _applyKnockout(actor, raw) {
+  const method = game.settings.get('hogwarts-system', 'knockoutMethod');
+  const armor = _actorArmor(actor);
+  const dealt = Math.max(0, raw - armor);
+  const hp = Number(actor.system.health?.value) || 0;
+
+  const nl = await _applyNonLethalDamage(actor, raw, { silent: true });
+  const notes = [...nl.notes];
+  if (nl.outcome) notes.push(game.i18n.localize(nl.outcome));
+  const TITLE = 'HOGWARTS.Chat.ApplyKnockout';
+
+  if (method === 'classic') {
+    // Resistance table: active = damage dealt, passive = hit points remaining
+    const target = Math.clamp(50 - hp * 5 + dealt * 5, 1, 99);
+    const roll = new Roll('1d100');
+    await roll.evaluate();
+    const success = roll.total <= target;
+    notes.push(game.i18n.format('HOGWARTS.Wound.KnockoutClassic', { dealt, hp, target, roll: roll.total }));
+    if (success) await actor.update({ 'system.conditions.unconscious': true });
+    return _postWoundCard(actor, dealt, notes, [],
+      success ? 'HOGWARTS.Wound.KnockedOut' : 'HOGWARTS.Wound.KnockoutResisted', TITLE, [roll]);
+  }
+
+  // Alternative: thresholds at 25 / 50 / 75 % of hit points lost, rounded up
+  let mult = 0;
+  if (dealt >= Math.ceil(hp * 0.75)) mult = 1;
+  else if (dealt >= Math.ceil(hp * 0.5)) mult = 2;
+  else if (dealt >= Math.ceil(hp * 0.25)) mult = 3;
+
+  if (!mult) return _postWoundCard(actor, dealt, notes, [], 'HOGWARTS.Wound.KnockoutNoThreshold', TITLE);
+  const pct = mult === 1 ? 75 : mult === 2 ? 50 : 25;
+  notes.push(game.i18n.format('HOGWARTS.Wound.KnockoutThreshold', { pct, dealt }));
+  return _postWoundCard(actor, dealt, notes,
+    [{ mult, key: 'HOGWARTS.Wound.KnockoutSave', unit: 'hours', knockout: true }], null, TITLE);
+}
+
+/**
+ * Mark an actor as dead using the core status effect.
+ * @param {Actor} actor
+ */
+async function _setDeadStatus(actor) {
+  try {
+    const id = CONFIG.specialStatusEffects?.DEFEATED ?? 'dead';
+    const already = actor.effects.some(e => e.statuses?.has?.(id));
+    if (!already) await actor.toggleStatusEffect(id, { active: true, overlay: true });
+  } catch (e) {
+    console.warn('HOGWARTS | Could not apply the dead status', e);
+  }
+}
+
+/**
+ * Post the wound summary card, with a button for each Constitution save owed.
+ * @param {Actor} actor
+ * @param {number} dealt
+ * @param {string[]} notes
+ * @param {{mult: number, key: string, unit: string, knockout?: boolean}[]} saves
+ * @param {string|null} outcome - i18n key of a terminal outcome, if any
+ * @param {string} titleKey - i18n key used as the card type label
+ * @param {Roll[]} rolls
+ */
+async function _postWoundCard(actor, dealt, notes, saves, outcome = null, titleKey = 'HOGWARTS.Chat.ApplyDamage', rolls = []) {
+  const title = game.i18n.localize(titleKey);
+  let content = `<div class="hogwarts-chat-card"><header class="card-header"><h3>${actor.name}</h3><span class="card-type">${title}</span></header>`;
+  content += `<div class="card-row"><strong>${game.i18n.localize('HOGWARTS.Wound.Dealt')}:</strong> ${dealt}</div>`;
+  for (const n of notes) content += `<div class="card-row">${n}</div>`;
+  if (outcome) content += `<div class="card-row wound-outcome">${game.i18n.localize(outcome)}</div>`;
+  if (saves.length) {
+    content += '<div class="card-buttons">';
+    for (const s of saves) {
+      const label = game.i18n.format('HOGWARTS.Wound.RollCon', { mult: s.mult, reason: game.i18n.localize(s.key) });
+      content += `<button data-action="roll-con" data-value="1" data-actor-id="${actor.id}" data-mult="${s.mult}" data-unit="${s.unit}" data-knockout="${s.knockout ? 1 : 0}"><i class="fas fa-dice-d20"></i> ${label}</button>`;
+    }
+    content += '</div>';
+  }
+  content += '</div>';
+  await ChatMessage.create({
+    speaker: ChatMessage.getSpeaker({ actor }),
+    content,
+    rolls,
+    rollMode: game.settings.get('core', 'rollMode'),
+  });
+}
+
+/**
+ * Roll a Constitution save owed by a wound threshold, and report the duration
+ * of unconsciousness on a failure.
+ * @param {HTMLElement} btn
+ */
+async function _onRollConstitution(btn) {
+  const actor = game.actors.get(btn.dataset.actorId);
+  if (!actor) return ui.notifications.warn(game.i18n.localize('HOGWARTS.Chat.NoTarget'));
+  const mult = Number(btn.dataset.mult) || 5;
+  const unit = btn.dataset.unit || 'minutes';
+  const isKnockout = btn.dataset.knockout === '1';
+  const con = Number(actor.system.stats?.con?.total ?? actor.system.stats?.con?.value) || 0;
+  const target = con * mult;
+
+  const roll = new Roll('1d100');
+  await roll.evaluate();
+  const success = roll.total <= target;
+  // Knockout duration is CON hours; wound thresholds use (21 - CON).
+  const duration = isKnockout ? con : Math.max(1, 21 - con);
+  const unitLabel = game.i18n.localize(`HOGWARTS.Wound.Unit.${unit}`);
+
+  // Both wound thresholds and knockout attempts render the target unconscious on a failure.
+  if (!success) await actor.update({ 'system.conditions.unconscious': true });
+
+  let content = `<div class="hogwarts-chat-card"><header class="card-header"><h3>${actor.name}</h3>`;
+  content += `<span class="card-type">CON×${mult}</span></header>`;
+  content += `<div class="card-row"><strong>${game.i18n.localize('HOGWARTS.Chat.Roll')}:</strong> <span class="roll-value">${roll.total}</span> / ${target}</div>`;
+  content += `<div class="card-row wound-outcome">${success
+    ? game.i18n.localize('HOGWARTS.Wound.SaveSuccess')
+    : game.i18n.format('HOGWARTS.Wound.SaveFailure', { duration, unit: unitLabel })}</div>`;
+  if (isKnockout && !success) content += `<div class="card-row">${game.i18n.localize('HOGWARTS.Wound.KnockoutThirdDamage')}</div>`;
+  content += '</div>';
+
+  await ChatMessage.create({
+    speaker: ChatMessage.getSpeaker({ actor }),
+    content,
+    rolls: [roll],
+    rollMode: game.settings.get('core', 'rollMode'),
+  });
 }
 
 /**
@@ -491,13 +865,7 @@ async function _onUseFougue(btn, message) {
   await actor.update({ 'system.fougue.value': currentFougue - 1 });
 
   // Recalculate degree with the reversed value
-  const useExtendedTiers = game.settings.get('hogwarts-system', 'useExtendedSuccessTiers') ?? false;
-  let degree = 'Fail';
-  if (reversed <= 5) degree = 'Critical';
-  else if (useExtendedTiers && reversed <= Math.ceil(targetValue / 5)) degree = 'Extreme';
-  else if (useExtendedTiers && reversed <= Math.ceil(targetValue / 2)) degree = 'Hard';
-  else if (reversed <= targetValue) degree = 'Success';
-  else if (reversed >= 96) degree = 'Fumble';
+  const degree = degreeOf(reversed, targetValue);
 
   // Build the new degree badge
   const degreeLabel = game.i18n.localize(`HOGWARTS.Roll.Degree.${degree}`);

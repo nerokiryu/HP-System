@@ -1,0 +1,21 @@
+{
+  "_id": "poPoisonderaisin",
+  "name": "Poison de raisin de couleuvre",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Cause de violentes crampes à l’estomac et liquéfie les entrailles, obligeant le consommateur à rester sur les toilettes durant de nombreuses heures.</p><p>Effet : Cause 1 dégât et des crampes douloureuses</p><p>Effets secondaires : Laxatif puissant</p><p>Durée : - / 1d6+4 heures</p><p>VIRulence : 10</p><p>Remarque : Mal préparée, cette potion provoque la mort de celui qui la consomme.</p>",
+    "potionLevel": 3,
+    "malus": -30,
+    "target": "A/P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Raisin de couleuvre",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

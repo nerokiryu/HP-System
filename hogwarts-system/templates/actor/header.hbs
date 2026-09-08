@@ -41,12 +41,18 @@
       <div class='resource flex-group-center'>
         <label for='system.health.value' class='resource-label'>
           {{localize 'HOGWARTS.Actor.base.FIELDS.health.value.label'}}
+          {{#if (eq actor.type 'character')}}
+            <a class='resource-action' data-action='restRecovery' data-tooltip='{{localize "HOGWARTS.Recovery.Title"}}'>
+              <i class='fas fa-bed'></i>
+            </a>
+          {{/if}}
         </label>
         <div class='resource-content flexrow flex-center flex-between'>
           <input
-            type='text'
+            type='number'
             name='system.health.value'
             value='{{system.health.value}}'
+            min='0' step='1'
             data-dtype='Number'
           />
           <span> / </span>
@@ -62,16 +68,18 @@
         </label>
         <div class='resource-content flexrow flex-center flex-between'>
           <input
-            type='text'
+            type='number'
             name='system.fougue.value'
             value='{{system.fougue.value}}'
+            min='0' step='1'
             data-dtype='Number'
           />
           <span> / </span>
           <input
-            type='text'
+            type='number'
             name='system.fougue.max'
             value='{{system.fougue.max}}'
+            min='0' step='1'
             data-dtype='Number'
             class='resource-max-input'
           />
@@ -85,9 +93,10 @@
         <label class='resource-label'>{{localize 'HOGWARTS.Actor.Familiar.Armor'}}</label>
         <div class='resource-content flexrow flex-center flex-between'>
           <input
-            type='text'
+            type='number'
             name='system.familiar.armor'
             value='{{system.familiar.armor}}'
+            min='0' step='1'
             data-dtype='Number'
           />
         </div>
@@ -97,9 +106,10 @@
         <label class='resource-label'>{{localize 'HOGWARTS.Actor.Familiar.Movement'}}</label>
         <div class='resource-content flexrow flex-center flex-between'>
           <input
-            type='text'
+            type='number'
             name='system.familiar.movement'
             value='{{system.familiar.movement}}'
+            min='0' step='1'
             data-dtype='Number'
           />
         </div>
@@ -129,9 +139,10 @@
           </label>
           <div class='resource-content flexrow flex-center flex-between'>
             <input
-              type='text'
+              type='number'
               name='system.profile.year'
               value='{{system.profile.year}}'
+              min='1' max='7' step='1'
               data-dtype='Number'
             />
           </div>
@@ -176,10 +187,27 @@
         <div class='resource-content flexrow flex-center flex-between'>
           <a class='rollable damage-roll' data-action='rollInitiative' data-tooltip='1d6 + DEX'>
             <i class='fas fa-dice-d20'></i>
-            <span>1d6 + {{system.stats.dex.value}}</span>
+            <span>1d6 + {{system.stats.dex.total}}</span>
           </a>
         </div>
       </div>
+
+      {{#if (eq actor.type 'character')}}
+      <div class='resource flex-group-center'>
+        <label class='resource-label'>
+          {{localize 'HOGWARTS.Reaction.Label'}}
+          {{#if system.shieldBonus}}<span class='shield-badge'>+{{system.shieldBonus}}</span>{{/if}}
+        </label>
+        <div class='resource-content flexrow flex-center flex-between reaction-buttons'>
+          <a class='rollable' data-action='rollDodge' data-tooltip='{{localize "HOGWARTS.Reaction.DodgeHint"}}'>
+            <i class='fas fa-person-running'></i>
+          </a>
+          <a class='rollable' data-action='rollParry' data-tooltip='{{localize "HOGWARTS.Reaction.ParryHint"}}'>
+            <i class='fas fa-shield-halved'></i>
+          </a>
+        </div>
+      </div>
+      {{/if}}
     </div>
   </div>
 </header>

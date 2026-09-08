@@ -1,0 +1,13 @@
+{
+  "_id": "cpCervelledecrap",
+  "name": "Cervelle de crapaud",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Le cerveau d’un crapaud qui peut être utilisé comme ingrédient de potion</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Conscience\nDécoction hoqueteuse\nÉlixir cérébral de Baruffio\nEssence de folie\nSolution scintillante",
+    "otherUses": "-"
+  }
+}

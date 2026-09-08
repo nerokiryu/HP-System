@@ -1,0 +1,39 @@
+{
+  "_id": "poDetergentsmagi",
+  "name": "Détergents magiques",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Ces détergents permettent d’éliminer certains types de saletés. Moins génériques que le Nettoie-Tout magique, ils sont plus efficaces dans leur domaine.</p>",
+    "potionLevel": 1,
+    "malus": -10,
+    "target": "O",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Alcool",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Lavande",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Poudre de pieuvre",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Sécrétions de Bandimon (très diluées)",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

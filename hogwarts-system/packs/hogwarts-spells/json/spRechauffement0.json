@@ -1,0 +1,19 @@
+{
+  "_id": "spRechauffement0",
+  "name": "Réchauffement",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Permet de faire chauffer un objet de quelques degrés ou de faire bouillir une petite quantité de liquide (3L).</p><p>Durée : -</p><p>Formule extrême : Quantité jusqu’à 10L</p>",
+    "spellLevel": 1,
+    "spellType": "M",
+    "target": [
+      "O"
+    ],
+    "incantation": "Calefare",
+    "malus": -5,
+    "extremeFormula": true,
+    "malusExtremeFormula": -15,
+    "malusMastered": 0
+  }
+}

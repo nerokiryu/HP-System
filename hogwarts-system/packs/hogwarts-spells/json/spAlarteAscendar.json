@@ -1,0 +1,22 @@
+{
+  "_id": "spAlarteAscendar",
+  "name": "Alarte Ascendare",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Fait sauter un la cible dans les air à environ un mètre de haut</p><p>Durée : -</p><p>Formule extrême : -</p><p>Remarque : Uniquement imprononçable</p>",
+    "spellLevel": 2,
+    "spellType": "E",
+    "target": [
+      "A",
+      "O",
+      "P",
+      "V"
+    ],
+    "incantation": "Alarte Ascendare",
+    "malus": -15,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

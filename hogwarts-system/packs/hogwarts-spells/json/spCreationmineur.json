@@ -1,0 +1,19 @@
+{
+  "_id": "spCreationmineur",
+  "name": "Création mineure",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Permet de créer un peu de matière inerte, des objets simples sans parties mobiles ou des flammes.</p><p>Durée : permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 2,
+    "spellType": "M",
+    "target": [
+      "X"
+    ],
+    "incantation": "",
+    "malus": -20,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

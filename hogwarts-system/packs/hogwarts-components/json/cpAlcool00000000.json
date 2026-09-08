@@ -1,0 +1,13 @@
+{
+  "_id": "cpAlcool00000000",
+  "name": "Alcool",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Un alcool neutre qui permet de fabriquer certaines potions ou qui peut être bu.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Détergents magiques\nDuplication\nElixir 7\nLangue de Miel\nNettoie-Tout magique\nNeutralisation\nPhéromones",
+    "otherUses": "• Consommable"
+  }
+}

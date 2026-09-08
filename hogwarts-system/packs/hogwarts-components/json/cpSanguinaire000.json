@@ -1,0 +1,13 @@
+{
+  "_id": "cpSanguinaire000",
+  "name": "Sanguinaire",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une plante herbacée donnant des fleurs blanches ressemblant à des marguerites. Elle est connue également sous le nom de Sang-Dragon et est considérée comme toxique car elle tue les cellules des êtres vivants la consommant</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Poison pernicieux\nPotion de Sang-de-Dragon",
+    "otherUses": "• Poison"
+  }
+}

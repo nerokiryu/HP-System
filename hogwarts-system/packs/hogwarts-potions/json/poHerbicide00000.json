@@ -1,0 +1,39 @@
+{
+  "_id": "poHerbicide00000",
+  "name": "Herbicide",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Abîme ou détruit les plantes</p>",
+    "potionLevel": 1,
+    "malus": -10,
+    "target": "V",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Épines de poisson-diable",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Ingrédients standards",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Jus de Horglup",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Mucus de Veracrasse",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

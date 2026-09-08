@@ -1,0 +1,19 @@
+{
+  "_id": "spAntiscellement",
+  "name": "Anti-scellement de pièce",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Dissipe instantanément l’enchantement de scellement de pièce.</p>",
+    "spellLevel": 4,
+    "spellType": "E",
+    "target": [
+      "X"
+    ],
+    "incantation": "",
+    "malus": -40,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

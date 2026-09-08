@@ -1,0 +1,19 @@
+{
+  "_id": "spLevitationdarb",
+  "name": "Lévitation d’arbres",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet de faire léviter un arbre. Celui-ci suit ensuite le sorcier tant qu’il reste concentré sur le sortilège.</p><p>Durée : Volontaire</p><p>Formule extrême : -</p>",
+    "spellLevel": 1,
+    "spellType": "E",
+    "target": [
+      "V"
+    ],
+    "incantation": "Mobiliarbus",
+    "malus": 0,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

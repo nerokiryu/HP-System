@@ -1,0 +1,13 @@
+{
+  "_id": "cpCervelledemaca",
+  "name": "Cervelle de macaque",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une cervelle provenant d’un macaque</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Engrais magiques",
+    "otherUses": "-"
+  }
+}

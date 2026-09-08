@@ -1,0 +1,19 @@
+{
+  "_id": "spGuerisonsmagiq",
+  "name": "Guérisons magiques",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Regroupe tous les sorts capables de soigner une blessure grave d’origine magique ou non. Provoque une lente régénération du corps ou de l’esprit qui est douloureux et pas toujours efficace.</p><p>Durée : en fonction des blessures.</p>",
+    "spellLevel": 6,
+    "spellType": "X",
+    "target": [
+      "P"
+    ],
+    "incantation": "",
+    "malus": 0,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

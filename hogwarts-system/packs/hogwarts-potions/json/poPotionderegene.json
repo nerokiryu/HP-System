@@ -1,0 +1,21 @@
+{
+  "_id": "poPotionderegene",
+  "name": "Potion de régénération",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Permet aux sorciers ayant perdu leur corps de le retrouver.</p>",
+    "potionLevel": 6,
+    "malus": -70,
+    "target": "P",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Chair d'un serviteur Os du père Sang d'un ennemi",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

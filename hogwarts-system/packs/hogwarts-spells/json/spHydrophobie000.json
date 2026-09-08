@@ -1,0 +1,19 @@
+{
+  "_id": "spHydrophobie000",
+  "name": "Hydrophobie",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet de rendre un objet hydrophobe durant un certain temps. Celui- ci repousse alors tous les liquides qui entrent en contact avec lui.</p><p>Durée : Variable (heures)</p><p>Formule extrême : Durée de 1d2 jour(s)</p>",
+    "spellLevel": 1,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "",
+    "malus": -5,
+    "extremeFormula": true,
+    "malusExtremeFormula": -10,
+    "malusMastered": 0
+  }
+}

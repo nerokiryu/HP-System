@@ -1,0 +1,19 @@
+{
+  "_id": "spExtension00000",
+  "name": "Extension",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Augmente la capacité de stockage intérieure d'un objet sans en modifier l’extérieur et rend son contenu plus léger.</p><p>Durée : permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 5,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "Capacious extremis",
+    "malus": -40,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

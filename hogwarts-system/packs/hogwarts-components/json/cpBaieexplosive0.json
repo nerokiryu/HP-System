@@ -1,0 +1,13 @@
+{
+  "_id": "cpBaieexplosive0",
+  "name": "Baie explosive",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des baies magiques dont le jus est connu pour ses vertus revigorantes</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Énergie magique\nWiggenweld",
+    "otherUses": "• Jus aux vertus revigorantes"
+  }
+}

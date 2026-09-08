@@ -1,0 +1,45 @@
+{
+  "_id": "poDuplication000",
+  "name": "Duplication",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Cette potion s’imprègne d’une capacité magique d’une créature, d’un objet, d’une plante ou un sort sans dénaturer celui-ci. Plus qu’une extraction, il s’agit d’une duplication d’une capacité ou d’un effet. Une fois fait, la potion obtenue pourra être employée pour transférer son effet à un objet.</p><p>Consommée, cette potion n’a d’autre effet que de donner une nausée atroce durant plusieurs heures à celui qui la boit.</p><p>Remarque : Il faut un chaudron suffisamment grand pour immerger entièrement l’objet, l’animal ou la plante dedans.</p>",
+    "potionLevel": 3,
+    "malus": -30,
+    "target": "A/O/V",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Alcool",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Cheveux de jumeaux véritables",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Corne de Bicorne",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Éponge",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Plume de Jobarbille",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "spDeverrouillage",
+  "name": "Déverrouillage",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Ouvre une porte fermée à clé par un dispositif non magique.</p><p>Durée : -</p><p>Formule extrême : s’applique à toutes les portes dans un rayon de</p><p>POUvoir mètres du sorcier</p>",
+    "spellLevel": 1,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "Alohomora",
+    "malus": -15,
+    "extremeFormula": true,
+    "malusExtremeFormula": -25,
+    "malusMastered": -5
+  }
+}

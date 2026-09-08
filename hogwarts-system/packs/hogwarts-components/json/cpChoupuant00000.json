@@ -1,0 +1,13 @@
+{
+  "_id": "cpChoupuant00000",
+  "name": "Chou puant",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une plante donnant un fruit dégageant une forte odeur et une grande chaleur pouvant faire fondre la neige.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Énergie magique\nInfusion infecte\nLumière aveuglante",
+    "otherUses": "-"
+  }
+}

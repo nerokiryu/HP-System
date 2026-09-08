@@ -1,0 +1,20 @@
+{
+  "_id": "spDesillusion000",
+  "name": "Désillusion",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet de cacher une personne ou une créature à la manière d’un caméléon. L’objet du sortilège se confond avec son environnement.</p><p>Durée : variable (heures)</p><p>Formule extrême : Durée + 2d4+2 heures</p>",
+    "spellLevel": 3,
+    "spellType": "E",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "",
+    "malus": -50,
+    "extremeFormula": true,
+    "malusExtremeFormula": -60,
+    "malusMastered": -35
+  }
+}

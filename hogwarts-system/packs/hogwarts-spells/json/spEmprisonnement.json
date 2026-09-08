@@ -1,0 +1,20 @@
+{
+  "_id": "spEmprisonnement",
+  "name": "Emprisonnement",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Ce sortilège emprisonne la cible dans une surface solide lisse (tableau, mur, sol, etc.), la faisant apparaître en transparence sur celle-ci.</p><p>L’incantation ajout le nom de la cible dans laquelle sera enfermer le sorcier (Muros pour mur, Solum pour sol, Tabula pour tableau, etc.)</p><p>Effet : La cible est emprisonnée dans une surface, incapable d’agir avec le monde extérieur</p><p>Durée : Permanente</p><p>Contre sort : En brisant la surface ou en la fissurant, la personne est libérée.</p><p>Formule extrême : -</p>",
+    "spellLevel": 4,
+    "spellType": "E",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "« Nom » Incarcerare",
+    "malus": -50,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "_id": "crVampire0000000",
+  "name": "Vampire",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 12,
+      "max": 12
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 12
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXX",
+    "stats": {
+      "str": {
+        "value": 15,
+        "formula": "Humain +2"
+      },
+      "con": {
+        "value": 11,
+        "formula": "Humain -4"
+      },
+      "siz": {
+        "value": 13,
+        "formula": "Humain ±0"
+      },
+      "dex": {
+        "value": 14,
+        "formula": "Humain+1"
+      },
+      "int": {
+        "value": 11,
+        "formula": "Humain ±0"
+      },
+      "pow": {
+        "value": 15,
+        "formula": "Humain +2"
+      },
+      "app": {
+        "value": 15,
+        "formula": "Humain +2"
+      },
+      "per": {
+        "value": 14,
+        "formula": "Humain+1"
+      }
+    },
+    "movement": {
+      "land": 8,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Griffes 30% (1d4-1) Crocs (1d6-1)",
+    "skills": "Identiques à celles possédées avant la transformation en Vampire.",
+    "powers": "<p>Armes naturelles (Griffes et Crocs) : Le Vampire peut occasionner des dégâts létaux à l’aide de ses ongles, qui sont plus solides que ceux des autres êtres humains, ainsi qu’avec ses crocs pointus. Lors d’un jet dans la compétence Bagarre, les dégâts de griffes occasionnent 1d4-1 dégâts et ceux de morsure 1d6-1 dégâts. Détection du sang : Un Vampire possède la capacité innée de sentir la présence de sang dans un rayon d’un kilomètre. Grâce à un jet de PERceptionx4, il peut déterminer si une source de sang se trouve alentours. Cela ne lui donne pas la nature du sang, ni la quantité, ni le lieu précis où se trouve cette source de nourriture, mais est ressenti comme un vague pressentiment dans une certaine direction. Fascination : Les Vampires possèdent un fort pouvoir d’attraction sur les êtres humains. Quand ils parviennent à capter le regard de leur cible, celle-ci peut perdre ses moyens, ressentant un mélange d’attirance, de peur et de soumission qui les empêche d’agir. Ce pouvoir fonctionne à peu près comme le sortilège Delecto ou le sortilège de Séduction, duquel ils sont directement inspirés et qui possèdent des effets relativement similaires. Le regard d’un Vampire charme une cible et la fascine tant que les regards ne se lâchent pas. Une fois que le contact visuel est rompu, les effets perdurent encore durant 1 round, à moins que le personnage ne subisse un contresort ou ne boive une potion qui en dissiperait les effets. La fascination ne peut cependant pas être utilisée sur une cible qui se trouve en train de combattre ou qui se trouve à plus de 9 mètres du Vampire. (Opposition : APP/POU) Forme brumeuse : Les Vampires peuvent employer un sortilège de brume de manière innée. Ainsi entourés de brume opaque, ils peuvent se déplacer sans être repérés. La portée de cette brume est de POUvoirx2 mètres autour du Vampire et se déplace avec lui. Ce brouillard blanc est si épais qu’on ne voit rien à travers. Ce brouillard peut être dissipé par un sortilège Finite Incantatem, par un vent magique, ou peut être percée par l’avantage « Troisième Œil ». Guérison : Les pouvoirs de guérison des Vampires sont bien supérieurs à la moyenne des autres Êtres. Quand il est blessé, le corps du Vampire se régénère magiquement pour soigner les blessures subies. Cela se traduit par une régénération de 1 point de vie par jour et par une vitesse de régénération des points de vie en cas de repos doublée par rapport à un être humain classique. Longévité : Les Vampires vivent bien plus longtemps que les Sorciers classiques. En règle générale, un Vampire peut largement dépasser les 200 ans. Morsure vampirique : Quand un Vampire mord une personne pour se repaître de son sang et si celle-ci ne meurt pas, elle est infectée par le vampirisme et se change à son tour en vampire. Les morsures de Vampires sont considérées comme incurables, même par des moyens magiques. Quand il emploie la morsure vampirique, le Vampire peut choisir de n’infliger qu’un point de dégâts au lieu du 1d6-1 dégâts de la morsure classique. Pouvoir du sang : Quand ils ont consommé du sang humain, les Vampires entrent dans une sorte de transe dans laquelle ils voient leur valeur de</p>",
+    "notes": "<p>Ail : Comme dans les mythes et légendes moldues, les Vampires craignent l’ail, dont ils ne peuvent supporter l’odeur. Tout Vampire en « contact » avec une odeur d’ail doit réussir un jet de CONx2 pour ne pas fuir sur le champ. Lumière : Les sortilèges de lumière sont douloureux aux yeux des Vampires qui, s’ils y sont soumis, ont 50% de chance d’être éblouis et de voir les compétences liés à la vision subir un malus de 25%. Pieu dans le cœur. Si une arme faite de bois et taillée en pointe est enfoncée dans le cœur du Vampire, celui-ci meurt sur le coup et se désagrège en cendres. Soleil : S’ils ne sont pas protégés par des sortilèges, les Vampires subissent la morsure du soleil, qui peut les réduire en cendres. Tout Vampire se trouvant en contact avec le soleil subit 1d4/2 dégâts par minute et a 50% de chances de s’enflammer, subissant alors des dégâts supplémentaires.</p>"
+  }
+}

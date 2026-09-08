@@ -1,0 +1,13 @@
+{
+  "_id": "cpVerruesducrapa",
+  "name": "Verrues du crapaud pourpre",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Les verrues du crapaud pourpre sont les verrues extraites d’un crapaud pourpre géant. Il est difficile d’extraire les verrues du crapaud pourpre géant, car le fait d’avoir enlevé les verrues les agace et ils ont tendance à se cacher.</p><p>Vendue 1 Gallion la pièce</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Dragonfortant\nRemède à la Dragoncelle",
+    "otherUses": "-"
+  }
+}

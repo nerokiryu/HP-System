@@ -1,0 +1,13 @@
+{
+  "_id": "cpBubonox0000000",
+  "name": "Bubonox",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une plante magique qui, réduite en poudre ou en bouillie, peut être employée pour la création de potions.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Acné",
+    "otherUses": "• Peut causer des éruptions de furoncles"
+  }
+}

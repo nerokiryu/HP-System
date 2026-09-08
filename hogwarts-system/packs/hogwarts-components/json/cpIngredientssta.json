@@ -1,0 +1,13 @@
+{
+  "_id": "cpIngredientssta",
+  "name": "Ingrédients standards",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Un mélange d’herbes communes connues pour leurs propriétés magiques très utiles pour la fabrication de potions</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Amnésie\nAntidote aux poisons courants\nHerbicide\nNeutralisation\nPotion de l’œil vif\nSomnifère\nSomnifère pour Croup",
+    "otherUses": ""
+  }
+}

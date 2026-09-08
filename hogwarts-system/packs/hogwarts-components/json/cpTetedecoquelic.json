@@ -1,0 +1,13 @@
+{
+  "_id": "cpTetedecoquelic",
+  "name": "Tête de coquelicot",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Tête de fleur de coquelicot, une fleur rouge fragile. Des têtes de coquelicot sont en vente chez l'apothicaire au prix de deux Gallions pour neuf têtes</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Rejutage",
+    "otherUses": "-"
+  }
+}

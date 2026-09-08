@@ -1,0 +1,69 @@
+{
+  "_id": "crHybrideTroll00",
+  "name": "Hybride Troll",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 12,
+      "max": 12
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 12
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "",
+    "stats": {
+      "str": {
+        "value": 13,
+        "formula": "Humain +2"
+      },
+      "con": {
+        "value": 13,
+        "formula": "Humain +2"
+      },
+      "siz": {
+        "value": 12,
+        "formula": "Humain +1"
+      },
+      "dex": {
+        "value": 10,
+        "formula": "Humain -1"
+      },
+      "int": {
+        "value": 11,
+        "formula": "Humain ±0"
+      },
+      "pow": {
+        "value": 11,
+        "formula": "Humain ±0"
+      },
+      "app": {
+        "value": 9,
+        "formula": "Humain -2"
+      },
+      "per": {
+        "value": 11,
+        "formula": "Humain ±0"
+      }
+    },
+    "movement": {
+      "land": 9,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Morsure (1) . Ce bonus vient s’ajouter au pourcentage possédé dans cette compétence. Héritage des rivières (Natation) : L’Hybride-Troll des rivières nage beaucoup mieux que la moyenne et n’a pas peur de l’eau. Quand il effectue un jet d’Athlétisme pour se déplacer dans l’eau, il le fait avec un bonus de 10%",
+    "skills": "Identiques à celles d’un Sorcier classique. suivantes Héritage des forêts (Camouflage) : Quand il reste totalement immobile dans la végétation, l’Hybride-Troll des forêts bénéficie d’un bonus de camouflage de 10% qui s’ajoute à sa compétence discrétion. Héritage des montagnes (Bagarre) : Quand il se bat, l’Hybride-Troll des montagnes bénéficie d’un bonus de 10% à sa compétence",
+    "powers": "<p>Armes naturelles (Morsure) : Comme le Troll, l’Hybride-Troll peut occasionner des dégâts létaux à l’aide de ses dents, grâce aux puissants muscles de ses mâchoires. Lors d’un jet de Bagarre, les dégâts de morsure occasionnent 1 dégât létal. Augmentation de force : L’héritage Troll de l’hybride lui permet d’augmenter momentanément sa force physique de 4 unités pour une durée de POUvoir minutes. Cette capacité fatigue cependant l’Hybride-Troll, qui devra ensuite se reposer pour récupérer durant une heure. Il peut utiliser cette capacité jusqu’à trois fois par jour. S’il ne se repose pas après avoir utilisé cette capacité, l’Hybride-Troll est incapable de la réutiliser jusqu’à ce qu’il se soit reposé. Endurance supérieur : Un Hybride-Troll possède une endurance supérieure à la normale. Quand il tente un jet dans sa compétence athlétisme pour un effort physique de longue durée, il bénéficie naturellement d’un bonus de 20% à son jet, qui vient s’ajouter au pourcentage de sa compétence. Odeur corporelle : L’Hybride-Troll dégage naturellement une forte odeur qui est considérée comme désagréable pour les autres. Celle-ci rend les jets de PERception (odorat) plus simple pour le repérer, diminuant la difficulté d’une catégorie. Les jets de perception difficiles passent à moyens, les moyens à faciles et les faciles à réussite automatique. Sudation : l’Hybride-Troll a tendance à transpirer abondamment, ce qui va de pair avec sa forte odeur corporelle. Même quand il ne fait pas chaud ou qu’il ne fait pas d’exercice, l’Hybride-Troll a tendance à transpirer plus que la moyenne. Cette sudation empire quand il fait un effort physique. HERITAGE : En fonction de son ancêtre Troll, l’Hybride-Troll bénéficie en plus de l’une des</p>",
+    "notes": ""
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "cpQueuedEruptif0",
+  "name": "Queue d'Éruptif",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Les queues d'Éruptif sont longues et tressées comme une corde.</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Potion jaillissante",
+    "otherUses": "-"
+  }
+}

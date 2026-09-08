@@ -1,0 +1,19 @@
+{
+  "_id": "spFlambois000000",
+  "name": "Flambois",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Sortilège faisant jaillir une intense lueur rouge de la baguette permettant de dessiner une marque enflammée.</p>",
+    "spellLevel": 1,
+    "spellType": "E",
+    "target": [
+      "X"
+    ],
+    "incantation": "",
+    "malus": -5,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

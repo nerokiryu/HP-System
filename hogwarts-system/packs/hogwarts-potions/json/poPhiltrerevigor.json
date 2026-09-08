@@ -1,0 +1,21 @@
+{
+  "_id": "poPhiltrerevigor",
+  "name": "Philtre revigorant",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Soigne la fatigue du consommateur et élimine immédiatement tous les dégâts non-létaux reçus. Ajoute également 2 points de vie temporaires qui disparaissent une fois l’effet de la potion arrivé à terme.</p><p>Effet : Annulation des dégâts non-létaux.</p><p>Effet secondaire : Ajoute 2 points de vie temporaires.</p><p>Durée : 1d6+1 heure</p><p>Remarque : une fois les points de vie temporaires disparus, le consommateur reste au minimum à 1 point de vie.</p>",
+    "potionLevel": 5,
+    "malus": -50,
+    "target": "P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Cranson, Eau de miel, Infusion de vervaine, Livèche",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

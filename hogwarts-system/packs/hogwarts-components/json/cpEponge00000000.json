@@ -1,0 +1,13 @@
+{
+  "_id": "cpEponge00000000",
+  "name": "Éponge",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Les éponges peuvent être d’origine animale – éponges de mer – ou végétale – Luffa.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Duplication\nSolution de développement\nVérification",
+    "otherUses": "• Nettoyage"
+  }
+}

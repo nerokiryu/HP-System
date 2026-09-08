@@ -1,0 +1,13 @@
+{
+  "_id": "cpCheveuxdedrago",
+  "name": "Cheveux de dragon asiatique",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des cheveux qui proviennent de dragons asiatiques. Leur récupération est difficile et souvent très dangereuse pour ceux et celles qui s’y essaient.</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Lissenplis",
+    "otherUses": "-"
+  }
+}

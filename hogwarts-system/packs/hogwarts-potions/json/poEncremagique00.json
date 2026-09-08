@@ -1,0 +1,51 @@
+{
+  "_id": "poEncremagique00",
+  "name": "Encre magique",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Cette encre magique possède certaines propriétés particulières qui sont employées pour rédiger des pactes magiques sous forme de contrats. De tels contrats peuvent concerner deux personnes qui se lient ou décrivent le fonctionnement d’un objet magique.</p><p>Effet secondaire : Rompre un pacte ou un contrat rédigé à l’aide de cette encre magique implique de lourdes conséquences, généralement décrites avec soin lors de leur rédaction.</p>",
+    "potionLevel": 4,
+    "malus": -40,
+    "target": "P",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Acanthe",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Chrysope",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Chèvrefeuille",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Écaille de dragon",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Plume de phénix",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Sang de dragon Spécial : Sang des deux contractants",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

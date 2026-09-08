@@ -1,0 +1,19 @@
+{
+  "_id": "spPintadeencocho",
+  "name": "Pintade en cochon d'Inde",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Métamorphose une pintade en cochon d’Inde</p><p>Durée : permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 4,
+    "spellType": "M",
+    "target": [
+      "A"
+    ],
+    "incantation": "Caviidafors",
+    "malus": -40,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

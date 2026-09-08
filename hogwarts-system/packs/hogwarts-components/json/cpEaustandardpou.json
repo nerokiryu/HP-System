@@ -1,0 +1,13 @@
+{
+  "_id": "cpEaustandardpou",
+  "name": "Eau standard pour potion",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>De l’eau (probablement de l’eau déminéralisée) employée communément dans la fabrication de potions. Même si elle n’est pas clairement indiquée comme un ingrédient d’une potion, presque toutes emploient cette eau comme base pour mélanger les ingrédients.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Aliments magiques\nConscience\nPhiltre de Mort Vivante\nGlue\nMélange de bile de tatou",
+    "otherUses": "-"
+  }
+}

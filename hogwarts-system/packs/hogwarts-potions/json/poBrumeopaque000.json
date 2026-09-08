@@ -1,0 +1,39 @@
+{
+  "_id": "poBrumeopaque000",
+  "name": "Brume opaque",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Une fois à l’air libre, la potion s’étend sous la forme d’un brouillard blanc et épais dans lequel on ne voit rien sur une vingtaine de mètres.</p><p>Durée : 1 heure</p>",
+    "potionLevel": 2,
+    "malus": -20,
+    "target": "X",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Bicarbonate de soude",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Sang de salamandre",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Sel d’ammoniaque",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Sucre",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "spInvisibilitePl",
+  "name": "Invisibilité (Plante)",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Une plante devient invisible. PERception x1 pour percer l’invisibilité.</p><p>Durée : 1 jour.</p><p>Formule extrême : -</p>",
+    "spellLevel": 3,
+    "spellType": "S",
+    "target": [
+      "V"
+    ],
+    "incantation": "Vegetus evanesco",
+    "malus": -30,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "_id": "spRepoustout0000",
+  "name": "Repoustout",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Repousse la cible en arrière, lui causant 2 dégâts non létaux. Peut également être utilisé pour repousser de lourds objets (jusqu’à</p><p>POUvoirx2 Kg). Ce sortilège émet un son semblable à une poêle frappant quelque chose quand il est lancé.</p><p>Durée : -</p><p>Formule extrême : Occasionne 3 dégâts non-létaux ; jusqu’à POUvoir x 3 Kg</p>",
+    "spellLevel": 2,
+    "spellType": "S",
+    "target": [
+      "A",
+      "O",
+      "P",
+      "V"
+    ],
+    "incantation": "flipendo",
+    "malus": -25,
+    "extremeFormula": true,
+    "malusExtremeFormula": -35,
+    "malusMastered": -15
+  }
+}

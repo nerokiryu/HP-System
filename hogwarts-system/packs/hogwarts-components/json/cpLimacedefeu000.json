@@ -1,0 +1,13 @@
+{
+  "_id": "cpLimacedefeu000",
+  "name": "Limace de feu",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des limaces enflammées qui sont capables de mettre le feu à des forêts entières.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Énergie magique",
+    "otherUses": ""
+  }
+}

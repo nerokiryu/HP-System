@@ -1,0 +1,19 @@
+{
+  "_id": "spMaleficedurire",
+  "name": "Maléfice du rire",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Fait rire la cible de manière incontrôlée</p><p>Effet : Inflige un malus de 50% à toute les actions, y compris le lancement de sorts, tout en provoquant l’épuisement</p><p>Effet secondaire : Occasionne 1 dégâts non létal par heure jusqu’à épuisement total (0 point de vie), plongeant la cible dans le coma.</p><p>Sous-type : Maléfice</p><p>Durée : Permanente</p>",
+    "spellLevel": 4,
+    "spellType": "S",
+    "target": [
+      "P"
+    ],
+    "incantation": "",
+    "malus": -40,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "_id": "poPotionNo700000",
+  "name": "Potion No. 7",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Provoque une violente douleur qui est rapidement suivie par l’épuisement et la paralysie de celui qui la consomme.</p><p>Effet : 1d4-1 dégâts non létaux lors de la consommation</p><p>Effets secondaires : Paralysie totale du corps et incapacité à bouger durant 1d4 heure(s) au bout d’une minute</p><p>VIRulence : 11</p><p>Remarque : Mal préparée, cette potion provoque la mort de celui qui la consomme en arrêtant son cœur.</p>",
+    "potionLevel": 3,
+    "malus": -30,
+    "target": "A/P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Épine de poisson-diable",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Feuille de Tentacula vénéneuse",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

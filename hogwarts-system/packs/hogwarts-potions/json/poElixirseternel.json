@@ -1,0 +1,51 @@
+{
+  "_id": "poElixirseternel",
+  "name": "Élixirs éternels",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Permet de rendre les effets d’une potion permanente. Le temps pour préparer un élixir éternel et le coût des ingrédients sont néanmoins prohibitifs pour de simples élèves.</p>",
+    "potionLevel": 6,
+    "malus": 0,
+    "target": "P/O",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Acanthe",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Larme de phénix",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Plume de phénix",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Reishi",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Résine",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Rose de Jéricho",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

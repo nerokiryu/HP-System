@@ -1,0 +1,13 @@
+{
+  "_id": "cpEpinedeSharak0",
+  "name": "Épine de Sharak",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des épines provenant d’un Sharak, un poisson peuplant les eaux de l’océan Atlantique. Peut être employé dans une variante du remède contre les furoncles</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Anti-Furoncles",
+    "otherUses": "-"
+  }
+}

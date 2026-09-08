@@ -1,0 +1,20 @@
+{
+  "_id": "spSupplicedeMeta",
+  "name": "Supplice de Métamorphose",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Transforme lentement la cible en pierre</p><p>Effet : Le corps de la cible se change petit à petit en pierre jusqu’à ce qu’elle meure.</p><p>Effet secondaire : Fait atrocement souffrir la cible</p><p>Sous-type : Maléfice</p><p>Durée : Permanente</p><p>Remarque : Contrairement à d’autres sortilèges mortels, le supplice de la Métamorphose peut être contré par un contre-maléfice spécifique.</p>",
+    "spellLevel": 6,
+    "spellType": "S",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "",
+    "malus": -75,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

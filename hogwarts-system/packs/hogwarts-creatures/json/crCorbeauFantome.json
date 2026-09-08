@@ -1,0 +1,69 @@
+{
+  "_id": "crCorbeauFantome",
+  "name": "Corbeau Fantôme",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 8,
+      "max": 8
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 8
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "",
+    "stats": {
+      "str": {
+        "value": 10,
+        "formula": "0"
+      },
+      "con": {
+        "value": 10,
+        "formula": "0"
+      },
+      "siz": {
+        "value": 6,
+        "formula": "2d4+1"
+      },
+      "dex": {
+        "value": 13,
+        "formula": "3d6+2"
+      },
+      "int": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "pow": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "app": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "per": {
+        "value": 14,
+        "formula": "3d6+3"
+      }
+    },
+    "movement": {
+      "land": 10,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "/ARMURE Intangible Acrobatie : 60%, Discrétion : 60% ; Esquive : 35%, Orientation : 50% ; Vigilance : 50% ; Voler : 75%",
+    "skills": "",
+    "powers": "<p>Imitation des sons : Comme quand il était encore vivant, le corbeau fantôme peut imiter des sons simples qu'il a entendus, comme le chuchotement d'une personne, un bébé qui pleure ou un petit cri animal. On peut néanmoins se rendre compte qu'il s'agit d'imitations si on réussit un jet de POUvoir x3. Intangible : Comme tous les esprits, le corbeau fantôme ne possède pas de corps physique, ce qui l'immunise à de nombreux sortilèges et affections. Par exemple, celui-ci est insensible aux poisons qui affectent les vivants. La majeure partie des sorts agissant sur la matière ne sont donc d’aucun effet sur eux. Le corbeau fantôme peut également traverser la matière à volonté. FANTOME Dans le monde des Sorciers, un fantôme est l'empreinte transparente en trois dimensions d'une Sorcière ou d'un Sorcier décédé qui continue d'exister dans le monde des mortels. Les Moldus ne peuvent pas revenir en tant que fantômes, et les Sorciers et Sorciers les plus sages choisissent de ne pas le faire. Les fantômes sont donc les Sorciers et les Sorcières qui ont, comme le veulent les légendes moldues, des affaires inachevées dans le monde des vivants. Il peut s’agir d’une peur, de culpabilité, de regrets ou d’attachement manifeste au monde matériel, comme à une personne ou un lieu. C’est cet attachement qui empêche le fantôme de passer à la dimension suivante. Cette non-vie choisie par les fantômes limite néanmoins considérablement leur capacité à interagir avec le monde des vivants. Les fantômes ne possèdent dès lors plus de plaisir physique et leurs connaissances et capacités restent celles qu’elles étaient lors de leur vivant, sans espoir d’amélioration. Au contraire, les évènements qui ont conduit au choix de devenir des fantômes s’aggraveront petit à petit avec le temps, les peurs s’accentuant, les rancœurs ne faisant que croître, faisant des fantômes des êtres de mauvaise compagnie. Les fantômes ne peuvent répondre à la fameuse question que tout le monde se pose, à savoir ce que réserve l’après-vie, car ils ont eux-mêmes fait le choix d’une demi-vie plutôt que d’embrasser la mort.</p>",
+    "notes": ""
+  }
+}

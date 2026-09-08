@@ -1,0 +1,21 @@
+{
+  "_id": "poEssencededicta",
+  "name": "Essence de dictame",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>L’essence de dictame permet de soigner les blessures et les plaies ouvertes, laissant la place à une peau neuve.</p><p>Effet : redonne 2d4+1 points de vie. A fortes doses, cette essence peut devenir un poison mortel ou incapacitant.</p><p>Remarque : Peut également soigner les blessures dues à la désartibulation</p>",
+    "potionLevel": 5,
+    "malus": -50,
+    "target": "A/V/P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Dictame",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "spSortilegederep",
+  "name": "Sortilège de réparation",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet de réparer une petite cassure ou un petit trou sur un objet non magique. Durée : permanente.</p><p>Formule extrême : répare des cassures et dégâts de moyenne à grande importance</p>",
+    "spellLevel": 1,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "« Nom » reparo",
+    "malus": -10,
+    "extremeFormula": true,
+    "malusExtremeFormula": -20,
+    "malusMastered": 0
+  }
+}

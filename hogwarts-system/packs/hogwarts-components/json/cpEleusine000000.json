@@ -1,0 +1,13 @@
+{
+  "_id": "cpEleusine000000",
+  "name": "Éleusine",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Herbe annuelle de petite taille, présente dans les régions tropicales et subtropicales, connue pour ses vertus médicinales</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "• Vertus médicinales"
+  }
+}

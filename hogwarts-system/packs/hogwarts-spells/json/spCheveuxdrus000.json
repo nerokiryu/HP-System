@@ -1,0 +1,19 @@
+{
+  "_id": "spCheveuxdrus000",
+  "name": "Cheveux drus",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet de faire pousser les cheveux de manière disproportionnée, gênant la vue de la cible. Jet d’observation = PERx2 (au lieu de PERx5).</p><p>Durée : permanente</p><p>Formule extrême : Cheveux et poils poussent pour gêner le sorcier. Jet d’observation PERx1 et malus de 10% aux actions de déplacement</p>",
+    "spellLevel": 2,
+    "spellType": "E",
+    "target": [
+      "P"
+    ],
+    "incantation": "",
+    "malus": -20,
+    "extremeFormula": true,
+    "malusExtremeFormula": -30,
+    "malusMastered": -10
+  }
+}

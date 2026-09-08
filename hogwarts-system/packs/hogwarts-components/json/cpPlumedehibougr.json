@@ -1,0 +1,13 @@
+{
+  "_id": "cpPlumedehibougr",
+  "name": "Plume de hibou grand-duc",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une plume provenant d’un hibou grand-duc.</p><p>Vendue 3 mornilles la pièce</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Cirassure\nDragonfortant",
+    "otherUses": "• Plume à écrire"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "spMaleficedeDoig",
+  "name": "Maléfice de Doigtencoton",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Impose un malus de 50 % à toute action utilisant les mains durant 1d4 heures</p><p>Sous-type : Maléfice</p><p>Formule extrême : Malus de 60% et durée +1 heure</p>",
+    "spellLevel": 1,
+    "spellType": "S",
+    "target": [
+      "P"
+    ],
+    "incantation": "Digitus Wibbly",
+    "malus": -15,
+    "extremeFormula": true,
+    "malusExtremeFormula": -25,
+    "malusMastered": -5
+  }
+}

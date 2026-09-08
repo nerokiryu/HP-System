@@ -1,0 +1,13 @@
+{
+  "_id": "cpQueuedeMalagri",
+  "name": "Queue de Malagrif tacheté",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>La queue d’un Malagrif, une créature terrestre magique ressemblant à un homard</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "• Poison (chaire)"
+  }
+}

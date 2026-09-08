@@ -1,0 +1,19 @@
+{
+  "_id": "spAntimalefice17",
+  "name": "Anti-maléfice de Flagrance",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet de contrer les effets du maléfice de Flagrance</p><p>Formule extrême : -</p>",
+    "spellLevel": 5,
+    "spellType": "E",
+    "target": [
+      "P"
+    ],
+    "incantation": "",
+    "malus": -45,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

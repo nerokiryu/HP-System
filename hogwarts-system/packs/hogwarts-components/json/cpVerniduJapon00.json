@@ -1,0 +1,13 @@
+{
+  "_id": "cpVerniduJapon00",
+  "name": "Verni du Japon",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Arbre de la famille des Sumacs. Sa sève est utilisée pour la production de la laque.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Verni protecteur",
+    "otherUses": "-"
+  }
+}

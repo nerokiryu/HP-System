@@ -1,0 +1,20 @@
+{
+  "_id": "spLiberation0000",
+  "name": "Libération",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Ce maléfice sert à faire lâcher prise ou à ouvrir des liens, magiques ou non. Durée : -</p><p>Formule extrême : -</p>",
+    "spellLevel": 2,
+    "spellType": "S",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "Lashlabask",
+    "malus": -30,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

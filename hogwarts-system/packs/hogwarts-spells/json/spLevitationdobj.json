@@ -1,0 +1,19 @@
+{
+  "_id": "spLevitationdobj",
+  "name": "Lévitation d’objets",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet de soulever un objet du sol et de contrôler sa trajectoire.</p><p>Maximum : POU x 3 kg.</p><p>Durée : volontaire</p><p>Formule extrême : Poids de POUx4 kg</p>",
+    "spellLevel": 1,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "Wingardium leviosa",
+    "malus": 0,
+    "extremeFormula": true,
+    "malusExtremeFormula": -10,
+    "malusMastered": 0
+  }
+}

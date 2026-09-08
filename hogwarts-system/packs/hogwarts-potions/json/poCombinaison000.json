@@ -1,0 +1,51 @@
+{
+  "_id": "poCombinaison000",
+  "name": "Combinaison",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Cette potion n’a pas d’effet particulier si ce n’est qu’elle permet de combiner les effets de différentes potions et sorts dans une seule potion.</p><p>Effet secondaire : de nouveaux effets aléatoires peuvent apparaître.</p>",
+    "potionLevel": 5,
+    "malus": -60,
+    "target": "O",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Acanthe",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Chèvrefeuille",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Crin de cheval",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Goudron",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Résine",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Tourbillon rouge",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

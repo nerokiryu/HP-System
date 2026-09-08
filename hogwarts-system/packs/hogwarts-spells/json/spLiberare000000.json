@@ -1,0 +1,19 @@
+{
+  "_id": "spLiberare000000",
+  "name": "Liberare",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Une variante ancienne du sortilège d’ouverture, un peu plus complexe à employer mais permettant d’ouvrir les portes et les serrures.</p><p>Durée : -</p><p>Formule extrême : -</p>",
+    "spellLevel": 1,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "Liberare",
+    "malus": -25,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

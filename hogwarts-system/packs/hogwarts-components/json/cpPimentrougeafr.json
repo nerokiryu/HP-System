@@ -1,0 +1,13 @@
+{
+  "_id": "cpPimentrougeafr",
+  "name": "Piment rouge africain",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des piments rouges connus pour être très forts et provenant d’Afrique</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Caféine",
+    "otherUses": "• Dentifrice piquant • Solution de soin dentaire"
+  }
+}

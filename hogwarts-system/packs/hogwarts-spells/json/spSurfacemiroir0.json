@@ -1,0 +1,19 @@
+{
+  "_id": "spSurfacemiroir0",
+  "name": "Surface miroir",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Fait apparaître une surface argentée sur un support, qui reflète tout ce qui passe devant.</p><p>Durée : 2d4+2 heures</p><p>Formule extrême : durée 1d4+1 jours</p>",
+    "spellLevel": 1,
+    "spellType": "E",
+    "target": [
+      "X"
+    ],
+    "incantation": "Mirare",
+    "malus": -10,
+    "extremeFormula": true,
+    "malusExtremeFormula": -20,
+    "malusMastered": 0
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "cpPusdeBubobulb0",
+  "name": "Pus de Bubobulb",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Du pus récupéré sur une plante magique de</p><p>Bubobulbe. Très efficace pour se débarrasser de l’acné. Non dilué, il peut laisser de douloureux furoncles sur la peau. De couleur jaune-verte, il sent comme du pétrole</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Anti-acné\nFausses potions de protection\nPotion d’atténuation",
+    "otherUses": "• Vertus médicinales"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "cpChrysope000000",
+  "name": "Chrysope",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des insectes verts non magiques connus pour leurs grandes ailes qui s’entrelacent lorsqu’ils volent.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Polynectar\nVérification",
+    "otherUses": "• Nourriture pour familier"
+  }
+}

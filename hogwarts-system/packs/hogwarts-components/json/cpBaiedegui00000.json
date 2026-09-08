@@ -1,0 +1,13 @@
+{
+  "_id": "cpBaiedegui00000",
+  "name": "Baie de gui",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Le gui est une plante parasite qui ne possède pas de racines mais se fixe sur un arbre hôte dont elle absorbe la sève à travers un ou des suçoirs.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Amnésie\nAntidote aux poisons communs\nPommade pommadante Grégoire",
+    "otherUses": "• Poison (ingestion)"
+  }
+}

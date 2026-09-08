@@ -1,0 +1,20 @@
+{
+  "_id": "spColle000000000",
+  "name": "Colle",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Colle les pieds d’une personne ou les pattes d’un animal au sol. Ceux- ci doivent réussir un jet de FORx3 pour se libérer.</p><p>Durée : Variable (heures).</p><p>Formule extrême : FORx4 et durée +1 heure</p>",
+    "spellLevel": 2,
+    "spellType": "S",
+    "target": [
+      "P",
+      "A"
+    ],
+    "incantation": "Agglutino",
+    "malus": -20,
+    "extremeFormula": true,
+    "malusExtremeFormula": -30,
+    "malusMastered": -10
+  }
+}

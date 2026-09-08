@@ -1,0 +1,13 @@
+{
+  "_id": "cpSangsue0000000",
+  "name": "Sangsue",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une variété de parasites aquatiques ressemblant à une limace et qui se ventouse à la peau de ses victimes pour boire leur sang.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Polynectar",
+    "otherUses": "• Médecine médiévale"
+  }
+}

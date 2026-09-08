@@ -1,0 +1,20 @@
+{
+  "_id": "spDiscretion0000",
+  "name": "Discrétion",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Diminue considérablement les sons émis par une personne.</p><p>Effet : donne un bonus de 30 % à la discrétion.</p><p>Durée : 1d4+2 heures</p><p>Formule extrême : +40% à la Discrétion et durée +1 heure</p>",
+    "spellLevel": 2,
+    "spellType": "E",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "Sonus evanesco",
+    "malus": -30,
+    "extremeFormula": true,
+    "malusExtremeFormula": -45,
+    "malusMastered": -15
+  }
+}

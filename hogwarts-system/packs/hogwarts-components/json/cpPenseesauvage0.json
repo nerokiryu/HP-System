@@ -1,0 +1,13 @@
+{
+  "_id": "cpPenseesauvage0",
+  "name": "Pensée sauvage",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Également connue sous le nom de Pensée tricolore, il s’agit d’une petite fleur violette cultivée dans les jardins des moldus.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Brume de Pensine\nSolution de développement\nVeritaserum",
+    "otherUses": ""
+  }
+}

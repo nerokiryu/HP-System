@@ -1,0 +1,13 @@
+{
+  "_id": "cpOrtiesechee000",
+  "name": "Ortie séchée",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Plante herbacée connue pour ses feuilles hérissées de poils raides et qui sécrètent un liquide très irritant.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Acné\nAnti-Furoncles\nEnflure\nPhiltre dégonflant",
+    "otherUses": "• Consommable"
+  }
+}

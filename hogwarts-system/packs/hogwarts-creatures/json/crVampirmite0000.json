@@ -1,0 +1,69 @@
+{
+  "_id": "crVampirmite0000",
+  "name": "Vampirmite",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>-</p>",
+    "health": {
+      "value": 3,
+      "max": 3
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 3
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XX",
+    "stats": {
+      "str": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "con": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "siz": {
+        "value": 1,
+        "formula": "1"
+      },
+      "dex": {
+        "value": 13,
+        "formula": "3d6+2"
+      },
+      "int": {
+        "value": 1,
+        "formula": "1"
+      },
+      "pow": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "app": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "per": {
+        "value": 7,
+        "formula": "2d6"
+      }
+    },
+    "movement": {
+      "land": 6,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 1
+    },
+    "attacks": "Dards : 15% (1)",
+    "skills": "Acrobatie 60%, Athlétisme : 25% ; Esquive 50%, Discrétion 80%, Orientation : 25% ; Survie 20% ; Vigilance 20% ; Voler : 45%",
+    "powers": "<p>Régénération : La Vampirmite peut se soigner à l’aide du nectar des plantes qu’elle consomme. Quand elle subit des blessures, la Vampirmite va absorber tout le nectar d’une plante pour récupérer de 1 à 3 points de vie. Cette opération est généralement fatale à la plante. Voler : La Vampirmite est capable de voler. Ses deux paires d’ailes lui permettent d’effectuer des changements rapides de direction avec facilité.</p>",
+    "notes": ""
+  }
+}

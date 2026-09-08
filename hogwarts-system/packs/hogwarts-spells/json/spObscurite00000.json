@@ -1,0 +1,20 @@
+{
+  "_id": "spObscurite00000",
+  "name": "Obscurité",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Rend la personne ou l’objet visé noir ou l’empêche de voir.</p><p>Durée : 1 heure</p><p>Formule extrême : durée +3 heures</p>",
+    "spellLevel": 3,
+    "spellType": "E",
+    "target": [
+      "O",
+      "P"
+    ],
+    "incantation": "Obscuro",
+    "malus": -30,
+    "extremeFormula": true,
+    "malusExtremeFormula": -40,
+    "malusMastered": -20
+  }
+}

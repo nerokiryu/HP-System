@@ -1,0 +1,51 @@
+{
+  "_id": "poAmortentia0000",
+  "name": "Amortentia",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Cette potion produit une forte attirance ou une obsession en copiant le sentiment d’amour. Il s’agit de l’un des philtres d’amour les plus puissants qui existent. L'Amortentia peut être identifiée grâce à sa couleur nacrée, sa vapeur qui s'élève en spirales et l'odeur attirante qu'elle dégage, différente pour chacun.</p><p>Effets : Copie le sentiment d’amour</p><p>Temps d’incubation : 1 heure</p><p>VIRulence : 15</p><p>Durée : 1 jour</p>",
+    "potionLevel": 5,
+    "malus": -50,
+    "target": "A/P",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Épine de rose",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Menthe poivrée",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Œuf de Serpencendre",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Pétale de rose",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Poudre de pierre de lune",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Poussière de perle",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

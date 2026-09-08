@@ -1,0 +1,13 @@
+{
+  "_id": "cpTetedemouchero",
+  "name": "Tête de moucherons",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des têtes de moucherons, petits insectes volants dont font partie, par exemple, les moustiques</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "• Nourriture pour animaux"
+  }
+}

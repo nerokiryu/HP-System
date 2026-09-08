@@ -1,0 +1,39 @@
+{
+  "_id": "poPhiltrecalma02",
+  "name": "Philtre calmant pour Chartier",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Un philtre spécialement conçu pour les Chartier qui permet de calmer ceux-ci en quelques secondes</p><p>Effet : Supprime le stress en diminuant les effets de celui-ci de 15%. Les diminutions sont cumulables en cas de consommation de plusieurs doses.</p><p>Remarque : Contrairement au philtre calmant classique, celui-ci ne provoque pas l’endormissement de la cible</p>",
+    "potionLevel": 3,
+    "malus": -30,
+    "target": "A",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Cœur de crocodile",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Lavande",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Menthe poivrée",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Poils de Chartier",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

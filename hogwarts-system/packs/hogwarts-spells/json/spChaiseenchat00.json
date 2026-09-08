@@ -1,0 +1,19 @@
+{
+  "_id": "spChaiseenchat00",
+  "name": "Chaise en chat",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Métamorphose une chaise en chat</p><p>Durée : permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 3,
+    "spellType": "M",
+    "target": [
+      "O"
+    ],
+    "incantation": "Felifors",
+    "malus": -35,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "spSecheresse0000",
+  "name": "Sécheresse",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet d’assécher de petites étendues d’eau.</p><p>Durée : permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 1,
+    "spellType": "E",
+    "target": [
+      "X"
+    ],
+    "incantation": "",
+    "malus": -15,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

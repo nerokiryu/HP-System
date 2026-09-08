@@ -1,0 +1,20 @@
+{
+  "_id": "spLanguedePlomb0",
+  "name": "Langue de Plomb",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Empêche la cible de parler en faisant des nœuds avec sa langue et inflige un malus de 80% à la magie.</p><p>Remarque : Ce sortilège possède deux incantations</p><p>Sous-type : Maléfice</p><p>Durée : 1d4+1 rounds.</p><p>Formule extrême : durée +2 rounds</p>",
+    "spellLevel": 2,
+    "spellType": "S",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "Mimble Wimble / Mutismus",
+    "malus": -30,
+    "extremeFormula": true,
+    "malusExtremeFormula": -45,
+    "malusMastered": -15
+  }
+}

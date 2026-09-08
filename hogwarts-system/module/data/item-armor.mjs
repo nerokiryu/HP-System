@@ -37,6 +37,18 @@ export default class HogwartsArmor extends HogwartsItemBase {
       max: 10,
     });
 
+    // Only worn armour reduces incoming damage (Chap. 2.8.1).
+    schema.equipped = new fields.BooleanField({ initial: false });
+
+    // A shield adjusts the parry roll by ±10 % or ±20 % (Chap. 2.8.2): the bonus
+    // applies to parrying and the same figure is a penalty when attacking.
+    schema.shieldBonus = new fields.NumberField({
+      ...requiredInteger,
+      initial: 0,
+      min: 0,
+      max: 20,
+    });
+
     return schema;
   }
 }

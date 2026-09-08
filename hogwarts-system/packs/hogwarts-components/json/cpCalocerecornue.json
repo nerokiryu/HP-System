@@ -1,0 +1,13 @@
+{
+  "_id": "cpCalocerecornue",
+  "name": "Calocère cornue",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>La Calocère cornue est une espèce de champignon jaune en forme de trompe et qui possède un chapeau plat et brunâtre. Ce champignon n’a pas la réputation d’être toxique ou vénéneux bien qu’il soit classé comme non comestible</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Infusion infecte",
+    "otherUses": "-"
+  }
+}

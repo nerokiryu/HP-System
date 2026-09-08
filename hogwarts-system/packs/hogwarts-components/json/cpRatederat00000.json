@@ -1,0 +1,13 @@
+{
+  "_id": "cpRatederat00000",
+  "name": "Rate de rat",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Organe provenant de rat et entrant dans la composition de nombreuses potions</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Engrais magiques\nFertilisant\nPoison de vieillissement\nRatatinage",
+    "otherUses": "-"
+  }
+}

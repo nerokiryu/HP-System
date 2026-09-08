@@ -1,0 +1,13 @@
+{
+  "_id": "cpEssencedeConso",
+  "name": "Essence de Consoude",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une huile essentielle obtenue grâce aux fleurs de consoude et connue pour ses vertus médicinales</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Remontant de Pomfresh",
+    "otherUses": "• Vertus médicinales"
+  }
+}

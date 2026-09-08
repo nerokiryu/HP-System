@@ -1,0 +1,13 @@
+{
+  "_id": "cpRacinedevaleri",
+  "name": "Racine de valériane",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des racines provenant de valériane, une plante connue à l'époque médiévale pour ses propriétés sédatives et antispasmodiques, et qui était utilisée comme remède pour le sommeil et les nerfs.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Goutte de Mort Vivant\nGaz étrangleur\nPhiltre de Paix\nPotion d’ataraxie\nSommeil sans rêve",
+    "otherUses": "• Vertus médicinales (soigne l’insomnie)"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "cpCheveuxdejumea",
+  "name": "Cheveux de jumeaux véritables",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des cheveux provenant de deux jumeaux véritables</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Duplication",
+    "otherUses": ""
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "cpGriffededragon",
+  "name": "Griffe de dragon",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des griffes venant de plusieurs espèces de dragon. Contrairement à d’autres parties du corps des dragons, les griffes sont aisément récupérables car elles tombent naturellement ou lors d’affrontements entre dragons.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Élixir cérébral de Baruffio\nPommade soignante pour sabot\nSolution scintillante",
+    "otherUses": "-"
+  }
+}

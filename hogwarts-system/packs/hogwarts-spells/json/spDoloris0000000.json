@@ -1,0 +1,19 @@
+{
+  "_id": "spDoloris0000000",
+  "name": "Doloris",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Inflige un malus de 95% à toutes les actions de la cible sous l'effet de la douleur, peut rendre fou. Remarque : Pour que le sort fonctionne, il faut vouloir la souffrance de l'autre et y prendre du plaisir.</p><p>Sous-type : Maléfice</p><p>Durée : Volontaire</p>",
+    "spellLevel": 6,
+    "spellType": "S",
+    "target": [
+      "P"
+    ],
+    "incantation": "Endoloris",
+    "malus": -100,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

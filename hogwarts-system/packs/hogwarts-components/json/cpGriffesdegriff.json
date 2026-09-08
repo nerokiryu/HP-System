@@ -1,0 +1,13 @@
+{
+  "_id": "cpGriffesdegriff",
+  "name": "Griffes de griffon",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une griffe de griffon, une bête magique moitié aigle moitié lion. Il n’est pas précisé si les griffes sont des serres de la partie aigle, ou les griffes de la partie lion.</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Solution de force",
+    "otherUses": "-"
+  }
+}

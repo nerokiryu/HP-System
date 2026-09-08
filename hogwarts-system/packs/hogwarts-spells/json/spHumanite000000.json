@@ -1,0 +1,19 @@
+{
+  "_id": "spHumanite000000",
+  "name": "Humanité",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Rend sa forme humaine à un garou, un animagus ou à un humain métamorphosé (Opposition : POU/POU).</p><p>Durée : -</p><p>Formule extrême : -</p>",
+    "spellLevel": 4,
+    "spellType": "E",
+    "target": [
+      "P"
+    ],
+    "incantation": "Homomorphus",
+    "malus": -40,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

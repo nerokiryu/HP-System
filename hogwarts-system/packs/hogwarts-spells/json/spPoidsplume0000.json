@@ -1,0 +1,19 @@
+{
+  "_id": "spPoidsplume0000",
+  "name": "Poids-plume",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet de rendre un objet aussi léger qu’une plume.</p><p>Durée : POU heures</p>",
+    "spellLevel": 2,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "",
+    "malus": -25,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

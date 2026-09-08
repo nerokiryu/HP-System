@@ -1,0 +1,45 @@
+{
+  "_id": "poPhiltredePaix0",
+  "name": "Philtre de Paix",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Calme l’anxiété et l’agitation.</p><p>Effet : Suppression immédiate des malus dus au stress.</p><p>Durée : 1 jour</p><p>Remarque : Mal dosée, la potion est un puissant somnifère dont les effets peuvent être irréversibles</p>",
+    "potionLevel": 5,
+    "malus": -50,
+    "target": "P",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Corne de licorne",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Épine de porc-épic",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Poudre de pierre de lune",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Racine de valériane",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Sirop d'ellébore",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

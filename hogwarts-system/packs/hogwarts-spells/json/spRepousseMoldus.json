@@ -1,0 +1,19 @@
+{
+  "_id": "spRepousseMoldus",
+  "name": "Repousse-Moldus",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Empêche les moldus de pénétrer dans la zone enchantée par ce sort.</p><p>Durée : 1 jour</p><p>Formule extrême : durée +1 jour</p>",
+    "spellLevel": 3,
+    "spellType": "E",
+    "target": [
+      "P"
+    ],
+    "incantation": "Repello Moldum",
+    "malus": -40,
+    "extremeFormula": true,
+    "malusExtremeFormula": -50,
+    "malusMastered": -30
+  }
+}

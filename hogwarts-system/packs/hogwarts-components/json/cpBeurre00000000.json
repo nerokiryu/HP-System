@@ -1,0 +1,13 @@
+{
+  "_id": "cpBeurre00000000",
+  "name": "Beurre",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Produit laitier extrait, par barattage, de la crème issue du lait</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Aliments magiques\nAcné",
+    "otherUses": "• Consommable"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "cpPoilsdeCroup00",
+  "name": "Poils de Croup",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des poils provenant d’un Croup, un animal magique ressemblant à un chien mais possédant une queue fourchue</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Somnifère pour Croup",
+    "otherUses": ""
+  }
+}

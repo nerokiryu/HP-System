@@ -1,0 +1,19 @@
+{
+  "_id": "spBrumedoree0000",
+  "name": "Brume dorée",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>La brume dorée perturbe celui qui va dedans en lui donnant l’impression d’être suspendu la tête en bas.</p><p>Effet : Pour se déplacer, le personnage doit effectuer un jet d’équilibre (DEXx3) pour ne pas tomber au sol.</p><p>Effet secondaire : Les actions d’orientation ou nécessitant de déplacer des objets magiquement se font avec un malus de 15% supplémentaire</p><p>Durée : Permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 4,
+    "spellType": "E",
+    "target": [
+      "X"
+    ],
+    "incantation": "",
+    "malus": -40,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

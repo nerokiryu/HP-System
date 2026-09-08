@@ -1,0 +1,69 @@
+{
+  "_id": "crSombral0000000",
+  "name": "Sombral",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>Le crin de Sombral peut être utiliser pour la fabrication de divers objets magiques, comme les baguettes par exemple.</p>",
+    "health": {
+      "value": 24,
+      "max": 24
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 24
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXX",
+    "stats": {
+      "str": {
+        "value": 21,
+        "formula": "3d6+10"
+      },
+      "con": {
+        "value": 20,
+        "formula": "3d6+9"
+      },
+      "siz": {
+        "value": 27,
+        "formula": "5d6+9"
+      },
+      "dex": {
+        "value": 14,
+        "formula": "3d6+3"
+      },
+      "int": {
+        "value": 5,
+        "formula": "1d6+1"
+      },
+      "pow": {
+        "value": 9,
+        "formula": "2d6+2"
+      },
+      "app": {
+        "value": 10,
+        "formula": "1d6+6"
+      },
+      "per": {
+        "value": 20,
+        "formula": "4d6+6"
+      }
+    },
+    "movement": {
+      "land": 12,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Morsure/Sabots : 45% (2d6)",
+    "skills": "Acrobatie : 60% ; Athlétisme : 60% ; Discrétion 55% ; Empathie : 10% ; Esquive : 30% ; Orientation : 70% ; Survie : 30% ; Vigilance : 55% ; Voler : 70%",
+    "powers": "<p>Invisible : Le Sombral ne peut être vu que d’une personne ayant vécu émotionnellement la mort d’une personne et ayant compris la signification de celle-ci. Piétinement : Quand il charge une cible, le Sombral peut décider de la piétiner en traversant la case occupée par celle-ci. Le piétinement occasionne 2d6 dégâts à toutes les cibles qui voient leur case d’occupation traversée par le Sombral en train de charger. Voler : Le Sombral est capable de voler dans les airs avec facilité. Grâce à sa force, il peut également déplacer sans mal une charge dans les airs ou porter un cavalier de la taille d’un sorcier.</p>",
+    "notes": ""
+  }
+}

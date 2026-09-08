@@ -1,0 +1,13 @@
+{
+  "_id": "cpCigue000000000",
+  "name": "Cigüe",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une plante herbacée produisant des fleurs blanches, connue pour sa haute toxicité.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Doxicide",
+    "otherUses": "• Poison mortel"
+  }
+}

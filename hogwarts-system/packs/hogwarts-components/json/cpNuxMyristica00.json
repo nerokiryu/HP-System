@@ -1,0 +1,13 @@
+{
+  "_id": "cpNuxMyristica00",
+  "name": "Nux Myristica",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une ancienne plante magique qui a disparu aujourd’hui</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "-"
+  }
+}

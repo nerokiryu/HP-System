@@ -1,0 +1,13 @@
+{
+  "_id": "cpildetriton0000",
+  "name": "Œil de triton",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Un œil provenant d’un triton, une petite créature qui ressemble à une salamandre.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "-"
+  }
+}

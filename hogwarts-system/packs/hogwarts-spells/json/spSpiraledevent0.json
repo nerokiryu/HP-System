@@ -1,0 +1,22 @@
+{
+  "_id": "spSpiraledevent0",
+  "name": "Spirale de vent",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Provoque une rafale de vent violente en spirale qui repousse le sorcier, l’objet ou l’animal visé. (Opposition : POU/FOR).</p><p>Durée : Variable (rounds).</p><p>Effets : Déplacements divisés par 2.</p><p>Formule extrême : Durée : Variable (round)+1.</p><p>Effets : déplacements = 0</p>",
+    "spellLevel": 2,
+    "spellType": "E",
+    "target": [
+      "A",
+      "O",
+      "P",
+      "V"
+    ],
+    "incantation": "Ventus",
+    "malus": -20,
+    "extremeFormula": true,
+    "malusExtremeFormula": -25,
+    "malusMastered": -10
+  }
+}

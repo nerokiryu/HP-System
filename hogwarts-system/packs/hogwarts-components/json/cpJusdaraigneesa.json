@@ -1,0 +1,13 @@
+{
+  "_id": "cpJusdaraigneesa",
+  "name": "Jus d’araignée sauteuse",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Du jus obtenu en pressant des araignées sauteuses</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Décoction hoqueteuse\nDoigts agiles",
+    "otherUses": "-"
+  }
+}

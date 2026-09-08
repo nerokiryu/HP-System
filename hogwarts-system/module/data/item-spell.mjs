@@ -16,6 +16,7 @@ export default class HogwartsSpell extends HogwartsItemBase {
       integer: true,
       initial: 1,
       min: 0,
+      // 6 is the sentinel for the book's "5+" tier, which has no numeric value.
       max: 6,
     });
 
@@ -59,7 +60,26 @@ export default class HogwartsSpell extends HogwartsItemBase {
       max: 0,
     });
 
+    // The book prints the extreme formula as "FE : A%/B%", where B is the cost
+    // of the extreme version and A the reduced cost of the plain spell once the
+    // extreme one is mastered (l. 23341). This holds the A value.
+    schema.malusMastered = new fields.NumberField({
+      required: false,
+      nullable: false,
+      integer: true,
+      initial: 0,
+      min: -500,
+      max: 0,
+    });
+
     schema.extremeFormula = new fields.BooleanField({
+      required: false,
+      initial: false,
+    });
+
+    // Set once the caster has mastered the extreme formula, which lowers the
+    // plain spell's malus to `malusMastered` (l. 23346).
+    schema.extremeMastered = new fields.BooleanField({
       required: false,
       initial: false,
     });

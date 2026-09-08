@@ -1,0 +1,19 @@
+{
+  "_id": "spFeudeymon00000",
+  "name": "Feudeymon",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Maléfice conjurant un feu magique lié à la magie noire. Les flammes peuvent prendre l'apparence de bêtes féroces, comme des dragons ou des chimères, qui semblent douées de conscience. Le Feudeymon détruit tout sur son passage et ne peut être stoppé que par le contre- maléfice idoine.</p><p>Sous-type : Maléfice</p><p>Durée : Permanente</p><p>Remarque : Le Feudeymon est l'une des rares substances à pouvoir détruire les Horcruxes.</p>",
+    "spellLevel": 6,
+    "spellType": "S",
+    "target": [
+      "X"
+    ],
+    "incantation": "",
+    "malus": -90,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "spTransplanage00",
+  "name": "Transplanage",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet de se téléporter dans un endroit connu et non protégé.</p><p>Durée : -</p><p>Remarque : le déplacement ne peut se faire que sur POUvoir x10 kilomètres</p><p>Formule extrême : -</p>",
+    "spellLevel": 5,
+    "spellType": "E",
+    "target": [
+      "P"
+    ],
+    "incantation": "",
+    "malus": -60,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

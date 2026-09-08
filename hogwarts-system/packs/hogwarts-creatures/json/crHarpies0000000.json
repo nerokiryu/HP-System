@@ -1,0 +1,69 @@
+{
+  "_id": "crHarpies0000000",
+  "name": "Harpies",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 13,
+      "max": 13
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 13
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XX-XXX",
+    "stats": {
+      "str": {
+        "value": 11,
+        "formula": "2d6+4"
+      },
+      "con": {
+        "value": 12,
+        "formula": "2d6+5"
+      },
+      "siz": {
+        "value": 13,
+        "formula": "2d6+6"
+      },
+      "dex": {
+        "value": 13,
+        "formula": "2d6+6"
+      },
+      "int": {
+        "value": 13,
+        "formula": "2d6+6"
+      },
+      "pow": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "app": {
+        "value": 9,
+        "formula": "2d6+2"
+      },
+      "per": {
+        "value": 13,
+        "formula": "2d6+6"
+      }
+    },
+    "movement": {
+      "land": 9,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "50% (variable) Distance 45% (variable)",
+    "skills": "Acrobatie : 45% ; Artisanat (Création de potions) : 60% ; Connaissance (Mythes et légendes S-M) : 40% ; Déguisement : 10% ; Athlétisme : 30% ; Discrétion 50% ; Divination : 35% ; Empathie : 30% ; Esquive : 40% ; Fouille/Ménage : 50% ; Herboristerie : 60% ; Langue maternelle (variable) : 60% ; Langue (variable) : 30% ; Orientation : 50% ; Persuasion/baratin : 50% ; Psychologie : 50% ; Soin/dressage : 50% ; Survie : 20% ; Vigilance : 45%",
+    "powers": "<p>Déguisement : Bien que tentant de faire de leur mieux, les Harpies ne sont pas très douées pour se déguiser et ainsi passer inaperçues au milieu des Moldus. Tout jet de déguisement fait par une Harpie est automatiquement monté d’une catégorie. Une difficulté facile passant à moyenne, une moyenne à difficile et une difficile à impossible. Magie rudimentaire : Les Harpies possèdent une forme de magie rudimentaire. Celle-ci est moins puissante que celle des Sorciers, mais leur permet tout de même de préparer de puissantes potions et poisons qu’elles emploient contre leurs adversaires. Régime alimentaire (viande crue) : Les Harpies semblent préférer se nourrir de viande crue. De plus, les Harpies possèdent une attirance toute particulière pour la chair de jeunes enfants. Artisanat (création de potions) : Grâce à leur magie rudimentaire, les Harpies sont capables de créer des potions magiques de niveau 1 à 4. Les potions de plus haut niveau sont cependant hors de leur portée. Herboristerie : Les Harpies possèdent une excellente connaissance des plantes et champignons, et de leurs utilisations dans les potions et poisons. Langue : Les Harpies parlent la langue du pays qu’elles habitent. Elles peuvent cependant apprendre d’autres langues. FAMILIER : Les Harpies peuvent posséder un familier, comme c’est le cas pour les Sorciers. Il s’agit le plus souvent de chat, de rat ou de corbeaux voir d’autres créatures malveillantes. HABITAT : Les Harpies vivent parmi les autres Sorciers, même si certaines préfèrent vivre dans des grottes, des caves ou des maisons abandonnées au milieu de la forêt. A cause des problèmes de déguisement dont elles souffrent, elles restent dans les lieux exclusivement peuplés de Sorciers comme Pré-au-Lard, le Chemin de Traverse ou l’Allée des Embrumes.</p>",
+    "notes": ""
+  }
+}

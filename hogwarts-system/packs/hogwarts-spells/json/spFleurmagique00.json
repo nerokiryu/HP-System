@@ -1,0 +1,19 @@
+{
+  "_id": "spFleurmagique00",
+  "name": "Fleur magique",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Fait apparaître des fleurs à l'extrémité de la baguette.</p><p>Durée : 2d4+2 heures</p><p>Formule extrême : durée passe à 1d4+1 jours</p>",
+    "spellLevel": 1,
+    "spellType": "M",
+    "target": [
+      "X"
+    ],
+    "incantation": "Orchideus",
+    "malus": -5,
+    "extremeFormula": true,
+    "malusExtremeFormula": -10,
+    "malusMastered": 0
+  }
+}

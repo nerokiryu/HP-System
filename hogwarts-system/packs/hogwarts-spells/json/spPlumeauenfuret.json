@@ -1,0 +1,19 @@
+{
+  "_id": "spPlumeauenfuret",
+  "name": "Plumeau en furet",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Transforme un plumeau en furet</p><p>Durée : permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 5,
+    "spellType": "M",
+    "target": [
+      "A"
+    ],
+    "incantation": "Furofors",
+    "malus": -50,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

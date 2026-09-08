@@ -1,0 +1,39 @@
+{
+  "_id": "poElixircerebral",
+  "name": "Elixir cérébral de Baruffio",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Potion destinée à augmenter la concentration et l'agilité mentale et à diminuer le besoin de sommeil.</p><p>Effet : +25% aux compétences de réflexion et à la méditation</p><p>Durée : 2d6+6 heures.</p>",
+    "potionLevel": 5,
+    "malus": -50,
+    "target": "A/P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Champignon vénéneux sauteur",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Cervelle de crapaud (ou de grenouille)",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Œuf de runespoor",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Griffe de dragon",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

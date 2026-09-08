@@ -1,0 +1,13 @@
+{
+  "_id": "cpPoudredepieuvr",
+  "name": "Poudre de pieuvre",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>De la poudre obtenue en séchant puis en broyant des pieuvres. Elle possèderait la capacité de renforcer les potions quand elle est ajoutée au bon moment lors de leur préparation.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Caféine\nDétergents magiques\nÉnergie magique\nGlue\nNettoie-Tout magique",
+    "otherUses": "-"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "spLocomotion0000",
+  "name": "Locomotion",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet de faire déplacer des objets.</p><p>Durée : Variable (rounds)</p><p>Formule extrême : -</p>",
+    "spellLevel": 2,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "Locomotor",
+    "malus": -15,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "spRenforcement00",
+  "name": "Renforcement",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Fianto Duri est un sortilège qui est utilisé pour renforcer les protections magiques déjà existante. Une fois lancé, ce sortilège donne l’effet des formules extrêmes à un sortilège déjà lancé.</p><p>Durée : Identique à la durée de la formule extrême du sortilège renforcé</p><p>Formule extrême : -</p>",
+    "spellLevel": 4,
+    "spellType": "E",
+    "target": [
+      "X"
+    ],
+    "incantation": "Fianto Duri",
+    "malus": -40,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

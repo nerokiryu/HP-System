@@ -1,0 +1,19 @@
+{
+  "_id": "spObjetenplume00",
+  "name": "Objet en plume",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Métamorphose un objet en plume</p><p>Durée : permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 2,
+    "spellType": "M",
+    "target": [
+      "O"
+    ],
+    "incantation": "Scribblifors",
+    "malus": -20,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "cpFinesherbes000",
+  "name": "Fines herbes",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Un mélange d’herbes communes qui peut être employé pour la cuisine et pour la fabrication de potions.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "• Cuisine"
+  }
+}

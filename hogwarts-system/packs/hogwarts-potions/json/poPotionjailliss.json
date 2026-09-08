@@ -1,0 +1,21 @@
+{
+  "_id": "poPotionjailliss",
+  "name": "Potion jaillissante",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Provoque un effet d’explosion qui détruit des objets (magiques ou non) et qui blesse les êtres vivants en leur infligeant 2d6+2 dégâts.</p><p>Effet : Provoque un effet d’explosion quand elle touche de la matière autre que la fiole.</p><p>Durée : Immédiate</p>",
+    "potionLevel": 5,
+    "malus": -50,
+    "target": "A/O/P/V",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Corne d’Éruptif, Fluide explosif, Queue d’Éruptif",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

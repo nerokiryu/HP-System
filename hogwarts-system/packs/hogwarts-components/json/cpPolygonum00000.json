@@ -1,0 +1,13 @@
+{
+  "_id": "cpPolygonum00000",
+  "name": "Polygonum",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Le polygonium est une plante verte aux propriétés magique qui peut atteindre plusieurs dizaines de centimètres de long. Assez commun, on en trouve en grand nombre dans la Forêt</p><p>Interdite.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Polynectar",
+    "otherUses": "• Hydromel de polygonium"
+  }
+}

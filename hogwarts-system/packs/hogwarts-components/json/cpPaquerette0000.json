@@ -1,0 +1,13 @@
+{
+  "_id": "cpPaquerette0000",
+  "name": "Pâquerette",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Fleur sauvage commune de couleur jaune et blanche dont les racines sont utilisées dans la préparation de potions. Les fleurs peuvent aussi être utilisées pour fabriquer de l’alcool.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Baume des pâquerettes\nPoison de vieillissement\nRatatinage",
+    "otherUses": "• Plante ornementale • Alcool : pression de pâquerettes"
+  }
+}

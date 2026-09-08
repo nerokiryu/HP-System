@@ -1,0 +1,69 @@
+{
+  "_id": "crAraigneeVenime",
+  "name": "Araignee Venimeuse",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>Le venin des</p>",
+    "health": {
+      "value": 4,
+      "max": 4
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 4
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "",
+    "stats": {
+      "str": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "con": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "siz": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "dex": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "int": {
+        "value": 1,
+        "formula": "1"
+      },
+      "pow": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "app": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "per": {
+        "value": 7,
+        "formula": "2d6"
+      }
+    },
+    "movement": {
+      "land": 6,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Morsure 35% (1)",
+    "skills": "Acrobatie : 45% ; Athlétisme : 40% ; Discrétion : 60% ; Esquive : 35% ; Orientation : 20% ; Survie : 40% ; Vigilance : 50%",
+    "powers": "<p>Déplacement sur la toile : Quand elle se déplace sur sa toile, l’araignée ne doit pas lutter contre l’effet collant de celle-ci. Pattes d'araignée : L'araignée possède la capacité d’escalader des surfaces difficiles, même des plafonds la tête en bas sans devoir effectuer de jet de compétence. Sens de la toile : Quand une proie se trouve sur la toile de l’araignée, celle-ci sait exactement où elle se trouve. Toiles : Pour capturer ses proies, l'araignée venimeuse crée des toiles en forme de filet qui piègent ses victimes. Toute personne se trouvant en contact avec l’une des toiles de l’araignée doit réussir un jet de FOR/FOR sur la table des oppositions. Valeur de FOR de la toile =9. Venin : Le venin des araignées venimeuses affecte une victime qui a subi les dégâts d’une morsure et provoque une perte de points de vie de la part de la cible jusqu’à la mort de celle-ci. Incubation : 1 heure ; Effet : la cible perd 1d2</p>",
+    "notes": ""
+  }
+}

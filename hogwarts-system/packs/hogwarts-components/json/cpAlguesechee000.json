@@ -1,0 +1,13 @@
+{
+  "_id": "cpAlguesechee000",
+  "name": "Algue séchée",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une plante aquatique qui, une fois séchée, peut être utilisée comme ingrédient de potion. Les algues séchées possèdent énormément de nutriments et permettent de fournir une grande quantité d’énergie quand elles sont consommées.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Engrais magiques\nÉnergie magique\nRegermination\nRejutage",
+    "otherUses": "• Consommable (pour certaines)"
+  }
+}

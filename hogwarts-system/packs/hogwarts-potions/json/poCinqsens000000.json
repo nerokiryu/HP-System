@@ -1,0 +1,45 @@
+{
+  "_id": "poCinqsens000000",
+  "name": "Cinq sens",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Cette potion permet de doter le consommateur de perceptions extraordinaires. Toutes les compétences liées à la perception se font sur PERx5. Permet également de voir dans le noir.</p><p>Durée : 1 heure</p>",
+    "potionLevel": 2,
+    "malus": -20,
+    "target": "P",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Langue de Boursouf",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Œil d'anguille",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Peau de serpent d'arbre du Cap",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Sang de dragon",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Zinc",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

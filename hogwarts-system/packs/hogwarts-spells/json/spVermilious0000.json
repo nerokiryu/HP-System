@@ -1,0 +1,20 @@
+{
+  "_id": "spVermilious0000",
+  "name": "Vermilious",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Libère de petites étincelles rouges vermeils qui peuvent causer quelques dommages aux insectes et plantes qu’elles touchent.</p><p>Effet : 1 dégât</p><p>Durée : -</p><p>Portée : 1,5m</p><p>Formule extrême : 2 dégâts et portée de 3 mètres</p>",
+    "spellLevel": 1,
+    "spellType": "E",
+    "target": [
+      "A",
+      "V"
+    ],
+    "incantation": "Vermillious / Vermeil",
+    "malus": -5,
+    "extremeFormula": true,
+    "malusExtremeFormula": -10,
+    "malusMastered": 0
+  }
+}

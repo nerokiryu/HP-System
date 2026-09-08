@@ -1,0 +1,13 @@
+{
+  "_id": "cpAgrippa0000000",
+  "name": "Agrippa",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une substance pourpre aux propriétés magiques.</p><p>Elle est utilisée comme ingrédient dans la fabrication de potions comme pour la potion</p><p>Agrippa, dont les effets sont inconnus</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Potion Agrippa",
+    "otherUses": "-"
+  }
+}

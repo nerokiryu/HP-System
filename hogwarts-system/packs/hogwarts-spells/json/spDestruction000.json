@@ -1,0 +1,20 @@
+{
+  "_id": "spDestruction000",
+  "name": "Destruction",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Sortilège permettant d'effacer les effets d'un autre sortilège et de détruire certains objets convoqués magiquement.</p><p>Remarque : le sortilège de destruction appartient à la sous-catégorie des contre-sorts.</p><p>Durée : -</p><p>Formule extrême : -</p>",
+    "spellLevel": 4,
+    "spellType": "E",
+    "target": [
+      "O",
+      "X"
+    ],
+    "incantation": "Destructum",
+    "malus": -30,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

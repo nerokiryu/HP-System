@@ -1,0 +1,13 @@
+{
+  "_id": "cpCapriceduNiffl",
+  "name": "Caprice du Niffleur",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Le Caprice du Niffleur est une plante magique rare qui ne pousse que dans les jardins magiques.</p><p>Elle possède des feuilles de couleur bronze qui étaient jadis employées comme monnaie par les sorciers.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Potentiel-absolu",
+    "otherUses": "• Monnaie (anciennement)"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "spMort0000000000",
+  "name": "Mort",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Ce sort tue une personne sur le coup, sans espoir de survie.</p><p>Sous-type : Maléfice</p><p>Résistance : aucune</p>",
+    "spellLevel": 6,
+    "spellType": "S",
+    "target": [
+      "P"
+    ],
+    "incantation": "Avada kedavra",
+    "malus": -120,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

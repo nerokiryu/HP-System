@@ -1,0 +1,69 @@
+{
+  "_id": "crHybrideElfe000",
+  "name": "Hybride-Elfe",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 9,
+      "max": 9
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 9
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "",
+    "stats": {
+      "str": {
+        "value": 10,
+        "formula": "Humain -1"
+      },
+      "con": {
+        "value": 10,
+        "formula": "Humain -1"
+      },
+      "siz": {
+        "value": 9,
+        "formula": "Humain -2"
+      },
+      "dex": {
+        "value": 13,
+        "formula": "Humain +2"
+      },
+      "int": {
+        "value": 11,
+        "formula": "Humain ±0"
+      },
+      "pow": {
+        "value": 9,
+        "formula": "Humain -2"
+      },
+      "app": {
+        "value": 10,
+        "formula": "Humain -1"
+      },
+      "per": {
+        "value": 13,
+        "formula": "Humain +2"
+      }
+    },
+    "movement": {
+      "land": 8,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Variable",
+    "skills": "Identiques à celles d’un Sorcier classique avec une petite différence pour les descendants de Yumboe. est 1/3 supérieure à celle des Sorciers classiques. DESCENDANTS DE YUMBOE : En plus des autres possédées lors de la création du personnage, les Hybrides-Elfes yumboe possèdent un bonus à tous leurs jets de compétences de 15% quand ils tentent de dérober un objet, et à leurs jets de sauvegarde quand on tente de leur dérober l’un de leurs biens. HYBRIDE-GEANT Les Hybrides-Géants sont des êtres possédant une part d’héritage génétique provenant d’un ancêtre Géant. Les Hybrides-Géants tirent des avantages de leurs deux héritages. De leurs parents Sorciers, ils tirent la capacité à employer la magie alors que leur héritage Géant les rend plus grands, plus forts physiquement tout en les dotant d’une certaine",
+    "powers": "<p>Anonymat : Même s’ils possèdent un physique peu commun, les Hybrides-Elfes dégagent un étrange pouvoir qui les fait passer inaperçus dans la société. On oublie souvent leur présence et il est nécessaire de se concentrer pour ne pas les oublier qu’ils se trouvent avec nous. Plus le nombre de personnes alentours est grand et plus il est difficile de se rendre compte de leur présence ou de se souvenir s’ils ont ou non participé à un évènement. Cette capacité agit également sur les souvenirs des personnes présentes et a tendance à brouiller ceux-ci. Dès lors, la victime de cette capacité se souviendra de la présence d’un personne mais ses traits seront brouillés, empêchant la cible de se souvenir clairement s’il s’agissait ou non de l’Hybride-Elfe. Cette compétence passive est à la fois un don et une malédiction pour les Hybrides- Elfes, car elle leur permet d’éviter en partie les discriminations subies par les autres hybrides, mais les condamne également à ne jamais pouvoir se mettre en avant par leurs compétences, leurs exploits et leurs résultats scolaires. Cette capacité se traduit par des malus dans toutes les compétences visant à détecter ou de se souvenir de la présence du personnage, et qui dépendent du nombre de personnes présentes avec lui. Les potions de mémoire ou de concentrations permettent de contrer cette effet dans une certaine mesure.</p>",
+    "notes": "<p>magique : La magie intrinsèque des Hybrides-Elfes est plus faible que celle des Sorciers classiques. Cela se traduit par un malus supplémentaire de 10% lorsque celui-ci tente de lancer des sortilèges et de 5% lorsqu’il fabrique des potions. Magie sans baguette : Les Hybrides-Elfes ont étonnamment plus de facilité à lancer des sortilèges sans baguette, ce qui se traduit par une diminution du malus de 5% quand ils n’emploient pas leur baguette. Vigilance et discrétion améliorée : Leur nature elfique se traduit naturellement par un bonus de 10% dans les compétences discrétion et vigilance. De plus, l’expérience gagnée dans ces deux</p>"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "_id": "spAnnulationdeme",
+  "name": "Annulation de métamorphose",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Sortilège qui annule un sortilège de métamorphose incomplet. Ne fonctionne cependant pas sur les métamorphoses complètes.</p><p>Durée : -</p><p>Formule extrême : -</p>",
+    "spellLevel": 2,
+    "spellType": "M",
+    "target": [
+      "A",
+      "O",
+      "P",
+      "V"
+    ],
+    "incantation": "Réparifagex",
+    "malus": -15,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

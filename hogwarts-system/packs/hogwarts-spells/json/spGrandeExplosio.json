@@ -1,0 +1,19 @@
+{
+  "_id": "spGrandeExplosio",
+  "name": "Grande Explosion d’objets",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Détruit un objet magique ou non de grande taille (comme un mur par exemple) en le faisant exploser. Produit un gigantesque son d’explosion. Maximum 1m3</p><p>Durée : -</p><p>Formule extrême : Maximum : 10m3</p>",
+    "spellLevel": 4,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "Explodere",
+    "malus": -40,
+    "extremeFormula": true,
+    "malusExtremeFormula": -50,
+    "malusMastered": -30
+  }
+}

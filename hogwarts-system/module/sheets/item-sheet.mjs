@@ -151,6 +151,10 @@ export class HogwartsItemSheet extends api.HandlebarsApplicationMixin(
       case 'attributesGear':
       case 'attributesSpell':
       case 'attributesPotion':
+      case 'attributesBroom':
+      case 'attributesWeapon':
+      case 'attributesArmor':
+      case 'attributesComponent':
         // Necessary for preserving active tab on re-render
         context.tab = context.tabs[partId];
         break;
@@ -158,7 +162,7 @@ export class HogwartsItemSheet extends api.HandlebarsApplicationMixin(
         context.tab = context.tabs[partId];
         // Enrich description info for display
         // Enrichment turns text like `[[/r 1d20]]` into buttons
-        context.enrichedDescription = await TextEditor.enrichHTML(
+        context.enrichedDescription = await foundry.applications.ux.TextEditor.enrichHTML(
           this.item.system.description,
           {
             // Whether to show secret blocks in the finished html
@@ -216,6 +220,9 @@ export class HogwartsItemSheet extends api.HandlebarsApplicationMixin(
         case 'attributesSpell':
         case 'attributesPotion':
         case 'attributesBroom':
+        case 'attributesWeapon':
+        case 'attributesArmor':
+        case 'attributesComponent':
           tab.id = 'attributes';
           tab.label += 'Attributes';
           break;

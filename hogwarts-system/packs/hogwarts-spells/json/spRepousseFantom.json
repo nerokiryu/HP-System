@@ -1,0 +1,19 @@
+{
+  "_id": "spRepousseFantom",
+  "name": "Repousse-Fantômes",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Empêche les fantômes de pénétrer dans la zone enchantée par ce sort (Opposition : POU/POU).</p><p>Durée : 1 jour</p><p>Formule extrême : Durée +1 jour</p>",
+    "spellLevel": 3,
+    "spellType": "E",
+    "target": [
+      "X"
+    ],
+    "incantation": "Repello Umbrae",
+    "malus": -60,
+    "extremeFormula": true,
+    "malusExtremeFormula": -70,
+    "malusMastered": -40
+  }
+}

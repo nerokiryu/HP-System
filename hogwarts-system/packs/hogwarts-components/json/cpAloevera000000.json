@@ -1,0 +1,13 @@
+{
+  "_id": "cpAloevera000000",
+  "name": "Aloe vera",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une plante commune employée pour soigner la peau et les coups de soleil. Intervient dans la composition de déodorant Lowdour.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "• Déodorant Lowdour • Soins de la peau"
+  }
+}

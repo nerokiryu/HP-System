@@ -14,12 +14,20 @@
               class='resource-label flexlarge align-left'
             >{{localize (lookup @root.config.stats key)}}</label>
             <input
-              type='text'
+              type='number'
               name='system.stats.{{key}}.value'
               value='{{stat.value}}'
               class="ability-score"
+              min='1'
+              step='1'
               data-dtype='Number'
             />
+            {{#if stat.hybridMod}}
+              <span
+                class='hybrid-mod {{#if (gt stat.hybridMod 0)}}bonus{{else}}malus{{/if}}'
+                data-tooltip='{{localize "HOGWARTS.Hybrid.StatTooltip"}}'
+              >{{#if (gt stat.hybridMod 0)}}+{{/if}}{{stat.hybridMod}} = {{stat.total}}</span>
+            {{/if}}
             <span
               class='ability-mod rollable'
               data-action='roll'
@@ -37,6 +45,89 @@
         <div class='resource-content'>
           <span class='total-pbp'>{{totalPbpCost}}</span>
         </div>
+      </div>
+      {{/if}}
+
+      {{#if hybrid}}
+      <div class='hybrid-block'>
+        <h3>{{localize 'HOGWARTS.Hybrid.Title'}}</h3>
+
+        <div class='hybrid-row'>
+          <label>{{localize 'HOGWARTS.Hybrid.Ancestor'}}</label>
+          <select name='system.hybrid.race'>
+            <option value=''>{{localize 'HOGWARTS.Hybrid.None'}}</option>
+            {{#each hybrid.races as |r|}}
+              <option value='{{r.key}}' {{#if r.selected}}selected{{/if}}>{{r.label}}</option>
+            {{/each}}
+          </select>
+        </div>
+
+        {{#if system.hybrid.race}}
+          <div class='hybrid-row'>
+            <label>{{localize 'HOGWARTS.Hybrid.Generation.Label'}}</label>
+            <select name='system.hybrid.generation'>
+              <option value=''>—</option>
+              {{#each hybrid.generations as |g|}}
+                <option value='{{g.key}}' {{#if g.selected}}selected{{/if}}>{{g.label}}</option>
+              {{/each}}
+            </select>
+            {{#if hybrid.cost}}
+              <span class='hybrid-cost'>{{localize 'HOGWARTS.Hybrid.Cost'}}: {{hybrid.cost}}</span>
+            {{/if}}
+          </div>
+
+          {{#if hybrid.bonusChoices.length}}
+            <div class='hybrid-row'>
+              <label>{{localize 'HOGWARTS.Hybrid.PickBonus'}}</label>
+              <select name='system.hybrid.pickBonus'>
+                <option value=''>—</option>
+                {{#each hybrid.bonusChoices as |c|}}
+                  <option value='{{c.stat}}' {{#if c.selected}}selected{{/if}}>{{c.label}}</option>
+                {{/each}}
+              </select>
+            </div>
+          {{/if}}
+
+          {{#if hybrid.malusChoices.length}}
+            <div class='hybrid-row'>
+              <label>{{localize 'HOGWARTS.Hybrid.PickMalus'}}</label>
+              <select name='system.hybrid.pickMalus'>
+                <option value=''>—</option>
+                {{#each hybrid.malusChoices as |c|}}
+                  <option value='{{c.stat}}' {{#if c.selected}}selected{{/if}}>{{c.label}}</option>
+                {{/each}}
+              </select>
+            </div>
+          {{/if}}
+
+          {{#if hybrid.capabilityChoices.length}}
+            <div class='hybrid-row'>
+              <label>{{localize 'HOGWARTS.Hybrid.PickCapability'}}</label>
+              <select name='system.hybrid.pickCapability'>
+                <option value=''>—</option>
+                {{#each hybrid.capabilityChoices as |c|}}
+                  <option value='{{c.option}}' {{#if c.selected}}selected{{/if}}>{{c.option}}</option>
+                {{/each}}
+              </select>
+            </div>
+          {{/if}}
+
+          {{#if hybrid.offersYumboe}}
+            <div class='hybrid-row'>
+              <label>{{localize 'HOGWARTS.Hybrid.Capability.Yumboe'}}</label>
+              <input type='checkbox' name='system.hybrid.yumboe' {{checked system.hybrid.yumboe}} />
+              <span class='hybrid-cost'>+0.5</span>
+            </div>
+          {{/if}}
+
+          {{#if hybrid.capabilities.length}}
+            <ul class='hybrid-capabilities'>
+              {{#each hybrid.capabilities as |c|}}
+                <li>{{c.label}}{{#if c.note}} <span class='note'>({{c.note}})</span>{{/if}}</li>
+              {{/each}}
+            </ul>
+          {{/if}}
+        {{/if}}
       </div>
       {{/if}}
     </div>
@@ -146,10 +237,11 @@
           {{/if}}
           <span class='experience-separator'>/</span>
           <input
-            type='text'
+            type='number'
             name='system.experience.creationPoints.max'
             value='{{system.experience.creationPoints.max}}'
             class='experience-max'
+            min='0' step='1'
             data-dtype='Number'
           />
         </div>
@@ -167,10 +259,11 @@
           {{/if}}
           <span class='experience-separator'>/</span>
           <input
-            type='text'
+            type='number'
             name='system.experience.personalBonusPoints.max'
             value='{{system.experience.personalBonusPoints.max}}'
             class='experience-max'
+            min='0' step='1'
             data-dtype='Number'
           />
         </div>

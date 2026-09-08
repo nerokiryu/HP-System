@@ -1,0 +1,13 @@
+{
+  "_id": "cpTeinturedetorm",
+  "name": "Teinture de tormentille",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>La teinture de tormentille est issue d’une plante à fleurs jaunes de la famille des roses. Elle est en vente chez l'apothicaire au prix de deux Gallions pour quinze fioles de teinture</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Doxycide",
+    "otherUses": "• Vertus médicinales"
+  }
+}

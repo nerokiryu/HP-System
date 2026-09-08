@@ -1,0 +1,19 @@
+{
+  "_id": "spEtancheite0000",
+  "name": "Étanchéité",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Enchante une surface. Repousse les substances qui s’y trouvent.</p><p>Durée : variable (heures)</p><p>Formule extrême : durée +3 heures</p>",
+    "spellLevel": 1,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "Impervius",
+    "malus": -10,
+    "extremeFormula": true,
+    "malusExtremeFormula": -15,
+    "malusMastered": 0
+  }
+}

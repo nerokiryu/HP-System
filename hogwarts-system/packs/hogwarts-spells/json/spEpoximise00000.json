@@ -1,0 +1,19 @@
+{
+  "_id": "spEpoximise00000",
+  "name": "Epoximise",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Rend un objet extrêmement collant, obligeant la cible à user d’un sortilège ou de force pour s’en défaire. (Opposition : FORx2).</p><p>Durée : permanente</p><p>Formule extrême : (Opposition : FORx1)</p>",
+    "spellLevel": 2,
+    "spellType": "M",
+    "target": [
+      "O"
+    ],
+    "incantation": "Epoximise",
+    "malus": -20,
+    "extremeFormula": true,
+    "malusExtremeFormula": -30,
+    "malusMastered": -10
+  }
+}

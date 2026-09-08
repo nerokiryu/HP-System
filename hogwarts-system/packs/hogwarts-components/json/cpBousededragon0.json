@@ -1,0 +1,13 @@
+{
+  "_id": "cpBousededragon0",
+  "name": "Bouse de dragon",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Déjection de dragon possédant un grand effet fertilisant.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Engrais magiques\nFertilisant\nRegermination\nRejutage",
+    "otherUses": "• Engrais"
+  }
+}

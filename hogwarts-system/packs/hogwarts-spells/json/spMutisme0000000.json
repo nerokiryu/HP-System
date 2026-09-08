@@ -1,0 +1,20 @@
+{
+  "_id": "spMutisme0000000",
+  "name": "Mutisme",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Rend la cible muette durant 1 mois, l’empêchant de lancer des sortilèges à moins qu’il ne s’agisse d’informulés.</p><p>Durée : 1 mois</p><p>Formule extrême : -</p>",
+    "spellLevel": 4,
+    "spellType": "E",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "Silencio",
+    "malus": -45,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

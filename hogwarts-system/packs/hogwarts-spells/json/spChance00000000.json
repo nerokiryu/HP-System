@@ -1,0 +1,20 @@
+{
+  "_id": "spChance00000000",
+  "name": "Chance",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet d’augmenter la compétence dérivée « Chance » de la cible.</p><p>Effet : Chance +30%</p><p>Durée : POUvoir minutes</p><p>Formule extrême : -</p><p>Remarque : Cet enchantement est également nécessaire pour terminer la potion Felix Felicis et représente l’ultime étape de sa création.</p>",
+    "spellLevel": 3,
+    "spellType": "E",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "Felixempra",
+    "malus": -30,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

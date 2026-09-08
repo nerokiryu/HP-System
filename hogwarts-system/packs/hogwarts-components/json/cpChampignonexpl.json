@@ -1,0 +1,13 @@
+{
+  "_id": "cpChampignonexpl",
+  "name": "Champignon explosif",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une variété de champignons blancs au chapeau rouge qui explose quand on les manipule.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Potion de protection contre le feu\nPotion des flammes violettes",
+    "otherUses": ""
+  }
+}

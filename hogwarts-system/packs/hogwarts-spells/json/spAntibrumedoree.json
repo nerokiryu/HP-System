@@ -1,0 +1,19 @@
+{
+  "_id": "spAntibrumedoree",
+  "name": "Anti-brume dorée",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Dissipe instantanément l’enchantement de brume dorée.</p>",
+    "spellLevel": 4,
+    "spellType": "E",
+    "target": [
+      "X"
+    ],
+    "incantation": "",
+    "malus": -40,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

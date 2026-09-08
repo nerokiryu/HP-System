@@ -1,0 +1,21 @@
+{
+  "_id": "poPotiondActeeen",
+  "name": "Potion d’Actée en épi",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Un poison fait à partir de baies rouges et blanches d’Actée en épi.</p><p>Effet : vomissements durant 1 heure</p><p>Effets secondaires : -10% à toute activité physique</p><p>Durée : 1d4+6 heures</p><p>VIRulence : 11</p><p>Remarque : Surdosé, ce poison peut être mortel</p>",
+    "potionLevel": 3,
+    "malus": -30,
+    "target": "A/P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Baies d’Actée en épi",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "spAscension00000",
+  "name": "Ascension",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet de faire sauter le sorcier dans les airs (maximum POU/2 m) ou à la surface de l’eau.</p><p>Durée : -</p><p>Formule extrême : maximum POUvoir mètres</p>",
+    "spellLevel": 2,
+    "spellType": "E",
+    "target": [
+      "P"
+    ],
+    "incantation": "Ascendio",
+    "malus": -15,
+    "extremeFormula": true,
+    "malusExtremeFormula": -25,
+    "malusMastered": -5
+  }
+}

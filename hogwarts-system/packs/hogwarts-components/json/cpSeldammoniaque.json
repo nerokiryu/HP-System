@@ -1,0 +1,13 @@
+{
+  "_id": "cpSeldammoniaque",
+  "name": "Sel d’ammoniaque",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Un sel rare composé de chlorure d’ammonium et employé anciennement comme composant alchimique</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Brume opaque\nPanacée",
+    "otherUses": "-"
+  }
+}

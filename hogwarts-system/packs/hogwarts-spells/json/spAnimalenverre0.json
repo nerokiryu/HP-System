@@ -1,0 +1,19 @@
+{
+  "_id": "spAnimalenverre0",
+  "name": "Animal en verre",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Métamorphose un animal en verre</p><p>Durée : Permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 4,
+    "spellType": "M",
+    "target": [
+      "A"
+    ],
+    "incantation": "Vera Verto",
+    "malus": -30,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

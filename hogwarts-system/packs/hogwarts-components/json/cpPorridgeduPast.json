@@ -1,0 +1,13 @@
+{
+  "_id": "cpPorridgeduPast",
+  "name": "Porridge du Pasteur",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Le Porridge du Pasteur est une plante rarissime avec des propriétés magiques. Elle a des gousses séparées les unes des autres, à partir desquelles suinte une substance bleue, épaisse et grumeleuse</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Potentiel-absolu",
+    "otherUses": "-"
+  }
+}

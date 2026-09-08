@@ -1,0 +1,33 @@
+{
+  "_id": "poPhiltredEmbrou",
+  "name": "Philtre d’Embrouille",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Ce philtre incite le consommateur à des conduites téméraires et parfois même dangereuses en le rendant confus. Celui-ci tient également des propos incohérents durant toute la durée du philtre.</p><p>Durée : 1d4+2 heures</p>",
+    "potionLevel": 3,
+    "malus": -30,
+    "target": "A/P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Achillée sternutatoire",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Cranson",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Livèche",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

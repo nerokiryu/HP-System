@@ -1,0 +1,69 @@
+{
+  "_id": "crSelma000000000",
+  "name": "Selma",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>-</p>",
+    "health": {
+      "value": 23,
+      "max": 23
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 23
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXX",
+    "stats": {
+      "str": {
+        "value": 23,
+        "formula": "3d6+12"
+      },
+      "con": {
+        "value": 19,
+        "formula": "3d6+8"
+      },
+      "siz": {
+        "value": 26,
+        "formula": "4d6+12"
+      },
+      "dex": {
+        "value": 14,
+        "formula": "2d6+7"
+      },
+      "int": {
+        "value": 5,
+        "formula": "2d4"
+      },
+      "pow": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "app": {
+        "value": 18,
+        "formula": "3d6+7"
+      },
+      "per": {
+        "value": 19,
+        "formula": "3d6+8"
+      }
+    },
+    "movement": {
+      "land": 20,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 3
+    },
+    "attacks": "Morsure 50% (3d6)",
+    "skills": "Acrobatie : 60% ; Athlétisme : 55% ; Discrétion 60% ; Esquive : 40% ; Orientation : 55% ; Survie : 65% ; Vigilance : 60%",
+    "powers": "<p>Bestialité : Un Selma attaque tout humain qui croise sa route. Quand il est en présence d'une proie potentielle, le Selma doit réussir un jet de POUx1 pour ne pas l’attaquer. Déplacement sinueux : Quand il se déplace, le Selma le fait en sinuant très rapidement, ce qui le rend plus difficile à toucher. Cela se traduit par un 10% de chances d’éviter un sort lancé lorsqu’il se déplace : jetez 1d100 ; si le résultat est de 001 à 010, alors le sortilège frappe à côté. Langage : Le Selma peut parler le fourchelangue (la langue des serpents). Il obéira à un sorcier qui parle également cette langue. Étouffer : Le Selma peut s’enrouler autour de sa proie pour l’étouffer avant de l’avaler. Sur un jet d’attaque réussie, il s’enroule autour de sa cible, qui subira alors un malus de difficulté de 1 rang en plus de subir 1d6 dégâts chaque round.</p>",
+    "notes": ""
+  }
+}

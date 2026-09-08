@@ -1,0 +1,51 @@
+{
+  "_id": "poRatatinage0000",
+  "name": "Ratatinage",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Cette potion possède des effets différents en fonction du support où elle est appliquée :</p><p>Effets : Sur un objet, elle permet de le faire rétrécir, diminuant sa caractéristique TAIlle par 2. Sur un animal, une plante ou un humain, elle permet également d’inverser le processus de vieillissement.</p><p>Durée : 1d6+2 heures.</p><p>Remarque : Si on commet une erreur durant la préparation, la potion devient un poison de vieillissement.</p>",
+    "potionLevel": 3,
+    "malus": -30,
+    "target": "A/O/P/V",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Chenilles",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Ciguë aquatique",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Figue de figuier d’Abyssinie",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Jus de Sangsues",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Pâquerette",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Rates de rat",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

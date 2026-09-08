@@ -1,0 +1,13 @@
+{
+  "_id": "cpChampignonvene",
+  "name": "Champignon vénéneux sauteur",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Ils coûtent 3 Gallions chez un apothicaire mais peuvent également être trouvés dans la Forêt</p><p>Interdite.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Décoction hoqueteuse\nÉlixir cérébral de Baruffio\nInfusion infecte\nSolution scintillante",
+    "otherUses": "-"
+  }
+}

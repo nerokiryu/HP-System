@@ -1,0 +1,20 @@
+{
+  "_id": "spMoucheSardine0",
+  "name": "Mouche-Sardine",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Fait éternuer des sardines à la cible, lui occasionnant un malus de 40% à la magie et inflige des douleurs.</p><p>Sous-type : Maléfice</p><p>Durée : 2d4+2 heures. (Jet de CON x3 pour fournir un effort).</p><p>Formule extrême : Malus de 60% à la magie et durée +3 heures</p>",
+    "spellLevel": 3,
+    "spellType": "S",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "Sardina Sternuo",
+    "malus": -30,
+    "extremeFormula": true,
+    "malusExtremeFormula": -40,
+    "malusMastered": -20
+  }
+}

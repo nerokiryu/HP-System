@@ -1,0 +1,19 @@
+{
+  "_id": "spLapifors000000",
+  "name": "Lapifors",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Transforme un objet en lapin vivant de même taille.</p><p>Peut également transformer de petit animaux en lapin.</p><p>Durée : permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 3,
+    "spellType": "M",
+    "target": [
+      "O"
+    ],
+    "incantation": "Lapifors",
+    "malus": -30,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "cpInfusiondabsin",
+  "name": "Infusion d’absinthe",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une infusion préparée à partir d’absinthe, une plante donnant de petites fleurs jaunes et connue pour l’alcool préparé à partir d’elle et nommé « fée verte »</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Élixir d’Euphorie\nGoutte de Mort Vivant\nOcculus\nPhiltre de Mort Vivante\nPoison de vieillissement\nRatatinage",
+    "otherUses": "-"
+  }
+}

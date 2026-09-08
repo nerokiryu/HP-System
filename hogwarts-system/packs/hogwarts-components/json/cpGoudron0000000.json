@@ -1,0 +1,13 @@
+{
+  "_id": "cpGoudron0000000",
+  "name": "Goudron",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Matière noire, visqueuse et hautement inflammable employée pour traiter la galle des écailles chez les dragons.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Combinaison\nÉlixir malveillant",
+    "otherUses": "• Traitement de la galle des écailles"
+  }
+}

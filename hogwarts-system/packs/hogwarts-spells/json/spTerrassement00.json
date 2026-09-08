@@ -1,0 +1,19 @@
+{
+  "_id": "spTerrassement00",
+  "name": "Terrassement",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Ce sort permet de creuser de profondes entailles sur une surface.</p><p>Durée : -</p><p>Formule extrême : -</p>",
+    "spellLevel": 3,
+    "spellType": "E",
+    "target": [
+      "X"
+    ],
+    "incantation": "Defodio",
+    "malus": -30,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

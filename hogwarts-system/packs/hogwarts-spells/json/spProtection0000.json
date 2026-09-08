@@ -1,0 +1,19 @@
+{
+  "_id": "spProtection0000",
+  "name": "Protection",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Protège le lanceur d’un sort qui lui est jeté en divisant la valeur de</p><p>POUvoir de l’assaillant par 2. Ce sort donne également droit à un jet d’opposition POU/POU pour les sorts qui n’y donnent normalement pas droit et protège des dégâts physiques en les diminuant de 2. (Exception : Avada kedavra).</p><p>Durée : 1d8+2 heures</p><p>Formule extrême : Durée +2 heures et dégâts physique -3</p>",
+    "spellLevel": 4,
+    "spellType": "S",
+    "target": [
+      "P"
+    ],
+    "incantation": "Protego",
+    "malus": -40,
+    "extremeFormula": true,
+    "malusExtremeFormula": -50,
+    "malusMastered": -30
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "_id": "crGnome000000000",
+  "name": "Gnome",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>-</p>",
+    "health": {
+      "value": 5,
+      "max": 5
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 5
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XX",
+    "stats": {
+      "str": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "con": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "siz": {
+        "value": 6,
+        "formula": "2d4+1"
+      },
+      "dex": {
+        "value": 11,
+        "formula": "3d6"
+      },
+      "int": {
+        "value": 2,
+        "formula": "1d4-1"
+      },
+      "pow": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "app": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "per": {
+        "value": 9,
+        "formula": "2d6+2"
+      }
+    },
+    "movement": {
+      "land": 4,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Morsure 20% (1)",
+    "skills": "Acrobatie : 50% ; Athlétisme : 20% ; Discrétion 15% ; Esquive : 35% ; Orientation : 10% ; Survie : 15% ; Vigilance : 40%",
+    "powers": "<p>Creuser : Le Gnome est excellent quand il s’agit de creuser des terriers pour s’y cacher. Quand il utilise un jet d’Athlétisme pour creuser un terrier, il bénéficie d’un bonus de 20%. Orientation souterraine innée : Quand il se déplace dans son terrier et son réseau de galeries, le gnome sait exactement où il se trouve et n’a pas besoin de faire de jet d’orientation.</p>",
+    "notes": ""
+  }
+}

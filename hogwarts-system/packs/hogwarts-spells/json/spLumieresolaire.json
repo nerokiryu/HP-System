@@ -1,0 +1,19 @@
+{
+  "_id": "spLumieresolaire",
+  "name": "Lumière solaire",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Fait jaillir un faisceau de lumière intense de la baguette sous la forme d’un arc de cercle sur une longueur de : POUvoir x2 mètres. Cette lumière éblouit la cible durant 1 round. Celle-ci subit alors un malus de 50% à toutes les actions nécessitant la vue.</p><p>Effet secondaire : Blesse les créatures sensibles à la lumière en leur infligeant 1d4+1 dégâts</p><p>Formule extrême : Longueur POUvoir x3 mètres et 1d4+2 dégâts</p>",
+    "spellLevel": 4,
+    "spellType": "E",
+    "target": [
+      "X"
+    ],
+    "incantation": "Lumos Solem",
+    "malus": -40,
+    "extremeFormula": true,
+    "malusExtremeFormula": -50,
+    "malusMastered": -30
+  }
+}

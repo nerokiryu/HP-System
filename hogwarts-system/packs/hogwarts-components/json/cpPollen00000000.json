@@ -1,0 +1,13 @@
+{
+  "_id": "cpPollen00000000",
+  "name": "Pollen",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Un mélange de divers pollens provenant de fleurs communes</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Potion à priser",
+    "otherUses": "-"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "_id": "crHippogriffe000",
+  "name": "Hippogriffe",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>Dressé correctement, l’Hippogriffe peut devenir une monture fidèle et capable de porter plusieurs cavaliers sur de longues distances.</p>",
+    "health": {
+      "value": 18,
+      "max": 18
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 18
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXX",
+    "stats": {
+      "str": {
+        "value": 17,
+        "formula": "3d6+6"
+      },
+      "con": {
+        "value": 15,
+        "formula": "3d6+4"
+      },
+      "siz": {
+        "value": 21,
+        "formula": "5d6+3"
+      },
+      "dex": {
+        "value": 15,
+        "formula": "3d6+4"
+      },
+      "int": {
+        "value": 6,
+        "formula": "2d4+1"
+      },
+      "pow": {
+        "value": 13,
+        "formula": "3d6+2"
+      },
+      "app": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "per": {
+        "value": 15,
+        "formula": "3d6+4"
+      }
+    },
+    "movement": {
+      "land": 15,
+      "fly": 20,
+      "swim": null
+    },
+    "armor": {
+      "value": 2
+    },
+    "attacks": "Bec 45% (2d6) Pattes : 40% (1d6)",
+    "skills": "Acrobatie : 65%, Athlétisme : 55% ; Discrétion : 55%; Esquive : 40%, Orientation : 30% ; Survie : 50% ; Vigilance : 50% ; Voler : 70%",
+    "powers": "<p>Attaque en piqué : La méthode de chasse de l’Hippogriffe consiste à plonger sur sa proie depuis les airs en profitant de sa vitesse pour tuer sa proie en une seule et unique attaque. Quand il effectue une attaque en piqué, l’Hippogriffe bénéficie d’un bonus à l’attaque de griffe ou de bec de 10%. Les dégâts occasionnés par une telle attaque augmentent de 1d6+2. Perception accrue (vue) : La grande faculté visuelle de l’Hippogriffe lui permet de voir bien plus loin qu’une créature classique. De plus, les jets de PERception (vue) s’effectuent comme PERx6 et non PERx5. Voler : L’Hippogriffe est capable de voler dans les airs avec facilité. Grâce à sa force hors du commun, il peut également déplacer sans mal de lourdes charges et porter plusieurs cavaliers. De plus, les jets de vol de difficulté normale et moyenne qu’il doit effectuer sont considérés comme réussis automatiquement. Les jets de vol classés comme difficiles sont à considérer comme moyens.</p>",
+    "notes": ""
+  }
+}

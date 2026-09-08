@@ -1,0 +1,69 @@
+{
+  "_id": "crMalagrifTachet",
+  "name": "Malagrif Tachete",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>-</p>",
+    "health": {
+      "value": 7,
+      "max": 7
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 7
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXX",
+    "stats": {
+      "str": {
+        "value": 7,
+        "formula": "2d4+2"
+      },
+      "con": {
+        "value": 7,
+        "formula": "2d4+2"
+      },
+      "siz": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "dex": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "int": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "pow": {
+        "value": 6,
+        "formula": "2d4+1"
+      },
+      "app": {
+        "value": 3,
+        "formula": "1d6"
+      },
+      "per": {
+        "value": 7,
+        "formula": "2d6"
+      }
+    },
+    "movement": {
+      "land": 3,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 2
+    },
+    "attacks": "Morsure/Pinces 25% (1)",
+    "skills": "Acrobatie : 20% ; Athlétisme : 15% ; Discrétion : 25%; Esquive : 35%, Orientation : 20% ; Survie : 15% ; Vigilance : 35%",
+    "powers": "<p>Venin de malchance: Quand il mord, le Malagrif provoque une sorte de malédiction sur sa victime qui attire sur lui la malchance durant 1d6+1 jours. Durant cette période, la compétence Chance de la cible passe à 5% et celle-ci a plus tendance à attirer les catastrophes sur elle. Tout jet de dés visant à déterminer une cible aléatoire devient inutile et c’est la victime qui sera automatiquement désignée. VIRulence :14</p>",
+    "notes": ""
+  }
+}

@@ -2,7 +2,7 @@
   "_id": "axGryTemeraire03",
   "name": "Téméraire",
   "type": "feature",
-  "img": "icons/skills/social_dark.svg",
+  "img": "icons/svg/statue.svg",
   "system": {
     "description": "<p>Vous avez tendance à confondre courage et témérité et vous vous mettez dans des situations dangereuses en ne le remarquant que quand il est trop tard.</p>",
     "perkType": "houseAxiom",

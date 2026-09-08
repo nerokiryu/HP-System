@@ -1,0 +1,45 @@
+{
+  "_id": "poSolutionscinti",
+  "name": "Solution scintillante",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Potion destinée à augmenter la concentration et la capacité à se remémorer des souvenirs.</p><p>Durée : 2d4+2 heures</p><p>Effet : +20% aux compétences de réflexion et à la méditation ainsi qu’aux jets de souvenirs</p>",
+    "potionLevel": 5,
+    "malus": -50,
+    "target": "P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Ailes de fées, Champignon vénéneux sauteur",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Cervelle de crapaud",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Œuf de runespoor",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Griffe de dragon",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Poudre de pierre de lune",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

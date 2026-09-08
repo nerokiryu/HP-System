@@ -1,0 +1,13 @@
+{
+  "_id": "cpCoprinnarcotiq",
+  "name": "Coprin narcotique",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Ce champignon de couleur blanche-grise se développe en touffes de plusieurs individus, parfois assez nombreux. Son odeur désagréable et s’approche du bitume</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Conscience\nPotion d’ataraxie\nSommeil sans rêve",
+    "otherUses": "-"
+  }
+}

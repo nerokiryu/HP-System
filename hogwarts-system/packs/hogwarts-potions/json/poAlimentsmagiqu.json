@@ -1,0 +1,51 @@
+{
+  "_id": "poAlimentsmagiqu",
+  "name": "Aliments magiques",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Un de ces aliments permet de nourrir un animal durant une journée entière et de calmer son stress.</p>",
+    "potionLevel": 2,
+    "malus": -20,
+    "target": "A",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Beurre",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Brin de valériane",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Corne de dragon",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Cranson",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Eau standard pour potions",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Kelp Spécial : Fruits/Viande selon l’animal",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "spHuileglissante",
+  "name": "Huile glissante",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Recouvre une surface d’huile glissante. Jet de DEXtérité x2 pour se déplacer dessus.</p><p>Durée : variable (heures)</p><p>Formule extrême : DEXtérité x1 pour se déplacer</p>",
+    "spellLevel": 2,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "Scandere",
+    "malus": -25,
+    "extremeFormula": true,
+    "malusExtremeFormula": -35,
+    "malusMastered": -15
+  }
+}

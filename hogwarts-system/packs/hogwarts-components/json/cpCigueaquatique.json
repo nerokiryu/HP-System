@@ -1,0 +1,13 @@
+{
+  "_id": "cpCigueaquatique",
+  "name": "Ciguë aquatique",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>La ciguë aquatique est une plante dont l’essence peut être utilisée comme ingrédient de potion.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Doxycide\nPoison de vieillissement\nRatatinage",
+    "otherUses": "• Poison mortel (ingestion) • Vertu médicinale"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "cpPoivremoulu000",
+  "name": "Poivre moulu",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Épice obtenue à partir des baies de différentes espèces de poivriers</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Potion à priser",
+    "otherUses": "• Condiment"
+  }
+}

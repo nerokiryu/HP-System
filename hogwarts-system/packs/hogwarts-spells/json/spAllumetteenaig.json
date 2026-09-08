@@ -1,0 +1,19 @@
+{
+  "_id": "spAllumetteenaig",
+  "name": "Allumette en aiguille",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Métamorphose une allumette en aiguille</p><p>Durée : permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 1,
+    "spellType": "M",
+    "target": [
+      "O"
+    ],
+    "incantation": "Acusfors",
+    "malus": -5,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

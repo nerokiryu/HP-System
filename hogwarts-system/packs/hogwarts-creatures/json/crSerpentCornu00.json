@@ -1,0 +1,69 @@
+{
+  "_id": "crSerpentCornu00",
+  "name": "Serpent Cornu",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 16,
+      "max": 16
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 16
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "",
+    "stats": {
+      "str": {
+        "value": 22,
+        "formula": "3d6+11"
+      },
+      "con": {
+        "value": 13,
+        "formula": "2d6+6"
+      },
+      "siz": {
+        "value": 20,
+        "formula": "4d6+6"
+      },
+      "dex": {
+        "value": 13,
+        "formula": "2d6+6"
+      },
+      "int": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "pow": {
+        "value": 17,
+        "formula": "2d6+10"
+      },
+      "app": {
+        "value": 17,
+        "formula": "3d6+6"
+      },
+      "per": {
+        "value": 19,
+        "formula": "3d6+8"
+      }
+    },
+    "movement": {
+      "land": 18,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 2
+    },
+    "attacks": "Morsure 55% (3d6)",
+    "skills": "Acrobatie : 65% ; Athlétisme : 50% ; Discrétion 70% ; Esquive : 40% ; Orientation : 60% ; Survie : 65% ; Vigilance : 60%",
+    "powers": "",
+    "notes": ""
+  }
+}

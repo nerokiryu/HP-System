@@ -1,0 +1,69 @@
+{
+  "_id": "crMagyarAPointes",
+  "name": "Magyar A Pointes",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 39,
+      "max": 39
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 39
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "",
+    "stats": {
+      "str": {
+        "value": 41,
+        "formula": "6d6+20"
+      },
+      "con": {
+        "value": 31,
+        "formula": "5d6+13"
+      },
+      "siz": {
+        "value": 46,
+        "formula": "6d6+25"
+      },
+      "dex": {
+        "value": 19,
+        "formula": "5d6+1"
+      },
+      "int": {
+        "value": 20,
+        "formula": "4d6+6"
+      },
+      "pow": {
+        "value": 26,
+        "formula": "4d6+12"
+      },
+      "app": {
+        "value": 23,
+        "formula": "4d6+9"
+      },
+      "per": {
+        "value": 22,
+        "formula": "5d6+4"
+      }
+    },
+    "movement": {
+      "land": 19,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 11
+    },
+    "attacks": "Queue : 60% (4d6) Griffes : 60% (3d6) Morsure : 60% (5d6) Souffle : 65% (6d6+2)",
+    "skills": "Acrobatie : 65% ; Athlétisme : 55% ; Esquive : 60% ; Discrétion : 30% ; Orientation : 55% ; Survie : 55% ; Vigilance : 65% ; Voler : 85%",
+    "powers": "",
+    "notes": ""
+  }
+}

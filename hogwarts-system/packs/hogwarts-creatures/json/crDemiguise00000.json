@@ -1,0 +1,69 @@
+{
+  "_id": "crDemiguise00000",
+  "name": "Demiguise",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>Les poils tressés de Demiguise sont utilisés dans la conception de capes d’invisibilité</p>",
+    "health": {
+      "value": 12,
+      "max": 12
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 12
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXX",
+    "stats": {
+      "str": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "con": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "siz": {
+        "value": 13,
+        "formula": "3d6+2"
+      },
+      "dex": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "int": {
+        "value": 5,
+        "formula": "2d4"
+      },
+      "pow": {
+        "value": 14,
+        "formula": "3d6+3"
+      },
+      "app": {
+        "value": 5,
+        "formula": "2d4"
+      },
+      "per": {
+        "value": 16,
+        "formula": "4d6+2"
+      }
+    },
+    "movement": {
+      "land": 6,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Morsure/Griffes :15% (1)",
+    "skills": "Acrobatie : 15% ; Athlétisme : 15% ; Discrétion 65% ; Empathie 25% ; Esquive : 30% ; Fouille : 20% ; Orientation : 40% ; Survie : 15% ; Vigilance : 60%",
+    "powers": "<p>Perception (futur probable) : La Demiguise est capable de percevoir les évènements du futur proche le plus probable, ce qui la rend très difficile à capturer. Invisibilité : La Demiguise peut devenir invisible. Ce pouvoir s’active de lui-même quand elle se sent en danger. La Demiguise ne redevient visible que quand elle se sent à nouveau en sécurité. Certains sorciers entraînés peuvent détecter la présence de Demiguises (PERx1).</p>",
+    "notes": ""
+  }
+}

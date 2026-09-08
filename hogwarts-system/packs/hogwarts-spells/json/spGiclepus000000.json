@@ -1,0 +1,19 @@
+{
+  "_id": "spGiclepus000000",
+  "name": "Gicle-pus",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Provoque de fortes sécrétions de pus depuis le nez de la victime</p><p>Effets : APParence -1 ; Odorat = PERceptionx1</p><p>Durée : 1d4-1 heure(s)</p><p>Formule extrême : -</p>",
+    "spellLevel": 2,
+    "spellType": "S",
+    "target": [
+      "P"
+    ],
+    "incantation": "",
+    "malus": -20,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

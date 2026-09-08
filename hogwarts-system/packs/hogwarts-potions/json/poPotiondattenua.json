@@ -1,0 +1,39 @@
+{
+  "_id": "poPotiondattenua",
+  "name": "Potion d’atténuation",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Cette potion d’un bleu scintillant redonne 1d4-1 points de vie à une personne blessée et atténue les effets d’un choc violent ou d’une grave désorientation.</p><p>Effets : Permet à une personne en état de catatonie ou de grave désorientation de revenir petit à petit à elle. Plusieurs doses peuvent être nécessaires pour contrer les effets des trop grand traumatismes.</p>",
+    "potionLevel": 4,
+    "malus": -40,
+    "target": "P",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Armoise",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Dictame",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Foie de dragon",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Pus de Bubobulb",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

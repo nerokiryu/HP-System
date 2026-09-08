@@ -1,0 +1,13 @@
+{
+  "_id": "cpGomasBarbadens",
+  "name": "Gomas Barbadensis",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Un ingrédient mystérieux entrant dans la préparation de potion. Possiblement due sorte de gomme produite par une plante des Barbades</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Lissenplis",
+    "otherUses": "-"
+  }
+}

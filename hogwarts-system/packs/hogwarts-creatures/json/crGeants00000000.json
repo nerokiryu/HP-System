@@ -1,0 +1,69 @@
+{
+  "_id": "crGeants00000000",
+  "name": "Geants",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 22,
+      "max": 22
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 22
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXX",
+    "stats": {
+      "str": {
+        "value": 24,
+        "formula": "4d6+10"
+      },
+      "con": {
+        "value": 20,
+        "formula": "4d6+6"
+      },
+      "siz": {
+        "value": 24,
+        "formula": "4d6+10"
+      },
+      "dex": {
+        "value": 14,
+        "formula": "2d6+7"
+      },
+      "int": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "pow": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "app": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "per": {
+        "value": 15,
+        "formula": "3d6+4"
+      }
+    },
+    "movement": {
+      "land": 20,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 1
+    },
+    "attacks": "Corps à corps : 65% Arme+3d6 Lancer : 60% Variable",
+    "skills": "Acrobatie : 20% ; Artisanat (au choix) : 40% ; Athlétisme : 70% ; Camouflage : 10% ; Cuisiner : 30% ; Discrétion 20% ; Dressage/Soin : 20% ; Empathie : 40% ; Esquive : 50% ; Fouille/Ménage : 20% ; Langue maternelle (Géant) : 60% ; Langue (Anglais) : 50% ; Orientation : 40% ; Persuasion/baratin : 50% ; Psychologie : 40% ; Survie : 50% ; Vigilance : 45%",
+    "powers": "<p>Agressivité : Un Géant, même s’il peut discuter avec d’autres Êtres, ne peut s’empêcher d’attaquer quand il perd patience. Quand il est en présence d'un Être et que la conversation s’éternise ou quand il est de mauvaise humeur, il doit réussir un jet de POUx3 pour ne pas attaquer celui-ci. Athlétisme : Le Géant possède des capacités physiques extraordinaires. En règle générale, les jets d’Athlétisme de difficulté normale et moyenne que le Géant doit effectuer sont considérés comme réussis automatiquement. Les jets d’Athlétisme classés comme difficiles sont à considérer comme moyens. Arme improvisée : Un Géant peut utiliser tout objet qui l’entoure comme une arme. Troncs d’arbre, rochers et autre poteaux téléphoniques occasionnent alors des dégâts normaux, sans malus à l’attaque. Ces armes sont cependant moins solides que des armes classiques et finissent immanquablement par se briser. Impatience : La plupart des Géants n’ont pas la patience pour de longues discussions et semblent préférer simplifier les choses en tuant leur public si le sujet discuté s’avérait trop compliqué. Pour cette raison, il est impératif de se présenter avec des cadeaux lorsque l’on tente d’apaiser les Géants et de prendre son temps, donnant aux Géants le privilège de décider quoi faire avec ce qui a été offert. Langage : Les Géants parlent leur propre langue mais sont capables d’apprendre l’anglais ou d’autres langues. Ils sont également capables d’apprendre à lire et écrire. Magie intrinsèque : Les Géants sont capables de pratiquer la magie, que ce soit sous la forme de potions, en jetant des sortilèges avec ou sans baguette. Il est cependant très rare que ceux-ci prennent le temps d’apprendre la magie et il leur est interdit d’utiliser une baguette magique. Mauvaise vue : Les Géants possèdent une vue plus faible que celle des humains. Quand ils effectuent un jet de PERception (vue), celui-ci se fait sur PERx3 au lieu de PERx5 Peu épaisse : La peau des Géants est plus résistante que celle des Sorciers ce qui se traduit par un réduction de dégâts physiques de 1. Piétinement : Quand il charge une cible, le Géant peut décider de la piétiner en traversant la case occupée par celle-ci. Le piétinement occasionne 2d6+2 dégâts à toutes les cibles qui voient leur case d’occupation traversée par le Géant en train de charger.</p>",
+    "notes": ""
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "cpGangliondesorc",
+  "name": "Ganglion de sorcière",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une plante aquatique de couleur rouge sang dont on dit qu’elle palpite tel le cœur d’une sorcière</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Potentiel-absolu",
+    "otherUses": "-"
+  }
+}

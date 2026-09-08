@@ -1,0 +1,13 @@
+{
+  "_id": "cpSangdesalamand",
+  "name": "Sang de salamandre",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Le sang de salamandre vivant dans le feu. Ce sang a de puissantes propriétés curatives et reconstituantes. Il est utilisé comme ingrédient de potions</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Brume opaque\nÉnergie magique\nPotion de protection contre le feu\nPotion des flammes violettes\nPotion de restauration n°2\nSolution de force\nTransfert\nWiggenweld",
+    "otherUses": "-"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "_id": "poPotioncontrela",
+  "name": "Potion contre la toux",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Soigne de la toux</p><p>Durée : -</p><p>Remarques : Mal préparée, cette potion cause des quintes de toux incontrôlables.</p>",
+    "potionLevel": 4,
+    "malus": -40,
+    "target": "P",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Corne de Licorne",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Mauve douce",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Menthe",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Miel",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Racine de Mandragore",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Teinture de Thym",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

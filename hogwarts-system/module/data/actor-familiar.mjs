@@ -80,6 +80,8 @@ export default class HogwartsFamiliar extends HogwartsActorBase {
     for (const key in this.stats) {
       const v = Number(this.stats[key].value) || 0;
       this.stats[key].label = game.i18n.localize(CONFIG.HOGWARTS.stats[key]) ?? key;
+      // No ancestry on familiars, but the shared roll formulas expect `total`.
+      this.stats[key].total = v;
       // Typical BRP stat check: value * 5 (percentage)
       this.checks[key] = v * 5;
     }

@@ -1,0 +1,19 @@
+{
+  "_id": "spExtractiondese",
+  "name": "Extraction des émotions",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Ce sort enlève la sensation de douleur mentale et aussi physique d’une autre personne et de l’attirer sur la pointe de la baguette du lanceur.</p><p>Le sort était lié à la magie ancienne.</p><p>Effet secondaire : trop utilisé, ce sortilège peut drainer la cible de toute émotion.</p><p>Durée : volontaire</p><p>Remarque : Ce sortilège appartient à la sous-catégorie des sortilèges de soin et nécessite des connaissances en magie ancienne.</p>",
+    "spellLevel": 6,
+    "spellType": "E",
+    "target": [
+      "P"
+    ],
+    "incantation": "",
+    "malus": -60,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

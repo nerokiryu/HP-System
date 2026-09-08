@@ -1,0 +1,33 @@
+{
+  "_id": "poHerisserlesche",
+  "name": "Hérisser les cheveux",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Permet de faire dresser les cheveux sur la tête. Remarque : également connue sous le nom de potion pour la pousse des cheveux.</p>",
+    "potionLevel": 2,
+    "malus": -20,
+    "target": "A/P",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Dard de Billywig",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Épine de porc-épic",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Queue de rat",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

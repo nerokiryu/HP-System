@@ -1,0 +1,13 @@
+{
+  "_id": "cpSeldemerafrica",
+  "name": "Sel de mer africain",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Du sel provenant de la mer d’Afrique</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnu",
+    "otherUses": "• Condiment"
+  }
+}

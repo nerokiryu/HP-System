@@ -1,0 +1,19 @@
+{
+  "_id": "spBoomerang00000",
+  "name": "Boomerang",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Lancé sur un objet, cet enchantement fait que ce dernier revient toujours vers sa position d’origine quand il est lancé, comme un boomerang. La puissance du retour est identique à celle du lancer.</p><p>Effet : Fait revenir un objet lancé vers le sa position d’origine</p><p>Durée : Permanente</p><p>Formule extrême : -</p><p>Remarque : Cet enchantement est employé sur certains Cognards non- enchantés lors de entraînements de Quidditch</p>",
+    "spellLevel": 3,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "Cateia",
+    "malus": -30,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

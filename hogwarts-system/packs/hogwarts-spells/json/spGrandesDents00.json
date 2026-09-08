@@ -1,0 +1,19 @@
+{
+  "_id": "spGrandesDents00",
+  "name": "Grandes-Dents",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Fait pousser les dents de manière démesurée infligeant un malus de 25% pour la magie et fait baisser l’APP de 2.</p><p>Durée : variable (jours)</p><p>Formule extrême : Malus de 40% et baisse l’APParence de 3</p>",
+    "spellLevel": 3,
+    "spellType": "S",
+    "target": [
+      "P"
+    ],
+    "incantation": "Dentes augmento",
+    "malus": -30,
+    "extremeFormula": true,
+    "malusExtremeFormula": -40,
+    "malusMastered": -20
+  }
+}

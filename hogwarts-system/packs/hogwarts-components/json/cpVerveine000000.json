@@ -1,0 +1,13 @@
+{
+  "_id": "cpVerveine000000",
+  "name": "Verveine",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Plante donnant de petite fleurs violettes connue pour ses vertus médicinales.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Traitement des morsures de chiens fous",
+    "otherUses": "• Vertus médicinales"
+  }
+}

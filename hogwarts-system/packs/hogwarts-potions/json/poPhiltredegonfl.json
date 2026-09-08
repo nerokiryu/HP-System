@@ -1,0 +1,39 @@
+{
+  "_id": "poPhiltredegonfl",
+  "name": "Philtre dégonflant",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Contre les effets de la potion d’enflure</p>",
+    "potionLevel": 1,
+    "malus": -10,
+    "target": "A/P/V",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Gingembre",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Lavande",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Ortie",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Venin de raie des rivières",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

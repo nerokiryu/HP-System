@@ -1,0 +1,13 @@
+{
+  "_id": "cpImpatienteduCa",
+  "name": "Impatiente du Cap",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une fleur orange tubulaire originaire d’Amérique du Nord et poussant aux bords de rivières ou de ruisseaux.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Fergus Fungal Budge\nDoigts agiles\nPimentine",
+    "otherUses": "• Décorative"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "cpChenilles00000",
+  "name": "Chenilles",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des larves de papillons de jour ou de nuit</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Poison de vieillissement\nRatatinage",
+    "otherUses": "• Nourriture animaux"
+  }
+}

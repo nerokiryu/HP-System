@@ -1,0 +1,13 @@
+{
+  "_id": "cpFarine00000000",
+  "name": "Farine",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Poudre obtenue par le broyage de grains de céréales</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Glue",
+    "otherUses": "• Consommable"
+  }
+}

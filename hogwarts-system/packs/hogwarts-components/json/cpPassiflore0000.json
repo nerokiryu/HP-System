@@ -1,0 +1,13 @@
+{
+  "_id": "cpPassiflore0000",
+  "name": "Passiflore",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>La passiflore est une plante grimpante, aux fleurs violettes et solitaires qui est connue pour soulager la nervosité et favoriser l’endormissement</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Potion Tue-Loup",
+    "otherUses": "• Médecine"
+  }
+}

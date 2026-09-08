@@ -1,0 +1,19 @@
+{
+  "_id": "spAntitriche0000",
+  "name": "Anti-triche",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Lancé sur un objet, comme un parchemin ou une plume, cet enchantement empêche celui qui emploie l’objet d’avoir recours à la triche.</p><p>Durée : 1 jour</p><p>Formule extrême : -</p>",
+    "spellLevel": 3,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "",
+    "malus": -30,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

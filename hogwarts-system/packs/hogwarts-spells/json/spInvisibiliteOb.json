@@ -1,0 +1,19 @@
+{
+  "_id": "spInvisibiliteOb",
+  "name": "Invisibilité (Objet)",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Un objet devient invisible. PERception x1 pour percer l’invisibilité.</p><p>Durée : 1 jour.</p><p>Formule extrême : -</p>",
+    "spellLevel": 3,
+    "spellType": "S",
+    "target": [
+      "O"
+    ],
+    "incantation": "Objectum evanesco",
+    "malus": -30,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

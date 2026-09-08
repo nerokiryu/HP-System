@@ -1,0 +1,13 @@
+{
+  "_id": "cpPoilsdechat000",
+  "name": "Poils de chat",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des poils provenant de chat</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "-"
+  }
+}

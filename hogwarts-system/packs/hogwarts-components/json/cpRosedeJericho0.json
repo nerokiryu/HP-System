@@ -1,0 +1,13 @@
+{
+  "_id": "cpRosedeJericho0",
+  "name": "Rose de Jéricho",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une fleur particulière du désert qui possède la faculté de sécher entièrement en l’absence d’eau avant de revivre aux premières pluies. Cette capacité lui a valu le surnom de fleur éternelle.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Élixirs éternels",
+    "otherUses": "-"
+  }
+}

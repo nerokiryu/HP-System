@@ -1,0 +1,69 @@
+{
+  "_id": "crCiseburine0000",
+  "name": "Ciseburine",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>-</p>",
+    "health": {
+      "value": 8,
+      "max": 8
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 8
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XX",
+    "stats": {
+      "str": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "con": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "siz": {
+        "value": 1,
+        "formula": "1"
+      },
+      "dex": {
+        "value": 12,
+        "formula": "2d6+6"
+      },
+      "int": {
+        "value": 1,
+        "formula": "1"
+      },
+      "pow": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "app": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "per": {
+        "value": 11,
+        "formula": "3d6"
+      }
+    },
+    "movement": {
+      "land": 1,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Morsure 10% (1)",
+    "skills": "Acrobatie : 40% ; Athlétisme : 20% ; Discrétion 50% ; Esquive : 40% ; Survie : 20% ; Vigilance : 30%",
+    "powers": "<p>Perception de la magie : Le Ciseburine est capable de sentir la présence de magie comme les sorciers ressentent la chaleur ou le froid. Perception de l’électricité : Le Ciseburine est capable de sentir la présence d’électricité dans les câbles et appareils électroniques Moldus. Régime alimentaire (magie/électricité) : Le régime alimentaire du Ciseburine est composé de magie contenue dans certains objets, comme les baguettes. Quand il n’y a plus de magie alentours, le Ciseburine se nourrit d’électricité. Gorgé de magie, le Ciseburine devient presque insensible aux substances visant à l’éliminer.</p>",
+    "notes": ""
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "cpJusdeHorglup00",
+  "name": "Jus de Horglup",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Du jus provenant de l’écrasement de Horglup, une créature semblable à un champignon doté de tentacules.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Herbicide\nInfusion infecte\nWiggenweld",
+    "otherUses": "• Propriétés curatives"
+  }
+}

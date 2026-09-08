@@ -1,0 +1,19 @@
+{
+  "_id": "spVirage00000000",
+  "name": "Virage",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Enchante les balais pour les aider à virer plus facilement. Plus le sortilège est maîtrisé et plus le balai vire avec efficacité.</p><p>Effets : octroie un bonus en vol en balai allant de 1 à 5% quand le balais est utilisé</p><p>Durée : Permanente.</p><p>Formule extrême : -</p>",
+    "spellLevel": 2,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "",
+    "malus": -20,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "cpPlumedeJobarbi",
+  "name": "Plume de Jobarbille",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une plume bleue provenant d’un Jobarbille, un oiseau connu pour ne chanter qu’au moment de sa mort</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Brume de Pensine\nDuplication\nMémoire\nPotion n°113\nSérums de vérité\nSolution de développement\nVeritaserum",
+    "otherUses": "• Décoration"
+  }
+}

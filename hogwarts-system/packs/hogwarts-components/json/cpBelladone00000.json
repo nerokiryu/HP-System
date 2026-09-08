@@ -1,0 +1,13 @@
+{
+  "_id": "cpBelladone00000",
+  "name": "Belladone",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une plante dont les feuilles et les baies sont très toxiques lorsqu’ils sont ingérés. La belladone est connue pour causer délires et les hallucinations.</p><p>En essence, elle est employée pour la fabrication de potions</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "• Essence de folie • Poison hallucinogène"
+  }
+}

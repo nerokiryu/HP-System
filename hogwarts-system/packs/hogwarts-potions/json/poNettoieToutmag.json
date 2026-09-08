@@ -1,0 +1,39 @@
+{
+  "_id": "poNettoieToutmag",
+  "name": "Nettoie-Tout magique",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Permet d’éliminer les taches les plus tenaces et de redonner aux objets un aspect immaculé.</p>",
+    "potionLevel": 1,
+    "malus": -10,
+    "target": "O",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Alcool",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Lavande",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Poudre de pieuvre",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Sécrétions de Bandimon (très diluée)",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

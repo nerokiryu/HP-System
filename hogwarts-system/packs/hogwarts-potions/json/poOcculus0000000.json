@@ -1,0 +1,45 @@
+{
+  "_id": "poOcculus0000000",
+  "name": "Occulus",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Cette potion améliore la vue de celui qui le boit.</p><p>Effet : Perception (vue) = PERx6.</p><p>Durée : 1d6+1 heures.</p><p>Remarque : Cette potion permet de neutraliser les effets du sortilège de Conjonctivite.</p>",
+    "potionLevel": 4,
+    "malus": -40,
+    "target": "A/P",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Corne de licorne",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Eau de source",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Infusion d'armoise",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Infusion d’absinthe",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Mandragore cuite liquéfiée",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

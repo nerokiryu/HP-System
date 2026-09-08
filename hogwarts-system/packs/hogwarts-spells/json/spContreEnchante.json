@@ -1,0 +1,20 @@
+{
+  "_id": "spContreEnchante",
+  "name": "Contre- Enchantement",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Surgito est une incantation permettant de contrer les effets d’un enchantement ou d’un envoûtement.</p><p>Effets : Met immédiatement fin aux effets d’un envoûtement magique ou des effets d’un enchantement.</p><p>Durée : -</p><p>Formule extrême : -</p>",
+    "spellLevel": 3,
+    "spellType": "E",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "Surgito",
+    "malus": -30,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

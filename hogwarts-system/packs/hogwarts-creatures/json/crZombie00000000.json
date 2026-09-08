@@ -1,0 +1,69 @@
+{
+  "_id": "crZombie00000000",
+  "name": "Zombie",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 11,
+      "max": 11
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 11
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "",
+    "stats": {
+      "str": {
+        "value": 14,
+        "formula": "2d6+7"
+      },
+      "con": {
+        "value": 10,
+        "formula": "0"
+      },
+      "siz": {
+        "value": 12,
+        "formula": "3d6"
+      },
+      "dex": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "int": {
+        "value": 10,
+        "formula": "0"
+      },
+      "pow": {
+        "value": 5,
+        "formula": "2d4"
+      },
+      "app": {
+        "value": 6,
+        "formula": "1d4+3"
+      },
+      "per": {
+        "value": 13,
+        "formula": "3d6+2"
+      }
+    },
+    "movement": {
+      "land": 5,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Morsure 45% 1d6-1 Griffes 40% 1d4-1",
+    "skills": "Acrobatie : 15% ; Discrétion 30% ; Esquive : 10% ; Orientation : 15% ; Vigilance : 30%",
+    "powers": "<p>Agressivité : Un Zombie, ne peut s’empêcher d’attaquer toutes les créatures vivantes qu’il repère, et plus particulièrement les humains. Quand il voit l’un d’entre eux, il devient totalement incontrôlable et s’attaquera à lui pour s’en nourrir. physiques hors norme : Les Zombies possèdent une grande force physique, suffisante pour tuer un humain à mains nues ou le traîner une fois mort. Décomposition : Le corps des Zombies est en décomposition constante, ce qui se traduit par une odeur atroce de pourriture émanant de lui. Toute personne se trouvant au contact avec un zombie doit réussir un jet de CONx3 pour ne pas être nauséeuse (-30% à toutes les actions entreprises) durant 1d4+1 minutes. Faim insatiable : La faim ressentie par les Zombies pour la chair humaine est insatiable. Peu importe le nombre de victimes faite par l’une de ces créatures, celle-ci continuera à chasser comme si elle n’avait pas mangé. Insensibilité (douleur) : Un</p>",
+    "notes": ""
+  }
+}

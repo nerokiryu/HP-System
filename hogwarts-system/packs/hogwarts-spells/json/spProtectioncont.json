@@ -1,0 +1,19 @@
+{
+  "_id": "spProtectioncont",
+  "name": "Protection contre le Mal",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Protège le lanceur d’un sort qui lui est jeté en divisant la valeur de</p><p>POUvoir de l’assaillant par 3. Ce sort donne également droit à un jet d’opposition POU/POU pour les sorts qui n’y donnent normalement pas droit et protège des dégâts physiques en les diminuant de 3. (Exception : Avada kedavra).</p><p>Portée : Dôme de POUvoir mètre de rayon.</p>",
+    "spellLevel": 6,
+    "spellType": "E",
+    "target": [
+      "P"
+    ],
+    "incantation": "Protego Horibilis",
+    "malus": -75,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

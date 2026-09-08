@@ -1,0 +1,13 @@
+{
+  "_id": "cpSucre000000000",
+  "name": "Sucre",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Extrait de la canne à sucre, de la betterave sucrière ou d’autres plantes, le sucre est une substance de saveur douce qu’en emploie généralement en cuisine.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Brume opaque\nCaféine",
+    "otherUses": "• Consommable"
+  }
+}

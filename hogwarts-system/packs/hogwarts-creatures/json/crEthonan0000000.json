@@ -1,0 +1,69 @@
+{
+  "_id": "crEthonan0000000",
+  "name": "Ethonan",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 27,
+      "max": 27
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 27
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "",
+    "stats": {
+      "str": {
+        "value": 26,
+        "formula": "3d6+15"
+      },
+      "con": {
+        "value": 19,
+        "formula": "3d6+8"
+      },
+      "siz": {
+        "value": 28,
+        "formula": "5d6+10"
+      },
+      "dex": {
+        "value": 14,
+        "formula": "3d6+3"
+      },
+      "int": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "pow": {
+        "value": 11,
+        "formula": "3d6"
+      },
+      "app": {
+        "value": 17,
+        "formula": "3d6+6"
+      },
+      "per": {
+        "value": 17,
+        "formula": "3d6+6"
+      }
+    },
+    "movement": {
+      "land": 12,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 1
+    },
+    "attacks": "Sabots : 45% (3d6)",
+    "skills": "",
+    "powers": "",
+    "notes": ""
+  }
+}

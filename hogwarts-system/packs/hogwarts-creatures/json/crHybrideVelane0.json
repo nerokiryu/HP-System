@@ -1,0 +1,69 @@
+{
+  "_id": "crHybrideVelane0",
+  "name": "Hybride Velane",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 10,
+      "max": 10
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 10
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "",
+    "stats": {
+      "str": {
+        "value": 10,
+        "formula": "Humain -1"
+      },
+      "con": {
+        "value": 9,
+        "formula": "Humain -2"
+      },
+      "siz": {
+        "value": 11,
+        "formula": "Humain ±0"
+      },
+      "dex": {
+        "value": 12,
+        "formula": "Humain +1"
+      },
+      "int": {
+        "value": 11,
+        "formula": "Humain ±0"
+      },
+      "pow": {
+        "value": 12,
+        "formula": "Humain +1"
+      },
+      "app": {
+        "value": 13,
+        "formula": "Humain +2"
+      },
+      "per": {
+        "value": 11,
+        "formula": "Humain ±0"
+      }
+    },
+    "movement": {
+      "land": 8,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Variable",
+    "skills": "Identiques à celles d’un Sorcier classique avec la compétence suivante en bonus : Danse : Maîtrise de base 20% / Maîtrise maximale 90%",
+    "powers": "<p>Affinité avec le feu : L’Hybride-Vélane n’est pas capable de convoquer des boules de feu comme son ancêtre Vélane, mais semble posséder une affinité avec les sorts de feu. Tout sortilège employant du feu ou en convoquant se lance avec un bonus de 10%. Danse de séduction : Quand elle ou il danse, l’Hybride-Vélane déploie toute la puissance de sa magie de fascination. Il devient dès lors très difficile de résister aux effets de celle-ci. Considérer que la valeur d’APParence est augmentée de 5 pour les jets d’opposition. Fascination hypnotique : Les Hybrides-Vélanes possèdent un fort pouvoir d’attraction sur les êtres humains de sexe opposé. Quand ils ou elles parviennent à capter le regard de leur cible, celle- ci peut perdre ses moyens, ressentant une attirance sans limite pour elle/lui et la/le faisant paraître plus belle/beau que tout autre être à ses yeux. Sous son emprise, la cible se met en avant, peut aller jusqu’à mettre sa vie en danger pour l’impressionner et mentira pour se targuer de prouesses plus fantaisistes les unes que les autres. Ce pouvoir fonctionne à peu près comme le sortilège Delecto ou le sortilège de Séduction duquel ils sont directement inspirés et qui possèdent des effets relativement similaires, mais sans commune mesure avec ce pouvoir. Quand une personne aperçoit un Hybride-Vélane, elle doit réussir un jet en opposition APPxPOU pour résister aux effets de la fascination. Si le jet est réussi, elle est immunisée à la fascination pour 12 heures sauf si l’Hybride-Vélane danse. Dans ce cas, un autre jet en opposition devra être effectué avec la nouvelle valeur d'apparence de la « danse de la séduction ». Les effets de la fascination perdurent tant que la cible voit l’Hybride-Vélane puis se dissipent en 1d4+1 minutes une fois que le contact visuel est rompu. Magie sans baguette : Les Hybrides-Vélanes ont étonnement plus de facilité à lancer des sortilèges sans baguette ce qui se traduit par une diminution du malus de 5% quand elles n’emploient pas leur baguette.</p>",
+    "notes": "<p>Tendance à la colère : Les Hybrides-Vélanes ont une nette tendance à se mettre en colère et pour des raisons qui peuvent paraître futiles. Tous les jets pour rester maître de soi se voient affectés d’un malus de 10%. LES NON-ÊTRES Le terme Non-Être est l’un des quatre termes employés par le Ministère de la Magie pour classifier les créatures magiques. Ces créatures sont également connues sous le nom « d’Apparition Spectrale d'Origine Non Humaine » même si le terme de Non-Être lui est préféré, car plus court à employer. ASPECT DES NON-ETRES Les Non-Êtres ressemblent beaucoup aux Esprits de par leur comportement, mais aussi de par leur nature intrinsèque et leurs capacités. Il s’agit cependant de créatures magiques qui ne possèdent pas d’équivalent chez les Moldus et qui n’ont jamais été vivantes dans le passé. Comme pour les Esprits, rares sont les Sorciers qui s’intéressent à ces créatures et qui les étudient. Actuellement, seul Remus Lupin est connu pour être un expert en Non-Êtres. Bien qu’il ne s’agisse que de suppositions, il est fort probable qu’un Non-Être n'apparaisse que sous certaines conditions spécifiques. De la même manière, on peut supposer que les Non-Êtres sont incapables de donner naissance à l’un de leurs semblables grâce à l'union de deux créatures de la même espèce, comme on sait que c'est le cas pour les Détraqueurs, les esprits frappeurs ou encore les Epouvantards. « NAISSANCE » ET NATURE D’UN NON-ETRE Même si cela n’a jamais été observé, il semblerait que ces créatures naissent en prenant leurs racines dans les émotions humaines, principalement les émotions négatives qui renferment une grande puissance. Tous les Non-Êtres, comme c’est le cas pour les objets dotés de conscience d’ailleurs, sont considérés comme étant amortels. Cet état particulier désigne le fait de ne jamais avoir été vivant et, de fait, de ne pouvoir mourir de manière naturelle. L’amortalité diffèrent cependant de l’immortalité dans le sens où une créature amortelle est capable d’être détruite ou renvoyée au néant. Les Non-Êtres semblent également capables de voler dans les airs sans devoir recourir à un moyen matériel ou à un quelconque sortilège. En fonction de la forme qu’ils prennent (comme c’est le cas pour les Épouvantards), ils renoncent cependant momentanément à employer cette capacité. Les Non-Êtres semblent également posséder une forme d’empathie et semblent capables de ressentir des émotions, ce qui permet aux Sorciers de négocier avec eux. Par exemple, certains d’entre eux peuvent ressentir la peur, la colère, respecter l’autorité en place, etc. Nombre de Sorciers préfèrent alors passer des pactes avec des Non-Êtres pour éviter de devoir se débarrasser d’eux. DETRUIRE UN NON-ETRE Ne s’agissant pas de créatures vivantes, il est assez difficile de se débarrasser d’un Non-Être. Les Sorciers et Sorcières ont donc inventé divers sortilèges qui peuvent chasser ces esprits en utilisant les émotions positives comme vecteur. Leur nombre pourrait également être limité en réduisant les conditions qui les engendrent, même si cette méthode reste plus difficile à mettre en place. NON-ETRES ET MOLDUS Bien que proches des Esprits, les Non-Êtres semblent ne pas pouvoir être perçus par les Moldus, ou à grand peine. Pour eux, ces créatures sont invisibles et leurs actions sur le monde matériel sont perçues par les Moldus comme des effets de leur imagination. Dans la grande majorité des cas, les Moldus arrivent à la conclusion que des lieux sont hantés par des fantômes ou des esprits, alors qu’ils sont en réalité occupés par des Non-Êtres. Les Moldus peuvent cependant ressentir l’effet des Non-Êtres sur leur personne et peuvent être affectés par leurs capacités. Ainsi, un Détraqueur peut très bien s’attaquer à un Moldu, qui ne verra pas ce qui l’agresse mais qui ressentira parfaitement l’agression de ce dernier. DETRAQUEUR Les Détraqueurs sont des créatures issues des ténèbres et sont considérées par les Sorciers comme les créatures les plus abjectes qui puissent exister. Les Détraqueurs possèdent une apparence humanoïde et sont le plus souvent recouverts d’une large cape noire en lambeaux qui cache leurs traits. Leurs mains sont luisantes, grisâtres, visqueuses et recouvertes de croûtes. Les Détraqueurs se nourrissent de la joie des êtres vivants, les plongeant dans un désespoir profond et une tristesse sans bornes. Ils sont aussi capables d'aspirer l'âme d'une personne, ne laissant de leur victime qu’une coquille vide. Les Détraqueurs se déplacent en lévitant au-dessus du sol à quelques centimètres de celui-ci. Ils sont incapables de traverser la matière solide. Les Détraqueurs n’ont pas de genre. Ils grandissent dans des lieux sombres, là où les ténèbres se concentrent.</p>"
+  }
+}

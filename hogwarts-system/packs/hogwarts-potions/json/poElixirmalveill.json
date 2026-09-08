@@ -1,0 +1,45 @@
+{
+  "_id": "poElixirmalveill",
+  "name": "Élixir malveillant",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Ce poison de couleur violet pourpre agit sur le comportement de la personne ou de l’animal qui le consomme et le rend malveillant durant les heures pendant lesquels il fait effet.</p><p>Durée : 1d6+2 heures</p><p>VIRulence : 15</p>",
+    "potionLevel": 4,
+    "malus": -40,
+    "target": "A/P",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Aconit",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Armotentia",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Chiendent étoilé",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Goudron",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Huile de ricin",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

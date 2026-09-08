@@ -1,0 +1,13 @@
+{
+  "_id": "cpTentaculedeMur",
+  "name": "Tentacule de Murlap",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des tentacules qui proviennent d’un Murlap, une créature magique ressemblant à un rat de grande taille.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Essence de Murlap\nFelix Felicis",
+    "otherUses": "• Résistance aux sortilèges maléfiques (consommés)"
+  }
+}

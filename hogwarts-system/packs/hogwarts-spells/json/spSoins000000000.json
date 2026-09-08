@@ -1,0 +1,20 @@
+{
+  "_id": "spSoins000000000",
+  "name": "Soins",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Redonne 1d4+1 points de vie à une personne blessée et ressoude les os après les avoir remis en place. Une fois lancé, ce sortilège ne peut plus faire effet sur cette blessure.</p><p>Durée : -</p><p>Formule extrême : Redonne 1d4+2 points de vie</p>",
+    "spellLevel": 3,
+    "spellType": "E",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "Episkey",
+    "malus": -35,
+    "extremeFormula": true,
+    "malusExtremeFormula": -45,
+    "malusMastered": -25
+  }
+}

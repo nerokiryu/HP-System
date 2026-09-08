@@ -1,0 +1,22 @@
+{
+  "_id": "spSortilegededis",
+  "name": "Sortilège de disparition",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Permet de faire disparaître un objet ou un être vivant dans le néant</p><p>Opposition : POU/POU.</p><p>Durée : permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 4,
+    "spellType": "M",
+    "target": [
+      "A",
+      "O",
+      "V",
+      "X"
+    ],
+    "incantation": "Evanesco",
+    "malus": -50,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

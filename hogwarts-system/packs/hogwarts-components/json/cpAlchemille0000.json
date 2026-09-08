@@ -1,0 +1,13 @@
+{
+  "_id": "cpAlchemille0000",
+  "name": "Alchémille",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Petite plante herbacée avec des feuilles caractéristiques en forme d’éventail, elle possède de petites dents aux extrémités, couvertes de poils doux qui font perler l’eau sur eux.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Beauté\nBeauté illusoire\nSolution de développement",
+    "otherUses": "-"
+  }
+}

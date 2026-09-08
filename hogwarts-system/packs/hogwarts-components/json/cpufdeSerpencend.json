@@ -1,0 +1,13 @@
+{
+  "_id": "cpufdeSerpencend",
+  "name": "Œuf de Serpencendre",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des œufs provenant d’un Serpencendre, une créature née d’un feu magique laissé sans surveillance</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Amortentia\nFelix Felicis\nPhiltre d’amour avancé\nPhiltre d’amour ordinaire\nPotion de haine",
+    "otherUses": "• Guérit la fièvre"
+  }
+}

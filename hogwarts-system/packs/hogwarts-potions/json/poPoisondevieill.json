@@ -1,0 +1,51 @@
+{
+  "_id": "poPoisondevieill",
+  "name": "Poison de vieillissement",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Cette potion – obtenue à partir d’une potion de Ratatinage manquée – fait vieillir la cible, qui devient une personne âgée.</p><p>VIRulence : 10</p><p>Durée : 1d6+2 heures</p>",
+    "potionLevel": 3,
+    "malus": -30,
+    "target": "A/P/V",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Chenilles",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Ciguë aquatique",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Figue de figuier d’Abyssinie",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Jus de Sangsues",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Pâquerette",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Rates de rat",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

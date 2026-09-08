@@ -1,0 +1,19 @@
+{
+  "_id": "spExtension00002",
+  "name": "Extension",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet d'augmenter la taille intérieure d'un objet sans en modifier la taille physique de manière à améliorer sa capacité de stockage. Il permet également de rendre son contenu plus léger.</p><p>Formule extrême : -</p><p>Remarque : Cet enchantement est hautement contrôlé par le Ministère de la Magie</p>",
+    "spellLevel": 6,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "Capacious extremis",
+    "malus": -65,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

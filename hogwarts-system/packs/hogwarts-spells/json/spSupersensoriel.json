@@ -1,0 +1,20 @@
+{
+  "_id": "spSupersensoriel",
+  "name": "Super-sensoriel",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Augmente toutes les capacités de perception d’un animal ou d’une personne.</p><p>Effet : Tous les jets de PERception se font comme PERx5</p><p>Effet secondaire : Rend très sensible à la lumière intense, aux bruits forts et aux mauvaises odeurs</p><p>Durée : Variable (minute)</p><p>Formule extrême : -</p>",
+    "spellLevel": 4,
+    "spellType": "E",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "",
+    "malus": -35,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

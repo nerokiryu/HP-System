@@ -1,0 +1,19 @@
+{
+  "_id": "spHerbivicus0000",
+  "name": "Herbivicus",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Accélère la croissance des plantes et fleurs</p><p>Durée : Volontaire</p><p>Remarque : Faire attention à ce que la plante ait suffisamment d’eau et de nourriture afin qu’elle ne meure pas.</p>",
+    "spellLevel": 3,
+    "spellType": "E",
+    "target": [
+      "P"
+    ],
+    "incantation": "Herbivicus",
+    "malus": -30,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "cpVenindeDemonze",
+  "name": "Venin de Démonzémerveille",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Un venin provenant d’un Démonzémerveille, une créature volante capable d’aspirer les souvenirs d’une cible et de s’en nourrir</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Onguent d'amnésie du Dr Oubbly",
+    "otherUses": "•"
+  }
+}

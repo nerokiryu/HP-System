@@ -1,0 +1,22 @@
+{
+  "_id": "spRepoussement00",
+  "name": "Repoussement",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Empêche un animal, une plante, un type d’objet ou une personne de pénétrer dans la zone enchantée par ce sort.</p><p>Durée : 1 jour</p><p>Formule extrême : durée +1 jour</p>",
+    "spellLevel": 3,
+    "spellType": "E",
+    "target": [
+      "A",
+      "O",
+      "P",
+      "V"
+    ],
+    "incantation": "Repello + « nom »",
+    "malus": -40,
+    "extremeFormula": true,
+    "malusExtremeFormula": -50,
+    "malusMastered": -30
+  }
+}

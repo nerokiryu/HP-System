@@ -1,0 +1,19 @@
+{
+  "_id": "spVentilation000",
+  "name": "Ventilation",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Libère instantanément les voies respiratoires d’une personne en train de s’étouffer.</p><p>Durée : -</p><p>Formule extrême : Fonctionne sur toutes les personnes dans un rayon de POUvoir mètres autour du sorcier</p>",
+    "spellLevel": 1,
+    "spellType": "E",
+    "target": [
+      "P"
+    ],
+    "incantation": "Anapneo",
+    "malus": -5,
+    "extremeFormula": true,
+    "malusExtremeFormula": -10,
+    "malusMastered": 0
+  }
+}

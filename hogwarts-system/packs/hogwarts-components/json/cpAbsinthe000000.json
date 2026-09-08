@@ -1,0 +1,13 @@
+{
+  "_id": "cpAbsinthe000000",
+  "name": "Absinthe",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Plante couverte de poils soyeux et formant de petites fleurs jaunes en forme de tubes. Cette plante est connue pour ses propriétés hallucinogènes.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Essence de folie\nPotion Tue-Loup",
+    "otherUses": "Alcool"
+  }
+}

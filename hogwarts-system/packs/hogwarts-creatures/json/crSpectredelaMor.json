@@ -1,0 +1,69 @@
+{
+  "_id": "crSpectredelaMor",
+  "name": "Spectre de la Mort",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 13,
+      "max": 13
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 13
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXX LES ÊTRES Un Être était l’une des quatre classifications utilisées par le Ministère de la Magie pour cataloguer les diverses créatures magiques qui habitaient le monde des sorciers. La définition d’un Être a passablement évolué au fil des siècles.",
+    "stats": {
+      "str": {
+        "value": 15,
+        "formula": "(3d6+4)"
+      },
+      "con": {
+        "value": 10,
+        "formula": "0"
+      },
+      "siz": {
+        "value": 15,
+        "formula": "3d6+4"
+      },
+      "dex": {
+        "value": 13,
+        "formula": "3d6+2"
+      },
+      "int": {
+        "value": 13,
+        "formula": "3d6+2"
+      },
+      "pow": {
+        "value": 17,
+        "formula": "3d6+6"
+      },
+      "app": {
+        "value": 9,
+        "formula": "2d6+2"
+      },
+      "per": {
+        "value": 15,
+        "formula": "3d6+4"
+      }
+    },
+    "movement": {
+      "land": 15,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Griffes 30% (1d6)",
+    "skills": "Acrobatie : 60% ; Discrétion 70% ; Empathie : 50% ; Esquive : 70% ; Fouille : 40% ; Orientation : 55% ; Vigilance : 65%",
+    "powers": "<p>Forme tangible : Le Spectre de la Mort peut, s’il le désire, devenir tangible et adapter une forme physique. Sous cette forme, il peut interagir durant quelques minutes avec son environnement comme le ferait toute créature vivante. Sous sa forme tangible, il perd les facultés de sa capacité « intangible ». C’est uniquement sous cette forme qu’on peut lui faire boire la potion d’hilarité pour s’en débarrasser. Hurlements mortels : Le cri du Spectre de la Mort se différence clairement d'un cri humain ou animal, et il se fait toujours entendre durant la nuit. S’il est entendu le soir par les personnes encore éveillées, celui-ci provoque un profond sentiment de malaise ou bien il réveille les personnes durant leur sommeil en leur infligeant de violents cauchemars. Quand une personne aperçoit un Spectre de la Mort et entend son hurlement, il meurt sur le coup. Sauvegarde : Aucune. Intangible : Comme tous les esprits, le Spectre de la Mort ne possède pas de corps physique, ce qui l’immunise à de nombreux sortilèges et affections. Par exemple, celui-ci est insensible aux poisons qui affectent les vivants. La majeure partie des sorts agissant sur la matière ne sont donc d’aucun effet sur lui. Le Spectre de la Mort peut également traverser la matière à volonté. Messager de la mort : L’arrivée du Spectre de la Mort est signe d’une mort prochaine. Le Spectre de la Mort annonce alors cette mort par des pleurs ou des chants funèbres semblables à une mélopée, qui plongent ceux qui l’entendent dans une profonde tristesse.</p>",
+    "notes": "<p>Le Spectre de la Mort peut être vaincu en lui faisant boire une potion d’Hilarité. Sauvegarde : aucune. SPECTRE PROTECTEUR : Certaines des plus grandes familles irlandaises possèdent un Spectre de la Mort qui leur sert de protecteur.</p>"
+  }
+}

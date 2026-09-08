@@ -1,0 +1,19 @@
+{
+  "_id": "spBrasierobscur0",
+  "name": "Brasier obscur",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>L’enchantement de brasier obscur est employé pour protéger une zone en créant une barrière de flammes de couleur noire. Ces flammes empêchent une personne de passer à travers en lui causant de graves brûlures. Seul le lanceur peut retirer cette protection. Les sortilèges de dissipation ne fonctionnent pas sur le brasier obscur.</p><p>Effet : occasionne 1d4+1 dégâts par round à toute personne tentant de traverser les flammes.</p><p>Durée : POUvoir jours</p><p>Sauvegarde : potion de protection contre le feu</p>",
+    "spellLevel": 5,
+    "spellType": "E",
+    "target": [
+      "X"
+    ],
+    "incantation": "",
+    "malus": -60,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

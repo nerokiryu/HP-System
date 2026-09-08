@@ -1,0 +1,19 @@
+{
+  "_id": "spBoursoufenpres",
+  "name": "Boursouf en presse- papier",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Métamorphose un Boursouf en presse-papier en pierre ou en acier</p><p>Durée : permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 4,
+    "spellType": "M",
+    "target": [
+      "A"
+    ],
+    "incantation": "",
+    "malus": -40,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

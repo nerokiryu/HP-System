@@ -1,0 +1,19 @@
+{
+  "_id": "spCracheLimace00",
+  "name": "Crache-Limace",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Fait vomir des limaces à la cible lui occasionnant un malus de 50% à la magie et inflige des douleurs.</p><p>Sous-type : Maléfice</p><p>Durée : 1d6+2 heures. (Jet de CON x3 pour faire un effort).</p><p>Formule extrême : Malus de 70% à la magie et durée +2 heures</p>",
+    "spellLevel": 3,
+    "spellType": "S",
+    "target": [
+      "P"
+    ],
+    "incantation": "Limacius Eructo",
+    "malus": -30,
+    "extremeFormula": true,
+    "malusExtremeFormula": -40,
+    "malusMastered": -20
+  }
+}

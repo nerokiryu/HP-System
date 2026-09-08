@@ -1,0 +1,13 @@
+{
+  "_id": "cpLewisie0000000",
+  "name": "Lewisie",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Plante des zones sèches d’Amérique du Nord donnant de magnifiques fleurs rouges.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Baume de lewisie brûlante\nPotion Exstimulo\nRejutage",
+    "otherUses": "-"
+  }
+}

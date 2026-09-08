@@ -1,0 +1,69 @@
+{
+  "_id": "crManticore00000",
+  "name": "Manticore",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>-</p>",
+    "health": {
+      "value": 19,
+      "max": 19
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 19
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXX",
+    "stats": {
+      "str": {
+        "value": 17,
+        "formula": "3d6+6"
+      },
+      "con": {
+        "value": 17,
+        "formula": "3d6+6"
+      },
+      "siz": {
+        "value": 20,
+        "formula": "4d6+6"
+      },
+      "dex": {
+        "value": 17,
+        "formula": "3d6+6"
+      },
+      "int": {
+        "value": 17,
+        "formula": "3d6+6"
+      },
+      "pow": {
+        "value": 9,
+        "formula": "2d6+2"
+      },
+      "app": {
+        "value": 12,
+        "formula": "2d6+6"
+      },
+      "per": {
+        "value": 12,
+        "formula": "2d6+6"
+      }
+    },
+    "movement": {
+      "land": 15,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 8
+    },
+    "attacks": "Morsure/Griffes 50% (2d6) Dard (1d6)",
+    "skills": "Acrobatie : 50% ; Athlétisme : 65% ; Discrétion : 45%; Esquive : 30%, Orientation : 50% ; Survie : 60% ; Vigilance : 55%",
+    "powers": "<p>Bestialité : Une Manticore ne peut s’empêcher d’attaquer toute créature qui croise sa route. Quand elle est en présence d'une proie potentielle, La Manticore doit réussir un jet de POUx1 pour ne pas attaquer la proie. Bond : Les puissantes pattes arrière de la Manticore lui permettent de faire des bonds gigantesques de près de 9 mètres. De plus, les jets d’Athlétisme de difficulté normale et moyenne sont considérés comme réussis automatiquement. Les jet classés comme difficiles sont à considérer comme moyens. Guérison : Les pouvoirs de guérison des Manticores sont bien supérieurs à la moyenne. Quand elle est blessée, le corps de la Manticore se régénère magiquement pour soigner les blessures subies. Cela se traduit par une régénération de 1 point de vie par jour et par une vitesse de régénération des points de vie en cas de repos double par rapport à un être humain ou une créature classique. Immunité à son propre venin : La Manticore est immunisée à son propre poison, si bien qu’elle peut dévorer sans risque les proies qu’elle vient de tuer en les empoisonnant. Langage humain : La Manticore est capable de parler la langue des humains, même s’il est rare que quelqu’un ait le temps de tenir une conversation avec elle. Résistance (magie) : la majeure partie des sortilèges ne fonctionnent pas correctement sur les Manticores. Tout sortilège lancé à 90% de chance d’échouer sur elle. Lancez 1d100 et, si le résultat est entre 010 et 000, alors le sortilège est raté. Les autres sortilèges voient leurs effets diminués de trois quarts. De plus, les sorts à durée permanente voient leur durée passer à variable (minutes). Venin mortel : Le dard de la Manticore contient un poison mortel qu’elle injecte à ses ennemis et ses proies quand elle les attaque. Très violent et rapide, ce venin ne possède aucun antidote connu à ce jour et provoque une mort immédiate de la cible s’il n’est pas contré par son système immunitaire. VIRulence : 22</p>",
+    "notes": ""
+  }
+}

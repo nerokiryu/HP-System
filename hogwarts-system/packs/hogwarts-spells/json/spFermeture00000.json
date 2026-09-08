@@ -1,0 +1,19 @@
+{
+  "_id": "spFermeture00000",
+  "name": "Fermeture",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Ferme une serrure non magique afin de sceller une porte.</p><p>Durée : -</p><p>Formule extrême : s’applique à toutes les portes dans un rayon de</p><p>POUvoir mètres du sorcier</p>",
+    "spellLevel": 1,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "Collaporta",
+    "malus": -15,
+    "extremeFormula": true,
+    "malusExtremeFormula": -25,
+    "malusMastered": -5
+  }
+}

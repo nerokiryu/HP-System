@@ -1,0 +1,22 @@
+{
+  "_id": "spEntrave0000000",
+  "name": "Entrave",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Ralentit une personne, un animal ou un objet et l'empêche d'approcher.</p><p>Effet : Mouvement = 1 et action = 3 rounds.</p><p>Durée : 1d4+1 rounds</p><p>Formule extrême : Action = 4 rounds et durée +2 rounds</p>",
+    "spellLevel": 2,
+    "spellType": "S",
+    "target": [
+      "A",
+      "O",
+      "P",
+      "V"
+    ],
+    "incantation": "Impedimenta",
+    "malus": -20,
+    "extremeFormula": true,
+    "malusExtremeFormula": -30,
+    "malusMastered": -10
+  }
+}

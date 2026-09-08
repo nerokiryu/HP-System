@@ -1,0 +1,19 @@
+{
+  "_id": "spLumiereObscuri",
+  "name": "Lumière/Obscurité",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Fait jaillir un faisceau de lumière de la baguette (longueur : 5 mètres).</p><p>Durée : volontaire</p><p>Formule extrême : Longueur 10 mètres</p>",
+    "spellLevel": 1,
+    "spellType": "E",
+    "target": [
+      "X"
+    ],
+    "incantation": "Lumos/Nox",
+    "malus": 0,
+    "extremeFormula": true,
+    "malusExtremeFormula": -10,
+    "malusMastered": 0
+  }
+}

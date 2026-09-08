@@ -1,0 +1,13 @@
+{
+  "_id": "cpWhitespirit000",
+  "name": "White-spirit",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Le White-spirit est un liquide clair dérivé de la paraffine qui est couramment utilisé comme solvant dans la peinture</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "• Traitement de la galle des écailles"
+  }
+}

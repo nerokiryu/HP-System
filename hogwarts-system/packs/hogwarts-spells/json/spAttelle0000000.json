@@ -1,0 +1,20 @@
+{
+  "_id": "spAttelle0000000",
+  "name": "Attelle",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Employé lors de fractures, ce sort fait apparaître une attelle et empêche la blessure de s'aggraver.</p><p>Effet : Rend 1 point de vie.</p><p>Durée : -</p><p>Formule extrême : rend 2 points de vie</p>",
+    "spellLevel": 1,
+    "spellType": "E",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "Ferula",
+    "malus": -15,
+    "extremeFormula": true,
+    "malusExtremeFormula": -20,
+    "malusMastered": -5
+  }
+}

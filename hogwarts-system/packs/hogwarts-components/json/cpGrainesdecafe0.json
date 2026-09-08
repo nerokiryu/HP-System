@@ -1,0 +1,13 @@
+{
+  "_id": "cpGrainesdecafe0",
+  "name": "Graines de café",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Graines torréfiées de diverses variétés de caféier</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Caféine",
+    "otherUses": "• Consommable"
+  }
+}

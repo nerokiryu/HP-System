@@ -1,0 +1,13 @@
+{
+  "_id": "cpBulbesauteur00",
+  "name": "Bulbe sauteur",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Un bulbe d’une plante magique qui possède la particularité de sauter partout</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Décoction hoqueteuse\nDoigts agiles",
+    "otherUses": "-"
+  }
+}

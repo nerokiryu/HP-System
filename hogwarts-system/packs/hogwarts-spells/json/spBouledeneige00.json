@@ -1,0 +1,20 @@
+{
+  "_id": "spBouledeneige00",
+  "name": "Boule de neige",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Agglomère la neige en une boule de neige pure qui file sur une cible</p><p>Portée : POUvoir mètres</p><p>Opposition : POUxDEX</p><p>Formule extrême : -</p>",
+    "spellLevel": 0,
+    "spellType": "E",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "",
+    "malus": -5,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

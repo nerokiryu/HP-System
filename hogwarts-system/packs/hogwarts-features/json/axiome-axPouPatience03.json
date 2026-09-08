@@ -2,7 +2,7 @@
   "_id": "axPouPatience03",
   "name": "Patience",
   "type": "feature",
-  "img": "icons/skills/social_dark.svg",
+  "img": "icons/svg/statue.svg",
   "system": {
     "description": "<p>Vous êtes patient ce qui se traduit par un bonus de 15% aux recherches magiques, enchantements d'objets, rituels longs et complexes… réduit également le temps de préparation des potions d'1/3.</p>",
     "perkType": "houseAxiom",

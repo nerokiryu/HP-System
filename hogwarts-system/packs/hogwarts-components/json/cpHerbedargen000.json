@@ -1,0 +1,13 @@
+{
+  "_id": "cpHerbedargen000",
+  "name": "Herbedargen",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une plante aux fleurs jaunes de la famille des roses</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "-"
+  }
+}

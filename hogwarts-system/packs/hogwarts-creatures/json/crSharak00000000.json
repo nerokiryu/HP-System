@@ -1,0 +1,69 @@
+{
+  "_id": "crSharak00000000",
+  "name": "Sharak",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>-</p>",
+    "health": {
+      "value": 6,
+      "max": 6
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 6
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXX",
+    "stats": {
+      "str": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "con": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "siz": {
+        "value": 5,
+        "formula": "2d4"
+      },
+      "dex": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "int": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "pow": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "app": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "per": {
+        "value": 7,
+        "formula": "2d6"
+      }
+    },
+    "movement": {
+      "land": 4,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Morsure 25% (1)",
+    "skills": "Acrobatie : 30% ; Athlétisme : 20% ; Discrétion 40% ; Esquive : 25% ; Orientation : 20% ; Survie : 25% ; Vigilance : 45%",
+    "powers": "<p>Épines: Le Sharak est doté d’épines très coupantes qui sont repliées sur son corps. Quand il se sent en danger, il peut se gonfler pour adopter la forme d’une sphère hérissée de ces épines. Celles-ci occasionnent 2d4 dégâts à quiconque tente alors de le manipuler et peuvent provoquer de profondes coupures. Natation : Le Sharak est un excellent nageur. En règle générale, les jets d’Athlétisme (natation) de difficulté normale et moyenne que le Sharak doit effectuer sont considérés comme réussis automatiquement. Les jets de natation classés comme difficiles, sont à considérer comme moyens.</p>",
+    "notes": ""
+  }
+}

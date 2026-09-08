@@ -1,0 +1,33 @@
+{
+  "_id": "poPotionlaxative",
+  "name": "Potion laxative",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Oblige le consommateur à vider son système intestinal</p><p>Effets : Les effets de cette potion apparaissent après 2d4+2 minutes après sa consommation</p><p>VIRulence : 12</p>",
+    "potionLevel": 4,
+    "malus": -40,
+    "target": "A/P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Aigremoine",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Cendres de noyer cendré",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Mauve douce",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

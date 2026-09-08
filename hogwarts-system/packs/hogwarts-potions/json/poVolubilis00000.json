@@ -1,0 +1,45 @@
+{
+  "_id": "poVolubilis00000",
+  "name": "Volubilis",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Permet de restaurer le volume de la voix d'une personne et neutralise également les effets du sortilège de langue de plomb.</p>",
+    "potionLevel": 2,
+    "malus": -20,
+    "target": "A/P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Eau de miel",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Ellébore",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Mandragore cuite",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Menthe poivrée",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Sirop d’ellébore",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

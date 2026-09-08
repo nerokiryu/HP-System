@@ -1,0 +1,13 @@
+{
+  "_id": "cpMenthe00000000",
+  "name": "Menthe",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Les menthes sont des plantes vivaces herbacées au feuillage généralement très aromatique.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Cataplasme contre les morsures de Murlap\nCrache-Flammes\nÉlixir d’Euphorie\nPotion contre la toux\nRegermination\nTraitement des morsures de chiens fous\nWiggenweld",
+    "otherUses": "• Cuisine • Propriétés médicinales"
+  }
+}

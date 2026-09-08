@@ -1,0 +1,69 @@
+{
+  "_id": "crChupacabra0000",
+  "name": "Chupacabra",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 9,
+      "max": 9
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 9
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXX",
+    "stats": {
+      "str": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "con": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "siz": {
+        "value": 9,
+        "formula": "2d6+2"
+      },
+      "dex": {
+        "value": 12,
+        "formula": "3d6+1"
+      },
+      "int": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "pow": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "app": {
+        "value": 5,
+        "formula": "2d4"
+      },
+      "per": {
+        "value": 10,
+        "formula": "2d6+3"
+      }
+    },
+    "movement": {
+      "land": 7,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 1
+    },
+    "attacks": "Morsure/Griffes : 45% (2/1)",
+    "skills": "Acrobatie : 60% ; Athlétisme : 25% ; Discrétion 60% ; Esquive : 45% ; Orientation : 20% ; Survie : 25% ; Vigilance : 50%",
+    "powers": "<p>Camouflage caméléon : Le Chupakabra peut changer instantanément la couleur ses écailles, comme les caméléons. Ce camouflage lui fait bénéficier d’un bonus de discrétion de 30% quand il est immobile et 15% s’il se déplace. Régime alimentaire (sang): Le Chupacabra se nourrit de sang. Quand il aspire le sang de ses victimes, celles-ci se voient considérablement affaiblies (perte de 1d6+1 en FOR et 1d4+1 en CON). Si leur FORce ou leur CONstitution passe à 0, elles meurent sur le coup.</p>",
+    "notes": ""
+  }
+}

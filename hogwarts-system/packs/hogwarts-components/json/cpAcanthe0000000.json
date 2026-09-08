@@ -1,0 +1,13 @@
+{
+  "_id": "cpAcanthe0000000",
+  "name": "Acanthe",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Plante épineuse aux fleurs violettes et qui aime le soleil, l’acanthe est une plante symbolisant les liens éternels entre deux personnes.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Combinaison\nÉlixirs éternels\nEncre magique",
+    "otherUses": "-"
+  }
+}

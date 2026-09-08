@@ -19,56 +19,104 @@
   ],
   "documentTypes": {
     "Actor": {
-        "character": {
-            "htmlFields": ["biography", "bio.motivation", "bio.history", "notes.rpNotes", "notes.gmNotes", "familiar.appearance", "familiar.personality", "familiar.abilities", "familiar.notes"]
-        },
-        "npc": {
-            "htmlFields": ["biography"]
-        },
-        "familiar": {
-            "htmlFields": ["biography", "bio.appearance", "bio.personality", "bio.bond", "bio.notes"]
-        },
-        "creature": {
-            "htmlFields": ["biography", "powers", "usage", "notes.gmNotes"]
-        }
+      "character": {
+        "htmlFields": [
+          "biography",
+          "bio.motivation",
+          "bio.history",
+          "notes.rpNotes",
+          "notes.gmNotes",
+          "familiar.appearance",
+          "familiar.personality",
+          "familiar.abilities",
+          "familiar.notes"
+        ]
+      },
+      "npc": {
+        "htmlFields": [
+          "biography"
+        ]
+      },
+      "familiar": {
+        "htmlFields": [
+          "biography",
+          "bio.appearance",
+          "bio.personality",
+          "bio.bond",
+          "bio.notes"
+        ]
+      },
+      "creature": {
+        "htmlFields": [
+          "biography",
+          "powers",
+          "usage",
+          "notes.gmNotes"
+        ]
+      }
     },
     "Item": {
-        "feature": {
-            "htmlFields": ["description"]
-        },
-        "gear": {
-            "htmlFields": ["description"]
-        },
-        "weapon": {
-            "htmlFields": ["description"]
-        },
-        "armor": {
-            "htmlFields": ["description"]
-        },
-        "spell": {
-            "htmlFields": ["description"]
-        },
-        "potion": {
-            "htmlFields": ["description"]
-        },
-        "component": {
-            "htmlFields": ["description"]
-        },
-        "broom": {
-            "htmlFields": ["description"]
-        }
+      "feature": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "gear": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "weapon": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "armor": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "spell": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "potion": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "component": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "broom": {
+        "htmlFields": [
+          "description"
+        ]
+      }
     }
   },
   "flags": {
     "hotReload": {
-      "extensions": ["css", "html", "hbs", "json"],
-      "paths": ["css", "lang", "templates"]
+      "extensions": [
+        "css",
+        "html",
+        "hbs",
+        "json"
+      ],
+      "paths": [
+        "css",
+        "lang",
+        "templates"
+      ]
     }
   },
-  "url": "",
+  "url": "https://github.com/nerokiryu/HP-System",
   "license": "LICENSE.txt",
   "readme": "README.md",
-  "bugs": "",
+  "bugs": "https://github.com/nerokiryu/HP-System/issues",
   "changelog": "CHANGELOG.md",
   "media": [
     {
@@ -77,13 +125,17 @@
       "thumbnail": "systems/hogwarts-system/assets/hogwarts-system.png"
     }
   ],
-  "version": "3.1.0",
+  "version": "3.3.0",
   "compatibility": {
     "minimum": "14",
-    "verified": "14.360"
+    "verified": "14.365"
   },
-  "esmodules": ["module/hogwarts-system.mjs"],
-  "styles": ["css/hogwarts-system.css"],
+  "esmodules": [
+    "module/hogwarts-system.mjs"
+  ],
+  "styles": [
+    "css/hogwarts-system.css"
+  ],
   "languages": [
     {
       "lang": "en",
@@ -190,11 +242,11 @@
           "folders": []
         }
       ]
-    }    
+    }
   ],
   "socket": false,
-  "manifest": "",
-  "download": "",
+  "manifest": "https://github.com/nerokiryu/HP-System/releases/latest/download/system.json",
+  "download": "https://github.com/nerokiryu/HP-System/releases/latest/download/hogwarts-system.zip",
   "background": "systems/hogwarts-system/assets/hogwarts-system.png",
   "grid": {
     "type": 1,
@@ -202,6 +254,5 @@
     "units": "m",
     "diagonals": 0
   },
-  "primaryTokenAttribute": "health",
-  "secondaryTokenAttribute": "fougue"
+  "primaryTokenAttribute": "health"
 }

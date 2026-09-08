@@ -1,0 +1,13 @@
+{
+  "_id": "cpVase0000000000",
+  "name": "Vase",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>De la vase provenant d’étang et stockée sous la forme de gélatine</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": ""
+  }
+}

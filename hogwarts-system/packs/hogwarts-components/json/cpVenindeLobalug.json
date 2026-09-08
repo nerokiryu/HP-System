@@ -1,0 +1,13 @@
+{
+  "_id": "cpVenindeLobalug",
+  "name": "Venin de Lobalug",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Un venin noir provenant de Lobalug, une petite créature magique aquatique sphérique qui se défend en crachant son venin sur ses ennemis.</p><p>L’utilisation de ce venin est très réglementée.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "-"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "cpPhosphoreblanc",
+  "name": "Phosphore blanc",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Le phosphore blanc est en réalité transparent, voire parfois blanc ambré, légèrement malléable avec une faible odeur d’ail. En s’enflammant, il provoque une vive lumière blanche</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Lumière aveuglante",
+    "otherUses": "-"
+  }
+}

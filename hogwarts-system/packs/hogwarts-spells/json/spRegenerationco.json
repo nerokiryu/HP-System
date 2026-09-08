@@ -1,0 +1,20 @@
+{
+  "_id": "spRegenerationco",
+  "name": "Régénération corporelle",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Régénère les blessures subies sur un corps mort</p><p>Effet : Fait disparaître les blessures subies par un corps sans vie</p><p>Durée : Volontaire / jusqu’à disparition complète des blessures</p><p>Formule extrême : -</p>",
+    "spellLevel": 5,
+    "spellType": "E",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "Revigore Vulnera Sanentur",
+    "malus": -70,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

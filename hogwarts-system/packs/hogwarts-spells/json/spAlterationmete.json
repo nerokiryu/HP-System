@@ -1,0 +1,19 @@
+{
+  "_id": "spAlterationmete",
+  "name": "Altération météorologique",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Permet de modifier les conditions atmosphériques alentours pour que celle-ci reviennent à la normale. Contre les effets de Meteorribilis.</p><p>Durée : -</p><p>Formule extrême : -</p>",
+    "spellLevel": 5,
+    "spellType": "M",
+    "target": [
+      "X"
+    ],
+    "incantation": "Meteorribilis recanto",
+    "malus": -65,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

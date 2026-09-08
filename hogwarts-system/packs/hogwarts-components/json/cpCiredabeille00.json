@@ -1,0 +1,13 @@
+{
+  "_id": "cpCiredabeille00",
+  "name": "Cire d’abeille",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>De la cire naturelle qui composent les ruches des abeilles.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Cirassure\nBaume à bec\nBaume d'asclépiade tubéreuse\nPommade soignante pour sabot\nTransfert\nVerni protecteur",
+    "otherUses": "-"
+  }
+}

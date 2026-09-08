@@ -1,0 +1,13 @@
+{
+  "_id": "cpEcaillededrago",
+  "name": "Écaille de dragon",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des écailles provenant de diverses espèces de dragons</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Encre magique\nNeutralisation\nRegermination\nVerni protecteur",
+    "otherUses": "-"
+  }
+}

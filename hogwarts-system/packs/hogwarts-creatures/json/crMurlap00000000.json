@@ -1,0 +1,69 @@
+{
+  "_id": "crMurlap00000000",
+  "name": "Murlap",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>Les tentacules de Murlap sont utilisés pour fabriquer des potions comme l’Essence de Murlap ou le Felix Felicis. Elles peuvent aussi être consommées pour octroyer une résistance à la magie de 25%.</p>",
+    "health": {
+      "value": 10,
+      "max": 10
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 10
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXX",
+    "stats": {
+      "str": {
+        "value": 6,
+        "formula": "2d4+1"
+      },
+      "con": {
+        "value": 13,
+        "formula": "2d6+6"
+      },
+      "siz": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "dex": {
+        "value": 13,
+        "formula": "3d6+2"
+      },
+      "int": {
+        "value": 4,
+        "formula": "1d4+1"
+      },
+      "pow": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "app": {
+        "value": 5,
+        "formula": "2d4"
+      },
+      "per": {
+        "value": 14,
+        "formula": "3d6+3"
+      }
+    },
+    "movement": {
+      "land": 2,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 1
+    },
+    "attacks": "Morsure 30% (1)",
+    "skills": "Acrobatie : 45% ; Athlétisme : 40% ; Discrétion 50% ; Esquive : 45% ; Orientation : 30% ; Survie : 40% ; Vigilance : 55%",
+    "powers": "<p>Fuite : En cas de danger, le Murlap bénéficie d’un bonus de 10% à tous ses jets visant à fuir. Résistance (magie) : La majeure partie des sortilèges ne fonctionnent pas correctement sur le Murlap. Tout sortilège lancé a 25% de chance d’échouer sur lui. Lancez 1d100 et, si le résultat est entre 78 et 000, alors le sortilège est raté. De plus, les sortilèges à effets permanent voient leur durée passer à variable (minutes). Résistance (poisons/maladies) : bénéficie d’une résistance aux poisons/maladies : VIR -2</p>",
+    "notes": ""
+  }
+}

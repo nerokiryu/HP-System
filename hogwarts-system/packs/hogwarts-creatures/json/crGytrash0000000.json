@@ -1,0 +1,69 @@
+{
+  "_id": "crGytrash0000000",
+  "name": "Gytrash",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 9,
+      "max": 9
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 9
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "",
+    "stats": {
+      "str": {
+        "value": 10,
+        "formula": "0"
+      },
+      "con": {
+        "value": 10,
+        "formula": "0"
+      },
+      "siz": {
+        "value": 7,
+        "formula": "2d6+1"
+      },
+      "dex": {
+        "value": 17,
+        "formula": "3d6+6"
+      },
+      "int": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "pow": {
+        "value": 11,
+        "formula": "2d6+4"
+      },
+      "app": {
+        "value": 9,
+        "formula": "1d6+5"
+      },
+      "per": {
+        "value": 11,
+        "formula": "2d6+4"
+      }
+    },
+    "movement": {
+      "land": 11,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Morsure (40%) 1(2)",
+    "skills": "Acrobatie : 55% ; Athlétisme : 45% ; Discrétion 25% ; Empathie : 20% ; Esquive : 50% ; Orientation : 35% ; Vigilance : 55%",
+    "powers": "<p>Intangible : Comme tous les esprits, les Gytrashs ne possèdent pas de corps physique, ce qui les immunise à de nombreux sortilèges et affections. Par exemple, celui-ci est insensible aux poisons qui affectent les vivants. La majeure partie des sorts agissant sur la matière ne sont d'ailleurs d’aucun effet sur eux. Le Gytrash peut également traverser la matière à volonté. Attaque tangible : Même si son corps est intangible, le Gytrash peut tout de même occasionner des dégâts quand il mord ses adversaires. Ceux-ci sont de 1 lors d’une attaque classique et de 2 en réussite critique. Agilité hors-norme : Le Gytrash est incroyablement agile. Capable de sauter dans tous les sens au moindre danger, il est extrêmement difficile à viser avec des sortilèges. Cette caractéristique particulière lui permet d’employer sa compétence esquive quand il est victime d’un sortilège afin de se mettre hors de portée de ses effets.</p>",
+    "notes": "<p>Le Gytrash est très sensible à la lumière. En règle générale, un simple charme de lumière peut être utilisé pour conjurer les Gytrashs. Même s’il n’a pas de points de vie à proprement parler, le Gytrash subit des dégâts à sa structure même quand il est soumis à de la lumière. En ce qui concerne les potions efficaces, nous trouvons la potion de : Lumière aveuglante : 1d4+2 dégâts Les sortilèges suivants l’affectent également de la manière indiquée: Lumière : Formule commune : 1d4-1 dégâts Lumière : Formule extrême : 1d4+1dégâts Vermilius : Formule commune : 2 dégâts Vermilius : Formule extrême : 4 dégâts Remarque : Des sortilèges comme « Oiseaux de lumière » et « Lumière de détresse » peuvent également les effrayer.</p>"
+  }
+}

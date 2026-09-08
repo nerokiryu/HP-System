@@ -1,0 +1,13 @@
+{
+  "_id": "cpCharbon0000000",
+  "name": "Charbon",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Roche combustible, riche en carbone, de couleur noire ou marron foncé. Le charbon est formé à partir de la combustion partielle de la matière organique des végétaux</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Énergie magique\nLumière aveuglante\nVérification",
+    "otherUses": ""
+  }
+}

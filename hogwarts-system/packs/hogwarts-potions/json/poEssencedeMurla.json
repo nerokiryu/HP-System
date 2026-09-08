@@ -1,0 +1,21 @@
+{
+  "_id": "poEssencedeMurla",
+  "name": "Essence de Murlap",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Faite à base de tentacules de Murlap, cette potion soigne les blessures légères et supprime la douleur.</p><p>Effet : redonne 1 point de vie</p><p>Effet secondaire : peut provoquer l’apparition de poils violets dans les oreilles</p>",
+    "potionLevel": 2,
+    "malus": -20,
+    "target": "A/P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Tentacule de Murlap",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

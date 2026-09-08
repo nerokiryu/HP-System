@@ -3,7 +3,10 @@
 }
 
 .sheet-header {
-  flex: 0 auto;
+  // flex-shrink doit rester à 0 : sinon les onglets au contenu haut (compétences,
+  // équipement) compriment l'en-tête, et `overflow: hidden` masque le reste sans
+  // aucun indice visuel. Le contenu des onglets défile déjà de son côté.
+  flex: 0 0 auto;
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -145,5 +148,312 @@
 
   .tox-edit-area {
     padding: 0 8px;
+  }
+}
+
+// Small inline action next to a resource label (weekly recovery, …)
+.sheet-header .resource-label .resource-action {
+  margin-left: 4px;
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+// Dodge / parry controls in the sheet header (Chap. 2.5)
+.sheet-header .reaction-buttons {
+  gap: 10px;
+
+  a {
+    font-size: 16px;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.sheet-header .resource-label .shield-badge {
+  font-size: 10px;
+  padding: 0 3px;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.12);
+}
+
+// House points tracker (Chap. 24.2)
+// `&` is required: ApplicationV2 puts every entry of `classes` on the same root element,
+// so `.hogwarts-system` and `.house-points` are siblings, not ancestor/descendant.
+&.house-points {
+  .hourglasses {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 10px;
+
+    .hourglass {
+      flex: 1 1 0;
+      min-width: 0;
+      margin: 0;
+      text-align: center;
+
+      // Per-house gem colours, set on the figure and read by the SVG below.
+      &.house-gryffindor { --gem: #b81b2c; --gem-lit: #ef4f5e; }
+      &.house-slytherin { --gem: #1a7a46; --gem-lit: #46c882; }
+      &.house-ravenclaw { --gem: #2a4b9b; --gem-lit: #5e8ae0; }
+      &.house-hufflepuff { --gem: #d4a017; --gem-lit: #f5d271; }
+
+      svg {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 190px;
+        margin: 0 auto;
+      }
+
+      .glass {
+        fill: rgba(255, 255, 255, 0.03);
+        stroke: rgba(255, 255, 255, 0.4);
+        stroke-width: 1.5;
+      }
+
+      .sand { fill: var(--gem); }
+      .gem-a { fill: var(--gem-lit); opacity: 0.55; }
+      .gem-b { fill: #fff; opacity: 0.2; }
+      .shine { fill: #fff; opacity: 0.1; }
+      .frame { fill: #6b4a22; stroke: #3d2a12; stroke-width: 1; }
+
+      &.rising svg { animation: hogwarts-gem-flash 0.9s ease-out; }
+      &.falling svg { animation: hogwarts-gem-shake 0.5s ease-out; }
+
+      &.leader .frame { fill: #b8912f; stroke: #6b4a22; }
+
+      figcaption {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.2;
+        margin-top: 2px;
+
+        .house-name { font-size: 11px; opacity: 0.8; }
+        .house-total { font-size: 20px; font-weight: bold; }
+        .house-total.is-leader { color: var(--gem-lit); }
+      }
+
+      &.rising figcaption .house-total,
+      &.falling figcaption .house-total { animation: hogwarts-gem-count 0.9s ease-out; }
+
+      .house-adjust {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        margin-top: 2px;
+
+        input { width: 3.2em; text-align: center; }
+      }
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hourglasses .hourglass {
+      svg,
+      figcaption .house-total { animation: none; }
+    }
+  }
+
+  .house-target {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+
+    label { flex: 0 0 auto; }
+    select { flex: 1; }
+  }
+
+  .house-tables {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+
+    .house-table {
+      flex: 1 1 0;
+      min-width: 0;
+
+      h3 {
+        margin: 0 0 2px;
+        font-size: 14px;
+        border-bottom: 1px solid $c-faint;
+      }
+
+      .legend {
+        margin: 0;
+        font-size: 11px;
+        font-style: italic;
+        opacity: 0.6;
+      }
+
+      h4 { margin: 6px 0 2px; font-size: 12px; opacity: 0.7; }
+      ul { list-style: none; margin: 0; padding: 0; }
+
+      li {
+        display: flex;
+        justify-content: space-between;
+        gap: 6px;
+        font-size: 12px;
+        line-height: 1.5;
+      }
+
+      .values { opacity: 0.6; white-space: nowrap; }
+    }
+  }
+}
+
+// Hybrid ancestry block (Chap. 17)
+.hybrid-block {
+  margin-top: 10px;
+
+  .hybrid-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+
+    label { flex: 0 0 7em; font-size: 11px; line-height: 1.15; }
+    select { flex: 1 1 auto; min-width: 0; }
+  }
+
+  .hybrid-cost {
+    flex: 0 0 auto;
+    font-size: 10px;
+    opacity: 0.7;
+  }
+
+  .hybrid-capabilities {
+    list-style: none;
+    margin: 6px 0 0;
+    padding: 0;
+    font-size: 12px;
+
+    li {
+      padding: 1px 0 1px 12px;
+      border-left: 2px solid $c-faint;
+    }
+
+    .note { opacity: 0.6; }
+  }
+}
+
+.hybrid-mod {
+  flex: 0 0 auto;
+  font-size: 11px;
+  white-space: nowrap;
+
+  &.bonus { color: #4caf50; }
+  &.malus { color: #e57373; }
+}
+
+// School experience actions (Chap. 7.3 / 25)
+.school-xp-actions {
+  gap: 8px;
+  flex-wrap: wrap;
+
+  .term-counter {
+    font-size: 11px;
+    opacity: 0.7;
+  }
+
+  .xp-pool {
+    margin-left: auto;
+    font-weight: bold;
+
+    &.empty { opacity: 0.45; font-weight: normal; }
+  }
+}
+
+.xp-pool-form {
+  max-height: 60vh;
+  overflow-y: auto;
+
+  .unlock-row {
+    flex-wrap: wrap;
+
+    label { flex: 1 0 100%; margin-bottom: 2px; }
+    select { flex: 1 1 10em; }
+    input[type='text'] { flex: 1 1 10em; }
+  }
+
+  .pool-row {
+    label { flex: 1; }
+    // Foundry gives form-group fields `flex: 2 1 0%`, and flex-basis beats width.
+    input[type='number'] { flex: 0 0 4.5em; }
+    .hint { flex: 0 0 5em; text-align: right; opacity: 0.6; font-size: 11px; }
+  }
+}
+
+// Item sheets. `&` is required: ApplicationV2 puts `hogwarts-system` and `item`
+// on the same root element, so they are not ancestor/descendant.
+&.item {
+  .tab.attributes {
+    // No `display` here: it would beat the rule that hides an inactive tab.
+
+    // The potion tab packs its fields into an auto-fit grid; in a ~480px sheet
+    // that yields ~140px columns, which wraps every label over three lines.
+    // Collapse it so potions read like every other item type.
+    .potion-info-grid {
+      grid-template-columns: 1fr;
+    }
+
+    // One field per line: label on the left, control on the right.
+    // `.form-group` gets the same panel treatment as `.resource` so that item
+    // types mixing the two (weapon, armor, gear, broom) stay visually uniform.
+    .form-group {
+      background: rgba(255, 255, 255, 0.5);
+      border: 1px solid rgba(var(--hogwarts-accent-rgb), 0.2);
+      border-radius: 4px;
+      padding: 4px 8px;
+    }
+
+    .resource,
+    .form-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 8px;
+      margin-bottom: 4px;
+
+      > label,
+      > .resource-label {
+        flex: 0 0 42%;
+        margin-bottom: 0;
+        line-height: 1.2;
+      }
+
+      > input,
+      > select,
+      > .form-fields {
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+
+      > input[type='checkbox'] {
+        flex: 0 0 auto;
+      }
+
+      // Long-form controls need the full width, so they wrap under the label.
+      &:has(> textarea),
+      &:has(> select[multiple]),
+      &:has(> .grid),
+      &:has(> .currency-fields) {
+        flex-wrap: wrap;
+
+        > label,
+        > .resource-label { flex: 1 0 100%; margin-bottom: 2px; }
+        > textarea,
+        > select[multiple],
+        > .grid,
+        > .currency-fields { flex: 1 0 100%; }
+      }
+    }
   }
 }

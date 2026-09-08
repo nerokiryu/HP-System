@@ -1,0 +1,13 @@
+{
+  "_id": "cpEpinedepoisson",
+  "name": "Épine de poisson-diable",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des épines provenant du poisson diable, un poisson connu pour être hautement venimeux.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Herbicide\nPotion No. 7\nWiggenweld",
+    "otherUses": "-"
+  }
+}

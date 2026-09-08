@@ -1,0 +1,19 @@
+{
+  "_id": "spTasseenrat0000",
+  "name": "Tasse en rat",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Transforme une tasse en rat</p><p>Durée : permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 5,
+    "spellType": "M",
+    "target": [
+      "O"
+    ],
+    "incantation": "Rattusfors",
+    "malus": -50,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

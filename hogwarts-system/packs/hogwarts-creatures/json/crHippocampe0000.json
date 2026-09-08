@@ -1,0 +1,69 @@
+{
+  "_id": "crHippocampe0000",
+  "name": "Hippocampe",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>Monture des êtres aquatiques (très rare)</p>",
+    "health": {
+      "value": 15,
+      "max": 15
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 15
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXX REMARQUE : L’œuf de l’Hippocampe met plusieurs semaines avant d’éclore. Le jeune qui s’y trouve – qu’on nomme le Poulaintétard – se développe dans cet œuf jusqu’à être parfaitement formé.",
+    "stats": {
+      "str": {
+        "value": 17,
+        "formula": "3d6+6"
+      },
+      "con": {
+        "value": 15,
+        "formula": "3d6+4"
+      },
+      "siz": {
+        "value": 17,
+        "formula": "3d6+6"
+      },
+      "dex": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "int": {
+        "value": 5,
+        "formula": "1d6+1"
+      },
+      "pow": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "app": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "per": {
+        "value": 13,
+        "formula": "3d6+2"
+      }
+    },
+    "movement": {
+      "land": 3,
+      "fly": null,
+      "swim": 17
+    },
+    "armor": {
+      "value": 1
+    },
+    "attacks": "Tête 45% (2d3)",
+    "skills": "Acrobatie : 65%, Athlétisme : 50% ; Discrétion :60%; Esquive : 40%, Orientation : 25% ; Survie : 35% ; Vigilance : 45%",
+    "powers": "<p>Coup de tête : L’Hippocampe peut charger une cible très violemment et lui asséner un coup de tête très puissant qui peut l’étourdir. En plus d’occasionner 1d4+1 dégâts, ce coup de tête envoie la cible à 1d6+3 mètres en arrière. Celle- ci doit également réussir un jet de CONStitutionx3 pour ne pas être considérée comme étourdie : malus de 20% à toutes les actions pour 1d4+2 rounds. Natation : L’Hippocampe est un excellent nageur qui peut atteindre de grandes vitesses dans son milieu naturel. En règle générale, les jets d’Athlétisme (natation) de difficulté normale et moyenne que L’Hippocampe doit effectuer sont considérés comme réussis automatiquement. Les jets de natation classés comme difficiles sont à considérer comme moyens.</p>",
+    "notes": ""
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "cpOs000000000000",
+  "name": "Os",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des os provenant d’animaux</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Engrais magiques\nBaume à bec\nFertilisant",
+    "otherUses": "• Nourriture pour animaux"
+  }
+}

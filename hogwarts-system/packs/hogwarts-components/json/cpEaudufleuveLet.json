@@ -1,0 +1,13 @@
+{
+  "_id": "cpEaudufleuveLet",
+  "name": "Eau du fleuve Lethé",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>De l’eau provenant du fleuve Léthé et connue pour ses vertus pouvant faire perdre la mémoire ou effacer les souvenirs.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Amnésie\nBrume de Pensine\nOnguent d’amnésie du Dr Oubbly\nPommade pommadante Grégoire\nPotion d’ataraxie\nSommeil sans rêve",
+    "otherUses": "-"
+  }
+}

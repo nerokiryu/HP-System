@@ -1,0 +1,13 @@
+{
+  "_id": "cpOignondePungou",
+  "name": "Oignon de Pungous",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Plante magique composée aux feuilles vertes et possédant un bulbe allongé orange. Il est très piquant et, à cause de cela, le contact avec des oignons pungous fraîchement hachés est déconseillé.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Anti-Furoncles",
+    "otherUses": "-"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "cpBezoard0000000",
+  "name": "Bézoard",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Corps étranger ressemblant à une pierre qui se trouve dans l’estomac des chèvres et qui sert d’antidote à la plupart des poisons et potions</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Antidote aux poisons courants",
+    "otherUses": "• Contrepoison"
+  }
+}

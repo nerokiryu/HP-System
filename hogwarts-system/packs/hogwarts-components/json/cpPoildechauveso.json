@@ -1,0 +1,13 @@
+{
+  "_id": "cpPoildechauveso",
+  "name": "Poil de chauve- souris",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des poils qui proviennent de chauve-souris</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "-"
+  }
+}

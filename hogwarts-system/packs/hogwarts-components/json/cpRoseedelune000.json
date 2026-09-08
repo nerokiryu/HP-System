@@ -1,0 +1,13 @@
+{
+  "_id": "cpRoseedelune000",
+  "name": "Rosée de lune",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Plante dont les propriétés magiques ont été découvertes au Moyen-Âge par la druidesse irlandaise Cliodna.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Antidote aux poisons communs\nConscience\nWiggenweld",
+    "otherUses": "• Bièraubeurre"
+  }
+}

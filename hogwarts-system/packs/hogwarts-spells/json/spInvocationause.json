@@ -1,0 +1,19 @@
+{
+  "_id": "spInvocationause",
+  "name": "Invocation au serpent",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Conjure un serpent vivant</p><p>Durée : permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 4,
+    "spellType": "M",
+    "target": [
+      "X"
+    ],
+    "incantation": "Serpensortia",
+    "malus": -40,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

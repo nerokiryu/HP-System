@@ -1,0 +1,13 @@
+{
+  "_id": "cpFeuilledeTenta",
+  "name": "Feuille de Tentacula vénéneuse",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une plante magique verte, aux dents pointues et possédant des vignes mobiles qui tentent d’attraper des proies vivantes. Le poison qu’elle contient peut provoquer la mort de celui qui se fait mordre. Chaque feuille est vendue 10</p><p>Gallions chacune.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Gaz étrangleur\nPotion No. 7",
+    "otherUses": "• Poison mortel"
+  }
+}

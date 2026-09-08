@@ -1,0 +1,19 @@
+{
+  "_id": "spCouleursdencre",
+  "name": "Couleurs d’encre clignotantes",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet de faire changer de couleur l’encre. Le changement de couleur peut être aléatoire ou défini en fonction de la volonté de l’utilisateur. Il peut également s’agir d’un changement unique (noir vers bleu) par exemple, ou d’un changement continu de couleurs (noir vers rouge, vers bleu, vers jaune, vers noir et ainsi de suite)</p><p>Durée : Permanent ou -</p><p>Remarque : Cet enchantement est utilisé pour enchanter l’encre multicolore vendue en magasin.</p><p>Formule extrême : -</p>",
+    "spellLevel": 2,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "",
+    "malus": -20,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

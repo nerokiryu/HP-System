@@ -1,0 +1,19 @@
+{
+  "_id": "spDecoupe0000000",
+  "name": "Découpe",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Sectionne la matière en deux parties.</p><p>Durée : permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 3,
+    "spellType": "M",
+    "target": [
+      "O"
+    ],
+    "incantation": "Diffindo / Cracbadabum",
+    "malus": -25,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

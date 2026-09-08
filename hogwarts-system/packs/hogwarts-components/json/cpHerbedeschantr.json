@@ -1,0 +1,13 @@
+{
+  "_id": "cpHerbedeschantr",
+  "name": "Herbe des chantres",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une plante magique qui possède la particularité de rendre la voix plus mélodieuse.</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Langue de miel",
+    "otherUses": ""
+  }
+}

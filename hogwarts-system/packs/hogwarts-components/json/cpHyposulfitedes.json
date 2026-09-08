@@ -1,0 +1,13 @@
+{
+  "_id": "cpHyposulfitedes",
+  "name": "Hyposulfite de sodium",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Agent fixateur employé en photographie</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Solution de développement",
+    "otherUses": "-"
+  }
+}

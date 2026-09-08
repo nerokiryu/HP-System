@@ -1,0 +1,13 @@
+{
+  "_id": "cpLanguedechien0",
+  "name": "Langue de chien",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>La langue provenant d’un chien</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "-"
+  }
+}

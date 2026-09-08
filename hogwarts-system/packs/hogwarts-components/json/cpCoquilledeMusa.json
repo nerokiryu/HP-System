@@ -1,0 +1,13 @@
+{
+  "_id": "cpCoquilledeMusa",
+  "name": "Coquille de Musard",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des coquilles de Musard, une sorte d’escargot magique dont la coquille change de couleur toutes les heures. Ces coquilles sont cependant extrêmement empoisonnées.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Doxycide",
+    "otherUses": "• Poison"
+  }
+}

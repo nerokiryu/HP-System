@@ -1,0 +1,20 @@
+{
+  "_id": "spCrottesdenez00",
+  "name": "Crottes de nez",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Ce sortilège – également connu sous le nom de maléfice du Morveux – fait abondamment couler le nez d’une personne, l’empêchant de respirer par le nez.</p><p>Effets : impossible d’utiliser PERception (odorat) + malus de 10% pour toute activité liée à l’effort et à la communication.</p><p>Sous-type : Maléfice</p><p>Durée : Variable (heures)</p><p>Formule extrême : Malus de 25% à la magie et durée +2 heures</p>",
+    "spellLevel": 3,
+    "spellType": "S",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "Mucus ad Nauseam",
+    "malus": -25,
+    "extremeFormula": true,
+    "malusExtremeFormula": -35,
+    "malusMastered": -10
+  }
+}

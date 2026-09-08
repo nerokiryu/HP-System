@@ -1,0 +1,45 @@
+{
+  "_id": "poElixirdEuphori",
+  "name": "Elixir d’Euphorie",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Cette potion met le buveur de bonne humeur, ce qui l’empêche de ressentir une émotion négative durant plusieurs heures.</p><p>Durée : 1d6+1 heures</p>",
+    "potionLevel": 5,
+    "malus": -50,
+    "target": "A/P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Épines de porc-épic",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Fèves sopophoriques",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Figue de figuier d’Abyssinie",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Infusion d’armoise (ou d’absinthe)",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Menthe (ou menthe poivrée)",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

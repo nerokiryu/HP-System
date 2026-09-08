@@ -1,0 +1,13 @@
+{
+  "_id": "cpKelp0000000000",
+  "name": "Kelp",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Le kelp est une famille d’algues brunes géantes pouvant mesurer jusqu’à 60m et former de véritables forêts sous-marines</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Aliments magiques\nFertilisant",
+    "otherUses": "-"
+  }
+}

@@ -2,7 +2,7 @@
   "_id": "axSepDefautPsy01",
   "name": "Défaut psychologique",
   "type": "feature",
-  "img": "icons/skills/social_dark.svg",
+  "img": "icons/svg/statue.svg",
   "system": {
     "description": "<p>Vous possédez une limitation psychologique qui vous limite dans vos relations sociales. Vous pouvez être ambitieux, râleur, menteur, orgueilleux, sans scrupules, susceptible, paresseux, cafteur, colérique, envieux, cleptomane, raciste, violent, etc.</p>",
     "perkType": "houseAxiom",

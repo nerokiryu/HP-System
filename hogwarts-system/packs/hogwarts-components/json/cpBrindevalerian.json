@@ -1,0 +1,13 @@
+{
+  "_id": "cpBrindevalerian",
+  "name": "Brin de valériane",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des brins provenant de valériane, une plante connue à l’époque médiévale pour ses propriétés sédatives et antispasmodiques, et qui était utilisée comme remède pour le sommeil et les nerfs.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Aliments magiques\nAmnésie\nConscience\nBabillage\nCrache-Flammes\nOnguent d’amnésie du Dr Oubbly\nPotion d’ataraxie\nSommeil sans rêve\nSomnifère\nSomnifère pour Croup",
+    "otherUses": "• Berlingot de Fièvre (confiserie)"
+  }
+}

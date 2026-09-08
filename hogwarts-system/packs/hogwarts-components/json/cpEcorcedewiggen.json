@@ -1,0 +1,13 @@
+{
+  "_id": "cpEcorcedewiggen",
+  "name": "Écorce de wiggentree",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>De l’écorce provenant de wiggentree, un arbre connu pour ses vertus magiques.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Antidote à un philtre d’amour.\nWiggenweld",
+    "otherUses": "-"
+  }
+}

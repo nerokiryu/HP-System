@@ -1,0 +1,21 @@
+{
+  "_id": "poVerniprotecteu",
+  "name": "Verni protecteur",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Un verni protecteur pour balai qui permet de garder les runes actives tout en les protégeant des dégâts dus aux intempéries.</p>",
+    "potionLevel": 3,
+    "malus": -30,
+    "target": "O",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Cire, Huile de Neem, Écailles de dragon, Sève de Verni du Japon",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

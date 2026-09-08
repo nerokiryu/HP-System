@@ -1,0 +1,51 @@
+{
+  "_id": "poPotiondataraxi",
+  "name": "Potion d’ataraxie",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Permet de passer une nuit sans faire de cauchemars, dans un état de béatitude.</p><p>Effet : Empêche le Sorcier de rêver</p><p>Effets secondaires : Cette potion rend le sommeil moins réparateur. A très fortes doses et prise sur une longue période, cette potion peut provoquer un coma de quelques jours à quelques semaines</p>",
+    "potionLevel": 3,
+    "malus": -30,
+    "target": "A/P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Coprin narcotique",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Brin de Valériane",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Eau du fleuve Léthé",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Lotos",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Racine de Rêve",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Racine de valériane",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

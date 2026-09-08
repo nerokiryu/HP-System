@@ -1,0 +1,69 @@
+{
+  "_id": "crSalamandreGean",
+  "name": "Salamandre Geante d’Amazonie",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 17,
+      "max": 17
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 17
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "",
+    "stats": {
+      "str": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "con": {
+        "value": 13,
+        "formula": "3d6+2"
+      },
+      "siz": {
+        "value": 21,
+        "formula": "3d6+10"
+      },
+      "dex": {
+        "value": 12,
+        "formula": "3d6+1"
+      },
+      "int": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "pow": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "app": {
+        "value": 7,
+        "formula": "2d4+2"
+      },
+      "per": {
+        "value": 14,
+        "formula": "3d6+3"
+      }
+    },
+    "movement": {
+      "land": 12,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 3
+    },
+    "attacks": "Morsure 50% (2d3)",
+    "skills": "Acrobatie : 40% ; Athlétisme : 55% ; Discrétion 50% ; Esquive : 40% ; Orientation : 30% ; Survie : 45% ; Vigilance : 50% REMARQUE SUR LES POUVOIRS ET CAPACITES : Bien que la Salamandre d’Amazonie possède les mêmes capacités et pouvoirs que son homologue de petite taille, certaines d’entre-elles sont légèrement différentes. Grande combustion : La Salamandre peut s’entourer de puissantes flammes, occasionnant 2d4+2 dégâts à celui qui la tient. La cible doit effectuer un jet de chance (PERx5) avec un malus de 15% pour ne pas s’enflammer. Grandes Flammes : La Salamandre peut cracher un souffle de feu en forme de cône qui porte à 3 mètres pour 1,5 mètres de diamètre. Toutes les créatures qui se trouvent dans ce cône reçoivent 2d4+2 dégâts. La cible doit effectuer un jet de chance (PERx5) avec un malus de 5% pour ne pas s’enflammer. SASABONSAM Un Sasabonsam est une créature humanoïde semblable à un vampire, mais qui n’est pas considérée comme un être. Native de l'Afrique de l'Ouest, il appartient au folklore des Ashantis du Ghana ainsi que de la Côte d'Ivoire et du Togo. Le Sasabonsam possède des dents de fer et des jambes tordues se terminant par de longs crochets de fer en guise de pieds. Ceux-ci lui permettent de s’accrocher aux branches des arbres comme le ferait une chauve-souris. Vivant dans les arbres, il passe de longues heures accrochés la tête en bas dans l’attente qu’une proie passe à portée. Bien qu’apparentés aux vampires, les Sasabonsams ne sont pas capables de changer d’autres créatures en vampires ou en Sasabonsams, mais leurs morsures peuvent causer la mort de ceux qui en sont la cible.",
+    "powers": "",
+    "notes": ""
+  }
+}

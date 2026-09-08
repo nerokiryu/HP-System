@@ -1,0 +1,13 @@
+{
+  "_id": "cpCranson0000000",
+  "name": "Cranson",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Plante qui pousse dans les marais salés ou le long du littoral dans le nord et l’ouest de l’Europe et en Grande-Bretagne. Riche en vitamine C, elle est utilisée pour aider à guérir ou prévenir le scorbut.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Aliments magiques\nPhiltre de Confusion\nPhiltre d’Embrouille\nPhiltre revigorant",
+    "otherUses": "• Lutter contre le scorbut"
+  }
+}

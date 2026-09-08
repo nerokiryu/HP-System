@@ -1,0 +1,13 @@
+{
+  "_id": "cpEssencedecorce",
+  "name": "Essence d’écorce d’agrume",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>De l’essence aromatique issue d’écorce de divers agrumes. Entre dans la composition de cire de protection naturelle</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Transfert",
+    "otherUses": "• Parfum"
+  }
+}

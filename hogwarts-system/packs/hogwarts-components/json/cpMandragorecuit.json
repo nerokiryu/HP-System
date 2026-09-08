@@ -1,0 +1,13 @@
+{
+  "_id": "cpMandragorecuit",
+  "name": "Mandragore cuite",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Les racines cuites de mandragore, une plante connue pour son hurlement pouvant tuer un homme. Il s’agit d’un ingrédient commun mais très puissant.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Antidote aux poisons courants\nEngrais magiques\nOcculus\nMémoire\nPhiltre de mandragore\nWiggenweld\nVolubilis",
+    "otherUses": "-"
+  }
+}

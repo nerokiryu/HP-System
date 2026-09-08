@@ -1,0 +1,19 @@
+{
+  "_id": "spImperium000000",
+  "name": "Imperium",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Oblige une personne à obéir au sorcier (Résister : POU x1).</p><p>Sous-type : Maléfice</p>",
+    "spellLevel": 6,
+    "spellType": "S",
+    "target": [
+      "P"
+    ],
+    "incantation": "Impero",
+    "malus": -110,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

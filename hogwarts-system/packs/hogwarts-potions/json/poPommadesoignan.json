@@ -1,0 +1,39 @@
+{
+  "_id": "poPommadesoignan",
+  "name": "Pommade soignante pour sabot",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Une pommade qui permet de soigner les blessures aux sabots de certaines créatures magiques ou non.</p><p>Utilisation : Une ou deux utilisation suffisent à complètement restaurer la zone blessée.</p><p>Remarque : Ne doit jamais, sous aucun prétexte, être employée sur un Licheur</p>",
+    "potionLevel": 2,
+    "malus": -20,
+    "target": "A",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Beurre de karité",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Cire d’abeille",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Griffes de dragon",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Huile de ricin",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

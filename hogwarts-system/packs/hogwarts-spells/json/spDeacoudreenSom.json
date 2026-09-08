@@ -1,0 +1,19 @@
+{
+  "_id": "spDeacoudreenSom",
+  "name": "Dé à coudre en Sombral",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Transforme un dé à coudre en réplique miniature de Sombral</p><p>Durée : permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 5,
+    "spellType": "M",
+    "target": [
+      "O"
+    ],
+    "incantation": "",
+    "malus": -60,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

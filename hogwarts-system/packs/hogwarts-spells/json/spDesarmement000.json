@@ -1,0 +1,19 @@
+{
+  "_id": "spDesarmement000",
+  "name": "Désarmement",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Fait sauter la baguette ou d’autres objets des mains de l’adversaire (Opposition : POU/POU).</p><p>Durée : -</p><p>Formule extrême : -</p>",
+    "spellLevel": 2,
+    "spellType": "E",
+    "target": [
+      "P"
+    ],
+    "incantation": "Expelliarmus",
+    "malus": -20,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

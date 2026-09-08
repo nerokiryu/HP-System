@@ -1,0 +1,19 @@
+{
+  "_id": "spDetection00000",
+  "name": "Détection",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Révèle la présence de toutes personnes vivantes dans la zone du sort.</p><p>Zone : POUx2 mètres de diamètre.</p><p>Durée : -</p><p>Formule extrême : Zone : POUx5 mètres</p>",
+    "spellLevel": 4,
+    "spellType": "E",
+    "target": [
+      "X"
+    ],
+    "incantation": "Hominium revelo",
+    "malus": -40,
+    "extremeFormula": true,
+    "malusExtremeFormula": -50,
+    "malusMastered": -30
+  }
+}

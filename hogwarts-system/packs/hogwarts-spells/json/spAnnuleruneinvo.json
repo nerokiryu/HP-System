@@ -1,0 +1,21 @@
+{
+  "_id": "spAnnuleruneinvo",
+  "name": "Annuler une invocation",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Permet de faire disparaître un objet, animal, végétal, crée par métamorphose, ou de lui rendre sa forme première (Opposition :</p><p>POU/POU). Ne marche pas pour les Animagus!</p><p>Durée : permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 4,
+    "spellType": "M",
+    "target": [
+      "A",
+      "O",
+      "V"
+    ],
+    "incantation": "« Nom » evanesco",
+    "malus": -40,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

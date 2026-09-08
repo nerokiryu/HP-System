@@ -1,0 +1,21 @@
+{
+  "_id": "poBreuvagedecham",
+  "name": "Breuvage de champignons mortels",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Un poison pouvant être mortel et qui cause de grands dommages à la santé de celui qui le consomme</p><p>Effets : perte de 1 point de vie / heure</p><p>Effet secondaire : Perte de 1d4-2 points de CONstitution</p><p>Temps d’incubation : 1d6 minutes</p><p>VIRulence : 18</p><p>Durée : 2d4+2 heures / -</p>",
+    "potionLevel": 5,
+    "malus": -50,
+    "target": "A/P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Calice de la mort",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

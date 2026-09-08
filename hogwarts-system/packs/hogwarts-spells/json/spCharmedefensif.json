@@ -1,0 +1,20 @@
+{
+  "_id": "spCharmedefensif",
+  "name": "Charme défensif",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Protège le lanceur des dégâts occasionnés en déviant légèrement les objets lancés dans sa direction.</p><p>Effet : Fonctionne comme une armure en réduisant les 2 premiers dégâts normaux reçus (létaux ou non).</p><p>Durée : POU minutes</p><p>Formule extrême : réduit les 3 premiers dégâts reçus</p>",
+    "spellLevel": 4,
+    "spellType": "E",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "",
+    "malus": -45,
+    "extremeFormula": true,
+    "malusExtremeFormula": -55,
+    "malusMastered": -35
+  }
+}

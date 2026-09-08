@@ -1,0 +1,13 @@
+{
+  "_id": "cpCendredenoyerc",
+  "name": "Cendre de noyer cendré",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des cendres provenant de la combustion de bois de noyer cendré</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Potion laxative",
+    "otherUses": ""
+  }
+}

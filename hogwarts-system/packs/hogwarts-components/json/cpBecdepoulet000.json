@@ -1,0 +1,13 @@
+{
+  "_id": "cpBecdepoulet000",
+  "name": "Bec de poulet",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Les becs récupérés sur des poulets</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "-"
+  }
+}

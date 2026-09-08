@@ -1,0 +1,13 @@
+{
+  "_id": "cpPoudredepierre",
+  "name": "Poudre de pierre de lune",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Également appelée pierre à souhait, cette pierre est une gemme utilisée comme ingrédient de potions quand elle est réduite en poudre.</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Amortentia\nPhiltre d’amour avancé\nPhiltre d’amour ordinaire\nPotion de haine\nPhiltre de paix\nPotion No. 86\nSolution scintillante\nVeritaserum",
+    "otherUses": ""
+  }
+}

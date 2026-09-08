@@ -1,0 +1,13 @@
+{
+  "_id": "cpCrapaudcornu00",
+  "name": "Crapaud cornu",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une variété particulière de crapaud qui se distingue par la présence de cornes sur sa tête</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "• Animal domestique"
+  }
+}

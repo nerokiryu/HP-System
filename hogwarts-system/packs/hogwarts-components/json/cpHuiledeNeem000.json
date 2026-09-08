@@ -1,0 +1,13 @@
+{
+  "_id": "cpHuiledeNeem000",
+  "name": "Huile de Neem",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>De l’huile extraite de noix de Margousier, un arbre originaire d’Inde et poussant dans les régions tropicales et semi-tropicales</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Fergus Fungal Budge\nTransfert\nVerni protecteur",
+    "otherUses": "• Répulsif à insectes • Insecticide"
+  }
+}

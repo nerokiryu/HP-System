@@ -1,0 +1,69 @@
+{
+  "_id": "crChimere0000000",
+  "name": "Chimere",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>-</p>",
+    "health": {
+      "value": 21,
+      "max": 21
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 21
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXXX",
+    "stats": {
+      "str": {
+        "value": 20,
+        "formula": "3d6+9"
+      },
+      "con": {
+        "value": 18,
+        "formula": "3d6+7"
+      },
+      "siz": {
+        "value": 23,
+        "formula": "5d6+4"
+      },
+      "dex": {
+        "value": 12,
+        "formula": "2d6+6"
+      },
+      "int": {
+        "value": 5,
+        "formula": "2d4"
+      },
+      "pow": {
+        "value": 17,
+        "formula": "3d6+6"
+      },
+      "app": {
+        "value": 12,
+        "formula": "2d6+5"
+      },
+      "per": {
+        "value": 12,
+        "formula": "2d6+6"
+      }
+    },
+    "movement": {
+      "land": 18,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 6
+    },
+    "attacks": "Morsure 55% (3d6) Griffes 50% (2d6) Souffle de feu 60% (4d6)",
+    "skills": "de 10%, également quand il s’agit de lancer des sorts. L’effet de l’intimidation dure 24-(POU de la cible) heures (minimum 5). Bête sanguinaire : La Chimère est une créature extrêmement violente et qui aime par-dessus tout le sang frais. Quand elle repère une proie blessée, elle devient folle et n’aura de cesse de la traquer jusqu’à ce qu’elle puisse la tuer. Guérison : Les pouvoirs de guérison des Chimères sont bien supérieurs à la moyenne. Quand elle est blessée, le corps de la Chimère se régénère magiquement pour soigner les blessures subies. Cela se traduit par une régénération de 1 point de vie par jour et par une vitesse de régénération des points de vie en cas de repos double par rapport à une créature classique. Résistance (magie) : La majeure partie des sortilèges ne fonctionne pas correctement sur les Chimères. Tout sortilège lancé à 50% de chance d’échouer sur lui. Lancez 1d100 et, si le résultat est entre 051 et 000, alors le sortilège est raté. Les autres sortilèges voient leurs effets diminués de moitié. De plus, les sortilèges permanent passent à durée variable (minutes). Souffle de feu : La Chimère est capable de produire un souffle de feu dévastateur qui peut réduire en cendres ses ennemis. Celui-ci se déploie de sa gueule sous la forme d’un cône de 12 mètres de long et de 3 mètres de rayon. Toutes les créatures se trouvant à l’intérieur du cône subissent 4d6 dégâts. La cible doit également réussir un jet de POUx3 pour ne pas voir ses affaires s’enflammer, subissant 1d6 dégâts chaque nouveau round passé dans cet état. Une cible qui a pris feu risque également de mourir asphyxiée.",
+    "powers": "<p>Balayage de queue : La Chimère peut effectuer un puissant balayage à l’aide de sa queue de dragon afin de faire tomber ses adversaires. Le balayage frappe tous les adversaires qui se trouvent au contact avec la Chimère et qui doivent alors réussir un jet de FORx3 pour ne pas se retrouver au sol et un jet de POUx4 pour ne pas lâcher ce qu’ils tiennent dans les mains. Cette capacité n’occasionne pas de dégâts. Bête intimidante : Toute personne apercevant une Chimère doit automatiquement réussir un jet de POUx5 pour ne pas être considéré comme intimidé par la créature. Une personne intimidée subit un malus à ses jets de caractéristiques et</p>",
+    "notes": ""
+  }
+}

@@ -31,6 +31,9 @@ export default class HogwartsActorBase extends foundry.abstract
     schema.conditions = new fields.SchemaField({
       seriousWound: new fields.BooleanField({ initial: false }),
       agony: new fields.BooleanField({ initial: false }),
+      // Non-lethal total equals remaining HP (Chap. 1.10.2)
+      staggered: new fields.BooleanField({ initial: false }),
+      unconscious: new fields.BooleanField({ initial: false }),
     });
 
     return schema;

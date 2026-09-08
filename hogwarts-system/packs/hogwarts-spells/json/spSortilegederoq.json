@@ -1,0 +1,19 @@
+{
+  "_id": "spSortilegederoq",
+  "name": "Sortilège de roquette",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Propulse un objet à POUvoir mètres de haut dans les airs.</p><p>Durée : -</p><p>Formule extrême : -</p>",
+    "spellLevel": 3,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "",
+    "malus": -30,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

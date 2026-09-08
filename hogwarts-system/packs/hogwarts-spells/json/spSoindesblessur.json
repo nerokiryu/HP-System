@@ -1,0 +1,20 @@
+{
+  "_id": "spSoindesblessur",
+  "name": "Soin des blessures",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet de refermer les blessures d’une personne ou d’un animal à raison de 1 point de vie par round. Le sorcier lançant ce sortilège doit rester concentrer sur sa tâche pour ne pas risquer d’empirer les blessures. On peut ainsi remonter les points de vie jusqu’au ¾ de leur maximum.</p><p>Durée : Volontaire</p>",
+    "spellLevel": 5,
+    "spellType": "E",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "Vulnera Sanentur",
+    "malus": -60,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

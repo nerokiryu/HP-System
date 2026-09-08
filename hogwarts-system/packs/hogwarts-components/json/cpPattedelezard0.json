@@ -1,0 +1,13 @@
+{
+  "_id": "cpPattedelezard0",
+  "name": "Patte de lézard",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une patte provenant d’un lézard</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "-"
+  }
+}

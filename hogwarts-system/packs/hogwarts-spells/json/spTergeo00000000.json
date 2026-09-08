@@ -1,0 +1,22 @@
+{
+  "_id": "spTergeo00000000",
+  "name": "Tergeo",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Créer un siphon depuis la baguette qui débarrasse une cible du sang, de la graisse et d’autres taches et saletés.</p><p>Durée : permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 1,
+    "spellType": "E",
+    "target": [
+      "A",
+      "O",
+      "P",
+      "V"
+    ],
+    "incantation": "Tergeo",
+    "malus": -5,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

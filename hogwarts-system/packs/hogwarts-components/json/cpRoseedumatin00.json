@@ -1,0 +1,13 @@
+{
+  "_id": "cpRoseedumatin00",
+  "name": "Rosée du matin",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Précipitation d'eau due à la liquéfaction de la vapeur d'eau contenue dans l'air</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Beauté\nBeauté illusoire",
+    "otherUses": "-"
+  }
+}

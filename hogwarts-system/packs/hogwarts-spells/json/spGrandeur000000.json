@@ -1,0 +1,19 @@
+{
+  "_id": "spGrandeur000000",
+  "name": "Grandeur",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Le lanceur s’entoure d’une aura de grandeur qui fait que les personnes alentours ont du mal à le regarder dans les yeux sans ressentir de la peur ou de l’attirance devant sa personne. Opposition : POU/POU.</p><p>Durée : 1d10+2 heures</p><p>Formule extrême : Durée +1d4+1 heures</p>",
+    "spellLevel": 4,
+    "spellType": "S",
+    "target": [
+      "X"
+    ],
+    "incantation": "Magistratus",
+    "malus": -40,
+    "extremeFormula": true,
+    "malusExtremeFormula": -50,
+    "malusMastered": -30
+  }
+}

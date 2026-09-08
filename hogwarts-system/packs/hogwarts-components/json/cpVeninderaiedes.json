@@ -1,0 +1,13 @@
+{
+  "_id": "cpVeninderaiedes",
+  "name": "Venin de raie des rivière",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Du venin provenant de raie des rivières, un poisson plat se cachant dans le sable de celles-ci.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Philtre dégonflant",
+    "otherUses": ""
+  }
+}

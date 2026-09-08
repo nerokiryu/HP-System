@@ -1,0 +1,13 @@
+{
+  "_id": "cpVenindAcroment",
+  "name": "Venin d’Acromentule",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Du venin provenant d’une Acromentule, araignée géante magique doté d’une grande intelligence et extrêmement dangereuse.</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Mélange de bile de tatou",
+    "otherUses": "• Poison mortel (Injection/Ingestion)"
+  }
+}

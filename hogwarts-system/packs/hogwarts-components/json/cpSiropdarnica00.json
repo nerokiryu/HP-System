@@ -1,0 +1,13 @@
+{
+  "_id": "cpSiropdarnica00",
+  "name": "Sirop d’arnica",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une plante donnant des fleurs jaune ou orange et qui est connue pour sa toxicité en cas d’ingestion.</p><p>En sirop, cette plante est utilisée comme ingrédient de potion.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Potion n°113",
+    "otherUses": "• Poison (ingestion) • Irritant en cas de contact"
+  }
+}

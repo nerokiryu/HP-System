@@ -1,0 +1,19 @@
+{
+  "_id": "spScarabeeenbout",
+  "name": "Scarabée en bouton",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Métamorphose un scarabée en bouton</p><p>Durée : permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 2,
+    "spellType": "M",
+    "target": [
+      "A"
+    ],
+    "incantation": "Bullatusfors",
+    "malus": -20,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

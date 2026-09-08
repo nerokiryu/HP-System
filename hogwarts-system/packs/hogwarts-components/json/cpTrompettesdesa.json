@@ -1,0 +1,13 @@
+{
+  "_id": "cpTrompettesdesa",
+  "name": "Trompettes des anges",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une plante également nommée Brugmansia de la famille des Solanacées, connue pour ses propriétés toxiques en cas d’ingestion.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Essence de trompettes d’anges",
+    "otherUses": "• Poison fatal (ingestion)"
+  }
+}

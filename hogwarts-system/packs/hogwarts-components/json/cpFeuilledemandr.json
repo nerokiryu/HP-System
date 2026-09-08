@@ -1,0 +1,13 @@
+{
+  "_id": "cpFeuilledemandr",
+  "name": "Feuille de mandragore",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des feuilles de mandragore, une plante dont la racine ressemble à un bébé que l’on enterre dans un pot. Leur cri est mortel pour celui qui l’entend sans protection.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Cirassure\nAnimagus",
+    "otherUses": "-"
+  }
+}

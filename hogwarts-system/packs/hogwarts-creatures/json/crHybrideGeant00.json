@@ -1,0 +1,69 @@
+{
+  "_id": "crHybrideGeant00",
+  "name": "Hybride-Geant",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 15,
+      "max": 15
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 15
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "",
+    "stats": {
+      "str": {
+        "value": 14,
+        "formula": "Humain +3"
+      },
+      "con": {
+        "value": 14,
+        "formula": "Humain +3"
+      },
+      "siz": {
+        "value": 15,
+        "formula": "Humain +4"
+      },
+      "dex": {
+        "value": 9,
+        "formula": "Humain -2"
+      },
+      "int": {
+        "value": 11,
+        "formula": "Humain ±0"
+      },
+      "pow": {
+        "value": 11,
+        "formula": "Humain ±0"
+      },
+      "app": {
+        "value": 10,
+        "formula": "Humain -1"
+      },
+      "per": {
+        "value": 9,
+        "formula": "Humain-2"
+      }
+    },
+    "movement": {
+      "land": 13,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Variable",
+    "skills": "Identiques à celles d’un Sorcier classique.",
+    "powers": "<p>Athlétisme : Les Hybrides-Géants possèdent des physiques extraordinaires. Cela se traduit par un bonus de 10% dans la compétence Athlétisme. De plus, l’expérience gagnée dans cette compétence est 1/3 supérieure à celle des Sorcier classiques. Impatience : La plupart des Hybrides-Géants n’ont pas beaucoup de patience pour des tâches longues et complexes. Les jets de POUvoir pour se concentrer sur un tâche sont systématiquement augmentés d’une catégorie de difficulté par rapport aux humains classiques. Inefficacité (potions pour physiologie humaine) : Les Hybrides-Géants sont incapables d’employer des potions qui ciblent une physiologie humaine, comme le Polynectar par exemple. Langage : Les Hybrides-Géants parlent également la langue des Géants en plus de la langue du pays dans lequel ils sont nés. Cette compétence est à une maîtrise de base de 25% et une maîtrise maximale de 95%. Magie intrinsèque : Les Hybrides-Géants sont capables de pratiquer la magie, que ce soit sous la forme de potions, ou en jetant des sortilèges avec ou sans baguette. Cette magie peut également se manifester sous d’autres formes, comme la capacité à entrevoir le futur, de modifier son corps en le métamorphosant, de communiquer avec les animaux, de lire dans les pensées ou de voir à travers les illusions magiques. Mauvaise vue : Les Hybrides-Géants possèdent une vue plus faible que celle des humains. Quand ils effectuent un jet de PERception (vue), celui-ci se fait sur PERx4 au lieu de PERx5</p>",
+    "notes": ""
+  }
+}

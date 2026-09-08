@@ -1,0 +1,13 @@
+{
+  "_id": "cpCornededragon0",
+  "name": "Corne de dragon",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une corne provenant d’un dragon. Réduit en poudre, elle peut être employée pour la fabrication de potion et possède un fort pouvoir magique.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Aliments magiques\nCaféine\nCrache-Flammes\nLumière aveuglante\nVérification",
+    "otherUses": "-"
+  }
+}

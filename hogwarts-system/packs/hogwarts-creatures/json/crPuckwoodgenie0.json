@@ -1,0 +1,69 @@
+{
+  "_id": "crPuckwoodgenie0",
+  "name": "Puckwoodgenie",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 7,
+      "max": 7
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 7
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "",
+    "stats": {
+      "str": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "con": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "siz": {
+        "value": 6,
+        "formula": "2d4+1"
+      },
+      "dex": {
+        "value": 13,
+        "formula": "3d6+2"
+      },
+      "int": {
+        "value": 11,
+        "formula": "2d6+4"
+      },
+      "pow": {
+        "value": 13,
+        "formula": "3d6+2"
+      },
+      "app": {
+        "value": 8,
+        "formula": "2d4+3"
+      },
+      "per": {
+        "value": 15,
+        "formula": "3d6+4"
+      }
+    },
+    "movement": {
+      "land": 7,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Corps à corps 30% (variable) Distance 45% (variable)",
+    "skills": "Acrobatie : 65% ; Connaissance (Forêts) : 60% ; Créations (poisons) : 60% ; Artisanat (Création d’armes) : 55% ; Discrétion 70%(+10%) ; Empathie : 40% ; Esquive : 60% ; Fouille : 40% ; Orientation : 55%(+10%) ; Pistage : 55% ; Vigilance : 65%(+10%)",
+    "powers": "<p>Adaptation au milieu : Quand il évolue dans un milieu forestier, le Puckwoodgenie bénéficie d’un bonus d’intuition de 10% à ses jets de discrétion, d’orientation, et de vigilance. Artisanat (création d’arme) : Le Puckwoodgenie sait fabriquer ses propres armes pour chasser. Celui-ci est capable de créer des arcs et flèches, mais aussi des javelines et autres lances. Il est également capable de créer des bolas et des frondes. Artisanat (création de pièges) : Le Puckwoodgenie sait fabriquer des pièges visant à capturer ses proies. Cette compétence est à 60% de degré de maîtrise. Connaissance (forêts) : Le</p>",
+    "notes": ""
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "_id": "spRatatinage0000",
+  "name": "Ratatinage",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Fait rétrécir un objet, un animal ou une plante en divisant sa taille par 2 durant 1d4+2 heures. Les effets du sort se dissipent ensuite d’eux- mêmes ou peuvent être dissipés par une contre-incantation. (POU/POU).</p><p>Durée : 1d4+2 heures.</p><p>Contre-sort : le contre-sort pour annuler le ratatinage de l’objet ou l’animal est le sortilège d’engorgement</p><p>Formule extrême : +2 heures et taille divisée par 4</p>",
+    "spellLevel": 2,
+    "spellType": "E",
+    "target": [
+      "A",
+      "O",
+      "V"
+    ],
+    "incantation": "Reducio",
+    "malus": -15,
+    "extremeFormula": true,
+    "malusExtremeFormula": -25,
+    "malusMastered": -5
+  }
+}

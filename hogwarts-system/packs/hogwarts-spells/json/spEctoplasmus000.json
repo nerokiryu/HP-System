@@ -1,0 +1,20 @@
+{
+  "_id": "spEctoplasmus000",
+  "name": "Ectoplasmus",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Ce sortilège peut servir à nettoyer les ectoplasmes et est nocif envers les esprits ainsi que contre les esprits frappeurs</p><p>Effet : cause 1d4+1 points de dégâts aux points d’existence d'un Esprit ou d'un Non-Être</p><p>Formule extrême : Cause 1d4+3 dégâts</p>",
+    "spellLevel": 2,
+    "spellType": "E",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "Ectoplasmus",
+    "malus": -20,
+    "extremeFormula": true,
+    "malusExtremeFormula": -30,
+    "malusMastered": -10
+  }
+}

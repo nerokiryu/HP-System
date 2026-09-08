@@ -1,0 +1,21 @@
+{
+  "_id": "spBlocage0000000",
+  "name": "Blocage",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Immobilise immédiatement jusqu’à POU créatures vivantes et/ou objets en mouvement.</p><p>Effet secondaire : Permet également d’arrêter les alarmes moldues.</p><p>Durée : Variable (heures)</p><p>Formule extrême : POUx2 créatures vivantes/objets en mouvement</p>",
+    "spellLevel": 3,
+    "spellType": "E",
+    "target": [
+      "A",
+      "O",
+      "P"
+    ],
+    "incantation": "Immobulus",
+    "malus": -40,
+    "extremeFormula": true,
+    "malusExtremeFormula": -50,
+    "malusMastered": -30
+  }
+}

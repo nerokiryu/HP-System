@@ -1,0 +1,13 @@
+{
+  "_id": "cpOnglededragond",
+  "name": "Ongle de dragon de Russie",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des ongles de dragon qui sont traités d’une manière particulière et qui proviennent de Russie</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "-"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "_id": "poLumiereaveugla",
+  "name": "Lumière aveuglante",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Quand elle entre en contact avec l’air, cette potion provoque une violente explosion lumineuse.</p><p>Effet : Aveugle les cibles alentours durant 1d4-1 round.</p>",
+    "potionLevel": 1,
+    "malus": -10,
+    "target": "A/P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Charbon",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Chou puant",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Corne de dragon",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Salpêtre",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "soufre",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Phosphore",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

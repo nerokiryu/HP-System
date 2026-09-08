@@ -1,0 +1,13 @@
+{
+  "_id": "cpSangdelicorne0",
+  "name": "Sang de licorne",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Le sang d’une licorne, une créature magique très puissante. Il se présente sous la forme d’un liquide argenté épais. Bu pur, il permet de survivre à la mort, mais vous condamne à une demi-vie. La vente du sang de licorne est interdite</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "• Survivre à la mort si consommer pur"
+  }
+}

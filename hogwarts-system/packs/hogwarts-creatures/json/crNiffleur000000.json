@@ -1,0 +1,69 @@
+{
+  "_id": "crNiffleur000000",
+  "name": "Niffleur",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>Chasseur de trésors</p>",
+    "health": {
+      "value": 8,
+      "max": 8
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 8
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXX",
+    "stats": {
+      "str": {
+        "value": 9,
+        "formula": "2d6+2"
+      },
+      "con": {
+        "value": 9,
+        "formula": "2d6+2"
+      },
+      "siz": {
+        "value": 7,
+        "formula": "2d4+2"
+      },
+      "dex": {
+        "value": 13,
+        "formula": "3d6+2"
+      },
+      "int": {
+        "value": 5,
+        "formula": "2d4"
+      },
+      "pow": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "app": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "per": {
+        "value": 19,
+        "formula": "3d6+8"
+      }
+    },
+    "movement": {
+      "land": 10,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Morsure/Griffes 30% (1)",
+    "skills": "Acrobatie : 25% ; Athlétisme : 50% ; Discrétion 45% ; Esquive : 35% ; Fouille : 60% ; Orientation : 40% ; Survie : 30% ; Vigilance : 45%",
+    "powers": "<p>Faufiler : Le corps du Niffleur peut s’aplatir pour se faufiler dans des espaces de moins d’un millimètre d’épaisseur. Forer : le Niffleur peut forer des trous profonds grâce à un jet d’Athlétisme Fouille : Le Niffleur possède la compétence fouille, lui permettant de trouver des trésors. Poche ventrale : Le Niffleur possède – comme d’autre marsupiaux – une poche ventrale dans laquelle il cache ses découvertes. Celle-ci est bien plus grande à l’intérieur qu’il n’y paraît. Sixième sens : Le Niffleur est capable, grâce à un jet de PERceptionx4, de sentir la présence de richesses dans son environnement immédiat.</p>",
+    "notes": ""
+  }
+}

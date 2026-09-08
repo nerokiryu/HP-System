@@ -1,0 +1,21 @@
+{
+  "_id": "poRecherchesenpo",
+  "name": "Recherches en potions",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Le sorcier effectue des recherches pour créer de nouvelles potions ou en combiner plusieurs pour obtenir des effets inattendus.</p>",
+    "potionLevel": 6,
+    "malus": 0,
+    "target": "V/A",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Variable",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

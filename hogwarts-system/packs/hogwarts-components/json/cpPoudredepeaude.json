@@ -1,0 +1,13 @@
+{
+  "_id": "cpPoudredepeaude",
+  "name": "Poudre de peau de gaucher",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Introduit dans une potion, cette poudre rouge permet à une personne de devenir gaucher.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "-"
+  }
+}

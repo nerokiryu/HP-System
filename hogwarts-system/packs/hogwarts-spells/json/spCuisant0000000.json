@@ -1,0 +1,19 @@
+{
+  "_id": "spCuisant0000000",
+  "name": "Cuisant",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Ce maléfice provoque une douleur cuisante et gonfle le visage de la cible pour le rendre méconnaissable.</p><p>Effet : APP-5.</p><p>Durée : Variable (heures)</p><p>Formule extrême : APParence -6 et durée +1 heure</p>",
+    "spellLevel": 2,
+    "spellType": "S",
+    "target": [
+      "P"
+    ],
+    "incantation": "",
+    "malus": -20,
+    "extremeFormula": true,
+    "malusExtremeFormula": -30,
+    "malusMastered": -10
+  }
+}

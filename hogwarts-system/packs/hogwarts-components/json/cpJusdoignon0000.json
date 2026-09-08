@@ -1,0 +1,13 @@
+{
+  "_id": "cpJusdoignon0000",
+  "name": "Jus d’oignon",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Du jus obtenu en pressant des oignons</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Fergus Fungal Budge",
+    "otherUses": "-"
+  }
+}

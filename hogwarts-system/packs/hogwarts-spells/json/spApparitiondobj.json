@@ -1,0 +1,19 @@
+{
+  "_id": "spApparitiondobj",
+  "name": "Apparition d’objet",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Permet de faire apparaître un objet invisible.</p><p>Durée : permanente</p><p>Formule extrême : révèle tous les objets invisibles dans un rayon de</p><p>POUvoir mètres autour du sorcier</p>",
+    "spellLevel": 2,
+    "spellType": "M",
+    "target": [
+      "O"
+    ],
+    "incantation": "Inanimatus Apparitus",
+    "malus": -15,
+    "extremeFormula": true,
+    "malusExtremeFormula": -25,
+    "malusMastered": -5
+  }
+}

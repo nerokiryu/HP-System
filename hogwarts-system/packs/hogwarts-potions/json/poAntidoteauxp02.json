@@ -1,0 +1,39 @@
+{
+  "_id": "poAntidoteauxp02",
+  "name": "Antidote aux poisons rares",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Permet de contrer ou de considérablement diminuer les effets des poisons les plus rares.</p><p>Effet : Annule l’effet de poisons jusqu’à une VIRulence 15.</p><p>Diminue les effets des poisons inconnus de 6 points de</p><p>VIRulence.</p>",
+    "potionLevel": 4,
+    "malus": -40,
+    "target": "A/P",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Carapaces de Ciseburine",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Corne de Grapcorne",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Dars de Billywig",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Graines de feu",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "cpMelisse0000000",
+  "name": "Mélisse",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une plante verte qui forme de petits buissons et qui est connue depuis des siècles pour ses vertus médicinales.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Décoction hoqueteuse\nTraitement des morsures de chiens fous",
+    "otherUses": "• Calme le hoquet • Vertus médicinales • Plante d’ornement"
+  }
+}

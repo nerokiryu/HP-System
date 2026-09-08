@@ -1,0 +1,13 @@
+{
+  "_id": "cpValeriane00000",
+  "name": "Valériane",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>La valériane est une plante au fleurs rose ou blanche qui est connue pour ses vertus relaxantes et apaisantes</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Potion anti-paralysie",
+    "otherUses": "-"
+  }
+}

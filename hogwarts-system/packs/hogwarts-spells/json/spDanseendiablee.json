@@ -1,0 +1,20 @@
+{
+  "_id": "spDanseendiablee",
+  "name": "Danse endiablée",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Fait danser de manière incontrôlable ce qui donne un malus de 40 % à toutes les actions, à l’exception de la magie qui a un malus de 20%.</p><p>Durée : 1d4+2 rounds.</p><p>Formule extrême : 50% de malus aux actions, magie -30% et durée +1 round</p>",
+    "spellLevel": 2,
+    "spellType": "S",
+    "target": [
+      "O",
+      "P"
+    ],
+    "incantation": "Tarentallegra",
+    "malus": -30,
+    "extremeFormula": true,
+    "malusExtremeFormula": -45,
+    "malusMastered": -15
+  }
+}

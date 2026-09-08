@@ -1,0 +1,19 @@
+{
+  "_id": "spAntivol0000000",
+  "name": "Antivol",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Lancé sur un objet, cet enchantement empêche celui-ci d’être volé.</p><p>Effet : Empêche tout autre Sorcier que le lanceur d’utiliser le sortilège d’attraction sur la cible du sort.</p><p>Durée : POU jours</p><p>Formule extrême : -</p>",
+    "spellLevel": 4,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "",
+    "malus": -40,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

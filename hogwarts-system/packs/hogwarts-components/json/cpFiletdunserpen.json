@@ -1,0 +1,13 @@
+{
+  "_id": "cpFiletdunserpen",
+  "name": "Filet d’un serpent des marais",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Morceau d’un serpent des marais</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "• Consommable"
+  }
+}

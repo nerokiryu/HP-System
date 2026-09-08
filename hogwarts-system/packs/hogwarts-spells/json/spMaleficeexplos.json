@@ -1,0 +1,22 @@
+{
+  "_id": "spMaleficeexplos",
+  "name": "Maléfice explosif",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Provoque un effet d’explosion qui détruit des objets (magiques ou non) et qui blesse les êtres vivants en leur infligeant 1d6+1 dégâts.</p><p>Sous-type : Maléfice</p><p>Durée : -</p><p>Formule extrême : dégâts 2d4+2</p>",
+    "spellLevel": 5,
+    "spellType": "S",
+    "target": [
+      "A",
+      "O",
+      "P",
+      "V"
+    ],
+    "incantation": "Confringo",
+    "malus": -40,
+    "extremeFormula": true,
+    "malusExtremeFormula": -50,
+    "malusMastered": -30
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "cpGeraniumDentu0",
+  "name": "Géranium Dentu",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Le géranium dentu est une plante magique agressive dont les dents peuvent être utilisées pour la fabrication de potions ou la cuisine.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnu",
+    "otherUses": "• Cuisine (dents)"
+  }
+}

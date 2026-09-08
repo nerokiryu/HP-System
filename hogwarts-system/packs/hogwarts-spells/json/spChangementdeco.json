@@ -1,0 +1,22 @@
+{
+  "_id": "spChangementdeco",
+  "name": "Changement de couleur",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet de changer la couleur d’un objet, d’un animal, d’une plante ou même de certaines parties du corps d’un sorcier.</p><p>Durée : POU/2 heures</p><p>Formule extrême : -</p>",
+    "spellLevel": 2,
+    "spellType": "E",
+    "target": [
+      "A",
+      "O",
+      "P",
+      "V"
+    ],
+    "incantation": "Colovaria",
+    "malus": -25,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

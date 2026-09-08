@@ -2,7 +2,7 @@
   "_id": "axSerErudition02",
   "name": "Érudition",
   "type": "feature",
-  "img": "icons/skills/social_dark.svg",
+  "img": "icons/svg/statue.svg",
   "system": {
     "description": "<p>Vous êtes naturellement doué dans une compétence intellectuelle. Choisissez une compétence de type « connaissances », « mythes et légendes » ou « langues ». Vous gagnez un bonus de 15% dans cette compétence ce qui peut vous permettre de dépasser, à la création, le bonus maximal de 50%. Les jets de gain d'expérience dans cette compétence donnent 1/3 de point(s) en plus.</p>",
     "perkType": "houseAxiom",

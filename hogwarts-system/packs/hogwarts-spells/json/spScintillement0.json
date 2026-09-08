@@ -1,0 +1,19 @@
+{
+  "_id": "spScintillement0",
+  "name": "Scintillement",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet de faire scintiller l’objet visé, le rendant plus facilement repérable. Par exemple, « Stella » Corusco permettrait de faire scintiller les étoiles d’un tableau alors que « Galerum » Corusco permettrait de faire scintiller le chapeau d’un Sorcier.</p><p>Durée : -</p><p>Formule extrême : -</p>",
+    "spellLevel": 1,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "« Nom » Corusco",
+    "malus": -10,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

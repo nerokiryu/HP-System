@@ -1,0 +1,69 @@
+{
+  "_id": "crChaporouge0000",
+  "name": "Chaporouge",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 4,
+      "max": 4
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 4
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXX",
+    "stats": {
+      "str": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "con": {
+        "value": 9,
+        "formula": "2d6+2"
+      },
+      "siz": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "dex": {
+        "value": 12,
+        "formula": "2d6+6"
+      },
+      "int": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "pow": {
+        "value": 6,
+        "formula": "1d6+2"
+      },
+      "app": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "per": {
+        "value": 7,
+        "formula": "2d6"
+      }
+    },
+    "movement": {
+      "land": 6,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 1
+    },
+    "attacks": "Gourdin 50% (1d4 ou 1d6)",
+    "skills": "Acrobatie : 50% ; Athlétisme : 50% ; Discrétion 50% ; Esquive : 40% ; Fouille : 50% ; Orientation : 25% ; Psychologie : 10% ; Survie : 50% ; Vigilance : 60%",
+    "powers": "<p>Maniement du gourdin : Le Chaporouge manie particulièrement bien tout objet qui peut s’apparenter à un gourdin, comme un tuyau, une batte ou un gros os par exemple. Science de l’assommement (+2) : Quand le Chaporouge veut assommer une cible (cf. Chapitre 2.7 de la Base Harry Potter JdR), le calcul d’opposition sur la table de résistance entre les dégâts occasionnés et les PV se fait comme suit : (Dégâts occasionnés +2)/Points de vie restants. Le +2 correspond à un bonus pour assommer. Quand la cible se réveille, elle n’aura subi que le tiers des dégâts, sans le +2.</p>",
+    "notes": ""
+  }
+}

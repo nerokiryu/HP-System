@@ -1,0 +1,57 @@
+{
+  "_id": "poMelangedebiled",
+  "name": "Mélange de bile de tatou",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Une potion excessivement corrosive pour la peau qui peut provoquer de violentes brûlures. En cas de contact avec la peau, on doit immédiatement se frotter la zone touchée avec du crin de licorne.</p><p>Effet : Occasionne 1d4-1 dégâts d’acide par rond (min. 1)</p><p>Durée : 1d4+1 rounds</p>",
+    "potionLevel": 2,
+    "malus": -20,
+    "target": "A/O/P/V",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Aile de chauve-souris",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Aconit",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Armoise",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Armotentia",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Bile de tatou",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Eau standard pour potion",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Venin d’Acromentule",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

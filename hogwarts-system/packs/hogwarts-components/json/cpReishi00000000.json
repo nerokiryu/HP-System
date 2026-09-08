@@ -1,0 +1,13 @@
+{
+  "_id": "cpReishi00000000",
+  "name": "Reishi",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Le Reishi est un petit champignon brun orangé qui est également connu sous le nom de champignon de l’immortalité ou champignon de l’éternité.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Élixirs éternels",
+    "otherUses": "• Vertus médicinales"
+  }
+}

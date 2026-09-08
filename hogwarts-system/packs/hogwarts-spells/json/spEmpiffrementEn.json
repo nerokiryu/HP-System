@@ -1,0 +1,21 @@
+{
+  "_id": "spEmpiffrementEn",
+  "name": "Empiffrement / Engorgement / Gavage",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Fait grandir un objet, un animal ou une plante et doublant sa taille durant 1d4+2 heures. Les effets du sort se dissipent ensuite d’eux- mêmes ou peuvent être dissipés par une contre-incantation. (POU/POU).</p><p>Durée : 1d4+2 heures.</p><p>Contre-sort : le contre-sort pour annuler l’amplification est le sortilège de ratatinage</p><p>Formule extrême : +2 heures et taille triplée</p>",
+    "spellLevel": 2,
+    "spellType": "E",
+    "target": [
+      "A",
+      "O",
+      "V"
+    ],
+    "incantation": "Amplificatum/ Engorgio",
+    "malus": -15,
+    "extremeFormula": true,
+    "malusExtremeFormula": -25,
+    "malusMastered": -5
+  }
+}

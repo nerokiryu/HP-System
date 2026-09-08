@@ -1,0 +1,69 @@
+{
+  "_id": "crJackalope00000",
+  "name": "Jackalope",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>Ramure de Jackalope : Les bois de la ramure du Jackalope étaient employés comme cœur de baguettes au 17ième siècle par les fabricants de baguettes Isolt Sayre et James Steward.</p>",
+    "health": {
+      "value": 10,
+      "max": 10
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 10
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXX",
+    "stats": {
+      "str": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "con": {
+        "value": 11,
+        "formula": "2d6+4"
+      },
+      "siz": {
+        "value": 8,
+        "formula": "2d4+1"
+      },
+      "dex": {
+        "value": 17,
+        "formula": "3d6+6"
+      },
+      "int": {
+        "value": 3,
+        "formula": "2d4-2"
+      },
+      "pow": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "app": {
+        "value": 6,
+        "formula": "2d6-1"
+      },
+      "per": {
+        "value": 19,
+        "formula": "3d6+8"
+      }
+    },
+    "movement": {
+      "land": 8,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Morsure/Griffes : 30% (1) Cornes : 30% : 1d4-2",
+    "skills": "Acrobatie : 60% ; Athlétisme : 55% ; Discrétion 40% ; Esquive : 70% ; Orientation : 30% ; Survie : 30% ; Vigilance : 55+15%",
+    "powers": "<p>Creuser : Le Jackalope est excellent quand il s’agit de creuser des terriers pour s’y cacher. Quand il utilise un jet d’Athlétisme pour creuser un terrier, il bénéficie d’un bonus de 20%. Esquive de sortilège : La grande vitesse et la dextérité hors norme du Jackalope lui permettent d’effectuer un jet de DEXtérité contre tous les sortilèges qui lui sont lancés, même ceux qui ne le permettent normalement pas. A chaque sortilège lancé, le Jackalope peut effectuer un jet de DEXtéritéx3 –(Niveau du sortilège x5%). Si ce jet est réussi, alors le Jackalope esquive ce dernier sans en subir les conséquences. Frénésie : Quand il ne peut pas se dépenser suffisamment, le Jackalope est pris d’une frénésie incontrôlable qui le fait courir et creuser des terriers de manière compulsive. Dans cet état, le Jackalope cause de gros dégâts aux objets qui l’entourent et aux terrains dans lesquels il creuse. Cette frénésie l’épuise cependant et le Jackalope perd 1 point de vie sous forme de dégâts non- létaux par heure. Une fois arrivé à 1 point de vie, il s’écroule de fatigue et commence à récupérer ses points de vie de manière classique. Une fois le maximum de points de vie atteint, le Jackalope ne peut plus entrer en frénésie avant un nombre de jours équivalent au nombre d’heures passées en frénésie. Sous frénésie, les caractéristiques suivantes du Jackalope augmentent comme suit :</p>",
+    "notes": ""
+  }
+}

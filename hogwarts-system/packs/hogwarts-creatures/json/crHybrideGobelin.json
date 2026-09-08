@@ -1,0 +1,69 @@
+{
+  "_id": "crHybrideGobelin",
+  "name": "Hybride Gobelin",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 10,
+      "max": 10
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 10
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "",
+    "stats": {
+      "str": {
+        "value": 10,
+        "formula": "Humain -1"
+      },
+      "con": {
+        "value": 11,
+        "formula": "Humain ±0"
+      },
+      "siz": {
+        "value": 8,
+        "formula": "Humain -2"
+      },
+      "dex": {
+        "value": 9,
+        "formula": "Humain ±0"
+      },
+      "int": {
+        "value": 11,
+        "formula": "Humain +3"
+      },
+      "pow": {
+        "value": 11,
+        "formula": "Humain +2"
+      },
+      "app": {
+        "value": 10,
+        "formula": "Humain ±0"
+      },
+      "per": {
+        "value": 9,
+        "formula": "Humain ±0"
+      }
+    },
+    "movement": {
+      "land": 7,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Variable",
+    "skills": "Identiques à celles d’un Sorcier classique, avec ces compétences supplémentaires : Artisanat (forge et orfèvrerie) : une au choix Connaissance (arts de la forge et pierres précieuses) : une au choix Langue (Gobelbabil) : Maîtrise de base 20% / Maîtrise maximale 95%",
+    "powers": "<p>Affinité (création de sortilèges et de potions) : La grande intelligence des Hybrides-Gobelins leur permet de mieux comprendre les mécanismes qui entrent dans la création de sortilèges et de potions. Cette compréhension diminue considérablement la difficulté pour créer un nouveau sortilège ou une nouvelle potion, que ce soit au niveau du temps ou de la difficulté à le créer. Le temps à consacrer à la création d’un sortilège ou une potion est diminué de moitié, tout comme le malus à la création. Cette capacité ne fonctionne cependant que sur une seule catégorie de magie (Enchantements, Mauvais Sorts, Métamorphose, Potions) dans laquelle l’hybride se spécialisera. Artisanat (forge et orfèvrerie) : S’il choisit la compétence artisanat (forge) ou artisanat (orfèvrerie), l’Hybride-Gobelin bénéficiera d’un bonus de compétence de 10% dans celle-ci. De plus, le gain d’expérience gagné sera de 1/3 supplémentaire à chaque jet de gain d’expérience. Connaissance (arts de la forge et pierres précieuses) : S’il choisit la compétence connaissance (arts de la forge) ou connaissance (pierre précieuses), l’Hybride-Gobelin bénéficiera d’un bonus de compétence de 10% dans celle-ci. De plus, le gain d’expérience sera de 1/3 supplémentaire à chaque jet de gain d’expérience. Facilités en enchantements : Les Hybrides- Gobelins ont une facilité naturelle à apprendre et à maîtriser les enchantements. Cette capacité leur donne naturellement un bonus de 10% dans la matière scolaire « enchantements », qu’ils emploient leur baguette ou non pour lancer les sorts en question. De plus, chaque jet pour gagner de l’expérience dans cette matière octroie 1/3 de point(s) en plus. Haute intelligence : L’intelligence des Hybrides- Gobelins est largement supérieure à celle des autres humains. Leur manière de penser et d’appréhender les problèmes complexes est également différente de la leur, si bien qu’ils sont capables de résoudre problèmes et énigmes sur lesquels les autres Sorciers buttent en temps normal. Langue : Les Hybrides-Gobelins parlent la langue des Gobelins, qui se nomme le Gobelbabil. C’est un langage rude, dissonant et qui ressemble à une suite de sons gutturaux et grinçants Magie sans baguette : Les Hybrides-Gobelins ont étonnamment plus de facilité à lancer des sortilèges sans baguette, ce qui se traduit par une diminution du malus de 10% quand ils n’emploient pas leur baguette.</p>",
+    "notes": ""
+  }
+}

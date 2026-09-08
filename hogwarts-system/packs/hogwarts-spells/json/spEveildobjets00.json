@@ -1,0 +1,19 @@
+{
+  "_id": "spEveildobjets00",
+  "name": "Éveil d’objets",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Donne vie et une conscience temporaire à un objet qui obtient une valeur d’INTelligence de 6. Celui-ci obéit alors au sorcier.</p><p>Durée : variable</p><p>Formule extrême : -</p>",
+    "spellLevel": 5,
+    "spellType": "M",
+    "target": [
+      "O"
+    ],
+    "incantation": "",
+    "malus": -100,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

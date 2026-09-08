@@ -1,0 +1,19 @@
+{
+  "_id": "spChatouillis000",
+  "name": "Chatouillis",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Fait rire la cible de manière incontrôlée, ce qui lui inflige un malus de 60 % à toute ses actions, y compris le lancement de sorts.</p><p>Durée : Variable (rounds)</p><p>Formule extrême : Malus de 70% et durée +2 rounds</p>",
+    "spellLevel": 3,
+    "spellType": "E",
+    "target": [
+      "P"
+    ],
+    "incantation": "Rictusempera",
+    "malus": -30,
+    "extremeFormula": true,
+    "malusExtremeFormula": -40,
+    "malusMastered": -20
+  }
+}

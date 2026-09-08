@@ -1,0 +1,69 @@
+{
+  "_id": "crLutindeCornoua",
+  "name": "Lutin de Cornouaille",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>-</p>",
+    "health": {
+      "value": 7,
+      "max": 7
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 7
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXX",
+    "stats": {
+      "str": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "con": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "siz": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "dex": {
+        "value": 16,
+        "formula": "3d6+5"
+      },
+      "int": {
+        "value": 6,
+        "formula": "2d4+1"
+      },
+      "pow": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "app": {
+        "value": 6,
+        "formula": "2d4+1"
+      },
+      "per": {
+        "value": 14,
+        "formula": "3d6+3"
+      }
+    },
+    "movement": {
+      "land": 3,
+      "fly": 18,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Morsure 25% (1)",
+    "skills": "Acrobatie : 50% ; Athlétisme : 30% ; Discrétion : 15%; Esquive : 45%, Orientation : 20% ; Survie : 20% ; Vigilance : 35%",
+    "powers": "<p>Vol magique : Le Lutin de Cornouaille possède la capacité de voler même s’il est dépourvu d’ailes. Quand il se déplace dans les airs, il le fait à très haute vitesse, ce qui le rend très difficile à arrêter.</p>",
+    "notes": ""
+  }
+}

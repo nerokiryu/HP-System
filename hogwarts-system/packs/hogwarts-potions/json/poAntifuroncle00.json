@@ -1,0 +1,51 @@
+{
+  "_id": "poAntifuroncle00",
+  "name": "Anti-furoncle",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Élimine les furoncles en quelques minutes.</p><p>Remarque : effet inverse si mal préparé.</p>",
+    "potionLevel": 1,
+    "malus": -10,
+    "target": "A/P",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Crochets de serpent (ou épine de Sharak)",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Épines de porc-épic",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Limaces à cornes",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Mucus de Veracrasse",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Oignon de Pungous (facultatif)",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Orties séchées",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

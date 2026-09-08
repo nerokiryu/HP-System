@@ -1,0 +1,13 @@
+{
+  "_id": "cpMuguet00000000",
+  "name": "Muguet",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Ces fleurs aux clochettes blanches dégagent un doux parfum et symbolisent l’amitié et la pureté.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Pommade pommadante Grégoire\nVérification",
+    "otherUses": "• Décoratif"
+  }
+}

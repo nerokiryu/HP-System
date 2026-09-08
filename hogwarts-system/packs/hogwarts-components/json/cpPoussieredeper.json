@@ -1,0 +1,13 @@
+{
+  "_id": "cpPoussieredeper",
+  "name": "Poussière de perle",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une perle réduite à l’état de poussière</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Amortentia\nPhiltre d’amour avancé\nPhiltre d’amour ordinaire\nPotion de haine",
+    "otherUses": "-"
+  }
+}

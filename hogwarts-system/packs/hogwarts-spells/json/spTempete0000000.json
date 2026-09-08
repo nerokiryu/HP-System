@@ -1,0 +1,19 @@
+{
+  "_id": "spTempete0000000",
+  "name": "Tempête",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Sortilège d'altération climatique permettant de créer une tempête miniature de POU mètres de rayon autour du lanceur. La tempête peut apparaître sous la forme de pluie ou de neige et peu blesser, immobiliser ou endommager les personnes et objets qui s’y trouvent.</p><p>Durée : POU minutes</p><p>Formule extrême : Portée de POUx2 mètres et durée de POUx2 minutes</p>",
+    "spellLevel": 5,
+    "spellType": "M",
+    "target": [
+      "X"
+    ],
+    "incantation": "Meteorribilis",
+    "malus": -60,
+    "extremeFormula": true,
+    "malusExtremeFormula": -70,
+    "malusMastered": -50
+  }
+}

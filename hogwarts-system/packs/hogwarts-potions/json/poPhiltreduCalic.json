@@ -1,0 +1,21 @@
+{
+  "_id": "poPhiltreduCalic",
+  "name": "Philtre du Calice de la Mort",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Un concentré des effets du Calice de la Mort qui entraîne de violentes douleurs à l’estomac quand il est consommé avant de provoquer la mort de la personne.</p><p>Effets : Douleurs violentes entraînant la mort</p><p>Durée : -</p><p>VIRulence : 18</p>",
+    "potionLevel": 6,
+    "malus": -65,
+    "target": "A/P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Calice de la mort",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

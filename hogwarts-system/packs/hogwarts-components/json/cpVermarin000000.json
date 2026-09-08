@@ -1,0 +1,13 @@
+{
+  "_id": "cpVermarin000000",
+  "name": "Ver marin",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Vers non magiques de couleur blanche, brune ou rougeâtre vivant dans l’eau. Ils sont connus pour sécréter un minéral qui forme un tube de pierre autour de leur corps.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "-"
+  }
+}

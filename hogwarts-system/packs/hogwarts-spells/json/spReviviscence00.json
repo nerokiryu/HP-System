@@ -1,0 +1,19 @@
+{
+  "_id": "spReviviscence00",
+  "name": "Reviviscence",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet de redonner de l'énergie à une personne très affaiblie, étourdie ou bien inconsciente. Bien qu'il soit efficace contre la plupart des sorts, il n'a pas d'effets concluants contre les actes de magie noire.</p><p>Durée : Volontaire</p><p>Formule extrême : -</p>",
+    "spellLevel": 4,
+    "spellType": "E",
+    "target": [
+      "P"
+    ],
+    "incantation": "Revigor",
+    "malus": -40,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

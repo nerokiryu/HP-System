@@ -1,0 +1,13 @@
+{
+  "_id": "cpPeaudeserpentd",
+  "name": "Peau de serpent d’arbre du Cap",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>De la peau provenant de serpents d’arbre, également connus sous le nom d’ophidien</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Beauté\nBeauté illusoire\nCinq sens\nPolynectar",
+    "otherUses": "-"
+  }
+}

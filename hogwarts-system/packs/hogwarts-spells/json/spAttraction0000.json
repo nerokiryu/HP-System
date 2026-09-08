@@ -1,0 +1,19 @@
+{
+  "_id": "spAttraction0000",
+  "name": "Attraction",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet de faire venir un objet à soi. Opposition : POU/FOR.</p><p>Maximum : POU x 10 m.</p><p>Durée : -</p><p>Remarque : De nombreux objets et lieux ont été protégés de ce sortilège.</p><p>Formule extrême : maximum POUvoir x 15 mètres</p>",
+    "spellLevel": 4,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "Accio + « nom »",
+    "malus": -35,
+    "extremeFormula": true,
+    "malusExtremeFormula": -45,
+    "malusMastered": -25
+  }
+}

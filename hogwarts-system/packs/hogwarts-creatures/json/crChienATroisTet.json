@@ -1,0 +1,69 @@
+{
+  "_id": "crChienATroisTet",
+  "name": "Chien A Trois Tetes",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 21,
+      "max": 21
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 21
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "",
+    "stats": {
+      "str": {
+        "value": 22,
+        "formula": "4d6+8"
+      },
+      "con": {
+        "value": 18,
+        "formula": "5d6"
+      },
+      "siz": {
+        "value": 24,
+        "formula": "4d6+10"
+      },
+      "dex": {
+        "value": 15,
+        "formula": "4d6+1"
+      },
+      "int": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "pow": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "app": {
+        "value": 13,
+        "formula": "2d6+6"
+      },
+      "per": {
+        "value": 16,
+        "formula": "4d6+2"
+      }
+    },
+    "movement": {
+      "land": 13,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 3
+    },
+    "attacks": "Morsure/griffe 60% (3d6)",
+    "skills": "Acrobatie : 40% ; Athlétisme : 60% ; Discrétion 25% ; Esquive : 30% ; Orientation : 50% ; Pistage : 60% ; Survie : 45% ; Vigilance : 55%",
+    "powers": "<p>Agressivité : Un Chien à trois têtes ne peut s’empêcher d’attaquer toute créature qui croise sa route et qu’il considère automatiquement comme une proie ou comme une menace. Quand il est en présence d'une proie ou d'un adversaire potentiel, le Chien à trois têtes doit réussir un jet de POUx1 pour ne pas attaquer. Quand il est</p>",
+    "notes": ""
+  }
+}

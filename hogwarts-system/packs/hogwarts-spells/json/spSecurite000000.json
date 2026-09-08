@@ -1,0 +1,19 @@
+{
+  "_id": "spSecurite000000",
+  "name": "Sécurité",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Avertit le lanceur si un lieu est victime d’une effraction. Employé dans les magasins pour prévenir les vols.</p><p>Durée : 12 heures</p><p>Formule extrême : -</p>",
+    "spellLevel": 4,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "",
+    "malus": -35,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "spChauffeboisson",
+  "name": "Chauffe-boisson",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Réchauffe instantanément une boisson</p><p>Durée : -</p><p>Formule extrême : -</p>",
+    "spellLevel": 0,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "",
+    "malus": 0,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

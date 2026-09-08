@@ -1,0 +1,19 @@
+{
+  "_id": "spEmpreintes0000",
+  "name": "Empreintes",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet de faire apparaître les traces du passage d’une personne ou d’un animal, ainsi que les récentes activités magiques. Fait également apparaître une image des personnes, animaux et créatures qui ont croisé la piste. Les traces apparaissent dans le sillage d'une volute dorée</p><p>Durée : volontaire</p><p>Formule extrême : -</p>",
+    "spellLevel": 3,
+    "spellType": "E",
+    "target": [
+      "X"
+    ],
+    "incantation": "Appare Vestigium",
+    "malus": -25,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

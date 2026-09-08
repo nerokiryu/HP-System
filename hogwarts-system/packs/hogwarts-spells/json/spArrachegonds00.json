@@ -1,0 +1,19 @@
+{
+  "_id": "spArrachegonds00",
+  "name": "Arrache-gonds",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Sortilège permettant d’arracher une porte de ses gonds et qui était beaucoup utilisé avant l'importation du sortilège d’ouverture.</p><p>Durée : -</p><p>Formule extrême : -</p>",
+    "spellLevel": 1,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "Open Sesame",
+    "malus": -10,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

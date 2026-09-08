@@ -1,0 +1,13 @@
+{
+  "_id": "cpBranchiflore00",
+  "name": "Branchiflore",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>La Branchiflore est une plante magique originaire du bassin méditerranéen. Elle a l’apparence d’un enchevêtrement de queues de rat grises et gluantes</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "• Permet de respirer sous l’eau • Ingrédient de boisson"
+  }
+}

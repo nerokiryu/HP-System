@@ -1,0 +1,13 @@
+{
+  "_id": "cpEpinederose000",
+  "name": "Épine de rose",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des épines provenant de rose</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Amortentia\nPhiltre d’amour avancé\nPhiltre d’amour ordinaire\nPotion de haine",
+    "otherUses": "-"
+  }
+}

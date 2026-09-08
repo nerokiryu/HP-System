@@ -1,0 +1,19 @@
+{
+  "_id": "spFicelage000000",
+  "name": "Ficelage",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Contrairement au Sort de ligotage, le sortilège de ficelage ne bloque que les mains ou les poignets de la cible grâce à des liens dorés. Pour se libérer, la cible doit réussir un jet en opposition (POU/DEX).</p><p>Durée : permanente</p><p>Formule extrême : le jet de DEX pour se libérer se fait avec un malus de 2 points</p>",
+    "spellLevel": 2,
+    "spellType": "M",
+    "target": [
+      "P"
+    ],
+    "incantation": "Fulgaris",
+    "malus": -10,
+    "extremeFormula": true,
+    "malusExtremeFormula": -20,
+    "malusMastered": 0
+  }
+}

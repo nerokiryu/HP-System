@@ -1,0 +1,19 @@
+{
+  "_id": "spObliteration00",
+  "name": "Oblitération",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet d’effacer les empreintes de pas sur le sol ainsi que les taches (comme les taches d’eau ou de sang, par exemple)</p><p>Durée : -</p><p>Portée : POUvoir mètres</p><p>Formule extrême : -</p>",
+    "spellLevel": 2,
+    "spellType": "E",
+    "target": [
+      "X"
+    ],
+    "incantation": "",
+    "malus": -15,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

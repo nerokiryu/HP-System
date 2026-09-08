@@ -1,0 +1,19 @@
+{
+  "_id": "spVolsansbalais0",
+  "name": "Vol sans balais",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet de voler sans l’aide de balai à une vitesse de 10 m/round.</p><p>Durée : 1d10+2 heures.</p>",
+    "spellLevel": 6,
+    "spellType": "E",
+    "target": [
+      "P"
+    ],
+    "incantation": "Volatus",
+    "malus": -60,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

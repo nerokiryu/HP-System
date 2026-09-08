@@ -1,0 +1,19 @@
+{
+  "_id": "spCombustion0000",
+  "name": "Combustion",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Permet de faire prendre feu à un objet inflammable.</p><p>Durée : -</p><p>Formule extrême : -</p>",
+    "spellLevel": 1,
+    "spellType": "S",
+    "target": [
+      "O"
+    ],
+    "incantation": "Lacarnum Inflamarae",
+    "malus": -15,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

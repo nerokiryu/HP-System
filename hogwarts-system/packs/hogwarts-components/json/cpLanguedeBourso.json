@@ -1,0 +1,13 @@
+{
+  "_id": "cpLanguedeBourso",
+  "name": "Langue de Boursouf",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>La langue provenant d’un Boursouf, une petite créature magique en forme de boule et possédant une langue gigantesque.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Cinq sens",
+    "otherUses": "-"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "_id": "poCirassure00000",
+  "name": "Cirassure",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Cire à appliquer sur un balai. Elle permet de manipuler celui- ci plus aisément durant les quelques heures qui suivent son application</p><p>Effets : Vol en balai / Quidditch +5%</p><p>Durée des effets : 1d4+1 heures</p>",
+    "potionLevel": 1,
+    "malus": -10,
+    "target": "X",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Carapace de Pagure, Cire, Feuille de mandragore, Plume de hibou Grand- Duc",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

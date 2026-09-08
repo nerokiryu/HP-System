@@ -1,0 +1,19 @@
+{
+  "_id": "spFuroncles00000",
+  "name": "Furoncles",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Répand sur le corps des furoncles et des pustules immondes. Fait perdre 2 points de vie et diminue l’APP de moitié. Les points de vie perdus ne peuvent être regagnés qu’en dissipant le sort et en se reposant.</p><p>Sous-type : Maléfice</p><p>Durée : variable (heures)</p><p>Formule extrême : Perte de 3 p.v. et diminue l’APParence de ¾.</p>",
+    "spellLevel": 3,
+    "spellType": "S",
+    "target": [
+      "P"
+    ],
+    "incantation": "Furunculus",
+    "malus": -25,
+    "extremeFormula": true,
+    "malusExtremeFormula": -35,
+    "malusMastered": -10
+  }
+}

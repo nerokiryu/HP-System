@@ -1,0 +1,19 @@
+{
+  "_id": "spCorrecteurdetr",
+  "name": "Correcteur de trajectoire",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Annule complètement les tremblements naturels de celui qui manie le balai et stabilise les trajectoires.</p><p>Effets : Octroie un bonus de 10% en vol en balai pour la durée du sortilège.</p><p>Durée : 1d4+1 heures.</p><p>Formule extrême : -</p>",
+    "spellLevel": 3,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "",
+    "malus": -30,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

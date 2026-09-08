@@ -1,0 +1,69 @@
+{
+  "_id": "crBoursouf000000",
+  "name": "Boursouf",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>Les poils de Boursouf sont utilisés comme ingrédients de potions</p>",
+    "health": {
+      "value": 3,
+      "max": 3
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 3
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XX",
+    "stats": {
+      "str": {
+        "value": 1,
+        "formula": "1"
+      },
+      "con": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "siz": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "dex": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "int": {
+        "value": 1,
+        "formula": "1"
+      },
+      "pow": {
+        "value": 1,
+        "formula": "1"
+      },
+      "app": {
+        "value": 13,
+        "formula": "2d6+6"
+      },
+      "per": {
+        "value": 7,
+        "formula": "2d6"
+      }
+    },
+    "movement": {
+      "land": 3,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "-",
+    "skills": "Acrobatie : 30% ; Athlétisme 5% ; Discrétion 10% ; Esquive : 20% ; Orientation : 20% ; Survie : 10% ; Vigilance : 20%",
+    "powers": "<p>Régime alimentaire (Charognard) : Le Boursouf peut se nourrir de tout et n’importe quoi sans que cela ne lui cause de problème. Longue langue : le Boursouf possède une langue rose très fine et d'une exceptionnelle longueur qu’il peut utiliser pour récupérer sa nourriture.</p>",
+    "notes": ""
+  }
+}

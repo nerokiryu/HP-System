@@ -1,0 +1,13 @@
+{
+  "_id": "cpFluideexplosif",
+  "name": "Fluide explosif",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Le Fluide explosif se trouve dans la corne d’Éruptif. Il fait exploser tout ce qui en est imprégné</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Potion jaillissante",
+    "otherUses": "• Explosif"
+  }
+}

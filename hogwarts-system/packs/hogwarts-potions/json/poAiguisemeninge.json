@@ -1,0 +1,45 @@
+{
+  "_id": "poAiguisemeninge",
+  "name": "Aiguise méninges",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Cette potion aiguise les facultés de concentration du personnage et élimine une partie de sa fatigue.</p><p>Effet : +10% aux compétences de réflexion et à la méditation</p><p>Durée : 1d6+1 heures.</p><p>Remarque : Contre les effets du sortilège de Confusion.</p>",
+    "potionLevel": 4,
+    "malus": -40,
+    "target": "A/P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Bile de tatou",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Gingembre",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Œil de scarabée",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Rate de triton",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Thorax de scarabée",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

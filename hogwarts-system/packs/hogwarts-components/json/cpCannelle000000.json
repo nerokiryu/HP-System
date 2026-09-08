@@ -1,0 +1,13 @@
+{
+  "_id": "cpCannelle000000",
+  "name": "Cannelle",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>La cannelle est une épice obtenue à partir de l’écorce interne d’arbres du genre Cinnamomum.</p><p>Elle est utilisée comme condiment dans les aliments sucrés et salés et comme ingrédient de potion</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Langue de miel\nPotion anti-paralysie",
+    "otherUses": "• Condiment • L’un des arômes des Dragées surprises de Bertie Crochue"
+  }
+}

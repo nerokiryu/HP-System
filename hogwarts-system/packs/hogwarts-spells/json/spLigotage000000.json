@@ -1,0 +1,20 @@
+{
+  "_id": "spLigotage000000",
+  "name": "Ligotage",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Ligote la cible en faisant apparaître des cordes magiques qui l’emprisonnent fermement. Pour se libérer, la cible doit réussir un jet en opposition (POU/DEX).</p><p>Durée : permanente</p><p>Formule extrême : le jet de DEX pour se libérer se fait avec un malus de 2 points</p>",
+    "spellLevel": 2,
+    "spellType": "M",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "Incarcerem",
+    "malus": -15,
+    "extremeFormula": true,
+    "malusExtremeFormula": -25,
+    "malusMastered": -5
+  }
+}

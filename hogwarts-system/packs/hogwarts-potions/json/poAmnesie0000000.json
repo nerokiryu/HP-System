@@ -1,0 +1,39 @@
+{
+  "_id": "poAmnesie0000000",
+  "name": "Amnésie",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Cette potion provoque une perte de mémoire chez celui qui en boit. En cela, elle possède des effets relativement semblables à ceux du sortilège d’oubliettes.</p>",
+    "potionLevel": 1,
+    "malus": -10,
+    "target": "A/P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Baies de gui",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Brins de valériane",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Eau du fleuve Léthé",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Ingrédient Standard",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

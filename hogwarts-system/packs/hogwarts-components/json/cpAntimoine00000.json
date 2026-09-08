@@ -1,0 +1,13 @@
+{
+  "_id": "cpAntimoine00000",
+  "name": "Antimoine",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Un élément chimique connu pour ses vertus toxiques. On le trouve sous forme de cristaux solides de couleur bleue. Sous sa forme liquide, il est employé comme ingrédient de potions.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "• Poison (inhalation/ingestion)"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "_id": "crBousierGeant00",
+  "name": "Bousier Geant",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 13,
+      "max": 13
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 13
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XX",
+    "stats": {
+      "str": {
+        "value": 15,
+        "formula": "3d6+4"
+      },
+      "con": {
+        "value": 15,
+        "formula": "3d6+4"
+      },
+      "siz": {
+        "value": 9,
+        "formula": "2d6+2"
+      },
+      "dex": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "int": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "pow": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "app": {
+        "value": 2,
+        "formula": "1d4-1"
+      },
+      "per": {
+        "value": 8,
+        "formula": "2d6+1"
+      }
+    },
+    "movement": {
+      "land": 6,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 5
+    },
+    "attacks": "Cornes : 25% (1d4)",
+    "skills": "Acrobatie : 20% ; Athlétisme : 55% ; Discrétion 20% ; Esquive : 35% ; Orientation : 30% ; Survie : 40% ; Vigilance : 35%",
+    "powers": "<p>Résistance à la chaleur : Le bousier géant est capable de résister aux chaleurs extrêmes sans en subir les conséquences. Coup de corne : Le bousier géant peut charger une cible très violemment et lui asséner un coup de corne très puissant qui peut l’étourdir. En plus d’occasionner 1d4+1 dégâts, ce coup de tête envoie la cible à 1d6+2 mètres en arrière. Celle-ci doit également réussir un jet de CONStitutionx3 pour ne pas être considérée comme étourdie : malus de 20% à toutes les actions pour 1d4+2 rounds.</p>",
+    "notes": ""
+  }
+}

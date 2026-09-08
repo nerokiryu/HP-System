@@ -1,0 +1,57 @@
+{
+  "_id": "poPheromones0000",
+  "name": "Phéromones",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Permet d’attirer les insectes sur plus de deux kilomètres alentours.</p><p>Remarque : Il existe une potion par espèce d’insecte.</p>",
+    "potionLevel": 1,
+    "malus": -10,
+    "target": "A",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Alcool",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Bourrache",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Lavande",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Mauve",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Sang de Dragon",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Sauge",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Teinture de Thym Spécial : Sécrétions de l’insecte à attirer",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

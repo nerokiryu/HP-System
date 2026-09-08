@@ -1,0 +1,13 @@
+{
+  "_id": "cpPlumedepaon000",
+  "name": "Plume de paon",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Plume provenant d’un paon. Vendue 1 mornille la pièce</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Baume à bec\nDragonfortant",
+    "otherUses": "• Plume à écrire"
+  }
+}

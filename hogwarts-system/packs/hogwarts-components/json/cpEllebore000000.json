@@ -1,0 +1,13 @@
+{
+  "_id": "cpEllebore000000",
+  "name": "Ellébore",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une plante blanche extrêmement toxique qui, employée en sirop, peut être utilisée comme ingrédient de potion.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Potion No. 86\nVolubilis\nPhiltre de paix",
+    "otherUses": "• Poison mortel"
+  }
+}

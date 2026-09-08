@@ -1,0 +1,19 @@
+{
+  "_id": "spLongsonglesdep",
+  "name": "Longs ongles de pied",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Fait pousser les ongles de pieds de manière alarmante, causant des difficultés à la cible pour se déplacer</p><p>Effets : Diminue la valeur de déplacement de 2</p><p>Durée : permanente</p><p>Formule extrême : pas de formule extrême</p>",
+    "spellLevel": 1,
+    "spellType": "S",
+    "target": [
+      "P"
+    ],
+    "incantation": "",
+    "malus": -10,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

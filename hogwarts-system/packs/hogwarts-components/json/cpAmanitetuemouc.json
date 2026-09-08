@@ -1,0 +1,13 @@
+{
+  "_id": "cpAmanitetuemouc",
+  "name": "Amanite tue- mouche",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Champignon hallucinogène connu pour son chapeau rouge à points blancs</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Essence de folie",
+    "otherUses": "-"
+  }
+}

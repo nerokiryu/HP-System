@@ -1,0 +1,69 @@
+{
+  "_id": "crCornelongueRou",
+  "name": "Cornelongue Roumain",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 35,
+      "max": 35
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 35
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "",
+    "stats": {
+      "str": {
+        "value": 35,
+        "formula": "4d6+21"
+      },
+      "con": {
+        "value": 28,
+        "formula": "5d6+10"
+      },
+      "siz": {
+        "value": 41,
+        "formula": "6d6+20"
+      },
+      "dex": {
+        "value": 15,
+        "formula": "4d6+1"
+      },
+      "int": {
+        "value": 17,
+        "formula": "3d6+6"
+      },
+      "pow": {
+        "value": 21,
+        "formula": "3d6+10"
+      },
+      "app": {
+        "value": 20,
+        "formula": "3d6+9"
+      },
+      "per": {
+        "value": 19,
+        "formula": "5d6+1"
+      }
+    },
+    "movement": {
+      "land": 20,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 10
+    },
+    "attacks": "Cornes: 50% (4d6) Griffes : 50% (3d6) Morsure : 50% (2d6) Souffle : 60% (6d6)",
+    "skills": "Acrobatie : 50% ; Athlétisme : 60% ; Esquive : 50% ; Discrétion : 15% ; Orientation : 45% ; Survie : 60% ; Vigilance : 60% ; Voler : 70%",
+    "powers": "",
+    "notes": ""
+  }
+}

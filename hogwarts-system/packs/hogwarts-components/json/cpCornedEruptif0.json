@@ -1,0 +1,13 @@
+{
+  "_id": "cpCornedEruptif0",
+  "name": "Corne d’Éruptif",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>La corne d’Éruptif est grise et mesure plusieurs dizaines de centimètres de longueur, en forme de spirale, assez semblable à celle d’une licorne et avec des sillons à la base.</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Potion jaillissante",
+    "otherUses": "-"
+  }
+}

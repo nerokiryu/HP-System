@@ -1,0 +1,20 @@
+{
+  "_id": "spSectumsempra00",
+  "name": "Sectumsempra",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Blesse violemment la partie du corps visée comme si celle-ci avait été tailladée par une épée. La cible perd alors rapidement son sang et peut mourir.</p><p>Sous-type : Maléfice</p><p>Effet : perte de 1d4+1 points de vie puis 1 point de vie par round.</p><p>Formule extrême : -</p><p>Anti-maléfice : Soin des blessures</p>",
+    "spellLevel": 5,
+    "spellType": "S",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "Sectumsempra",
+    "malus": -70,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

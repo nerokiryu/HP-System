@@ -1,0 +1,51 @@
+{
+  "_id": "poFuroncle000000",
+  "name": "Furoncle",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Provoque l’apparition douloureuse de furoncles sur le corps de la personne.</p><p>Effet : -1 point de vie et -1 en APParence.</p><p>Remarque : Fabriquée à partir des ingrédients de la recette anti-furoncle</p>",
+    "potionLevel": 1,
+    "malus": -10,
+    "target": "A/P",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Crochets de serpent (ou épine de Sharak)",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Épines de porc-épic",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Limaces à cornes",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Mucus de Veracrasse",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Oignon de Pungous (facultatif)",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Orties séchées",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

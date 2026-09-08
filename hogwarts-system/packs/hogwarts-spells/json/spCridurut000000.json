@@ -1,0 +1,19 @@
+{
+  "_id": "spCridurut000000",
+  "name": "Cridurut",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Déclenche une alarme si une personne entre dans la zone d’effet du sortilège. Zone maximale POU mètres de diamètre.</p><p>Durée : 1 jour</p><p>Formule extrême : ne retentit que dans l’esprit de ceux qui sont dans la zone protégée</p>",
+    "spellLevel": 3,
+    "spellType": "E",
+    "target": [
+      "X"
+    ],
+    "incantation": "Cridurut",
+    "malus": -25,
+    "extremeFormula": true,
+    "malusExtremeFormula": -35,
+    "malusMastered": -10
+  }
+}

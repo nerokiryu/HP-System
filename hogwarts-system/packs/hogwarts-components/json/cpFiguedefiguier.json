@@ -1,0 +1,13 @@
+{
+  "_id": "cpFiguedefiguier",
+  "name": "Figue de figuier d’Abyssinie",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Plante magique dont les fleurs prennent l’apparence de fruits que l’on appelle figues. Ses racines particulièrement agressives permettent au figuier d’Abyssinie de s’adapter même aux environnements les plus inhospitaliers pour lui.</p><p>Les figues sont vendues trois Gallions pour cinq figues.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Élixir d’Euphorie\nPoison de vieillissement\nRatatinage",
+    "otherUses": "-"
+  }
+}

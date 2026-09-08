@@ -1,0 +1,13 @@
+{
+  "_id": "cpildescarabee00",
+  "name": "Œil de scarabée",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une espèce d’insectes. Réduit en poudre, ils entrent dans la composition de certaines potions.</p><p>Leurs yeux sont généralement vendus 5 Noises la poignée chez les apothicaires</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Aiguise-Méninge\nEssence de folie\nPotion de Bombœil\nPoussos",
+    "otherUses": "-"
+  }
+}

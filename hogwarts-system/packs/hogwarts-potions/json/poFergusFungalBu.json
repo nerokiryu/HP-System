@@ -1,0 +1,33 @@
+{
+  "_id": "poFergusFungalBu",
+  "name": "Fergus Fungal Budge",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Une sorte de pansement médical imbibé de fongicide qui permet de traiter la teigne quand il est appliqué sur les pieds.</p><p>Effet : Traitement contre la teigne</p><p>Durée : 1 jour</p>",
+    "potionLevel": 1,
+    "malus": -10,
+    "target": "P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Huile de Neem",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Impatiente du Cap",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Jus d’oignon",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

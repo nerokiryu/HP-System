@@ -1,0 +1,20 @@
+{
+  "_id": "spEbublio0000000",
+  "name": "Ebublio",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Ce maléfice enferme la cible dans une bulle magique. Celle-ci doit réussir un jet de FORx4 pour sortir de cette bulle.</p><p>Durée : POUvoir rounds</p><p>Formule extrême : -</p>",
+    "spellLevel": 3,
+    "spellType": "S",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "Ebublio",
+    "malus": -30,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

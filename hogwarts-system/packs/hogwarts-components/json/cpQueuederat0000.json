@@ -1,0 +1,13 @@
+{
+  "_id": "cpQueuederat0000",
+  "name": "Queue de rat",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une queue de rat qui entre dans la composition de nombreuses potions</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Hérisser les Cheveux",
+    "otherUses": "-"
+  }
+}

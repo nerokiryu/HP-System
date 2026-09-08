@@ -1,0 +1,19 @@
+{
+  "_id": "spCouleurdeschev",
+  "name": "Couleur des cheveux",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Permet de changer la couleur des cheveux d’une personne</p><p>Durée : Permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 2,
+    "spellType": "M",
+    "target": [
+      "P"
+    ],
+    "incantation": "Crinus Muto",
+    "malus": -15,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

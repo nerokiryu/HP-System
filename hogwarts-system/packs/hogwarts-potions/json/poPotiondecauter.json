@@ -1,0 +1,39 @@
+{
+  "_id": "poPotiondecauter",
+  "name": "Potion de cautérisation",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Puissant antiseptique provoquant une intense sensation de brûlure quand elle est appliquée.</p><p>Effet : Arrête immédiatement les saignements et referme les plaies</p><p>Effet secondaire : Redonne 1 point de vie</p><p>Remarque : Si elle est mal préparée ce qui se remarque par un fort dégagement de fumée, cette potion cause davantage de dégâts et empire les blessures sur lesquelles elle est appliquée.</p>",
+    "potionLevel": 5,
+    "malus": -50,
+    "target": "A/P",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Bétoine",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Clou de Girofle",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Sang de dragon",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Vigne",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

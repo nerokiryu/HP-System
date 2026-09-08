@@ -1,0 +1,19 @@
+{
+  "_id": "spEmpoigne000000",
+  "name": "Empoigne",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet d’ensorceler un objet afin que celui-ci soit plus facile à tenir.</p><p>Durée : permanente.</p><p>Formule extrême : -</p>",
+    "spellLevel": 2,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "",
+    "malus": -20,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

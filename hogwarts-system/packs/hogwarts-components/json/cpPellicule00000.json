@@ -1,0 +1,13 @@
+{
+  "_id": "cpPellicule00000",
+  "name": "Pellicule",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des cellules mortes d’une personne, prélevée sur son crâne, et qui peuvent être employées pour la fabrication de certaines potions</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Polynectar",
+    "otherUses": "-"
+  }
+}

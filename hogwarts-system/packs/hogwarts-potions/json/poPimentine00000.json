@@ -1,0 +1,33 @@
+{
+  "_id": "poPimentine00000",
+  "name": "Pimentine",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Soigne les personnes du rhume.</p><p>Effet secondaire : fait fumer les oreilles du consommateur durant 1d6+2 heures.</p>",
+    "potionLevel": 2,
+    "malus": -20,
+    "target": "A/P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Corne de Bicorne",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Impatiente du Cap",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Racine de mandragore",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "cpSumacveneneux0",
+  "name": "Sumac vénéneux",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une plante hautement toxique qui provoque de violentes irritations cutanées.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "-"
+  }
+}

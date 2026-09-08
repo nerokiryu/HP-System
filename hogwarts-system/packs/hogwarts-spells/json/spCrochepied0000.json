@@ -1,0 +1,19 @@
+{
+  "_id": "spCrochepied0000",
+  "name": "Croche-pied",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Fait tomber la personne. Jet de DEX x 3 afin de rester debout.</p><p>Durée : -</p><p>Formule extrême : Jet de DEXx2 afin de rester debout</p>",
+    "spellLevel": 1,
+    "spellType": "S",
+    "target": [
+      "P"
+    ],
+    "incantation": "Lapsus",
+    "malus": -10,
+    "extremeFormula": true,
+    "malusExtremeFormula": -15,
+    "malusMastered": 0
+  }
+}

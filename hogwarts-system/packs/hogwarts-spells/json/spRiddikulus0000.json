@@ -1,0 +1,19 @@
+{
+  "_id": "spRiddikulus0000",
+  "name": "Riddikulus",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Rend un épouvantard ridicule aux yeux de celui qui en avait peur à l'origine, ce qui le rend inoffensif. (POU/POU).</p><p>Durée : -</p><p>Formule extrême : -</p>",
+    "spellLevel": 2,
+    "spellType": "S",
+    "target": [
+      "P"
+    ],
+    "incantation": "Riddikulus",
+    "malus": -20,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

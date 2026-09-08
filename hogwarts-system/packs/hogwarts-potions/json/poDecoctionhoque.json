@@ -1,0 +1,39 @@
+{
+  "_id": "poDecoctionhoque",
+  "name": "Décoction hoqueteuse",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Provoque un hoquet irrépressible et impossible à arrêter avant la fin de l’effet de la potion.</p><p>Effet : Malus de 30% à toutes les actions nécessitant de l’endurance et de 10% dans la pratique de la magie.</p><p>Effet secondaire : provoque une grande fatigue une fois l’effet levé.</p><p>Durée : 1d6+1 heures.</p>",
+    "potionLevel": 5,
+    "malus": -50,
+    "target": "A/P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Bulbe sauteur",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Champignon vénéneux sauteur",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Jus d’araignée sauteuse",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Mélisse",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

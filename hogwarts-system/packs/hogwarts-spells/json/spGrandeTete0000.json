@@ -1,0 +1,20 @@
+{
+  "_id": "spGrandeTete0000",
+  "name": "Grande-Tête",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Effet : Double la taille et le poids de la tête de la cible, occasionnant un malus de 15% à toutes les actions physiques et de 1 en APParence</p><p>Sous-type : Maléfice</p><p>Durée : 1d4+2 heures</p><p>Remarque : L’effet peut être dissipé avec un philtre dégonflant</p><p>Formule extrême : Taille et poids x2,5 / Malus = 20% et -2 en</p><p>Apparence / Durée 2d4+2 heures</p>",
+    "spellLevel": 2,
+    "spellType": "S",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "Caput augmento",
+    "malus": -20,
+    "extremeFormula": true,
+    "malusExtremeFormula": -30,
+    "malusMastered": -10
+  }
+}

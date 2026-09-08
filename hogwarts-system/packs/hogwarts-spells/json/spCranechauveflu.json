@@ -1,0 +1,19 @@
+{
+  "_id": "spCranechauveflu",
+  "name": "Crâne chauve fluo",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Fait tomber tous les poils de la cible et rend le crâne fluorescent (APP - 2).</p><p>Durée : immédiate (poils) et variable (heures) (fluorescence)</p><p>Formule extrême : APParence -1d2+1 et durée +1 heure</p>",
+    "spellLevel": 1,
+    "spellType": "S",
+    "target": [
+      "P"
+    ],
+    "incantation": "Capilum",
+    "malus": -5,
+    "extremeFormula": true,
+    "malusExtremeFormula": -10,
+    "malusMastered": 0
+  }
+}

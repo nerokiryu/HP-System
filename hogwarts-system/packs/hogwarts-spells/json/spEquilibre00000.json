@@ -1,0 +1,19 @@
+{
+  "_id": "spEquilibre00000",
+  "name": "Équilibre",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Empêche le personnage d’être déséquilibré. Donne un bonus de 50% en</p><p>Athlétisme pour escalader et 40% en acrobatie.</p><p>Durée : 1d4+1 heures.</p><p>Formule extrême : Bonus octroyés 60% en Athlétisme et 50% en</p><p>Acrobatie et durée +1 heure</p>",
+    "spellLevel": 2,
+    "spellType": "E",
+    "target": [
+      "P"
+    ],
+    "incantation": "Equilibrium",
+    "malus": -30,
+    "extremeFormula": true,
+    "malusExtremeFormula": -45,
+    "malusMastered": -15
+  }
+}

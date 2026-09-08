@@ -1,0 +1,13 @@
+{
+  "_id": "cpSiropdellebore",
+  "name": "Sirop d'ellébore",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Sous le nom ellébore, également orthographié hellébore, on retrouve de nombreuses fleurs dont les plus connues sont l’ellébore noire et la blanche. En sirop, l’ellébore possèderait des effets purgatifs et des vertus médicinales.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Potion No.86\nPhiltre de Paix\nVolubilis",
+    "otherUses": "-"
+  }
+}

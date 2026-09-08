@@ -1,0 +1,39 @@
+{
+  "_id": "poBaumeabec00000",
+  "name": "Baume à bec",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Un baume spécial qui permet de soigner les becs endommagés des créatures magiques ou non</p><p>Utilisation : Ce baume doit être utilisé toutes les heures durant 10 heures. Si les lésions ne disparaissent pas, mixer le baume avec un sérum salé et recommencer.</p><p>Remarque : Ce baume ne doit pas être utilisé pour les</p><p>Hippogriffes ou les Griffons</p>",
+    "potionLevel": 2,
+    "malus": -20,
+    "target": "A",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Cire d’abeille",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Dent de dragon",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Os",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Plume de paon",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "cpSphinxtetedemo",
+  "name": "Sphinx tête-de- mort",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Un papillon de nuit particulièrement gros et qui possède la caractéristique d’avoir des poils blancs formant une tête de mort sur son thorax. Sa chrysalide peut être utilisée pour la fabrication de potions.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Potion d’Animagus",
+    "otherUses": "-"
+  }
+}

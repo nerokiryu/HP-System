@@ -1,0 +1,69 @@
+{
+  "_id": "crMatagot0000000",
+  "name": "Matagot",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>Gardiens : lieux magiques.</p>",
+    "health": {
+      "value": 8,
+      "max": 8
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 8
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "X à XXXX",
+    "stats": {
+      "str": {
+        "value": 9,
+        "formula": "2d6+2"
+      },
+      "con": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "siz": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "dex": {
+        "value": 16,
+        "formula": "4d6+2"
+      },
+      "int": {
+        "value": 9,
+        "formula": "2d6+2"
+      },
+      "pow": {
+        "value": 14,
+        "formula": "3d6+3"
+      },
+      "app": {
+        "value": 11,
+        "formula": "3d6"
+      },
+      "per": {
+        "value": 16,
+        "formula": "3d6+5"
+      }
+    },
+    "movement": {
+      "land": 9,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Griffes/Morsure 55% (1/1d4)",
+    "skills": "Acrobatie : 55% ; Athlétisme : 55% ; Discrétion : 60%; Esquive : 35%, Fouille : 50% ; Orientation : 35% ; Survie : 45% ; Vigilance : 75%",
+    "powers": "<p>Esprit de meute : Quand un Matagot s’est multiplié magiquement, il garde un lien avec les créatures issues de lui. Les différents Matagots qui sont issus du même Matagot originel fonctionnent alors comme une meute, qui bénéficie alors de bonus lors de la traque d’ennemis. Férocité : En temps normal, les Matagots sont des créatures parfaitement inoffensives pour un sorcier. Une fois attaquées cependant, elles deviennent des créatures violentes qui traquent leurs proies jusqu’à la mort. Forme féline : Dès qu’un Matagot quitte le monde magique et entre dans le monde des moldus, il devient un chat noir ordinaire sans pouvoir. Il redeviendra Matagot une fois de retour sur le lieu qu'il garde. Grande agilité : En règle générale, les jets d’acrobatie de difficulté normale et moyenne que le Matagot doit effectuer pour sauter un obstacle sont considérés comme réussis automatiquement. Les jets d’acrobatie classés comme difficiles passent à difficulté moyenne. Grande vigilance : Le Matagot est une créature créée magiquement pour garder les lieux magiques. Pour ce faire, les sorciers qui l’ont créé l’ont doté d’une vigilance hors du commun. Tous les jets de vigilance du Matagot obtiennent automatiquement un critique sur les résultats de dés de 001-010. Guérison : Les pouvoirs de guérison des Matagots sont bien supérieurs à la moyenne. Quand il est blessé, le corps du Matagot se régénère magiquement pour soigner les blessures subies. Cela se traduit par une régénération de 1 point de vie par jour et par une vitesse de régénération des points de vie en cas de repos doublée par rapport à un être humain ou une créature classique. Multiplication magique : Si un sortilège offensif lancé sur un Matagot a échoué (voir résistance - magie) alors le Matagot crée automatiquement deux répliques identiques de lui-même. Résistance (magie) : Les sortilèges ne fonctionnent pas correctement sur les Matagots. Tout sortilège lancé a 80% de chances d’échouer sur lui. Lancez 1d100 et, si le résultat est entre 020 et 000, alors le sortilège est raté. De plus, les sortilèges à durée permanente passent à durée variable (minutes). Souplesse du chat : Le Matagot retombe sur ses pattes, peu importe de quelle hauteur il tombe, ne subissant que 1 dégât par tranche de 3m à partir de 6m. Vision nocturne : Le Matagot voit aussi bien de nuit que de jour.</p>",
+    "notes": ""
+  }
+}

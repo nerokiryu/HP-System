@@ -1,0 +1,19 @@
+{
+  "_id": "spLacer000000000",
+  "name": "Lacer",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Attache les lacets de la cible, jet de DEXx3 pour rester debout et un round pour les détacher.</p><p>Durée : -</p><p>Formule extrême : DEXx2 pour rester debout et 2 rounds pour détacher ses lacets</p>",
+    "spellLevel": 1,
+    "spellType": "S",
+    "target": [
+      "P"
+    ],
+    "incantation": "Laqueare",
+    "malus": -20,
+    "extremeFormula": true,
+    "malusExtremeFormula": -30,
+    "malusMastered": -10
+  }
+}

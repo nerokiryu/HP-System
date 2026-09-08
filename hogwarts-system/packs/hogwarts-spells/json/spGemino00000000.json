@@ -1,0 +1,19 @@
+{
+  "_id": "spGemino00000000",
+  "name": "Gemino",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Ce sortilège permet de créer une copie parfaite d’un objet. Cette copie n’est cependant parfaite qu’en apparence et ne possède pas les éventuelles propriétés magiques de l’original.</p><p>Sous-type : Maléfice</p><p>Durée : permanente</p><p>Effet secondaire : Ne peut être arrêté que par le lanceur, sans quoi l’objet continu de se dupliquer sans s’arrêter durant 1d4 jour(s).</p><p>Formule extrême : -</p>",
+    "spellLevel": 3,
+    "spellType": "S",
+    "target": [
+      "O"
+    ],
+    "incantation": "Gemino",
+    "malus": -30,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

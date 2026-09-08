@@ -1,0 +1,39 @@
+{
+  "_id": "poRaconfortant00",
+  "name": "Raconfortant",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Une potion qui permet de fortifier et de soigner les rats.</p><p>Effet : Redonne 1d4+1 points de vie à un rat</p><p>Effets secondaires : Soigne les maladies mais fait anormalement grandir le rat si elle est consommée en excès.</p><p>Durée : -</p>",
+    "potionLevel": 2,
+    "malus": -20,
+    "target": "A",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Plume de hibou grand-duc",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Plumes de paon",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Poils de rat",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Verrues de crapaud violet géant",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

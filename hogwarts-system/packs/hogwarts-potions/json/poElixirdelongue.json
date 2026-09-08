@@ -1,0 +1,21 @@
+{
+  "_id": "poElixirdelongue",
+  "name": "Élixir de longue vie",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>L'élixir de longue vie est un breuvage magique qui est tiré de la pierre philosophale et qui prolonge l'existence de celui qui le boit. Celui-ci doit cependant être pris régulièrement pour maintenir son immortalité</p>",
+    "potionLevel": 6,
+    "malus": 0,
+    "target": "P",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Pierre philosophale",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

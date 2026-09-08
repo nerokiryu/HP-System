@@ -1,0 +1,19 @@
+{
+  "_id": "spLevitationde02",
+  "name": "Lévitation de corps",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Accroche la cheville de la victime en l’air retournant la personne d’une façon peu confortable. (Uniquement informulé).</p><p>Durée : volontaire</p><p>Formule extrême : -</p>",
+    "spellLevel": 4,
+    "spellType": "S",
+    "target": [
+      "P"
+    ],
+    "incantation": "Levicorpus/ Liberacorpus",
+    "malus": -40,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

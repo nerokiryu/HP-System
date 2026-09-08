@@ -1,0 +1,69 @@
+{
+  "_id": "crLimacedeFeu000",
+  "name": "Limace de Feu",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>-</p>",
+    "health": {
+      "value": 3,
+      "max": 3
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 3
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXX",
+    "stats": {
+      "str": {
+        "value": 2,
+        "formula": "1d4-1"
+      },
+      "con": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "siz": {
+        "value": 1,
+        "formula": "1"
+      },
+      "dex": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "int": {
+        "value": 1,
+        "formula": "1"
+      },
+      "pow": {
+        "value": 6,
+        "formula": "2d4+1"
+      },
+      "app": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "per": {
+        "value": 4,
+        "formula": "1d6"
+      }
+    },
+    "movement": {
+      "land": 1,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "-",
+    "skills": "Acrobatie : 10% ; Athlétisme : 5% ; Discrétion : 15%; Esquive : 15%, Orientation : 25% ; Survie : 15% ; Vigilance : 30%",
+    "powers": "<p>Flammes : Quand elle se sent en danger, une Limace de feu peut s’entourer de flammes pour blesser son assaillant. Ces flammes de faible intensité occasionnent 1 dégât, sous la forme d’une petite brûlure. La cible doit réussir un jet de chance (POUx5) pour ne pas s’enflammer. Insensibilité au feu : Les Limaces de feu sont naturellement insensibles au feu et aux dégâts que celui-ci peut leur occasionner. Cette insensibilité concerne également les sorts qui emploient le feu. Sensibilité au froid : Les Limaces de feu détestent le froid. Tout sortilège qui emploie le froid ou des abaissements de température leur est fatal.</p>",
+    "notes": ""
+  }
+}

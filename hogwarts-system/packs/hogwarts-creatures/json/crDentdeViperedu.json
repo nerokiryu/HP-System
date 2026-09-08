@@ -1,0 +1,69 @@
+{
+  "_id": "crDentdeViperedu",
+  "name": "Dent-de-Vipere du Perou",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 26,
+      "max": 26
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 26
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "",
+    "stats": {
+      "str": {
+        "value": 25,
+        "formula": "4d6+11"
+      },
+      "con": {
+        "value": 24,
+        "formula": "5d6+5"
+      },
+      "siz": {
+        "value": 30,
+        "formula": "4d6+16"
+      },
+      "dex": {
+        "value": 25,
+        "formula": "4d6+11"
+      },
+      "int": {
+        "value": 17,
+        "formula": "3d6+6"
+      },
+      "pow": {
+        "value": 21,
+        "formula": "3d6+10"
+      },
+      "app": {
+        "value": 21,
+        "formula": "3d6+10"
+      },
+      "per": {
+        "value": 22,
+        "formula": "5d6+3"
+      }
+    },
+    "movement": {
+      "land": 14,
+      "fly": 22,
+      "swim": null
+    },
+    "armor": {
+      "value": 8
+    },
+    "attacks": "Crochets : 50% (1d6+venin) Griffes : 50% (2d6) Morsure : 50% (3d6) Souffle : 60% (5d6)",
+    "skills": "Acrobatie : 60% ; Athlétisme : 50% ; Esquive : 55% ; Discrétion : 25% ; Orientation : 45% ; Survie : 50% ; Vigilance : 60% ; Voler : 80%",
+    "powers": "",
+    "notes": ""
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "cpBavededardsdeB",
+  "name": "Bave de dards de Billywig",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>La bave produite par le dard d’un Billiwig, un petit insecte magique dont la piqûre peut faire léviter une personne.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Wiggenweld",
+    "otherUses": "-"
+  }
+}

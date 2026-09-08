@@ -1,0 +1,13 @@
+{
+  "_id": "cpSangdeReem0000",
+  "name": "Sang de Re’em",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Du sang de Re'em, une créature magique semblable à un bœuf et qui possède une force extraordinaire.</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Potion Exstimulo",
+    "otherUses": "• Octroie une force surhumaine à celui qui le boit"
+  }
+}

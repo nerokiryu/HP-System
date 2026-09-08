@@ -290,6 +290,10 @@
       "SpentCap": "Limite :",
       "Base": "Base",
       "Max": "Max",
+      "MaxAuto": {
+        "Override": "Définir cette maîtrise maximale manuellement (arrête la progression annuelle)",
+        "Restore": "Revenir à la maîtrise maximale automatique par année"
+      },
       "Value": "Valeur",
       "XPCheck": "XP",
       "Category": {
@@ -353,7 +357,11 @@
       "Musique moldue": "Musique moldue",
       "Potions": "Potions",
       "Soin aux créatures magiques": "Soin aux créatures magiques",
-      "Vol en balai": "Vol en balai"
+      "Vol en balai": "Vol en balai",
+      "Alchimie": "Alchimie",
+      "Duels": "Duels",
+      "Legilimancie": "Legilimancie",
+      "Occlumancie": "Occlumancie"
     },
     "Item": {
       "Tabs": {
@@ -425,7 +433,18 @@
         "FIELDS": {
           "armorValue": {
             "label": "Protection"
+          },
+          "equipped": {
+            "label": "Équipée (portée)"
+          },
+          "shieldBonus": {
+            "label": "Bouclier (bonus de parade)"
           }
+        },
+        "Shield": {
+          "None": "Aucun",
+          "Small": "Petit bouclier (±10 %)",
+          "Large": "Grand écu (±20 %)"
         }
       },
       "Spell": {
@@ -446,13 +465,19 @@
             "label": "Incantation"
           },
           "malusExtremeFormula": {
-            "label": "Malus Formule extrême"
+            "label": "Malus de la formule extrême"
           },
           "extremeFormula": {
-            "label": "Formule extrême"
+            "label": "Possède une formule extrême"
           },
           "preSchool": {
             "label": "Sort instinctif (pré-scolaire)"
+          },
+          "malusMastered": {
+            "label": "Malus de base une fois maîtrisée"
+          },
+          "extremeMastered": {
+            "label": "Formule extrême maîtrisée"
           }
         },
         "SpellType": {
@@ -617,7 +642,40 @@
         "Title": "Résolution d'expérience",
         "NoChecks": "Aucune compétence cochée pour l'expérience.",
         "Rolled": "jet",
-        "EffectHint": "Clés d'effet XP : xp.multiplier, xp.multiplier.{catégorie}, xp.multiplier.skill.{nom}, xp.bonus, xp.bonus.{catégorie}, xp.bonus.skill.{nom}"
+        "EffectHint": "Clés d'effet XP : xp.multiplier, xp.multiplier.{catégorie}, xp.multiplier.skill.{nom}, xp.bonus, xp.bonus.{catégorie}, xp.bonus.skill.{nom}",
+        "AllTermsDone": "Les trois périodes de l'année sont déjà créditées.",
+        "NoSchoolSkills": "Aucune compétence scolaire disponible.",
+        "FirstWeek": "Première semaine de cours",
+        "Term": "Fin de période {n}/3",
+        "TermShort": "Période scolaire",
+        "TermHint": "Créditer la première semaine puis chaque fin de période (§7.3, §25.1)",
+        "School": "Expérience scolaire",
+        "YearEnd": "Expérience de fin d'année",
+        "YearEndHint": "Totaliser les récompenses de fin d'année (§25.2)",
+        "Holiday": "Vacances à la maison",
+        "HolidayHint": "1d10+1 % si l'élève rentre chez lui au lieu de jouer (l. 28202)",
+        "Pool": "Pourcentages à répartir",
+        "EmptyPool": "Aucun pourcentage à répartir.",
+        "SpendPool": "Répartir {pool} % d'expérience",
+        "SpendHint": "À répartir dans les compétences non scolaires uniquement. Restant : {pool} %.",
+        "SpendHintShort": "Répartir les pourcentages accumulés",
+        "SpendTitle": "Répartition de l'expérience",
+        "TooMuch": "{spent} % répartis pour {pool} % disponibles.",
+        "Unlock": "Débloquer une connaissance ou une langue ({cost} %)",
+        "UnlockLore": "Nouvelle connaissance",
+        "UnlockLanguage": "Nouvelle langue",
+        "UnlockName": "Nom",
+        "Unlocked": "{name} débloquée à {value} % (maximale {max} %)",
+        "Reward": {
+          "Quest": "Quête menée à bien",
+          "SideQuests": "Quêtes annexes",
+          "Participation": "Participation à la partie",
+          "FougueAndRP": "Points de fougue et rôle-play",
+          "CleverIdea": "Idée inventive",
+          "AbsurdIdea": "Idée absurde",
+          "Familiars": "Familiers et connaissances",
+          "Other": "Autres"
+        }
       },
       "Learn": {
         "Title": "Apprentissage de sort",
@@ -641,7 +699,12 @@
         "None": "Aucune",
         "Minor": "Légère (+10%)",
         "Major": "Importante (+25%)"
-      }
+      },
+      "Wandless": "Sans baguette (−{malus} %)",
+      "Silent": "Informulé (−30 %)",
+      "WandlessShort": "sans baguette",
+      "SilentShort": "informulé",
+      "UseExtreme": "Formule extrême (maxima)"
     },
     "Chat": {
       "ApplyDamage": "Appliquer les dégâts",
@@ -675,7 +738,9 @@
       "UseFougue": "Utiliser la Fougue",
       "NoFougue": "Plus de points de Fougue disponibles",
       "NotOwner": "Vous ne contrôlez pas ce personnage",
-      "PostToChat": "Publier dans le chat"
+      "PostToChat": "Publier dans le chat",
+      "ApplyNonLethal": "Dégâts non-létaux",
+      "ApplyKnockout": "Assommer"
     },
     "Derived": {
       "Title": "Caractéristiques dérivées",
@@ -695,10 +760,22 @@
     "Settings": {
       "TabsUseIcons": "Utiliser des icônes pour les onglets",
       "TabsUseIconsHint": "Si activé, les onglets de la fiche affichent des icônes FontAwesome au lieu de libellés textuels (préférence client).",
-      "UseExtendedTiers": "Niveaux de réussite étendus (BRP)",
-      "UseExtendedTiersHint": "Active les niveaux Extrême (≤1/5) et Difficile (≤1/2) en plus des règles de base (Critique 01-05, Réussite, Échec, Maladresse 96-00).",
+      "UseExtendedTiers": "Paliers de réussite étendus (règle optionnelle)",
+      "UseExtendedTiersHint": "Hors règles officielles : le livre ne définit que la réussite critique (01-05) et la maladresse (96-00). Les paliers Extrême (≤ cible/5) et Difficile (≤ cible/2) sont un emprunt au BRP générique, avec un arrondi au supérieur qu'aucun exemple chiffré de la source ne vient confirmer. Désactivé par défaut. Sans effet sur l'apprentissage des sortilèges, dont le livre fixe exactement quatre issues.",
       "ExcludeSchoolSkillsFromCP": "Exclure les matières scolaires des PC",
-      "ExcludeSchoolSkillsFromCPHint": "Si activé, les points dépensés dans les compétences de catégorie 'Matières scolaires' ne sont pas comptabilisés dans les Points de Création."
+      "ExcludeSchoolSkillsFromCPHint": "Si activé, les points dépensés dans les compétences de catégorie 'Matières scolaires' ne sont pas comptabilisés dans les Points de Création.",
+      "KnockoutMethod": "Méthode d'assommement",
+      "KnockoutMethodHint": "Classique : opposition sur la table de résistance (§2.7.1). Alternative : paliers de 25/50/75 % de perte de PV (§2.7.2).",
+      "KnockoutClassic": "Classique (table de résistance)",
+      "KnockoutAlternative": "Alternative (paliers 25/50/75 %)",
+      "ApplyArmorOnDamage": "Soustraire l'armure aux dégâts",
+      "ApplyArmorOnDamageHint": "Applique automatiquement la réduction des armures portées (§2.8.1).",
+      "RerollInitiative": "Relancer l'initiative à chaque round",
+      "RerollInitiativeHint": "Conforme au §2.2 : chaque participant refait 1d6+DEX au début de chaque round.",
+      "SchoolXpMode": "Gain d'expérience scolaire",
+      "SchoolXpModeHint": "Le livre publie deux versions contradictoires. §25.1 (l. 28186) donne un forfait 1d6+1 par période ; §7.3 (l. 6848) un tableau dégressif selon l'ancienneté de la matière.",
+      "SchoolXpFlat": "Forfait 1d6+1 par période (§25.1)",
+      "SchoolXpTapered": "Tableau dégressif 1d6+1 / 1d4+1 / 1d4 (§7.3)"
     },
     "Notifications": {
       "PersonalBonusNegative": "Attention : Points de bonus personnel en négatif",
@@ -806,11 +883,74 @@
       "Slytherin": "Serpentard",
       "Ravenclaw": "Serdaigle",
       "Hufflepuff": "Poufsouffle",
-      "Add": "Ajouter des points",
-      "Remove": "Retirer des points",
-      "Reset": "Réinitialiser",
+      "Add": "Ajouter",
+      "Remove": "Retirer",
+      "Reset": "Remettre les compteurs à zéro",
       "Award": "+{amount} point(s) pour {house} !",
-      "Deduct": "−{amount} point(s) pour {house} !"
+      "Deduct": "−{amount} point(s) pour {house} !",
+      "Open": "Ouvrir le sablier",
+      "Hint": "Cliquez sur une action pour lancer 1d100 et déterminer l'humeur du professeur (§24.2).",
+      "Gains": "Gains de points",
+      "Losses": "Retraits de points",
+      "TargetHouse": "Maison concernée",
+      "Manual": "Ajustement manuel",
+      "ResetConfirm": "Remettre les quatre maisons à zéro ?",
+      "NewTotal": "Nouveau total",
+      "NoAmount": "Indiquez un nombre de points.",
+      "NoHouse": "Sélectionnez une maison.",
+      "Category": {
+        "inClass": "Durant les cours",
+        "outsideClass": "En dehors des cours"
+      },
+      "Mood": {
+        "Label": "Humeur du professeur",
+        "good": "bonne",
+        "neutral": "neutre",
+        "bad": "mauvaise",
+        "auto": "extrême (punition ou récompense automatique)"
+      },
+      "Action": {
+        "loss": {
+          "Chatter": "Bavarder en cours",
+          "Curiosity": "Excès de curiosité lors d'un cours",
+          "WasteMaterial": "Gaspiller le matériel de cours",
+          "Insolence": "Insolence",
+          "InsultTeacher": "Insulter un professeur",
+          "ReadNewspaper": "Lire un journal en cours",
+          "SpeakUninvited": "Parler en cours sans y avoir été invité",
+          "RefuseHelp": "Refus d'aide",
+          "RefuseRequest": "Refuser une demande d'un professeur",
+          "Late": "Retard en cours",
+          "StealMaterial": "Voler du matériel scolaire",
+          "Fight": "Bagarre / attaquer un autre élève",
+          "ShoutGreatHall": "Crier dans la Grande Salle",
+          "DestroyObject": "Détruire un objet du château",
+          "BadAttire": "Mauvaise tenue vestimentaire",
+          "NightWandering": "Se balader la nuit dans les couloirs",
+          "ForbiddenForest": "Se rendre dans la forêt interdite",
+          "BookOutside": "Sortir un livre scolaire de l'enceinte"
+        },
+        "gain": {
+          "GoodAnswer": "Bonne réponse à une question",
+          "PredictionComesTrue": "Faire une prédiction qui se réalise",
+          "BroomFigures": "Maîtriser certaines figures en vol en balai",
+          "MasterSpellPotion": "Maîtriser un sortilège / une potion en cours",
+          "BroomFigure": "Maîtriser une figure en vol en balai",
+          "WinDuel": "Remporter un duel de sorcier en cours",
+          "SolveRiddle": "Résoudre une énigme d'un professeur",
+          "HealCreature": "Soigner correctement une créature magique",
+          "TranslateRunes": "Traduire un texte en runes",
+          "DefeatBoggart": "Vaincre un épouvantard",
+          "HelpStudent": "Aider un élève à maîtriser un sort / une potion",
+          "HigherYearMastery": "Maîtrise d'un sort d'une année supérieure",
+          "ExcellentHomework": "Rendre un devoir d'excellente qualité",
+          "OpposeInjustice": "S'opposer à une injustice",
+          "TidyClassroom": "Ranger / nettoyer la classe après les cours",
+          "ClubTournamentWin": "Victoire à un tournoi de club"
+        }
+      },
+      "LegendGain": "mauvaise / neutre / bonne humeur",
+      "LegendLoss": "bonne / neutre / mauvaise humeur"
     },
     "Quidditch": {
       "Title": "Quidditch",
@@ -826,1641 +966,148 @@
       "Score": "Marquer",
       "Block": "Bloquer"
     },
-    "Packs": {
-      "hogwarts-features": {
-        "adv007Ambidextre": {
-          "name": "Ambidextre",
-          "description": "<p>Peut utiliser les deux mains sans malus. Pas de pénalité pour l'utilisation de la main non-directrice.</p>"
-        },
-        "dis006Begaiement": {
-          "name": "Bégaiement",
-          "description": "<p>Difficulté d'élocution. -10% aux sorts nécessitant une incantation sous stress.</p>"
-        },
-        "adv005BonneMemoi": {
-          "name": "Bonne mémoire",
-          "description": "<p>Mémoire exceptionnelle. +10% aux jets de Bibliothèque et aux compétences scolaires pour se souvenir d'informations.</p>"
-        },
-        "adv001Chanceux": {
-          "name": "Chanceux",
-          "description": "<p>Le personnage est naturellement chanceux. Une fois par session, il peut relancer un jet raté.</p>"
-        },
-        "dis005Fragile": {
-          "name": "Constitution fragile",
-          "description": "<p>Santé fragile. -2 points de vie maximum.</p>"
-        },
-        "dis003Distrait": {
-          "name": "Distrait",
-          "description": "<p>Facilement distrait. -10% aux jets de Vigilance.</p>"
-        },
-        "adv009Empathique": {
-          "name": "Empathique",
-          "description": "<p>Ressent les émotions des autres. +10% aux jets d'Empathie et de Psychologie.</p>"
-        },
-        "dis007Impulsif": {
-          "name": "Impulsif",
-          "description": "<p>Agit avant de réfléchir. Doit réussir un jet POU×3 pour se retenir d'agir impulsivement dans les situations tendues.</p>"
-        },
-        "dis001Maladroit": {
-          "name": "Maladroit",
-          "description": "<p>Tendance à tout casser. -10% aux jets de DEX pour les actions délicates.</p>"
-        },
-        "dis004MalChance": {
-          "name": "Malchanceux",
-          "description": "<p>La malchance s'acharne. Une fois par session, le MJ peut forcer une relance sur un jet réussi.</p>"
-        },
-        "dis008MauvVue": {
-          "name": "Mauvaise vue",
-          "description": "<p>Vue déficiente. -20% aux jets de Vue sans lunettes. Si les lunettes sont perdues, malus permanent jusqu'à récupération.</p>"
-        },
-        "dis002Phobique": {
-          "name": "Phobie",
-          "description": "<p>Peur irrationnelle d'un élément (araignées, hauteurs, eau...). Stress +10% en présence du stimulus.</p>"
-        },
-        "adv010Animagus": {
-          "name": "Potentiel Animagus",
-          "description": "<p>Possède le potentiel rare de devenir Animagus. Nécessite un apprentissage long et difficile (niveau 5+).</p>"
-        },
-        "adv003Reflexes": {
-          "name": "Réflexes rapides",
-          "description": "<p>Réagit plus vite que la normale. +2 à l'initiative.</p>"
-        },
-        "adv008Resistant": {
-          "name": "Résistant à la magie",
-          "description": "<p>Résiste naturellement aux sorts. +10% aux jets d'opposition contre les sorts.</p>"
-        },
-        "adv002Robuste": {
-          "name": "Robuste",
-          "description": "<p>Constitution solide. +2 points de vie maximum.</p>"
-        },
-        "adv004Seduisant": {
-          "name": "Séduisant",
-          "description": "<p>Charisme naturel. +10% aux jets de Persuasion/Baratin avec les personnes susceptibles d'être attirées.</p>"
-        },
-        "adv006SensAiguise": {
-          "name": "Sens aiguisés",
-          "description": "<p>Perceptions supérieures. +10% aux jets de Vigilance.</p>"
-        },
-        "axGryCourageux01": {
-          "name": "Courageux",
-          "description": "<p>Le joueur peut – une fois par scénario – faire preuve d'un courage à toute épreuve durant une action (sauvetage, combat pour aider une amie, etc.). Cela se traduira par un bonus à toutes ses actions de 30% durant cet acte.</p>"
-        },
-        "axGryForceAme02": {
-          "name": "Force d'âme",
-          "description": "<p>Octroie un bonus de 25% aux jets visant à résister à la peur quand vous luttez contre des créatures malveillantes ou que vous subissez un sortilège de ce registre.</p>"
-        },
-        "axGryTemeraire03": {
-          "name": "Téméraire",
-          "description": "<p>Vous avez tendance à confondre courage et témérité et vous vous mettez dans des situations dangereuses en ne le remarquant que quand il est trop tard.</p>"
-        },
-        "axPouJusticier01": {
-          "name": "Justicier",
-          "description": "<p>Le joueur peut – une fois par scénario – appliquer son code de l'honneur pour empêcher un acte malveillant. Cela se traduira par un bonus à toutes ses actions de 30% durant cet acte.</p>"
-        },
-        "axPouCodeMoral02": {
-          "name": "Code moral",
-          "description": "<p>Vous possédez un code moral strict qui dicte vos actions dans votre vie quotidienne. Vous ne pouvez, par exemple, agir qu'en cas de légitime défense ou vous ne pouvez pas tricher, vous devez impérativement respecter la parole donnée, vous ne pouvez pas mentir ou vous êtes obligé de combattre les injustices.</p>"
-        },
-        "axPouPatience03": {
-          "name": "Patience",
-          "description": "<p>Vous êtes patient ce qui se traduit par un bonus de 15% aux recherches magiques, enchantements d'objets, rituels longs et complexes… réduit également le temps de préparation des potions d'1/3.</p>"
-        },
-        "axSerCerebral01": {
-          "name": "Cérébral",
-          "description": "<p>Vous avez tendance à trop réfléchir avant d'agir, si bien que vous perdez un temps précieux dans les situations périlleuses. Cela se traduit par un malus de 1 lorsque vous déterminez l'initiative de votre personnage pour agir.</p>"
-        },
-        "axSerErudition02": {
-          "name": "Érudition",
-          "description": "<p>Vous êtes naturellement doué dans une compétence intellectuelle. Choisissez une compétence de type « connaissances », « mythes et légendes » ou « langues ». Vous gagnez un bonus de 15% dans cette compétence. Les jets de gain d'expérience dans cette compétence donnent 1/3 de point(s) en plus.</p>"
-        },
-        "axSerSagesse03": {
-          "name": "Sagesse",
-          "description": "<p>En recherche de paix intérieure et d'harmonie avec l'univers, le sage cherche sa voie sur le chemin de la méditation. Nouvelle compétence de méditation à 15% (degré de maîtrise maximal : 95%) permettant de se relaxer, de récupérer de la fatigue et du stress, de survivre dans des conditions météorologiques horribles, de résoudre une énigme…</p>"
-        },
-        "axSepDefautPsy01": {
-          "name": "Défaut psychologique",
-          "description": "<p>Vous possédez une limitation psychologique qui vous limite dans vos relations sociales. Vous pouvez être ambitieux, râleur, menteur, orgueilleux, sans scrupules, susceptible, paresseux, cafteur, colérique, envieux, cleptomane, raciste, violent, etc.</p>"
-        },
-        "axSepFourberie02": {
-          "name": "Fourberie",
-          "description": "<p>Le joueur peut – une fois par scénario – faire preuve de fourberie pour mettre au point un plan visant à nuire à une personne ou un groupe de personnes ou visant à enfreindre les règles. Cela se traduira par un bonus à toutes ses actions de 30% durant la mise au point de ce plan.</p>"
-        },
-        "axSepQuiVive03": {
-          "name": "Sur le qui-vive",
-          "description": "<p>Vous bénéficiez naturellement d'un bonus de 15% à tous les jets de compétences visant à dissimuler vos mauvaises actions (vigilance et discrétion pour ne pas vous faire repérer, et persuasion/baratin quand vous devez vous justifier).</p>"
-        }
-      },
-      "hogwarts-spells": {
-        "sp3001Agrandiss": {
-          "name": "Agrandissement",
-          "description": "<p>Agrandit la taille d'un objet jusqu'à deux fois sa taille. Durée : POUvoir minutes.</p>"
-        },
-        "sp0001AirChaud": {
-          "name": "Air Chaud",
-          "description": "<p>Produit un courant d'air chaud depuis la baguette.</p>"
-        },
-        "sp4001Alarme": {
-          "name": "Alarme",
-          "description": "<p>Crée un périmètre magique qui alerte le lanceur si quelqu'un le franchit. Durée : POUvoir heures.</p>"
-        },
-        "sp3002Allegresse": {
-          "name": "Allégresse",
-          "description": "<p>Met la cible dans un état de bonheur intense. Elle ne peut s'inquiéter durant 1d4+1 heures. Opposition POU/POU.</p>"
-        },
-        "sp1009Allumette": {
-          "name": "Allumette en aiguille",
-          "description": "<p>Transforme une allumette en aiguille à coudre. Premier exercice de métamorphose.</p>"
-        },
-        "sp6005Amnesie": {
-          "name": "Amnésie",
-          "description": "<p>Efface des souvenirs spécifiques de la mémoire de la cible. Opposition POU/POU.</p>"
-        },
-        "sp4002AnimalVerr": {
-          "name": "Animal en verre",
-          "description": "<p>Métamorphose un animal en verre (gobelet, vase, etc.). Durée : permanente.</p>"
-        },
-        "sp5001AntiApparit": {
-          "name": "Anti-Apparition",
-          "description": "<p>Empêche quiconque dans la zone d'apparaître ou de transplaner. Durée : POUvoir heures.</p>"
-        },
-        "sp4007Antivol": {
-          "name": "Antivol",
-          "description": "<p>Enchante un objet pour qu'il ne puisse être déplacé ou volé. Annule les tentatives d'attraction. Durée : permanente.</p>"
-        },
-        "sp2012Ascension": {
-          "name": "Ascension",
-          "description": "<p>Fait monter lentement la cible dans les airs (jusqu'à 3 mètres). Durée : concentration.</p>"
-        },
-        "sp4006Attaque": {
-          "name": "Attaque",
-          "description": "<p>Anime des objets ou créatures à proximité pour attaquer une cible. Dégâts : 1d6 par objet (min 1).</p>"
-        },
-        "sp4003Attraction": {
-          "name": "Attraction",
-          "description": "<p>Attire un objet vers le lanceur depuis n'importe quelle distance connue. POUvoir km de portée.</p>"
-        },
-        "sp6003AvadaKedav": {
-          "name": "Avada Kedavra",
-          "description": "<p>Sortilège Impardonnable. Tue instantanément la cible. Aucune défense possible. INTERDIT.</p>"
-        },
-        "sp5002Aveuglement": {
-          "name": "Aveuglement",
-          "description": "<p>Aveugle temporairement la cible. Opposition POU/CON. Durée : POUvoir rounds.</p>"
-        },
-        "sp4008Beaute": {
-          "name": "Beauté",
-          "description": "<p>Améliore temporairement l'apparence de la cible. APP +3 pendant POUvoir heures.</p>"
-        },
-        "sp3003Blocage": {
-          "name": "Blocage",
-          "description": "<p>Immobilise toute créature ou objet en mouvement. Opposition POU/FOR ou POU/DEX. Durée : POUvoir rounds.</p>"
-        },
-        "sp2004Jambencoton": {
-          "name": "Bloque-Jambe",
-          "description": "<p>Les jambes de la cible se bloquent ensemble, l'empêchant de marcher. Durée : quelques rounds ou jusqu'à contre-sort.</p>"
-        },
-        "sp6008BouclierDia": {
-          "name": "Bouclier diabolique",
-          "description": "<p>Crée un bouclier magique extrêmement puissant qui bloque tous les sorts de niveau 5 ou inférieur.</p>"
-        },
-        "sp0002BoulNeige": {
-          "name": "Boule de neige",
-          "description": "<p>Crée une boule de neige magique entre les mains du lanceur.</p>"
-        },
-        "sp6010Breche": {
-          "name": "Brèche",
-          "description": "<p>Ouvre un passage temporaire à travers les protections magiques. Durée : POUvoir rounds.</p>"
-        },
-        "sp5007BrasierObsc": {
-          "name": "Brasier obscur",
-          "description": "<p>Crée un feu noir magique qui ne peut être éteint par des moyens normaux. Les sorts de dissipation ne fonctionnent pas.</p>"
-        },
-        "sp6009BrasierPour": {
-          "name": "Brasier pourpre",
-          "description": "<p>Crée un brasier de flammes pourpres qui ne laisse passer que ceux jugés dignes. Durée : permanente.</p>"
-        },
-        "sp4010BrumeDoree": {
-          "name": "Brume dorée",
-          "description": "<p>Crée une brume dorée épaisse qui désoriente quiconque la traverse. Durée : POUvoir minutes.</p>"
-        },
-        "sp0003Bulles": {
-          "name": "Bulles",
-          "description": "<p>Fait apparaître des bulles de savon colorées depuis la baguette.</p>"
-        },
-        "sp3012ChaisChat": {
-          "name": "Chaise en chat",
-          "description": "<p>Métamorphose une chaise en chat. Durée : permanente.</p>"
-        },
-        "sp3011Chance": {
-          "name": "Chance",
-          "description": "<p>Augmente la compétence dérivée Chance de la cible de +30%. Durée : POUvoir minutes.</p>"
-        },
-        "sp2008ChangeCol": {
-          "name": "Changement de couleur",
-          "description": "<p>Change la couleur d'un objet ou des cheveux/sourcils de la cible. Purement cosmétique, durée variable.</p>"
-        },
-        "sp4011CharmeDefen": {
-          "name": "Charme défensif",
-          "description": "<p>Crée une barrière protectrice autour de la cible qui bloque les sorts de niveau 4 ou inférieur.</p>"
-        },
-        "sp2002Protego": {
-          "name": "Charme du bouclier",
-          "description": "<p>Crée un bouclier invisible qui bloque les sorts de niveau inférieur ou égal à 2. Durée : 1 round.</p>"
-        },
-        "sp3004Chatouillis": {
-          "name": "Chatouillis",
-          "description": "<p>Fait rire la cible de manière incontrôlée, infligeant un malus de 60% à toutes ses actions. Durée variable (rounds).</p>"
-        },
-        "sp0004ChauffBois": {
-          "name": "Chauffe-boisson",
-          "description": "<p>Réchauffe une boisson contenue dans un récipient.</p>"
-        },
-        "sp3005ChauveFuri": {
-          "name": "Chauve-Furie",
-          "description": "<p>Lance POU Chauves-Furies au visage d'un adversaire, entravant ses mouvements. Durée variable (rounds).</p>"
-        },
-        "sp1006Incendio": {
-          "name": "Combustion",
-          "description": "<p>Enflamme un objet inflammable ciblé. Ne fonctionne pas sur les créatures vivantes directement.</p>"
-        },
-        "sp4004Confusion": {
-          "name": "Confusion",
-          "description": "<p>La cible est confuse, désorientée et incapable de réfléchir clairement. Opposition POU/POU. Durée : POUvoir minutes.</p>"
-        },
-        "sp2006Conjonctivi": {
-          "name": "Conjonctivite",
-          "description": "<p>Enfle les paupières de la cible, réduisant sa vision. Malus de -25% aux actions nécessitant la vue pendant 1d6 rounds.</p>"
-        },
-        "sp3006ContreEnch": {
-          "name": "Contre-Enchantement",
-          "description": "<p>Met immédiatement fin aux effets d'un envoûtement magique ou d'un enchantement sur la cible.</p>"
-        },
-        "sp5006CordeFlam": {
-          "name": "Corde de flammes",
-          "description": "<p>Crée une corde de feu qui entoure et immobilise la cible. Opposition POU/DEX pour se libérer. Brûlures : 1d3/round.</p>"
-        },
-        "sp4005CreatAnimau": {
-          "name": "Création d'animaux",
-          "description": "<p>Crée un ou plusieurs petits animaux à partir de la matière environnante. Durée : permanente.</p>"
-        },
-        "sp0005Creation": {
-          "name": "Création temporaire",
-          "description": "<p>Crée un petit objet simple et fragile pour quelques minutes.</p>"
-        },
-        "sp3007CracheLima": {
-          "name": "Crache-Limace",
-          "description": "<p>La cible se met à vomir des limaces de manière ininterrompue pendant 1d6 heures.</p>"
-        },
-        "sp5009CrapaudAman": {
-          "name": "Crapaud en amanite",
-          "description": "<p>Métamorphose un crapaud en champignon amanite. Durée : permanente.</p>"
-        },
-        "sp1008Crochepied": {
-          "name": "Croche-pied",
-          "description": "<p>Fait trébucher la cible. Celle-ci doit réussir un jet de DEX×5 ou tomber.</p>"
-        },
-        "sp3008Deflexion": {
-          "name": "Déflexion",
-          "description": "<p>Permet de dévier un sort de niveau 3 ou inférieur sur une autre cible.</p>"
-        },
-        "sp2001Expelliarm": {
-          "name": "Désarmement",
-          "description": "<p>Fait sauter l'objet tenu par la cible de ses mains. Le sort le plus courant en duel.</p>"
-        },
-        "sp3009Desillusion": {
-          "name": "Désillusion",
-          "description": "<p>Rend la cible quasi invisible en la camouflant comme un caméléon. Opposition PER/POU pour détecter. Durée : POUvoir minutes.</p>"
-        },
-        "sp1012Detonation": {
-          "name": "Détonation",
-          "description": "<p>Produit un bruit assourdissant depuis la baguette, effrayant les créatures proches.</p>"
-        },
-        "sp1004Alohomora": {
-          "name": "Déverrouillage",
-          "description": "<p>Ouvre une serrure simple (non magique). Les serrures complexes ou enchantées résistent.</p>"
-        },
-        "sp4009Destruction": {
-          "name": "Destruction",
-          "description": "<p>Détruit violemment un objet, le réduisant en morceaux. Opposition POU si objet enchanté.</p>"
-        },
-        "sp6001Doloris": {
-          "name": "Doloris",
-          "description": "<p>Sortilège Impardonnable. Inflige une douleur atroce à la cible. Il faut vouloir la souffrance de l'autre et y prendre du plaisir. INTERDIT.</p>"
-        },
-        "sp2009Entrave": {
-          "name": "Entrave",
-          "description": "<p>Ralentit considérablement la cible. Son mouvement est réduit de moitié et elle subit -10% aux jets de DEX pendant 1d6 rounds.</p>"
-        },
-        "sp5003Expulsion": {
-          "name": "Expulsion",
-          "description": "<p>Projette violemment la cible en arrière avec une force considérable. Dégâts : 2d6.</p>"
-        },
-        "sp5004Extension": {
-          "name": "Extension",
-          "description": "<p>Agrandit magiquement l'intérieur d'un espace clos sans changer son apparence extérieure. Durée : permanente.</p>"
-        },
-        "sp1007Extinction": {
-          "name": "Extinction",
-          "description": "<p>Éteint un feu de taille modérée (bougie, cheminée, torche).</p>"
-        },
-        "sp1005Collaporta": {
-          "name": "Fermeture",
-          "description": "<p>Verrouille magiquement une porte ou un coffre. Résistance modérée à l'ouverture.</p>"
-        },
-        "sp5010FeuSemprem": {
-          "name": "Feu de Sempremais",
-          "description": "<p>Crée un feu éternel qui ne brûle pas et ne s'éteint jamais. Utilisé pour l'éclairage. Durée : permanente.</p>"
-        },
-        "sp6006Feudeymon": {
-          "name": "Feudeymon",
-          "description": "<p>Crée un feu démoniaque vivant prenant la forme de créatures. Quasi impossible à éteindre. Détruit les Horcruxes.</p>"
-        },
-        "sp0006FloconNei": {
-          "name": "Flocon de neige",
-          "description": "<p>Fait apparaître quelques flocons de neige tombant lentement.</p>"
-        },
-        "sp5005HumainAnima": {
-          "name": "Humain en animal",
-          "description": "<p>Métamorphose un humain en un animal de taille similaire. Opposition POU/POU. Durée : permanente. Interdit dans la plupart des écoles.</p>"
-        },
-        "sp6002Imperium": {
-          "name": "Imperium",
-          "description": "<p>Sortilège Impardonnable. Permet de contrôler totalement la volonté d'une personne. Opposition POU/POU. INTERDIT.</p>"
-        },
-        "sp6007Incartable": {
-          "name": "Incartable",
-          "description": "<p>Rend un lieu impossible à localiser sur une carte ou par magie. Durée : permanente.</p>"
-        },
-        "sp1003Wingardiu": {
-          "name": "Lévitation d'objet",
-          "description": "<p>Fait léviter un objet de taille modérée (max ~10 kg). Durée : concentration.</p>"
-        },
-        "sp1011Ligotage": {
-          "name": "Ligotage",
-          "description": "<p>Des cordes magiques s'enroulent autour de la cible, l'immobilisant. La cible peut tenter un jet de FOR×5 pour se libérer.</p>"
-        },
-        "sp1001Lumos": {
-          "name": "Lumière (Lumos)",
-          "description": "<p>Produit un faisceau lumineux depuis l'extrémité de la baguette. Éclaire un rayon de 5 mètres environ.</p>"
-        },
-        "sp0007MagieDome": {
-          "name": "Magie domestique",
-          "description": "<p>Effectue une petite tâche ménagère simple (plier un vêtement, ranger un livre, etc.).</p>"
-        },
-        "sp0008Nettoyage": {
-          "name": "Nettoyage",
-          "description": "<p>Nettoie un objet ou une petite surface de la saleté et de la poussière.</p>"
-        },
-        "sp2011ObjAnimal": {
-          "name": "Objet en animal",
-          "description": "<p>Transforme un petit objet en un animal correspondant à sa taille. L'animal disparaît après quelques minutes.</p>"
-        },
-        "sp1002Nox": {
-          "name": "Obscurité (Nox)",
-          "description": "<p>Éteint la lumière produite par Lumos.</p>"
-        },
-        "sp0009Parapluie": {
-          "name": "Parapluie",
-          "description": "<p>Crée un petit écran protecteur contre la pluie au-dessus du lanceur.</p>"
-        },
-        "sp2010PorteVoix": {
-          "name": "Porte-voix",
-          "description": "<p>Amplifie la voix du lanceur comme un mégaphone magique. Durée : concentration.</p>"
-        },
-        "sp6004Portoloin": {
-          "name": "Portoloin",
-          "description": "<p>Transforme un objet en Portoloin qui téléporte quiconque le touche à l'heure prévue par le lanceur.</p>"
-        },
-        "sp2005Repoustout": {
-          "name": "Repoustout",
-          "description": "<p>Repousse violemment la cible à plusieurs mètres. Inflige 1d3 dégâts non-létaux.</p>"
-        },
-        "sp2003Riddikulus": {
-          "name": "Riddikulus",
-          "description": "<p>Transforme un Épouvantard en quelque chose de ridicule, neutralisant sa capacité à effrayer.</p>"
-        },
-        "sp0010Ruban": {
-          "name": "Ruban",
-          "description": "<p>Fait apparaître un ruban coloré depuis la baguette.</p>"
-        },
-        "sp2007Spongifica": {
-          "name": "Spongification",
-          "description": "<p>Rend un objet mou et spongieux. Utile pour amortir des chutes ou rendre un obstacle déformable.</p>"
-        },
-        "sp0011Tricot": {
-          "name": "Tricot",
-          "description": "<p>Fait tricoter des aiguilles magiquement de façon autonome.</p>"
-        },
-        "sp1010EclatLum": {
-          "name": "Éclat lumineux",
-          "description": "<p>Produit un flash lumineux aveuglant pendant un instant. Les cibles proches doivent réussir un jet de PER×3 ou être éblouies 1 round.</p>"
-        },
-        "sp3010EcranFumee": {
-          "name": "Écran de fumée",
-          "description": "<p>Crée un épais nuage de fumée noire sur une zone de POUvoir mètres. Durée : POUvoir rounds.</p>"
-        },
-        "sp5008EveilObjets": {
-          "name": "Éveil d'objets",
-          "description": "<p>Anime un grand nombre d'objets inanimés qui obéissent aux ordres du lanceur. Durée : concentration.</p>"
-        },
-        "sp1013Annihilare": {
-          "name": "Annihilare",
-          "description": "<p>Durée : -</p>"
-        },
-        "sp1014Arrachegon": {
-          "name": "Arrache-gonds",
-          "description": "<p>Durée : -</p>"
-        },
-        "sp1015Attelle": {
-          "name": "Attelle",
-          "description": "<p>Effet : Rend 1 point de vie. Durée : -</p>"
-        },
-        "sp1016Cranechauv": {
-          "name": "Crâne chauve",
-          "description": "<p>: 0%/5% Durée : -</p>"
-        },
-        "sp1017Cranechauv": {
-          "name": "Crâne chauve fluo",
-          "description": "<p>: 0%/10% Durée : immédiate (poils) et variable (heures) (fluorescence)</p>"
-        },
-        "sp1018Deliage": {
-          "name": "Déliage",
-          "description": "<p>Durée : -</p>"
-        },
-        "sp1019Dunamis": {
-          "name": "Dunamis",
-          "description": "<p>Durée : -</p>"
-        },
-        "sp1020Etancheite": {
-          "name": "Étanchéité",
-          "description": "<p>: 0%/15% Durée : variable (heures)</p>"
-        },
-        "sp1021Etincelles": {
-          "name": "Étincelles vertes",
-          "description": "<p>: 0%/10% Durée : - Portée : 1,5m</p>"
-        },
-        "sp1022Explosiond": {
-          "name": "Explosion de serrure",
-          "description": "<p>Sort de niveau 1.</p>"
-        },
-        "sp1023Finestra": {
-          "name": "Finestra",
-          "description": "<p>Durée : -</p>"
-        },
-        "sp1024Flambois": {
-          "name": "Flambois",
-          "description": "<p>permettant de dessiner une marque enflammée. Fait apparaître des fleurs à l'extrémité de la baguette.</p>"
-        },
-        "sp1025Fleurmagiq": {
-          "name": "Fleur magique",
-          "description": "<p>: 0%/10% Durée : 2d4+2 heures</p>"
-        },
-        "sp1026Folleoreil": {
-          "name": "Folleoreille",
-          "description": "<p>: 0%/20% Sous-type : Maléfice Durée : Variable (rounds)</p>"
-        },
-        "sp1027Hydrophobi": {
-          "name": "Hydrophobie",
-          "description": "<p>: 0%/10% Durée : Variable (heures)</p>"
-        },
-        "sp1028Lacer": {
-          "name": "Lacer",
-          "description": "<p>: 10%/30% Durée : -</p>"
-        },
-        "sp1029Larmes": {
-          "name": "Larmes",
-          "description": "<p>: 0%/20% durant 1d4 heures</p>"
-        },
-        "sp1030Liberare": {
-          "name": "Liberare",
-          "description": "<p>Durée : -</p>"
-        },
-        "sp1031Liquidever": {
-          "name": "Liquide vers Liquide",
-          "description": "<p>Sort de niveau 1.</p>"
-        },
-        "sp1032LumiereObs": {
-          "name": "Lumière/Obscurité",
-          "description": "<p>E : 0%/10% Durée : volontaire</p>"
-        },
-        "sp1033Maleficede": {
-          "name": "Maléfice de",
-          "description": "<p>E : 5%/25% Sous-type : Maléfice</p>"
-        },
-        "sp1034Objetenboi": {
-          "name": "Objet en boîte d’allumettes",
-          "description": "<p>Sort de niveau 1.</p>"
-        },
-        "sp1035ObjetenOis": {
-          "name": "Objet en Oiseau",
-          "description": "<p>Durée : permanente</p>"
-        },
-        "sp1036ObjetversO": {
-          "name": "Objet vers Objet",
-          "description": "<p>Sort de niveau 1.</p>"
-        },
-        "sp1037Objetschan": {
-          "name": "Objets chantant",
-          "description": "<p>Sort de niveau 1.</p>"
-        },
-        "sp1038Oiseauxdel": {
-          "name": "Oiseaux de lumière",
-          "description": "<p>Sort de niveau 1.</p>"
-        },
-        "sp1039Purificati": {
-          "name": "Purification",
-          "description": "<p>Durée : permanente</p>"
-        },
-        "sp1040QuatrePoin": {
-          "name": "Quatre-Points",
-          "description": "<p>Sort de niveau 1.</p>"
-        },
-        "sp1041Ralentisse": {
-          "name": "Ralentissement",
-          "description": "<p>E : 5%/25% 2. (Opposition : POU/DEX)</p>"
-        },
-        "sp1042Rechauffem": {
-          "name": "Réchauffement",
-          "description": "<p>E : 0%/15% Durée : -</p>"
-        },
-        "sp1043Recurage": {
-          "name": "Récurage",
-          "description": "<p>Portée : 1,5m Durée : permanente</p>"
-        },
-        "sp1044Refroidiss": {
-          "name": "Refroidissement",
-          "description": "<p>E : 0%/15% Durée : -</p>"
-        },
-        "sp1045Repoussede": {
-          "name": "Repousse des cheveux",
-          "description": "<p>Sort de niveau 1.</p>"
-        },
-        "sp1046Revelation": {
-          "name": "Révélation",
-          "description": "<p>Durée : -</p>"
-        },
-        "sp1047Rotation": {
-          "name": "Rotation",
-          "description": "<p>Sort de niveau 1.</p>"
-        },
-        "sp1048Secheresse": {
-          "name": "Sécheresse",
-          "description": "<p>Sort de niveau 1.</p>"
-        },
-        "sp1049Sortileged": {
-          "name": "Sortilège d’eau",
-          "description": "<p>Durée : permanente</p>"
-        },
-        "sp1050Sortileged": {
-          "name": "Sortilège de feu",
-          "description": "<p>chance d’enflammer. Durée : volontaire</p>"
-        },
-        "sp1051Sourisenta": {
-          "name": "Souris en tabatière",
-          "description": "<p>Sort de niveau 1.</p>"
-        },
-        "sp1052Surfacemir": {
-          "name": "Surface miroir",
-          "description": "<p>Sort de niveau 1.</p>"
-        },
-        "sp1053Tergeo": {
-          "name": "Tergeo",
-          "description": "<p>Durée : permanente</p>"
-        },
-        "sp1054Valise": {
-          "name": "Valise",
-          "description": "<p>Sort de niveau 1.</p>"
-        },
-        "sp1055Ventilatio": {
-          "name": "Ventilation",
-          "description": "<p>Durée : -</p>"
-        },
-        "sp2013Annulation": {
-          "name": "Annulation de fonctionne cependant pas sur les métamorphoses complètes.",
-          "description": "<p>fonctionne cependant pas sur les métamorphoses complètes. Durée : -</p>"
-        },
-        "sp2014Antiouvert": {
-          "name": "Anti-ouverture",
-          "description": "<p>manière différente pour chque sortilège d’ouverture. Durée : POU jours</p>"
-        },
-        "sp2015Brouillard": {
-          "name": "Brouillard",
-          "description": "<p>: 10%/20% Variable (heures). Effets : Observation = PERceptionx2</p>"
-        },
-        "sp2016Charmer": {
-          "name": "Charmer",
-          "description": "<p>: 10%/30% passée sous le charme. (Opposition : APP/POU)</p>"
-        },
-        "sp2017Cheveuxdru": {
-          "name": "Cheveux drus",
-          "description": "<p>: 10%/30% Durée : permanente</p>"
-        },
-        "sp2018Colle": {
-          "name": "Colle",
-          "description": "<p>: 10%/30% Durée : Variable (heures).</p>"
-        },
-        "sp2019Couleurdes": {
-          "name": "Couleur des cheveux",
-          "description": "<p>Sort de niveau 2.</p>"
-        },
-        "sp2020Couleursde": {
-          "name": "Couleurs d’encre",
-          "description": "<p>vers bleu, vers jaune, vers noir et ainsi de suite) Durée : Permanent ou - Remarque : Cet enchantement est utilisé pour enchanter l’encre multicolore vendue en magasin.</p>"
-        },
-        "sp2021CoupeGriff": {
-          "name": "Coupe-Griffes",
-          "description": "<p>Sort de niveau 2.</p>"
-        },
-        "sp2022Cuisant": {
-          "name": "Cuisant",
-          "description": "<p>: 10%/30% Effet : APP-5. Durée : Variable (heures)</p>"
-        },
-        "sp2023Danseendia": {
-          "name": "Danse endiablée",
-          "description": "<p>: 15%/45% Durée : 1d4+2 rounds.</p>"
-        },
-        "sp2024Deplacemen": {
-          "name": "Déplacement",
-          "description": "<p>: 20%/45% Maximum : POU x 5 kg. Durée : volontaire</p>"
-        },
-        "sp2025Descente": {
-          "name": "Descente",
-          "description": "<p>Sort de niveau 2.</p>"
-        },
-        "sp2026Discretion": {
-          "name": "Discrétion",
-          "description": "<p>: 15%/45% Durée : 1d4+2 heures</p>"
-        },
-        "sp2027Ectoplasmu": {
-          "name": "Ectoplasmus",
-          "description": "<p>E : 10% / Effet : cause 1d4+1 points de dégâts aux points d’existence d'un Esprit 30% ou d'un Non-Être</p>"
-        },
-        "sp2028Elasticite": {
-          "name": "Élasticité",
-          "description": "<p>: 15%/35% Durée : 1 heure</p>"
-        },
-        "sp2029Empoigne": {
-          "name": "Empoigne",
-          "description": "<p>Sort de niveau 2.</p>"
-        },
-        "sp2030Epoximise": {
-          "name": "Epoximise",
-          "description": "<p>: 10%/30% (Opposition : FORx2). Durée : permanente</p>"
-        },
-        "sp2031Equilibre": {
-          "name": "Équilibre",
-          "description": "<p>: 15%/45% Durée : 1d4+1 heures.</p>"
-        },
-        "sp2032Etincelles": {
-          "name": "Étincelles blanches",
-          "description": "<p>: 20%/30% Durée : -</p>"
-        },
-        "sp2033Faitdispar": {
-          "name": "Fait disparaître les cheveux de la cible (APP - 1).",
-          "description": "<p>Fait disparaître les cheveux de la cible (APP - 1).</p>"
-        },
-        "sp2034Ficelage": {
-          "name": "Ficelage",
-          "description": "<p>: 0%/20% Durée : permanente</p>"
-        },
-        "sp2035Flammesble": {
-          "name": "Flammes bleues",
-          "description": "<p>l’eau. Durée : POU heures Génère une boule de feu tenant dans la main du Sorcier sans le brûler.</p>"
-        },
-        "sp2036Flammesenm": {
-          "name": "Flammes en main",
-          "description": "<p>Sort de niveau 2.</p>"
-        },
-        "sp2037Fouet": {
-          "name": "Fouet",
-          "description": "<p>Durée : -</p>"
-        },
-        "sp2038Fourrure": {
-          "name": "Fourrure",
-          "description": "<p>Durée : POU heures Enchante les balais pour les aider à freiner. Plus le sortilège est maîtrisé et plus le balai freine avec efficacité. Effets : octroie un bonus en vol en balai allant de 1 à 5% quand le balais</p>"
-        },
-        "sp2039Freinage": {
-          "name": "Freinage",
-          "description": "<p>est utilisé Durée : Permanente.</p>"
-        },
-        "sp2040Giclepus": {
-          "name": "Gicle-pus",
-          "description": "<p>Durée : 1d4-1 heure(s)</p>"
-        },
-        "sp2041GrandeTete": {
-          "name": "Grande-Tête",
-          "description": "<p>E : 10%/30% Durée : 1d4+2 heures Remarque : L’effet peut être dissipé avec un philtre dégonflant</p>"
-        },
-        "sp2042Herissonen": {
-          "name": "Hérisson en pelote à épingles",
-          "description": "<p>Sort de niveau 2.</p>"
-        },
-        "sp2043Huilegliss": {
-          "name": "Huile glissante",
-          "description": "<p>E : 15%/35% Durée : variable (heures)</p>"
-        },
-        "sp2044Illisibili": {
-          "name": "Illisibilité",
-          "description": "<p>Sort de niveau 2.</p>"
-        },
-        "sp2045Inversion": {
-          "name": "Inversion",
-          "description": "<p>E : 10%/30% Durée : -</p>"
-        },
-        "sp2046Lapinenpan": {
-          "name": "Lapin en pantoufles",
-          "description": "<p>Sort de niveau 2.</p>"
-        },
-        "sp2047Liberation": {
-          "name": "Libération",
-          "description": "<p>Sort de niveau 2.</p>"
-        },
-        "sp2048Locomotion": {
-          "name": "Locomotion",
-          "description": "<p>Sort de niveau 2.</p>"
-        },
-        "sp2049Maintien": {
-          "name": "Maintien",
-          "description": "<p>Durée : permanente</p>"
-        },
-        "sp2050Maleficede": {
-          "name": "Maléfice de Melofors",
-          "description": "<p>C : 20% Effet : Aveugle la cible Sous-type : Maléfice Opposition : Jet de FORce x1 pour briser la citrouille et la retirer, ou anti-maléfice pour la dissiper Durée : Permanente</p>"
-        },
-        "sp2051Montage": {
-          "name": "Montage",
-          "description": "<p>C : 20% Durée : -</p>"
-        },
-        "sp2052Objetenplu": {
-          "name": "Objet en plume",
-          "description": "<p>C : 20% Durée : permanente</p>"
-        },
-        "sp2053ObjetenPri": {
-          "name": "Objet en Prison",
-          "description": "<p>C : 30% Durée : permanente</p>"
-        },
-        "sp2054Obliterati": {
-          "name": "Oblitération",
-          "description": "<p>C : 15% Durée : - Portée : POUvoir mètres</p>"
-        },
-        "sp2055OuvreCaiss": {
-          "name": "Ouvre-Caisse",
-          "description": "<p>C : 10% couvercle ou leur(s) porte(s). Durée : -</p>"
-        },
-        "sp2056Parole": {
-          "name": "Parole",
-          "description": "<p>C : 20% des mots isolés, de plus en plus rapprochés et de plus en plus aigus. Durée : POUx3 minutes Permet de rendre un objet aussi léger qu’une plume.</p>"
-        },
-        "sp2057Poidsplume": {
-          "name": "Poids-plume",
-          "description": "<p>C : 25% Durée : POU heures Métamorphose un porc-épic en pelote à épingles</p>"
-        },
-        "sp2058Porcepique": {
-          "name": "Porc-épique en",
-          "description": "<p>C : 20% Durée : permanente</p>"
-        },
-        "sp2059Ratatinage": {
-          "name": "Ratatinage",
-          "description": "<p>: 5%/25% Durée : 1d4+2 heures. Contre-sort : le contre-sort pour annuler le ratatinage de l’objet ou l’animal est le sortilège d’engorgement</p>"
-        },
-        "sp2060Renverseme": {
-          "name": "Renversement",
-          "description": "<p>: 15%/35% réussit pas un jet de DEXx3. Durée : -</p>"
-        },
-        "sp2061Repoussecr": {
-          "name": "Repousse créature",
-          "description": "<p>: 5%/25% Maximum : POU x 5 m. Durée : -</p>"
-        },
-        "sp2062Scarabeeen": {
-          "name": "Scarabée en bouton",
-          "description": "<p>C : 20% Durée : permanente</p>"
-        },
-        "sp2063Sortileged": {
-          "name": "Sortilège de planage",
-          "description": "<p>: 15% qui la suivra le temps de fonctionnement de celui-ci Durée : POUvoir secondes</p>"
-        },
-        "sp2064Spiraledev": {
-          "name": "Spirale de vent",
-          "description": "<p>10%/25% Durée : Variable (rounds). Effets : Déplacements divisés par 2.</p>"
-        },
-        "sp2065Surdite": {
-          "name": "Surdité",
-          "description": "<p>10%/30% pour l’écoute. Durée : 1d4 heures. Opposition : POU/POU</p>"
-        },
-        "sp2066Tetenbulle": {
-          "name": "Têtenbulle",
-          "description": "<p>0%/20% par de mauvaises odeurs. Durée : 1d4+1 heures</p>"
-        },
-        "sp2067Videntrail": {
-          "name": "Videntraille",
-          "description": "<p>Sous-type : Maléfice</p>"
-        },
-        "sp2068Virage": {
-          "name": "Virage",
-          "description": "<p>est utilisé Durée : Permanente.</p>"
-        },
-        "sp3013Antihoquet": {
-          "name": "Anti-hoquet",
-          "description": "<p>Durée : -</p>"
-        },
-        "sp3014Antimalefi": {
-          "name": "Anti-maléfice de",
-          "description": "<p>Permet de contrer les effets du maléfice de Crottes-de-nez</p>"
-        },
-        "sp3015Antitriche": {
-          "name": "Anti-triche",
-          "description": "<p>: 30% triche. Durée : 1 jour</p>"
-        },
-        "sp3016Boomerang": {
-          "name": "Boomerang",
-          "description": "<p>C :30% Durée : Permanente</p>"
-        },
-        "sp3017Bouchesoud": {
-          "name": "Bouche soudée",
-          "description": "<p>: 20%/35% Durée : Variable (heures) Effets : Mutisme</p>"
-        },
-        "sp3018CarpeRetra": {
-          "name": "Carpe Retractum",
-          "description": "<p>C : 30% Durée : Volontaire Remarque : Une fois l’objet saisi, le Sorcier doit faire preuve de FORce pour pouvoir tirer ce dernier, la corde magique ne servant qu’à relier l’objet visé et la baguette du Sorcier.</p>"
-        },
-        "sp3019Catapultag": {
-          "name": "Catapultage",
-          "description": "<p>: 0%/20% Opposition : FORx2. Durée : -</p>"
-        },
-        "sp3020Copieillus": {
-          "name": "Copie illusoire",
-          "description": "<p>: 10%/30% avant de se dissiper. Pour percer cette illusion, un jet de PERception x1 doit être effectué. Durée : variable (heures)</p>"
-        },
-        "sp3021Correcteur": {
-          "name": "Correcteur de",
-          "description": "<p>C : 30% Effets : Octroie un bonus de 10% en vol en balai pour la durée du Durée : 1d4+1 heures.</p>"
-        },
-        "sp3022Cridurut": {
-          "name": "Cridurut",
-          "description": "<p>: 10%/35% Durée : 1 jour</p>"
-        },
-        "sp3023Diminution": {
-          "name": "Diminution",
-          "description": "<p>: 20%/40% Durée : POU minutes</p>"
-        },
-        "sp3024Durcisseme": {
-          "name": "Durcissement",
-          "description": "<p>: 5%/25% Durée : 1d6+2 heures</p>"
-        },
-        "sp3025Ebublio": {
-          "name": "Ebublio",
-          "description": "<p>C : 30% Durée : POUvoir rounds</p>"
-        },
-        "sp3026Etincelles": {
-          "name": "Étincelles bleues",
-          "description": "<p>: 30%/40% bloquer la vue en créant un brouillard Durée : -</p>"
-        },
-        "sp3027Explosiond": {
-          "name": "Explosion d’objets",
-          "description": "<p>: 10%/30% Durée : -</p>"
-        },
-        "sp3028Explosiond": {
-          "name": "Explosion de caisse",
-          "description": "<p>C : 30% Durée : -</p>"
-        },
-        "sp3029Flottement": {
-          "name": "Flottement",
-          "description": "<p>C : 30% sort cesse une fois l’objet arrivé à destination. Durée : -</p>"
-        },
-        "sp3030Furoncles": {
-          "name": "Furoncles",
-          "description": "<p>: 10%/35% reposant. Sous-type : Maléfice Durée : variable (heures)</p>"
-        },
-        "sp3031Gemino": {
-          "name": "Gemino",
-          "description": "<p>C : 30% Durée : permanente Effet secondaire : Ne peut être arrêté que par le lanceur, sans quoi l’objet continu de se dupliquer sans s’arrêter durant 1d4 jour(s).</p>"
-        },
-        "sp3032Glacius": {
-          "name": "Glacius",
-          "description": "<p>: 20%/40% liquides, afin de pouvoir marcher dessus. Durée : 1d6+1 rounds</p>"
-        },
-        "sp3033GluPerpetu": {
-          "name": "Glu-Perpétuelle",
-          "description": "<p>Sort de niveau 3.</p>"
-        },
-        "sp3034Herbivicus": {
-          "name": "Herbivicus",
-          "description": "<p>Remarque : Faire attention à ce que la plante ait suffisamment d’eau et de nourriture afin qu’elle ne meure pas. Métamorphose un hibou en jumelles de théâtre</p>"
-        },
-        "sp3035Hibouenjum": {
-          "name": "Hibou en jumelles de théâtre",
-          "description": "<p>Sort de niveau 3.</p>"
-        },
-        "sp3036Impassibil": {
-          "name": "Impassibilité",
-          "description": "<p>Sort de niveau 3.</p>"
-        },
-        "sp3037Lapifors": {
-          "name": "Lapifors",
-          "description": "<p>Durée : permanente</p>"
-        },
-        "sp3038Lien": {
-          "name": "Lien",
-          "description": "<p>Durée : permanent</p>"
-        },
-        "sp3039Maleficede": {
-          "name": "Maléfice des",
-          "description": "<p>P FC : 35% Sous-type : Maléfice Durée : Permanente</p>"
-        },
-        "sp3040Maleficedu": {
-          "name": "Maléfice du",
-          "description": "<p>Opposition : POU/POU Sous-type : Maléfice Durée : variable (heures)</p>"
-        },
-        "sp3041Miseenplac": {
-          "name": "Mise en place",
-          "description": "<p>Sort de niveau 3.</p>"
-        },
-        "sp3042MoucheSard": {
-          "name": "Mouche-Sardine",
-          "description": "<p>Sous-type : Maléfice Durée : 2d4+2 heures. (Jet de CON x3 pour fournir un effort).</p>"
-        },
-        "sp3043ObjetenDra": {
-          "name": "Objet en Dragon",
-          "description": "<p>Sort de niveau 3.</p>"
-        },
-        "sp3044Objetenpou": {
-          "name": "Objet en poulet/oie",
-          "description": "<p>Sort de niveau 3.</p>"
-        },
-        "sp3045Oscausi": {
-          "name": "Oscausi",
-          "description": "<p>Durée : permanente</p>"
-        },
-        "sp3046Permetdefa": {
-          "name": "Permet de faire léviter un arbre. Celui-ci suit ensuite le sorcier tant qu’il",
-          "description": "<p>Permet de faire léviter un arbre. Celui-ci suit ensuite le sorcier tant qu’il reste concentré sur le sortilège.</p>"
-        },
-        "sp3047Personneen": {
-          "name": "Personne en Animal",
-          "description": "<p>Sort de niveau 3.</p>"
-        },
-        "sp3048Pierreench": {
-          "name": "Pierre en chien",
-          "description": "<p>Sort de niveau 3.</p>"
-        },
-        "sp3049Pression": {
-          "name": "Pression",
-          "description": "<p>Durée : Volontaire</p>"
-        },
-        "sp3050Remplissag": {
-          "name": "Remplissage",
-          "description": "<p>Sort de niveau 3.</p>"
-        },
-        "sp3051RepousseFa": {
-          "name": "Repousse-Fantômes",
-          "description": "<p>: 40%/70% Durée : 1 jour</p>"
-        },
-        "sp3052RepousseMo": {
-          "name": "Repousse-Moldus",
-          "description": "<p>: 30%/50% Durée : 1 jour</p>"
-        },
-        "sp3053Repulsion": {
-          "name": "Répulsion",
-          "description": "<p>: 25%/45% également être utilisé pour repousser de lourds objets (jusqu’à POUvoirx3 Kg). Durée : -</p>"
-        },
-        "sp3054Reveil": {
-          "name": "Réveil",
-          "description": "<p>Durée : -</p>"
-        },
-        "sp3055Reversion": {
-          "name": "Réversion",
-          "description": "<p>Durée : -</p>"
-        },
-        "sp3056Rocket": {
-          "name": "Rocket",
-          "description": "<p>Durée : -</p>"
-        },
-        "sp3057Scellement": {
-          "name": "Scellement de peut alors être lu que si on lui donne un nouveau coup de baguette.",
-          "description": "<p>peut alors être lu que si on lui donne un nouveau coup de baguette. Durée : Permanent</p>"
-        },
-        "sp3058Scellement": {
-          "name": "Scellement de pièce",
-          "description": "<p>Durée : Permanent</p>"
-        },
-        "sp3059Soins": {
-          "name": "Soins",
-          "description": "<p>: 25%/45% faire effet sur cette blessure. Durée : -</p>"
-        },
-        "sp3060Somnambuli": {
-          "name": "Somnambulisme",
-          "description": "<p>Durée : POUvoir minutes</p>"
-        },
-        "sp3061Stupefixio": {
-          "name": "Stupéfixion",
-          "description": "<p>: 30%/50% Durée : 2d4+2 heures</p>"
-        },
-        "sp3062Terrasseme": {
-          "name": "Terrassement",
-          "description": "<p>Sort de niveau 3.</p>"
-        },
-        "sp3063Toboggan": {
-          "name": "Toboggan",
-          "description": "<p>Sort de niveau 3.</p>"
-        },
-        "sp3064Urticaire": {
-          "name": "Urticaire",
-          "description": "<p>Durée : - Permet d'envoyer un objet à un endroit à la vitesse d'une balle de fusil, peut détruire l’objet ou l’endommager.</p>"
-        },
-        "sp3065Waddiwasi": {
-          "name": "Waddiwasi",
-          "description": "<p>Durée : -</p>"
-        },
-        "sp4012Antibrumed": {
-          "name": "Anti-brume dorée",
-          "description": "<p>Permet de contrer les effets du maléfice de Cerveau-en-gelée</p>"
-        },
-        "sp4013Antimalefi": {
-          "name": "Anti-maléfice du rire",
-          "description": "<p>Sort de niveau 4.</p>"
-        },
-        "sp4014Antiscelle": {
-          "name": "Anti-scellement de pièce",
-          "description": "<p>Lancé sur un objet, cet enchantement empêche celui-ci d’être volé. Effet : Empêche tout autre Sorcier que le lanceur d’utiliser le sortilège</p>"
-        },
-        "sp4015Bouledebow": {
-          "name": "Boule de bowling en ballon",
-          "description": "<p>Sort de niveau 4.</p>"
-        },
-        "sp4016Disparitio": {
-          "name": "Disparition de serpent",
-          "description": "<p>Sort de niveau 4.</p>"
-        },
-        "sp4017Escargoten": {
-          "name": "Escargot en théière",
-          "description": "<p>Sort de niveau 4.</p>"
-        },
-        "sp4018Faitappara": {
-          "name": "Fait apparaître quelque chose qui a été caché par magie ou non",
-          "description": "<p>Fait apparaître quelque chose qui a été caché par magie ou non (Opposition : Niv / Niv).</p>"
-        },
-        "sp4019FauxSouven": {
-          "name": "Faux-Souvenir",
-          "description": "<p>Durée : permanente</p>"
-        },
-        "sp4020Fidelitas": {
-          "name": "Fidelitas",
-          "description": "<p>Durée : permanente</p>"
-        },
-        "sp4021Fondantdu": {
-          "name": "Fondant du",
-          "description": "<p>Sort de niveau 4.</p>"
-        },
-        "sp4022Gel": {
-          "name": "Gel",
-          "description": "<p>réussir un jet de FOR x3. Effet : Occasionne 2 dégâts non létaux Durée : Permanente Rend les flammes visées inoffensives.</p>"
-        },
-        "sp4023GeleFlamme": {
-          "name": "Gèle-Flamme",
-          "description": "<p>Sort de niveau 4.</p>"
-        },
-        "sp4024GrandeExpl": {
-          "name": "Grande Explosion",
-          "description": "<p>d’explosion. Maximum 1m3 E : 30%/50% Durée : -</p>"
-        },
-        "sp4025Grandeur": {
-          "name": "Grandeur",
-          "description": "<p>E : 30%/50% peur ou de l’attirance devant sa personne. Opposition : POU/POU. Durée : 1d10+2 heures</p>"
-        },
-        "sp4026Humanite": {
-          "name": "Humanité",
-          "description": "<p>Durée : -</p>"
-        },
-        "sp4027Incassable": {
-          "name": "Incassable",
-          "description": "<p>Sort de niveau 4.</p>"
-        },
-        "sp4028Lumieresol": {
-          "name": "Lumière solaire",
-          "description": "<p>E : 30%/50% 50% à toutes les actions nécessitant la vue. Effet secondaire : Blesse les créatures sensibles à la lumière en leur infligeant 1d4+1 dégâts</p>"
-        },
-        "sp4029Maleficedu": {
-          "name": "Maléfice du lancent tous avec leur malus maximal",
-          "description": "<p>lancent tous avec leur malus maximal Sous-type : Maléfice Durée : Variable (heures)</p>"
-        },
-        "sp4030Maleficedu": {
-          "name": "Maléfice du rire",
-          "description": "<p>épuisement total (0 point de vie), plongeant la cible dans le coma. Sous-type : Maléfice Durée : Permanente Fait apparaître la marque des ténèbres.</p>"
-        },
-        "sp4031Marquedest": {
-          "name": "Marque des ténèbres",
-          "description": "<p>Sort de niveau 4.</p>"
-        },
-        "sp4032Mimetisme": {
-          "name": "Mimétisme",
-          "description": "<p>Durée : 1d10+1 heures</p>"
-        },
-        "sp4033Mutisme": {
-          "name": "Mutisme",
-          "description": "<p>Durée : 1 mois</p>"
-        },
-        "sp4034Patronus": {
-          "name": "Patronus",
-          "description": "<p>Remarque : Si ce sortilège est lancé par une personne qui ne possède pas un cœur pur, des asticots de lumière jaillissent de la baguette du sorcier pour venir le dévorer.</p>"
-        },
-        "sp4035Pintadeenc": {
-          "name": "Pintade en cochon d'Inde",
-          "description": "<p>Sort de niveau 4.</p>"
-        },
-        "sp4036Pionenrein": {
-          "name": "Pion en reine",
-          "description": "<p>Sort de niveau 4.</p>"
-        },
-        "sp4037Protection": {
-          "name": "Protection",
-          "description": "<p>E : 30%/50% pas droit et protège des dégâts physiques en les diminuant de 2. (Exception : Avada kedavra). Durée : 1d8+2 heures</p>"
-        },
-        "sp4038Reduction": {
-          "name": "Réduction",
-          "description": "<p>Durée : -</p>"
-        },
-        "sp4039Renforceme": {
-          "name": "Renforcement",
-          "description": "<p>Durée : Identique à la durée de la formule extrême du sortilège renforcé</p>"
-        },
-        "sp4040Revelasort": {
-          "name": "Révélasort de A/O",
-          "description": "<p>Durée : -</p>"
-        },
-        "sp4041Reviviscen": {
-          "name": "Reviviscence",
-          "description": "<p>Durée : Volontaire</p>"
-        },
-        "sp4042Securite": {
-          "name": "Sécurité",
-          "description": "<p>Durée : 12 heures</p>"
-        },
-        "sp4043Seduction": {
-          "name": "Séduction",
-          "description": "<p>E : 30%/50% Contrer les effets du sort : vu qu’il agit comme un philtre d’amour, les effets de ce sortilège peuvent être partiellement ou totalement dissipés par des antidotes aux philtres d’amour.</p>"
-        },
-        "sp4044Sortileged": {
-          "name": "Sortilège de A/O",
-          "description": "<p>Opposition : POU/POU. Durée : permanente</p>"
-        },
-        "sp4045Sortileged": {
-          "name": "Sortilège de le second et le second en le premier.",
-          "description": "<p>le second et le second en le premier. Durée : permanente</p>"
-        },
-        "sp4046Supersenso": {
-          "name": "Super-sensoriel",
-          "description": "<p>forts et aux mauvaises odeurs Durée : Variable (minute)</p>"
-        },
-        "sp4047Tortueentr": {
-          "name": "Tortue en trompette",
-          "description": "<p>Sort de niveau 4.</p>"
-        },
-        "sp5011Alteration": {
-          "name": "Altération M",
-          "description": "<p>celle-ci reviennent à la normale. Contre les effets de Meteorribilis. Durée : -</p>"
-        },
-        "sp5012Antimalefi": {
-          "name": "Anti-maléfice du",
-          "description": "<p>Permet de contrer les effets du maléfice du Voleur</p>"
-        },
-        "sp5013AntiTransp": {
-          "name": "Anti-Transplanage",
-          "description": "<p>: 40%/70% Durée : Variable (heures)</p>"
-        },
-        "sp5014Chardonnet": {
-          "name": "Chardonnet en vif d’or",
-          "description": "<p>Sort de niveau 5.</p>"
-        },
-        "sp5015Chaudronen": {
-          "name": "Chaudron en blaireau",
-          "description": "<p>Sort de niveau 5.</p>"
-        },
-        "sp5016Flagrance": {
-          "name": "Flagrance",
-          "description": "<p>: 30%/55% levé mais n’endommage pas l’objet. Sous-type : Maléfice Durée : permanente</p>"
-        },
-        "sp5017Furetenplu": {
-          "name": "Furet en plumeau",
-          "description": "<p>Sort de niveau 5.</p>"
-        },
-        "sp5018Gnomeennai": {
-          "name": "Gnome en nain de jardin",
-          "description": "<p>Sort de niveau 5.</p>"
-        },
-        "sp5019Lancesurun": {
-          "name": "Lancé sur un objet comme une porte ou une serrure, ce sortilège",
-          "description": "<p>Lancé sur un objet comme une porte ou une serrure, ce sortilège fonctionne comme un contre sort d’ouverture comme Alohomora, Annihilare, Dunamis, ou Liberare. Il doit néanmoins être lancé de</p>"
-        },
-        "sp5020Legilimens": {
-          "name": "Legilimens",
-          "description": "<p>Durée : volontaire</p>"
-        },
-        "sp5021Maleficeex": {
-          "name": "Maléfice explosif",
-          "description": "<p>: 30%/50% Sous-type : Maléfice Durée : -</p>"
-        },
-        "sp5022Ordureench": {
-          "name": "Ordure en chien viverrin",
-          "description": "<p>Sort de niveau 5.</p>"
-        },
-        "sp5023Plumeauenf": {
-          "name": "Plumeau en furet",
-          "description": "<p>Sort de niveau 5.</p>"
-        },
-        "sp5024Positionin": {
-          "name": "Position initiale",
-          "description": "<p>: 50%/70% équivalente à POU/2 mètres Durée : -</p>"
-        },
-        "sp5025Regenerati": {
-          "name": "Régénération",
-          "description": "<p>Effet : Fait disparaître les blessures subies par un corps sans vie Durée : Volontaire / jusqu’à disparition complète des blessures</p>"
-        },
-        "sp5026Roiencorbe": {
-          "name": "Roi en corbeau",
-          "description": "<p>Sort de niveau 5.</p>"
-        },
-        "sp5027Sectumsemp": {
-          "name": "Sectumsempra",
-          "description": "<p>Effet : perte de 1d4+1 points de vie puis 1 point de vie par round.</p>"
-        },
-        "sp5028Sortileges": {
-          "name": "sortilèges / Priori",
-          "description": "<p>Incantatem se lance de lui-même.</p>"
-        },
-        "sp5029Tasseenger": {
-          "name": "Tasse en gerbille",
-          "description": "<p>Sort de niveau 5.</p>"
-        },
-        "sp5030Tasseenrat": {
-          "name": "Tasse en rat",
-          "description": "<p>Sort de niveau 5.</p>"
-        },
-        "sp5031Tatouencou": {
-          "name": "Tatou en coussin",
-          "description": "<p>Sort de niveau 5.</p>"
-        },
-        "sp5032Tempete": {
-          "name": "Tempête",
-          "description": "<p>Durée : POU minutes</p>"
-        },
-        "sp5033Transplana": {
-          "name": "Transplanage",
-          "description": "<p>kilomètres</p>"
-        },
-        "sp5034Vinaigreen": {
-          "name": "Vinaigre en Vin",
-          "description": "<p>Remarque : Plus la différence entre sa maîtrise en métamorphose et le résultat du dé est grande, et plus le vin est de qualité. Lancé sur un objet, ce sort punit celui qui le garde trop longtemps sans l'acheter. Les effets peuvent varier en fonction des désirs de celui qui le lance.</p>"
-        },
-        "sp5035Voleur": {
-          "name": "Voleur",
-          "description": "<p>Sous-type : Maléfice Durée : permanente</p>"
-        },
-        "sp6011Cemalefice": {
-          "name": "Ce maléfice provoque une douleur cuisante et gonfle le visage de la",
-          "description": "<p>Ce maléfice provoque une douleur cuisante et gonfle le visage de la cible pour le rendre méconnaissable.</p>"
-        }
-      },
-      "hogwarts-potions": {
-        "po4004AmortentiaP": {
-          "name": "Amortentia",
-          "description": "<p>Le philtre d'amour le plus puissant. Crée une obsession passionnelle envers le donneur. Opposition POU/POU. Durée : 24 heures.</p>"
-        },
-        "po3001Antidote": {
-          "name": "Antidote aux poisons",
-          "description": "<p>Annule l'effet de poisons jusqu'à une virulence de 10.</p>"
-        },
-        "po1001CureFurncl": {
-          "name": "Cure de furoncles",
-          "description": "<p>Guérit les furoncles et les éruptions cutanées mineures. Préparation de niveau débutant enseignée en première année.</p>"
-        },
-        "po1004EncreInvis": {
-          "name": "Encre invisible",
-          "description": "<p>Encre qui disparaît après séchage et ne redevient visible qu'en chauffant le parchemin ou avec un sort de révélation.</p>"
-        },
-        "po2006FelixFelic": {
-          "name": "Felix Felicis",
-          "description": "<p>Liquide doré qui rend chanceux pendant 12 heures. Usage excessif toxique. Interdit en compétition.</p>"
-        },
-        "po4003FelixFelic": {
-          "name": "Felix Felicis",
-          "description": "<p>Potion de chance liquide. Tous les jets bénéficient d'un bonus de +30% pendant 12 heures. Extrêmement dangereuse en excès.</p>"
-        },
-        "po4005MortVivant": {
-          "name": "Goutte du Mort-Vivant",
-          "description": "<p>Plonge la cible dans un sommeil si profond qu'elle semble morte. Seul un antidote spécifique peut la réveiller.</p>"
-        },
-        "po1003Herbicide": {
-          "name": "Herbicide",
-          "description": "<p>Détruit les plantes non-magiques et affaiblit considérablement les plantes magiques de petite taille.</p>"
-        },
-        "po3004PhiltrCalm": {
-          "name": "Philtre calmant",
-          "description": "<p>Calme instantanément la cible, supprimant le stress et l'anxiété. Annule le malus de stress.</p>"
-        },
-        "po2005Mandragore": {
-          "name": "Philtre de Mandragore",
-          "description": "<p>Guérit la pétrification. Nécessite des Mandragores mûres. Temps de préparation important.</p>"
-        },
-        "po2001Polynectar": {
-          "name": "Polynectar",
-          "description": "<p>Transforme le buveur en une autre personne dont un cheveu a été ajouté à la potion. Durée : 1 heure. Préparation longue et complexe.</p>"
-        },
-        "po4002Polynectar": {
-          "name": "Polynectar",
-          "description": "<p>Permet de prendre l'apparence d'une autre personne pendant 1 heure. Nécessite un élément de la cible (cheveu, etc.).</p>"
-        },
-        "po5003WolfsbaneP": {
-          "name": "Potion Tue-Loup",
-          "description": "<p>Permet au loup-garou de conserver sa conscience humaine pendant la transformation. Doit être prise chaque jour la semaine précédant la pleine lune.</p>"
-        },
-        "po2007Wiggenweld": {
-          "name": "Potion Wiggenweld",
-          "description": "<p>Restaure les points de vie du buveur (2d6 PV). Équivalent sorcier d'une potion de soin classique.</p>"
-        },
-        "po2004Aiguisesns": {
-          "name": "Potion aiguise-sens",
-          "description": "<p>Améliore temporairement les sens du buveur. Bonus de +15% aux jets de Perception pendant 1 heure.</p>"
-        },
-        "po3008Apocyn": {
-          "name": "Potion d'apocyn",
-          "description": "<p>Poison violent qui cause la perte de 1d6 points de vie. Virulence élevée.</p>"
-        },
-        "po1002PotionOubl": {
-          "name": "Potion d'oubli",
-          "description": "<p>Fait oublier à la cible les événements récents (dernière heure). Dosage délicat.</p>"
-        },
-        "po3002Beaute": {
-          "name": "Potion de beauté",
-          "description": "<p>Améliore l'apparence de la cible. Effet : APP +2d4+2. Durée : 1d6 heures.</p>"
-        },
-        "po3007Duplication": {
-          "name": "Potion de duplication",
-          "description": "<p>Duplique une potion existante (niveau ≤3). Nécessite la potion à copier comme ingrédient.</p>"
-        },
-        "po3006Guerison": {
-          "name": "Potion de guérison",
-          "description": "<p>Soigne 1d4 points de vie, referme les plaies et résorbe les blessures mineures.</p>"
-        },
-        "po3003Memoire": {
-          "name": "Potion de mémoire",
-          "description": "<p>Améliore considérablement la mémoire du consommateur pendant plusieurs heures. INT +5 pour les tests de mémorisation.</p>"
-        },
-        "po3005Neutralis": {
-          "name": "Potion de neutralisation",
-          "description": "<p>Rend inopérant les effets d'une potion de même niveau ou inférieur (max niveau 3).</p>"
-        },
-        "po4006Regenera": {
-          "name": "Potion de régénération",
-          "description": "<p>Régénère les tissus endommagés. Soigne 2d6 points de vie sur 8 heures. Très douloureuse.</p>"
-        },
-        "po2002Poussos": {
-          "name": "Poussos",
-          "description": "<p>Régénère les os brisés ou manquants. Processus douloureux prenant 8 heures. Essentiel en médicomagie.</p>"
-        },
-        "po5001Poussos": {
-          "name": "Poussos",
-          "description": "<p>Fait repousser les os. Processus extrêmement douloureux (12 heures). Utilisé uniquement pour les fractures graves ou os manquants.</p>"
-        },
-        "po1006Repouslug": {
-          "name": "Repousse-limaces",
-          "description": "<p>Éloigne les limaces et créatures rampantes dans un rayon de 3 mètres. Efficace 24 heures.</p>"
-        },
-        "po2008Enflure": {
-          "name": "Solution d'enflure",
-          "description": "<p>Fait gonfler la partie du corps sur laquelle elle est appliquée. Effet temporaire mais spectaculaire. Antidote : solution de ratatinage.</p>"
-        },
-        "po1005Somnifere": {
-          "name": "Somnifère léger",
-          "description": "<p>Plonge le buveur dans un sommeil léger pendant 1d6 heures. Facile à réveiller.</p>"
-        },
-        "po2003Veritaserum": {
-          "name": "Veritaserum",
-          "description": "<p>Sérum de vérité extrêmement puissant. Le buveur ne peut que dire la vérité pendant 1 heure. Usage réglementé par le Ministère.</p>"
-        },
-        "po4001Veritaserum": {
-          "name": "Veritaserum",
-          "description": "<p>Le sérum de vérité le plus puissant. Trois gouttes suffisent pour forcer quiconque à dire la vérité. Opposition POU/POU.</p>"
-        },
-        "po5002ElixirVie": {
-          "name": "Élixir de longue vie",
-          "description": "<p>Prolonge la vie du consommateur. Nécessite la Pierre Philosophale. Usage régulier nécessaire pour maintenir l'effet.</p>"
-        },
-        "po1007Acne": {
-          "name": "Acné",
-          "description": "<p>qui la boit, diminuant son APParence de 1d4</p>"
-        },
-        "po1008Amnesie": {
-          "name": "Amnésie",
-          "description": "<p>fleuve</p>"
-        },
-        "po1009Antiacne": {
-          "name": "Anti-acné",
-          "description": "<p>Durée : 24 heures Crochets de serpent (ou épine de Élimine les furoncles en quelques minutes. Sharak) ; Épines de porc-épic ; Limaces à</p>"
-        },
-        "po1010Antifuronc": {
-          "name": "Anti-furoncle",
-          "description": "<p>Remarque : effet inverse si mal préparé. cornes ; Mucus de</p>"
-        },
-        "po1011Cirassure": {
-          "name": "Cirassure",
-          "description": "<p>Effets : Vol en balai / Quidditch +5% Duc Durée des effets : 1d4+1 heures Ces détergents permettent d’éliminer certains types de</p>"
-        },
-        "po1012Doxicide": {
-          "name": "Doxicide",
-          "description": "<p>dragon ; Sécrétion de</p>"
-        },
-        "po1013Fertilisan": {
-          "name": "Fertilisant",
-          "description": "<p>Os ; Rate de rat ; Bouse de dragon celles-ci Provoque l’apparition douloureuse de furoncles sur le corps Crochets de serpent (ou épine de de la personne. Sharak) ; Épines de porc-épic ; Limaces à</p>"
-        },
-        "po1014Furoncle": {
-          "name": "Furoncle",
-          "description": "<p>cornes ; Mucus de</p>"
-        },
-        "po1015Languedemi": {
-          "name": "Langue de miel",
-          "description": "<p>Durée : 1d4+1 heures Sauge Cette potion capillaire permet de rendre les cheveux lisses et soyeux. Cheveux de dragon asiatique ; Gelée de</p>"
-        },
-        "po1016Lissenplis": {
-          "name": "Lissenplis",
-          "description": "<p>Effet : APParence +1. pétrole ; Gomas Barbadensis Durée : 24 heures Quand elle entre en contact avec l’air, cette potion provoque</p>"
-        },
-        "po1017Pheromones": {
-          "name": "Phéromones",
-          "description": "<p>Remarque : Il existe une potion par espèce d’insecte. Spécial : Sécrétions de l’insecte à attirer A/P</p>"
-        },
-        "po1018Rejutage": {
-          "name": "Rejutage",
-          "description": "<p>redonnent à une plante morte la capacité de produire du jus. source ;</p>"
-        },
-        "po2009Baumeabec": {
-          "name": "Baume à bec",
-          "description": "<p>Plume de paon baume avec un sérum salé et recommencer. Remarque : Ce baume ne doit pas être utilisé pour les Hippogriffes ou les Griffons Une fois à l’air libre, la potion s’étend sous la forme d’un brouillard blanc et épais dans lequel on ne voit rien sur une Bicarbonate de soude ; Sang de</p>"
-        },
-        "po2010Brumeopaqu": {
-          "name": "Brume opaque",
-          "description": "<p>vingtaine de mètres. salamandre ; Sel d’ammoniaque ; Sucre Durée : 1 heure Empêche le consommateur de dormir durant 24 heures. La fatigue le rattrape cependant d’un coup une fois les effets Corne de dragon ; Graine de café ;</p>"
-        },
-        "po2011Cafeine": {
-          "name": "Caféine",
-          "description": "<p>Effets secondaires : agitation extrême et difficulté à rester en Poudre de pieuvre ; Sucre place.</p>"
-        },
-        "po2012Cinqsens": {
-          "name": "Cinq sens",
-          "description": "<p>le noir. de dragon ; Zinc Durée : 1 heure Cette potion permet d’ajouter temporairement 1d6 points à la Bulbe sauteur ; Dards de Bilyvig ;</p>"
-        },
-        "po2013Doigtsagil": {
-          "name": "Doigts agiles",
-          "description": "<p>Durée : 1d4+1 heures. d’araignée sauteuses Une potion qui permet de fortifier et de soigner les dragons. Effet : redonne 2d4+2 points de vie à un dragon Plume de hibou grand-duc ; Plumes de</p>"
-        },
-        "po2014Dragonfort": {
-          "name": "Dragonfortant",
-          "description": "<p>Effets secondaires : soigne les maladies paon ; Verrues de crapaud violet géant Durée : - A/P Augmente considérablement la taille d’un animal, d’une Foie de chauve-souris ; Œil de poisson</p>"
-        },
-        "po2015Oculicura": {
-          "name": "Oculi cura",
-          "description": "<p>Conjonctivite Utilisation : Cette potion verte s’utilise sous la forme de gouttes Épine de rose ; Menthe poivrée ; Œuf de Cette potion fait tomber amoureux de la première personne</p>"
-        },
-        "po2016Pimentine": {
-          "name": "Pimentine",
-          "description": "<p>Racine de mandragore durant 1d6+2 heures. Permet de contrer les effets de la paralysie engendrés par un sortilège, un poison ou un venin Effets : Annule les effets de la paralysie au bout d’un round</p>"
-        },
-        "po2017Potionn": {
-          "name": "Potion n°113",
-          "description": "<p>Effet : vertiges, douleurs et palpitations durant 1d10 minutes Effets secondaires : reproduit les conversations passées durant 1d10+5 minutes Durée : 1d10+1d10+5 minutes VIRulence : 10 Remarque : Mal préparé, ce poison peut rendre muet à vie la personne qui le consomme, voir même la tuer sur le coup. Chou mordeur de</p>"
-        },
-        "po2018Protection": {
-          "name": "protection",
-          "description": "<p>certaine période. Cet effet ne protège cependant pas ses</p>"
-        },
-        "po2019Raconforta": {
-          "name": "Raconfortant",
-          "description": "<p>anormalement grandir le rat si elle est consommée en excès. violet géant Durée : - Algue séchée ; Bouse de dragon ; Eau de Quelques gouttes de cette potion verte redonnent à une</p>"
-        },
-        "po2020Regerminat": {
-          "name": "Regermination",
-          "description": "<p>plante morte la capacité de germer Menthe Redonne immédiatement 1 point de vie et octroie un bonus Eau de source ; Essence de Consoude ;</p>"
-        },
-        "po2021Soignantep": {
-          "name": "soignante pour",
-          "description": "<p>complètement restaurer la zone blessée. de dragon ; Huile de ricin Remarque : Ne doit jamais, sous aucun prétexte, être employée sur un Licheur Soigne les personnes du rhume. Corne de</p>"
-        },
-        "po2022Volubilis": {
-          "name": "Volubilis",
-          "description": "<p>cuite ; Menthe poivrée ; Sirop d’ellébore plomb. Permet de contrer ou de considérablement diminuer les effets Baies de gui ;</p>"
-        },
-        "po3009Apocyn": {
-          "name": "Apocyn",
-          "description": "<p>VIRulence : 9 Remarque : Mal préparée, l’Apocyn peut devenir mortelle. Redonne 1 point de vie et calme les douleurs les plus</p>"
-        },
-        "po3010Beaute": {
-          "name": "Beauté",
-          "description": "<p>Cap ; Pétale de rose ;</p>"
-        },
-        "po3011Beauteillu": {
-          "name": "Beauté illusoire",
-          "description": "<p>Remarque : Ces potions sont prises par les Harpies pour</p>"
-        },
-        "po3012Dasclepiad": {
-          "name": "d'asclépiade",
-          "description": "<p>Durées des effets : 2d4+4 heures Ce baume de couleur bleue est à appliquer sur les plaies et les contusions</p>"
-        },
-        "po3013Infusionin": {
-          "name": "Infusion infecte",
-          "description": "<p>l’estomac, ce qui occasionne un malus de 30% à toutes les</p>"
-        },
-        "po3014Memoire": {
-          "name": "Mémoire",
-          "description": "<p>Remarque : Cette potion est souvent employée avant Plume de</p>"
-        },
-        "po3015Neutralisa": {
-          "name": "Neutralisation",
-          "description": "<p>contrées par cette potion standards ; Moly Permet de calmer une personne qui a subi un choc, un traumatisme ou un choc émotionnel. Effet : Supprime le stress en diminuant les effets de celui-ci de 15%. Les diminutions sont cumulables en cas de consommation de plusieurs doses. Cœur de crocodile ;</p>"
-        },
-        "po3016Poisons": {
-          "name": "poisons",
-          "description": "<p>Ingrédient</p>"
-        },
-        "po3017Pommadante": {
-          "name": "pommadante",
-          "description": "<p>Durée : 1d4 jours Vigne Provoque de violents et incontrôlables reniflements. Effets : Achillée sternutatoire ; Menthe poivrée ;</p>"
-        },
-        "po3018PotionNo": {
-          "name": "Potion No. 7",
-          "description": "<p>bouger durant 1d4 heure(s) au bout d’une minute Tentacula vénéneuse VIRulence : 11 Remarque : Mal préparée, cette potion provoque la mort de celui qui la consomme en arrêtant son cœur. Cette potion possède des effets différents en fonction du support où elle est appliquée : Effets : Sur un objet, elle permet de le faire rétrécir, diminuant sa caractéristique TAIlle par 2. Sur un animal, une</p>"
-        },
-        "po3019Trompettes": {
-          "name": "trompettes",
-          "description": "<p>actions visant à se concentrer. Effets secondaires : perte des souvenirs d’après la prise de la potion jusqu’au réveil. Durée : 1d6+1 heures VIRulence : 12 Mélange de divers ingrédients de potions nauséabonds, cette potion s’apparente plus à un poison. Calocère cornue ; Champignon Effet : provoque de violentes nausées et des douleurs à vénéneux sauteur ; Chou puant ; Jus de</p>"
-        },
-        "po3020Verificati": {
-          "name": "Vérification",
-          "description": "<p>vérification, celle-ci change de couleur pour indiquer si la douche ; Muguet potion possède les effets recherchés. Très pratique pour ne pas consommer de potions ratées et lors d’enchantements magiques. Un verni protecteur pour balai qui permet de garder les runes Cire, Huile de Neem, Écailles de dragon,</p>"
-        },
-        "po3021Verniprote": {
-          "name": "Verni protecteur",
-          "description": "<p>actives tout en les protégeant des dégâts dus aux intempéries. Sève de Verni du Japon Cette potion aiguise les facultés de concentration du personnage et élimine une partie de sa fatigue. Bile de tatou ;</p>"
-        },
-        "po4007Encremagiq": {
-          "name": "Encre magique",
-          "description": "<p>Sang de dragon Effet secondaire : Rompre un pacte ou un contrat rédigé à Spécial : Sang des deux contractants l’aide de cette encre magique implique de lourdes conséquences, généralement décrites avec soin lors de leur rédaction. Permet de créer une énergie qui servira à alimenter une Algues séchées ; Baie explosive ; machine, un objet quelconque durant quelques heures, voire</p>"
-        },
-        "po4008Energiemag": {
-          "name": "Énergie magique",
-          "description": "<p>Luciole ; Sang de salamandre ; Poudre interne qui lui permettra de fonctionner de manière de pieuvre autonome. Génère un gaz qui provoque la suffocation de celui ou celle qui le respire Effets : Semblables à l’asphyxie ; mais au lieu de subir des dégâts, la personne tombe dans le coma en cas d’échec au jet de sauvegarde.</p>"
-        },
-        "po4009Gazetrangl": {
-          "name": "Gaz étrangleur",
-          "description": "<p>Durée des effets : Le gaz persiste durant 2d4+2 rounds de valériane ; Tentacule de strangulot Zone : Dôme de 3m de rayon puis +1,5m d’extension tous les rounds jusqu’à 12m Durée des effets secondaires : 1d6+1 heures Remarque : La sensation en le respirant est identique à celle de se faire étrangler d’où le nom du gaz. Cette potion améliore la vue de celui qui le boit. Effet : Perception (vue) = PERx6. Corne de licorne ; Eau de source ;</p>"
-        },
-        "po4010Morsuresde": {
-          "name": "morsures de",
-          "description": "<p>suffisamment tôt, celle-ci pourrait également empêcher la</p>"
-        },
-        "po4011Occulus": {
-          "name": "Occulus",
-          "description": "<p>Remarque : Cette potion permet de neutraliser les effets du d’absinthe ; Mandragore cuite liquéfiée sortilège de Conjonctivite. Cette potion fait tomber amoureux de la première personne Épine de rose ; Menthe poivrée ; Œuf de</p>"
-        },
-        "po4012Potionlaxa": {
-          "name": "Potion laxative",
-          "description": "<p>minutes après sa consommation Mauve douce VIRulence : 12 Provoque de violentes douleurs, un refroidissement du corps et des convulsions Effet : Intense sensation de froid (1d4-2 dégâts non-létaux), convulsions</p>"
-        },
-        "po4013PotionNo": {
-          "name": "Potion No. 86",
-          "description": "<p>Effets secondaires : Faiblesse intense (malus de 50% à toutes ses actions) Durée : 2d6+3 minutes / 1d6+1 heures VIRulence : 12 Corne de licorne ; Cristal de roche en Cette potion soigne les effets de la Dragoncelle</p>"
-        },
-        "po5004Babillage": {
-          "name": "Babillage",
-          "description": "<p>Effet : -50% dans les compétences liées à la parole Durée : 1d4 heure(s). Appliqué sur des blessures, ce baume diminue considérablement la douleur et double le regain de points de</p>"
-        },
-        "po5005Champignon": {
-          "name": "champignons",
-          "description": "<p>Temps d’incubation : 1d6 minutes VIRulence : 18 Durée : 2d4+2 heures / - Cette potion n’a pas d’effet particulier si ce n’est qu’elle permet de combiner les effets de différentes potions et sorts</p>"
-        },
-        "po5006Combinaiso": {
-          "name": "Combinaison",
-          "description": "<p>Effet secondaire : de nouveaux effets aléatoires peuvent rouge apparaître. Brin de valériane ; Cervelle de crapaud ; Cette potion permet de stocker un filament de Pensine ou Coprin narcotique ; Fèves</p>"
-        },
-        "po5007Conscience": {
-          "name": "Conscience",
-          "description": "<p>sopophoriques ; Eau de fleuve</p>"
-        },
-        "po5008Damnesiedu": {
-          "name": "d'amnésie du Dr",
-          "description": "<p>contrer les effets des attaques magiques sur l’esprit.</p>"
-        },
-        "po5009Essencedef": {
-          "name": "Essence de folie",
-          "description": "<p>Effet secondaire : Comportement erratique et chaotique. Plume de Focifère Prise de décisions illogiques voir dangereuses Durée : 2d4+2 heures. Cette potion, qu’il faut presque six mois pour fabriquer, donne une chance extraordinaire aux personnes qui la Essence de</p>"
-        },
-        "po6001Panacee": {
-          "name": "Panacée",
-          "description": "<p>la vie de celui qui la consomme.</p>"
-        },
-        "po6002Potentiela": {
-          "name": "Potentiel-absolu",
-          "description": "<p>à 001-010 et chaque jet se fait comme si un point de fougue Tomatagoria avait été employé (possibilité d’inverser le résultat du dé) sans les effets en cas d’échec. Durée : 1 heure Une potion qui permet de se prémunir contre le brasier pourpre et de le traverser sans dommages. Le Sorcier ayant Champignon explosif ; Sang de lancé le sortilège de brasier pourpre doit lancer le sortilège</p>"
-        }
+    "Wound": {
+      "Dealt": "Dégâts appliqués",
+      "ArmorAbsorbed": "L'armure absorbe {armor} — {dealt} passent.",
+      "Death": "Tombé à 0 point de vie : mort instantanée (§1.8.3).",
+      "DeathWhileUnconscious": "Blessé alors qu'il était inconscient : mort sur le coup (§1.10.2).",
+      "SeriousWound": "blessure grave",
+      "Agony": "agonie",
+      "Staggered": "Chancelant : ne peut faire que quelques pas ce round (§1.10.2).",
+      "Unconscious": "Inconscient et sans défense (§1.10.2).",
+      "RollCon": "Jet CON×{mult} ({reason})",
+      "SaveSuccess": "Réussite : le personnage encaisse le choc.",
+      "SaveFailure": "Échec : inconscient pendant {duration} {unit}.",
+      "KnockoutClassic": "Table de résistance : {dealt} dégâts contre {hp} PV restants → seuil {target} %, dé {roll}.",
+      "KnockoutThreshold": "Seuil de {pct} % des PV atteint ({dealt} dégâts).",
+      "KnockoutSave": "assommement",
+      "KnockoutNoThreshold": "Dégâts insuffisants pour assommer la cible.",
+      "KnockedOut": "Assommé.",
+      "KnockoutResisted": "La cible reste consciente.",
+      "KnockoutThirdDamage": "Au réveil, la victime n'aura encaissé qu'1/3 des dégâts.",
+      "Unit": {
+        "minutes": "minutes",
+        "hours": "heures"
       }
+    },
+    "Recovery": {
+      "Title": "Récupération hebdomadaire",
+      "Mode": "Conditions de repos",
+      "Alone": "Livré à lui-même",
+      "BedRest": "Alité, sans activité",
+      "Hospital": "Hôpital / infirmerie",
+      "Chocolate": "Chocolat (double la récupération, +1 au dé)",
+      "Roll": "Lancer",
+      "Result": "Points de vie",
+      "ChocolateApplied": "(+1, doublé)",
+      "CappedAtMax": "Plafonné au total initial de points de vie."
+    },
+    "Combat": {
+      "Phase": {
+        "First": "1re phase — projectiles, lâcher un objet",
+        "Second": "2e phase — mêlée, sortilèges, déplacement, esquive/parade",
+        "Third": "3e phase — dégainer, fouiller, entrer en combat"
+      },
+      "PhaseHint": "Clic : phase suivante · Alt+clic : pris par surprise",
+      "Surprised": "Pris par surprise",
+      "RerollFlavor": "Nouveau round — initiative relancée"
+    },
+    "Reaction": {
+      "Label": "Réactions",
+      "Dodge": "Esquive",
+      "Parry": "Parade",
+      "DodgeHint": "Esquiver — interdit d'attaquer ce round (§2.5.1)",
+      "ParryHint": "Parer — une seule fois par round, mêlée uniquement (§2.5.2)",
+      "ParrySkill": "Compétence d'attaque utilisée",
+      "DodgeNoAttack": "Un personnage qui esquive ne peut pas attaquer ce round.",
+      "MeleeOnly": "La parade ne vaut qu'au corps à corps.",
+      "NotVsSpells": "On ne peut ni parer ni esquiver un sortilège.",
+      "AlreadyParried": "Déjà paré ce round : une seule parade est autorisée.",
+      "NoDodgeSkill": "Aucune compétence « Esquive » sur cette fiche.",
+      "NoParrySkill": "Aucune compétence d'attaque utilisable pour parer.",
+      "ShieldNote": "Bouclier : +{bonus} % à la parade, −{bonus} % à l'attaque."
+    },
+    "Hybrid": {
+      "Capability": {
+        "Anonymity": "Anonymat",
+        "Wandless": "Magie sans baguette",
+        "AlertStealth": "Vigilance et Discrétion améliorées",
+        "AlertOrStealth": "Vigilance ou Discrétion améliorée",
+        "MagicalWeakness": "Faiblesse magique",
+        "Yumboe": "Descendance Yumboe",
+        "ResurgentChoice": "Capacité résurgente au choix",
+        "Athletics": "Athlétisme",
+        "GiantTongue": "Langue des géants",
+        "MagicResistance": "Résistance à la magie",
+        "SpellEffectsHalved": "Effets des sorts réduits de moitié",
+        "SpellEffectsThird": "Effets des sorts réduits au tiers",
+        "SpellEffectsQuarter": "Effets des sorts réduits au quart",
+        "PermanentToVariable": "Sorts permanents rendus temporaires",
+        "StupefyCount": "Nombre de Stupéfix nécessaires",
+        "Impatience": "Impatience",
+        "PotionInefficacy": "Inefficacité des potions humaines",
+        "PoorEyesight": "Mauvaise vue",
+        "GoblinCraftAll": "Artisanat, Connaissance et Gobelbabil",
+        "GoblinCraftOne": "Artisanat, Connaissance ou Gobelbabil",
+        "Affinity": "Affinité gobeline",
+        "Charms": "Enchantements",
+        "NaturalWeaponBite": "Armes naturelles (morsure)",
+        "ProminentTeeth": "Dents proéminentes",
+        "StrengthSurge": "Augmentation de force",
+        "Endurance": "Endurance supérieure",
+        "Heritage": "Héritage",
+        "BodyOdour": "Odeur corporelle",
+        "Sweating": "Sudation",
+        "BodyOdourOrSweating": "Odeur corporelle ou sudation",
+        "Fascination": "Fascination",
+        "ClawAndBite": "Griffe et morsure",
+        "BiteOnly": "Morsure",
+        "Longevity": "Longévité",
+        "VampiricBite": "Morsure vampirique",
+        "BloodSense": "Perception du sang",
+        "PoisonResistance": "Résistance aux poisons",
+        "SunGarlicStrong": "Faiblesse forte (soleil, ail)",
+        "SunGarlicLight": "Faiblesse légère (soleil, ail)",
+        "SunGarlicMild": "Léger inconfort (soleil, ail)",
+        "BloodPower": "Pouvoir du sang",
+        "Dance": "Danse",
+        "FireAffinity": "Affinité au feu",
+        "SeductionDance": "Danse de séduction",
+        "HypnoticFascination": "Fascination hypnotique",
+        "Choleric": "Colérique"
+      },
+      "Race": {
+        "Elf": "Elfe",
+        "Giant": "Géant",
+        "Goblin": "Gobelin",
+        "Troll": "Troll",
+        "Vampire": "Vampire",
+        "Veela": "Vélane"
+      },
+      "Generation": {
+        "Half": "Première génération",
+        "Quarter": "Deuxième génération",
+        "Eighth": "Troisième génération",
+        "Fate": "Croche-patte du Destin",
+        "Resurgent": "Résurgent",
+        "Label": "Génération"
+      },
+      "Title": "Ascendance hybride",
+      "Ancestor": "Ancêtre magique",
+      "None": "Aucune (Sorcier classique)",
+      "Cost": "Coût",
+      "PickBonus": "Bonus au choix",
+      "PickMalus": "Malus au choix",
+      "PickCapability": "Capacité au choix",
+      "StatTooltip": "Ajustement dû à l'ascendance hybride",
+      "Chosen": "Choisi : {option}",
+      "BookValue": "Valeur du livre"
+    },
+    "Errors": {
+      "LinkSelf": "Un acteur ne peut pas être lié à lui-même.",
+      "LinkFamiliar": "Seuls les familiers peuvent être liés à un personnage.",
+      "LinkFailed": "Échec de la liaison du familier.",
+      "CreateFamiliar": "Échec de la création du familier."
     }
   }
 }

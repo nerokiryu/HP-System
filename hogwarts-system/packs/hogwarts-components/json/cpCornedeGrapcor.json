@@ -1,0 +1,13 @@
+{
+  "_id": "cpCornedeGrapcor",
+  "name": "Corne de Grapcorne",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Elle entre dans la composition de nombreuses potions, bien qu’elle soit d’un prix très élevé en raison de la difficulté que représente la capture de l’animal.</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Antidote aux poisons rares\nNeutralisation",
+    "otherUses": ""
+  }
+}

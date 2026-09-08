@@ -1,0 +1,69 @@
+{
+  "_id": "crDetraqueur0000",
+  "name": "Detraqueur",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 0,
+      "max": 0
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 0
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "",
+    "stats": {
+      "str": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "con": {
+        "value": 10,
+        "formula": "0"
+      },
+      "siz": {
+        "value": 15,
+        "formula": "2d6+6"
+      },
+      "dex": {
+        "value": 14,
+        "formula": "3d6+3"
+      },
+      "int": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "pow": {
+        "value": 17,
+        "formula": "3d6+6"
+      },
+      "app": {
+        "value": 14,
+        "formula": "3d6+3"
+      },
+      "per": {
+        "value": 15,
+        "formula": "2d6+6"
+      }
+    },
+    "movement": {
+      "land": 10,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "40% Absorption",
+    "skills": "Acrobatie : 35% ; Discrétion 60% ; Empathie : 10% ; Esquive : 50% ; Orientation : 35% ; Survie : 40% ; Vigilance : 55%",
+    "powers": "<p>Absorption (bonheur) : Quand il se trouve à portée de contact de sa cible, un Détraqueur peut effectuer un jet de combat pour se nourrir. Il prend alors une longue et lente inspiration qui produit une sorte de râle qui absorbe toute la joie de sa proie. Si on lui en donne le temps, un Détraqueur se nourrira jusqu'à réduire sa proie à quelque chose qui lui ressemble : un être maléfique, dépourvu d'âme. Une personne qui subit son pouvoir ne garde plus en mémoire que les pires moments de sa vie durant POUvoir du Détraqueur heures. Cet état de tristesse se manifeste par une sorte d’apathie et de résignation, qui se traduit par un malus à toutes les actions de 25%. Le chocolat est un excellent remède contre le malaise que provoquent les Détraqueurs, même si son effet n'est que passager et qu’il doit être consommé toutes les heures jusqu’à ce qu’ils ne cessent. Amortalité : Comme tous les Non-Êtres, les Détraqueurs sont considérés comme amortels, ce qui signifie qu’ils n’ont jamais été vivants et qu’ils ne peuvent pas mourir de mort naturelle. Ils peuvent cependant être détruits ou conjurés par d’autres méthodes magiques. Annihilation (magie) : Un contact prolongé avec un ou plusieurs Détraqueurs peut annihiler les d’un Sorcier. Aura de tristesse : Quand une personne s'approche à une distance équivalente ou inférieure à celle de la valeur de POUvoir d'un Détraqueur, toute sensation de plaisir, tout souvenir heureux disparaît. Opposition (POUxPOU). Une personne subissant l’aura de tristesse d’un Détraqueur subit un malus de 10% à toutes ses actions. Toute personne entrant dans l’aura d’un</p>",
+    "notes": ""
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "_id": "crSerpencendre00",
+  "name": "Serpencendre",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>Les œufs gelés sont utilisés comme ingrédients de potion. Ils entrent dans la composition des filtres d'amour et du Felix Felicis. Ils représentent également un excellent remède contre la fièvre.</p>",
+    "health": {
+      "value": 4,
+      "max": 4
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 4
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXX",
+    "stats": {
+      "str": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "con": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "siz": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "dex": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "int": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "pow": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "app": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "per": {
+        "value": 7,
+        "formula": "2d6"
+      }
+    },
+    "movement": {
+      "land": 5,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Morsure 25% (1)",
+    "skills": "Acrobatie : 70%, Athlétisme : 50% ; Discrétion : 80%; Esquive : 40% ; Orientation : 5% ; Survie : 5% ; Vigilance : 40%",
+    "powers": "<p>Cendres : Quand il se déplace, le Serpencendre laisse une traînée de cendres derrière lui qu’un jet de PERx5 permet facilement de repérer. Éphémère : Le Serpencendre ne vit pas plus d’une heure. Une fois cette heure passée, il tombe en cendres.</p>",
+    "notes": ""
+  }
+}

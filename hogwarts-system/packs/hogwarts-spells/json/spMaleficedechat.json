@@ -1,0 +1,19 @@
+{
+  "_id": "spMaleficedechat",
+  "name": "Maléfice de chatouille",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Fait apparaître des mains fantomatiques qui chatouillent la victime durant de longues minutes.</p><p>Effet principal : inflige un malus de 60 % à toute ses actions, y compris le lancement de sorts.</p><p>Effets secondaire : cause 2 dégâts non-létaux dus à l’épuisement et de l’essoufflement</p><p>Durée : Variable (minutes)</p><p>Formule extrême : Malus de 70% et dégâts létaux = 3</p>",
+    "spellLevel": 4,
+    "spellType": "S",
+    "target": [
+      "P"
+    ],
+    "incantation": "Titillando",
+    "malus": -40,
+    "extremeFormula": true,
+    "malusExtremeFormula": -50,
+    "malusMastered": -30
+  }
+}

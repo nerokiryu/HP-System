@@ -1,0 +1,19 @@
+{
+  "_id": "spRalentissement",
+  "name": "Ralentissement",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Ralentit les déplacements de petites créatures (120 cm au maximum) pendant 1d4+1 rounds. Déplacements (vol, nage ou marche) divisé par 2. (Opposition : POU/DEX)</p><p>Formule extrême : durée 2d4+2 rounds et vitesse divisée par 3</p>",
+    "spellLevel": 1,
+    "spellType": "S",
+    "target": [
+      "A"
+    ],
+    "incantation": "Leniter",
+    "malus": -15,
+    "extremeFormula": true,
+    "malusExtremeFormula": -25,
+    "malusMastered": -5
+  }
+}

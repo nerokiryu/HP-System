@@ -1,0 +1,13 @@
+{
+  "_id": "cpCarapacedePagu",
+  "name": "Carapace de Pagure",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une carapace abandonnée de pagure, également connu sous le nom de bernard-l’hermite.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Cirassure",
+    "otherUses": "-"
+  }
+}

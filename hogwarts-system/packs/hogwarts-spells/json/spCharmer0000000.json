@@ -1,0 +1,19 @@
+{
+  "_id": "spCharmer0000000",
+  "name": "Charmer",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Charme une cible et la rend amoureuse de soi durant 1d6+1 rounds. Le sort ne peut plus être lancé pendant une période équivalente à celle passée sous le charme. (Opposition : APP/POU)</p><p>Formule extrême : durée 2d6+2</p>",
+    "spellLevel": 2,
+    "spellType": "E",
+    "target": [
+      "P"
+    ],
+    "incantation": "Delecto",
+    "malus": -20,
+    "extremeFormula": true,
+    "malusExtremeFormula": -30,
+    "malusMastered": -10
+  }
+}

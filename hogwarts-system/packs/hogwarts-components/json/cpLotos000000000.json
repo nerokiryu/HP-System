@@ -1,0 +1,13 @@
+{
+  "_id": "cpLotos000000000",
+  "name": "Lotos",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Arbuste des pays arides dont le fruit ressemble à une baie au goût de datte. Cette plante possède de solides propriétés narcotiques et on lui prête la capacité à faire oublier certains évènements quand elle est consommée.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Onguent d’amnésie du Dr Oubbly\nPotion d’ataraxie\nSommeil sans rêve",
+    "otherUses": "• Propriété narcotiques"
+  }
+}

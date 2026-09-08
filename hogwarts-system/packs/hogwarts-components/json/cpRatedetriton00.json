@@ -1,0 +1,13 @@
+{
+  "_id": "cpRatedetriton00",
+  "name": "Rate de triton",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>La rate qui provient de tritons, de petites créatures qui ressemblent à des salamandres.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Aiguise-Méninges\nPotion de vieillissement",
+    "otherUses": "-"
+  }
+}

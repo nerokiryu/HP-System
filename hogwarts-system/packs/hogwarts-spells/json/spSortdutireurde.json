@@ -1,0 +1,20 @@
+{
+  "_id": "spSortdutireurde",
+  "name": "Sort du tireur de flèche",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Conjure une flèche partant de la baguette du lanceur. Populaire parmi les supporters des Flèches d’Appleby mais interdit lors de manifestation de Quidditch. (Opposition : POUxDEX)</p><p>Effet : Perte de 1d4-1 points de vie.</p><p>Formule extrême : -</p>",
+    "spellLevel": 3,
+    "spellType": "M",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "Sagita lorem",
+    "malus": -40,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

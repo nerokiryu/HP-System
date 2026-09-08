@@ -8,6 +8,25 @@
       <i class='fas fa-arrows-alt-h'></i> {{localize 'HOGWARTS.Roll.Opposition.Title'}}
     </a>
   </div>
+
+  {{#if (eq actor.type 'character')}}
+  <div class='skill-actions flexrow school-xp-actions'>
+    <a class='rollable' data-action='schoolTermXP' data-tooltip='{{localize "HOGWARTS.Roll.XP.TermHint"}}'>
+      <i class='fas fa-book'></i> {{localize 'HOGWARTS.Roll.XP.TermShort'}}
+      <span class='term-counter'>{{schoolProgress}}</span>
+    </a>
+    <a class='rollable' data-action='yearEndXP' data-tooltip='{{localize "HOGWARTS.Roll.XP.YearEndHint"}}'>
+      <i class='fas fa-award'></i> {{localize 'HOGWARTS.Roll.XP.YearEnd'}}
+    </a>
+    <a class='rollable' data-action='holidayXP' data-tooltip='{{localize "HOGWARTS.Roll.XP.HolidayHint"}}'>
+      <i class='fas fa-umbrella-beach'></i> {{localize 'HOGWARTS.Roll.XP.Holiday'}}
+    </a>
+    <a class='rollable xp-pool {{#unless system.experience.pool}}empty{{/unless}}'
+       data-action='spendPool' data-tooltip='{{localize "HOGWARTS.Roll.XP.SpendHintShort"}}'>
+      <i class='fas fa-percent'></i> {{localize 'HOGWARTS.Roll.XP.Pool'}}: {{system.experience.pool}}
+    </a>
+  </div>
+  {{/if}}
   {{! General }}
   <div class='skill-category'>
     <h3 class='collapsible' data-action='toggleSkillCategory' data-category='general'>
@@ -271,12 +290,18 @@
         <div class='item-prop'>
           <input type='number' name='system.skills.{{row.index}}.base' value='{{row.entry.base}}' data-dtype='Number' />
         </div>
-        <div class='item-prop'>
-          {{#if (eq row.entry.category 'school')}}
-            {{row.entry.max}}
-          {{else}}
+        <div class='item-prop skill-max-cell'>
+          {{#if row.entry.maxOverride}}
             <input type='number' name='system.skills.{{row.index}}.max' value='{{row.entry.max}}' data-dtype='Number' />
+          {{else}}
+            {{row.entry.max}}
           {{/if}}
+          <a class='item-control skill-max-toggle'
+             data-action='toggleSkillMaxAuto'
+             data-index='{{row.index}}'
+             data-tooltip='{{#if row.entry.maxOverride}}{{localize "HOGWARTS.Skills.MaxAuto.Restore"}}{{else}}{{localize "HOGWARTS.Skills.MaxAuto.Override"}}{{/if}}'>
+            <i class='fas {{#if row.entry.maxOverride}}fa-pen{{else}}fa-graduation-cap{{/if}}'></i>
+          </a>
         </div>
         <div class='item-prop'>
           <input type='number'

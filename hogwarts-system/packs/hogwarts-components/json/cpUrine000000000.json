@@ -1,0 +1,13 @@
+{
+  "_id": "cpUrine000000000",
+  "name": "Urine",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Déchet produit par le corps qui entrerait dans la composition de la Panacée</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Panacée",
+    "otherUses": "-"
+  }
+}

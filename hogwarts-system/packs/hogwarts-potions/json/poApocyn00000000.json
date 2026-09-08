@@ -1,0 +1,21 @@
+{
+  "_id": "poApocyn00000000",
+  "name": "Apocyn",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Poison pour animaux magiques ou non qui provoque de violentes douleurs tout en leur faisant perdre 1d4 points de vie.</p><p>VIRulence : 9</p><p>Remarque : Mal préparée, l’Apocyn peut devenir mortelle.</p>",
+    "potionLevel": 3,
+    "malus": -30,
+    "target": "A",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Apocyn",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

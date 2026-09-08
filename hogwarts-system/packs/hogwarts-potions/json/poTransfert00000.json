@@ -1,0 +1,57 @@
+{
+  "_id": "poTransfert00000",
+  "name": "Transfert",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Cette potion rouge qui semble tourbillonner dans sa fiole sert de liant entre une potion de duplication et un élément qu’on désire enchanter. Celle-ci permet de transférer les effets de la potion de duplication vers un animal, un objet ou une plante afin qu’il acquière ceux-ci. Combiné avec une potion d’énergie magique et de combinaison, ce transfert devient permanent.</p><p>Remarque : Attention cependant, les transferts vers les êtres vivants peuvent avoir des effets aléatoires difficiles à prévoir.</p>",
+    "potionLevel": 4,
+    "malus": -40,
+    "target": "A/O/V",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Cire",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Carapace de Cisburine",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Huile de Neem",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Huile de ricin",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Huile de rose",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Résine",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Sang de salamandre",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

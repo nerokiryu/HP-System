@@ -1,0 +1,13 @@
+{
+  "_id": "cpCrochetsdeserp",
+  "name": "Crochets de serpent",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Les crocs de serpent, lorsqu’ils sont écrasés, sont un ingrédient utilisé dans la préparation de certaines potions. Cet ingrédient commun ne doit pas être récolté sur des serpents venimeux.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Anti-Furoncles\nPotion de l’Œil Vif\nPotion de puissance",
+    "otherUses": "-"
+  }
+}

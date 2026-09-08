@@ -1,0 +1,21 @@
+{
+  "_id": "poBaumedespaquer",
+  "name": "Baume des pâquerettes",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Appliqué sur des blessures, ce baume diminue considérablement la douleur et double le regain de points de vie quand le personnage est au repos. Doit être appliqué quotidiennement.</p>",
+    "potionLevel": 5,
+    "malus": -50,
+    "target": "A/P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Pâquerette",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

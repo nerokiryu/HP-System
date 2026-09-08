@@ -1,0 +1,19 @@
+{
+  "_id": "spRetournetemps0",
+  "name": "Retourne-temps",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Enchantement permettant de remonter le temps de quelques heures.</p><p>Les Retourneurs de Temps conçus au ministère de la Magie contiennent plusieurs de ces sortilèges</p>",
+    "spellLevel": 6,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "",
+    "malus": -100,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

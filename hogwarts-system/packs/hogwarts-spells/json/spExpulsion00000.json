@@ -1,0 +1,22 @@
+{
+  "_id": "spExpulsion00000",
+  "name": "Expulsion",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Provoque une violente explosion qui endommage les objets et peut causer de graves blessures aux êtres vivants. Possède suffisamment de puissance pour faire traverser à mur à une personne. Détruit les petits objets et endommage les grands. Cause 1d4+1 dégâts à un être vivant.</p><p>Sous-type : Maléfice</p><p>Durée : -</p><p>Formule extrême : -</p>",
+    "spellLevel": 5,
+    "spellType": "S",
+    "target": [
+      "A",
+      "O",
+      "P",
+      "V"
+    ],
+    "incantation": "Expulso",
+    "malus": -55,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

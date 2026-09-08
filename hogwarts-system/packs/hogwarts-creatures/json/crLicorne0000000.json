@@ -1,0 +1,69 @@
+{
+  "_id": "crLicorne0000000",
+  "name": "Licorne",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 23,
+      "max": 23
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 23
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "",
+    "stats": {
+      "str": {
+        "value": 17,
+        "formula": "2d6+10"
+      },
+      "con": {
+        "value": 17,
+        "formula": "3d6+6"
+      },
+      "siz": {
+        "value": 28,
+        "formula": "4d6+14"
+      },
+      "dex": {
+        "value": 13,
+        "formula": "3d6+2"
+      },
+      "int": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "pow": {
+        "value": 15,
+        "formula": "3d6+4"
+      },
+      "app": {
+        "value": 30,
+        "formula": "4d6+16"
+      },
+      "per": {
+        "value": 20,
+        "formula": "4d6+6"
+      }
+    },
+    "movement": {
+      "land": 15,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 4
+    },
+    "attacks": "Sabots 35% (3d6)",
+    "skills": "Acrobatie : 55 ; Athlétisme : 50% ; Discrétion : 65%; Esquive : 40%, Orientation : 30% ; Survie : 40% ; Vigilance : 55%",
+    "powers": "",
+    "notes": ""
+  }
+}

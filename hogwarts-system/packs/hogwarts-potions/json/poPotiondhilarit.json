@@ -1,0 +1,51 @@
+{
+  "_id": "poPotiondhilarit",
+  "name": "Potion d’hilarité",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Provoque une forte hystérie chez la personne qui la consomme qui peut durer jusqu’à une journée complète.</p><p>Effet : -50% à toutes les actions.</p><p>Effets secondaires : sauts émotionnels et développement de phobies.</p><p>Durée : 4d6 heures.</p><p>Remarque : quand elle est mal préparée, les effets peuvent varier d’une folie hystérique à une profonde et inconsolable mélancolie</p>",
+    "potionLevel": 4,
+    "malus": -40,
+    "target": "A/P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Ailes de Billywig",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Eau de source",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Feuille d’Alihotsy",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Piquant de noueux",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Poils de Boursouf",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Poudre de raifort Spécial : des rires",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

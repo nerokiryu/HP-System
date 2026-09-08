@@ -1,0 +1,13 @@
+{
+  "_id": "cpCalicedelamort",
+  "name": "Calice de la mort",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Un champignon très toxique que l’on trouve principalement en Europe.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Philtre de Calice de la Mort",
+    "otherUses": "• Poison si consommé"
+  }
+}

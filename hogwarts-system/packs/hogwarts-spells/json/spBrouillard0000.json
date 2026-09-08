@@ -1,0 +1,19 @@
+{
+  "_id": "spBrouillard0000",
+  "name": "Brouillard",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Fait sortir du brouillard par l’extrémité de la baguette permettant de se camoufler.</p><p>Zone : Ce brouillard se répand sur POUx2 mètres de rayon. Durée :</p><p>Variable (heures).</p><p>Effets : Observation = PERceptionx2</p><p>Formule extrême : Zone : POUx3 mètres de rayon. Durée : Variable (heures +2). Effets : Observation = PERceptionx1</p>",
+    "spellLevel": 2,
+    "spellType": "E",
+    "target": [
+      "X"
+    ],
+    "incantation": "Nebulus",
+    "malus": -20,
+    "extremeFormula": true,
+    "malusExtremeFormula": -20,
+    "malusMastered": -10
+  }
+}

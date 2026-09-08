@@ -1,0 +1,69 @@
+{
+  "_id": "crGrapcorne00000",
+  "name": "Grapcorne",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 24,
+      "max": 24
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 24
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXX",
+    "stats": {
+      "str": {
+        "value": 28,
+        "formula": "5d6+10"
+      },
+      "con": {
+        "value": 18,
+        "formula": "5d6"
+      },
+      "siz": {
+        "value": 30,
+        "formula": "4d6+16"
+      },
+      "dex": {
+        "value": 19,
+        "formula": "4d6+5"
+      },
+      "int": {
+        "value": 15,
+        "formula": "3d6+4"
+      },
+      "pow": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "app": {
+        "value": 17,
+        "formula": "2d6+10"
+      },
+      "per": {
+        "value": 16,
+        "formula": "4d6+2"
+      }
+    },
+    "movement": {
+      "land": 18,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 15
+    },
+    "attacks": "Cornes: 60% (4d6) Griffes : 60% (2d6) Morsure : 60% (3d6)",
+    "skills": "Acrobatie : 65% ; Athlétisme : 75% ; Esquive : 15% ; Discrétion : 30% ; Orientation : 55% ; Pistage : 70% ; Survie : 60% ; Vigilance : 65%",
+    "powers": "<p>Agressivité : Un Grapcorne ne peut s’empêcher d’attaquer toute créature qui croise sa route et qu’il considère automatiquement comme une proie ou comme une menace. Quand il est en présence d'une proie ou d'un adversaire potentiel, le Grapcorne doit réussir un jet de POUx1 pour ne pas attaquer la proie. Quand il est confronté à plus puissant que lui, le Grapcorne peut cependant momentanément laisser de côté son agressivité et « jouer » à l’animal domestique le temps qu’une opportunité de contrattaquer se présente. Athlétisme : Le Grapcorne possède des capacités physiques extraordinaires. En règle générale, les jets d’Athlétisme de difficulté normale et moyenne que le Grapcorne doit effectuer sont considérés comme réussis automatiquement. Les jets d’Athlétisme classés comme difficiles sont à considérer comme moyens. Grande endurance : Le Grapcorne fait partie des créatures les plus endurantes connues. Capable de courir durant des heures, voire même des jours sans même être essoufflé ni ressentir la moindre fatigue physique. Guérison : Les pouvoirs de guérison des Grapcornes sont bien supérieurs à la moyenne. Quand il est blessé, le corps du Grapcorne se régénère magiquement pour soigner les blessures subies. Cela se traduit par une régénération de 1 point de vie par jour et par une vitesse de régénération des points de vie en cas de repos doublée par rapport à une créature classique. Peau épaisse : La peau du Grapcorne est très épaisse et le protège de la majeure partie des dégâts qu’on pourrait lui occasionner, comme celle des dragons. Cependant, celle-ci possède également un effet qu’on pourrait qualifier de dissipatif pour les sortilèges. Tout sortilège lancé avec succès sur un Grapcorne aura automatiquement 80% de chances d’échouer en étant arrêté par cette peau épaisse. Quand un sortilège est lancé sur le Grapcorne, lancer un d100. Si le résultat se situe entre 021 et 000 – bornes comprises – alors le sort est sans effet. Dans le cas d’une réussite, diminuer l’effet du sortilège de moitié (temps, effets, etc.). Les sortilèges à durée permanente deviennent des sortilèges à durée variable (minutes). Pistage : Le Grapcorne est capable de suivre une piste repérée par un jet de PERception.</p>",
+    "notes": ""
+  }
+}

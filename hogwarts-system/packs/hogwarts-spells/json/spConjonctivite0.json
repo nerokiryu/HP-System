@@ -1,0 +1,20 @@
+{
+  "_id": "spConjonctivite0",
+  "name": "Conjonctivite",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>La cible voit ses yeux se couvrir de croûtes et devenir rouges.</p><p>Effets : Jet de PERception (vue) = PERx1 au lieu de PERx5.</p><p>Remarque : Particulièrement efficace sur les dragons.</p><p>Sous-type : Maléfice</p><p>Durée : -</p><p>Soins : Antidote : potion Oculus</p><p>Formule extrême : -</p>",
+    "spellLevel": 2,
+    "spellType": "S",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "Conjonctivitis",
+    "malus": -30,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

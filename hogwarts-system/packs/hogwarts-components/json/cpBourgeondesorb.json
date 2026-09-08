@@ -1,0 +1,13 @@
+{
+  "_id": "cpBourgeondesorb",
+  "name": "Bourgeon de sorbier",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des bourgeons de feuille de sorbier qui possèdent un effet augmentant la régénération sanguine.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Potion de restauration n°1\nPotion de restauration n°2\nPotion de restauration n°3\nRégénération sanguine",
+    "otherUses": "-"
+  }
+}

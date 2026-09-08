@@ -1,0 +1,20 @@
+{
+  "_id": "spCopieillusoire",
+  "name": "Copie illusoire",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Quand il est lancé, ce sort copie une personne ou un animal pour en créer une copie conforme mais qui n’est en réalité qu’une illusion. Celle- ci peut être envoyée à une distance maximale de POUvoir x 10 mètres avant de se dissiper. Pour percer cette illusion, un jet de PERception x1 doit être effectué.</p><p>Durée : variable (heures)</p><p>Formule extrême : Distance POUvoir x25 mètres</p>",
+    "spellLevel": 3,
+    "spellType": "E",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "",
+    "malus": -20,
+    "extremeFormula": true,
+    "malusExtremeFormula": -30,
+    "malusMastered": -10
+  }
+}

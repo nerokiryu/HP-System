@@ -1,0 +1,69 @@
+{
+  "_id": "crBicorne0000000",
+  "name": "Bicorne",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>Cornes de Bicornes : Les cornes de Bicorne entrent dans la composition du Polynectar. Les Bicornes perdent leurs cornes une fois par an.</p>",
+    "health": {
+      "value": 15,
+      "max": 15
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 15
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXX",
+    "stats": {
+      "str": {
+        "value": 18,
+        "formula": "3d6+7"
+      },
+      "con": {
+        "value": 13,
+        "formula": "3d6+2"
+      },
+      "siz": {
+        "value": 17,
+        "formula": "3d6+6"
+      },
+      "dex": {
+        "value": 12,
+        "formula": "2d6+5"
+      },
+      "int": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "pow": {
+        "value": 13,
+        "formula": "3d6+2"
+      },
+      "app": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "per": {
+        "value": 13,
+        "formula": "2d6+6"
+      }
+    },
+    "movement": {
+      "land": 13,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 2
+    },
+    "attacks": "Morsure 40% 2d6 Cornes : 50% 2d4",
+    "skills": "Acrobatie : 55% ; Athlétisme : 50% ; Discrétion 30% ; Esquive : 30% ; Fouille : 20% ; Orientation : 40% ; Psychologie : 10% ; Survie : 35% ; Vigilance : 50%(+20%)",
+    "powers": "<p>Grande endurance : Le Bicorne fait partie des créatures les plus endurantes connues. Il est d’ailleurs capable de courir durant des heures, voire même des jours sans même être essoufflé ni ressentir la moindre fatigue physique. Guérison : Les pouvoirs de guérison des Bicornes sont bien supérieurs à la moyenne. Quand il est blessé, le corps du Bicorne se régénère magiquement pour soigner les blessures subies. Cela se traduit par une régénération de 1 point de vie par jour et par une vitesse de régénération des</p>",
+    "notes": ""
+  }
+}

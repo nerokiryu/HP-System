@@ -1,0 +1,69 @@
+{
+  "_id": "crDirico00000000",
+  "name": "Dirico",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>-</p>",
+    "health": {
+      "value": 8,
+      "max": 8
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 8
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XX",
+    "stats": {
+      "str": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "con": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "siz": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "dex": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "int": {
+        "value": 5,
+        "formula": "2d4"
+      },
+      "pow": {
+        "value": 14,
+        "formula": "3d6+3"
+      },
+      "app": {
+        "value": 5,
+        "formula": "2d4"
+      },
+      "per": {
+        "value": 13,
+        "formula": "3d6+2"
+      }
+    },
+    "movement": {
+      "land": 6,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Bec :15% (1)",
+    "skills": "Acrobatie : 15% ; Athlétisme : 15% ; Discrétion 65% ; Esquive : 30% ; Orientation : 40% ; Survie : 15% ; Vigilance : 60%",
+    "powers": "<p>Téléportation : Le Dirico possède la capacité magique de se téléporter en lieu sûr quand il se sent en danger. Cette téléportation peut aller de quelques mètres à plusieurs milliers de kilomètres.</p>",
+    "notes": ""
+  }
+}

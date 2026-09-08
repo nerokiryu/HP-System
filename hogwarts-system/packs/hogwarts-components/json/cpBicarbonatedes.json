@@ -1,0 +1,13 @@
+{
+  "_id": "cpBicarbonatedes",
+  "name": "Bicarbonate de soude",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Composé chimique inorganique se présentant sous la forme d’une poudre blanche</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Brume opaque\nGlue",
+    "otherUses": "• Digestif • Détergeant"
+  }
+}

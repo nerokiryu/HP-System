@@ -8,18 +8,20 @@
   <div class='resource'>
     <label class='resource-label'>{{localize 'HOGWARTS.Item.Spell.FIELDS.level.label'}}</label>
     <input
-      type='text'
+      type='number'
       name='system.spellLevel'
       value='{{system.spellLevel}}'
+      min='0' step='1'
       data-dtype='Number'
     />
   </div>
   <div class='resource'>
     <label class='resource-label'>{{localize 'HOGWARTS.Item.Spell.FIELDS.malus.label'}}</label>
     <input
-      type='text'
+      type='number'
       name='system.malus'
       value='{{system.malus}}'
+      step='1'
       data-dtype='Number'
     />
   </div>
@@ -61,22 +63,41 @@
     />
   </div>
   <div class='resource'>
-    <label class='resource-label'>{{localize 'HOGWARTS.Item.Spell.FIELDS.malusExtremeFormula.label'}}</label>
+    <label class='resource-label'>{{localize 'HOGWARTS.Item.Spell.FIELDS.extremeFormula.label'}}</label>
     <input
-      type='text'
-      name='system.malusExtremeFormula'
-      value='{{system.malusExtremeFormula}}'
-      data-dtype='Number'
+      type='checkbox'
+      name='system.extremeFormula'
+      {{#if system.extremeFormula}}checked{{/if}}
     />
   </div>
-  {{#unless (eq system.malusExtremeFormula 0)}}
+  {{#if system.extremeFormula}}
     <div class='resource'>
-      <label class='resource-label'>{{localize 'HOGWARTS.Item.Spell.FIELDS.extremeFormula.label'}}</label>
+      <label class='resource-label'>{{localize 'HOGWARTS.Item.Spell.FIELDS.malusExtremeFormula.label'}}</label>
       <input
-        type='checkbox'
-        name='system.extremeFormula'
-        {{#if system.extremeFormula}}checked{{/if}}
+        type='number'
+        name='system.malusExtremeFormula'
+        value='{{system.malusExtremeFormula}}'
+        min='-500' max='0' step='1'
+        data-dtype='Number'
       />
     </div>
-  {{/unless}}
+    <div class='resource'>
+      <label class='resource-label'>{{localize 'HOGWARTS.Item.Spell.FIELDS.malusMastered.label'}}</label>
+      <input
+        type='number'
+        name='system.malusMastered'
+        value='{{system.malusMastered}}'
+        min='-500' max='0' step='1'
+        data-dtype='Number'
+      />
+    </div>
+    <div class='resource'>
+      <label class='resource-label'>{{localize 'HOGWARTS.Item.Spell.FIELDS.extremeMastered.label'}}</label>
+      <input
+        type='checkbox'
+        name='system.extremeMastered'
+        {{#if system.extremeMastered}}checked{{/if}}
+      />
+    </div>
+  {{/if}}
 </section>

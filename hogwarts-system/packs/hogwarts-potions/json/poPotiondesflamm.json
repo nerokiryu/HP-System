@@ -1,0 +1,33 @@
+{
+  "_id": "poPotiondesflamm",
+  "name": "Potion des flammes violettes",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Une potion qui permet de se prémunir contre le brasier pourpre et de le traverser sans dommages. Le Sorcier ayant lancé le sortilège de brasier pourpre doit lancer le sortilège une seconde fois dans la potion permettant de s’en protéger.</p><p>Effet : Rend le consommateur et son équipement insensible au feu du brasier pourpre durant une certaine période.</p><p>Durée : POUvoir heures</p>",
+    "potionLevel": 6,
+    "malus": -70,
+    "target": "A/P",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Champignon explosif",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Sang de Salamandre",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Poudre de verrue Spécial : Lancer le sort des flammes noires sur la potion une fois terminée",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

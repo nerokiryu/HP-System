@@ -33,6 +33,17 @@ export default class HogwartsCharacter extends HogwartsActorBase {
     // Movement speed in meters/round (default 8 — Rules §Déplacement)
     schema.movement = new fields.NumberField({ ...requiredInteger, initial: 8, min: 0 });
 
+    // Hybrid ancestry (Chap. 17). An empty race means a classic wizard.
+    schema.hybrid = new fields.SchemaField({
+      race: new fields.StringField({ blank: true, initial: '' }),
+      generation: new fields.StringField({ blank: true, initial: '' }),
+      yumboe: new fields.BooleanField({ initial: false }),
+      // Starred entries in the §17.1 table, and the "1 au choix" capabilities.
+      pickBonus: new fields.StringField({ blank: true, initial: '' }),
+      pickMalus: new fields.StringField({ blank: true, initial: '' }),
+      pickCapability: new fields.StringField({ blank: true, initial: '' }),
+    });
+
     // Core BRP-like stats (typical range ~3-18)
     schema.stats = new fields.SchemaField(
       Object.keys(CONFIG.HOGWARTS.stats).reduce((obj, stat) => {
@@ -51,6 +62,8 @@ export default class HogwartsCharacter extends HogwartsActorBase {
         spent: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
         base: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
         max: new fields.NumberField({ ...requiredInteger, initial: 95, min: 0 }),
+        // School subjects derive `max` from the school year unless this is set.
+        maxOverride: new fields.BooleanField({ initial: false }),
         category: new fields.StringField({ initial: 'general' }),
         spec: new fields.StringField({ blank: true }),
         custom: new fields.BooleanField({ initial: false }),
@@ -151,6 +164,15 @@ export default class HogwartsCharacter extends HogwartsActorBase {
       personalBonusPoints: new fields.SchemaField({
         max: new fields.NumberField({ ...requiredInteger, initial: 6, min: 0 }),
         spent: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 })
+      }),
+      // Percentages awarded at year's end or over the holidays, still to be
+      // spread over non-school skills (§25.1-25.2).
+      pool: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+      // School terms already credited, so a term cannot be granted twice.
+      school: new fields.SchemaField({
+        year: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+        periods: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0, max: 3 }),
+        firstWeek: new fields.BooleanField({ initial: false })
       })
     });
 
@@ -212,49 +234,126 @@ export default class HogwartsCharacter extends HogwartsActorBase {
   }
 
   prepareBaseData() {
-    // Seed default skills if empty
     if (!Array.isArray(this.skills)) this.skills = [];
-    if (this.skills.length === 0 && CONFIG.HOGWARTS?.skillPresets) {
-      const cats = CONFIG.HOGWARTS.skillPresets;
-      const seed = [];
-      for (const [category, list] of Object.entries(cats)) {
-        for (const entry of list) {
-          seed.push({
-            name: entry.name,
-            base: Number(entry.base) || 0,
-            max: Number(entry.max) || 95,
-            value: 0,
-            spent: 0,
-            category,
-            spec: entry.name.includes('(...)') ? '' : '',
-            custom: false,
-            xpCheck: false
-          });
-        }
+    const presets = CONFIG.HOGWARTS?.skillPresets;
+    if (!presets) return;
+
+    // Preset skills cannot be deleted from the sheet, so a missing one always
+    // means the system added it after this actor was created. Backfilling here
+    // covers both a brand-new actor and one predating a preset being added.
+    const known = new Set(this.skills.map(s => `${s.category}:${s.name}`));
+    for (const [category, list] of Object.entries(presets)) {
+      for (const entry of list) {
+        if (known.has(`${category}:${entry.name}`)) continue;
+        this.skills.push({
+          name: entry.name,
+          base: Number(entry.base) || 0,
+          max: Number(entry.max) || 95,
+          maxOverride: false,
+          value: 0,
+          spent: 0,
+          category,
+          spec: '',
+          custom: false,
+          xpCheck: false
+        });
       }
-      this.skills = seed;
+    }
+
+    // Some ancestries grant a skill an ordinary wizard never has (§17.2.6).
+    const granted = CONFIG.HOGWARTS?.hybridCapabilities?.[this.hybrid?.race]?.[this.hybrid?.generation] ?? [];
+    for (const capability of granted) {
+      const skill = capability.newSkill;
+      if (!skill || known.has(`general:${skill.name}`)) continue;
+      this.skills.push({
+        name: skill.name,
+        base: Number(skill.base) || 0,
+        max: Number(skill.max) || 95,
+        maxOverride: true,
+        value: 0,
+        spent: 0,
+        category: 'general',
+        spec: '',
+        custom: false,
+        xpCheck: false
+      });
+      known.add(`general:${skill.name}`);
     }
   }
 
+  /**
+   * Resolve the hybrid ancestry into per-stat modifiers and the aggregated
+   * numeric effects of the granted capabilities (Chap. 17).
+   *
+   * Sets `stats.<k>.hybridMod` and `stats.<k>.total`; every derived value below
+   * reads `total`, never `value`, so an ancestry actually reaches hit points,
+   * the damage bonus and initiative.
+   */
+  _prepareHybrid() {
+    const { race, generation, pickBonus, pickMalus, pickCapability } = this.hybrid ?? {};
+    const adjustments = CONFIG.HOGWARTS?.hybridStatAdjustments?.[race]?.[generation] ?? null;
+    const capabilities = CONFIG.HOGWARTS?.hybridCapabilities?.[race]?.[generation] ?? null;
+
+    const mods = {};
+    if (adjustments) {
+      for (const [key, delta] of Object.entries(adjustments)) {
+        if (key !== 'pick') mods[key] = delta;
+      }
+      // A starred entry only applies to the stat the player selected.
+      if (adjustments.pick?.bonus?.[pickBonus]) mods[pickBonus] = adjustments.pick.bonus[pickBonus];
+      if (adjustments.pick?.malus?.[pickMalus]) mods[pickMalus] = adjustments.pick.malus[pickMalus];
+    }
+
+    for (const key in this.stats) {
+      const value = Number(this.stats[key].value) || 0;
+      const mod = Number(mods[key]) || 0;
+      this.stats[key].hybridMod = mod;
+      // A characteristic can never be reduced below 1.
+      this.stats[key].total = Math.max(1, value + mod);
+    }
+
+    const effects = { skillBonus: {}, skillXp: [], newSkills: [], spellMalus: 0, potionMalus: 0, wandless: 0 };
+    for (const capability of capabilities ?? []) {
+      if (capability.key === 'Yumboe' && !this.hybrid?.yumboe) continue;
+      // A "1 au choix" capability contributes only through the selected option.
+      if (capability.choose && capability.bonus && capability.options?.includes(pickCapability)) {
+        effects.skillBonus[pickCapability] = (effects.skillBonus[pickCapability] ?? 0) + capability.bonus;
+        if (capability.xp) effects.skillXp.push(pickCapability);
+        continue;
+      }
+      for (const [name, bonus] of Object.entries(capability.skillBonus ?? {})) {
+        effects.skillBonus[name] = (effects.skillBonus[name] ?? 0) + bonus;
+      }
+      effects.skillXp.push(...(capability.skillXp ?? []));
+      if (capability.newSkill) effects.newSkills.push(capability.newSkill);
+      effects.spellMalus += Number(capability.spellMalus) || 0;
+      effects.potionMalus += Number(capability.potionMalus) || 0;
+      effects.wandless += Number(capability.wandless) || 0;
+    }
+    this.hybridEffects = effects;
+  }
+
   prepareDerivedData() {
+    this._prepareHybrid();
+
     // Derive labels for stats and compute convenience check thresholds (x5 rule)
     this.checks = {};
     for (const key in this.stats) {
-      const v = Number(this.stats[key].value) || 0;
+      const v = Number(this.stats[key].total) || 0;
       this.stats[key].label = game.i18n.localize(CONFIG.HOGWARTS.stats[key]) ?? key;
       // Typical BRP stat check: value * 5 (percentage)
       this.checks[key] = v * 5;
     }
 
     // Calculate health max: (SIZ + CON) / 2
-    const siz = Number(this.stats.siz?.value) || 0;
-    const con = Number(this.stats.con?.value) || 0;
+    const siz = Number(this.stats.siz?.total) || 0;
+    const con = Number(this.stats.con?.total) || 0;
     this.health.max = Math.ceil((siz + con) / 2);
     // Non-lethal pool max mirrors lethal HP max
     if (this.healthNonLethal) this.healthNonLethal.max = this.health.max;
 
     // Calculate damage bonus based on STR + SIZ
-    const str = Number(this.stats.str?.value) || 0;
+    const str = Number(this.stats.str?.total) || 0;
     const total = str + siz;
     if (total <= 24) {
       this.damageBonus = '—';
@@ -268,10 +367,20 @@ export default class HogwartsCharacter extends HogwartsActorBase {
     // Full brawling damage formula (1d3 + damage bonus)
     this.brawlingDamage = total <= 24 ? '1d3' : '1d3' + this.damageBonus;
 
+    // Only worn armour reduces incoming damage (Chap. 2.8.1).
+    this.armor = (this.parent?.items ?? [])
+      .filter((i) => i.type === 'armor' && i.system?.equipped)
+      .reduce((sum, i) => sum + (Number(i.system?.armorValue) || 0), 0);
+
+    // Best equipped shield: bonus to parry, same figure as a penalty to attack.
+    this.shieldBonus = (this.parent?.items ?? [])
+      .filter((i) => i.type === 'armor' && i.system?.equipped)
+      .reduce((best, i) => Math.max(best, Number(i.system?.shieldBonus) || 0), 0);
+
     // Derived characteristics: senses, idea, luck
-    const per = Number(this.stats.per?.value) || 0;
-    const int = Number(this.stats.int?.value) || 0;
-    const pow = Number(this.stats.pow?.value) || 0;
+    const per = Number(this.stats.per?.total) || 0;
+    const int = Number(this.stats.int?.total) || 0;
+    const pow = Number(this.stats.pow?.total) || 0;
     // Use configurable multipliers from CONFIG.HOGWARTS.derivedMultipliers if present,
     // otherwise fall back to sensible defaults.
     const dm = CONFIG.HOGWARTS?.derivedMultipliers ?? {
@@ -313,19 +422,15 @@ export default class HogwartsCharacter extends HogwartsActorBase {
     const excludeSchoolFromCP = game.settings.get('hogwarts-system', 'excludeSchoolSkillsFromCP') ?? false;
     let totalSkillsSpent = 0;
     if (Array.isArray(this.skills)) {
-      // Auto-update max for school subjects only when the value hasn't been manually edited:
-      //  - 95  → schema initial (field never touched)
-      //  - (year-2)*15+30  → was following auto-calc last year, advance to this year
-      // Any other value is treated as a manual override and left untouched.
-      const autoSchoolMax = (year - 1) * 15 + 30;
-      const prevAutoSchoolMax = year <= 1 ? 95 : (year - 2) * 15 + 30;
+      // Maîtrise maximale scolaire : 30 % en 1re année, +15 %/an, plafonnée à
+      // 100 % (livre v1.12, l. 6707-6714). Un `maxOverride` coupe l'automatisme.
+      const autoSchoolMax = Math.min(100, 30 + (year - 1) * 15);
 
       for (const s of this.skills) {
         const b = Number(s.base) || 0;
         let m = Number(s.max) || 0;
 
-        // Apply auto-calc only if max is still at a "never manually edited" value
-        if (s.category === 'school' && (m === 95 || m === prevAutoSchoolMax)) {
+        if (s.category === 'school' && !s.maxOverride) {
           m = autoSchoolMax;
           s.max = autoSchoolMax;
         }
@@ -337,7 +442,13 @@ export default class HogwartsCharacter extends HogwartsActorBase {
         let v = b + p;
         if (m > 0) v = Math.min(v, m);
         v = Math.max(v, b);
-        s.value = v;
+
+        // Ancestry bonuses sit on top of the mastery ceiling: they are innate,
+        // not points the character spent (§17.2).
+        const hybridBonus = Number(this.hybridEffects?.skillBonus?.[s.name]) || 0;
+        s.hybridBonus = hybridBonus;
+        s.hybridXp = this.hybridEffects?.skillXp?.includes(s.name) ?? false;
+        s.value = v + hybridBonus;
 
         // Accumulate total spent points (school subjects optionally excluded)
         if (!excludeSchoolFromCP || s.category !== 'school') {

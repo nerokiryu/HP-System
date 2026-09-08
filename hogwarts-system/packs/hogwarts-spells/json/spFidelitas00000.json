@@ -1,0 +1,19 @@
+{
+  "_id": "spFidelitas00000",
+  "name": "Fidelitas",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet de cacher un secret au cœur d'une personne connue sous le nom de Gardien du Secret. Il est alors le seul à pouvoir divulguer ce secret.</p><p>Durée : permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 4,
+    "spellType": "E",
+    "target": [
+      "P"
+    ],
+    "incantation": "Fidelitas",
+    "malus": -50,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

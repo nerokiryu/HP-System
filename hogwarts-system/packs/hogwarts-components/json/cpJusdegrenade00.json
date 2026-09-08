@@ -1,0 +1,13 @@
+{
+  "_id": "cpJusdegrenade00",
+  "name": "Jus de grenade",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Du jus provenant des fruits de la grenade</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "• Consommable"
+  }
+}

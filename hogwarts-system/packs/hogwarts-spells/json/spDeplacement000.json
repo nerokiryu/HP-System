@@ -1,0 +1,22 @@
+{
+  "_id": "spDeplacement000",
+  "name": "Déplacement",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet de déplacer un objet ou une personne inconsciente par télékinésie.</p><p>Maximum : POU x 5 kg.</p><p>Durée : volontaire</p><p>Formule extrême : POU x10 kg</p>",
+    "spellLevel": 2,
+    "spellType": "E",
+    "target": [
+      "A",
+      "O",
+      "P",
+      "V"
+    ],
+    "incantation": "Mobili « nom »",
+    "malus": -35,
+    "extremeFormula": true,
+    "malusExtremeFormula": -45,
+    "malusMastered": -20
+  }
+}

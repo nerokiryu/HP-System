@@ -1,0 +1,19 @@
+{
+  "_id": "spPatronus000000",
+  "name": "Patronus",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Invoque un Patronus (Opposition : POUx2/POU) qui peut servir de bouclier contre certaines créatures maléfiques (Détraqueurs, Morenplis, etc.) ou faire office de messager.</p><p>Durée : volontaire</p><p>Remarque : Si ce sortilège est lancé par une personne qui ne possède pas un cœur pur, des asticots de lumière jaillissent de la baguette du sorcier pour venir le dévorer.</p><p>Formule extrême : -</p>",
+    "spellLevel": 4,
+    "spellType": "E",
+    "target": [
+      "X"
+    ],
+    "incantation": "Expecto Patronum / Spero patronum",
+    "malus": -50,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

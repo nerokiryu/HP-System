@@ -1,0 +1,19 @@
+{
+  "_id": "spAntiTransplana",
+  "name": "Anti-Transplanage",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Empêche une personne de se téléporter en utilisant le transplanage.</p><p>Durée : Variable (heures)</p><p>Formule extrême : durée variable (jours)</p>",
+    "spellLevel": 5,
+    "spellType": "E",
+    "target": [
+      "P"
+    ],
+    "incantation": "",
+    "malus": -60,
+    "extremeFormula": true,
+    "malusExtremeFormula": -70,
+    "malusMastered": -40
+  }
+}

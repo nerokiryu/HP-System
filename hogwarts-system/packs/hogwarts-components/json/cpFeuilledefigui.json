@@ -1,0 +1,13 @@
+{
+  "_id": "cpFeuilledefigui",
+  "name": "Feuille de figuier d’Abyssinie",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Feuille provenant du figuier d’Abyssinie, une plante magique dont les fleurs prennent l’apparence de fruits que l’on appelle figues.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "• Vertus médicinales"
+  }
+}

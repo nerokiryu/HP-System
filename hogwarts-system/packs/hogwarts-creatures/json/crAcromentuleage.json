@@ -1,0 +1,69 @@
+{
+  "_id": "crAcromentuleage",
+  "name": "Acromentule âgée",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>Le venin d’Acromentule peut être utilisé pour des poisons et des potions.</p>",
+    "health": {
+      "value": 20,
+      "max": 20
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 20
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXXX",
+    "stats": {
+      "str": {
+        "value": 20,
+        "formula": "4d6+6"
+      },
+      "con": {
+        "value": 17,
+        "formula": "3d6+6"
+      },
+      "siz": {
+        "value": 20,
+        "formula": "4d6+6"
+      },
+      "dex": {
+        "value": 11,
+        "formula": "3d6+2"
+      },
+      "int": {
+        "value": 9,
+        "formula": "2d6+2"
+      },
+      "pow": {
+        "value": 7,
+        "formula": "2d4+2"
+      },
+      "app": {
+        "value": 14,
+        "formula": "3d6+3"
+      },
+      "per": {
+        "value": 15,
+        "formula": "3d6+4"
+      }
+    },
+    "movement": {
+      "land": 12,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 2
+    },
+    "attacks": "Morsure 40% (2d6)",
+    "skills": "Acrobatie : 70% ; Athlétisme : 60% ; Commandement : 50% ; Esquive : 55% ; Discrétion : 80% ; Orientation : 50% ; Survie : 65% ; Vigilance : 65%",
+    "powers": "<p>Bestialité : Une Acromentule ne peut s’empêcher d’attaquer toute créature qui croise sa route. Quand elle est en présence d'une proie potentielle, l’Acromentule doit réussir un jet de POUx1 Déplacement sur la toile : Quand elle se déplace sur sa toile, l’Acromentule ne doit pas lutter contre l’effet collant de celle-ci. Intelligence : Les Acromentules sont considérées comme très intelligentes mais ne peuvent lutter contre leur bestialité Pattes d'araignée : L'Acromentule possède la capacité d’escalader des surfaces difficiles, même des plafonds la tête en bas sans devoir effectuer de jet de compétence. Sens de la toile : L’Acromentule sait exactement où se trouve la proie prise dans sa toile. Toiles : Pour capturer ses proies, l’Acromentule créer des toiles en forme de dôme qui piègent ses victimes. Toute personne se trouvant en contact avec l’une des toiles de l’Acromentule doit réussir un jet de FOR/FOR sur la table des oppositions. Valeur de FOR de la toile =14. Venin : Le venin des Acromentules affecte une victime qui a subi une morsure et provoque une perte de points de vie de la part de la cible jusqu’à la mort de celle-ci. La virulence augmente avec l’âge de l’araignée. Incubation : 5 rounds ; Effet : perte de 1d4+1 points de vie par minute jusqu’à la mort ; Effet secondaire : fièvre ; VIR = 17</p>",
+    "notes": ""
+  }
+}

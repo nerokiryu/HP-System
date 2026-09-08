@@ -1,0 +1,69 @@
+{
+  "_id": "crMoke0000000000",
+  "name": "Moke",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>La peau du Moke est utilisée pour fabriquer des sacs ou des bourses qui possèdent la faculté de rétrécir.</p>",
+    "health": {
+      "value": 4,
+      "max": 4
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 4
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXX",
+    "stats": {
+      "str": {
+        "value": 4,
+        "formula": "1d4+1"
+      },
+      "con": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "siz": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "dex": {
+        "value": 13,
+        "formula": "2d6+6"
+      },
+      "int": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "pow": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "app": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "per": {
+        "value": 13,
+        "formula": "2d6+6"
+      }
+    },
+    "movement": {
+      "land": 2,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 1
+    },
+    "attacks": "Morsure 50% (1)",
+    "skills": "Acrobatie : 60%, Athlétisme : 35% ; Discrétion : 60%; Esquive : 50% ; Orientation : 25% ; Survie : 25% ; Vigilance : 45%",
+    "powers": "<p>Rétrécissement : Quand il se sent en danger, le Moke peut rétrécir pour devenir minuscule et ainsi échapper plus facilement à ses ennemis. La taille du Moke passe alors à 0, ce qui le rend virtuellement impossible à apercevoir ou attraper. Le Moke reprend sa taille normale une fois que le danger est passé.</p>",
+    "notes": ""
+  }
+}

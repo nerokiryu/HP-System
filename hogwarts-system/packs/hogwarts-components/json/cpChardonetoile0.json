@@ -1,0 +1,13 @@
+{
+  "_id": "cpChardonetoile0",
+  "name": "Chardon étoilé",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une variété particulière de chardon magique ayant aujourd’hui disparu. Ses fleurs en forme d’étoile sont caractéristiques de la plante.</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "-"
+  }
+}

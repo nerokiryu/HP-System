@@ -1,0 +1,13 @@
+{
+  "_id": "cpMucusdeVeracra",
+  "name": "Mucus de Veracrasse",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>La sécrétion de Veracrasse, également appelée mucus de Veracrasse, est utilisée comme ingrédient de potions. Elle sert à lier les potions.</p><p>Vendu 1 Gallion les huit bouteilles</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Acné\nAnti-Furoncles\nHerbicide\nSomnifère\nSomnifère pour Croup\nWiggenweld",
+    "otherUses": "-"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "_id": "crElfesdeMaison0",
+  "name": "Elfes de Maison",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 7,
+      "max": 7
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 7
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "X",
+    "stats": {
+      "str": {
+        "value": 5,
+        "formula": "1d6+1"
+      },
+      "con": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "siz": {
+        "value": 5,
+        "formula": "1d6+1"
+      },
+      "dex": {
+        "value": 15,
+        "formula": "3d6+4"
+      },
+      "int": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "pow": {
+        "value": 18,
+        "formula": "3d6+6"
+      },
+      "app": {
+        "value": 5,
+        "formula": "1d4+2"
+      },
+      "per": {
+        "value": 17,
+        "formula": "3d6+6"
+      }
+    },
+    "movement": {
+      "land": 7,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Corps à corps : 20% 1",
+    "skills": "Acrobatie : 55% ; Artisanat (au choix) : 60% ; Athlétisme : 40% ; Camouflage : 55% ; Cuisiner : 50% ; Discrétion 70% ; Dressage/Soin : 30% ; Empathie : 50% ; Esquive : 60% ; Fouille/Ménage : 70% ; Langue maternelle : 50% ; Langue étrangère (au choix) : 20% ; Orientation : 60% ; Persuasion/baratin : 50% ; Psychologie : 55% ; Survie : 25% ; Vigilance : 55%",
+    "powers": "<p>Longévité : Les elfes de maison semblent capables de vivre jusqu’à plus de 200 ans. Langage : En plus de la langue de leur maître, les elfes de maison peuvent parler d’autres langues étrangères. Les elfes de maison possèdent une magie intrinsèque puissante, mais qui diffère de celle employée par les Sorciers. Ces pouvoirs magiques, bien qu’ils soient normalement utilisés pour les tâches ménagères, peuvent être utilisés pour attaquer et se défendre. Cette magie s’emploie non seulement sans baguette (puisqu’il leur est interdit d’en posséder une) mais également sans incantation. Malgré ces deux « handicaps », les elfes de maison possèdent une puissance qui rivalise avec celles des plus puissants Sorciers. Néanmoins, il est interdit à un elfe d'utiliser la magie sans l'autorisation de son maître. Anti-portail : S’ils le désirent, les elfes de maison peuvent bloquer un portail et en interdire l’accès (comme ce fut le cas de celui de la voie 9 ¾). Cuisine magique : Les elfes de maison sont capables de cuisiner magiquement. Enflure : Les Elfes de maison sont capables d’utiliser un équivalent du sortilège d’Enflure. Lévitation d’objets : Les elfes de maison peuvent faire léviter les objets dans les airs et peuvent les déplacer à volonté dans l’espace. Ménage magique : Les elfes de maison sont capables de faire le ménage magiquement Modification d’ensorcellement : Les elfes de maison peuvent modifier la nature des ensorcellements lancés sur des objets afin de plier leur fonctionnement à leur volonté. (Ce fut le cas de l’ensorcellement du Cognard qui fut reprogrammé pour s’attaquer à Harry). Repoussetout : Les elfes de maison sont capables d’utiliser un équivalent du sortilège de Repoussetout. Transplanage : Les elfes de maison sont capables, comme les Sorciers, de transplaner pour se rendre d’un endroit à un autre. Cependant, ce pouvoir n’est pas limité par les sortilèges anti- transplanage. Un elfe de maison pourra donc transplaner au sein même de Poudlard et d’autres écoles de magie sans aucun problème alors que les Sorciers en sont incapables. Autres sortilèges : En plus des sortilèges connus et cités plus haut, il est tout à fait possible pour un elfe de maison de posséder d’autres sortilèges. Si ceux-ci ont été enseignés par le maître de l’elfe, celui-ci pourra très bien l’employer sans baguette. S’ils possédaient une baguette, il est fort à parier qu’un elfe de maison serait capable d’employer et de maîtriser tous les sortilèges qu’un Sorcier emploie. HABILLEMENT : Les elfes de maison ne s'habillent qu’avec de vieux bouts de tissu tels que des vieilles serviettes ou taies d'oreillers usées et sales. Il s’agit pour eux d’un signe de servitude. Lorsqu'ils sont affranchis de leur maître, ils sont libres de s'habiller comme ils l’entendent mais ne semblent pas avoir connaissance des convenances vestimentaires. SERVITUDE ET ALLEGEANCE : Les elfes de maison sont employés depuis des siècles comme serviteurs par les familles de Sorciers puissantes. Leur nature même fait qu'ils sont profondément dévoués à leur maître. Leur allégeance semble néanmoins plus liée à l'habitation où ils servent qu'à ses occupants. Certaines lois magiques obligent les elfes à se soumettre aux ordres de leur maître. S’il ne parvient pas à obéir aux ordres donnés, un elfe aura le réflexe de s'auto-punir par des châtiments corporels, sauf si son maître l’en dispense. Ces châtiments peuvent être légers comme ils peuvent être extrêmement violents, la gravité de ceux-ci dépendant de l’acceptation de l’échec chez le maître de l’elfe de maison. Néanmoins, comme pour le mensonge par omission, un elfe peut chercher des failles dans les ordres de son maître et agir avec une certaine latitude par rapport à ceux-ci. Malgré ce mode de vie difficile, ils apprécient leur condition et aiment vivre en esclavage. Un elfe de maison se sentira insulté si son maître propose de le payer pour son travail. À leurs yeux, être libéré représente la plus grande des humiliations REPRODUCTION : Les elfes de maison se reproduisent rarement, et seulement avec l'autorisation de leurs maîtres. CONDITIONS DE VIE ET DROITS : De par leur statut d’esclaves, les elfes de maison ne possèdent aucun droit au sens politique du terme. Ils ne peuvent posséder de baguette et leurs maîtres ont droit de vie ou de mort sur eux sans que personne ne trouve rien à redire. Il faudra attendre l’entrée d’Hermione Granger au Département de contrôle et de régulation des créatures magiques du Ministère de la Magie pour que des droits leurs soient accordés.</p>",
+    "notes": ""
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "_id": "crDissimuleur000",
+  "name": "Dissimuleur",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>-</p>",
+    "health": {
+      "value": 14,
+      "max": 14
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 14
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXX",
+    "stats": {
+      "str": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "con": {
+        "value": 9,
+        "formula": "2d6+2"
+      },
+      "siz": {
+        "value": 15,
+        "formula": "3d6+4"
+      },
+      "dex": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "int": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "pow": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "app": {
+        "value": 5,
+        "formula": "2d4"
+      },
+      "per": {
+        "value": 13,
+        "formula": "3d6+2"
+      }
+    },
+    "movement": {
+      "land": 7,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Morsure/griffe 20% (1)",
+    "skills": "Acrobatie : 20% ; Athlétisme : 20% ; Discrétion 50% ; Esquive : 20% ; Orientation : 10% ; Survie : 25% ; Vigilance : 50%",
+    "powers": "<p>Haine envers les humains : Le Dissimuleur est naturellement violent envers les humains. Quand il croise un humain, il ne peut s’empêcher de l’attaquer pour tenter de le tuer. Invisibilité : La Dissimuleur peut devenir invisible quand se cache derrière un objet. Ce pouvoir prend fin dès que celui-ci se déplace à nouveau. Certains sorciers entraînés peuvent détecter la présence de Dissimuleur grâce à un jet de PERceptionx1.</p>",
+    "notes": ""
+  }
+}

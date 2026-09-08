@@ -1,0 +1,13 @@
+{
+  "_id": "cpEssencedeDemig",
+  "name": "Essence de Demiguise",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une essence de magie de Demiguise qui peut être utilisé pour la fabrication de potions. Connaissant les capacités magiques du Demiguise à se rendre invisible, il pourrait s’agit de potion de camouflage ou d’invisibilité.</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "-"
+  }
+}

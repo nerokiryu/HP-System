@@ -62,4 +62,22 @@
       data-dtype='Number'
     />
   </div>
+
+  <div class='form-group'>
+    <label>{{localize 'HOGWARTS.Item.Armor.FIELDS.equipped.label'}}</label>
+    <input
+      type='checkbox'
+      name='system.equipped'
+      {{#if system.equipped}}checked{{/if}}
+    />
+  </div>
+
+  <div class='form-group'>
+    <label>{{localize 'HOGWARTS.Item.Armor.FIELDS.shieldBonus.label'}}</label>
+    <select name='system.shieldBonus' data-dtype='Number'>
+      <option value='0' {{#if (eq system.shieldBonus 0)}}selected{{/if}}>{{localize 'HOGWARTS.Item.Armor.Shield.None'}}</option>
+      <option value='10' {{#if (eq system.shieldBonus 10)}}selected{{/if}}>{{localize 'HOGWARTS.Item.Armor.Shield.Small'}}</option>
+      <option value='20' {{#if (eq system.shieldBonus 20)}}selected{{/if}}>{{localize 'HOGWARTS.Item.Armor.Shield.Large'}}</option>
+    </select>
+  </div>
 </section>

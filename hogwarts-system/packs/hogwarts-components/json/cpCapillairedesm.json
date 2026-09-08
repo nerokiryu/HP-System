@@ -1,0 +1,13 @@
+{
+  "_id": "cpCapillairedesm",
+  "name": "Capillaire des murailles (Spleenwart)",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Plante aux propriétés magiques poussant entre les rochers et les failles des murailles. Elle est apparentée à la fougère.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "-"
+  }
+}

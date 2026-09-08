@@ -1,0 +1,39 @@
+{
+  "_id": "poPotentielabsol",
+  "name": "Potentiel-absolu",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Une potion permettant d’éveiller le potentiel de son consommateur en lui permettant de réussir des actions légendaires.</p><p>Effet : La zone des réussites critiques de chaque action passe à 001-010 et chaque jet se fait comme si un point de fougue avait été employé (possibilité d’inverser le résultat du dé) sans les effets en cas d’échec.</p><p>Durée : 1 heure</p>",
+    "potionLevel": 6,
+    "malus": -60,
+    "target": "P",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Caprice du Niffleur",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Ganglion de sorcière",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Porridge du Pasteur",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Tomatagoria",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

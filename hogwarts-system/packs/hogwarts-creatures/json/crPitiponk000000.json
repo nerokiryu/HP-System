@@ -1,0 +1,69 @@
+{
+  "_id": "crPitiponk000000",
+  "name": "Pitiponk",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 0,
+      "max": 0
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 0
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXX MALADIES, MALEDICTIONS MAGIQUES ET ETRES ISSUS DE LA MAGIE NOIRE Qui dit magie dit nécessairement maladies magiques et malédictions en tout genre. Certains Êtres sont ainsi susceptibles de subir différentes afflictions durant leur vie, afflictions qui pourront profondément les changer, aussi bien physiquement que magiquement. Bien que n’étant pas une catégorie de classification officiellement proposée par le Ministère de la Magie, les Êtres maudits ou ayant contracté une maladie magique sont si différents des Êtres plus classiques présentés auparavant qu’un chapitre entier leur sera consacré dans cette encyclopédie.",
+    "stats": {
+      "str": {
+        "value": 7,
+        "formula": "(2d6)"
+      },
+      "con": {
+        "value": 10,
+        "formula": "0"
+      },
+      "siz": {
+        "value": 4,
+        "formula": "1d4+1"
+      },
+      "dex": {
+        "value": 14,
+        "formula": "3d6+3"
+      },
+      "int": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "pow": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "app": {
+        "value": 4,
+        "formula": "1d4+1"
+      },
+      "per": {
+        "value": 14,
+        "formula": "3d6+3"
+      }
+    },
+    "movement": {
+      "land": 6,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "-",
+    "skills": "Camouflage : 55% ; Discrétion 60% ; Empathie : 30% ; Esquive : 50% ; Orientation : 55% ; Survie : 20% ; Vigilance : 65% ; Voler : 50%",
+    "powers": "<p>Amortalité : Comme tous les Non-Êtres, les Pitiponks sont considérés comme amortels, ce qui signifie qu’ils n’ont jamais été vivants et qu’ils ne peuvent pas mourir de mort naturelle. Ils peuvent cependant être détruits ou conjurés par d’autres méthodes magiques. Camouflage : Le Pitiponk sait se faire passer pour une fumée inoffensive. Sous cette forme, un jet de PERception x3 est nécessaire pour distinguer la créature. Contrôle des flammes : Les Pitiponks sont capables de contrôler les feux de petite taille. Ils peuvent, par exemple, récupérer les flammes d’une lampe à bougie pour s’en servir contre les porteurs. Une fois les flammes récupérées, celles-ci peuvent être envoyée sur une cible située à une quinzaine de mètre pour lui causer 1d4-1 dégâts. De plus, la cible a 50% de voir ses affaires s’enflammer. Tant que les flammes sont sous le contrôle du Pitiponk, celui-ci peut se balader avec. Intangible : Comme tous les Esprits, le Pitiponk ne possède pas de corps physique, ce qui l’immunise à de nombreux sortilèges et affectations. Par exemple, celui-ci est insensible aux poisons qui affectent les vivants. La majeure partie des sorts agissant sur la matière ne sont donc d’aucun effet sur lui. Le Pitiponk peut également traverser la matière à volonté. Tromperie : Les Pitiponks possèdent la capacité de brouiller les pistes praticables, de créer de fausses indications de directions ou de fausser la perception de ceux qui évoluent dans les marais. Quand une personne évolue dans un marais habité par des Pitiponks, il doit réussir un jet de PERceptionx3 pour ne pas être trompé par les fausses indications laissées par ceux-ci. DESTRUCTION DES PITIPONK : En règle générale, on peut éviter la confrontation avec un Pitiponk en restant hors de portée de sa capacité à contrôler les flammes. Si ce n’est pas le cas, on procèdera à sa destruction de la manière suivante : L’isoler dans une zone où il ne peut pas fuir. On emploie ensuite le sort de Lumière sur lui pour qu’il se solidifie. On emploie ensuite un sort de Repousse créature ou de repoussement à trois ou quatre reprises pour détruire la créature solidifiée</p>",
+    "notes": "<p>Les Pitiponks sont sensibles à la lumière magique, qui les solidifie et les rend tangibles. Sous cette forme, ils peuvent alors être détruits. Si on ne détruit pas totalement la créature solidifiée, les morceaux se retransforment en fumée qui reforme la créature initiale.</p>"
+  }
+}

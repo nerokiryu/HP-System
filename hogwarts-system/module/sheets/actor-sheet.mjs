@@ -16,6 +16,23 @@ function _degreeBadge(degree) {
 }
 
 /**
+ * Success degree for a d100 result (Chap. 1.3): critical on 01-05, fumble on
+ * 96-00. The Extreme/Hard tiers are an optional BRP import, off by default.
+ * @param {number} roll
+ * @param {number} target
+ * @returns {string}
+ */
+function _degreeOf(roll, target) {
+  const extended = game.settings.get('hogwarts-system', 'useExtendedSuccessTiers') ?? false;
+  if (roll <= 5) return 'Critical';
+  if (extended && roll <= Math.ceil(target / 5)) return 'Extreme';
+  if (extended && roll <= Math.ceil(target / 2)) return 'Hard';
+  if (roll <= target) return 'Success';
+  if (roll >= 96) return 'Fumble';
+  return 'Fail';
+}
+
+/**
  * Build Apply Damage / Apply Healing button HTML.
  * @param {number} value - Numeric damage/healing value
  * @returns {string} HTML string for the card-buttons section
@@ -24,9 +41,13 @@ function _damageButtons(value) {
   if (!value || value <= 0) return '';
   const dmgLabel = game.i18n.localize('HOGWARTS.Chat.ApplyDamage');
   const healLabel = game.i18n.localize('HOGWARTS.Chat.ApplyHealing');
+  const nlLabel = game.i18n.localize('HOGWARTS.Chat.ApplyNonLethal');
+  const koLabel = game.i18n.localize('HOGWARTS.Chat.ApplyKnockout');
   return `
     <div class="card-buttons">
       <button class="apply-damage" data-action="apply-damage" data-value="${value}"><i class="fas fa-heart-broken"></i> ${dmgLabel} (${value})</button>
+      <button class="apply-nonlethal" data-action="apply-nonlethal" data-value="${value}"><i class="fas fa-hand-fist"></i> ${nlLabel} (${value})</button>
+      <button class="apply-knockout" data-action="apply-knockout" data-value="${value}"><i class="fas fa-face-dizzy"></i> ${koLabel}</button>
       <button class="apply-healing" data-action="apply-healing" data-value="${value}"><i class="fas fa-heart"></i> ${healLabel} (${value})</button>
     </div>`;
 }
@@ -85,8 +106,16 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
       usePotion: this._onUsePotion,
       rollOpposition: this._onRollOpposition,
       resolveXP: this._onResolveXP,
+      schoolTermXP: this._onSchoolTermXP,
+      yearEndXP: this._onYearEndXP,
+      holidayXP: this._onHolidayXP,
+      spendPool: this._onSpendPool,
       addSkill: this._addSkill,
       deleteSkill: this._deleteSkill,
+      toggleSkillMaxAuto: this._toggleSkillMaxAuto,
+      restRecovery: this._onRestRecovery,
+      rollDodge: this._onRollDodge,
+      rollParry: this._onRollParry,
       addFamilyMember: this._addFamilyMember,
       deleteFamilyMember: this._deleteFamilyMember,
       toggleBioSection: this._toggleBioSection,
@@ -219,6 +248,48 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
     return context;
   }
 
+  /**
+   * Options for the ancestry pickers (Chap. 17). Generations a race cannot take
+   * are dropped rather than disabled, so an invalid pair cannot be selected.
+   */
+  _prepareHybridContext() {
+    const H = CONFIG.HOGWARTS;
+    const { race, generation, pickBonus, pickMalus, pickCapability, yumboe } = this.actor.system.hybrid ?? {};
+    const table = H.hybridStatAdjustments?.[race];
+
+    const generations = Object.entries(H.hybridGenerations)
+      .filter(([key]) => !race || table?.[key])
+      .map(([key, g]) => ({
+        key,
+        label: `${game.i18n.localize(g.label)} (${g.symbol})`,
+        cost: g.cost,
+        selected: key === generation,
+      }));
+
+    const adjustments = table?.[generation] ?? null;
+    const statLabel = (k) => game.i18n.localize(H.statAbbreviations?.[k] ?? H.stats[k] ?? k);
+    const asOptions = (entries, chosen) => Object.entries(entries ?? {})
+      .map(([stat, delta]) => ({ stat, label: `${statLabel(stat)} ${delta > 0 ? '+' : ''}${delta}`, selected: stat === chosen }));
+
+    const capabilities = H.hybridCapabilities?.[race]?.[generation] ?? [];
+    const choice = capabilities.find((c) => c.choose);
+
+    return {
+      races: Object.entries(H.hybridRaces).map(([key, label]) => ({ key, label: game.i18n.localize(label), selected: key === race })),
+      generations,
+      cost: H.hybridGenerations?.[generation]?.cost ?? 0,
+      bonusChoices: asOptions(adjustments?.pick?.bonus, pickBonus),
+      malusChoices: asOptions(adjustments?.pick?.malus, pickMalus),
+      capabilityChoices: (choice?.options ?? []).map((option) => ({ option, selected: option === pickCapability })),
+      offersYumboe: capabilities.some((c) => c.key === 'Yumboe'),
+      yumboe,
+      capabilities: capabilities.map((c) => ({
+        label: game.i18n.localize(`HOGWARTS.Hybrid.Capability.${c.key}`),
+        note: c.note,
+      })),
+    };
+  }
+
   /** @override */
   async _preparePartContext(partId, context) {
     switch (partId) {
@@ -231,9 +302,16 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
           grouped[cat].push({ index: idx, entry: s });
         });
         context.skillsByCategory = grouped;
+        if (this.actor.type === 'character') {
+          const year = Number(this.actor.system.profile?.year) || 1;
+          const p = this.actor.system.experience?.school ?? {};
+          const done = p.year === year ? Number(p.periods) || 0 : 0;
+          context.schoolProgress = year === 1 && !p.firstWeek ? '—' : `${done}/3`;
+        }
         break;
       case 'features':
         context.tab = context.tabs[partId];
+        if (this.actor.type === 'character') context.hybrid = this._prepareHybridContext();
         // Compute total PBP cost across all owned items for display in familiar sheets
         try {
           const total = (this.document.items || []).reduce((acc, it) => {
@@ -759,8 +837,8 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
         else if (data.actorId || data.id || data._id) dropped = game.actors.get(data.actorId || data.id || data._id);
         if (!dropped) return;
 
-        if (dropped.id === this.actor.id) return ui.notifications?.warn?.('Cannot link actor to itself');
-        if (dropped.type !== 'familiar') return ui.notifications?.warn?.('Only familiars can be linked to a character');
+        if (dropped.id === this.actor.id) return ui.notifications?.warn?.(game.i18n.localize('HOGWARTS.Errors.LinkSelf'));
+        if (dropped.type !== 'familiar') return ui.notifications?.warn?.(game.i18n.localize('HOGWARTS.Errors.LinkFamiliar'));
 
         await this.document.update({ 'system.familiar.linkedActor': dropped.id });
         await dropped.setFlag('hogwarts-system', 'ownerCharacter', this.actor.id);
@@ -784,7 +862,7 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
         ui.notifications?.info?.(game.i18n.localize('HOGWARTS.Actor.Familiar.ViewLinked') || 'Familiar linked');
       } catch (e) {
         console.error('[hogwarts-system] _onDrop error', e);
-        ui.notifications?.error?.('Failed to link familiar');
+        ui.notifications?.error?.(game.i18n.localize('HOGWARTS.Errors.LinkFailed'));
       }
       return;
     }
@@ -953,7 +1031,7 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
     } catch (err) {
       console.error('Failed to create familiar', err);
       // Best-effort notification
-      try { ui.notifications.error(game?.i18n?.localize?.('HOGWARTS.Errors.CreateFamiliar') ?? 'Failed to create familiar'); } catch (e) { console.error(e); }
+      try { ui.notifications.error(game.i18n.localize('HOGWARTS.Errors.CreateFamiliar')); } catch (e) { console.error(e); }
     }
   }
 
@@ -1102,13 +1180,7 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
 
         // Harry Potter JdR degrees: Critical (01-05), Success (<= target), Fail (> target), Fumble (96-00)
         // Optional BRP extended tiers (Extreme/Hard) enabled via game setting.
-        let degree = 'Fail';
-        const useExtendedTiers = game.settings.get('hogwarts-system', 'useExtendedSuccessTiers') ?? false;
-        if (r <= 5) degree = 'Critical';
-        else if (useExtendedTiers && r <= Math.ceil(targetValue / 5)) degree = 'Extreme';
-        else if (useExtendedTiers && r <= Math.ceil(targetValue / 2)) degree = 'Hard';
-        else if (r <= targetValue) degree = 'Success';
-        else if (r >= 96) degree = 'Fumble';
+        const degree = _degreeOf(r, targetValue);
 
         const degreeLabel = game.i18n.localize(`HOGWARTS.Roll.Degree.${degree}`);
         const modText = mod ? ` (mod ${mod >= 0 ? '+' : ''}${mod})` : '';
@@ -1290,13 +1362,30 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
    * Optionally includes a fougue checkbox if the actor has fougue points.
    * Returns { mod: number, useFougue: boolean }.
    */
-  async _promptRollModifier({ showFougue = false, showDifficulty = false, showAssistance = false } = {}) {
+  async _promptRollModifier({ showFougue = false, showDifficulty = false, showAssistance = false, showCasting = false, showExtreme = false } = {}) {
     const title = game.i18n.localize('HOGWARTS.Roll.ModifierTitle');
     const label = game.i18n.localize('HOGWARTS.Roll.ModifierLabel');
     const fougueAvailable = showFougue && Number(this.actor.system?.fougue?.value) > 0;
     const fougueHtml = fougueAvailable
       ? `<div class="form-group"><label>${game.i18n.localize('HOGWARTS.Roll.UseFougue')}</label><input type="checkbox" name="useFougue" /></div>`
       : '';
+    // Wandless casting is -75%, less any hybrid reduction (l. 23189, §17.2).
+    const wandlessPenalty = 75 - (Number(this.actor.system?.hybridEffects?.wandless) || 0);
+    const castingHtml = showCasting ? `
+      <div class="form-group">
+        <label>${game.i18n.format('HOGWARTS.Roll.Wandless', { malus: wandlessPenalty })}</label>
+        <input type="checkbox" name="wandless" />
+      </div>
+      <div class="form-group">
+        <label>${game.i18n.localize('HOGWARTS.Roll.Silent')}</label>
+        <input type="checkbox" name="silent" />
+      </div>` : '';
+    // Only offered when the spell actually has an extreme version (§12.3).
+    const extremeHtml = showExtreme ? `
+      <div class="form-group">
+        <label>${game.i18n.localize('HOGWARTS.Roll.UseExtreme')}</label>
+        <input type="checkbox" name="useExtreme" />
+      </div>` : '';
     const difficultyHtml = showDifficulty ? `
       <div class="form-group">
         <label>${game.i18n.localize('HOGWARTS.Roll.Difficulty.Label')}</label>
@@ -1325,6 +1414,8 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
         </div>
         ${difficultyHtml}
         ${assistanceHtml}
+        ${castingHtml}
+        ${extremeHtml}
         ${fougueHtml}
       </form>`;
     
@@ -1339,9 +1430,16 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
           const diffVal = showDifficulty ? Number(form.elements.difficulty?.value ?? 0) : 0;
           const assistVal = showAssistance ? Number(form.elements.assistance?.value ?? 0) : 0;
           const useFougue = fougueAvailable && form.elements.useFougue?.checked;
+          const wandless = showCasting && form.elements.wandless?.checked;
+          const silent = showCasting && form.elements.silent?.checked;
+          const useExtreme = showExtreme && form.elements.useExtreme?.checked;
           return {
             mod: (Number.isFinite(val) ? val : 0) + diffVal + assistVal,
             useFougue: !!useFougue,
+            wandless: !!wandless,
+            wandlessPenalty,
+            silent: !!silent,
+            useExtreme: !!useExtreme,
           };
         },
       },
@@ -1404,16 +1502,12 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
     await roll.evaluate();
     const r = Number(roll.total) || 0;
     const stressMalus = Number(this.actor.system.stress?.value) || 0;
-    const modifiedTarget = targetValue + malus - stressMalus + additionalMod;
+    // Hybrid magical weakness also hampers brewing (§17.2.1).
+    const brewWeakness = Number(this.actor.system.hybridEffects?.potionMalus) || 0;
+    const modifiedTarget = targetValue + malus - stressMalus - brewWeakness + additionalMod;
 
     // Harry Potter JdR degrees (same logic as _onRoll)
-    let degree = 'Fail';
-    const useExtendedTiers = game.settings.get('hogwarts-system', 'useExtendedSuccessTiers') ?? false;
-    if (r <= 5) degree = 'Critical';
-    else if (useExtendedTiers && r <= Math.ceil(modifiedTarget / 5)) degree = 'Extreme';
-    else if (useExtendedTiers && r <= Math.ceil(modifiedTarget / 2)) degree = 'Hard';
-    else if (r <= modifiedTarget) degree = 'Success';
-    else if (r >= 96) degree = 'Fumble';
+    const degree = _degreeOf(r, modifiedTarget);
 
     const degreeLabel = game.i18n.localize(`HOGWARTS.Roll.Degree.${degree}`);
 
@@ -1477,16 +1571,12 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
     await roll.evaluate();
     const r = Number(roll.total) || 0;
     const stressMalus = Number(this.actor.system.stress?.value) || 0;
-    const modifiedTarget = targetValue + malus - stressMalus + additionalMod;
+    // Hybrid magical weakness also hampers brewing (§17.2.1).
+    const brewWeakness = Number(this.actor.system.hybridEffects?.potionMalus) || 0;
+    const modifiedTarget = targetValue + malus - stressMalus - brewWeakness + additionalMod;
 
     // Determine degree of success
-    let degree = 'Fail';
-    const useExtendedTiers = game.settings.get('hogwarts-system', 'useExtendedSuccessTiers') ?? false;
-    if (r <= 5) degree = 'Critical';
-    else if (useExtendedTiers && r <= Math.ceil(modifiedTarget / 5)) degree = 'Extreme';
-    else if (useExtendedTiers && r <= Math.ceil(modifiedTarget / 2)) degree = 'Hard';
-    else if (r <= modifiedTarget) degree = 'Success';
-    else if (r >= 96) degree = 'Fumble';
+    const degree = _degreeOf(r, modifiedTarget);
 
     const degreeLabel = game.i18n.localize(`HOGWARTS.Roll.Degree.${degree}`);
     const success = ['Critical', 'Extreme', 'Hard', 'Success'].includes(degree);
@@ -1584,7 +1674,11 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
     const spellType = item.system.spellType || 'X';
     const malus = Number(item.system.malus) || 0;
     const malusExtreme = Number(item.system.malusExtremeFormula) || 0;
-    const isExtreme = item.system.extremeFormula || false;
+    const hasExtreme = item.system.extremeFormula || false;
+    // Mastering the extreme formula lowers the plain spell's malus (l. 23346).
+    const malusMastered = item.system.extremeMastered
+      ? Number(item.system.malusMastered) || malus
+      : malus;
     const isPreSchool = item.system.preSchool === true;
     // Localized, slash-joined list of target codes (supports multiple targets)
     const targetDisplay = Array.from(item.system.target ?? [])
@@ -1623,8 +1717,6 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
       skillDisplayName = skillName;
     }
 
-    const appliedMalus = isExtreme ? malusExtreme : malus;
-    
     // Wand affinity bonus: +10% if wand affinity matches spell type category
     let wandAffinityBonus = 0;
     const wandAffinity = (this.actor.system.wand?.affinity || '').toLowerCase();
@@ -1641,23 +1733,26 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
     }
 
     // Prompt for additional modifier
-    const { mod: additionalMod } = await this._promptRollModifier.call(this);
+    const { mod: additionalMod, wandless, wandlessPenalty, silent, useExtreme } =
+      await this._promptRollModifier.call(this, { showCasting: true, showExtreme: hasExtreme });
+    const isExtreme = hasExtreme && useExtreme;
+    const appliedMalus = isExtreme ? malusExtreme : malusMastered;
     
     // Roll 1d100
     const roll = new Roll('1d100', this.actor.getRollData());
     await roll.evaluate();
     const r = Number(roll.total) || 0;
     const stressMalus = Number(this.actor.system.stress?.value) || 0;
-    const modifiedTarget = targetValue + appliedMalus + wandAffinityBonus - stressMalus + additionalMod;
+    // Casting without a wand or without speaking, and the hybrid magical
+    // weakness, all stack with the spell's own malus (l. 23189, 23224).
+    const wandlessMalus = wandless ? Number(wandlessPenalty) || 75 : 0;
+    const silentMalus = silent ? 30 : 0;
+    const weaknessMalus = Number(this.actor.system.hybridEffects?.spellMalus) || 0;
+    const modifiedTarget = targetValue + appliedMalus + wandAffinityBonus - stressMalus
+      - wandlessMalus - silentMalus - weaknessMalus + additionalMod;
 
     // Harry Potter JdR degrees (same logic as _onRoll)
-    let degree = 'Fail';
-    const useExtendedTiersSpell = game.settings.get('hogwarts-system', 'useExtendedSuccessTiers') ?? false;
-    if (r <= 5) degree = 'Critical';
-    else if (useExtendedTiersSpell && r <= Math.ceil(modifiedTarget / 5)) degree = 'Extreme';
-    else if (useExtendedTiersSpell && r <= Math.ceil(modifiedTarget / 2)) degree = 'Hard';
-    else if (r <= modifiedTarget) degree = 'Success';
-    else if (r >= 96) degree = 'Fumble';
+    const degree = _degreeOf(r, modifiedTarget);
 
     const degreeLabel = game.i18n.localize(`HOGWARTS.Roll.Degree.${degree}`);
 
@@ -1669,7 +1764,7 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
       <div class="hogwarts-chat-card">
         <header class="card-header"><img src="${item.img}" width="36" height="36" /><h3>${item.name}</h3><span class="card-type">${game.i18n.localize('HOGWARTS.Chat.SpellRoll')}</span></header>
         <div class="card-row"><strong>${game.i18n.localize('HOGWARTS.Item.Spell.FIELDS.level.label')}:</strong> ${levelDisplay} | <strong>${game.i18n.localize('HOGWARTS.Item.Spell.FIELDS.spellType.label')}:</strong> ${game.i18n.localize(`HOGWARTS.Item.Spell.SpellType.${spellType}`) || spellType}${targetDisplay ? ` | <strong>${game.i18n.localize('HOGWARTS.Item.Spell.FIELDS.target.label')}:</strong> ${targetDisplay}` : ''}${item.system.incantation ? ` | <em>${item.system.incantation}</em>` : ''}</div>
-        <div class="card-row"><strong>${game.i18n.localize('HOGWARTS.Item.Spell.FIELDS.malus.label')}:</strong> ${appliedMalus}${isExtreme ? ` (${game.i18n.localize('HOGWARTS.Item.Spell.FIELDS.extremeFormula.label')})` : ''}${wandAffinityBonus ? ` + ${game.i18n.localize('HOGWARTS.Wand.Affinity')}: +${wandAffinityBonus}` : ''}${additionalMod !== 0 ? ` + ${game.i18n.localize('HOGWARTS.Roll.ModifierLabel')}: ${additionalMod >= 0 ? '+' : ''}${additionalMod}` : ''}</div>
+        <div class="card-row"><strong>${game.i18n.localize('HOGWARTS.Item.Spell.FIELDS.malus.label')}:</strong> ${appliedMalus}${isExtreme ? ` (${game.i18n.localize('HOGWARTS.Item.Spell.FIELDS.extremeFormula.label')})` : ''}${wandAffinityBonus ? ` + ${game.i18n.localize('HOGWARTS.Wand.Affinity')}: +${wandAffinityBonus}` : ''}${wandlessMalus ? ` − ${game.i18n.localize('HOGWARTS.Roll.WandlessShort')}: ${wandlessMalus}` : ''}${silentMalus ? ` − ${game.i18n.localize('HOGWARTS.Roll.SilentShort')}: ${silentMalus}` : ''}${weaknessMalus ? ` − ${game.i18n.localize('HOGWARTS.Hybrid.Capability.MagicalWeakness')}: ${weaknessMalus}` : ''}${additionalMod !== 0 ? ` + ${game.i18n.localize('HOGWARTS.Roll.ModifierLabel')}: ${additionalMod >= 0 ? '+' : ''}${additionalMod}` : ''}</div>
         <div class="card-row"><strong>${game.i18n.localize('HOGWARTS.Chat.Target')}:</strong> ${skillDisplayName} ${targetValue} → ${modifiedTarget}</div>
         <div class="card-row"><strong>${game.i18n.localize('HOGWARTS.Chat.Roll')}:</strong> <span class="roll-value">${r}</span> → ${_degreeBadge(degree)}</div>
         ${item.system.description ? `<div class="card-description">${item.system.description}</div>` : ''}
@@ -1707,10 +1802,13 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
     await roll.evaluate();
     const r = Number(roll.total) || 0;
 
+    // Learning a spell has exactly four printed outcomes (l. 23115), so the
+    // optional Extreme/Hard tiers must not apply here. 96-00 still misses
+    // unconditionally, hence the order (l. 960).
     let degree;
     if (r <= 5) degree = 'Critical';
-    else if (r <= baseTarget) degree = 'Success';
     else if (r >= 96) degree = 'Fumble';
+    else if (r <= baseTarget) degree = 'Success';
     else degree = 'Fail';
 
     const degreeLabel = game.i18n.localize(`HOGWARTS.Roll.Degree.${degree}`);
@@ -1752,6 +1850,211 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
     }
     skills.splice(idx, 1);
     await this.actor.update({ 'system.skills': skills });
+  }
+
+  /**
+   * Switch a school skill's maximum between the year-derived value and a manual one.
+   * @this HogwartsActorSheet
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async _toggleSkillMaxAuto(event, target) {
+    event.preventDefault();
+    const idx = Number(target.dataset.index);
+    if (!Number.isInteger(idx)) return;
+    const skills = foundry.utils.deepClone(this.actor.system.skills ?? []);
+    const entry = skills[idx];
+    if (!entry) return;
+    // Cloned from prepared data, so `max` already holds the derived value the
+    // player sees; keeping it seeds the manual field with that number.
+    entry.maxOverride = !entry.maxOverride;
+    await this.actor.update({ 'system.skills': skills });
+  }
+
+  /**
+   * Weekly hit point recovery (Chap. 1.11): 1d3 alone, 1d6 resting in bed,
+   * 2d3 in a hospital. Chocolate doubles the result and adds +1 to the die.
+   * @this HogwartsActorSheet
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async _onRestRecovery(event, target) {
+    event.preventDefault();
+    const L = (k) => game.i18n.localize(`HOGWARTS.Recovery.${k}`);
+    const choice = await foundry.applications.api.DialogV2.prompt({
+      window: { title: L('Title') },
+      content: `
+        <div class="form-group">
+          <label>${L('Mode')}</label>
+          <select name="mode">
+            <option value="1d3">${L('Alone')} (1d3)</option>
+            <option value="1d6">${L('BedRest')} (1d6)</option>
+            <option value="2d3">${L('Hospital')} (2d3)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label><input type="checkbox" name="chocolate" /> ${L('Chocolate')}</label>
+        </div>`,
+      ok: {
+        label: L('Roll'),
+        callback: (ev, button) => ({
+          mode: button.form.elements.mode.value,
+          chocolate: button.form.elements.chocolate.checked,
+        }),
+      },
+      rejectClose: false,
+      modal: true,
+    }).catch(() => null);
+    if (!choice) return;
+
+    const roll = new Roll(choice.mode);
+    await roll.evaluate();
+    const base = Number(roll.total) || 0;
+    const healed = choice.chocolate ? (base + 1) * 2 : base;
+
+    const hp = this.actor.system.health ?? {};
+    const before = Number(hp.value) || 0;
+    const max = Number(hp.max) || before;
+    const after = Math.min(max, before + healed);
+
+    await this.actor.update({
+      'system.health.value': after,
+      // A week of rest clears accumulated non-lethal damage (Chap. 1.10.1).
+      'system.healthNonLethal.value': 0,
+      'system.conditions.staggered': false,
+    });
+
+    let content = `<div class="hogwarts-chat-card"><header class="card-header"><h3>${this.actor.name}</h3><span class="card-type">${L('Title')}</span></header>`;
+    content += `<div class="card-row">${choice.mode} → <span class="roll-value">${base}</span>${choice.chocolate ? ` ${L('ChocolateApplied')} → <strong>${healed}</strong>` : ''}</div>`;
+    content += `<div class="card-row"><strong>${L('Result')}:</strong> ${before} → ${after} / ${max}</div>`;
+    if (after === max && before + healed > max) content += `<div class="card-row">${L('CappedAtMax')}</div>`;
+    content += '</div>';
+
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+      content,
+      rolls: [roll],
+      rollMode: game.settings.get('core', 'rollMode'),
+    });
+  }
+
+  /**
+   * Reaction state for the current combat round. Reactions are per-round, so
+   * the stored round number is what makes a stale flag harmless out of combat.
+   * @returns {{round: number, dodged: boolean, parried: boolean}}
+   * @protected
+   */
+  get _reactions() {
+    const round = game.combat?.round ?? 0;
+    const f = this.actor.getFlag('hogwarts-system', 'reactions') ?? {};
+    return f.round === round
+      ? { round, dodged: !!f.dodged, parried: !!f.parried }
+      : { round, dodged: false, parried: false };
+  }
+
+  /**
+   * Dodge (Chap. 2.5.1). A dodging character cannot attack this round, but may
+   * still parry. Dodging never works against spells.
+   * @this HogwartsActorSheet
+   * @param {PointerEvent} event
+   */
+  static async _onRollDodge(event) {
+    event.preventDefault();
+    const skill = (this.actor.system.skills ?? []).find((s) => s.name === 'Esquive');
+    if (!skill) return ui.notifications.warn(game.i18n.localize('HOGWARTS.Reaction.NoDodgeSkill'));
+    const state = this._reactions;
+    await this._rollReaction({
+      kind: 'Dodge',
+      target: Number(skill.value) || 0,
+      skillName: 'Esquive',
+      notes: [
+        game.i18n.localize('HOGWARTS.Reaction.DodgeNoAttack'),
+        game.i18n.localize('HOGWARTS.Reaction.NotVsSpells'),
+      ],
+    });
+    await this.actor.setFlag('hogwarts-system', 'reactions', { ...state, dodged: true });
+  }
+
+  /**
+   * Parry (Chap. 2.5.2). Parrying is a roll on the attacking skill, limited to
+   * once per round, melee only, and never against spells. An equipped shield
+   * adds its bonus here; the same figure penalises the character's attacks.
+   * @this HogwartsActorSheet
+   * @param {PointerEvent} event
+   */
+  static async _onRollParry(event) {
+    event.preventDefault();
+    const state = this._reactions;
+    if (state.parried && game.combat) {
+      return ui.notifications.warn(game.i18n.localize('HOGWARTS.Reaction.AlreadyParried'));
+    }
+
+    const candidates = (this.actor.system.skills ?? [])
+      .map((s, i) => ({ ...s, i }))
+      .filter((s) => /bagarre|arme|duel|acrobatie|athl/i.test(s.name));
+    if (!candidates.length) return ui.notifications.warn(game.i18n.localize('HOGWARTS.Reaction.NoParrySkill'));
+
+    const shield = Number(this.actor.system.shieldBonus) || 0;
+    const options = candidates.map((s) => `<option value="${s.i}">${s.name} (${s.value})</option>`).join('');
+    const choice = await foundry.applications.api.DialogV2.prompt({
+      window: { title: game.i18n.localize('HOGWARTS.Reaction.Parry') },
+      content: `<div class="form-group"><label>${game.i18n.localize('HOGWARTS.Reaction.ParrySkill')}</label>
+                <select name="skill">${options}</select></div>`
+        + (shield ? `<p class="notes">${game.i18n.format('HOGWARTS.Reaction.ShieldNote', { bonus: shield })}</p>` : ''),
+      ok: {
+        label: game.i18n.localize('HOGWARTS.Recovery.Roll'),
+        callback: (ev, b) => Number(b.form.elements.skill.value),
+      },
+      rejectClose: false,
+      modal: true,
+    }).catch(() => null);
+    if (choice === null || choice === undefined || Number.isNaN(choice)) return;
+
+    const skill = this.actor.system.skills[choice];
+    const notes = [
+      game.i18n.localize('HOGWARTS.Reaction.MeleeOnly'),
+      game.i18n.localize('HOGWARTS.Reaction.NotVsSpells'),
+    ];
+    if (shield) notes.push(game.i18n.format('HOGWARTS.Reaction.ShieldNote', { bonus: shield }));
+
+    await this._rollReaction({
+      kind: 'Parry',
+      target: (Number(skill.value) || 0) + shield,
+      skillName: skill.name,
+      notes,
+    });
+    await this.actor.setFlag('hogwarts-system', 'reactions', { ...state, parried: true });
+  }
+
+  /**
+   * Shared d100 resolution for a reaction, including the stress penalty.
+   * @param {{kind: string, target: number, skillName: string, notes: string[]}} opts
+   * @protected
+   */
+  async _rollReaction({ kind, target, skillName, notes }) {
+    const stress = Number(this.actor.system.stress?.value) || 0;
+    const finalTarget = Math.max(0, target - stress);
+    const roll = new Roll('1d100');
+    await roll.evaluate();
+    const r = Number(roll.total) || 0;
+    const degree = _degreeOf(r, finalTarget);
+
+    const title = game.i18n.localize(`HOGWARTS.Reaction.${kind}`);
+    const stressText = stress ? ` (stress −${stress})` : '';
+    let content = `<div class="hogwarts-chat-card"><header class="card-header"><h3>${this.actor.name}</h3>`
+      + `<span class="card-type">${title}</span></header>`
+      + `<div class="card-row"><strong>${skillName}:</strong> ${finalTarget}${stressText}</div>`
+      + `<div class="card-row"><strong>${game.i18n.localize('HOGWARTS.Chat.Roll')}:</strong> `
+      + `<span class="roll-value">${r}</span> → ${_degreeBadge(degree)}</div>`;
+    for (const n of notes) content += `<div class="card-row reaction-note">${n}</div>`;
+    content += '</div>';
+
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+      content,
+      rolls: [roll],
+      rollMode: game.settings.get('core', 'rollMode'),
+    });
   }
 
   /**
@@ -1802,10 +2105,7 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
     await roll.evaluate();
     const r = Number(roll.total) || 0;
 
-    let degree = 'Fail';
-    if (r <= 5) degree = 'Critical';
-    else if (r <= targetValue) degree = 'Success';
-    else if (r >= 96) degree = 'Fumble';
+    const degree = _degreeOf(r, targetValue);
 
     const degreeLabel = game.i18n.localize(`HOGWARTS.Roll.Degree.${degree}`);
     const chatContent = `
@@ -1886,6 +2186,8 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
         if (isMultiplier) multiplier *= fx.value;
         else bonus += fx.value;
       }
+      // Some ancestries make experience in a skill a third higher (§17.2).
+      if (skill.hybridXp) multiplier *= 4 / 3;
       return { multiplier, bonus };
     };
 
@@ -1899,14 +2201,28 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
       const r = Number(roll.total) || 0;
       const currentValue = Number(s.value) || 0;
 
-      if (r > currentValue) {
-        // Skill improves: roll 1d6 then apply modifiers
-        const increaseRoll = new Roll('1d6');
-        await increaseRoll.evaluate();
-        allRolls.push(increaseRoll);
-        const rawIncrease = Number(increaseRoll.total) || 1;
-        const { multiplier, bonus } = getXPMods(s);
-        const increase = Math.max(1, Math.ceil(rawIncrease * multiplier) + bonus);
+      // From 90% on, the chance to improve is INT itself and the gain is +1
+      // whatever happens (l. 6836-6837).
+      const mastered = currentValue >= 90;
+      const intScore = Number(this.actor.system.stats?.int?.total ?? this.actor.system.stats?.int?.value) || 0;
+      const improved = mastered ? r <= intScore : r > currentValue;
+
+      if (improved) {
+        let increase = 1;
+        let rawIncrease = null;
+        let multiplier = 1;
+        let bonus = 0;
+
+        if (!mastered) {
+          const increaseRoll = new Roll('1d6');
+          await increaseRoll.evaluate();
+          allRolls.push(increaseRoll);
+          rawIncrease = Number(increaseRoll.total) || 1;
+          ({ multiplier, bonus } = getXPMods(s));
+          // The canonical +1 (l. 6834) sits outside the homebrew multiplier.
+          increase = Math.max(1, Math.ceil(rawIncrease * multiplier) + 1 + bonus);
+        }
+
         s.spent = (Number(s.spent) || 0) + increase;
         s.xpCheck = false;
         updated = true;
@@ -1916,8 +2232,10 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
           roll: r,
           d6: rawIncrease,
           current: currentValue,
+          target: mastered ? intScore : currentValue,
+          mastered,
           increase,
-          rawIncrease: (multiplier !== 1 || bonus !== 0) ? rawIncrease : null,
+          rawIncrease: mastered ? null : rawIncrease,
           multiplier: multiplier !== 1 ? multiplier : null,
           bonus: bonus !== 0 ? bonus : null,
           success: true,
@@ -1931,6 +2249,8 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
           roll: r,
           d6: null,
           current: currentValue,
+          target: mastered ? intScore : currentValue,
+          mastered,
           increase: 0,
           success: false,
         });
@@ -1955,17 +2275,21 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
         ? `1d100 → ${res.roll}<br>1d6 → ${res.d6}`
         : `1d100 → ${res.roll}`;
       const rollValue = `<span class="roll-value" data-tooltip="${tip}">${res.roll}</span>`;
+      const rule = res.mastered ? ` <em class="xp-mod">(≥ 90 % → INT)</em>` : '';
       if (res.success) {
         let modDisplay = '';
         if (res.rawIncrease !== null) {
           const parts = [`1d6=${res.rawIncrease}`];
           if (res.multiplier !== null) parts.push(`×${res.multiplier}`);
+          parts.push('+1');
           if (res.bonus !== null) parts.push(`${res.bonus >= 0 ? '+' : ''}${res.bonus}`);
           modDisplay = ` <em class="xp-mod">(${parts.join(' ')})</em>`;
         }
-        content += `<div class="card-row xp-success">✓ ${nameDisplay}: ${rolledLabel} ${rollValue} > ${res.current} → +${res.increase}${modDisplay}</div>`;
+        const comparison = res.mastered ? `≤ ${res.target}` : `> ${res.current}`;
+        content += `<div class="card-row xp-success">✓ ${nameDisplay}: ${rolledLabel} ${rollValue} ${comparison} → +${res.increase}${modDisplay}${rule}</div>`;
       } else {
-        content += `<div class="card-row xp-fail">✗ ${nameDisplay}: ${rolledLabel} ${rollValue} ≤ ${res.current}</div>`;
+        const comparison = res.mastered ? `> ${res.target}` : `≤ ${res.current}`;
+        content += `<div class="card-row xp-fail">✗ ${nameDisplay}: ${rolledLabel} ${rollValue} ${comparison}${rule}</div>`;
       }
     }
     content += `</div>`;
@@ -1974,6 +2298,249 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
       content,
       rolls: allRolls,
+      rollMode: game.settings.get('core', 'rollMode'),
+    });
+  }
+
+  /**
+   * Credit one school event: the very first week, then each of the three terms
+   * (§7.3 l. 6841-6850, §25.1 l. 28185-28196). The counter resets on its own
+   * when the pupil moves up a year, so a term can never be granted twice.
+   * @this HogwartsActorSheet
+   */
+  static async _onSchoolTermXP(event, target) {
+    event.preventDefault();
+    const year = Number(this.actor.system.profile?.year) || 1;
+    const progress = this.actor.system.experience?.school ?? {};
+    const periods = progress.year === year ? Number(progress.periods) || 0 : 0;
+    const mode = game.settings.get('hogwarts-system', 'schoolXpMode') ?? 'flat';
+
+    const firstWeekPending = year === 1 && !progress.firstWeek;
+    if (!firstWeekPending && periods >= 3) {
+      return ui.notifications.warn(game.i18n.localize('HOGWARTS.Roll.XP.AllTermsDone'));
+    }
+
+    const skills = foundry.utils.deepClone(this.actor.system.skills ?? []);
+    const cursus = skills.filter((s) => s.category === 'school' && !s.unavailable);
+    if (!cursus.length) return ui.notifications.warn(game.i18n.localize('HOGWARTS.Roll.XP.NoSchoolSkills'));
+
+    // §7.3 makes the first week a flat +10%; §25.1 rolls for it like any term.
+    const flatBonus = firstWeekPending && mode === 'tapered' ? CONFIG.HOGWARTS.schoolFirstWeek.tapered : null;
+    const formula = mode === 'tapered'
+      ? CONFIG.HOGWARTS.schoolXpTapered[Math.min(year, 7) - 1]
+      : CONFIG.HOGWARTS.schoolXpFlat;
+
+    const rolls = [];
+    const lines = [];
+    for (const skill of cursus) {
+      let gain = flatBonus;
+      if (gain === null) {
+        const roll = new Roll(formula);
+        await roll.evaluate();
+        rolls.push(roll);
+        gain = Number(roll.total) || 0;
+      }
+      const headroom = Math.max(0, (Number(skill.max) || 0) - (Number(skill.base) || 0) - (Number(skill.spent) || 0));
+      const applied = Math.min(gain, headroom);
+      skill.spent = (Number(skill.spent) || 0) + applied;
+      lines.push(`<div class="card-row">${skill.name}: +${applied}${applied < gain ? ` <em class="xp-mod">(${gain}, plafonné)</em>` : ''}</div>`);
+    }
+
+    await this.actor.update({
+      'system.skills': skills,
+      'system.experience.school.year': year,
+      'system.experience.school.periods': firstWeekPending ? periods : periods + 1,
+      'system.experience.school.firstWeek': progress.firstWeek || firstWeekPending,
+    });
+
+    const heading = firstWeekPending
+      ? game.i18n.localize('HOGWARTS.Roll.XP.FirstWeek')
+      : game.i18n.format('HOGWARTS.Roll.XP.Term', { n: periods + 1 });
+    const detail = flatBonus !== null ? `+${flatBonus}%` : formula;
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+      content: `<div class="hogwarts-chat-card">
+        <header class="card-header"><h3>${heading}</h3><span class="card-type">${game.i18n.localize('HOGWARTS.Roll.XP.School')}</span></header>
+        <div class="card-row"><em>${detail}</em></div>${lines.join('')}</div>`,
+      rolls,
+      rollMode: game.settings.get('core', 'rollMode'),
+    });
+  }
+
+  /**
+   * Total the end-of-year rewards into the pool the player will spread later
+   * (§25.2, l. 28293-28300).
+   * @this HogwartsActorSheet
+   */
+  static async _onYearEndXP(event, target) {
+    event.preventDefault();
+    const year = Number(this.actor.system.profile?.year) || 1;
+    const rows = CONFIG.HOGWARTS.yearEndRewards.map((r) => {
+      const label = game.i18n.localize(`HOGWARTS.Roll.XP.Reward.${r.key}`);
+      // A signed reward spans ±year, so it needs a field rather than a checkbox.
+      const fixed = r.perYear !== undefined && r.min === undefined && !r.signed
+        ? year * r.perYear + (r.flat ?? 0)
+        : null;
+      const min = r.signed ? -year : (r.min ?? 0);
+      const max = r.signed ? year : (r.max ?? 0);
+      return { key: r.key, label, fixed, min, max };
+    });
+
+    const html = rows.map((r) => r.fixed !== null
+      ? `<div class="form-group"><label>${r.label}</label>
+           <input type="checkbox" name="${r.key}" checked /> <span>+${r.fixed}%</span></div>`
+      : `<div class="form-group"><label>${r.label}</label>
+           <input type="number" name="${r.key}" value="0" min="${r.min}" max="${r.max}" step="1" />
+           <span class="hint">${r.min}…${r.max}</span></div>`).join('');
+
+    const total = await foundry.applications.api.DialogV2.prompt({
+      window: { title: game.i18n.localize('HOGWARTS.Roll.XP.YearEnd') },
+      content: `<div class="year-end-form">${html}</div>`,
+      ok: {
+        label: game.i18n.localize('OK'),
+        callback: (ev, button) => rows.reduce((sum, r) => {
+          const field = button.form.elements[r.key];
+          if (r.fixed !== null) return sum + (field?.checked ? r.fixed : 0);
+          const v = Number(field?.value) || 0;
+          return sum + Math.min(r.max, Math.max(r.min, v));
+        }, 0),
+      },
+      rejectClose: false,
+      modal: true,
+    }).catch(() => null);
+    if (total === null) return;
+
+    await this._creditPool(Math.max(0, total), game.i18n.localize('HOGWARTS.Roll.XP.YearEnd'));
+  }
+
+  /**
+   * Holiday gain for a pupil who goes home rather than playing (l. 28202).
+   * @this HogwartsActorSheet
+   */
+  static async _onHolidayXP(event, target) {
+    event.preventDefault();
+    const roll = new Roll(CONFIG.HOGWARTS.holidayXpFormula);
+    await roll.evaluate();
+    await this._creditPool(Number(roll.total) || 0, game.i18n.localize('HOGWARTS.Roll.XP.Holiday'), [roll]);
+  }
+
+  /** Add percentages to the pool and announce it. */
+  async _creditPool(amount, reason, rolls = []) {
+    const pool = (Number(this.actor.system.experience?.pool) || 0) + amount;
+    await this.actor.update({ 'system.experience.pool': pool });
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+      content: `<div class="hogwarts-chat-card">
+        <header class="card-header"><h3>${reason}</h3><span class="card-type">${game.i18n.localize('HOGWARTS.Roll.XP.Pool')}</span></header>
+        <div class="card-row"><strong>+${amount}%</strong> → ${game.i18n.localize('HOGWARTS.Roll.XP.Pool')}: ${pool}%</div></div>`,
+      rolls,
+      rollMode: game.settings.get('core', 'rollMode'),
+    });
+  }
+
+  /**
+   * Spread the pool over non-school skills, or trade 5% for a brand new Lore or
+   * Language (l. 28308-28316).
+   * @this HogwartsActorSheet
+   */
+  static async _onSpendPool(event, target) {
+    event.preventDefault();
+    const pool = Number(this.actor.system.experience?.pool) || 0;
+    if (pool <= 0) return ui.notifications.warn(game.i18n.localize('HOGWARTS.Roll.XP.EmptyPool'));
+
+    const year = Number(this.actor.system.profile?.year) || 1;
+    const unlock = CONFIG.HOGWARTS.poolUnlock;
+    const skills = foundry.utils.deepClone(this.actor.system.skills ?? []);
+    const eligible = skills
+      .map((s, index) => ({ s, index }))
+      .filter(({ s }) => CONFIG.HOGWARTS.poolSpendCategories.includes(s.category) && !s.unavailable)
+      .map((e) => ({
+        ...e,
+        headroom: Math.max(0, (Number(e.s.max) || 0) - (Number(e.s.base) || 0) - (Number(e.s.spent) || 0)),
+      }))
+      .filter((e) => e.headroom > 0);
+
+    const rowsHtml = eligible.map((e) => `
+      <div class="form-group pool-row">
+        <label>${e.s.name}${e.s.spec ? ` (${e.s.spec})` : ''}</label>
+        <input type="number" name="skill-${e.index}" value="0" min="0" max="${e.headroom}" step="1" />
+        <span class="hint">${e.s.value} / ${e.s.max}</span>
+      </div>`).join('');
+
+    const result = await foundry.applications.api.DialogV2.prompt({
+      // The stylesheet is namespaced under .hogwarts-system, which a bare dialog lacks.
+      classes: ['hogwarts-system'],
+      window: { title: game.i18n.format('HOGWARTS.Roll.XP.SpendPool', { pool }) },
+      content: `<div class="xp-pool-form">
+          <p class="notes">${game.i18n.format('HOGWARTS.Roll.XP.SpendHint', { pool })}</p>
+          <div class="form-group unlock-row">
+            <label>${game.i18n.format('HOGWARTS.Roll.XP.Unlock', { cost: unlock.cost })}</label>
+            <select name="unlockType">
+              <option value="">—</option>
+              <option value="lore">${game.i18n.localize('HOGWARTS.Roll.XP.UnlockLore')}</option>
+              <option value="language">${game.i18n.localize('HOGWARTS.Roll.XP.UnlockLanguage')}</option>
+            </select>
+            <input type="text" name="unlockName" placeholder="${game.i18n.localize('HOGWARTS.Roll.XP.UnlockName')}" />
+          </div>
+          <hr />${rowsHtml}
+        </div>`,
+      ok: {
+        label: game.i18n.localize('OK'),
+        callback: (ev, button) => {
+          const form = button.form;
+          const allocations = eligible
+            .map((e) => ({ ...e, amount: Math.min(e.headroom, Math.max(0, Number(form.elements[`skill-${e.index}`]?.value) || 0)) }))
+            .filter((e) => e.amount > 0);
+          return {
+            allocations,
+            unlockType: form.elements.unlockType?.value || '',
+            unlockName: (form.elements.unlockName?.value || '').trim(),
+          };
+        },
+      },
+      rejectClose: false,
+      modal: true,
+    }).catch(() => null);
+    if (!result) return;
+
+    const { allocations, unlockType, unlockName } = result;
+    const unlockCost = unlockType && unlockName ? unlock.cost : 0;
+    const spent = allocations.reduce((sum, a) => sum + a.amount, 0) + unlockCost;
+    if (spent > pool) {
+      return ui.notifications.warn(game.i18n.format('HOGWARTS.Roll.XP.TooMuch', { spent, pool }));
+    }
+    if (!spent) return;
+
+    const lines = [];
+    for (const a of allocations) {
+      skills[a.index].spent = (Number(skills[a.index].spent) || 0) + a.amount;
+      lines.push(`<div class="card-row">${skills[a.index].name}: +${a.amount}%</div>`);
+    }
+    if (unlockCost) {
+      const spec = unlockType === 'lore' ? unlock.lore : unlock.language;
+      const max = unlockType === 'lore' ? spec.maxFlat + spec.maxPerYear * year : spec.max;
+      skills.push({
+        name: unlockName,
+        base: spec.base,
+        max,
+        maxOverride: true,
+        value: spec.value,
+        spent: spec.value,
+        category: spec.category,
+        spec: '',
+        custom: true,
+        xpCheck: false,
+      });
+      lines.push(`<div class="card-row">${game.i18n.format('HOGWARTS.Roll.XP.Unlocked', { name: unlockName, value: spec.value, max })}</div>`);
+    }
+
+    await this.actor.update({ 'system.skills': skills, 'system.experience.pool': pool - spent });
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+      content: `<div class="hogwarts-chat-card">
+        <header class="card-header"><h3>${game.i18n.localize('HOGWARTS.Roll.XP.SpendTitle')}</h3><span class="card-type">${game.i18n.localize('HOGWARTS.Roll.XP.Pool')}</span></header>
+        ${lines.join('')}
+        <div class="card-row"><em>${game.i18n.localize('HOGWARTS.Roll.XP.Pool')}: ${pool} → ${pool - spent}%</em></div></div>`,
       rollMode: game.settings.get('core', 'rollMode'),
     });
   }
@@ -2129,10 +2696,7 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
     const roll = new Roll('1d100', this.actor.getRollData());
     await roll.evaluate();
     const r = Number(roll.total);
-    let degree = 'Fail';
-    if (r <= 5) degree = 'Critical';
-    else if (r <= chance) degree = 'Success';
-    else if (r >= 96) degree = 'Fumble';
+    const degree = _degreeOf(r, chance);
 
     const degreeLabel = game.i18n.localize(`HOGWARTS.Roll.Degree.${degree}`);
     
@@ -2188,10 +2752,7 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
     const roll = new Roll('1d100', this.actor.getRollData());
     await roll.evaluate();
     const r = Number(roll.total);
-    let degree = 'Fail';
-    if (r <= 5) degree = 'Critical';
-    else if (r <= chance) degree = 'Success';
-    else if (r >= 96) degree = 'Fumble';
+    const degree = _degreeOf(r, chance);
 
     const degreeLabel = game.i18n.localize(`HOGWARTS.Roll.Degree.${degree}`);
     const content = `
@@ -2221,15 +2782,12 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
     const stat = this.actor.system.stats?.[statKey];
     if (!stat) return;
 
-    const value = Number(stat.value) || 0;
+    const value = Number(stat.total ?? stat.value) || 0;
     const chance = value * 5;
     const roll = new Roll('1d100', this.actor.getRollData());
     await roll.evaluate();
     const r = Number(roll.total);
-    let degree = 'Fail';
-    if (r <= 5) degree = 'Critical';
-    else if (r <= chance) degree = 'Success';
-    else if (r >= 96) degree = 'Fumble';
+    const degree = _degreeOf(r, chance);
 
     const content = `
       <div class="hogwarts-chat-card">

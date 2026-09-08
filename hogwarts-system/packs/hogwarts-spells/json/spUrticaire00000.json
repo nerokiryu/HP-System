@@ -1,0 +1,19 @@
+{
+  "_id": "spUrticaire00000",
+  "name": "Urticaire",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Provoque de violente crises d’urticaire sur tout le corps de la cible.</p><p>Effets : Dégâts 1d4-2 ; CHA-2</p><p>Durée : -</p>",
+    "spellLevel": 3,
+    "spellType": "S",
+    "target": [
+      "P"
+    ],
+    "incantation": "",
+    "malus": -35,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

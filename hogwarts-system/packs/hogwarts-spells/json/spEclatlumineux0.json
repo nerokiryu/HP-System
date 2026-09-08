@@ -1,0 +1,19 @@
+{
+  "_id": "spEclatlumineux0",
+  "name": "Éclat lumineux",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Inflige un malus de 50% à toutes les actions des personnages qui voient le flash.</p><p>Durée : 1 round</p><p>Formule extrême : -</p>",
+    "spellLevel": 1,
+    "spellType": "S",
+    "target": [
+      "X"
+    ],
+    "incantation": "Luminaria subitus",
+    "malus": -10,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

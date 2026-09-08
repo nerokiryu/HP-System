@@ -1,0 +1,13 @@
+{
+  "_id": "cpTeinturedethym",
+  "name": "Teinture de thym",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>De la teinture obtenue à partir de thym, une plante aromatique employée en cuisine et en médecine.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Felix Felicis\nPhéromones\nPotion anti-paralysie\nPotion contre la toux",
+    "otherUses": "• Antibiotique • Condiment • Vertus médicinales"
+  }
+}

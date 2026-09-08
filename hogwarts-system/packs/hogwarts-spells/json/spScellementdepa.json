@@ -1,0 +1,19 @@
+{
+  "_id": "spScellementdepa",
+  "name": "Scellement de parchemin",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Scelle un parchemin magiquement d’un coup de baguette. Celui-ci ne peut alors être lu que si on lui donne un nouveau coup de baguette.</p><p>Durée : Permanent</p><p>Formule extrême : -</p>",
+    "spellLevel": 3,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "",
+    "malus": -30,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

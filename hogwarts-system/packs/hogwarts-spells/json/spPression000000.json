@@ -1,0 +1,19 @@
+{
+  "_id": "spPression000000",
+  "name": "Pression",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Exerce une forte pression sur une surface jusqu’à ce que celle-ci se creuse ou cède. La durée du sortilège dépend de la résistance des objets : POU/FOR.</p><p>Durée : Volontaire</p><p>Formule extrême : -</p>",
+    "spellLevel": 3,
+    "spellType": "S",
+    "target": [
+      "O"
+    ],
+    "incantation": "Deprimo",
+    "malus": -30,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "_id": "spBouchesoudee00",
+  "name": "Bouche soudée",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Fait disparaître la bouche d’une personne ou d’un animal. La bouche semble alors n'avoir jamais existé, de la peau la recouvrant.</p><p>Durée : Variable (heures)</p><p>Effets : Mutisme</p><p>Formule extrême : Durée : Variable (heures +2)</p>",
+    "spellLevel": 3,
+    "spellType": "S",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "Oscausi",
+    "malus": -30,
+    "extremeFormula": true,
+    "malusExtremeFormula": -35,
+    "malusMastered": -20
+  }
+}

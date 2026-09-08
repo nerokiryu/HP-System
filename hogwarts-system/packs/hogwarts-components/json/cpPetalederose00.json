@@ -1,0 +1,13 @@
+{
+  "_id": "cpPetalederose00",
+  "name": "Pétale de rose",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des pétales provenant de rose</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Amortentia\nBeauté\nBeauté illusoire\nPhiltre d’amour avancé\nPhiltre d’amour ordinaire\nPotion de haine",
+    "otherUses": "-"
+  }
+}

@@ -5,6 +5,11 @@
   data-tab='attributes'
 >
   <div class='form-group'>
+    <label>{{localize 'HOGWARTS.Broom.Brand'}}</label>
+    <input type='text' name='system.brand' value='{{system.brand}}' />
+  </div>
+
+  <div class='form-group'>
     <label>{{localize 'HOGWARTS.Broom.PBPCost'}}</label>
     <input
       type='number'
@@ -13,5 +18,10 @@
       step='0.5'
       data-dtype='Number'
     />
+  </div>
+
+  <div class='form-group'>
+    <label>{{localize 'HOGWARTS.Broom.Characteristics'}}</label>
+    <textarea name='system.characteristics' rows='3'>{{system.characteristics}}</textarea>
   </div>
 </section>

@@ -1,0 +1,33 @@
+{
+  "_id": "poPotiondeprotec",
+  "name": "Potion de protection contre le feu",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Une potion qui permet de se prémunir contre le feu et ses effets.</p><p>Effet : Rend le consommateur insensible au feu durant une certaine période. Cet effet ne protège cependant pas ses affaires.</p><p>Durée : 2d4+2 heures</p>",
+    "potionLevel": 2,
+    "malus": -20,
+    "target": "A/P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Champignon explosif",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Sang de Salamandre",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Poudre de verrue",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "spReversion00000",
+  "name": "Réversion",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Ce sortilège permet de ramener un objet dans sa position ou son état d'origine. Peut faire bouger l’objet ou le réparer.</p><p>Durée : -</p><p>Formule extrême : -</p>",
+    "spellLevel": 3,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "Reverte",
+    "malus": -25,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

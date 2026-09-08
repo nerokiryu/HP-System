@@ -1,0 +1,13 @@
+{
+  "_id": "cpMoucheaviande0",
+  "name": "Mouche à viande",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une mouche à viande commune.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "• Nourriture pour animaux"
+  }
+}

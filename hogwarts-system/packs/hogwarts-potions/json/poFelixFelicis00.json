@@ -1,0 +1,51 @@
+{
+  "_id": "poFelixFelicis00",
+  "name": "Felix Felicis",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Cette potion, qu’il faut presque six mois pour fabriquer, donne une chance extraordinaire aux personnes qui la consomment.</p><p>Effet : compétence chance x10</p><p>Durée : 1d6+1 heures.</p><p>Effets secondaires : Étourdissements, tendance à l'imprudence et un excès de confiance en soi.</p>",
+    "potionLevel": 5,
+    "malus": -50,
+    "target": "P",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Essence de Rue",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Bulbe de Gloire des Neiges",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Œuf d’Occamy",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Œuf de Serpencendre",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Teinture de thym",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Tentacule de Murlap",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

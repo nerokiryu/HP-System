@@ -1,0 +1,19 @@
+{
+  "_id": "spAntimalefice20",
+  "name": "Anti-maléfice du Supplice de Métamorphose",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet de contrer les effets du maléfice du Supplice de Métamorphose</p><p>Formule extrême : -</p>",
+    "spellLevel": 6,
+    "spellType": "E",
+    "target": [
+      "P"
+    ],
+    "incantation": "",
+    "malus": -75,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

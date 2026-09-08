@@ -1,0 +1,33 @@
+{
+  "_id": "poPoisonpernicie",
+  "name": "Poison pernicieux",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Ce poison provoque durant 1 heure de violents vomissements qui affaiblissent la cible.</p><p>Effets : -1 point de vie et malus à toutes les compétences physiques durant 1 jour.</p><p>VIRulence : 12</p>",
+    "potionLevel": 3,
+    "malus": -30,
+    "target": "A/P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Aconit",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Œuf de Doxy",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Sanguinaire",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

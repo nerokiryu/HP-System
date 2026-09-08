@@ -1,0 +1,13 @@
+{
+  "_id": "cpDistillatdecam",
+  "name": "Distillat de camphre",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Préparation obtenue par la distillation de camphre</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Cataplasme contre les morsures de Murlap\nTraitement des morsures de chiens fous",
+    "otherUses": "• Désinfectant"
+  }
+}

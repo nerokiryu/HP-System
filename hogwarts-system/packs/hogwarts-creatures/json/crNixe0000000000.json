@@ -1,0 +1,69 @@
+{
+  "_id": "crNixe0000000000",
+  "name": "Nixe",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 8,
+      "max": 8
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 8
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXX",
+    "stats": {
+      "str": {
+        "value": 7,
+        "formula": ""
+      },
+      "con": {
+        "value": 8,
+        "formula": ""
+      },
+      "siz": {
+        "value": 7,
+        "formula": ""
+      },
+      "dex": {
+        "value": 16,
+        "formula": ""
+      },
+      "int": {
+        "value": 10,
+        "formula": ""
+      },
+      "pow": {
+        "value": 12,
+        "formula": ""
+      },
+      "app": {
+        "value": 8,
+        "formula": ""
+      },
+      "per": {
+        "value": 14,
+        "formula": ""
+      }
+    },
+    "movement": {
+      "land": 12,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 1
+    },
+    "attacks": "Morsure/Griffes 30% (1)",
+    "skills": "Acrobatie : 50% ; Athlétisme : 40% ; Discrétion 45% ; Esquive : 45% ; Orientation : 45% ; Survie : 25% ; Pistage : 50% ; Vigilance : 50%",
+    "powers": "<p>Camouflage caméléon : Nixe possède la capacité de changer la couleur de ses écailles à la manière des caméléons afin de se camoufler dans son environnement. Ce camouflage est d'ailleurs très rapide et ne lui prend que quelques secondes pour être parfait. Quand il est camouflé, Nixe bénéficie d’un bonus de discrétion de 40%. Ce bonus passe à 20% s’il se déplace. Charognard glouton : Peut consommer tout et n’importe quoi, que cela soit comestible ou non – sans que cela ne lui cause de problème. Guérison : Les pouvoirs de guérison de Nixe sont bien supérieurs à la moyenne. Quand il est blessé, son corps se régénère magiquement pour soigner les blessures subies. Cela se traduit par une régénération de 1 point de vie par jour et par une vitesse de régénération des points de vie en cas de repos double par rapport à un être humain classique. Haine envers les Moldus : la faculté de Nixe à repérer les Moldus s’est changée en haine quand il s’est vu altéré par les effets des potions ingérées. Ce faisant, il attaquera les Moldus et Né- Moldus dès qu’il en aura l’occasion. Perception (odorat) : Quand il utilise un jet de perception pour l’odorat, il effectue un jet de PERx5 (au lieu de PERx1). Dans ce cas, Nixe peut utiliser son nez ou sa langue de lézard pour ce faire. Perception des Moldus : Nixe peut naturellement faire la différence entre un Moldu et un sorcier. Cette faculté héritée de sa nature Croup lui permet également d’identifier les sorciers Né-Moldus. Pistage : Nixe peut suivre une piste repérée par un jet d’odorat ou de vue. La difficulté du pistage dépendra du terrain, de la météo et de quand date la piste.</p>",
+    "notes": ""
+  }
+}

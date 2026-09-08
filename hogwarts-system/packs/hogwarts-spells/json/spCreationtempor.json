@@ -1,0 +1,19 @@
+{
+  "_id": "spCreationtempor",
+  "name": "Création temporaire",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Métamorphose mineure, ce sort permet de faire apparaître de petits objets (dés, verre, plume, etc.) qui disparaissent très rapidement.</p><p>Durée : 2d4 minutes</p><p>Formule extrême : -</p>",
+    "spellLevel": 0,
+    "spellType": "M",
+    "target": [
+      "X"
+    ],
+    "incantation": "",
+    "malus": -5,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

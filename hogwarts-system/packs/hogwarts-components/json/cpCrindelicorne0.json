@@ -1,0 +1,13 @@
+{
+  "_id": "cpCrindelicorne0",
+  "name": "Crin de licorne",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Du crin provenant de licorne et servant principalement à la fabrication de baguette magique et de potions. Chaque poil coûte entre 7 et 15 Gallions à l’achat.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Beauté\nBeauté illusoire\nPotion Exstimulo",
+    "otherUses": "• Cœur de baguette"
+  }
+}

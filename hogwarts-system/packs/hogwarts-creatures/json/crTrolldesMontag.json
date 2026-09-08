@@ -1,0 +1,69 @@
+{
+  "_id": "crTrolldesMontag",
+  "name": "Troll des Montagnes",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 24,
+      "max": 24
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 24
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "",
+    "stats": {
+      "str": {
+        "value": 28,
+        "formula": "4d6+14"
+      },
+      "con": {
+        "value": 20,
+        "formula": "4d6+6"
+      },
+      "siz": {
+        "value": 28,
+        "formula": "4d6+14"
+      },
+      "dex": {
+        "value": 13,
+        "formula": "2d6+6"
+      },
+      "int": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "pow": {
+        "value": 6,
+        "formula": "1d6+2"
+      },
+      "app": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "per": {
+        "value": 16,
+        "formula": "3d6+5"
+      }
+    },
+    "movement": {
+      "land": 17,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 4
+    },
+    "attacks": "Gourdin : 50% (3d6) Armes de jet : 45% (variable)",
+    "skills": "Acrobatie : 50% ; Athlétisme : 50% ; Discrétion : 60%; Esquive : 45%, Orientation : 35% ; Survie : 25% ; Vigilance : 50%",
+    "powers": "<p>Augmentation de force : Le Troll peut augmenter momentanément sa force physique de 6 unités pour une durée de POUvoir minutes. Cette capacité fatigue cependant le Troll, qui devra ensuite se reposer pour récupérer durant une heure. Il peut utiliser cette capacité jusqu’à trois fois par jour. S’il ne se repose pas après avoir utilisé cette capacité, l’Hybride-Troll est incapable de la réutiliser jusqu’à ce qu’il se soit reposé. Arme improvisée : Le Troll peut utiliser tout objet qui l’entoure comme une arme. Troncs d’arbre, rochers et autre poteaux téléphoniques occasionnent alors des dégâts normaux, sans malus à l’attaque. Ces armes sont cependant moins solides que des armes classiques et finissent immanquablement par se briser. Attaque en rotation (gourdin) : Quand il manie un gourdin (ou tout autre arme improvisée s’en approchant), le Troll peut effectuer une attaque en rotation qui touchera toutes les créatures prises dans l’arc de cercle de cette attaque. Les dégâts occasionnés restent identiques à ceux d’une attaque classique mais peuvent toucher plusieurs cibles. Grande endurance : Le Troll fait partie des créatures les plus endurantes connues. Capable de courir durant des heures, voire même des jours sans s’arrêter. Guérison : Les pouvoirs de guérison des Trolls sont bien supérieurs à la moyenne. Quand il est blessé, le corps du Troll se régénère magiquement pour soigner les blessures subies. Cela se traduit par une régénération de 3 points de vie par jour et par une vitesse de régénération des points de vie en cas de repos triplée par rapport à un être humain classique. Langage rudimentaire : Le Troll est capable de converser avec ses congénères par des grognements gutturaux. Odeur corporelle : Le Troll dégage naturellement une forte odeur qui est considérée comme désagréable pour les autres. Celle-ci rend les jets de PERception (odorat) plus simple pour le repérer, diminuant la difficulté d’une catégorie. Les jets de perception difficiles passent à moyens, les moyens à faciles et les faciles à réussite automatique. Piétinement : Quand il charge une cible, le Troll peut décider de la piétiner en traversant la case occupée par celle-ci. Le piétinement occasionne 2d6+2 dégâts à toutes les cibles qui voient leur case d’occupation traversée par le troll en train de charger. TROLL DES FORETS Le Troll des forêts possède une peau verte et des cheveux qui le font ressembler arbre quand il reste totalement immobile. Moins violent que son homologue des montagnes il n’en est pas moins redoutable.</p>",
+    "notes": ""
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "spChercheproprie",
+  "name": "Cherche propriétaire",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Lancé sur un objet, ce sortilège permet de retrouver son propriétaire.</p><p>L'objet visé par le sort indique alors la direction du propriétaire comme l'aiguille d'une boussole, puis se déplace dans sa direction jusqu'à sa destination.</p><p>Durée : -</p><p>Formule extrême : -</p>",
+    "spellLevel": 2,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "Avensegium",
+    "malus": -20,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "_id": "poGouttedesopila",
+  "name": "Goutte désopilante",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Provoque une hystérie légère chez la personne qui la consomme.</p><p>Effet : -30% à toutes les actions.</p><p>Effets secondaires : sauts émotionnels et développement de phobies.</p><p>Durée : 1 heure</p>",
+    "potionLevel": 2,
+    "malus": -20,
+    "target": "A/P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Feuilles d'Alihotsy",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

@@ -309,7 +309,7 @@ h3.collapsible.collapsed + .collapsible-content {
   font-family: "Roboto", sans-serif;
 }
 .hogwarts-system .sheet-header {
-  flex: 0 auto;
+  flex: 0 0 auto;
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -429,6 +429,372 @@ h3.collapsible.collapsed + .collapsible-content {
 }
 .hogwarts-system .tox .tox-edit-area {
   padding: 0 8px;
+}
+.hogwarts-system .sheet-header .resource-label .resource-action {
+  margin-left: 4px;
+  opacity: 0.7;
+}
+.hogwarts-system .sheet-header .resource-label .resource-action:hover {
+  opacity: 1;
+}
+.hogwarts-system .sheet-header .reaction-buttons {
+  gap: 10px;
+}
+.hogwarts-system .sheet-header .reaction-buttons a {
+  font-size: 16px;
+  opacity: 0.8;
+}
+.hogwarts-system .sheet-header .reaction-buttons a:hover {
+  opacity: 1;
+}
+.hogwarts-system .sheet-header .resource-label .shield-badge {
+  font-size: 10px;
+  padding: 0 3px;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.12);
+}
+.hogwarts-system.house-points .hourglasses {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.hogwarts-system.house-points .hourglasses .hourglass {
+  flex: 1 1 0;
+  min-width: 0;
+  margin: 0;
+  text-align: center;
+}
+.hogwarts-system.house-points .hourglasses .hourglass.house-gryffindor {
+  --gem: #b81b2c;
+  --gem-lit: #ef4f5e;
+}
+.hogwarts-system.house-points .hourglasses .hourglass.house-slytherin {
+  --gem: #1a7a46;
+  --gem-lit: #46c882;
+}
+.hogwarts-system.house-points .hourglasses .hourglass.house-ravenclaw {
+  --gem: #2a4b9b;
+  --gem-lit: #5e8ae0;
+}
+.hogwarts-system.house-points .hourglasses .hourglass.house-hufflepuff {
+  --gem: #d4a017;
+  --gem-lit: #f5d271;
+}
+.hogwarts-system.house-points .hourglasses .hourglass svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 190px;
+  margin: 0 auto;
+}
+.hogwarts-system.house-points .hourglasses .hourglass .glass {
+  fill: rgba(255, 255, 255, 0.03);
+  stroke: rgba(255, 255, 255, 0.4);
+  stroke-width: 1.5;
+}
+.hogwarts-system.house-points .hourglasses .hourglass .sand {
+  fill: var(--gem);
+}
+.hogwarts-system.house-points .hourglasses .hourglass .gem-a {
+  fill: var(--gem-lit);
+  opacity: 0.55;
+}
+.hogwarts-system.house-points .hourglasses .hourglass .gem-b {
+  fill: #fff;
+  opacity: 0.2;
+}
+.hogwarts-system.house-points .hourglasses .hourglass .shine {
+  fill: #fff;
+  opacity: 0.1;
+}
+.hogwarts-system.house-points .hourglasses .hourglass .frame {
+  fill: #6b4a22;
+  stroke: #3d2a12;
+  stroke-width: 1;
+}
+.hogwarts-system.house-points .hourglasses .hourglass.rising svg {
+  animation: hogwarts-gem-flash 0.9s ease-out;
+}
+.hogwarts-system.house-points .hourglasses .hourglass.falling svg {
+  animation: hogwarts-gem-shake 0.5s ease-out;
+}
+.hogwarts-system.house-points .hourglasses .hourglass.leader .frame {
+  fill: #b8912f;
+  stroke: #6b4a22;
+}
+.hogwarts-system.house-points .hourglasses .hourglass figcaption {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  margin-top: 2px;
+}
+.hogwarts-system.house-points .hourglasses .hourglass figcaption .house-name {
+  font-size: 11px;
+  opacity: 0.8;
+}
+.hogwarts-system.house-points .hourglasses .hourglass figcaption .house-total {
+  font-size: 20px;
+  font-weight: bold;
+}
+.hogwarts-system.house-points .hourglasses .hourglass figcaption .house-total.is-leader {
+  color: var(--gem-lit);
+}
+.hogwarts-system.house-points .hourglasses .hourglass.rising figcaption .house-total, .hogwarts-system.house-points .hourglasses .hourglass.falling figcaption .house-total {
+  animation: hogwarts-gem-count 0.9s ease-out;
+}
+.hogwarts-system.house-points .hourglasses .hourglass .house-adjust {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  margin-top: 2px;
+}
+.hogwarts-system.house-points .hourglasses .hourglass .house-adjust input {
+  width: 3.2em;
+  text-align: center;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hogwarts-system.house-points .hourglasses .hourglass svg,
+  .hogwarts-system.house-points .hourglasses .hourglass figcaption .house-total {
+    animation: none;
+  }
+}
+.hogwarts-system.house-points .house-target {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.hogwarts-system.house-points .house-target label {
+  flex: 0 0 auto;
+}
+.hogwarts-system.house-points .house-target select {
+  flex: 1;
+}
+.hogwarts-system.house-points .house-tables {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.hogwarts-system.house-points .house-tables .house-table {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.hogwarts-system.house-points .house-tables .house-table h3 {
+  margin: 0 0 2px;
+  font-size: 14px;
+  border-bottom: 1px solid var(--hogwarts-system-c-faint);
+}
+.hogwarts-system.house-points .house-tables .house-table .legend {
+  margin: 0;
+  font-size: 11px;
+  font-style: italic;
+  opacity: 0.6;
+}
+.hogwarts-system.house-points .house-tables .house-table h4 {
+  margin: 6px 0 2px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+.hogwarts-system.house-points .house-tables .house-table ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.hogwarts-system.house-points .house-tables .house-table li {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.hogwarts-system.house-points .house-tables .house-table .values {
+  opacity: 0.6;
+  white-space: nowrap;
+}
+.hogwarts-system .hybrid-block {
+  margin-top: 10px;
+}
+.hogwarts-system .hybrid-block .hybrid-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+.hogwarts-system .hybrid-block .hybrid-row label {
+  flex: 0 0 7em;
+  font-size: 11px;
+  line-height: 1.15;
+}
+.hogwarts-system .hybrid-block .hybrid-row select {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.hogwarts-system .hybrid-block .hybrid-cost {
+  flex: 0 0 auto;
+  font-size: 10px;
+  opacity: 0.7;
+}
+.hogwarts-system .hybrid-block .hybrid-capabilities {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0;
+  font-size: 12px;
+}
+.hogwarts-system .hybrid-block .hybrid-capabilities li {
+  padding: 1px 0 1px 12px;
+  border-left: 2px solid var(--hogwarts-system-c-faint);
+}
+.hogwarts-system .hybrid-block .hybrid-capabilities .note {
+  opacity: 0.6;
+}
+.hogwarts-system .hybrid-mod {
+  flex: 0 0 auto;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.hogwarts-system .hybrid-mod.bonus {
+  color: #4caf50;
+}
+.hogwarts-system .hybrid-mod.malus {
+  color: #e57373;
+}
+.hogwarts-system .school-xp-actions {
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.hogwarts-system .school-xp-actions .term-counter {
+  font-size: 11px;
+  opacity: 0.7;
+}
+.hogwarts-system .school-xp-actions .xp-pool {
+  margin-left: auto;
+  font-weight: bold;
+}
+.hogwarts-system .school-xp-actions .xp-pool.empty {
+  opacity: 0.45;
+  font-weight: normal;
+}
+.hogwarts-system .xp-pool-form {
+  max-height: 60vh;
+  overflow-y: auto;
+}
+.hogwarts-system .xp-pool-form .unlock-row {
+  flex-wrap: wrap;
+}
+.hogwarts-system .xp-pool-form .unlock-row label {
+  flex: 1 0 100%;
+  margin-bottom: 2px;
+}
+.hogwarts-system .xp-pool-form .unlock-row select {
+  flex: 1 1 10em;
+}
+.hogwarts-system .xp-pool-form .unlock-row input[type=text] {
+  flex: 1 1 10em;
+}
+.hogwarts-system .xp-pool-form .pool-row label {
+  flex: 1;
+}
+.hogwarts-system .xp-pool-form .pool-row input[type=number] {
+  flex: 0 0 4.5em;
+}
+.hogwarts-system .xp-pool-form .pool-row .hint {
+  flex: 0 0 5em;
+  text-align: right;
+  opacity: 0.6;
+  font-size: 11px;
+}
+.hogwarts-system.item .tab.attributes .potion-info-grid {
+  grid-template-columns: 1fr;
+}
+.hogwarts-system.item .tab.attributes .form-group {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(var(--hogwarts-accent-rgb), 0.2);
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+.hogwarts-system.item .tab.attributes .resource,
+.hogwarts-system.item .tab.attributes .form-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  margin-bottom: 4px;
+}
+.hogwarts-system.item .tab.attributes .resource > label,
+.hogwarts-system.item .tab.attributes .resource > .resource-label,
+.hogwarts-system.item .tab.attributes .form-group > label,
+.hogwarts-system.item .tab.attributes .form-group > .resource-label {
+  flex: 0 0 42%;
+  margin-bottom: 0;
+  line-height: 1.2;
+}
+.hogwarts-system.item .tab.attributes .resource > input,
+.hogwarts-system.item .tab.attributes .resource > select,
+.hogwarts-system.item .tab.attributes .resource > .form-fields,
+.hogwarts-system.item .tab.attributes .form-group > input,
+.hogwarts-system.item .tab.attributes .form-group > select,
+.hogwarts-system.item .tab.attributes .form-group > .form-fields {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.hogwarts-system.item .tab.attributes .resource > input[type=checkbox],
+.hogwarts-system.item .tab.attributes .form-group > input[type=checkbox] {
+  flex: 0 0 auto;
+}
+.hogwarts-system.item .tab.attributes .resource:has(> textarea), .hogwarts-system.item .tab.attributes .resource:has(> select[multiple]), .hogwarts-system.item .tab.attributes .resource:has(> .grid), .hogwarts-system.item .tab.attributes .resource:has(> .currency-fields),
+.hogwarts-system.item .tab.attributes .form-group:has(> textarea),
+.hogwarts-system.item .tab.attributes .form-group:has(> select[multiple]),
+.hogwarts-system.item .tab.attributes .form-group:has(> .grid),
+.hogwarts-system.item .tab.attributes .form-group:has(> .currency-fields) {
+  flex-wrap: wrap;
+}
+.hogwarts-system.item .tab.attributes .resource:has(> textarea) > label,
+.hogwarts-system.item .tab.attributes .resource:has(> textarea) > .resource-label, .hogwarts-system.item .tab.attributes .resource:has(> select[multiple]) > label,
+.hogwarts-system.item .tab.attributes .resource:has(> select[multiple]) > .resource-label, .hogwarts-system.item .tab.attributes .resource:has(> .grid) > label,
+.hogwarts-system.item .tab.attributes .resource:has(> .grid) > .resource-label, .hogwarts-system.item .tab.attributes .resource:has(> .currency-fields) > label,
+.hogwarts-system.item .tab.attributes .resource:has(> .currency-fields) > .resource-label,
+.hogwarts-system.item .tab.attributes .form-group:has(> textarea) > label,
+.hogwarts-system.item .tab.attributes .form-group:has(> textarea) > .resource-label,
+.hogwarts-system.item .tab.attributes .form-group:has(> select[multiple]) > label,
+.hogwarts-system.item .tab.attributes .form-group:has(> select[multiple]) > .resource-label,
+.hogwarts-system.item .tab.attributes .form-group:has(> .grid) > label,
+.hogwarts-system.item .tab.attributes .form-group:has(> .grid) > .resource-label,
+.hogwarts-system.item .tab.attributes .form-group:has(> .currency-fields) > label,
+.hogwarts-system.item .tab.attributes .form-group:has(> .currency-fields) > .resource-label {
+  flex: 1 0 100%;
+  margin-bottom: 2px;
+}
+.hogwarts-system.item .tab.attributes .resource:has(> textarea) > textarea,
+.hogwarts-system.item .tab.attributes .resource:has(> textarea) > select[multiple],
+.hogwarts-system.item .tab.attributes .resource:has(> textarea) > .grid,
+.hogwarts-system.item .tab.attributes .resource:has(> textarea) > .currency-fields, .hogwarts-system.item .tab.attributes .resource:has(> select[multiple]) > textarea,
+.hogwarts-system.item .tab.attributes .resource:has(> select[multiple]) > select[multiple],
+.hogwarts-system.item .tab.attributes .resource:has(> select[multiple]) > .grid,
+.hogwarts-system.item .tab.attributes .resource:has(> select[multiple]) > .currency-fields, .hogwarts-system.item .tab.attributes .resource:has(> .grid) > textarea,
+.hogwarts-system.item .tab.attributes .resource:has(> .grid) > select[multiple],
+.hogwarts-system.item .tab.attributes .resource:has(> .grid) > .grid,
+.hogwarts-system.item .tab.attributes .resource:has(> .grid) > .currency-fields, .hogwarts-system.item .tab.attributes .resource:has(> .currency-fields) > textarea,
+.hogwarts-system.item .tab.attributes .resource:has(> .currency-fields) > select[multiple],
+.hogwarts-system.item .tab.attributes .resource:has(> .currency-fields) > .grid,
+.hogwarts-system.item .tab.attributes .resource:has(> .currency-fields) > .currency-fields,
+.hogwarts-system.item .tab.attributes .form-group:has(> textarea) > textarea,
+.hogwarts-system.item .tab.attributes .form-group:has(> textarea) > select[multiple],
+.hogwarts-system.item .tab.attributes .form-group:has(> textarea) > .grid,
+.hogwarts-system.item .tab.attributes .form-group:has(> textarea) > .currency-fields,
+.hogwarts-system.item .tab.attributes .form-group:has(> select[multiple]) > textarea,
+.hogwarts-system.item .tab.attributes .form-group:has(> select[multiple]) > select[multiple],
+.hogwarts-system.item .tab.attributes .form-group:has(> select[multiple]) > .grid,
+.hogwarts-system.item .tab.attributes .form-group:has(> select[multiple]) > .currency-fields,
+.hogwarts-system.item .tab.attributes .form-group:has(> .grid) > textarea,
+.hogwarts-system.item .tab.attributes .form-group:has(> .grid) > select[multiple],
+.hogwarts-system.item .tab.attributes .form-group:has(> .grid) > .grid,
+.hogwarts-system.item .tab.attributes .form-group:has(> .grid) > .currency-fields,
+.hogwarts-system.item .tab.attributes .form-group:has(> .currency-fields) > textarea,
+.hogwarts-system.item .tab.attributes .form-group:has(> .currency-fields) > select[multiple],
+.hogwarts-system.item .tab.attributes .form-group:has(> .currency-fields) > .grid,
+.hogwarts-system.item .tab.attributes .form-group:has(> .currency-fields) > .currency-fields {
+  flex: 1 0 100%;
 }
 .hogwarts-system .wounds-full-width {
   width: 100%;
@@ -683,10 +1049,33 @@ h3.collapsible.collapsed + .collapsible-content {
   background-color: rgba(204, 51, 51, 0.05);
 }
 .hogwarts-system .items-list .item-prop {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   border-left: 1px solid #c9c7b8;
   border-right: 1px solid #c9c7b8;
   font-size: 12px;
+}
+.hogwarts-system .items-list .item-prop > input {
+  width: 100%;
+}
+.hogwarts-system .items-list .skill-max-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.hogwarts-system .items-list .skill-max-cell input[type=number] {
+  width: 3.5em;
+}
+.hogwarts-system .items-list .skill-max-cell .skill-max-toggle {
+  flex: 0 0 auto;
+  opacity: 0.75;
+}
+.hogwarts-system .items-list .skill-max-cell .skill-max-toggle:hover {
+  opacity: 1;
 }
 .hogwarts-system .items-list .item-type,
 .hogwarts-system .items-list .item-target,
@@ -939,6 +1328,27 @@ h3.collapsible.collapsed + .collapsible-content {
 .hogwarts-system .item-controls .disabled {
   opacity: 0.3;
   pointer-events: none;
+}
+.hogwarts-system .combatant-controls .hogwarts-phase {
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 1;
+  min-width: 16px;
+  border-radius: 3px;
+  border: 1px solid currentColor;
+}
+.hogwarts-system .combatant-controls .hogwarts-phase.phase-1 {
+  color: #1a6fb4;
+}
+.hogwarts-system .combatant-controls .hogwarts-phase.phase-2 {
+  color: #2e7d32;
+}
+.hogwarts-system .combatant-controls .hogwarts-phase.phase-3 {
+  color: #a05a00;
+}
+.hogwarts-system .combatant-controls .hogwarts-phase.surprised {
+  background: rgba(204, 51, 51, 0.18);
+  border-color: #cc3333;
 }
 .hogwarts-system {
   /* Styles for the Familiar card preview inside actor sheets */
@@ -2204,4 +2614,40 @@ h3.collapsible.collapsed + .collapsible-content {
   font-size: 0.8em;
   font-weight: 600;
   margin-left: 4px;
+}
+
+/* Hourglass award animations. Kept at the root: Sass would nest @keyframes
+   inside the .hogwarts-system wrapper above, which is invalid CSS. */
+@keyframes hogwarts-gem-flash {
+  0% {
+    filter: brightness(1);
+  }
+  35% {
+    filter: brightness(1.75) drop-shadow(0 0 6px currentColor);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+@keyframes hogwarts-gem-shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  75% {
+    transform: translateX(2px);
+  }
+}
+@keyframes hogwarts-gem-count {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.35);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

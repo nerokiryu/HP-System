@@ -1,0 +1,13 @@
+{
+  "_id": "cpildepoissonbal",
+  "name": "Œil de poisson- ballon",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des yeux récupérés sur un poisson-ballon</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Enflure\nPoussos",
+    "otherUses": "-"
+  }
+}

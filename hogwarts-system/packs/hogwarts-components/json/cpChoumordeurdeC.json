@@ -1,0 +1,13 @@
+{
+  "_id": "cpChoumordeurdeC",
+  "name": "Chou mordeur de Chine",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une plante magique provenant de Chine qui se nourrit d’autres légumes comme les carottes</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Poussos",
+    "otherUses": "• Comestible"
+  }
+}

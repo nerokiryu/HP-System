@@ -1,0 +1,19 @@
+{
+  "_id": "spFolleoreille00",
+  "name": "Folleoreille",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Fait remuer frénétiquement les oreilles d’une personne, ce qui diminue considérablement sa concentration. Donne un malus de 5% pour jeter des sorts et pour toute autre action nécessitant de se concentrer.</p><p>Sous-type : Maléfice</p><p>Durée : Variable (rounds)</p><p>Formule extrême : Malus de 10% et durée +1 round</p>",
+    "spellLevel": 1,
+    "spellType": "S",
+    "target": [
+      "P"
+    ],
+    "incantation": "Folloreille",
+    "malus": -10,
+    "extremeFormula": true,
+    "malusExtremeFormula": -20,
+    "malusMastered": 0
+  }
+}

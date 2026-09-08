@@ -1,0 +1,13 @@
+{
+  "_id": "cpFougere0000000",
+  "name": "Fougère",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Les fougères sont des plantes de sous-bois, aimant généralement les lieux plutôt ombragés et qui forment des frondes à leurs extrémités</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Cataplasme contre les morsures de Murlap\nRegermination\nTraitement des morsures de chiens fous",
+    "otherUses": "-"
+  }
+}

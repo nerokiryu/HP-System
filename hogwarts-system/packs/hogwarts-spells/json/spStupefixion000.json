@@ -1,0 +1,20 @@
+{
+  "_id": "spStupefixion000",
+  "name": "Stupéfixion",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Paralyse la cible et la met dans un état de catatonie proche du coma.</p><p>Durée : 2d4+2 heures</p><p>Formule extrême : 1 jour</p>",
+    "spellLevel": 3,
+    "spellType": "S",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "Stupefix",
+    "malus": -40,
+    "extremeFormula": true,
+    "malusExtremeFormula": -50,
+    "malusMastered": -30
+  }
+}

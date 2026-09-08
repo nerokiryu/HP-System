@@ -1,0 +1,13 @@
+{
+  "_id": "cpPoilsdeLoupgar",
+  "name": "Poils de Loup- garou",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des poils provenant d’un loup garou sous sa forme lupuline</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Potion Tue-Loup",
+    "otherUses": "-"
+  }
+}

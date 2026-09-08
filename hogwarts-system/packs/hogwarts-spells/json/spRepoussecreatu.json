@@ -1,0 +1,19 @@
+{
+  "_id": "spRepoussecreatu",
+  "name": "Repousse créature",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Repousse instantanément un animal magique ou non le plus loin possible du sorcier. (Opposition : POU/FOR).</p><p>Maximum : POU x 5 m.</p><p>Durée : -</p><p>Formule extrême : Maximum POUvoir x7 mètres</p>",
+    "spellLevel": 2,
+    "spellType": "E",
+    "target": [
+      "A"
+    ],
+    "incantation": "« Nom » Exumai",
+    "malus": -15,
+    "extremeFormula": true,
+    "malusExtremeFormula": -25,
+    "malusMastered": -5
+  }
+}

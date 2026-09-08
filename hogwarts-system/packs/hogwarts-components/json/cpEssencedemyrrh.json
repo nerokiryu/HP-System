@@ -1,0 +1,13 @@
+{
+  "_id": "cpEssencedemyrrh",
+  "name": "Essence de myrrhe",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>De l’essence aromatique produite à partir de gomme-résine de myrrhe et provenant de l’arbre du même nom.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Traitement des morsures de chiens fous",
+    "otherUses": "• Aromathérapie"
+  }
+}

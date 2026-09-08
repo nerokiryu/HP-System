@@ -1,0 +1,13 @@
+{
+  "_id": "cpLuciole0000000",
+  "name": "Luciole",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>La luciole est un insecte non magique pouvant émettre une légère lueur.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Énergie magique",
+    "otherUses": "-"
+  }
+}

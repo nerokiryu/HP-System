@@ -1,0 +1,19 @@
+{
+  "_id": "spBulles00000000",
+  "name": "Bulles",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Convoque des bulles qui viennent flotter dans les airs sans éclater</p><p>Durée : Permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 0,
+    "spellType": "E",
+    "target": [
+      "X"
+    ],
+    "incantation": "",
+    "malus": 0,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

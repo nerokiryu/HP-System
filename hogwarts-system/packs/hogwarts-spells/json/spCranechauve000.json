@@ -1,0 +1,19 @@
+{
+  "_id": "spCranechauve000",
+  "name": "Crâne chauve",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Fait disparaître les cheveux de la cible (APP - 1).</p><p>Sous-type : Maléfice</p><p>Durée : -</p><p>Formule extrême : APParence -2</p>",
+    "spellLevel": 1,
+    "spellType": "S",
+    "target": [
+      "P"
+    ],
+    "incantation": "Calvorio",
+    "malus": 0,
+    "extremeFormula": true,
+    "malusExtremeFormula": -5,
+    "malusMastered": 0
+  }
+}

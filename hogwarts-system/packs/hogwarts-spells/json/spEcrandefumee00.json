@@ -1,0 +1,19 @@
+{
+  "_id": "spEcrandefumee00",
+  "name": "Écran de fumée",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Fait apparaître un écran de fumée protecteur afin de se dissimuler.</p><p>Zone : Cette fumée se répand sur POU mètres de rayon.</p><p>Durée : Variable (minutes).</p><p>Effets : Observation = PERceptionx1</p><p>Effets secondaires : Brûle les yeux et fait tousser ceux qui le respirent, rendant difficile l’effort physique à l’intérieur de la zone.</p><p>Formule extrême : Zone : POUx2 mètres de rayon. Durée : Variable (minutes +2). Effets : Respirer dans la zone = 1 dégât non-létal</p>",
+    "spellLevel": 3,
+    "spellType": "E",
+    "target": [
+      "X"
+    ],
+    "incantation": "Fumos",
+    "malus": -30,
+    "extremeFormula": true,
+    "malusExtremeFormula": -40,
+    "malusMastered": -20
+  }
+}

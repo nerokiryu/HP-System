@@ -1,0 +1,13 @@
+{
+  "_id": "cpBaiedActeeenep",
+  "name": "Baie d’Actée en épi",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Plante originaire d’Europe, d’Asie et d’Amérique du Nord dont les baies rouges et blanches sont extrêmement toxiques quand elles sont consommées.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Actée en épi",
+    "otherUses": "• Vertus médicinales"
+  }
+}

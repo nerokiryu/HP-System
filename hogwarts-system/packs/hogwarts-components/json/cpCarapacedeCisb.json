@@ -1,0 +1,13 @@
+{
+  "_id": "cpCarapacedeCisb",
+  "name": "Carapace de Cisburine",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Carapace très résistante de Cisburine, une variété magique d’acarien infestant d’autres créatures magiques</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Antidote aux poisons rares\nTransfert",
+    "otherUses": "-"
+  }
+}

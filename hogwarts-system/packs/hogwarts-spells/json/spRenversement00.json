@@ -1,0 +1,20 @@
+{
+  "_id": "spRenversement00",
+  "name": "Renversement",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Fait violemment trébucher la cible immobile en l’envoyant voler à une dizaine de mètres en arrière. Cause 1 point de dégât à la cible si elle ne réussit pas un jet de DEXx3.</p><p>Durée : -</p><p>Formule extrême : Cause 2 dégâts et repousse à 15 mètres.</p>",
+    "spellLevel": 2,
+    "spellType": "S",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "Everte Statum",
+    "malus": -25,
+    "extremeFormula": true,
+    "malusExtremeFormula": -35,
+    "malusMastered": -15
+  }
+}

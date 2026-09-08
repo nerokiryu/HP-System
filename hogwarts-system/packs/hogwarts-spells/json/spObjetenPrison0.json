@@ -1,0 +1,19 @@
+{
+  "_id": "spObjetenPrison0",
+  "name": "Objet en Prison",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Transforme un objet en prison de même taille.</p><p>Durée : permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 2,
+    "spellType": "M",
+    "target": [
+      "O"
+    ],
+    "incantation": "Incarcifos",
+    "malus": -30,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

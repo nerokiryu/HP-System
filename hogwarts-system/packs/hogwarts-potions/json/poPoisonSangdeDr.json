@@ -1,0 +1,21 @@
+{
+  "_id": "poPoisonSangdeDr",
+  "name": "Poison Sang-de- Dragon",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Un poison extrêmement violent qui cause d’atroces douleurs à celui qui le consomme et provoque sa mort</p><p>Effets : occasionne 1d4+1 dégâts par round jusqu’à la mort</p><p>Effet secondaire : Coma</p><p>Durée : 2d4+2 heures</p><p>VIRulence : 21</p><p>Remarque : Tout soin magique est sans effet avant l’élimination du poison.</p>",
+    "potionLevel": 6,
+    "malus": -75,
+    "target": "A/P",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Sanguinaire",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

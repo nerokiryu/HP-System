@@ -1,0 +1,13 @@
+{
+  "_id": "cpPoudrederacine",
+  "name": "Poudre de racines d’asphodèle",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>De la famille des lys, cette plante qu’on peut trouver partout dans le monde a de longues feuilles minces. Son nom vient du grec asphodelos. La poudre de racine d’asphodèle est employée pour la fabrication de potion</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Philtre de Mort Vivante",
+    "otherUses": "-"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "spBrasierpourpre",
+  "name": "Brasier pourpre",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Une variation du brasier obscur qui est cependant bien plus compliquée à passer. Comme son homologue obscur, le brasier pourpre ne peut être dissipé que par celui qui a lancé le sortilège. De plus, ce brasier occasionne des dégâts plus importants à ceux et celles qui tente de le traverser soit 1d6+2 dégâts par round. Finalement, la potion de protection contre le feu classique ne fonctionne pas pour cet enchantement. Une potion particulière doit être préparée par le lanceur du sortilège.</p><p>Durée : POUvoirx3 jours</p><p>Sauvegarde : potion des flammes violettes</p>",
+    "spellLevel": 6,
+    "spellType": "E",
+    "target": [
+      "X"
+    ],
+    "incantation": "",
+    "malus": -75,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

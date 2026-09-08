@@ -1,0 +1,19 @@
+{
+  "_id": "spNettoyage00000",
+  "name": "Nettoyage",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Enchante des objets comme des balais ou des serpillères pour qu’ils fassent le ménage d’eux-mêmes</p><p>Durée : 1 heure</p><p>Formule extrême : pas de formule extrême</p>",
+    "spellLevel": 0,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "",
+    "malus": -5,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

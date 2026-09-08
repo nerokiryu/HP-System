@@ -1,0 +1,20 @@
+{
+  "_id": "spMaleficedusauc",
+  "name": "Maléfice du saucisson",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Immobilise totalement une personne ou un animal en liant ses mains et ses pieds ainsi qu’en lui bloquant la mâchoire. La personne peut cependant toujours voir et entendre ce qu’il se passe.</p><p>Opposition : POU/POU</p><p>Sous-type : Maléfice</p><p>Durée : variable (heures)</p><p>Formule extrême : Durée : 1d4-1 jours</p>",
+    "spellLevel": 3,
+    "spellType": "S",
+    "target": [
+      "A",
+      "P"
+    ],
+    "incantation": "Petrificus totalus",
+    "malus": -30,
+    "extremeFormula": true,
+    "malusExtremeFormula": -40,
+    "malusMastered": -20
+  }
+}

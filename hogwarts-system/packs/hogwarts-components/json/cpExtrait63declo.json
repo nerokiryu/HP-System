@@ -1,0 +1,13 @@
+{
+  "_id": "cpExtrait63declo",
+  "name": "Extrait 63 de cloporte",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une essence obtenue à partir de cloportes et servant d’ingrédient de potion</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "-"
+  }
+}

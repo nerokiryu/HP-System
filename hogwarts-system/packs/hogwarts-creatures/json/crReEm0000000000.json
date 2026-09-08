@@ -1,0 +1,69 @@
+{
+  "_id": "crReEm0000000000",
+  "name": "Re’Em",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>Sang de Re’em : Le sang de Re’em est magique et confère une force surhumaine à toute personne qui le boit durant plusieurs heures. Très rare, il n’est cependant pas disponible sur le marché.</p>",
+    "health": {
+      "value": 23,
+      "max": 23
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 23
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXX",
+    "stats": {
+      "str": {
+        "value": 24,
+        "formula": "4d6+10"
+      },
+      "con": {
+        "value": 17,
+        "formula": "3d6+6"
+      },
+      "siz": {
+        "value": 26,
+        "formula": "4d6+12"
+      },
+      "dex": {
+        "value": 18,
+        "formula": "3d6+7"
+      },
+      "int": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "pow": {
+        "value": 13,
+        "formula": "3d6+2"
+      },
+      "app": {
+        "value": 13,
+        "formula": "3d6+2"
+      },
+      "per": {
+        "value": 18,
+        "formula": "3d6+7"
+      }
+    },
+    "movement": {
+      "land": 6,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 3
+    },
+    "attacks": "Cornes : 50% (3d6)",
+    "skills": "Acrobatie : 30% ; Athlétisme : 65% ; Discrétion : 40%; Esquive : 45%, Orientation : 35% ; Survie : 25% ; Vigilance : 55%",
+    "powers": "<p>Charge dévastatrice : Lorsqu’il charge, le Re’em ne peut pratiquement pas être stoppé et cause de gros dommages aux personnes et objets sur son chemin. Les dégâts passent à 3d6+4. Guérison : Les pouvoirs de guérison des Re’em sont bien supérieurs à la moyenne. Quand il est blessé, le corps du Re’em se régénère magiquement pour soigner les blessures subies. Cela se traduit par une régénération de 1 point de vie par jour et par une vitesse de régénération des points de vie en cas de repos doublée par rapport à une créature classique.</p>",
+    "notes": ""
+  }
+}

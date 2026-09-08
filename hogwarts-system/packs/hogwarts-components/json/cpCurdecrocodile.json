@@ -1,0 +1,13 @@
+{
+  "_id": "cpCurdecrocodile",
+  "name": "Cœur de crocodile",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Le cœur provenant d’un crocodile</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Philtre calmant\nPhiltre calmant pour Chartier",
+    "otherUses": "-"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "_id": "poPotiondemelanc",
+  "name": "Potion de mélancolie",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Cette potion – issue d’une préparation erronée de Potion d’Hilarité – provoque un profond abattement de la personne qui la consomme. Dès lors, celle-ci ne désire plus rien faire d’autre que rester couchée.</p><p>Effet : POUx1 pour effectuer une action, sinon inaction.</p><p>Effets secondaires : grave mélancolie et crises de larmes</p><p>Durée : 4d6 heures</p>",
+    "potionLevel": 4,
+    "malus": -40,
+    "target": "A/P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Ailes de Billywig",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Eau de source",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Feuille d’Alihotsy",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Piquant de noueux",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Poils de Boursouf",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Poudre de raifort.",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

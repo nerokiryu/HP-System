@@ -1,0 +1,69 @@
+{
+  "_id": "crTebo0000000000",
+  "name": "Tebo",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>Peau de Tébo : La peau de Tébo est très résistante et permet de fabriquer des vêtements donnant une résistance aux dégâts de -1 à -3 dégâts.</p>",
+    "health": {
+      "value": 15,
+      "max": 15
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 15
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXXX",
+    "stats": {
+      "str": {
+        "value": 17,
+        "formula": "2d6+10"
+      },
+      "con": {
+        "value": 15,
+        "formula": "3d6+4"
+      },
+      "siz": {
+        "value": 14,
+        "formula": "2d6+7"
+      },
+      "dex": {
+        "value": 13,
+        "formula": "2d6+6"
+      },
+      "int": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "pow": {
+        "value": 10,
+        "formula": "2d6+3"
+      },
+      "app": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "per": {
+        "value": 18,
+        "formula": "3d6+7"
+      }
+    },
+    "movement": {
+      "land": 12,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 6
+    },
+    "attacks": "Défenses : 50% (2d3)",
+    "skills": "Acrobatie : 50% ; Athlétisme : 50% ; Discrétion : 60%; Esquive : 45%, Orientation : 35% ; Survie : 25% ; Vigilance : 50%",
+    "powers": "<p>Grande charge : Quand il charge, les dégâts occasionnés par le Tébo sont augmentés de 1d3 et son pourcentage de Combat de 5% Invisibilité : Le Tébo peut se rendre invisible à volonté et redevenir visible quand il le désire. Même s’il combat ou qu’il fuit, son invisibilité reste active.</p>",
+    "notes": ""
+  }
+}

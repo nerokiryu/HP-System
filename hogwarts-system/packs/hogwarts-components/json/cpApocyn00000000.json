@@ -1,0 +1,13 @@
+{
+  "_id": "cpApocyn00000000",
+  "name": "Apocyn",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Plantes aux fleurs blanches poussant en arbuste et pouvant représenter un danger pour les animaux.</p><p>Distillée, elle peut être employée comme poison.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Apocyn",
+    "otherUses": "• Poison (ingestion)"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "spRefroidissemen",
+  "name": "Refroidissement",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Permet de faire refroidir un liquide ou un objet jusqu’à 5° C.</p><p>Durée : -</p><p>Formule extrême : diminution jusqu’à 0°C</p>",
+    "spellLevel": 1,
+    "spellType": "M",
+    "target": [
+      "O"
+    ],
+    "incantation": "Frigidus",
+    "malus": -5,
+    "extremeFormula": true,
+    "malusExtremeFormula": -15,
+    "malusMastered": 0
+  }
+}

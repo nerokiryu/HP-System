@@ -1,0 +1,19 @@
+{
+  "_id": "spEcrituresurtab",
+  "name": "Écriture sur tableau noir",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet de faire apparaître des mots et des schémas imaginés par le lanceur sur un tableau noir.</p><p>Durée : -</p><p>Formule extrême : -</p>",
+    "spellLevel": 1,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "",
+    "malus": -5,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

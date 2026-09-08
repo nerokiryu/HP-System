@@ -1,0 +1,13 @@
+{
+  "_id": "cpEssencederue00",
+  "name": "Essence de rue",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Essence extraite de rue, une plante formant des arbrisseaux à fleurs jaunes et également connue sous le nom d’herbe de grâce.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Felix Felicis\nRemontant de Pomfresh\nTraitement des morsures de chiens fous",
+    "otherUses": "• Antipoison • Vertus médicinales"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "spAlarme00000000",
+  "name": "Alarme",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Créer une bulle englobant le lanceur et les personnes proches (POU mètres) qui permet de se protéger contre des ennemis. Ceux qui sont de l’autre côté du bouclier ne pourront pas voir les personnes dans la bulle, les entendre. La bulle prend fin quand on jette un sort depuis l’intérieur</p><p>Durée : POU heures</p><p>Formule extrême : Empêche également d’être senti.</p>",
+    "spellLevel": 4,
+    "spellType": "E",
+    "target": [
+      "X"
+    ],
+    "incantation": "Cave Inimicum",
+    "malus": -55,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

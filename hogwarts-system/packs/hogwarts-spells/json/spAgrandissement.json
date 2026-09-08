@@ -1,0 +1,19 @@
+{
+  "_id": "spAgrandissement",
+  "name": "Agrandissement",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Agrandit la taille de la cible jusqu’à ce qu’elle mesure deux fois sa taille.</p><p>Durée : POU minutes</p><p>Formule extrême : Agrandit la taille de la cible jusqu’à trois fois sa taille pour une durée de POUx 2 minutes.</p>",
+    "spellLevel": 3,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "",
+    "malus": -30,
+    "extremeFormula": true,
+    "malusExtremeFormula": -40,
+    "malusMastered": -20
+  }
+}

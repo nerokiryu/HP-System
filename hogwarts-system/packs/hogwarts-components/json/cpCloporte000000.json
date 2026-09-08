@@ -1,0 +1,13 @@
+{
+  "_id": "cpCloporte000000",
+  "name": "Cloporte",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Un petit crustacé vivant dans les arbres et connu pour se rouler en boule quand il est effrayé.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "• Nourriture à Botruc"
+  }
+}

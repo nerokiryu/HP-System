@@ -1,0 +1,13 @@
+{
+  "_id": "cpFeuillesdAliho",
+  "name": "Feuilles d’Alihotsy",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>L’Alihotsy, également connue sous le nom d’ arbre à hyène, est une plante dont l’ingestion des feuilles provoque l’hystérie. L’antidote est la sécrétion de Grinchebourdon.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Goutte désopilante\nPotion d’Hilarité\nPotion de mélancolie",
+    "otherUses": "-"
+  }
+}

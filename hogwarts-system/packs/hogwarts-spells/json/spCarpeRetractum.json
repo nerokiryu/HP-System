@@ -1,0 +1,19 @@
+{
+  "_id": "spCarpeRetractum",
+  "name": "Carpe Retractum",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Ce sortilège produit un cordon de lumière magique et rétractable, qui peut être utilisé pour tirer des objets vers le lanceur, ou, si la cible est fixe en place, pour tirer le lanceur vers la cible</p><p>Portée : POUvoir mètres</p><p>Durée : Volontaire</p><p>Remarque : Une fois l’objet saisi, le Sorcier doit faire preuve de FORce pour pouvoir tirer ce dernier, la corde magique ne servant qu’à relier l’objet visé et la baguette du Sorcier.</p><p>Formule extrême : -</p>",
+    "spellLevel": 3,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "Carpe Retractum",
+    "malus": -30,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

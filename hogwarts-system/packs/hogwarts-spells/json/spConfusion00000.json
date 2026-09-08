@@ -1,0 +1,21 @@
+{
+  "_id": "spConfusion00000",
+  "name": "Confusion",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Plonge la cible dans la confusion,</p><p>Effet principal : occasionne un malus de 50% à toutes les actions nécessitant de la réflexion, y compris la magie</p><p>Effet secondaire : Rend plus sensible aux suggestions</p><p>Durée : Variable (minutes)</p><p>Opposition : POUxPOU</p><p>Formule extrême : Malus de 70%</p>",
+    "spellLevel": 4,
+    "spellType": "S",
+    "target": [
+      "A",
+      "O",
+      "P"
+    ],
+    "incantation": "Confundo",
+    "malus": -45,
+    "extremeFormula": true,
+    "malusExtremeFormula": -55,
+    "malusMastered": -35
+  }
+}

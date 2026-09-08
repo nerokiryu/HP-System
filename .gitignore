@@ -12,3 +12,6 @@ hogwarts-system.zip
 .DS_Store
 Thumbs.db
 *.log
+
+# ... sauf les journaux LevelDB des compendiums, qui SONT les données
+!hogwarts-system/packs/**/*.log

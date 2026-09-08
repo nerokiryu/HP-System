@@ -1,0 +1,22 @@
+{
+  "_id": "spSortilegedefeu",
+  "name": "Sortilège de feu",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet de conjurer des flammes pouvant blesser, endommager des objets et enflammer la matière. Cause 1d4 dégâts de feu et à 50% de chance d’enflammer.</p><p>Durée : volontaire</p><p>Formule extrême : 1d4+2 dégâts et 75% de chance d’enflammer</p>",
+    "spellLevel": 1,
+    "spellType": "E",
+    "target": [
+      "A",
+      "O",
+      "P",
+      "V"
+    ],
+    "incantation": "Incendio",
+    "malus": -15,
+    "extremeFormula": true,
+    "malusExtremeFormula": -25,
+    "malusMastered": -5
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "spMaleficedelape",
+  "name": "Maléfice de la peau en cornflakes",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Ce maléfice donne l’impression que la peau de la cible est recouverte de cornflakes, causant de violentes démangeaisons.</p><p>Effet : Diminue l’APP de 2 et occasionne 1 dégât non-létal.</p><p>Effet secondaire : Malus de 10% aux actions suite aux démangeaisons</p><p>Sous-type : Maléfice</p><p>Durée : Permanente</p><p>Formule extrême : APP -3, 2 dégâts non-létaux et malus de 15%</p>",
+    "spellLevel": 3,
+    "spellType": "S",
+    "target": [
+      "P"
+    ],
+    "incantation": "Pellis frumentum glebulae",
+    "malus": -25,
+    "extremeFormula": true,
+    "malusExtremeFormula": -35,
+    "malusMastered": -10
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "_id": "crHybridesChatFl",
+  "name": "Hybrides Chat-Flereurs",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>Animal domestique</p>",
+    "health": {
+      "value": 8,
+      "max": 8
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 8
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XX",
+    "stats": {
+      "str": {
+        "value": 6,
+        "formula": "2d4+1"
+      },
+      "con": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "siz": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "dex": {
+        "value": 14,
+        "formula": "4d6"
+      },
+      "int": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "pow": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "app": {
+        "value": 11,
+        "formula": "3d6"
+      },
+      "per": {
+        "value": 13,
+        "formula": "3d6+2"
+      }
+    },
+    "movement": {
+      "land": 8,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "Morsure 35% (1)",
+    "skills": "Acrobatie : 60%, Athlétisme : 50% ; Discrétion : 60%; Esquive : 30%, Orientation : 30% ; Survie : 40% ; Vigilance : 40%",
+    "powers": "<p>Clairvoyance imparfaite : Le Demi-Fléreur possède une perception du monde qui l’entoure bien supérieure à celle des autres créatures mais qui ne fonctionne pas aussi bien que son parent Fléreur. Les jets de PERceptions faits par le Demi- Fléreur se font comme PERx5 pour la vue et PERx4 pour les autres sens. De plus, le Demi- Fléreur peut sentir le danger dans un futur proche mais pas son intensité. Fuyant celui-ci, il n’est pas rare qu’il disparaisse quelque jour quand il le perçoit. Souplesse du chat : Le Demi-Fléreur retombe sur ses pattes, peu importe de quelle hauteur il tombe, ne subissant que 1 dégât par tranche de 3m à partir de 6m. Vision nocturne : Le Demi-Fléreur voit aussi bien de nuit que de jour.</p>",
+    "notes": ""
+  }
+}

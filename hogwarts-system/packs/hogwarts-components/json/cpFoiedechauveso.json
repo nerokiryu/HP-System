@@ -1,0 +1,13 @@
+{
+  "_id": "cpFoiedechauveso",
+  "name": "Foie de chauve- souris",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Foie de chauve-souris commune. Vendu généralement à 1 Gallion chacun.</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Enflure",
+    "otherUses": "-"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "_id": "poRegermination0",
+  "name": "Regermination",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Quelques gouttes de cette potion verte redonnent à une plante morte la capacité de germer</p>",
+    "potionLevel": 2,
+    "malus": -20,
+    "target": "V",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Algue séchée",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Bouse de dragon",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Eau de source",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Écaille de dragon",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Fougère",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Menthe",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

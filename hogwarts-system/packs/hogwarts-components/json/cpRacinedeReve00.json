@@ -1,0 +1,13 @@
+{
+  "_id": "cpRacinedeReve00",
+  "name": "Racine de Rêve",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Plante originaire du Cap Est d’Afrique du Sud, la racine de Rêve est consommée depuis des siècles et entrant des rituels spirituels permettant de faire des rêves éveillés</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Conscience\nGaz étrangleur\nPotion d’ataraxie\nSommeil sans rêve",
+    "otherUses": "• Méditation"
+  }
+}

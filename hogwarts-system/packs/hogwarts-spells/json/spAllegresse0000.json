@@ -1,0 +1,19 @@
+{
+  "_id": "spAllegresse0000",
+  "name": "Allégresse",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Met une personne dans un état de bonheur intense où elle ne peut pas s’inquiéter durant 1d4+1 heures. (Opposition POU/POU)</p><p>Formule extrême : Durée +2 heures</p>",
+    "spellLevel": 3,
+    "spellType": "E",
+    "target": [
+      "P"
+    ],
+    "incantation": "Felicitas",
+    "malus": -25,
+    "extremeFormula": true,
+    "malusExtremeFormula": -35,
+    "malusMastered": -10
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "cpufdeDoxy000000",
+  "name": "Œuf de Doxy",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des œufs noirs pondus par un Doxy, un petit parasite ailé dont la morsure est empoisonnée</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Poison pernicieux\nPotion fortifiante",
+    "otherUses": "• Poison si consommé"
+  }
+}

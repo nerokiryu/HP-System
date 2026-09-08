@@ -1,0 +1,19 @@
+{
+  "_id": "spBouclierdiabol",
+  "name": "Bouclier diabolique",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Crée un cercle de flammes bleues qui protège le sorcier contre les sortilèges. Seuls les alliés du sorcier peuvent traverser le cercle de flamme sans risque. Si une personne hostile envers le lanceur tente de traverser les flammes ou est touché par celles-ci, il est réduit en cendres.</p>",
+    "spellLevel": 6,
+    "spellType": "S",
+    "target": [
+      "X"
+    ],
+    "incantation": "Protego Diabolica",
+    "malus": -100,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

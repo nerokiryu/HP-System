@@ -1,0 +1,13 @@
+{
+  "_id": "cpTentaculedeStr",
+  "name": "Tentacule de Strangulot",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des tentacules qui proviennent d’un Strangulot, une créature magique ressemblant un petit humanoïde dont les jambes sont remplacées par de nombreux tentacules</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Gaz étrangleur",
+    "otherUses": ""
+  }
+}

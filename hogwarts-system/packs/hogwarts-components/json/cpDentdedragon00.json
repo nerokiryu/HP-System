@@ -1,0 +1,13 @@
+{
+  "_id": "cpDentdedragon00",
+  "name": "Dent de dragon",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des dents provenant de dragon. Du fait que celles-ci repoussent en permanence, elles peuvent être trouvée plus simplement que les autres ingrédients provenant de cette créature. Réduites en poudre, elles peuvent être utilisées pour la fabrication de potions.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Anti-Acné\nBaume à bec\nBrume de Pensine",
+    "otherUses": "• Anti-Acné • Booste la mémoire (poudre)"
+  }
+}

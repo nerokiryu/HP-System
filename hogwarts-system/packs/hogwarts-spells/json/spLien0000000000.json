@@ -1,0 +1,19 @@
+{
+  "_id": "spLien0000000000",
+  "name": "Lien",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Lie les objets entre eux de telle sorte que si l’un d’eux est modifié, tous les autres le sont également.</p><p>Durée : permanent</p><p>Formule extrême : -</p>",
+    "spellLevel": 3,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "Protéiforme",
+    "malus": -25,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

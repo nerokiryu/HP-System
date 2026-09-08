@@ -1,0 +1,13 @@
+{
+  "_id": "cpChevrefeuille0",
+  "name": "Chèvrefeuille",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Arbuste aux fleurs blanches et odorantes, le chèvrefeuille est une plante symbolisant le lien, la loyauté, la fidélité</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Combinaison\nEncre magique",
+    "otherUses": ""
+  }
+}

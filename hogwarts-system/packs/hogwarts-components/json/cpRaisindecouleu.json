@@ -1,0 +1,13 @@
+{
+  "_id": "cpRaisindecouleu",
+  "name": "Raisin de couleuvre",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une petite plante dont toutes les parties sont connues pour être toxiques</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Poison de raisin de couleuvre",
+    "otherUses": "• Poison"
+  }
+}

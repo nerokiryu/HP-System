@@ -1,0 +1,19 @@
+{
+  "_id": "spMaleficedeMelo",
+  "name": "Maléfice de Melofors",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Ce maléfice enferme la tête de la cible dans une citrouille, l’empêchant de voir ce qu’il se passe autour de lui. La citrouille ne peut que difficilement être retirée et doit être brisée pour ce faire. Pour les personnes alentours, ce maléfice donne l’impression que la tête de la cible a été métamorphosée en citrouille.</p><p>Effet : Aveugle la cible</p><p>Sous-type : Maléfice</p><p>Opposition : Jet de FORce x1 pour briser la citrouille et la retirer, ou anti-maléfice pour la dissiper</p><p>Durée : Permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 2,
+    "spellType": "S",
+    "target": [
+      "P"
+    ],
+    "incantation": "Melofors",
+    "malus": -20,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

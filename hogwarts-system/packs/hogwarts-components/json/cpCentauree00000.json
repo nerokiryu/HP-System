@@ -1,0 +1,13 @@
+{
+  "_id": "cpCentauree00000",
+  "name": "Centaurée",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une plante donnant de petite fleurs rose-violet et connue pour ses vertus médicinales</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Traitement des morsures de chiens fous",
+    "otherUses": "• Vertus médicinales"
+  }
+}

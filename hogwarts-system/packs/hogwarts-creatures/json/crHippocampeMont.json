@@ -1,0 +1,69 @@
+{
+  "_id": "crHippocampeMont",
+  "name": "Hippocampe Monture",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 17,
+      "max": 17
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 17
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "",
+    "stats": {
+      "str": {
+        "value": 19,
+        "formula": "3d6+8"
+      },
+      "con": {
+        "value": 17,
+        "formula": "3d6+6"
+      },
+      "siz": {
+        "value": 17,
+        "formula": "3d6+6"
+      },
+      "dex": {
+        "value": 11,
+        "formula": "2d6+4"
+      },
+      "int": {
+        "value": 5,
+        "formula": "1d6+1"
+      },
+      "pow": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "app": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "per": {
+        "value": 13,
+        "formula": "3d6+2"
+      }
+    },
+    "movement": {
+      "land": 4,
+      "fly": null,
+      "swim": 18
+    },
+    "armor": {
+      "value": 1
+    },
+    "attacks": "Tête 45% (2d3+1)",
+    "skills": "Acrobatie : 65%, Athlétisme : 60% ; Discrétion :65% ; Esquive : 45% ; Orientation : 30% ; Survie : 40% ; Vigilance : 45% REMARQUE : L’Hippocampe monture partage les capacités de l’Hippocampe classique, si ce n’est que son « Coup de tête » occasionne 1d4+2 dégâts au lieu de 1d4.",
+    "powers": "",
+    "notes": ""
+  }
+}

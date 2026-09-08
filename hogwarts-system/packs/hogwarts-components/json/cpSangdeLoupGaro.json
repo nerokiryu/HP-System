@@ -1,0 +1,13 @@
+{
+  "_id": "cpSangdeLoupGaro",
+  "name": "Sang de Loup- Garou",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Du sang provenant d’un loup garou sous sa forme lupuline</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Potion Tue-Loup",
+    "otherUses": "-"
+  }
+}

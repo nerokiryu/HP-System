@@ -1,0 +1,13 @@
+{
+  "_id": "cpRacinedemandra",
+  "name": "Racine de mandragore",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des racines de mandragore, une plante qui ressemble à un bébé que l'on enterre dans un pot.</p><p>Leur cri est mortel pour celui qui l’entend sans protection.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Philtre de mandragore\nPimentine\nPotion contre la toux\nPotion Tue-Loup",
+    "otherUses": "-"
+  }
+}

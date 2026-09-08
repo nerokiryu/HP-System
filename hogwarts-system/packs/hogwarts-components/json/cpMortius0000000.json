@@ -1,0 +1,13 @@
+{
+  "_id": "cpMortius0000000",
+  "name": "Mortius",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Un champignon particulièrement toxique et potentiellement mortel, qui peut être employé dans la fabrication de potions.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "• Poison mortel"
+  }
+}

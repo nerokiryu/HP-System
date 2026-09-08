@@ -1,0 +1,22 @@
+{
+  "_id": "spRepulsion00002",
+  "name": "Répulsion",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Repousse violemment toutes les cibles se trouvant devant la baguette du lanceur.</p><p>Portée : 9 mètres</p><p>Effet : Sur des êtres vivants, ce sort cause 3 dégâts non létaux. Peut également être utilisé pour repousser de lourds objets (jusqu’à</p><p>POUvoirx3 Kg).</p><p>Durée : -</p><p>Formule extrême : Occasionne 4 dégâts non-létaux ; jusqu’à POUvoir x 4 Kg</p>",
+    "spellLevel": 3,
+    "spellType": "E",
+    "target": [
+      "A",
+      "O",
+      "P",
+      "V"
+    ],
+    "incantation": "Depulso",
+    "malus": -35,
+    "extremeFormula": true,
+    "malusExtremeFormula": -45,
+    "malusMastered": -25
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "spCrapaudenamani",
+  "name": "Crapaud en amanite",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Transforme un crapaud en un champignon de type amanite tue- mouches</p><p>Durée : permanente</p><p>Formule extrême : -</p>",
+    "spellLevel": 5,
+    "spellType": "M",
+    "target": [
+      "A"
+    ],
+    "incantation": "Amanitafors",
+    "malus": -45,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

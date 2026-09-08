@@ -1,0 +1,13 @@
+{
+  "_id": "cpLianedeFiletdu",
+  "name": "Liane de Filet du Diable",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Lianes provenant d’une plante magique nommée</p><p>Filet d Diable et qui attrape ses victimes pour les étouffer.</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Gaz étrangleur",
+    "otherUses": "-"
+  }
+}

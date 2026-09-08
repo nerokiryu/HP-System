@@ -1,0 +1,69 @@
+{
+  "_id": "crAcromentuleadu",
+  "name": "Acromentule adulte",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 11,
+      "max": 11
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 11
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "",
+    "stats": {
+      "str": {
+        "value": 13,
+        "formula": "3d6+2"
+      },
+      "con": {
+        "value": 13,
+        "formula": "3d6+2"
+      },
+      "siz": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "dex": {
+        "value": 11,
+        "formula": "3d6"
+      },
+      "int": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "pow": {
+        "value": 5,
+        "formula": "1d6+1"
+      },
+      "app": {
+        "value": 11,
+        "formula": "3d6"
+      },
+      "per": {
+        "value": 12,
+        "formula": "3d6+1"
+      }
+    },
+    "movement": {
+      "land": 8,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 1
+    },
+    "attacks": "Morsure 40% (1d6)",
+    "skills": "Acrobatie : 60% ; Athlétisme : 50% ; Esquive : 45% ; Discrétion : 80% ; Orientation : 40% ; Survie : 55% ; Vigilance : 60%",
+    "powers": "<p>Bestialité : Une Acromentule ne peut s’empêcher d’attaquer toute créature qui croise sa route.</p>",
+    "notes": ""
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "_id": "crSalamandre0000",
+  "name": "Salamandre",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "",
+    "health": {
+      "value": 6,
+      "max": 6
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 6
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "",
+    "stats": {
+      "str": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "con": {
+        "value": 8,
+        "formula": "2d6+1"
+      },
+      "siz": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "dex": {
+        "value": 14,
+        "formula": "3d6+3"
+      },
+      "int": {
+        "value": 3,
+        "formula": "1d4"
+      },
+      "pow": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "app": {
+        "value": 5,
+        "formula": "2d4"
+      },
+      "per": {
+        "value": 13,
+        "formula": "3d6+2"
+      }
+    },
+    "movement": {
+      "land": 6,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 2
+    },
+    "attacks": "Morsure 50% (1d3)",
+    "skills": "Acrobatie : 45% ; Athlétisme : 45% ; Discrétion 55% ; Esquive : 40% ; Orientation : 30% ; Survie : 40% ; Vigilance : 50%",
+    "powers": "<p>Combustion : La Salamandre peut s’entourer de flammes, occasionnant 1d4+1 dégâts à celui qui la tient. La cible doit effectuer un jet de chance (PERx5) pour ne pas s’enflammer. Flammèches : La Salamandre peut cracher de petites flammèches qui peuvent brûler celui qui se trouve à proximité, lui occasionnant 1d4 dégâts. Ces flammèches ont également 50% de chances enflammer ce qu’elles touchent. Insensibilité au feu : Les Salamandres sont des créatures nées du feu et qui ne ressentent aucune gêne à s’y déplacer. Elles peuvent même se nourrir des flammes. Elles ne supportent cependant pas le froid, qui leur est fatal.</p>",
+    "notes": ""
+  }
+}

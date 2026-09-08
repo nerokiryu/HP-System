@@ -1,0 +1,13 @@
+{
+  "_id": "cpAconit00000000",
+  "name": "Aconit",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une plante aux fleurs violettes également connue sous les noms de napel ou de tue-loup. Ses feuilles sont extrêmement toxiques, même si toutes les parties de la plante représentent un danger. Les racines sont vendues 1 Gallion chacune chez les apothicaires.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Babillage\nÉlixir malveillant\nMélange de bile de tatou\nPoison pernicieux\nPotion de l’œil vif\nPotion Tue-loup\nWiggenweld",
+    "otherUses": "• Poison"
+  }
+}

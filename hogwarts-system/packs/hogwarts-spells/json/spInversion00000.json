@@ -1,0 +1,19 @@
+{
+  "_id": "spInversion00000",
+  "name": "Inversion",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Inverse la position de deux objets sur une distance maximale de POUx2 mètres.</p><p>Durée : -</p><p>Formule extrême : distance maximale de POUvoir x3 mètres</p>",
+    "spellLevel": 2,
+    "spellType": "M",
+    "target": [
+      "O"
+    ],
+    "incantation": "",
+    "malus": -20,
+    "extremeFormula": true,
+    "malusExtremeFormula": -30,
+    "malusMastered": -10
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "_id": "poGazetrangleur0",
+  "name": "Gaz étrangleur",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Génère un gaz qui provoque la suffocation de celui ou celle qui le respire</p><p>Effets : Semblables à l’asphyxie ; mais au lieu de subir des dégâts, la personne tombe dans le coma en cas d’échec au jet de sauvegarde.</p><p>Effets secondaires : Coma</p><p>Durée des effets : Le gaz persiste durant 2d4+2 rounds</p><p>Zone : Dôme de 3m de rayon puis +1,5m d’extension tous les rounds jusqu’à 12m</p><p>Durée des effets secondaires : 1d6+1 heures</p><p>Remarque : La sensation en le respirant est identique à celle de se faire étrangler d’où le nom du gaz.</p>",
+    "potionLevel": 4,
+    "malus": -40,
+    "target": "A/P",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Feuille de Tentacula vénéneuse",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Fèves sopophoriques",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Filet du diable",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Racine de valériane",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Tentacule de strangulot",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

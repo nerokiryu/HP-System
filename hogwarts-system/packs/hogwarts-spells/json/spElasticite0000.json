@@ -1,0 +1,19 @@
+{
+  "_id": "spElasticite0000",
+  "name": "Élasticité",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Effet principal : Rend les membres élastiques ce qui leurs permet de s’allonger d’un mètre de long</p><p>Effet secondaire : Diminue la FORce de 1 point</p><p>Durée : 1 heure</p><p>Formule extrême : Allongement = 2 mètres / Malus en FORce = 2 / durée = 2 heures.</p>",
+    "spellLevel": 2,
+    "spellType": "M",
+    "target": [
+      "P"
+    ],
+    "incantation": "Elasticum",
+    "malus": -25,
+    "extremeFormula": true,
+    "malusExtremeFormula": -35,
+    "malusMastered": -15
+  }
+}

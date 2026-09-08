@@ -1,0 +1,69 @@
+{
+  "_id": "crBandimon000000",
+  "name": "Bandimon",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": "<p>La sécrétion diluée de Bandimon peut être utilisée comme ingrédient de potions. Elle entre également dans la composition de certains détergents magiques.</p>",
+    "health": {
+      "value": 3,
+      "max": 3
+    },
+    "healthNonLethal": {
+      "value": 0,
+      "max": 3
+    },
+    "initiativeBonus": 0,
+    "conditions": {
+      "seriousWound": false,
+      "agony": false
+    },
+    "classification": "XXX",
+    "stats": {
+      "str": {
+        "value": 1,
+        "formula": "1"
+      },
+      "con": {
+        "value": 4,
+        "formula": "1d6"
+      },
+      "siz": {
+        "value": 1,
+        "formula": "1"
+      },
+      "dex": {
+        "value": 7,
+        "formula": "2d6"
+      },
+      "int": {
+        "value": 1,
+        "formula": "1"
+      },
+      "pow": {
+        "value": 1,
+        "formula": "1"
+      },
+      "app": {
+        "value": 1,
+        "formula": "1"
+      },
+      "per": {
+        "value": 4,
+        "formula": "1d6"
+      }
+    },
+    "movement": {
+      "land": 5,
+      "fly": null,
+      "swim": null
+    },
+    "armor": {
+      "value": 0
+    },
+    "attacks": "-",
+    "skills": "Discrétion 40% ; Esquive : 15% ; Orientation : 20% ; Survie 20% ; Vigilance 20%",
+    "powers": "<p>Sécrétion : Le Bandimon sécrète une substance qui pourrit les fondations de la maison. Rapidité : Peut se déplacer au double de la vitesse normale pour une créature de sa taille.</p>",
+    "notes": ""
+  }
+}

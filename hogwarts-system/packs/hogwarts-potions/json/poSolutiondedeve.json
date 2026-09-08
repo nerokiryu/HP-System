@@ -1,0 +1,45 @@
+{
+  "_id": "poSolutiondedeve",
+  "name": "Solution de développement",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Employée pour développer des photographies, cette solution permet aux images de bouger en capturant les derniers mouvements des personnes, objets et paysages.</p><p>Effet : Anime les photographies</p><p>Durée : -</p><p>Remarque : Fonctionne aussi sur les pellicules moldues</p>",
+    "potionLevel": 1,
+    "malus": -10,
+    "target": "O",
+    "ingredientRarity": "commun",
+    "ingredientList": [
+      {
+        "name": "Alchémille",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Eponge",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Hyposulfite de sodium",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Pensée sauvage",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      },
+      {
+        "name": "Plume de Jobarbille",
+        "quantity": 1,
+        "rarity": "commun",
+        "available": false
+      }
+    ]
+  }
+}

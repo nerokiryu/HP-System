@@ -1,0 +1,13 @@
+{
+  "_id": "cpAnjelica000000",
+  "name": "Anjelica",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une plante aux propriétés magiques employée dans la fabrication de potions. Il est possible que le nom de cette plante soit une faute d’orthographe de « Angelica archangelica », une plante du monde réel qui est cultivée pour ses tiges et ses racines comestibles au parfum doux.</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "• Comestible"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "cpAiledechauveso",
+  "name": "Aile de chauve- souris",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une aile provenant de chauve-souris classiques.</p><p>Vendue généralement 5 Gallions chacune chez tout bon apothicaire</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Mélange de bile de tatou",
+    "otherUses": "-"
+  }
+}

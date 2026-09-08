@@ -1,0 +1,13 @@
+{
+  "_id": "cpSauge000000000",
+  "name": "Sauge",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une plante non-magique aux feuilles vertes en forme de lance et qui peut être brûlée pour aider à la divination. Cette plante est très appréciée des</p><p>Centaures pour leur méditation</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Brume de Pensine\nCataplasme contre les morsures de Murlap\nLangue de miel\nMémoire\nPotion à priser\nPhéromones\nTraitement des morsures de chiens fous",
+    "otherUses": "• Divination"
+  }
+}

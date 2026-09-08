@@ -1,0 +1,33 @@
+{
+  "_id": "poBabillage00000",
+  "name": "Babillage",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Celui qui consomme cette potion se met à avoir des propos incompréhensibles.</p><p>Sous-type : Maléfice</p><p>Effet : -50% dans les compétences liées à la parole</p><p>Durée : 1d4 heure(s).</p>",
+    "potionLevel": 5,
+    "malus": -30,
+    "target": "A/P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Aconit",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Brin de valériane",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Dictame",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

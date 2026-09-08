@@ -1,0 +1,13 @@
+{
+  "_id": "cpHippocampevola",
+  "name": "Hippocampe volant",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Créature magique vivant dans le lac de Poudlard, en Écosse</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Engrais magiques\nPotion fortifiante",
+    "otherUses": "-"
+  }
+}

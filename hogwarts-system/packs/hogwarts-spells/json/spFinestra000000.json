@@ -1,0 +1,19 @@
+{
+  "_id": "spFinestra000000",
+  "name": "Finestra",
+  "type": "spell",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Permet de faire voler la vitre d'une fenêtre en minuscules éclats. Ce sort ne cause cependant aucun bruit.</p><p>Durée : -</p><p>Formule extrême : -</p>",
+    "spellLevel": 1,
+    "spellType": "S",
+    "target": [
+      "O"
+    ],
+    "incantation": "Finestra",
+    "malus": -5,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

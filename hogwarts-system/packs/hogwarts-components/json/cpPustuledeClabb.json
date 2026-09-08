@@ -1,0 +1,13 @@
+{
+  "_id": "cpPustuledeClabb",
+  "name": "Pustule de Clabbert",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Pustule provenant d’un Clabbert, une sorte de petit lézard capable de sentir la présence des</p><p>Moldus</p>",
+    "rarity": "rarissime",
+    "quantity": 0,
+    "usedIn": "Actuellement inconnue",
+    "otherUses": "-"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "poPotiondelilvif",
+  "name": "Potion de l’œil- vif",
+  "type": "potion",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Également connue sous le nom de potion d’Éveil, la potion d’œil-vif empêche le sommeil ou fait reprendre connaissance après une sédation ou un coup sur la tête.</p><p>Durée : immédiate (réveil), 2d6+6 heures (insomnie)</p>",
+    "potionLevel": 3,
+    "malus": -30,
+    "target": "A/P",
+    "ingredientRarity": "rare",
+    "ingredientList": [
+      {
+        "name": "Aconit",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Crochets de serpent",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Dards Billywig",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      },
+      {
+        "name": "Ingrédient Standard",
+        "quantity": 1,
+        "rarity": "rare",
+        "available": false
+      }
+    ]
+  }
+}

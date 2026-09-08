@@ -1,0 +1,13 @@
+{
+  "_id": "cpVinblanc000000",
+  "name": "Vin blanc",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Un alcool fait à partir de raisin</p>",
+    "rarity": "commun",
+    "quantity": 0,
+    "usedIn": "Traitement des morsures de chiens fous",
+    "otherUses": "• Consommable"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "spMimetisme00000",
+  "name": "Mimétisme",
+  "type": "spell",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>La peau du personnage s’adapte à son environnement.</p><p>Effet : bonus de 50% à la discrétion.</p><p>Durée : 1d10+1 heures</p><p>Formule extrême : Bonus de 75% et durée +3 heures</p>",
+    "spellLevel": 4,
+    "spellType": "M",
+    "target": [
+      "P"
+    ],
+    "incantation": "Mimesis",
+    "malus": -50,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

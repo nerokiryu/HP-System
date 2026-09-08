@@ -1,0 +1,13 @@
+{
+  "_id": "cpChiendentetoil",
+  "name": "Chiendent étoilé",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Une variété particulière de chiendent – une mauvaise herbe verte drue – qui possèderait des vertus médicinales</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Élixir malveillant",
+    "otherUses": "• Vertus médicinales"
+  }
+}

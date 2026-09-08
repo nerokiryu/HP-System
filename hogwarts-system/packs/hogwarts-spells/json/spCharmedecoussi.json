@@ -1,0 +1,19 @@
+{
+  "_id": "spCharmedecoussi",
+  "name": "Charme de coussinage",
+  "type": "spell",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Permet de rendre un balai plus confortable en créant un coussin invisible. Peu également être utilisé pour amortir une chute</p><p>Effet principal: Rend un balai plus confortable</p><p>Effet secondaire : Diminue les dégâts de chute de moitié</p><p>Durée : variable (heures)</p><p>Formule extrême : -</p>",
+    "spellLevel": 1,
+    "spellType": "E",
+    "target": [
+      "O"
+    ],
+    "incantation": "Molliare",
+    "malus": -10,
+    "extremeFormula": false,
+    "malusExtremeFormula": 0,
+    "malusMastered": 0
+  }
+}

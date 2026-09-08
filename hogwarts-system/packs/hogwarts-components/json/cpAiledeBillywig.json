@@ -1,0 +1,13 @@
+{
+  "_id": "cpAiledeBillywig",
+  "name": "Aile de Billywig",
+  "type": "component",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Des ailes transparentes qui proviennent d’un</p><p>Billywig, un petit insecte magique très rapide et dont la piqûre peut faire léviter les gens</p>",
+    "rarity": "rare",
+    "quantity": 0,
+    "usedIn": "Potion d’Hilarité\nPotion de mélancolie",
+    "otherUses": "-"
+  }
+}
