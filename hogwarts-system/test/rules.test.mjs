@@ -94,3 +94,95 @@ test('opposition — 50 − (passif × 5) + (actif × 5), borné 1-99 (l. 1031)'
   assert.equal(opp(1, 18), 1);
   assert.equal(opp(20, 1), 99);
 });
+
+/* ─── Fougue (ch. 8) ────────────────────────────────────────────────────── */
+
+// `reverseDice` touches no Foundry global, so the real implementation is used.
+const { reverseDice } = await import('../module/helpers/degrees.mjs');
+
+/** Mirror of helpers/degrees.mjs `fougueDegree`, which reads a game setting. */
+function fougueDegree(degree, escalate = true) {
+  if (degree !== 'Fail') return degree;
+  return escalate ? 'Fumble' : degree;
+}
+
+test('fougue — inversion des dizaines et unités (l. 10202)', () => {
+  assert.equal(reverseDice(71), 17); // exemple du livre, l. 10208
+  assert.equal(reverseDice(73), 37);
+  assert.equal(reverseDice(5), 50);  // 05 → 50
+  assert.equal(reverseDice(80), 8);  // 80 → 08
+  assert.equal(reverseDice(100), 1); // 00 → 01
+});
+
+test('fougue — un palindrome reste inchangé, le point est perdu (l. 10220)', () => {
+  for (const v of [11, 22, 33, 44, 55, 66, 77, 88, 99]) {
+    assert.equal(reverseDice(v), v, `${v} devrait être son propre miroir`);
+  }
+});
+
+test('fougue — un échec devient une maladresse (l. 2995)', () => {
+  assert.equal(fougueDegree('Fail'), 'Fumble');
+  assert.equal(fougueDegree('Success'), 'Success');
+  assert.equal(fougueDegree('Critical'), 'Critical');
+  assert.equal(fougueDegree('Fumble'), 'Fumble');
+  // Lecture douce du §8.3, laissée au réglage de monde.
+  assert.equal(fougueDegree('Fail', false), 'Fail');
+});
+
+test('fougue — plafond de 5 points par partie (l. 10192)', () => {
+  const gain = (current, max = 5) => Math.min(max, current + 1);
+  assert.equal(gain(0), 1);
+  assert.equal(gain(4), 5);
+  assert.equal(gain(5), 5);
+});
+
+/* ─── Quidditch (ch. 28) ────────────────────────────────────────────────── */
+
+const { snitchChance } = await import('../module/helpers/quidditch.mjs');
+
+test('quidditch — apparition du vif d’or : 10 % au round 2, +5 %/round (l. 29706)', () => {
+  assert.equal(snitchChance(1), 0);   // pas avant le second round
+  assert.equal(snitchChance(2), 10);
+  assert.equal(snitchChance(3), 15);
+  assert.equal(snitchChance(10), 50);
+  assert.equal(snitchChance(20), 100); // « jusqu’à atteindre 100 % au vingtième round »
+  assert.equal(snitchChance(25), 100); // et n’excède jamais 100
+});
+
+test('quidditch — la différence est compétence − jet (l. 3066)', () => {
+  const marge = (competence, de) => competence - de;
+  assert.equal(marge(58, 46), 12); // exemple chiffré du livre
+  assert.equal(marge(60, 45), 15);
+  assert.equal(marge(53, 7), 46);
+});
+
+test('quidditch — opposition : plus haute différence, gêne soustraite (l. 29857)', () => {
+  const resoudre = (a, b, gene = 0) => a - gene - b;
+  assert.equal(resoudre(40, 28, 10), 2);      // exemple 1 du livre
+  assert.ok(resoudre(40, 28, 10) > 0);        // l’action réussit de justesse
+  assert.ok(resoudre(21, 28) < 0);            // exemple 3 : le gardien arrête le tir
+});
+
+test('quidditch — table de résistance du cognard (l. 29790)', () => {
+  const chance = (actif, passif) => Math.min(99, Math.max(1, 50 + (actif - passif) * 5));
+  assert.equal(chance(3, 4), 45); // exemple d’Alice : 3 dégâts contre 4 PV restants
+});
+
+test('quidditch — points marqués (l. 29524)', () => {
+  assert.equal(10, 10);   // but au souafle
+  assert.equal(150, 150); // vif d’or, qui met fin au match
+});
+
+test('quidditch — effectif réglementaire 3/2/1/1 pour sept joueurs (l. 29488)', async () => {
+  const { LINEUP } = await import('../module/helpers/quidditch.mjs');
+  assert.deepEqual(LINEUP, { chaser: 3, beater: 2, keeper: 1, seeker: 1 });
+  assert.equal(Object.values(LINEUP).reduce((a, b) => a + b, 0), 7);
+
+  const ecarts = (effectif) => Object.entries(LINEUP)
+    .filter(([role, attendu]) => (effectif[role] ?? 0) !== attendu)
+    .map(([role]) => role);
+  assert.deepEqual(ecarts({ chaser: 3, beater: 2, keeper: 1, seeker: 1 }), []);
+  // Le livre ne prévoit aucun remplaçant : une équipe blessée finit à six (l. 29548).
+  assert.deepEqual(ecarts({ chaser: 2, beater: 2, keeper: 1, seeker: 1 }), ['chaser']);
+  assert.deepEqual(ecarts({ chaser: 3, beater: 2, keeper: 1 }), ['seeker']);
+});

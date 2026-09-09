@@ -16,6 +16,8 @@
         "rarity": "rare",
         "available": false
       }
-    ]
+    ],
+    "virulence": null,
+    "duration": "24 heures"
   }
 }

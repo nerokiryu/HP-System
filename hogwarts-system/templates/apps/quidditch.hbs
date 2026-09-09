@@ -1,0 +1,152 @@
+<div class='quidditch-app'>
+
+  {{#unless hasCombat}}
+    <p class='quidditch-hint'>{{localize 'HOGWARTS.Quidditch.NoCombat'}}</p>
+  {{/unless}}
+
+  {{! Scoreboard }}
+  <section class='quidditch-scoreboard'>
+    {{#each sides as |side|}}
+      <div class='quidditch-side'>
+        <label class='resource-label'>{{side.name}}</label>
+        <div class='quidditch-score'>{{side.score}}</div>
+        {{#if @root.isGM}}
+          <div class='quidditch-score-actions'>
+            <button type='button' data-action='score' data-side='{{side.index}}' data-kind='goal'>
+              +{{@root.points.goal}} {{localize 'HOGWARTS.Quidditch.Score.goal'}}
+            </button>
+            <button type='button' data-action='score' data-side='{{side.index}}' data-kind='snitch'>
+              +{{@root.points.snitch}} {{localize 'HOGWARTS.Quidditch.Score.snitch'}}
+            </button>
+          </div>
+        {{/if}}
+      </div>
+    {{/each}}
+    <div class='quidditch-round'>
+      {{localize 'HOGWARTS.Quidditch.RoundLabel'}}
+      <strong>{{round}}</strong>
+    </div>
+  </section>
+
+  {{#if isGM}}
+    <section class='quidditch-controls'>
+      <button type='button' data-action='startMatch'>
+        <i class='fas fa-flag'></i> {{localize 'HOGWARTS.Quidditch.Start'}}
+      </button>
+      <button type='button' data-action='openResolver'>
+        <i class='fas fa-scale-balanced'></i> {{localize 'HOGWARTS.Quidditch.Resolver'}}
+      </button>
+      <button type='button' data-action='endMatch'>
+        <i class='fas fa-flag-checkered'></i> {{localize 'HOGWARTS.Quidditch.End'}}
+      </button>
+    </section>
+  {{/if}}
+
+  {{! Golden snitch }}
+  <section class='quidditch-snitch'>
+    <header><i class='fas fa-baseball'></i> {{localize 'HOGWARTS.Quidditch.Snitch.Title'}}</header>
+    <div class='card-row'>
+      {{localize 'HOGWARTS.Quidditch.Snitch.Chance'}}: <strong>{{snitch.chance}}%</strong>
+      —
+      {{#if snitch.onPitch}}
+        <span class='snitch-on'>{{localize 'HOGWARTS.Quidditch.Snitch.OnPitch'}}</span>
+      {{else}}
+        <span class='snitch-off'>{{localize 'HOGWARTS.Quidditch.Snitch.Absent'}}</span>
+      {{/if}}
+    </div>
+    {{#if snitch.spottedName}}
+      <div class='card-row'>
+        {{localize 'HOGWARTS.Quidditch.Snitch.SpottedBy'}}: <strong>{{snitch.spottedName}}</strong>
+        — {{localize 'HOGWARTS.Quidditch.Snitch.DistanceLabel'}}: <strong>{{snitch.distance}} m</strong>
+      </div>
+    {{/if}}
+    {{#if isGM}}
+      <div class='quidditch-snitch-actions'>
+        <button type='button' data-action='rollSnitch'>
+          <i class='fas fa-dice'></i> {{localize 'HOGWARTS.Quidditch.Snitch.Roll'}}
+        </button>
+        <button type='button' data-action='closeDistance'>
+          <i class='fas fa-arrows-left-right-to-line'></i> {{localize 'HOGWARTS.Quidditch.Snitch.Close'}}
+        </button>
+      </div>
+    {{/if}}
+  </section>
+
+  {{! Line-up }}
+  <section class='quidditch-lineup'>
+    <header><i class='fas fa-users'></i> {{localize 'HOGWARTS.Quidditch.Lineup'}}</header>
+    {{#each combatants as |c|}}
+      <div class='quidditch-player'>
+        <img src='{{c.img}}' width='28' height='28' alt='{{c.name}}' />
+        <span class='player-name'>{{c.name}}</span>
+        {{#if @root.isGM}}
+          <select data-change='setRole' data-combatant-id='{{c.id}}'>
+            {{#each @root.roles as |r|}}
+              <option value='{{r.key}}' {{#if (eq r.key c.role)}}selected{{/if}}>{{r.label}}</option>
+            {{/each}}
+          </select>
+        {{else}}
+          <span class='player-role'><i class='{{c.icon}}'></i> {{c.roleLabel}}</span>
+        {{/if}}
+        <span class='player-init'>{{c.initiative}}</span>
+        <div class='player-actions'>
+          {{#each c.actions as |a|}}
+            <button type='button' data-action='rollAction' data-combatant-id='{{c.id}}' data-action-key='{{a.key}}'>
+              {{a.label}}
+            </button>
+          {{/each}}
+          {{#if @root.isGM}}
+            <button type='button' class='bludger' data-action='bludgerHit' data-combatant-id='{{c.id}}'>
+              <i class='fas fa-burst'></i> {{localize 'HOGWARTS.Quidditch.Bludger.Hit'}}
+            </button>
+          {{/if}}
+        </div>
+      </div>
+    {{/each}}
+  </section>
+
+  {{#if isGM}}
+    {{! Fouls }}
+    <section class='quidditch-fouls'>
+      <header><i class='fas fa-whistle'></i> {{localize 'HOGWARTS.Quidditch.Fouls'}}</header>
+      <div class='quidditch-foul-row'>
+        <select name='foul'>
+          {{#each fouls as |f|}}<option value='{{f.key}}'>{{f.label}}</option>{{/each}}
+        </select>
+        <select name='foulSide'>
+          {{#each sides as |s|}}<option value='{{s.index}}'>{{s.name}}</option>{{/each}}
+        </select>
+        <button type='button' data-action='callFoul'>{{localize 'HOGWARTS.Quidditch.CallFoul'}}</button>
+      </div>
+    </section>
+
+    {{! Saved squads }}
+    <section class='quidditch-teams'>
+      <header><i class='fas fa-clipboard-list'></i> {{localize 'HOGWARTS.Quidditch.Squads'}}</header>
+      {{#each sides as |s|}}
+        <div class='quidditch-foul-row'>
+          <label>{{s.name}}</label>
+          <select data-change='setTeam' data-side='{{s.index}}'>
+            <option value=''>—</option>
+            {{#each @root.squads as |t|}}
+              <option value='{{t.id}}' {{#if (eq t.id s.squadId)}}selected{{/if}}>{{t.name}}</option>
+            {{/each}}
+          </select>
+        </div>
+      {{/each}}
+      <div class='quidditch-foul-row'>
+        <input type='text' name='saveName' placeholder='{{localize "HOGWARTS.Quidditch.TeamName"}}' />
+        <select name='saveSide'>
+          {{#each sides as |s|}}<option value='{{s.index}}'>{{s.name}}</option>{{/each}}
+        </select>
+        <button type='button' data-action='saveTeam'>{{localize 'HOGWARTS.Quidditch.SaveTeam'}}</button>
+      </div>
+      {{#each squads as |t|}}
+        <div class='quidditch-foul-row'>
+          <span>{{t.name}} ({{t.size}}){{#unless t.lineupValid}} <i class='fas fa-triangle-exclamation' data-tooltip='{{localize "HOGWARTS.Quidditch.Team.LineupWarn"}}'></i>{{/unless}}</span>
+          <a data-action='deleteTeam' data-team-id='{{t.id}}'><i class='fas fa-trash'></i></a>
+        </div>
+      {{/each}}
+    </section>
+  {{/if}}
+</div>

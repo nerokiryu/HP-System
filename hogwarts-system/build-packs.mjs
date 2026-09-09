@@ -15,7 +15,15 @@ const PACKS = [
   { name: "hogwarts-components", type: "Item" },
   { name: "hogwarts-features", type: "Item" },
   { name: "hogwarts-creatures", type: "Actor" },
+  { name: "hogwarts-guide", type: "JournalEntry" },
 ];
+
+// Embedded collections live in their own LevelDB records and the parent keeps only
+// their ids -- see `mapHierarchy` in @foundryvtt/foundryvtt-cli. A parent holding
+// inline objects, or none at all, loads with an empty collection and no error.
+const EMBEDDED = {
+  JournalEntry: { sublevel: "journal", collections: ["pages"] },
+};
 
 async function buildPack(packDef) {
   const jsonDir = path.join(__dirname, "packs", packDef.name, "json");
@@ -45,9 +53,22 @@ async function buildPack(packDef) {
       const id = file.replace(/\.json$/, "").replace(/[^a-zA-Z0-9]/g, "").slice(0, 16).padEnd(16, "0");
       doc._id = id;
     }
-    const prefix = packDef.type === "Actor" ? "!actors!" : "!items!";
-    const key = `${prefix}${doc._id}`;
-    batch.put(key, JSON.stringify(doc));
+    const embedded = EMBEDDED[packDef.type];
+    const prefix = embedded ? `!${embedded.sublevel}!`
+      : packDef.type === "Actor" ? "!actors!"
+        : "!items!";
+
+    if (embedded) {
+      for (const collection of embedded.collections) {
+        const children = doc[collection] ?? [];
+        for (const child of children) {
+          batch.put(`!${embedded.sublevel}.${collection}!${doc._id}.${child._id}`, JSON.stringify(child));
+        }
+        doc[collection] = children.map((child) => child._id);
+      }
+    }
+
+    batch.put(`${prefix}${doc._id}`, JSON.stringify(doc));
     count++;
   }
   await batch.write();

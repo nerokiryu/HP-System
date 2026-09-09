@@ -1,0 +1,303 @@
+{
+  "_id": "hogwartsguidemj0",
+  "name": "Guide du Maître du Jeu",
+  "pages": [
+    {
+      "_id": "hogwartsguide000",
+      "name": "Installation et premier monde",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "format": 1,
+        "content": "<h3>Installer le système</h3>\n<p>Dans l&#39;écran d&#39;accueil de Foundry : <strong>Configuration → Systèmes de jeu → Installer un système</strong>, puis collez l&#39;URL de manifeste :</p>\n<p>``<code> https://github.com/nerokiryu/HP-System/releases/latest/download/system.json </code>``</p>\n<p>Prérequis : <strong>Foundry VTT v14</strong>. Le système est fourni en français et en anglais ; il suit la langue choisie dans Foundry.</p>\n<h3>Créer le monde</h3>\n<p><strong>Créer un monde</strong> → choisissez <em>Hogwarts System</em> comme système de jeu. Rien d&#39;autre n&#39;est à configurer : les compendiums de sorts, potions, ingrédients, créatures et avantages sont livrés avec le système et sont immédiatement disponibles.</p>\n<h3>Réglages à décider avant la première séance</h3>\n<p>Trois réglages changent des résultats de jeu et méritent d&#39;être tranchés dès le départ, parce que les changer en cours de campagne modifie rétroactivement des personnages existants :</p>\n<table><thead><tr><th>Réglage</th><th>Effet</th></tr></thead><tbody><tr><td><strong>Gain d&#39;expérience scolaire</strong></td><td>Le livre publie deux versions contradictoires du gain par période scolaire. Choisissez laquelle fait foi.</td></tr><tr><td><strong>Méthode d&#39;assommement</strong></td><td>Table de résistance (§2.7.1) ou paliers de 25/50/75 % de PV (§2.7.2).</td></tr><tr><td><strong>Exclure les matières scolaires des PC</strong></td><td>Détermine si les points investis dans les matières scolaires consomment ou non les Points de Création.</td></tr></tbody></table>\n<p>Le détail complet des onze réglages est en section 14.</p>"
+      },
+      "sort": 100000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "hogwartsguide001",
+      "name": "Prise en main en dix minutes",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "format": 1,
+        "content": "<p>Checklist pour arriver à une première scène jouable :</p>\n<ol><li><strong>Créer les personnages.</strong> <em>Acteurs → Créer un acteur → type <code>Personnage</code></em>.</li><li><strong>Renseigner les caractéristiques</strong> dans l&#39;onglet <em>Caractéristiques</em> : FOR, CON, TAI, DEX, INT, POU, APP, PER. Tout le reste (PV, bonus de dégâts, initiative, compétences dérivées) en découle automatiquement.</li><li><strong>Choisir maison et année</strong> dans l&#39;en-tête. La maison change immédiatement le thème de couleur de la fenêtre ; l&#39;année pilote les maxima de compétences scolaires.</li><li><strong>Répartir les compétences</strong> dans l&#39;onglet <em>Compétences</em>, colonne <strong>Dépenses</strong>. N&#39;écrivez jamais dans la colonne <em>Valeur</em> : elle est calculée.</li><li><strong>Glisser les sorts et potions</strong> depuis les compendiums vers la fiche.</li><li><strong>Créer une scène</strong>, y déposer les jetons, puis lancer un combat depuis l&#39;onglet <em>Combat</em> de la barre latérale.</li></ol>\n<blockquote><p><strong>Règle d&#39;or</strong> : tout ce qui est grisé sur une fiche est une valeur dérivée. Si un chiffre ne veut pas changer, c&#39;est qu&#39;il faut modifier ce qui l&#39;alimente.</p></blockquote>"
+      },
+      "sort": 200000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "hogwartsguide002",
+      "name": "La fiche de personnage",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "format": 1,
+        "content": "<figure><img src=\"systems/hogwarts-system/assets/tutorial/01-fiche-personnage.png\" alt=\"Fiche de personnage\" /><figcaption>Fiche de personnage</figcaption></figure>\n<h3>L&#39;en-tête</h3>\n<p>L&#39;en-tête reste visible quel que soit l&#39;onglet actif. Il contient tout ce qu&#39;un MJ demande en cours de partie :</p>\n<table><thead><tr><th>Champ</th><th>Détail</th></tr></thead><tbody><tr><td><strong>Santé</strong></td><td>Points de vie courants / maximum. Le maximum est dérivé de CON et TAI.</td></tr><tr><td><strong>Points de Fougue</strong></td><td>Réserve courante / maximum (5). Le lien <em>Sprint (Fougue)</em> déclenche la course du §1.7.7.</td></tr><tr><td><strong>Année</strong></td><td>Année scolaire, de 1 à 7. Pilote le plafond des matières scolaires.</td></tr><tr><td><strong>Bonus dégâts</strong></td><td>Dérivé de FOR + TAI. Cliquable : lance directement les dégâts à mains nues.</td></tr><tr><td><strong>Initiative</strong></td><td>Formule <code>1d6 + DEX</code>. Cliquable : lance l&#39;initiative et l&#39;inscrit dans le tracker.</td></tr><tr><td><strong>Réactions</strong></td><td>Deux boutons : esquive et parade.</td></tr></tbody></table>\n<p>Le sélecteur de <strong>maison</strong>, en haut à droite, applique le thème de la maison à toute la fenêtre (bleu Serdaigle sur la capture).</p>\n<h3>Les onglets</h3>\n<p>La barre d&#39;onglets affiche des icônes par défaut ; le réglage <em>Utiliser des icônes pour les onglets</em> permet de repasser à des libellés textuels.</p>\n<table><thead><tr><th>Onglet</th><th>Contenu</th></tr></thead><tbody><tr><td><strong>Biographie</strong></td><td>Famille, apparence, caractère, archétype, équipe de Quidditch</td></tr><tr><td><strong>Caractéristiques</strong></td><td>Les huit caractéristiques et les valeurs dérivées (Idée, Chance, sens…)</td></tr><tr><td><strong>Compétences</strong></td><td>Toutes les compétences, l&#39;expérience et les jets d&#39;opposition</td></tr><tr><td><strong>Avantages</strong></td><td>Avantages, désavantages, faveurs et disgrâces du destin</td></tr><tr><td><strong>Équipement</strong></td><td>Armes, protections, balais, objets, argent</td></tr><tr><td><strong>Sorts</strong></td><td>Sortilèges connus, classés par niveau</td></tr><tr><td><strong>Potions</strong></td><td>Potions préparées ou en réserve</td></tr><tr><td><strong>Familier</strong></td><td>Familier lié</td></tr><tr><td><strong>Paramètres</strong></td><td>Options propres à cette fiche</td></tr></tbody></table>\n<h3>La table des compétences</h3>\n<p>Les colonnes ont chacune un rôle précis :</p>\n<table><thead><tr><th>Colonne</th><th>Rôle</th></tr></thead><tbody><tr><td><strong>Base</strong></td><td>Valeur de départ imposée par le livre. Non modifiable.</td></tr><tr><td><strong>Max</strong></td><td>Plafond autorisé, dépendant de l&#39;année pour les matières scolaires.</td></tr><tr><td><strong>Dépenses</strong></td><td><strong>La seule case que vous remplissez.</strong> Points investis dans la compétence.</td></tr><tr><td><strong>Valeur</strong></td><td><code>Base + Dépenses</code>, corrigée par le coût progressif. C&#39;est le score du jet.</td></tr><tr><td><strong>XP</strong></td><td>Case à cocher marquant la compétence comme « à faire progresser ».</td></tr></tbody></table>\n<p>Le bouton <code>+</code> en bout de ligne lance un jet sur la compétence.</p>\n<blockquote><p><strong>Attention</strong> : la progression n&#39;est pas linéaire. Investir 25 points dans une compétence ne donne pas toujours +25 % — c&#39;est normal, le coût augmente avec le niveau atteint. Sur la capture, <em>Acrobatie/Quidditch</em> affiche 25 dépenses pour une valeur de 35 (base 10).</p></blockquote>"
+      },
+      "sort": 300000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "hogwartsguide003",
+      "name": "Faire un jet",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "format": 1,
+        "content": "<h3>Déclencher le jet</h3>\n<p>Cliquez sur l&#39;icône de dé en bout de ligne d&#39;une compétence, sur une valeur dérivée (Idée, Chance…), ou sur un sort ou une potion dans les onglets correspondants.</p>\n<h3>Le dialogue de modificateur</h3>\n<figure><img src=\"systems/hogwarts-system/assets/tutorial/02-dialogue-modificateur.png\" alt=\"Dialogue de modificateur\" /><figcaption>Dialogue de modificateur</figcaption></figure>\n<p>Chaque jet en pourcentage ouvre d&#39;abord ce dialogue :</p>\n<ul><li><strong>Bonus/Malus</strong> : modificateur de circonstance, en points de pourcentage. C&#39;est ici que vous appliquez les difficultés que vous décidez comme MJ.</li><li><strong>Utiliser un point de Fougue</strong> : voir la section 5. La case n&#39;est proposée que si le personnage a encore des points.</li></ul>\n<p>Le seuil final tient également compte, sans que vous ayez à y penser :</p>\n<ul><li>le <strong>malus propre du sort ou de la potion</strong> ;</li><li>l&#39;<strong>affinité de baguette</strong> (+10 % si la baguette mentionne l&#39;école du sort) ;</li><li>les malus de <strong>sans baguette</strong> (−75 %) et d&#39;<strong>informulé</strong> (−30 %) ;</li><li>le <strong>stress</strong> courant, retranché du seuil.</li></ul>\n<h3>La carte de résultat</h3>\n<figure><img src=\"systems/hogwarts-system/assets/tutorial/03-carte-de-jet.png\" alt=\"Carte de jet\" /><figcaption>Carte de jet</figcaption></figure>\n<p>La carte publie systématiquement la <strong>cible finale</strong> et le <strong>jet</strong>, pour que la table puisse vérifier le calcul. Le badge indique le degré :</p>\n<table><thead><tr><th>Résultat</th><th>Degré</th></tr></thead><tbody><tr><td><code>01</code>–<code>05</code></td><td>Réussite critique</td></tr><tr><td><code>96</code>–<code>00</code></td><td>Maladresse</td></tr><tr><td>≤ cible</td><td>Réussite</td></tr><tr><td>&gt; cible</td><td>Échec</td></tr></tbody></table>\n<p>La <strong>maladresse est évaluée avant la réussite</strong> : un <code>96</code> reste une maladresse même si la cible dépasse 96, conformément au livre. Un réglage facultatif ajoute les paliers <em>Extrême</em> et <em>Difficile</em> empruntés au BRP générique ; il est désactivé par défaut car la source ne les définit pas.</p>\n<p>Le bouton <strong>Utiliser la Fougue</strong> sous la carte permet de dépenser un point <em>après</em> coup — voir la section suivante.</p>\n<h3>Jets d&#39;opposition</h3>\n<p>Le bouton <strong>Jet d&#39;opposition</strong>, en haut de l&#39;onglet <em>Compétences</em>, ouvre un résolveur : choisissez les deux compétences opposées, le système lance les deux jets et compare les marges.</p>"
+      },
+      "sort": 400000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "hogwartsguide004",
+      "name": "La Fougue",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "format": 1,
+        "content": "<p>La Fougue (chapitre 8) est entièrement automatisée.</p>\n<ul><li>Chaque personnage dispose d&#39;une réserve de <strong>5 points</strong> maximum, affichée dans l&#39;en-tête.</li><li>Le point peut être déclaré <strong>avant</strong> le jet, via la case du dialogue, ou <strong>après</strong>, via le bouton <em>Utiliser la Fougue</em> de la carte de chat. Le second mode se désactive au besoin (réglage <em>Fougue utilisable après le jet</em>), pour coller strictement au livre qui exige une déclaration préalable.</li><li>Le système propose alors d&#39;<strong>inverser les dizaines et les unités</strong> : un <code>74</code> devient un <code>47</code>. C&#39;est un <strong>choix</strong>, pas une obligation — une boîte de dialogue vous demande de garder ou d&#39;inverser, et la carte de chat indique laquelle des deux options a été retenue.</li><li><strong>Le point est dépensé dans tous les cas</strong>, y compris sur un palindrome (<code>44</code>, <code>55</code>) où l&#39;inversion ne change rien. Le livre le précise explicitement.</li><li>Par défaut, <strong>un échec obtenu alors qu&#39;un point de Fougue a été dépensé est traité comme une maladresse</strong>. Décochez <em>Échec avec Fougue = maladresse</em> si vous préférez en faire un simple échec.</li></ul>\n<p>Le lien <strong>Sprint (Fougue)</strong> de l&#39;en-tête applique la règle de course-poursuite du §1.7.7.</p>"
+      },
+      "sort": 500000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "hogwartsguide005",
+      "name": "Magie",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "format": 1,
+        "content": "<h3>L&#39;onglet Sorts</h3>\n<figure><img src=\"systems/hogwarts-system/assets/tutorial/04-onglet-sorts.png\" alt=\"Onglet Sorts\" /><figcaption>Onglet Sorts</figcaption></figure>\n<p>Les sortilèges sont regroupés <strong>par niveau</strong>, de 0 à 5 et plus. Chaque ligne affiche le type de sort, la cible, le malus et la présence d&#39;une formule extrême.</p>\n<p>Le bandeau du haut, <strong>Malus maximum à l&#39;apprentissage de sorts des années supérieures</strong>, reprend la valeur d&#39;INTelligence × 5 du personnage : c&#39;est le malus maximal qu&#39;il peut absorber pour apprendre un sort au-dessus de son année.</p>\n<p>Pour ajouter un sort : glissez-le depuis le compendium <em>Hogwarts Spells</em>, ou utilisez le bouton <strong>+ Ajouter niveau N</strong> de la section voulue.</p>\n<h3>La fiche d&#39;un sort</h3>\n<figure><img src=\"systems/hogwarts-system/assets/tutorial/05-fiche-sort.png\" alt=\"Fiche de sort — description\" /><figcaption>Fiche de sort — description</figcaption></figure>\n<p>L&#39;onglet <em>Description</em> contient le texte du sort tel qu&#39;il figure dans le <em>Grimoire</em>, y compris sa durée et sa formule extrême.</p>\n<figure><img src=\"systems/hogwarts-system/assets/tutorial/06-fiche-sort-attributs.png\" alt=\"Fiche de sort — attributs\" /><figcaption>Fiche de sort — attributs</figcaption></figure>\n<p>L&#39;onglet <em>Attributs</em> contient tout ce qui pilote l&#39;automatisation :</p>\n<table><thead><tr><th>Champ</th><th>Effet mécanique</th></tr></thead><tbody><tr><td><strong>Niveau de sort</strong></td><td>Détermine la section d&#39;affichage et le malus d&#39;apprentissage</td></tr><tr><td><strong>Malus</strong></td><td>Retranché du seuil au moment du lancer</td></tr><tr><td><strong>Type de sort</strong></td><td>École : Enchantements (E), Métamorphose (M), Mauvais sorts (S)…</td></tr><tr><td><strong>Cible</strong></td><td>Animal, Objet, Personne, Végétaux, Sortilège</td></tr><tr><td><strong>Incantation</strong></td><td>Formule prononcée, affichée dans la carte de chat</td></tr><tr><td><strong>Sort instinctif (pré-scolaire)</strong></td><td>Le jet se fait sous POU × 3 au lieu de la compétence d&#39;école</td></tr><tr><td><strong>Possède une formule extrême</strong></td><td>Active le choix « formule extrême » au moment du lancer</td></tr></tbody></table>\n<h3>Lancer un sort</h3>\n<p>Cliquez sur l&#39;icône du sort dans l&#39;onglet <em>Sorts</em>. Le système :</p>\n<ol><li>sélectionne automatiquement la <strong>compétence d&#39;école</strong> correspondante — ou POU × 3 pour un sort instinctif ;</li><li>applique le <strong>malus du sort</strong> ;</li><li>ajoute l&#39;<strong>affinité de baguette</strong> si elle correspond ;</li><li>propose, le cas échéant, le lancer en <strong>formule extrême</strong> ;</li><li>ouvre le dialogue de modificateur, puis publie la carte.</li></ol>\n<p><strong>Sans baguette</strong> (−75 %) et <strong>informulé</strong> (−30 %) se cumulent avec le malus du sort.</p>\n<blockquote><p><strong>Formule extrême</strong> : la maîtriser abaisse durablement le malus du sort de base. Les livres la notent <code>FE : A%/B%</code>, où <code>A</code> est le malus une fois la formule maîtrisée et <code>B</code> celui du lancer en mode extrême.</p></blockquote>"
+      },
+      "sort": 600000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "hogwartsguide006",
+      "name": "Potions",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "format": 1,
+        "content": "<p>L&#39;onglet <em>Potions</em> fonctionne comme celui des sorts. Chaque potion porte son niveau, sa <strong>virulence</strong>, sa rareté, ses doses et ses ingrédients, extraits du <em>Grimoire</em>.</p>\n<p>Deux points à connaître :</p>\n<ul><li>Le <strong>temps de préparation</strong> est volontairement vide. Le livre ne le publie pas : il est laissé à l&#39;appréciation du MJ.</li><li>La <strong>virulence</strong> et la <strong>durée</strong> sont renseignées lorsque le <em>Grimoire</em> les publie dans le texte de la potion.</li></ul>\n<p>Les ingrédients sont des objets à part entière (compendium <em>Hogwarts Components</em>), ce qui permet de gérer une réserve et des quêtes de récolte.</p>"
+      },
+      "sort": 700000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "hogwartsguide007",
+      "name": "Combat",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "format": 1,
+        "content": "<h3>Ouvrir un combat</h3>\n<p>Déposez les jetons sur la scène, sélectionnez-les, puis <strong>Créer un combat</strong> dans l&#39;onglet <em>Combat</em> de la barre latérale. L&#39;initiative se lance depuis le tracker ou en cliquant sur la valeur <em>Initiative</em> d&#39;une fiche.</p>\n<h3>Initiative et phases</h3>\n<figure><img src=\"systems/hogwarts-system/assets/tutorial/11-tracker-phases.png\" alt=\"Tracker de combat\" /><figcaption>Tracker de combat</figcaption></figure>\n<p>L&#39;initiative est <code>1d6 + DEX</code>. Par défaut elle est <strong>relancée à chaque round</strong>, conformément au §2.2 ; le réglage <em>Relancer l&#39;initiative à chaque round</em> permet de figer l&#39;ordre.</p>\n<p>Le petit bouton numéroté à côté de chaque nom est le <strong>badge de phase</strong> ajouté par le système :</p>\n<ul><li><strong>cliquez</strong> pour faire tourner la phase déclarée (1 → 2 → 3) ;</li><li><strong>Alt + clic</strong> pour marquer le combattant comme <strong>surpris</strong> : il est renvoyé en troisième phase pour le round d&#39;ouverture.</li></ul>\n<p>Le tri se fait d&#39;abord par phase, puis par initiative décroissante. À égalité parfaite, le livre tranche en faveur du joueur : le système fait de même.</p>\n<h3>Réactions</h3>\n<p>Les deux icônes <em>Réactions</em> de l&#39;en-tête déclenchent l&#39;esquive et la parade. La protection magique se lance depuis le sort correspondant.</p>\n<h3>Dégâts, blessures et récupération</h3>\n<ul><li>Les dégâts s&#39;appliquent depuis les boutons des cartes de chat, sur les jetons <strong>ciblés</strong> ou <strong>sélectionnés</strong>.</li><li>La <strong>réduction d&#39;armure</strong> est déduite automatiquement si le réglage <em>Soustraire l&#39;armure aux dégâts</em> est actif.</li><li>Les seuils d&#39;inconscience, de mort et la récupération sont gérés par le système.</li><li>L&#39;<strong>assommement</strong> dispose de deux procédures, toutes deux publiées par le livre : table de résistance (§2.7.1) ou paliers de 25/50/75 % de perte de PV (§2.7.2). Le réglage <em>Méthode d&#39;assommement</em> choisit laquelle est appliquée.</li></ul>"
+      },
+      "sort": 800000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "hogwartsguide008",
+      "name": "Progression et expérience",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "format": 1,
+        "content": "<p>Tous les outils sont réunis en haut de l&#39;onglet <em>Compétences</em> :</p>\n<table><thead><tr><th>Bouton</th><th>Usage</th></tr></thead><tbody><tr><td><strong>Résolution d&#39;expérience</strong></td><td>Résout les compétences cochées « XP » à la fin d&#39;une séance</td></tr><tr><td><strong>Période scolaire</strong></td><td>Applique le gain de fin de période ; le compteur <code>0/3</code> suit l&#39;avancement de l&#39;année</td></tr><tr><td><strong>Expérience de fin d&#39;année</strong></td><td>Applique le gain annuel</td></tr><tr><td><strong>Vacances à la maison</strong></td><td>Applique les gains hors période scolaire</td></tr><tr><td><strong>Pourcentages à répartir</strong></td><td>Réserve de points en attente d&#39;affectation</td></tr></tbody></table>\n<p>Le réglage <em>Gain d&#39;expérience scolaire</em> choisit entre les deux barèmes contradictoires du livre : le forfait <code>1d6+1</code> par période (§25.1) ou le tableau dégressif <code>1d6+1 / 1d4+1 / 1d4</code> selon l&#39;ancienneté de la matière (§7.3).</p>\n<p>Le réglage <em>Avertir en cas d&#39;expérience négative</em> affiche une notification si une dépense fait passer un total sous zéro — utile pour rattraper une saisie erronée.</p>"
+      },
+      "sort": 900000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "hogwartsguide009",
+      "name": "Points de maison",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "format": 1,
+        "content": "<figure><img src=\"systems/hogwarts-system/assets/tutorial/07-points-de-maison.png\" alt=\"Points de maison\" /><figcaption>Points de maison</figcaption></figure>\n<p>L&#39;outil se trouve dans la barre d&#39;outils de scène, icône <strong>sablier</strong>. Il est partagé par tout le monde : les joueurs voient les sabliers se remplir en direct.</p>\n<ul><li>Les quatre sabliers affichent le total de chaque maison.</li><li>Le champ numérique sous chaque sablier, avec <code>+</code> et <code>−</code>, applique un ajustement manuel.</li><li>Le sélecteur <strong>Maison concernée</strong> désigne la maison qui subira la prochaine action.</li><li>Les deux colonnes listent les <strong>gains</strong> et les <strong>retraits</strong> publiés par le livre, avec trois valeurs correspondant à l&#39;humeur du professeur (<em>mauvaise / neutre / bonne</em>).</li></ul>\n<p><strong>Cliquer sur une action lance <code>1d100</code></strong> pour déterminer l&#39;humeur du professeur (§24.2) et applique automatiquement le nombre de points correspondant, avec une carte de chat justifiant l&#39;attribution.</p>\n<p>Le bouton de réinitialisation, à droite du sélecteur, remet les quatre compteurs à zéro — typiquement en fin d&#39;année scolaire.</p>"
+      },
+      "sort": 1000000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "hogwartsguide010",
+      "name": "Quidditch",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "format": 1,
+        "content": "<p>Le Quidditch (chapitre 28) dispose d&#39;un sous-système complet : un <strong>tableau de bord de match</strong> et un <strong>type d&#39;acteur « Équipe de Quidditch »</strong>.</p>\n<h3>L&#39;acteur Équipe</h3>\n<figure><img src=\"systems/hogwarts-system/assets/tutorial/09-equipe-quidditch.png\" alt=\"Fiche d&#39;équipe de Quidditch\" /><figcaption>Fiche d&#39;équipe de Quidditch</figcaption></figure>\n<p>Créez-le comme n&#39;importe quel acteur : <em>Acteurs → Créer un acteur → type <code>Équipe de Quidditch</code></em>. La fiche prend le thème de la maison choisie.</p>\n<ul><li><strong>Effectif</strong> : glissez-déposez des personnages sur la fiche pour les ajouter, puis choisissez leur poste. L&#39;étoile désigne le <strong>capitaine</strong>.</li><li>Le bandeau du haut <strong>vérifie la composition réglementaire</strong> en permanence : 3 poursuiveurs, 2 batteurs, 1 gardien, 1 attrapeur. Sur la capture, il signale qu&#39;il manque deux poursuiveurs et les deux batteurs.</li><li><strong>Palmarès</strong> : victoires, défaites, points marqués et encaissés, pour suivre une saison.</li><li>L&#39;appartenance à une équipe apparaît automatiquement sur la <strong>fiche de personnage</strong>, dans l&#39;onglet <em>Biographie</em>, sous forme d&#39;un champ en lecture seule. Un clic ouvre la fiche de l&#39;équipe.</li></ul>\n<p>Les équipes sont des acteurs : elles sont <strong>persistantes</strong>, exportables, partageables et gérables dans des dossiers comme le reste.</p>\n<h3>Le tableau de bord de match</h3>\n<figure><img src=\"systems/hogwarts-system/assets/tutorial/08-quidditch.png\" alt=\"Tableau de bord Quidditch\" /><figcaption>Tableau de bord Quidditch</figcaption></figure>\n<p>Icône <strong>balai</strong> dans la barre d&#39;outils de scène. Le tableau de bord s&#39;appuie sur le <strong>combat en cours</strong> : créez d&#39;abord un combat avec les joueurs concernés.</p>\n<ol><li><strong>Lancer le match</strong> : effectue le tirage de possession (<code>1d2</code>) et bascule le combat en mode Quidditch.</li><li><strong>Composition</strong> : attribuez un poste à chaque combattant. Chaque poste affiche ses propres actions — un poursuiveur peut <em>Tirer au but</em>, un gardien <em>Arrêter le tir</em>, un attrapeur <em>Repérer le vif d&#39;or</em>.</li><li><strong>Score</strong> : <code>+10 But</code> et <code>+150 Vif d&#39;or</code> pour chaque camp. La prise du vif d&#39;or termine le match.</li><li><strong>Vif d&#39;or</strong> : la chance d&#39;apparition augmente à chaque round. <em>Tester l&#39;apparition</em> effectue le jet ; une fois le vif repéré, <em>Combler 5 m</em> réduit la distance qui sépare l&#39;attrapeur de la balle.</li><li><strong>Résoudre une opposition</strong> : ouvre le résolveur pour les actions opposées (interception, arrêt, duel d&#39;attrapeurs). La marge de réussite est publiée dans la carte de chat, ce qui permet de trancher immédiatement.</li><li><strong>Terminer le match</strong> : publie le score final et rebascule le combat en mode normal.</li></ol>\n<p>En mode Quidditch, le tracker de combat remplace le badge de phase par le <strong>poste</strong> de chaque joueur, et l&#39;ordre du tour suit les postes plutôt que l&#39;initiative :</p>\n<figure><img src=\"systems/hogwarts-system/assets/tutorial/10-tracker-combat.png\" alt=\"Tracker en mode Quidditch\" /><figcaption>Tracker en mode Quidditch</figcaption></figure>"
+      },
+      "sort": 1100000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "hogwartsguide011",
+      "name": "Créatures, familiers et PNJ",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "format": 1,
+        "content": "<table><thead><tr><th>Type d&#39;acteur</th><th>Usage</th></tr></thead><tbody><tr><td><code>Personnage</code></td><td>Personnage joueur complet</td></tr><tr><td><code>PNJ</code></td><td>Personnage non joueur, avec un facteur de puissance servant au calcul d&#39;expérience</td></tr><tr><td><code>Familier</code></td><td>Familier lié à un personnage, avec ses propres compétences et avantages</td></tr><tr><td><code>Créature</code></td><td>Créature du <em>Bestiaire</em> ou de l&#39;<em>Encyclopédie</em></td></tr></tbody></table>\n<p>Les créatures sont livrées prêtes à l&#39;emploi dans le compendium <em>Hogwarts Creatures</em> : glissez-en une sur la scène et elle est jouable immédiatement.</p>\n<p>Un familier se lie à son maître depuis l&#39;onglet <em>Familier</em> de la fiche du personnage ; ses jets et ses dégâts sont alors accessibles directement depuis la fiche du maître.</p>"
+      },
+      "sort": 1200000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "hogwartsguide012",
+      "name": "Les compendiums",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "format": 1,
+        "content": "<table><thead><tr><th>Compendium</th><th>Type</th><th>Documents</th><th>Source</th></tr></thead><tbody><tr><td>Hogwarts Spells</td><td>Objets</td><td>366</td><td><em>Grimoire</em> + livre de base</td></tr><tr><td>Hogwarts Potions</td><td>Objets</td><td>139</td><td><em>Grimoire</em></td></tr><tr><td>Hogwarts Components</td><td>Objets</td><td>310</td><td><em>Grimoire</em></td></tr><tr><td>Hogwarts Creatures</td><td>Acteurs</td><td>162</td><td><em>Bestiaire</em> + <em>Encyclopédie</em></td></tr><tr><td>Hogwarts Features</td><td>Objets</td><td>30</td><td>Livre de base</td></tr></tbody></table>\n<p>Utilisation courante :</p>\n<ul><li><strong>Glisser-déposer</strong> un document du compendium vers une fiche pour l&#39;ajouter.</li><li><strong>Clic droit → Importer</strong> pour en obtenir une copie modifiable dans le monde.</li><li>La barre de recherche du compendium accepte le nom français comme l&#39;incantation.</li></ul>\n<p>Les compendiums sont <strong>régénérés à partir des tableaux des livres</strong>. Ils ne contiennent aucun texte de règle recopié : vous devez posséder les ouvrages.</p>"
+      },
+      "sort": 1300000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "hogwartsguide013",
+      "name": "Réglages du monde",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "format": 1,
+        "content": "<figure><img src=\"systems/hogwarts-system/assets/tutorial/12-parametres.png\" alt=\"Réglages du système\" /><figcaption>Réglages du système</figcaption></figure>\n<p><em>Configuration → Réglages → Hogwarts System</em>.</p>\n<table><thead><tr><th>Réglage</th><th>Défaut</th><th>Effet</th></tr></thead><tbody><tr><td><strong>Points de maison</strong></td><td>—</td><td>Ouvre le sablier (voir section 10)</td></tr><tr><td><strong>Avertir en cas d&#39;expérience négative</strong></td><td>activé</td><td>Notifie si une dépense passe sous zéro</td></tr><tr><td><strong>Utiliser des icônes pour les onglets</strong></td><td>activé</td><td>Icônes plutôt que libellés. Préférence <strong>client</strong></td></tr><tr><td><strong>Paliers de réussite étendus</strong></td><td>désactivé</td><td>Ajoute <em>Extrême</em> et <em>Difficile</em>, empruntés au BRP. Hors règles officielles</td></tr><tr><td><strong>Exclure les matières scolaires des PC</strong></td><td>désactivé</td><td>Les matières scolaires ne consomment plus de Points de Création</td></tr><tr><td><strong>Méthode d&#39;assommement</strong></td><td>Alternative</td><td>Table de résistance (§2.7.1) ou paliers 25/50/75 % (§2.7.2)</td></tr><tr><td><strong>Soustraire l&#39;armure aux dégâts</strong></td><td>activé</td><td>Applique la réduction d&#39;armure automatiquement (§2.8.1)</td></tr><tr><td><strong>Relancer l&#39;initiative à chaque round</strong></td><td>activé</td><td>Conforme au §2.2</td></tr><tr><td><strong>Gain d&#39;expérience scolaire</strong></td><td>Forfait <code>1d6+1</code></td><td>Arbitre entre §25.1 et §7.3</td></tr><tr><td><strong>Échec avec Fougue = maladresse</strong></td><td>activé</td><td>Un échec avec point de Fougue dépensé devient une maladresse</td></tr><tr><td><strong>Fougue utilisable après le jet</strong></td><td>activé</td><td>Affiche le bouton <em>Utiliser la Fougue</em> sur les cartes de chat</td></tr></tbody></table>\n<blockquote><p>Les libellés signalent explicitement les réglages qui s&#39;écartent des règles officielles ou qui arbitrent une contradiction de la source. Lisez l&#39;infobulle avant de changer un défaut.</p></blockquote>"
+      },
+      "sort": 1400000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "hogwartsguide014",
+      "name": "Dépannage",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "format": 1,
+        "content": "<p><strong>Une valeur ne veut pas changer.</strong> Elle est dérivée. Cherchez ce qui l&#39;alimente : la <em>Valeur</em> d&#39;une compétence vient de <em>Base + Dépenses</em>, les PV viennent de CON et TAI, le bonus de dégâts de FOR et TAI.</p>\n<p><strong>Le thème de couleur ne correspond pas à la maison.</strong> Le thème suit le sélecteur de maison de l&#39;en-tête. Refermez et rouvrez la fiche si le changement vient d&#39;être fait par un autre utilisateur.</p>\n<p><strong>Une fenêtre déborde de l&#39;écran.</strong> Toutes les fenêtres du système sont redimensionnables et défilables. Attrapez le coin inférieur droit.</p>\n<p><strong>Le tableau de bord de Quidditch dit qu&#39;il n&#39;y a pas de combat.</strong> Il s&#39;appuie sur le combat en cours. Créez un combat avec les joueurs concernés avant de lancer le match.</p>\n<p><strong>L&#39;ordre du tour semble figé après un match de Quidditch.</strong> Foundry ne recalcule l&#39;ordre que lorsqu&#39;une initiative change. Le système force le recalcul en début et en fin de match ; si l&#39;affichage reste décalé, cliquez sur une valeur d&#39;initiative pour forcer le rafraîchissement.</p>\n<p><strong>Un sort ne prend pas en compte l&#39;affinité de la baguette.</strong> Le champ <em>affinité</em> de la baguette doit mentionner l&#39;école : « enchantements », « métamorphose » ou « mauvais sorts ».</p>"
+      },
+      "sort": 1500000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "hogwartsguide015",
+      "name": "Aide-mémoire",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "format": 1,
+        "content": "<h3>Degrés de réussite</h3>\n<table><thead><tr><th>Jet</th><th>Résultat</th></tr></thead><tbody><tr><td><code>01</code>–<code>05</code></td><td>Réussite critique</td></tr><tr><td>≤ cible</td><td>Réussite</td></tr><tr><td>&gt; cible</td><td>Échec</td></tr><tr><td><code>96</code>–<code>00</code></td><td>Maladresse (évaluée en premier)</td></tr></tbody></table>\n<h3>Modificateurs cumulés sur un lancer de sort</h3>\n<table><thead><tr><th>Source</th><th>Modificateur</th></tr></thead><tbody><tr><td>Malus du sort</td><td>Variable, indiqué sur la fiche du sort</td></tr><tr><td>Sans baguette</td><td>−75 %</td></tr><tr><td>Informulé</td><td>−30 %</td></tr><tr><td>Affinité de baguette</td><td>+10 %</td></tr><tr><td>Stress</td><td>−1 % par point de stress</td></tr><tr><td>Circonstances</td><td>Au choix du MJ, dans le dialogue</td></tr></tbody></table>\n<h3>Composition réglementaire d&#39;une équipe de Quidditch</h3>\n<table><thead><tr><th>Poste</th><th>Nombre</th></tr></thead><tbody><tr><td>Poursuiveur</td><td>3</td></tr><tr><td>Batteur</td><td>2</td></tr><tr><td>Gardien</td><td>1</td></tr><tr><td>Attrapeur</td><td>1</td></tr><tr><td><strong>Total</strong></td><td><strong>7</strong></td></tr></tbody></table>\n<h3>Score au Quidditch</h3>\n<table><thead><tr><th>Action</th><th>Points</th></tr></thead><tbody><tr><td>But</td><td>10</td></tr><tr><td>Prise du vif d&#39;or</td><td>150, et fin du match</td></tr></tbody></table>\n<h3>Raccourcis du tracker de combat</h3>\n<table><thead><tr><th>Geste</th><th>Effet</th></tr></thead><tbody><tr><td>Clic sur le badge numéroté</td><td>Fait tourner la phase déclarée (1 → 2 → 3)</td></tr><tr><td>Alt + clic sur le badge</td><td>Marque ou retire l&#39;état <strong>surpris</strong></td></tr></tbody></table>\n<hr />\n<p><em>Ce guide accompagne le système Hogwarts System pour Foundry VTT. Les règles elles-mêmes appartiennent au jeu de rôle amateur</em> Harry Potter JdR <em>et à ses suppléments, que ce système ne reproduit pas.</em></p>"
+      },
+      "sort": 1600000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 2
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "hogwarts-system"
+  }
+}

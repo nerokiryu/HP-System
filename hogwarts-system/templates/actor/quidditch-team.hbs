@@ -1,0 +1,117 @@
+<div class='quidditch-team-sheet'>
+
+  {{! Identity }}
+  <header class='sheet-header'>
+    <img
+      class='profile-img'
+      src='{{actor.img}}'
+      data-edit='img'
+      data-action='onEditImage'
+      data-tooltip='{{actor.name}}'
+    />
+    <div class='header-fields'>
+      <div class='document-name'>
+        <input name='name' type='text' value='{{actor.name}}' placeholder='{{localize "HOGWARTS.Quidditch.Team.Name"}}' />
+      </div>
+      <div class='team-identity'>
+        <div class='resource'>
+          <label class='resource-label'>{{localize 'HOGWARTS.Quidditch.Team.House'}}</label>
+          <select name='system.house'>
+            <option value=''>—</option>
+            {{#each houses as |h|}}
+              <option value='{{h.key}}' {{#if (eq h.key ../system.house)}}selected{{/if}}>{{h.label}}</option>
+            {{/each}}
+          </select>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {{! Line-up check }}
+  <section class='team-lineup-check {{#if lineup.valid}}ok{{else}}warn{{/if}}'>
+    <i class='fas {{#if lineup.valid}}fa-circle-check{{else}}fa-triangle-exclamation{{/if}}'></i>
+    {{#if lineup.valid}}
+      {{localize 'HOGWARTS.Quidditch.Team.LineupOk'}}
+    {{else}}
+      <span>{{localize 'HOGWARTS.Quidditch.Team.LineupWarn'}} ({{lineup.size}}/{{lineup.expected}})</span>
+      <ul>
+        {{#each lineup.issues as |i|}}
+          <li>{{i.label}} : {{i.actual}} / {{i.expected}}</li>
+        {{/each}}
+      </ul>
+    {{/if}}
+  </section>
+
+  {{! Roster }}
+  <section class='team-roster'>
+    <header>
+      <i class='fas fa-users'></i> {{localize 'HOGWARTS.Quidditch.Team.Roster'}}
+      {{#if editable}}
+        <a data-action='addPlayer' data-tooltip='{{localize "HOGWARTS.Quidditch.Team.AddPlayer"}}'>
+          <i class='fas fa-plus'></i>
+        </a>
+      {{/if}}
+    </header>
+    <p class='team-hint'>{{localize 'HOGWARTS.Quidditch.Team.DropHint'}}</p>
+
+    {{#each players as |p|}}
+      <div class='team-player {{#if p.missing}}missing{{/if}}'>
+        {{! The whole row must round-trip through the form: Foundry rebuilds the
+            array from the submitted fields, so an omitted `actorId` would fail
+            validation and silently drop the update. }}
+        <input type='hidden' name='system.players.{{p.index}}.actorId' value='{{p.actorId}}' />
+        <img src='{{p.img}}' width='28' height='28' alt='{{p.name}}' />
+        <a class='player-name' data-action='openPlayer' data-actor-id='{{p.actorId}}'>{{p.name}}</a>
+        <select name='system.players.{{p.index}}.role' {{#unless @root.editable}}disabled{{/unless}}>
+          {{#each @root.roles as |r|}}
+            <option value='{{r.key}}' {{#if (eq r.key p.role)}}selected{{/if}}>{{r.label}}</option>
+          {{/each}}
+        </select>
+        <a
+          class='captain-toggle {{#if p.isCaptain}}active{{/if}}'
+          data-action='setCaptain'
+          data-actor-id='{{p.actorId}}'
+          data-tooltip='{{localize "HOGWARTS.Quidditch.Team.CaptainHint"}}'
+        >
+          <i class='fas fa-star'></i>
+        </a>
+        {{#if @root.editable}}
+          <a data-action='removePlayer' data-index='{{p.index}}'><i class='fas fa-trash'></i></a>
+        {{/if}}
+      </div>
+    {{/each}}
+  </section>
+
+  {{! Record }}
+  <section class='team-record'>
+    <header><i class='fas fa-trophy'></i> {{localize 'HOGWARTS.Quidditch.Team.Record'}}</header>
+    <div class='record-grid'>
+      <div class='resource'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Quidditch.Team.Wins'}}</label>
+        <input type='number' name='system.record.wins' value='{{system.record.wins}}' min='0' step='1' data-dtype='Number' />
+      </div>
+      <div class='resource'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Quidditch.Team.Losses'}}</label>
+        <input type='number' name='system.record.losses' value='{{system.record.losses}}' min='0' step='1' data-dtype='Number' />
+      </div>
+      <div class='resource'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Quidditch.Team.PointsFor'}}</label>
+        <input type='number' name='system.record.pointsFor' value='{{system.record.pointsFor}}' min='0' step='1' data-dtype='Number' />
+      </div>
+      <div class='resource'>
+        <label class='resource-label'>{{localize 'HOGWARTS.Quidditch.Team.PointsAgainst'}}</label>
+        <input type='number' name='system.record.pointsAgainst' value='{{system.record.pointsAgainst}}' min='0' step='1' data-dtype='Number' />
+      </div>
+    </div>
+  </section>
+
+  {{! Prose }}
+  <section class='team-prose'>
+    <header><i class='fas fa-feather'></i> {{localize 'HOGWARTS.Quidditch.Team.Description'}}</header>
+    <prose-mirror name='system.description' data-document-uuid='{{actor.uuid}}' value='{{system.description}}'>
+    </prose-mirror>
+    <header><i class='fas fa-note-sticky'></i> {{localize 'HOGWARTS.Quidditch.Team.Notes'}}</header>
+    <prose-mirror name='system.notes' data-document-uuid='{{actor.uuid}}' value='{{system.notes}}'>
+    </prose-mirror>
+  </section>
+</div>

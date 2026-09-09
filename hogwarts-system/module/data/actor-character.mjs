@@ -19,10 +19,11 @@ export default class HogwartsCharacter extends HogwartsActorBase {
       archetype: new fields.StringField({ blank: true, initial: '' }),
     });
 
-    // Points de Fougue (Heroism/Fate points — Rules §Fougue)
+    // Points de Fougue (ch. 8). One at the start of a scenario, capped at 5
+    // for the whole session (l. 10192).
     schema.fougue = new fields.SchemaField({
       value: new fields.NumberField({ ...requiredInteger, initial: 1, min: 0 }),
-      max: new fields.NumberField({ ...requiredInteger, initial: 1, min: 0 }),
+      max: new fields.NumberField({ ...requiredInteger, initial: 5, min: 0 }),
     });
 
     // Stress level (Rules §Stress — malus applied to rolls)
@@ -231,6 +232,19 @@ export default class HogwartsCharacter extends HogwartsActorBase {
     });
 
     return schema;
+  }
+
+  /**
+   * The `bio` schema replaced a free-text `biography` field during development.
+   * Doing this here rather than in a world migration also covers compendium and
+   * imported actors. The legacy field is left untouched in the source.
+   */
+  static migrateData(source) {
+    if (source.biography && !source.bio?.history) {
+      source.bio ??= {};
+      source.bio.history = source.biography;
+    }
+    return super.migrateData(source);
   }
 
   prepareBaseData() {

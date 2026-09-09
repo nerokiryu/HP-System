@@ -31,7 +31,6 @@ export class HogwartsItem extends Item {
     // Initialize chat data.
     const speaker = ChatMessage.getSpeaker({ actor: this.actor });
     const rollMode = game.settings.get('core', 'rollMode');
-    const label = `[${item.type}] ${item.name}`;
 
     // Build detailed content based on item type
     let content = `<div class="hogwarts-chat-card">`;

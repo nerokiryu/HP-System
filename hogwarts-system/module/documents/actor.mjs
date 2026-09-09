@@ -24,8 +24,6 @@ export class HogwartsActor extends Actor {
    */
   prepareDerivedData() {
     super.prepareDerivedData();
-    const actorData = this;
-    const flags = actorData.flags['hogwarts-system'] || {};
 
     // Re-apply Active Effect changes that target skill entries.
     //

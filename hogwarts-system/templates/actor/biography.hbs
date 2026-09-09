@@ -302,6 +302,23 @@
             <option value='sportif' {{#if (eq system.profile.archetype 'sportif')}}selected{{/if}}>{{localize 'HOGWARTS.Actor.Character.Archetype.sportif'}}</option>
           </select>
         </div>
+        {{! Read-only: the roster is edited on the team sheet, which is the only
+            place a player's squad and role are stored. }}
+        <div class='form-group quidditch-team-field'>
+          <label>{{localize 'HOGWARTS.Quidditch.Team.Label'}}</label>
+          {{#if quidditchTeam}}
+            <a class='quidditch-team-link' data-action='openQuidditchTeam' data-team-id='{{quidditchTeam.id}}'>
+              <img src='{{quidditchTeam.img}}' width='20' height='20' alt='{{quidditchTeam.name}}' />
+              <span>{{quidditchTeam.name}}</span>
+              <span class='team-role'><i class='{{quidditchTeam.icon}}'></i> {{quidditchTeam.roleLabel}}</span>
+              {{#if quidditchTeam.isCaptain}}
+                <i class='fas fa-star captain' data-tooltip='{{localize "HOGWARTS.Quidditch.Team.Captain"}}'></i>
+              {{/if}}
+            </a>
+          {{else}}
+            <span class='quidditch-team-none'>{{localize 'HOGWARTS.Quidditch.Team.None'}}</span>
+          {{/if}}
+        </div>
       </div>
     </div>
   </div>

@@ -46,6 +46,8 @@
         "rarity": "rare",
         "available": false
       }
-    ]
+    ],
+    "virulence": null,
+    "duration": "4d6 heures"
   }
 }

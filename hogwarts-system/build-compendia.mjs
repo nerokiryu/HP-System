@@ -23,6 +23,12 @@
  *  - Creature hit points. Sixteen entries are missing or contaminated by prose
  *    from a neighbouring field; those fall back to the (SIZ+CON)/2 the rules
  *    prescribe rather than shipping a creature with 0 hit points.
+ *  - Potion virulence and duration. Neither has a column: both are buried in
+ *    the prose as "VIRulence : N" and "Durée : ...". Antidotes state a
+ *    threshold with the same word ("jusqu'à une VIRulence 10"), which is not
+ *    their own virulence, so only the colon form is read.
+ *  - Potion preparation time. Deliberately left empty: the core book puts the
+ *    brewing time "à la discrétion du MJ" (l. 12963) and publishes no value.
  */
 import fs from 'fs';
 import path from 'path';
@@ -101,6 +107,26 @@ const spellType = (raw) => (['E', 'M', 'S'].includes(clean(raw)) ? clean(raw) : 
 const RARITY = { commun: 'commun', rare: 'rare', rares: 'rare', rarissime: 'rarissime' };
 const rarity = (raw) => RARITY[clean(raw).toLowerCase()] ?? 'commun';
 
+/**
+ * The Grimoire has no `virulence` column: poisons carry it inside the prose as
+ * "VIRulence : N". Antidotes phrase a *threshold* the same way ("annule les
+ * poisons jusqu'à une VIRulence 10"), which is not their own virulence, so only
+ * the colon form counts.
+ */
+function virulence(raw) {
+  const m = /VIRulence\s*:\s*(\d+)/i.exec(String(raw ?? ''));
+  return m ? Number(m[1]) : null;
+}
+
+/** Likewise for "Durée : ...", which runs to the end of its line. */
+function duration(raw) {
+  const m = /Durée\s*:\s*([^\n]+)/i.exec(String(raw ?? ''));
+  if (!m) return '';
+  const value = clean(m[1]).replace(/[;,.]\s*$/, '');
+  // The tables print a lone dash where a potion has no duration at all.
+  return /^-+$/.test(value) ? '' : value;
+}
+
 /** Turn the source's line-broken prose into paragraphs. */
 function html(raw) {
   const body = String(raw ?? '').trim();
@@ -172,6 +198,10 @@ function buildPotions(used) {
         target: targets(r.cibles).join('/'),
         ingredientRarity: rarity(r.rarete_ingredients),
         ingredientList: ingredients,
+        virulence: virulence(r.effets),
+        duration: duration(r.effets),
+        // `prepTime` stays empty on purpose: the rulebook leaves the brewing
+        // time "à la discrétion du MJ" (l. 12963) and publishes no value.
       },
     };
   });

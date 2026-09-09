@@ -16,6 +16,8 @@
         "rarity": "rare",
         "available": false
       }
-    ]
+    ],
+    "virulence": 11,
+    "duration": "1d4+6 heures"
   }
 }

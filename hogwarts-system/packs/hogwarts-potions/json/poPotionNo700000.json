@@ -22,6 +22,8 @@
         "rarity": "rare",
         "available": false
       }
-    ]
+    ],
+    "virulence": 11,
+    "duration": ""
   }
 }

@@ -65,6 +65,8 @@ export default class HogwartsPotion extends HogwartsItemBase {
     });
 
     // Crafting-related fields
+    // The rulebook leaves brewing time "à la discrétion du MJ" (l. 12963) and
+    // publishes no per-potion value, so the compendium never fills this in.
     schema.prepTime = new fields.StringField({
       required: false,
       blank: true,

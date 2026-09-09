@@ -52,6 +52,8 @@
         "rarity": "commun",
         "available": false
       }
-    ]
+    ],
+    "virulence": null,
+    "duration": "24 heures"
   }
 }

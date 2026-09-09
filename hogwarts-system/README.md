@@ -1,7 +1,7 @@
 # Hogwarts System
 
 ![Foundry v14](https://img.shields.io/badge/foundry-v14-green)
-![Version](https://img.shields.io/badge/version-3.3.0-blue)
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![Licence](https://img.shields.io/badge/licence-MIT-lightgrey)
 
 Système Foundry VTT pour le jeu de rôle amateur **Harry Potter JdR** (v1.12) et ses
@@ -18,6 +18,7 @@ des tableaux des livres, que vous devez posséder par ailleurs.
 ## Sommaire
 
 - [Installation](#installation)
+- [Guide du Maître du Jeu](#guide-du-maître-du-jeu)
 - [Contenu](#contenu)
 - [Règles implémentées](#règles-implémentées)
 - [Réglages](#réglages)
@@ -39,6 +40,19 @@ https://github.com/nerokiryu/HP-System/releases/latest/download/system.json
 
 Prérequis : **Foundry VTT v14** (minimum `14`, vérifié sur `14.365`).
 Langues fournies : français et anglais.
+
+---
+
+## Guide du Maître du Jeu
+
+Un tutoriel complet, illustré de captures d'écran, explique l'interface et les
+automatismes du système à un MJ qui connaît déjà *Harry Potter JdR* :
+
+- **Dans le dépôt** : [docs/GUIDE-MJ.md](docs/GUIDE-MJ.md)
+- **Dans Foundry** : compendium *Hogwarts — Guide du MJ*, une page par chapitre.
+
+Le Markdown est la source unique ; `npm run compendia` régénère le compendium à partir
+de lui.
 
 ---
 
@@ -74,7 +88,8 @@ Langues fournies : français et anglais.
 | Hogwarts Potions | Item | 139 | *Grimoire* |
 | Hogwarts Components | Item | 310 | *Grimoire* |
 | Hogwarts Creatures | Actor | 162 | *Bestiaire* + *Encyclopédie* |
-| Hogwarts Features | Item | 31 | Livre de base |
+| Hogwarts Features | Item | 30 | Livre de base |
+| Hogwarts — Guide du MJ | JournalEntry | 1 | Documentation du système |
 
 ---
 

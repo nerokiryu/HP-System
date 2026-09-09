@@ -32,3 +32,28 @@ export function degreeBadge(degree) {
   const label = game.i18n.localize(`HOGWARTS.Roll.Degree.${degree}`);
   return `<span class="degree ${degree.toLowerCase()}">${label}</span>`;
 }
+
+/**
+ * Missing an action after spending a fougue point is "équivalent à une
+ * maladresse" (l. 2995). §8.3 phrases the same outcome as a worst case rather
+ * than a certainty, so the escalation is behind a setting.
+ *
+ * @param {string} degree Degree returned by {@link degreeOf}.
+ * @returns {string}
+ */
+export function fougueDegree(degree) {
+  if (degree !== 'Fail') return degree;
+  return game.settings.get('hogwarts-system', 'fougueFailureIsFumble') ? 'Fumble' : degree;
+}
+
+/**
+ * Reverse the tens and units of a d100 result (l. 10202). 100 reads as "00",
+ * whose reverse is "01".
+ * @param {number} value
+ * @returns {number}
+ */
+export function reverseDice(value) {
+  if (value === 100) return 1;
+  const reversed = parseInt(String(value).padStart(2, '0').split('').reverse().join(''), 10);
+  return reversed || 1;
+}

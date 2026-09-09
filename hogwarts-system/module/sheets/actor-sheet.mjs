@@ -1,36 +1,15 @@
 import { prepareActiveEffectCategories, prepareEffectAttributes } from '../helpers/effects.mjs';
+import {
+  degreeOf as _degreeOf,
+  degreeBadge as _degreeBadge,
+  fougueDegree,
+  reverseDice,
+} from '../helpers/degrees.mjs';
+import { QUIDDITCH_ROLES } from '../helpers/quidditch.mjs';
 
 const { api, sheets } = foundry.applications;
 
 /* ─── Chat Card Helpers ─────────────────────────────────────────────────── */
-
-/**
- * Build a degree-of-success badge HTML span.
- * @param {string} degree - One of: Critical, Extreme, Hard, Success, Fail, Fumble
- * @returns {string} HTML string
- */
-function _degreeBadge(degree) {
-  const label = game.i18n.localize(`HOGWARTS.Roll.Degree.${degree}`);
-  const cls = degree.toLowerCase();
-  return `<span class="degree ${cls}">${label}</span>`;
-}
-
-/**
- * Success degree for a d100 result (Chap. 1.3): critical on 01-05, fumble on
- * 96-00. The Extreme/Hard tiers are an optional BRP import, off by default.
- * @param {number} roll
- * @param {number} target
- * @returns {string}
- */
-function _degreeOf(roll, target) {
-  const extended = game.settings.get('hogwarts-system', 'useExtendedSuccessTiers') ?? false;
-  if (roll <= 5) return 'Critical';
-  if (extended && roll <= Math.ceil(target / 5)) return 'Extreme';
-  if (extended && roll <= Math.ceil(target / 2)) return 'Hard';
-  if (roll <= target) return 'Success';
-  if (roll >= 96) return 'Fumble';
-  return 'Fail';
-}
 
 /**
  * Build Apply Damage / Apply Healing button HTML.
@@ -55,6 +34,8 @@ function _damageButtons(value) {
 /**
  * Build a "Use Fougue" button for percentile roll chat cards.
  * Embeds the original roll, target value, and actor ID so the hook can process it.
+ * The book spends the point before the roll (l. 10199), so the button is gated
+ * behind a setting for tables that prefer deciding afterwards.
  * @param {number} rollValue - The original d100 result
  * @param {number} targetValue - The target number to beat
  * @param {string} actorId - The actor's ID (to spend their fougue point)
@@ -62,10 +43,34 @@ function _damageButtons(value) {
  */
 function _fougueButton(rollValue, targetValue, actorId) {
   if (!rollValue || !actorId) return '';
+  if (!game.settings.get('hogwarts-system', 'fougueAfterRoll')) return '';
   const label = game.i18n.localize('HOGWARTS.Chat.UseFougue');
   return `
     <div class="card-buttons">
       <button class="use-fougue" data-action="use-fougue" data-roll="${rollValue}" data-target="${targetValue}" data-actor-id="${actorId}"><i class="fas fa-dice"></i> ${label}</button>
+    </div>`;
+}
+
+/**
+ * GM-only offer to award the fougue point a critical earns (l. 10190). The book
+ * requires the action to be "accomplie passionnément" and excludes combat
+ * (§8.4), neither of which the system can judge, so it only proposes.
+ * @param {string} degree
+ * @param {Actor} actor
+ * @returns {string} HTML string
+ */
+function _fougueGainButton(degree, actor) {
+  if (degree !== 'Critical' || !game.user.isGM || actor?.type !== 'character') return '';
+  const current = Number(actor.system.fougue?.value) || 0;
+  const max = Number(actor.system.fougue?.max) || 5;
+  if (current >= max) return '';
+  // §8.4: no fougue is earned while fighting, whatever the criticals. Taking
+  // part in a running encounter is the closest the system gets to "combative".
+  if (game.combat?.started && game.combat.combatants.some((c) => c.actorId === actor.id)) return '';
+  const label = game.i18n.localize('HOGWARTS.Chat.GrantFougue');
+  return `
+    <div class="card-buttons">
+      <button class="grant-fougue" data-action="grant-fougue" data-actor-id="${actor.id}"><i class="fas fa-bolt"></i> ${label}</button>
     </div>`;
 }
 
@@ -113,6 +118,8 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
       addSkill: this._addSkill,
       deleteSkill: this._deleteSkill,
       toggleSkillMaxAuto: this._toggleSkillMaxAuto,
+      openQuidditchTeam: this._onOpenQuidditchTeam,
+      fougueSprint: this._onFougueSprint,
       restRecovery: this._onRestRecovery,
       rollDodge: this._onRollDodge,
       rollParry: this._onRollParry,
@@ -240,12 +247,38 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
       systemFields: this.document.system.schema.fields,
       // Check if user is GM
       isGM: game.user.isGM,
+      quidditchTeam: this._prepareQuidditchTeam(),
     };
 
     // Offloading context prep to a helper function
     this._prepareItems(context);
 
     return context;
+  }
+
+  /**
+   * The squad this character belongs to, read from the `quidditchTeam` actors.
+   * Derived rather than stored: the team sheet is the single place a roster is
+   * edited, so the two can never disagree.
+   * @returns {{id: string, name: string, img: string, role: string, roleLabel: string, isCaptain: boolean}|null}
+   */
+  _prepareQuidditchTeam() {
+    if (this.actor.type !== 'character') return null;
+    for (const team of game.actors) {
+      if (team.type !== 'quidditchTeam') continue;
+      const member = team.system.players.find((p) => p.actorId === this.actor.id);
+      if (!member) continue;
+      return {
+        id: team.id,
+        name: team.name,
+        img: team.img,
+        role: member.role,
+        roleLabel: game.i18n.localize(QUIDDITCH_ROLES[member.role]?.label ?? member.role),
+        icon: QUIDDITCH_ROLES[member.role]?.icon ?? '',
+        isCaptain: team.system.captain === this.actor.id,
+      };
+    }
+    return null;
   }
 
   /**
@@ -599,7 +632,7 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
     };
 
     // Iterate through items, allocating to containers
-    for (let i of this.document.items) {
+    for (const i of this.document.items) {
       // Append to gear.
       if (i.type === 'gear' || i.type === 'weapon' || i.type === 'armor') {
         gear.push(i);
@@ -641,13 +674,13 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
       }
       // Append to spells.
       else if (i.type === 'spell') {
-        if (i.system.spellLevel != undefined) {
+        if (i.system.spellLevel != null) {
           spells[i.system.spellLevel].push(i);
         }
       }
       // Append to potions.
       else if (i.type === 'potion') {
-        if (i.system.potionLevel != undefined) {
+        if (i.system.potionLevel != null) {
           potions[i.system.potionLevel].push(i);
         }
       }
@@ -1150,7 +1183,9 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
       const isPercentile = !!dataset.target;
       const { mod, useFougue } = await this._promptRollModifier.call(this, { showFougue: isPercentile });
       let formula = String(dataset.roll);
-      const labelBase = dataset.label ? `${dataset.label}` : '';
+      // The skill templates tag their labels with a legacy `Skill: ` marker; it must
+      // never surface in the chat card, which already carries a localized badge.
+      const labelBase = dataset.label ? String(dataset.label).replace(/^Skill:\s*/, '') : '';
 
       // Percentile check support: if a target is provided, evaluate success levels
       if (dataset.target) {
@@ -1168,23 +1203,29 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
         const targetValue = Number(targetRoll.total) || 0;
         let r = Number(roll.total) || 0;
 
-        // Fougue dice-reversal: reverse the tens and units digits of the d100 result
+        // Fougue (§8.2): the point is declared before the roll, reversing the
+        // tens and units is then a *choice*, and the point is spent either way
+        // — including on a palindrome, which the book calls out (l. 10220).
         let fougueUsed = false;
-        if (useFougue && r > 0) {
-          const reversed = HogwartsActorSheet._reverseDice(r);
-          if (reversed !== r) {
+        let fougueReversed = false;
+        if (useFougue) {
+          fougueUsed = true;
+          const reversed = reverseDice(r);
+          if (reversed !== r && await HogwartsActorSheet._promptFougueChoice(r, reversed)) {
             r = reversed;
-            fougueUsed = true;
+            fougueReversed = true;
           }
         }
 
-        // Harry Potter JdR degrees: Critical (01-05), Success (<= target), Fail (> target), Fumble (96-00)
-        // Optional BRP extended tiers (Extreme/Hard) enabled via game setting.
-        const degree = _degreeOf(r, targetValue);
+        // Harry Potter JdR degrees: Critical (01-05), Fumble (96-00), else
+        // success or failure against the target.
+        let degree = _degreeOf(r, targetValue);
+        // Missing an action after spending a point is treated as a fumble (l. 2995).
+        if (fougueUsed) degree = fougueDegree(degree);
 
-        const degreeLabel = game.i18n.localize(`HOGWARTS.Roll.Degree.${degree}`);
         const modText = mod ? ` (mod ${mod >= 0 ? '+' : ''}${mod})` : '';
-        const fougueText = fougueUsed ? `<span class="fougue-tag">${game.i18n.localize('HOGWARTS.Roll.FougueReversed')}</span>` : '';
+        const fougueKey = fougueReversed ? 'HOGWARTS.Roll.FougueReversed' : 'HOGWARTS.Roll.FougueKept';
+        const fougueText = fougueUsed ? `<span class="fougue-tag">${game.i18n.localize(fougueKey)}</span>` : '';
         const fougueBtn = (!fougueUsed && (Number(this.actor.system.fougue?.value) || 0) > 0) ? _fougueButton(r, targetValue, this.actor.id) : '';
         const content = `
           <div class="hogwarts-chat-card">
@@ -1192,6 +1233,7 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
             <div class="card-row"><strong>${game.i18n.localize('HOGWARTS.Chat.Target')}:</strong> ${targetValue}${modText}</div>
             <div class="card-row"><strong>${game.i18n.localize('HOGWARTS.Chat.Roll')}:</strong> <span class="roll-value">${r}</span>${fougueText} → ${_degreeBadge(degree)}</div>
             ${fougueBtn}
+            ${_fougueGainButton(degree, this.actor)}
           </div>`;
         await ChatMessage.create({
           speaker: ChatMessage.getSpeaker({ actor: this.actor }),
@@ -1231,16 +1273,54 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
     }
   }
 
+  /** @this HogwartsActorSheet */
+  static async _onOpenQuidditchTeam(event, target) {
+    event.preventDefault();
+    game.actors.get(target.dataset.teamId)?.sheet.render(true);
+  }
+
   /**
-   * Reverse the digits of a d100 result (e.g. 73 → 37, 80 → 08, 05 → 50).
-   * @param {number} value - The d100 result (1-100)
-   * @returns {number} The reversed value
+   * Spend a fougue point for a chase burst (§1.7.7): movement goes up by half,
+   * but the sprint lasts only half CON rounds and costs as many rounds of rest.
+   * @this HogwartsActorSheet
    */
-  static _reverseDice(value) {
-    if (value === 100) return 1; // 00 → 01
-    const str = String(value).padStart(2, '0');
-    const reversed = parseInt(str.split('').reverse().join(''), 10);
-    return reversed || 1; // Minimum 1
+  static async _onFougueSprint(event) {
+    event.preventDefault();
+    const current = Number(this.actor.system.fougue?.value) || 0;
+    if (current <= 0) return ui.notifications.warn(game.i18n.localize('HOGWARTS.Chat.NoFougue'));
+
+    const base = Number(this.actor.system.movement) || 8;
+    const con = Number(this.actor.system.stats?.con?.total ?? this.actor.system.stats?.con?.value) || 0;
+    const boosted = base + Math.floor(base / 2);
+    const rounds = Math.floor(con / 2);
+
+    await this.actor.update({ 'system.fougue.value': current - 1 });
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+      content: `<div class="hogwarts-chat-card">
+        <header class="card-header"><h3>${game.i18n.localize('HOGWARTS.Fougue.Sprint')}</h3></header>
+        <div class="card-row"><strong>${game.i18n.localize('HOGWARTS.Actor.Character.Movement')}:</strong> ${base} → ${boosted}</div>
+        <div class="card-row">${game.i18n.format('HOGWARTS.Fougue.SprintResult', { rounds })}</div>
+      </div>`,
+      rollMode: game.settings.get('core', 'rollMode'),
+    });
+  }
+
+  /**
+   * Ask whether to reverse the roll. The point is already spent by the time
+   * this runs, so cancelling keeps the original result rather than refunding
+   * (l. 10203: "Dans un cas comme dans l'autre, le point de fougue est consommé").
+   * @param {number} original
+   * @param {number} reversed
+   * @returns {Promise<boolean>} true to take the reversed result
+   */
+  static async _promptFougueChoice(original, reversed) {
+    return foundry.applications.api.DialogV2.confirm({
+      window: { title: game.i18n.localize('HOGWARTS.Roll.UseFougue') },
+      content: `<p>${game.i18n.format('HOGWARTS.Roll.FougueChoice', { original, reversed })}</p>`,
+      yes: { label: game.i18n.format('HOGWARTS.Roll.FougueTake', { value: reversed }) },
+      no: { label: game.i18n.format('HOGWARTS.Roll.FougueKeep', { value: original }) },
+    }).catch(() => false);
   }
 
   /**
@@ -1509,13 +1589,11 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
     // Harry Potter JdR degrees (same logic as _onRoll)
     const degree = _degreeOf(r, modifiedTarget);
 
-    const degreeLabel = game.i18n.localize(`HOGWARTS.Roll.Degree.${degree}`);
-
     // Build chat message with potion info
     const level = item.system.potionLevel || 1;
     const levelDisplay = level === 6 ? '5+' : level;
     
-    let content = `
+    const content = `
       <div class="hogwarts-chat-card">
         <header class="card-header"><img src="${item.img}" width="36" height="36" /><h3>${item.name}</h3><span class="card-type">${game.i18n.localize('HOGWARTS.Chat.PotionRoll')}</span></header>
         <div class="card-row"><strong>${game.i18n.localize('HOGWARTS.Item.Potion.FIELDS.level.label')}:</strong> ${levelDisplay} | <strong>${game.i18n.localize('HOGWARTS.Item.Potion.FIELDS.malus.label')}:</strong> ${malus}${stressMalus ? ` - ${game.i18n.localize('HOGWARTS.Actor.Character.Stress')}: ${stressMalus}` : ''}${additionalMod !== 0 ? ` + ${game.i18n.localize('HOGWARTS.Roll.ModifierLabel')}: ${additionalMod >= 0 ? '+' : ''}${additionalMod}` : ''}</div>
@@ -1523,6 +1601,7 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
         <div class="card-row"><strong>${game.i18n.localize('HOGWARTS.Chat.Roll')}:</strong> <span class="roll-value">${r}</span> → ${_degreeBadge(degree)}</div>
         ${item.system.description ? `<div class="card-description">${item.system.description}</div>` : ''}
         ${(Number(this.actor.system.fougue?.value) || 0) > 0 ? _fougueButton(r, modifiedTarget, this.actor.id) : ''}
+        ${_fougueGainButton(degree, this.actor)}
       </div>
     `;
 
@@ -1578,7 +1657,6 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
     // Determine degree of success
     const degree = _degreeOf(r, modifiedTarget);
 
-    const degreeLabel = game.i18n.localize(`HOGWARTS.Roll.Degree.${degree}`);
     const success = ['Critical', 'Extreme', 'Hard', 'Success'].includes(degree);
 
     // On success: increase quantity and consume ingredients
@@ -1605,7 +1683,7 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
     const level = item.system.potionLevel || 1;
     const levelDisplay = level === 6 ? '5+' : level;
 
-    let content = `
+    const content = `
       <div class="hogwarts-chat-card">
         <header class="card-header"><img src="${item.img}" width="36" height="36" /><h3>${game.i18n.localize('HOGWARTS.Item.Potion.Brewing')}: ${item.name}</h3><span class="card-type">${game.i18n.localize('HOGWARTS.Chat.Brewing')}</span></header>
         <div class="card-row"><strong>${game.i18n.localize('HOGWARTS.Item.Potion.FIELDS.level.label')}:</strong> ${levelDisplay} | <strong>${game.i18n.localize('HOGWARTS.Item.Potion.FIELDS.malus.label')}:</strong> ${malus}${stressMalus ? ` - ${game.i18n.localize('HOGWARTS.Actor.Character.Stress')}: ${stressMalus}` : ''}${additionalMod !== 0 ? ` + ${game.i18n.localize('HOGWARTS.Roll.ModifierLabel')}: ${additionalMod >= 0 ? '+' : ''}${additionalMod}` : ''}</div>
@@ -1644,7 +1722,7 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
     await item.update({ 'system.quantity': qty - 1 });
 
     // Post usage to chat
-    let content = `
+    const content = `
       <div class="hogwarts-chat-card">
         <header class="card-header"><img src="${item.img}" width="36" height="36" /><h3>${item.name}</h3><span class="card-type">${game.i18n.localize('HOGWARTS.Chat.Used')}</span></header>
         <div class="card-row"><em>${game.i18n.localize('HOGWARTS.Item.Potion.Used')}</em> (${qty - 1} ${game.i18n.localize('HOGWARTS.Item.Potion.Remaining')})</div>
@@ -1754,13 +1832,11 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
     // Harry Potter JdR degrees (same logic as _onRoll)
     const degree = _degreeOf(r, modifiedTarget);
 
-    const degreeLabel = game.i18n.localize(`HOGWARTS.Roll.Degree.${degree}`);
-
     // Build chat message with spell info
     const level = item.system.spellLevel || 0;
     const levelDisplay = level === 6 ? '5+' : level;
     
-    let content = `
+    const content = `
       <div class="hogwarts-chat-card">
         <header class="card-header"><img src="${item.img}" width="36" height="36" /><h3>${item.name}</h3><span class="card-type">${game.i18n.localize('HOGWARTS.Chat.SpellRoll')}</span></header>
         <div class="card-row"><strong>${game.i18n.localize('HOGWARTS.Item.Spell.FIELDS.level.label')}:</strong> ${levelDisplay} | <strong>${game.i18n.localize('HOGWARTS.Item.Spell.FIELDS.spellType.label')}:</strong> ${game.i18n.localize(`HOGWARTS.Item.Spell.SpellType.${spellType}`) || spellType}${targetDisplay ? ` | <strong>${game.i18n.localize('HOGWARTS.Item.Spell.FIELDS.target.label')}:</strong> ${targetDisplay}` : ''}${item.system.incantation ? ` | <em>${item.system.incantation}</em>` : ''}</div>
@@ -1811,7 +1887,6 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
     else if (r <= baseTarget) degree = 'Success';
     else degree = 'Fail';
 
-    const degreeLabel = game.i18n.localize(`HOGWARTS.Roll.Degree.${degree}`);
     const resultText = game.i18n.localize(`HOGWARTS.Roll.Learn.${degree}`);
 
     const content = `
@@ -2107,7 +2182,6 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
 
     const degree = _degreeOf(r, targetValue);
 
-    const degreeLabel = game.i18n.localize(`HOGWARTS.Roll.Degree.${degree}`);
     const chatContent = `
       <div class="hogwarts-chat-card">
         <header class="card-header"><h3>${game.i18n.localize('HOGWARTS.Roll.Opposition.Title')}</h3><span class="card-type">${game.i18n.localize('HOGWARTS.Chat.Opposition')}</span></header>
@@ -2115,6 +2189,7 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
         <div class="card-row"><strong>${game.i18n.localize('HOGWARTS.Chat.Target')}:</strong> ${targetValue}%</div>
         <div class="card-row"><strong>${game.i18n.localize('HOGWARTS.Chat.Roll')}:</strong> <span class="roll-value">${r}</span> → ${_degreeBadge(degree)}</div>
         ${(Number(this.actor.system.fougue?.value) || 0) > 0 ? _fougueButton(r, targetValue, this.actor.id) : ''}
+        ${_fougueGainButton(degree, this.actor)}
       </div>`;
 
     await ChatMessage.create({
@@ -2698,8 +2773,6 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
     const r = Number(roll.total);
     const degree = _degreeOf(r, chance);
 
-    const degreeLabel = game.i18n.localize(`HOGWARTS.Roll.Degree.${degree}`);
-    
     // If success or critical, roll damage automatically
     let damageSection = '';
     if (degree === 'Success' || degree === 'Critical') {
@@ -2754,7 +2827,6 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
     const r = Number(roll.total);
     const degree = _degreeOf(r, chance);
 
-    const degreeLabel = game.i18n.localize(`HOGWARTS.Roll.Degree.${degree}`);
     const content = `
       <div class="hogwarts-chat-card">
         <header class="card-header"><h3>${skill.name}</h3><span class="card-type">${game.i18n.localize('HOGWARTS.Chat.SkillCheck')}</span></header>
@@ -3003,7 +3075,7 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
     }
 
     // Perform the sort
-    const sortUpdates = SortingHelpers.performIntegerSort(effect, {
+    const sortUpdates = foundry.utils.performIntegerSort(effect, {
       target,
       siblings,
     });
@@ -3099,7 +3171,7 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
    */
   async _processSubmitData(event, form, submitData) {
     const overrides = foundry.utils.flattenObject(this.actor.overrides);
-    for (let k of Object.keys(overrides)) delete submitData[k];
+    for (const k of Object.keys(overrides)) delete submitData[k];
     await this.document.update(submitData);
   }
 

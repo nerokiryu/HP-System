@@ -84,6 +84,16 @@
             class='resource-max-input'
           />
         </div>
+        {{#if system.fougue.value}}
+        <a
+          class='fougue-sprint'
+          data-action='fougueSprint'
+          data-tooltip='{{localize "HOGWARTS.Fougue.SprintHint"}}'
+        >
+          <i class='fas fa-person-running'></i>
+          {{localize 'HOGWARTS.Fougue.Sprint'}}
+        </a>
+        {{/if}}
       </div>
       {{/if}}
       

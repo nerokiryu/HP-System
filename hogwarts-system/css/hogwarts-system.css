@@ -796,6 +796,269 @@ h3.collapsible.collapsed + .collapsible-content {
 .hogwarts-system.item .tab.attributes .form-group:has(> .currency-fields) > .currency-fields {
   flex: 1 0 100%;
 }
+.hogwarts-system.actor .resource .fougue-sprint {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0.85;
+}
+.hogwarts-system.actor .resource .fougue-sprint:hover {
+  opacity: 1;
+  text-shadow: 0 0 6px rgba(var(--hogwarts-accent-rgb), 0.6);
+}
+.hogwarts-system.quidditch .quidditch-app {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.hogwarts-system.quidditch .quidditch-hint {
+  margin: 0;
+  font-style: italic;
+  opacity: 0.8;
+}
+.hogwarts-system.quidditch .quidditch-scoreboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  align-items: start;
+}
+.hogwarts-system.quidditch .quidditch-scoreboard .quidditch-side {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(var(--hogwarts-accent-rgb), 0.2);
+  border-radius: 4px;
+  padding: 6px 8px;
+  text-align: center;
+}
+.hogwarts-system.quidditch .quidditch-scoreboard .quidditch-score {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.1;
+}
+.hogwarts-system.quidditch .quidditch-scoreboard .quidditch-score-actions {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+}
+.hogwarts-system.quidditch .quidditch-scoreboard .quidditch-round {
+  grid-column: 1/-1;
+  text-align: center;
+}
+.hogwarts-system.quidditch .quidditch-controls {
+  display: flex;
+  gap: 6px;
+}
+.hogwarts-system.quidditch .quidditch-snitch,
+.hogwarts-system.quidditch .quidditch-lineup,
+.hogwarts-system.quidditch .quidditch-fouls,
+.hogwarts-system.quidditch .quidditch-teams {
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(var(--hogwarts-accent-rgb), 0.2);
+  border-radius: 4px;
+  padding: 6px 8px;
+}
+.hogwarts-system.quidditch .quidditch-snitch > header,
+.hogwarts-system.quidditch .quidditch-lineup > header,
+.hogwarts-system.quidditch .quidditch-fouls > header,
+.hogwarts-system.quidditch .quidditch-teams > header {
+  font-weight: bold;
+  margin-bottom: 4px;
+  border-bottom: 1px solid rgba(var(--hogwarts-accent-rgb), 0.2);
+}
+.hogwarts-system.quidditch .snitch-on {
+  color: #b8860b;
+  font-weight: bold;
+}
+.hogwarts-system.quidditch .snitch-off {
+  opacity: 0.7;
+}
+.hogwarts-system.quidditch .quidditch-snitch-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 4px;
+}
+.hogwarts-system.quidditch .quidditch-player {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 4px 0;
+}
+.hogwarts-system.quidditch .quidditch-player + .quidditch-player {
+  border-top: 1px solid rgba(var(--hogwarts-accent-rgb), 0.15);
+}
+.hogwarts-system.quidditch .quidditch-player .player-name {
+  flex: 1 1 120px;
+  font-weight: bold;
+}
+.hogwarts-system.quidditch .quidditch-player .player-init {
+  flex: 0 0 2.5em;
+  text-align: right;
+  opacity: 0.8;
+}
+.hogwarts-system.quidditch .quidditch-player .player-actions {
+  flex: 1 0 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.hogwarts-system.quidditch .quidditch-player button {
+  font-size: 11px;
+  padding: 1px 6px;
+  width: auto;
+  line-height: 1.6;
+}
+.hogwarts-system.quidditch .quidditch-player .bludger {
+  color: #8b0000;
+}
+.hogwarts-system.quidditch .quidditch-foul-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+.hogwarts-system.quidditch .quidditch-foul-row > label {
+  flex: 0 0 30%;
+}
+.hogwarts-system.quidditch .quidditch-foul-row > select, .hogwarts-system.quidditch .quidditch-foul-row > input {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.hogwarts-system.quidditch .quidditch-foul-row > button {
+  flex: 0 0 auto;
+  width: auto;
+}
+.hogwarts-system.quidditch > .window-content, .hogwarts-system.house-points > .window-content, .hogwarts-system.quidditch-team > .window-content {
+  overflow-y: auto;
+  min-height: 0;
+}
+.hogwarts-system .hogwarts-quidditch-role {
+  color: var(--color-text-light-highlight, #f0f0e0);
+  opacity: 0.9;
+}
+.hogwarts-system .hogwarts-quidditch-role.role-seeker {
+  color: #d4af37;
+}
+.hogwarts-system .hogwarts-quidditch-role.role-beater {
+  color: #c85a3a;
+}
+.hogwarts-system .hogwarts-quidditch-role.role-keeper {
+  color: #4a90d9;
+}
+.hogwarts-system .hogwarts-quidditch-role.role-chaser {
+  color: #6aa84f;
+}
+.hogwarts-system.quidditch-team .quidditch-team-sheet {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.hogwarts-system.quidditch-team .team-identity {
+  margin-top: 6px;
+}
+.hogwarts-system.quidditch-team .team-lineup-check {
+  border-radius: 4px;
+  padding: 6px 10px;
+  border: 1px solid;
+}
+.hogwarts-system.quidditch-team .team-lineup-check.ok {
+  background: rgba(106, 168, 79, 0.15);
+  border-color: rgba(106, 168, 79, 0.5);
+}
+.hogwarts-system.quidditch-team .team-lineup-check.warn {
+  background: rgba(200, 90, 58, 0.15);
+  border-color: rgba(200, 90, 58, 0.5);
+}
+.hogwarts-system.quidditch-team .team-lineup-check ul {
+  margin: 4px 0 0;
+  padding-left: 20px;
+}
+.hogwarts-system.quidditch-team .team-roster,
+.hogwarts-system.quidditch-team .team-record,
+.hogwarts-system.quidditch-team .team-prose {
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(var(--hogwarts-accent-rgb), 0.2);
+  border-radius: 4px;
+  padding: 6px 8px;
+}
+.hogwarts-system.quidditch-team .team-roster > header,
+.hogwarts-system.quidditch-team .team-record > header,
+.hogwarts-system.quidditch-team .team-prose > header {
+  font-weight: bold;
+  margin-bottom: 4px;
+  border-bottom: 1px solid rgba(var(--hogwarts-accent-rgb), 0.2);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.hogwarts-system.quidditch-team .team-roster > header > a,
+.hogwarts-system.quidditch-team .team-record > header > a,
+.hogwarts-system.quidditch-team .team-prose > header > a {
+  margin-left: auto;
+  cursor: pointer;
+}
+.hogwarts-system.quidditch-team .team-hint {
+  margin: 0 0 6px;
+  font-size: 11px;
+  font-style: italic;
+  opacity: 0.75;
+}
+.hogwarts-system.quidditch-team .team-player {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 0;
+}
+.hogwarts-system.quidditch-team .team-player + .team-player {
+  border-top: 1px solid rgba(var(--hogwarts-accent-rgb), 0.15);
+}
+.hogwarts-system.quidditch-team .team-player.missing .player-name {
+  opacity: 0.5;
+  font-style: italic;
+}
+.hogwarts-system.quidditch-team .team-player .player-name {
+  flex: 1 1 auto;
+  font-weight: bold;
+  cursor: pointer;
+}
+.hogwarts-system.quidditch-team .team-player > select {
+  flex: 0 0 9em;
+}
+.hogwarts-system.quidditch-team .team-player .captain-toggle {
+  opacity: 0.3;
+  cursor: pointer;
+}
+.hogwarts-system.quidditch-team .team-player .captain-toggle.active {
+  opacity: 1;
+  color: #d4af37;
+}
+.hogwarts-system.quidditch-team .record-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+.hogwarts-system.quidditch-team .team-prose prose-mirror {
+  min-height: 90px;
+  display: block;
+}
+.hogwarts-system .quidditch-team-field .quidditch-team-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+.hogwarts-system .quidditch-team-field .quidditch-team-link .team-role {
+  opacity: 0.8;
+  font-size: 11px;
+}
+.hogwarts-system .quidditch-team-field .quidditch-team-link .captain {
+  color: #d4af37;
+}
+.hogwarts-system .quidditch-team-field .quidditch-team-none {
+  opacity: 0.6;
+  font-style: italic;
+}
 .hogwarts-system .wounds-full-width {
   width: 100%;
   margin: 16px 0 8px;
@@ -930,7 +1193,7 @@ h3.collapsible.collapsed + .collapsible-content {
   flex: 0 0 44px;
 }
 .hogwarts-system .items-header {
-  height: 28px;
+  min-height: 28px;
   margin: 2px 0;
   padding: 0;
   align-items: center;
@@ -1164,7 +1427,7 @@ h3.collapsible.collapsed + .collapsible-content {
   font-weight: 700;
 }
 .hogwarts-system .items-list .items-header {
-  height: 28px;
+  min-height: 28px;
   margin: 2px 0;
   padding: 0;
   align-items: center;
@@ -1179,6 +1442,15 @@ h3.collapsible.collapsed + .collapsible-content {
 .hogwarts-system .items-list .items-header .item-name {
   padding-left: 5px;
   text-align: left;
+}
+.hogwarts-system .tab.spells .item-extreme {
+  flex: 0 0 110px;
+}
+.hogwarts-system .tab.spells .items-header .item-controls {
+  flex: 0 0 150px;
+}
+.hogwarts-system .tab.spells .items-header .item-controls a {
+  line-height: 1.2;
 }
 .hogwarts-system .item-formula {
   flex: 0 0 200px;

@@ -4,6 +4,10 @@
   "description": "The Hogwarts System for FoundryVTT!",
   "authors": [
     {
+      "name": "NeroKiryu",
+      "url": "https://github.com/nerokiryu/HP-System"
+    },
+    {
       "name": "Asacolips",
       "discord": "asacolips"
     },
@@ -52,6 +56,12 @@
           "powers",
           "usage",
           "notes.gmNotes"
+        ]
+      },
+      "quidditchTeam": {
+        "htmlFields": [
+          "description",
+          "notes"
         ]
       }
     },
@@ -125,7 +135,7 @@
       "thumbnail": "systems/hogwarts-system/assets/hogwarts-system.png"
     }
   ],
-  "version": "3.3.0",
+  "version": "1.0.0",
   "compatibility": {
     "minimum": "14",
     "verified": "14.365"
@@ -208,6 +218,18 @@
         "ASSISTANT": "OWNER"
       },
       "flags": {}
+    },
+    {
+      "name": "hogwarts-guide",
+      "label": "Hogwarts \u2014 Guide du MJ",
+      "path": "packs/hogwarts-guide",
+      "type": "JournalEntry",
+      "system": "hogwarts-system",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     }
   ],
   "packFolders": [
@@ -238,6 +260,14 @@
           "color": "#2e7d32",
           "packs": [
             "hogwarts-creatures"
+          ],
+          "folders": []
+        },
+        {
+          "name": "Hogwarts Documentation",
+          "color": "#4a148c",
+          "packs": [
+            "hogwarts-guide"
           ],
           "folders": []
         }

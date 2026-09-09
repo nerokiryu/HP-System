@@ -4,7 +4,8 @@
       "character": "Personnage",
       "npc": "PNJ",
       "familiar": "Familier",
-      "creature": "Créature"
+      "creature": "Créature",
+      "quidditchTeam": "Équipe de Quidditch"
     },
     "Item": {
       "gear": "Équipement",
@@ -70,7 +71,8 @@
     },
     "SheetLabels": {
       "Actor": "Fiche Personnage Hogwarts",
-      "Item": "Fiche Objet Hogwarts"
+      "Item": "Fiche Objet Hogwarts",
+      "QuidditchTeam": "Fiche d’équipe de Quidditch"
     },
     "Name": "Nom",
     "Actor": {
@@ -515,7 +517,7 @@
             "label": "Virulence"
           },
           "prepTime": {
-            "label": "Temps de préparation"
+            "label": "Temps de préparation (MJ)"
           },
           "duration": {
             "label": "Durée des effets"
@@ -546,7 +548,7 @@
         "IngredientName": "Nom de l'ingrédient",
         "NoIngredients": "Aucun ingrédient spécifié. Ajoutez des ingrédients pour permettre le suivi de la fabrication.",
         "Crafted": "Déjà préparée",
-        "PrepTimePlaceholder": "ex: 1 heure",
+        "PrepTimePlaceholder": "à la discrétion du MJ",
         "DurationPlaceholder": "ex: 1d4+1 heures",
         "Brew": "Préparer la potion",
         "Use": "Utiliser une dose",
@@ -704,7 +706,11 @@
       "Silent": "Informulé (−30 %)",
       "WandlessShort": "sans baguette",
       "SilentShort": "informulé",
-      "UseExtreme": "Formule extrême (maxima)"
+      "UseExtreme": "Formule extrême (maxima)",
+      "FougueChoice": "Le dé donne {original}. La Fougue permet de l’inverser en {reversed}. Le point est dépensé dans les deux cas.",
+      "FougueTake": "Inverser ({value})",
+      "FougueKeep": "Garder ({value})",
+      "FougueKept": "Fougue : résultat conservé"
     },
     "Chat": {
       "ApplyDamage": "Appliquer les dégâts",
@@ -740,7 +746,10 @@
       "NotOwner": "Vous ne contrôlez pas ce personnage",
       "PostToChat": "Publier dans le chat",
       "ApplyNonLethal": "Dégâts non-létaux",
-      "ApplyKnockout": "Assommer"
+      "ApplyKnockout": "Assommer",
+      "GrantFougue": "Accorder un point de Fougue",
+      "FougueGranted": "{name} gagne un point de Fougue (total : {total}).",
+      "FougueAtMax": "Le maximum de {max} points de Fougue est déjà atteint."
     },
     "Derived": {
       "Title": "Caractéristiques dérivées",
@@ -758,6 +767,8 @@
       "PersonalBonusPoints": "Points de Bonus Personnel"
     },
     "Settings": {
+      "WarnOnNegativeExperience": "Avertir en cas d'expérience négative",
+      "WarnOnNegativeExperienceHint": "Affiche une notification lorsqu'une dépense fait passer un total d'expérience sous zéro.",
       "TabsUseIcons": "Utiliser des icônes pour les onglets",
       "TabsUseIconsHint": "Si activé, les onglets de la fiche affichent des icônes FontAwesome au lieu de libellés textuels (préférence client).",
       "UseExtendedTiers": "Paliers de réussite étendus (règle optionnelle)",
@@ -775,7 +786,11 @@
       "SchoolXpMode": "Gain d'expérience scolaire",
       "SchoolXpModeHint": "Le livre publie deux versions contradictoires. §25.1 (l. 28186) donne un forfait 1d6+1 par période ; §7.3 (l. 6848) un tableau dégressif selon l'ancienneté de la matière.",
       "SchoolXpFlat": "Forfait 1d6+1 par période (§25.1)",
-      "SchoolXpTapered": "Tableau dégressif 1d6+1 / 1d4+1 / 1d4 (§7.3)"
+      "SchoolXpTapered": "Tableau dégressif 1d6+1 / 1d4+1 / 1d4 (§7.3)",
+      "FougueFailureIsFumble": "Échec avec Fougue = maladresse",
+      "FougueFailureIsFumbleHint": "Un jet manqué alors qu’un point de Fougue a été dépensé est traité comme une maladresse (l. 2995). Le §8.3 en fait un pire cas plutôt qu’une certitude : décochez pour laisser un simple échec.",
+      "FougueAfterRoll": "Fougue utilisable après le jet",
+      "FougueAfterRollHint": "Le livre veut que le point soit déclaré AVANT le jet (l. 10199). Décochez pour retirer le bouton des cartes de chat et n’autoriser que la case du dialogue de jet."
     },
     "Notifications": {
       "PersonalBonusNegative": "Attention : Points de bonus personnel en négatif",
@@ -954,17 +969,124 @@
     },
     "Quidditch": {
       "Title": "Quidditch",
-      "Position": "Poste",
-      "Positions": {
+      "Start": "Lancer le match",
+      "End": "Terminer le match",
+      "MatchOver": "Fin du match",
+      "RoundLabel": "Round",
+      "Round": "Round {round}",
+      "NoCombat": "Ouvrez d’abord une rencontre : le match s’appuie sur le suivi de combat.",
+      "SideDefault": "Équipe {n}",
+      "CoinToss": "Pile ou face : l’équipe {side} débute avec le souafle.",
+      "Lineup": "Composition",
+      "Squads": "Équipes enregistrées",
+      "TeamName": "Nom de l’équipe",
+      "SaveTeam": "Enregistrer",
+      "TeamSaved": "Équipe « {name} » enregistrée ({count} joueurs).",
+      "NoTeamName": "Donnez un nom à l’équipe.",
+      "NoPlayers": "Aucun joueur affecté à ce côté.",
+      "Margin": "Différence",
+      "Resolver": "Résoudre une opposition",
+      "Acting": "Joueur qui agit",
+      "Opposing": "Joueur qui s’oppose",
+      "Hindrance": "Gêne (malus)",
+      "Winner": "{name} emporte l’action",
+      "TieRule": "Égalité : l’action revient au premier dans l’ordre d’initiative (l. 29822).",
+      "NeedTwoMargins": "Il faut au moins deux différences publiées dans le chat.",
+      "Fouls": "Fautes",
+      "CallFoul": "Siffler",
+      "FoulCalled": "Faute sifflée",
+      "PenaltyFor": "Penalty en faveur de l’équipe {side}",
+      "PenaltyRule": "Le poursuiveur tire depuis le cercle central ; seul le gardien adverse reste en défense (l. 29542).",
+      "AwardSnitch": "Attribuer les {points} points",
+      "Score": {
+        "goal": "But",
+        "snitch": "Vif d’or"
+      },
+      "Snitch": {
+        "Title": "Vif d’or",
+        "Chance": "Chance d’apparition",
+        "Roll": "Tester l’apparition",
+        "OnPitch": "sur le terrain",
+        "Absent": "hors du terrain",
+        "Spotted": "Le vif d’or est repéré : la poursuite commence à 30 mètres.",
+        "SpottedBy": "Repéré par",
+        "DistanceLabel": "Distance",
+        "Distance": "Écart réduit à {distance} mètres.",
+        "InReach": "Le vif d’or est à portée : un jet de DEX×1 permet de l’attraper.",
+        "Close": "Combler 5 m"
+      },
+      "Bludger": {
+        "Hit": "Touché par un cognard",
+        "Damage": "Dégâts",
+        "Lethal": "létal",
+        "NonLethal": "non létaux",
+        "Resistance": "Table de résistance",
+        "KnockedOut": "assommé",
+        "Resisted": "reste conscient",
+        "Unconscious": "Inconscient durant {hours} heures (CON×1)."
+      },
+      "Role": {
         "chaser": "Poursuiveur",
-        "keeper": "Gardien",
         "beater": "Batteur",
+        "keeper": "Gardien",
         "seeker": "Attrapeur"
       },
-      "Broom": "Balai",
-      "Catch": "Attraper le Vif d'Or",
-      "Score": "Marquer",
-      "Block": "Bloquer"
+      "Action": {
+        "move": "Se déplacer",
+        "pass": "Faire une passe",
+        "recover": "Récupérer une balle",
+        "intercept": "Intercepter",
+        "shoot": "Tirer au but",
+        "save": "Arrêter le tir",
+        "hitChasers": "Cognard → poursuiveurs",
+        "hitKeeper": "Cognard → gardien",
+        "hitSeeker": "Cognard → attrapeur",
+        "dodgeBludger": "Éviter un cognard",
+        "spotSnitch": "Repérer le vif d’or",
+        "readSeeker": "Observer l’autre attrapeur",
+        "chaseSnitch": "Poursuivre le vif d’or",
+        "catchSnitch": "Attraper le vif d’or",
+        "special": "Action spéciale"
+      },
+      "Foul": {
+        "bumphing": "Tranchefoule",
+        "blatching": "Bout-en-choc",
+        "blagging": "Hochequeue",
+        "cobbing": "Coudoyage",
+        "flacking": "Rembarrage",
+        "haversacking": "Pognensac",
+        "quafflePocking": "Pique-souafle",
+        "snitchnip": "Pincevif",
+        "stooging": "Tassebut",
+        "bumpingCrowd": "Croc-en-manche",
+        "broomJump": "Saute-balais"
+      },
+      "Roll": "Lancer le jet",
+      "Team": {
+        "Label": "Équipe de Quidditch",
+        "None": "Aucune équipe",
+        "Name": "Nom de l’équipe",
+        "House": "Maison",
+        "Roster": "Effectif",
+        "AddPlayer": "Ajouter une ligne",
+        "MissingPlayer": "(acteur introuvable)",
+        "DropHint": "Glissez un personnage sur la fiche pour l’ajouter à l’effectif.",
+        "OnlyCharacters": "Seuls les personnages peuvent rejoindre une équipe.",
+        "AlreadyIn": "{name} fait déjà partie de l’effectif.",
+        "Captain": "Capitaine",
+        "CaptainHint": "Désigner comme capitaine — seul le capitaine peut demander un temps mort (l. 29537).",
+        "LineupOk": "Effectif réglementaire : 3 poursuiveurs, 2 batteurs, 1 gardien, 1 attrapeur.",
+        "LineupWarn": "Effectif non réglementaire",
+        "Record": "Palmarès",
+        "Wins": "Victoires",
+        "Losses": "Défaites",
+        "PointsFor": "Points marqués",
+        "PointsAgainst": "Points encaissés",
+        "Description": "Description",
+        "Notes": "Notes",
+        "Delete": "Supprimer l’équipe",
+        "DeleteConfirm": "Supprimer définitivement l’équipe « {name} » ?"
+      }
     },
     "Wound": {
       "Dealt": "Dégâts appliqués",
@@ -1108,6 +1230,14 @@
       "LinkFamiliar": "Seuls les familiers peuvent être liés à un personnage.",
       "LinkFailed": "Échec de la liaison du familier.",
       "CreateFamiliar": "Échec de la création du familier."
+    },
+    "Fougue": {
+      "EndScenario": "Fin de scénario (Fougue)",
+      "EndScenarioConfirm": "Remettre la Fougue de tous les personnages à 1 point, comme au début d’un nouveau scénario ?",
+      "EndScenarioDone": "Fougue réinitialisée pour {count} personnage(s).",
+      "Sprint": "Sprint (Fougue)",
+      "SprintHint": "Dépenser 1 point de Fougue : mouvement +50 % pendant une poursuite (§1.7.7).",
+      "SprintResult": "Course limitée à {rounds} round(s), suivie d’autant de rounds de repos."
     }
   }
 }

@@ -1,6 +1,9 @@
 // Section Header
 .items-header {
-  height: 28px;
+  // `min-height` plutôt que `height` : certains en-têtes (colonnes des sorts,
+  // boutons « Ajouter niveau N ») dépassent 28 px et chevauchaient la ligne
+  // suivante lorsque la hauteur était figée.
+  min-height: 28px;
   margin: 2px 0;
   padding: 0;
   align-items: center;
@@ -274,7 +277,7 @@
 
   // Section Header
   .items-header {
-    height: 28px;
+    min-height: 28px;
     margin: 2px 0;
     padding: 0;
     align-items: center;
@@ -289,6 +292,22 @@
       padding-left: 5px;
       text-align: left;
       // font-size: 16px;
+    }
+  }
+}
+
+// -----------------------------------------
+// Onglet Sorts : libellés de colonnes longs
+// -----------------------------------------
+.tab.spells {
+  .item-extreme {
+    flex: 0 0 110px;
+  }
+
+  .items-header .item-controls {
+    flex: 0 0 150px;
+    a {
+      line-height: 1.2;
     }
   }
 }

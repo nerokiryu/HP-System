@@ -64,6 +64,8 @@
         "rarity": "commun",
         "available": false
       }
-    ]
+    ],
+    "virulence": null,
+    "duration": ""
   }
 }

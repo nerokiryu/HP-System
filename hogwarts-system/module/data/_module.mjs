@@ -4,6 +4,7 @@ export { default as HogwartsCharacter } from './actor-character.mjs';
 export { default as HogwartsNPC } from './actor-npc.mjs';
 export { default as HogwartsFamiliar } from './actor-familiar.mjs';
 export { default as HogwartsCreature } from './actor-creature.mjs';
+export { default as HogwartsQuidditchTeam } from './actor-quidditch-team.mjs';
 
 // Export Items
 export { default as HogwartsItemBase } from './base-item.mjs';

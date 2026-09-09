@@ -22,6 +22,8 @@
         "rarity": "commun",
         "available": false
       }
-    ]
+    ],
+    "virulence": 12,
+    "duration": "2d6+3 minutes / 1d6+1 heures"
   }
 }

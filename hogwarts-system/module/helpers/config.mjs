@@ -146,7 +146,7 @@ HOGWARTS.skillPresets = {
 
 // Build a mapping from preset display names to i18n keys
 HOGWARTS.skillNameKeys = {};
-for (const [cat, list] of Object.entries(HOGWARTS.skillPresets)) {
+for (const list of Object.values(HOGWARTS.skillPresets)) {
   for (const entry of list) {
     if (!HOGWARTS.skillNameKeys[entry.name]) {
       HOGWARTS.skillNameKeys[entry.name] = `HOGWARTS.SkillDisplay.${entry.name}`;

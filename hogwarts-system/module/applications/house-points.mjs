@@ -23,12 +23,14 @@ export class HousePointsApp extends HandlebarsApplicationMixin(ApplicationV2) {
   };
 
   static PARTS = {
-    body: { template: 'systems/hogwarts-system/templates/apps/house-points.hbs' },
+    body: { template: 'systems/hogwarts-system/templates/apps/house-points.hbs', scrollable: [''] },
   };
 
   /** Current totals, always through the world setting so every client agrees. */
   static get points() {
-    return game.settings.get('hogwarts-system', 'housePoints') ?? {};
+    const stored = game.settings.get('hogwarts-system', 'housePoints');
+    // The setting is a DataModel; callers below expect a mutable plain object.
+    return stored?.toObject?.() ?? stored ?? {};
   }
 
   /** Survives re-renders, which the standings sort would otherwise scramble. */

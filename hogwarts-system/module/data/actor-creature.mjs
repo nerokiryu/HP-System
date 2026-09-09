@@ -132,7 +132,7 @@ export default class HogwartsCreature extends HogwartsActorBase {
 
     // Movement display string
     const mv = this.movement;
-    let mvParts = [`${mv.land}`];
+    const mvParts = [`${mv.land}`];
     if (mv.fly) mvParts.push(`vol ${mv.fly}`);
     if (mv.swim) mvParts.push(`nage ${mv.swim}`);
     this.movementDisplay = mvParts.join(' / ');

@@ -40,6 +40,8 @@
         "rarity": "commun",
         "available": false
       }
-    ]
+    ],
+    "virulence": null,
+    "duration": "2d4+2 heures"
   }
 }

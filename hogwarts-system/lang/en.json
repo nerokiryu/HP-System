@@ -4,7 +4,8 @@
       "character": "Character",
       "npc": "NPC",
       "familiar": "Familiar",
-      "creature": "Creature"
+      "creature": "Creature",
+      "quidditchTeam": "Quidditch Team"
     },
     "Item": {
       "gear": "Gear",
@@ -70,7 +71,8 @@
     },
     "SheetLabels": {
       "Actor": "Hogwarts Actor Sheet",
-      "Item": "Hogwarts Item Sheet"
+      "Item": "Hogwarts Item Sheet",
+      "QuidditchTeam": "Quidditch Team Sheet"
     },
     "Name": "Name",
     "Actor": {
@@ -515,7 +517,7 @@
             "label": "Virulence"
           },
           "prepTime": {
-            "label": "Prep. Time"
+            "label": "Prep. Time (GM)"
           },
           "duration": {
             "label": "Effect Duration"
@@ -546,7 +548,7 @@
         "IngredientName": "Ingredient name",
         "NoIngredients": "No ingredients specified. Add ingredients to enable crafting tracking.",
         "Crafted": "Already brewed",
-        "PrepTimePlaceholder": "e.g. 1 hour",
+        "PrepTimePlaceholder": "at the GM's discretion",
         "DurationPlaceholder": "e.g. 1d4+1 hours",
         "Brew": "Brew potion",
         "Use": "Use a dose",
@@ -704,7 +706,11 @@
       "Silent": "Non-verbal (−30%)",
       "WandlessShort": "wandless",
       "SilentShort": "non-verbal",
-      "UseExtreme": "Extreme formula (maxima)"
+      "UseExtreme": "Extreme formula (maxima)",
+      "FougueChoice": "The die shows {original}. Heroism can reverse it to {reversed}. The point is spent either way.",
+      "FougueTake": "Reverse ({value})",
+      "FougueKeep": "Keep ({value})",
+      "FougueKept": "Heroism: result kept"
     },
     "Chat": {
       "ApplyDamage": "Apply Damage",
@@ -740,7 +746,10 @@
       "NotOwner": "You do not control this character",
       "PostToChat": "Post to Chat",
       "ApplyNonLethal": "Non-lethal damage",
-      "ApplyKnockout": "Knock out"
+      "ApplyKnockout": "Knock out",
+      "GrantFougue": "Award a Heroism point",
+      "FougueGranted": "{name} gains a Heroism point (total: {total}).",
+      "FougueAtMax": "The maximum of {max} Heroism points is already reached."
     },
     "Derived": {
       "Title": "Derived Characteristics",
@@ -758,6 +767,8 @@
       "PersonalBonusPoints": "Personal Bonus Points"
     },
     "Settings": {
+      "WarnOnNegativeExperience": "Warn on negative experience",
+      "WarnOnNegativeExperienceHint": "Show a notification when a spend would push an experience total below zero.",
       "TabsUseIcons": "Use icons for actor tabs",
       "TabsUseIconsHint": "When enabled, actor sheet tabs show FontAwesome icons instead of text labels (client preference).",
       "UseExtendedTiers": "Extended success tiers (optional rule)",
@@ -775,7 +786,11 @@
       "SchoolXpMode": "School experience gain",
       "SchoolXpModeHint": "The book publishes two contradictory versions. §25.1 (l. 28186) gives a flat 1d6+1 per term; §7.3 (l. 6848) a table tapering off with the subject's seniority.",
       "SchoolXpFlat": "Flat 1d6+1 per term (§25.1)",
-      "SchoolXpTapered": "Tapering table 1d6+1 / 1d4+1 / 1d4 (§7.3)"
+      "SchoolXpTapered": "Tapering table 1d6+1 / 1d4+1 / 1d4 (§7.3)",
+      "FougueFailureIsFumble": "Heroism failure is a fumble",
+      "FougueFailureIsFumbleHint": "A roll missed after spending a Heroism point counts as a fumble (l. 2995). §8.3 frames it as a worst case rather than a certainty: uncheck to leave it a plain failure.",
+      "FougueAfterRoll": "Heroism usable after the roll",
+      "FougueAfterRollHint": "The book spends the point BEFORE the roll (l. 10199). Uncheck to remove the chat-card button and allow only the roll-dialog checkbox."
     },
     "Notifications": {
       "PersonalBonusNegative": "Warning: Personal Bonus Points are negative",
@@ -954,17 +969,124 @@
     },
     "Quidditch": {
       "Title": "Quidditch",
-      "Position": "Position",
-      "Positions": {
+      "Start": "Start match",
+      "End": "End match",
+      "MatchOver": "Match over",
+      "RoundLabel": "Round",
+      "Round": "Round {round}",
+      "NoCombat": "Open an encounter first: the match rides on the combat tracker.",
+      "SideDefault": "Team {n}",
+      "CoinToss": "Coin toss: team {side} starts with the quaffle.",
+      "Lineup": "Line-up",
+      "Squads": "Saved squads",
+      "TeamName": "Squad name",
+      "SaveTeam": "Save",
+      "TeamSaved": "Squad \"{name}\" saved ({count} players).",
+      "NoTeamName": "Give the squad a name.",
+      "NoPlayers": "No player assigned to this side.",
+      "Margin": "Margin",
+      "Resolver": "Resolve an opposition",
+      "Acting": "Acting player",
+      "Opposing": "Opposing player",
+      "Hindrance": "Hindrance (penalty)",
+      "Winner": "{name} wins the action",
+      "TieRule": "Tie: the action goes to whoever acts first in initiative order (l. 29822).",
+      "NeedTwoMargins": "At least two margins must be posted in chat.",
+      "Fouls": "Fouls",
+      "CallFoul": "Call",
+      "FoulCalled": "Foul called",
+      "PenaltyFor": "Penalty awarded to team {side}",
+      "PenaltyRule": "The chaser shoots from the centre circle; only the opposing keeper defends (l. 29542).",
+      "AwardSnitch": "Award the {points} points",
+      "Score": {
+        "goal": "Goal",
+        "snitch": "Golden snitch"
+      },
+      "Snitch": {
+        "Title": "Golden snitch",
+        "Chance": "Appearance chance",
+        "Roll": "Test appearance",
+        "OnPitch": "on the pitch",
+        "Absent": "off the pitch",
+        "Spotted": "The snitch is spotted: the chase starts at 30 metres.",
+        "SpottedBy": "Spotted by",
+        "DistanceLabel": "Distance",
+        "Distance": "Gap reduced to {distance} metres.",
+        "InReach": "The snitch is in reach: a DEX x1 roll catches it.",
+        "Close": "Close 5 m"
+      },
+      "Bludger": {
+        "Hit": "Hit by a bludger",
+        "Damage": "Damage",
+        "Lethal": "lethal",
+        "NonLethal": "non-lethal",
+        "Resistance": "Resistance table",
+        "KnockedOut": "knocked out",
+        "Resisted": "stays conscious",
+        "Unconscious": "Unconscious for {hours} hours (CON x1)."
+      },
+      "Role": {
         "chaser": "Chaser",
-        "keeper": "Keeper",
         "beater": "Beater",
+        "keeper": "Keeper",
         "seeker": "Seeker"
       },
-      "Broom": "Broom",
-      "Catch": "Catch the Golden Snitch",
-      "Score": "Score",
-      "Block": "Block"
+      "Action": {
+        "move": "Move",
+        "pass": "Pass",
+        "recover": "Recover a loose ball",
+        "intercept": "Intercept",
+        "shoot": "Shoot",
+        "save": "Save",
+        "hitChasers": "Bludger -> chasers",
+        "hitKeeper": "Bludger -> keeper",
+        "hitSeeker": "Bludger -> seeker",
+        "dodgeBludger": "Dodge a bludger",
+        "spotSnitch": "Spot the snitch",
+        "readSeeker": "Read the other seeker",
+        "chaseSnitch": "Chase the snitch",
+        "catchSnitch": "Catch the snitch",
+        "special": "Special action"
+      },
+      "Foul": {
+        "bumphing": "Bumphing",
+        "blatching": "Blatching",
+        "blagging": "Blagging",
+        "cobbing": "Cobbing",
+        "flacking": "Flacking",
+        "haversacking": "Haversacking",
+        "quafflePocking": "Quaffle-pocking",
+        "snitchnip": "Snitchnip",
+        "stooging": "Stooging",
+        "bumpingCrowd": "Cobbing (broom)",
+        "broomJump": "Broom jump"
+      },
+      "Roll": "Roll",
+      "Team": {
+        "Label": "Quidditch team",
+        "None": "No team",
+        "Name": "Team name",
+        "House": "House",
+        "Roster": "Roster",
+        "AddPlayer": "Add a row",
+        "MissingPlayer": "(actor not found)",
+        "DropHint": "Drop a character on the sheet to add them to the roster.",
+        "OnlyCharacters": "Only characters can join a team.",
+        "AlreadyIn": "{name} is already on the roster.",
+        "Captain": "Captain",
+        "CaptainHint": "Set as captain — only the captain may call a time-out (l. 29537).",
+        "LineupOk": "Regulation line-up: 3 chasers, 2 beaters, 1 keeper, 1 seeker.",
+        "LineupWarn": "Line-up is not regulation",
+        "Record": "Record",
+        "Wins": "Wins",
+        "Losses": "Losses",
+        "PointsFor": "Points for",
+        "PointsAgainst": "Points against",
+        "Description": "Description",
+        "Notes": "Notes",
+        "Delete": "Delete team",
+        "DeleteConfirm": "Permanently delete the team \"{name}\"?"
+      }
     },
     "Wound": {
       "Dealt": "Damage applied",
@@ -1108,6 +1230,14 @@
       "LinkFamiliar": "Only familiars can be linked to a character.",
       "LinkFailed": "Failed to link the familiar.",
       "CreateFamiliar": "Failed to create the familiar."
+    },
+    "Fougue": {
+      "EndScenario": "End of scenario (Heroism)",
+      "EndScenarioConfirm": "Reset every character's Heroism to 1 point, as at the start of a new scenario?",
+      "EndScenarioDone": "Heroism reset for {count} character(s).",
+      "Sprint": "Sprint (Heroism)",
+      "SprintHint": "Spend 1 Heroism point: movement +50% during a chase (§1.7.7).",
+      "SprintResult": "Running is limited to {rounds} round(s), followed by as many rounds of rest."
     }
   }
 }

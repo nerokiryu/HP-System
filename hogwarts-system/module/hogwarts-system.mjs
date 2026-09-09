@@ -1,14 +1,18 @@
 // Import document classes.
 import { HogwartsActor } from './documents/actor.mjs';
 import { HogwartsItem } from './documents/item.mjs';
-import { HogwartsCombat, COMBAT_PHASES, combatantPhase, DEFAULT_PHASE } from './documents/combat.mjs';
+import { HogwartsCombat, COMBAT_PHASES, combatantPhase, DEFAULT_PHASE, isQuidditch } from './documents/combat.mjs';
 // Import sheet classes.
 import { HogwartsActorSheet } from './sheets/actor-sheet.mjs';
+import { HogwartsQuidditchTeamSheet } from './sheets/quidditch-team-sheet.mjs';
 import { HogwartsItemSheet } from './sheets/item-sheet.mjs';
 import { HousePointsApp } from './applications/house-points.mjs';
+import { QuidditchApp } from './applications/quidditch.mjs';
 // Import helper/utility classes and constants.
 import { HOGWARTS } from './helpers/config.mjs';
-import { degreeOf } from './helpers/degrees.mjs';
+import { degreeOf, fougueDegree, reverseDice } from './helpers/degrees.mjs';
+import HousePointsData from './data/house-points.mjs';
+import { QUIDDITCH_ROLES } from './helpers/quidditch.mjs';
 // Import DataModel classes
 import * as models from './data/_module.mjs';
 
@@ -75,6 +79,7 @@ Hooks.once('init', function () {
     npc: models.HogwartsNPC,
     familiar: models.HogwartsFamiliar,
     creature: models.HogwartsCreature,
+    quidditchTeam: models.HogwartsQuidditchTeam,
   };
   CONFIG.Item.documentClass = HogwartsItem;
   CONFIG.Item.dataModels = {
@@ -91,8 +96,14 @@ Hooks.once('init', function () {
   // Register sheet application classes
   collections.Actors.unregisterSheet('core', sheets.ActorSheet);
   collections.Actors.registerSheet('hogwarts-system', HogwartsActorSheet, {
+    types: ['character', 'npc', 'familiar', 'creature'],
     makeDefault: true,
     label: 'HOGWARTS.SheetLabels.Actor',
+  });
+  collections.Actors.registerSheet('hogwarts-system', HogwartsQuidditchTeamSheet, {
+    types: ['quidditchTeam'],
+    makeDefault: true,
+    label: 'HOGWARTS.SheetLabels.QuidditchTeam',
   });
   collections.Items.unregisterSheet('core', sheets.ItemSheet);
   collections.Items.registerSheet('hogwarts-system', HogwartsItemSheet, {
@@ -140,12 +151,12 @@ Hooks.once('init', function () {
     default: false
   });
 
-  // World setting: house points tracker (persisted as a JSON object)
+  // World setting: house points tracker
   game.settings.register('hogwarts-system', 'housePoints', {
     name: 'HOGWARTS.HousePoints.Title',
     scope: 'world',
     config: false,
-    type: Object,
+    type: HousePointsData,
     default: { gryffindor: 0, slytherin: 0, ravenclaw: 0, hufflepuff: 0 }
   });
 
@@ -205,6 +216,28 @@ Hooks.once('init', function () {
       tapered: 'HOGWARTS.Settings.SchoolXpTapered'
     },
     default: 'flat'
+  });
+
+  // §8.3 softens what the worked example at l. 2995 states flatly, so both
+  // readings are offered.
+  game.settings.register('hogwarts-system', 'fougueFailureIsFumble', {
+    name: 'HOGWARTS.Settings.FougueFailureIsFumble',
+    hint: 'HOGWARTS.Settings.FougueFailureIsFumbleHint',
+    scope: 'world',
+    config: true,
+    type: Boolean,
+    default: true
+  });
+
+  // The book spends the point *before* the roll (l. 10199); the chat button
+  // lets a table decide afterwards instead.
+  game.settings.register('hogwarts-system', 'fougueAfterRoll', {
+    name: 'HOGWARTS.Settings.FougueAfterRoll',
+    hint: 'HOGWARTS.Settings.FougueAfterRollHint',
+    scope: 'world',
+    config: true,
+    type: Boolean,
+    default: true
   });
 
   game.settings.registerMenu('hogwarts-system', 'housePointsMenu', {
@@ -316,75 +349,7 @@ Hooks.once('ready', async function () {
 
     // Register migrations here. Each migration has a target version; it will be
     // executed when appliedVersion < migration.version <= currentVersion.
-    const MIGRATIONS = [
-      {
-        version: '3.0.0',
-        description: 'Rename `system.biography` -> `system.bio` for actors',
-        migrate: async () => {
-          let migrated = 0;
-          for (const actor of game.actors.contents) {
-            try {
-              const bioSource = actor.system?.biography;
-              const bioTarget = actor.system?.bio;
-              if (bioSource && !bioTarget) {
-                await actor.update({ 'system.bio': bioSource });
-                migrated++;
-              }
-            } catch (e) {
-              console.error('HOGWARTS MIGRATE | Failed migrating actor', actor.id, e);
-            }
-          }
-          console.log(`HOGWARTS MIGRATE | 3.0.0 migration moved bio for ${migrated} actor(s)`);
-        }
-      },
-      {
-        version: '3.1.0',
-        description: 'Seed NPC stats/skills defaults; add fougue/stress/movement to characters',
-        migrate: async () => {
-          let migrated = 0;
-          for (const actor of game.actors.contents) {
-            try {
-              const updateData = {};
-
-              // NPC: seed stats if not present (schema defaults handle new fields,
-              // but existing documents need explicit update for the stats object)
-              if (actor.type === 'npc' && !actor.system.stats) {
-                const defaultStats = {};
-                for (const key of Object.keys(CONFIG.HOGWARTS.stats)) {
-                  defaultStats[key] = { value: 10 };
-                }
-                updateData['system.stats'] = defaultStats;
-                updateData['system.skills'] = [];
-                updateData['system.damage'] = '1d3';
-                updateData['system.armor'] = 0;
-                updateData['system.movement'] = 8;
-              }
-
-              // Character: seed new fields if not present
-              if (actor.type === 'character') {
-                if (actor.system.fougue === undefined) {
-                  updateData['system.fougue'] = { value: 1, max: 1 };
-                }
-                if (actor.system.stress === undefined) {
-                  updateData['system.stress'] = { value: 0 };
-                }
-                if (actor.system.movement === undefined) {
-                  updateData['system.movement'] = 8;
-                }
-              }
-
-              if (Object.keys(updateData).length > 0) {
-                await actor.update(updateData);
-                migrated++;
-              }
-            } catch (e) {
-              console.error('HOGWARTS MIGRATE | Failed migrating actor', actor.id, e);
-            }
-          }
-          console.log(`HOGWARTS MIGRATE | 3.1.0 migration updated ${migrated} actor(s)`);
-        }
-      }
-    ];
+    const MIGRATIONS = [];
 
     const appliedVersion = game.settings.get('hogwarts-system', 'migrationVersion') || '';
     if (compareSemver(appliedVersion, currentVersion) === 0) {
@@ -499,7 +464,49 @@ Hooks.on('getSceneControlButtons', (controls) => {
     visible: true,
     onChange: () => new HousePointsApp().render(true),
   };
+  group.tools.endScenario = {
+    name: 'endScenario',
+    order: Object.keys(group.tools).length + 1,
+    title: 'HOGWARTS.Fougue.EndScenario',
+    icon: 'fas fa-flag-checkered',
+    button: true,
+    visible: game.user.isGM,
+    onChange: () => endScenario(),
+  };
+  group.tools.quidditch = {
+    name: 'quidditch',
+    order: Object.keys(group.tools).length + 1,
+    title: 'HOGWARTS.Quidditch.Title',
+    icon: 'fas fa-broom',
+    button: true,
+    visible: true,
+    onChange: () => new QuidditchApp().render(true),
+  };
 });
+
+/**
+ * Show each player's Quidditch role in the tracker. Roles otherwise live only
+ * on combatant flags, so without this the line-up is invisible outside the
+ * match dashboard — and the chapter 2 phase badge would be shown instead,
+ * which means nothing during a match.
+ * @param {HTMLElement} el
+ * @param {Combat} combat
+ */
+function _renderQuidditchRoles(el, combat) {
+  for (const row of el.querySelectorAll('.combatant[data-combatant-id]')) {
+    const combatant = combat.combatants.get(row.dataset.combatantId);
+    const controls = row.querySelector('.combatant-controls');
+    if (!combatant || !controls || controls.querySelector('.hogwarts-quidditch-role')) continue;
+
+    const role = combatant.getFlag('hogwarts-system', 'quidditchRole') ?? 'chaser';
+    const spec = QUIDDITCH_ROLES[role];
+    const badge = document.createElement('span');
+    badge.className = `inline-control combatant-control hogwarts-quidditch-role role-${role}`;
+    badge.innerHTML = `<i class="${spec?.icon ?? ''}"></i>`;
+    badge.dataset.tooltip = game.i18n.localize(spec?.label ?? role);
+    controls.prepend(badge);
+  }
+}
 
 /**
  * Add a phase badge to every combatant row (Chap. 2.4). Clicking cycles the
@@ -510,6 +517,10 @@ Hooks.on('renderCombatTracker', (app, html) => {
   const el = html instanceof HTMLElement ? html : html[0] ?? html;
   const combat = game.combat;
   if (!combat) return;
+
+  // A Quidditch match has no combat phases: show each player's role instead,
+  // which is otherwise invisible outside the match dashboard.
+  if (isQuidditch(combat)) return _renderQuidditchRoles(el, combat);
 
   for (const row of el.querySelectorAll('.combatant[data-combatant-id]')) {
     const combatant = combat.combatants.get(row.dataset.combatantId);
@@ -560,7 +571,16 @@ async function _onChatCardAction(event, message) {
   if (action === 'use-fougue') {
     return _onUseFougue(btn, message);
   }
+  // ── Award the point a critical earns outside combat (l. 10190) ─────────
+  if (action === 'grant-fougue') {
+    return _onGrantFougue(btn, message);
+  }
 
+  // ── The snitch is caught: 150 points and the match ends (l. 29525) ─────
+  if (action === 'quidditch-snitch-caught') {
+    if (!game.user.isGM) return;
+    return QuidditchApp._onScore(null, btn);
+  }
   // ── Constitution save prompted by a wound threshold ───────────────────
   if (action === 'roll-con') {
     return _onRollConstitution(btn);
@@ -854,18 +874,14 @@ async function _onUseFougue(btn, message) {
   }
 
   // Reverse the dice
-  let reversed;
-  if (rollValue === 100) reversed = 1;
-  else {
-    const str = String(rollValue).padStart(2, '0');
-    reversed = parseInt(str.split('').reverse().join(''), 10) || 1;
-  }
+  const reversed = reverseDice(rollValue);
 
   // Spend 1 fougue
   await actor.update({ 'system.fougue.value': currentFougue - 1 });
 
-  // Recalculate degree with the reversed value
-  const degree = degreeOf(reversed, targetValue);
+  // Recalculate degree with the reversed value; missing an action after
+  // spending a point is treated as a fumble (l. 2995).
+  const degree = fougueDegree(degreeOf(reversed, targetValue));
 
   // Build the new degree badge
   const degreeLabel = game.i18n.localize(`HOGWARTS.Roll.Degree.${degree}`);
@@ -885,6 +901,56 @@ async function _onUseFougue(btn, message) {
 
   await message.update({ content });
   ui.notifications.info(`${game.i18n.localize('HOGWARTS.Chat.UseFougue')}: ${rollValue} → ${reversed}`);
+}
+
+/**
+ * Award the fougue point a critical earns (l. 10190). Gamemaster only: the book
+ * requires an action "accomplie passionnément" and excludes combat (§8.4),
+ * neither of which the system can decide on its own.
+ * @param {HTMLElement} btn
+ * @param {ChatMessage} message
+ */
+async function _onGrantFougue(btn, message) {
+  if (!game.user.isGM) return;
+  const actor = game.actors.get(btn.dataset.actorId);
+  if (!actor) return;
+
+  const current = Number(actor.system.fougue?.value) || 0;
+  const max = Number(actor.system.fougue?.max) || 5;
+  if (current >= max) {
+    ui.notifications.warn(game.i18n.format('HOGWARTS.Chat.FougueAtMax', { max }));
+    return;
+  }
+
+  await actor.update({ 'system.fougue.value': current + 1 });
+  const content = message.content.replace(
+    /<div class="card-buttons">[\s\S]*?<button[^>]*data-action="grant-fougue"[^>]*>[\s\S]*?<\/div>/,
+    `<div class="card-row points-gain">${game.i18n.format('HOGWARTS.Chat.FougueGranted', { name: actor.name, total: current + 1 })}</div>`
+  );
+  await message.update({ content });
+}
+
+/**
+ * Close a scenario: fougue drops to 0 and everyone starts the next one with a
+ * single point (l. 10193).
+ */
+async function endScenario() {
+  const ok = await foundry.applications.api.DialogV2.confirm({
+    window: { title: game.i18n.localize('HOGWARTS.Fougue.EndScenario') },
+    content: `<p>${game.i18n.localize('HOGWARTS.Fougue.EndScenarioConfirm')}</p>`,
+  }).catch(() => false);
+  if (!ok) return;
+
+  const characters = game.actors.filter((a) => a.type === 'character');
+  for (const actor of characters) {
+    await actor.update({ 'system.fougue.value': 1 });
+  }
+  await ChatMessage.create({
+    content: `<div class="hogwarts-chat-card">
+      <header class="card-header"><h3>${game.i18n.localize('HOGWARTS.Fougue.EndScenario')}</h3></header>
+      <div class="card-row">${game.i18n.format('HOGWARTS.Fougue.EndScenarioDone', { count: characters.length })}</div>
+    </div>`,
+  });
 }
 
 /* -------------------------------------------- */

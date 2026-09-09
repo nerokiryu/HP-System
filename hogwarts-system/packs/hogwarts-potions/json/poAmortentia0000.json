@@ -46,6 +46,8 @@
         "rarity": "commun",
         "available": false
       }
-    ]
+    ],
+    "virulence": 15,
+    "duration": "1 jour"
   }
 }

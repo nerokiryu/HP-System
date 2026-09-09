@@ -43,9 +43,9 @@ Les actions correctives portent un identifiant `R-nn`, repris dans le backlog de
 | Combat & santé | 15 | 0 | 0 | 0 |
 | Magie | 5 | 1 | 0 | 2 |
 | Potions | 2 | 1 | 1 | 0 |
-| Fougue | 3 | 1 | 1 | 0 |
+| Fougue | 11 | 1 | 0 | 0 |
 | Expérience | 6 | 1 | 0 | 1 |
-| Vie scolaire | 2 | 1 | 3 | 0 |
+| Vie scolaire | 3 | 1 | 2 | 0 |
 
 **Trois constats structurants :**
 
@@ -325,11 +325,26 @@ localisée, soit c'est une extension maison. À trancher avant de bâtir davanta
 | Réussite critique | **« permet de créer une potion parfaite »** — l. 12922 | Produit `quantity + 2` au lieu de `+1` | ⚠️ | R-23 |
 | Maladresse | **NON PRÉCISÉE PAR LA SOURCE** | Aucun effet | ❓ | Aucune action — ne pas inventer |
 | Ingrédients | Liste + rareté par potion | `ingredientList[]` avec rareté et disponibilité | ✅ | — |
-| Temps de préparation | Publié par le Grimoire | Champ `prepTime` **vide dans tout le pack** | ❌ | Voir T-15 |
+| Virulence | Publiée, mais **dans la prose** : `VIRulence : N` au sein du champ `effets` | Extraite par le générateur — **19 potions** renseignées | ✅ | Corrigé |
+| Durée des effets | Publiée dans la prose : `Durée : …` | Extraite — **54 potions** renseignées | ✅ | Corrigé |
+| Temps de préparation | **Non publié** : le livre le laisse « à la discrétion du MJ » — l. 12963 | Champ libre, intitulé « Temps de préparation (MJ) » | ✅ | Corrigé |
 
 **R-23** — « Potion parfaite » signifie, selon le livre, **maximiser les effets variables** de la
 potion, pas en produire une quantité double. L'implémentation actuelle transforme un bonus de
 qualité en bonus de quantité.
+
+**R-38** — Les trois champs de fabrication étaient donnés pour « publiés par le Grimoire » et
+vides dans tout le pack. La vérification renverse ce constat :
+
+| Champ | Réalité de la source |
+|-------|---------------------|
+| `virulence` | **Publiée** — mais sans colonne dédiée : elle est enfouie dans le champ `effets` sous la forme `VIRulence : N`. 19 potions la portent. |
+| `duration` | **Publiée** de la même manière, sous `Durée : …`. 54 potions après exclusion du tiret marquant l'absence de durée. |
+| `prepTime` | **Jamais publié.** Le livre de base l'attribue explicitement au MJ (l. 12963). |
+
+> **Piège d'extraction évité** : les antidotes emploient le même mot pour un **seuil**
+> (« annule les poisons jusqu'à une VIRulence 10 »). Ce n'est pas leur propre virulence : seule la
+> forme avec deux-points est lue, ce qui écarte les 2 lignes concernées.
 
 ---
 
@@ -337,16 +352,63 @@ qualité en bonus de quantité.
 
 | Élément | Règle canonique | Implémentation | Statut | Action |
 |---------|-----------------|----------------|--------|--------|
-| Dotation initiale | **1 point** en début de partie — l. 915 | Champ `fougue.value` | ✅ | — |
-| Effet | **Inverser dizaines et unités** du résultat — l. 2994 | Bouton dédié : 73→37, 100→01, 05→50 | ✅ | — |
-| Échec malgré la fougue | **Traité comme une maladresse** — l. 2995 | Degré recalculé après inversion | ✅ | — |
-| Maximum | **NON PRÉCISÉ PAR LA SOURCE** | Champ `fougue.max` existe, non contraint | ❓ | R-24 |
-| Gain | Critique sur action **hors combat** uniquement | Aucune automatisation | ❌ | R-25 |
-| Remise à zéro | En fin de scénario | Aucune | ❌ | R-25 |
+| Dotation initiale | **1 point** au début de chaque scénario — l. 10189 | `fougue.value` initial 1, rétabli par la fin de scénario | ✅ | Corrigé |
+| Effet | **Inverser dizaines et unités** — l. 10202 | 71→17, 05→50, 80→08, 00→01 | ✅ | — |
+| Inverser est **un choix** | « le personnage peut très bien choisir de garder le résultat obtenu » — l. 10203 | Dialogue « Inverser / Garder » après le jet déclaré | ✅ | Corrigé |
+| Point consommé **quoi qu'il arrive** | « Quoi qu'il arrive, le point est utilisé » — l. 10201 | Dépensé même sur un palindrome et même si le joueur garde le résultat | ✅ | Corrigé |
+| Déclaration **avant** le jet | l. 10199 | Case du dialogue de jet ; le bouton de chat reste disponible via `fougueAfterRoll` | ⚠️ | Assumé — réglage de monde, activé par défaut |
+| Échec malgré la fougue | « équivalent à une **maladresse** » — l. 2995 | Degré escaladé en maladresse, réglage `fougueFailureIsFumble` | ✅ | Corrigé |
+| **Maximum 5 points** | « pour un maximum de 5 durant une partie » — l. 10192 | `fougue.max` par défaut 5, migration des personnages existants | ✅ | Corrigé |
+| Gain | Critique **001-005** sur une action passionnée, **hors combat** — l. 10190 | Bouton MJ sur la carte du critique, masqué pendant un combat actif | ✅ | Corrigé |
+| Remise à zéro | « remis à 0 une fois le scénario terminé », 1 point au suivant — l. 10193 | Bouton MJ « Fin de scénario » dans les contrôles de scène | ✅ | Corrigé |
+| Aucun gain en combat | « les personnages ne reçoivent **aucun** point de fougue en se battant » — §8.4 | Bouton de gain masqué si l'acteur est engagé dans un combat démarré | ✅ | Corrigé |
+| Poursuite | −1 point → mouvement **×1,5**, course limitée à CON/2 rounds, repos équivalent — l. 1573 | Action « Sprint (Fougue) » sur la fiche | ✅ | Corrigé |
 
-**R-24** — L'ancien audit affirmait un plafond de 5 points « non limité dans le code ». La
-vérification ne retrouve **aucun plafond** dans le livre de base. Le champ `fougue.max` est donc
-correct en tant que valeur libre réglée par le MJ — mais son intitulé devrait le dire.
+### Correctif appliqué — Fougue
+
+L'ancienne version de ce document donnait quatre lignes pour conformes ou indécidables ; la
+relecture du chapitre 8 en a infirmé trois.
+
+**R-24 était faux.** Ce document affirmait « Maximum — **non précisé par la source** » et le
+justifiait par « la vérification ne retrouve aucun plafond dans le livre de base ». La ligne 10192
+est pourtant explicite : « gagne un point de fougue supplémentaire **pour un maximum de 5 durant
+une partie** ». Le premier audit avait raison, c'est la correction qui avait tort. `fougue.max`
+passe de 1 à 5, avec une migration pour les personnages existants — 1 n'ayant jamais été un choix,
+seulement l'ancien défaut du schéma.
+
+**Le point n'était pas toujours dépensé.** L'inversion n'était comptée que si elle changeait le
+résultat : sur un palindrome (11, 22, … 99), le joueur récupérait son point. Le livre dit
+l'inverse, et le §8.3 nomme précisément ce cas — « l'inversion d'un 77 ou d'un 99 n'apporte pas
+grande différence ». Neuf résultats sur cent étaient concernés.
+
+**L'inversion était forcée.** Le livre en fait un choix explicite, exercé *après* avoir vu le dé,
+le point restant consommé dans les deux cas. Un dialogue « Inverser (17) / Garder (71) » le
+restitue.
+
+**L'échec n'était pas escaladé.** Ce document donnait la ligne « Échec malgré la fougue » pour
+conforme, au motif que « le degré est recalculé après inversion ». Recalculer n'est pas escalader :
+un jet manqué affichait « Échec », jamais « Maladresse ». La source se contredit d'ailleurs —
+l'exemple joué de la l. 2995 est catégorique (« le résultat est équivalent à une maladresse »)
+alors que le §8.3 en fait un pire cas. Les deux lectures sont disponibles, la stricte par défaut.
+
+**La règle de poursuite n'était pas recensée.** Le §1.7.7 (l. 1570-1580) offre un second usage :
+dépenser 1 point pour majorer le mouvement de moitié, au prix d'une course limitée à CON/2 rounds
+et d'autant de rounds de repos. Ni ce document ni le système ne la mentionnaient.
+
+> **Contradiction de la source, non résolue.** Le §8.4 est catégorique : « les personnages ne
+> reçoivent aucun point de fougue en se battant, et ce peu importe le nombre de réussites
+> critiques ». Mais l'exemple joué de la l. 3087 accorde un point à Kelly pour une charge en plein
+> affrontement (« Kelly, tu peux ajouter un point de fougue à ta réserve »), juste avant la mention
+> « Fin du combat ». Le texte de règle l'emporte sur l'illustration : le bouton de gain est masqué
+> tant que l'acteur participe à un combat démarré. Le MJ peut toujours ajuster le compteur à la
+> main s'il suit l'exemple.
+
+> **Non implémenté** : la potion *Potentiel-absolu* (niveau 5+, l. 12753) élargit les critiques à
+> 001-010 et fait que « chaque jet se fait comme si un point de fougue avait été employé **sans les
+> effets en cas d'échec** ». Cela demande un effet temporaire d'une heure qui modifie à la fois la
+> bande de critique et la résolution de la fougue — à traiter avec le sous-système des potions
+> actives, pas ici.
+
 
 ---
 
@@ -425,7 +487,7 @@ contrepartie dans le système.
 
 | Sous-système | Contenu des règles | Ligne | Action |
 |--------------|--------------------|-------|--------|
-| **Quidditch** | Règles complètes : Vif d'or (l. 29510), Pincevif (l. 29575), tableau des rôles Attrapeur/Batteur/Gardien/Poursuiveur et de leurs actions (l. 29636 s.), exemple de match commenté (l. 29870 s.) | 29 510 s. | R-29 |
+| ~~**Quidditch**~~ | Rounds, initiative, oppositions, vif d'or, cognards, fautes | 29 445 s. | ✅ **Implémenté** |
 | **Examens B.U.S.E. / A.S.P.I.C.** | Notation O/E/A/P/D/T | ch. 23 | R-30 |
 | ~~**Points de maison**~~ | Tables situationnelles avec humeur du professeur | 27 548 s. | ✅ **Implémenté** |
 | **Gestion du temps** | Répartition sommeil / devoirs / activités, influant sur les gains de compétence et le stress | ch. 26 | R-32 |
@@ -472,6 +534,51 @@ l'humeur ; « Victoire à un tournoi de club » (15/25/50) donne +15 / +25 / +50
 
 **R-31** — traité.
 
+### Correctif appliqué — Quidditch (ch. 28)
+
+| Élément | Règle canonique | Implémentation | Statut |
+|---------|-----------------|----------------|--------|
+| Structure du match | « se découpe de la même manière qu'un combat » — l. 29629 | Le match s'appuie sur le suivi de combat : rounds, tours et initiative existants | ✅ |
+| Initiative | `1d6 + DEX` pour poursuiveurs et batteurs ; **gardiens et attrapeurs en dernier** — l. 29691 | Tri par rôle puis initiative décroissante, les phases du ch. 2 sont neutralisées | ✅ |
+| Opposition | Marge = **compétence − jet** ; la plus élevée l'emporte ; égalité au premier dans l'ordre — l. 29820 | Chaque jet publie sa marge ; le résolveur du MJ compare et retranche la gêne | ✅ |
+| Apparition du vif d'or | Round 2 : **10 %**, **+5 %/round**, 100 % au round 20 — l. 29706 | Tirage automatique au passage de round, tant qu'il n'est pas apparu | ✅ |
+| Repérer le vif d'or | **PER×3** — l. 29710 | Action de l'attrapeur, modificateur demandé à chaque jet | ✅ |
+| Observer l'autre attrapeur | **PER×5**, feintes possibles — l. 29713 | Action distincte | ✅ |
+| Poursuite | L'attrapeur comble **5 m/round**, avance initiale d'environ 30 m — l. 29805 | Compteur de distance, bouton « Combler 5 m » | ✅ |
+| Attraper le vif d'or | **DEX×1** — l. 29811 | Action de l'attrapeur, avec bouton d'attribution des 150 points | ✅ |
+| Cognard | **1 létal + 1d4−2 non létaux**, assommement par table de résistance, inconscience **CON×1 h** — l. 29778 | Carte unique : dégâts, jet de résistance, boutons d'application | ✅ |
+| Points | But **10**, vif d'or **150** et fin du match — l. 29524 | Tableau de score, la capture clôt le match | ✅ |
+| Actions par rôle | 4 rôles, listes distinctes + actions spéciales — l. 29636 | Boutons contextuels par joueur, selon son rôle | ✅ |
+| Compétences | « Vol en balai » pour le vol simple, « Acrobatie/Quidditch » pour les figures — l. 29594 | Chaque action pointe vers la bonne compétence | ✅ |
+| Fautes | 11 fautes nommées ; penalty tiré depuis le cercle central — l. 29556, 29542 | Liste déroulante, carte de chat rappelant la règle du penalty | ✅ |
+| Possession initiale | Pile ou face — l. 29650 | `1d2` au lancement du match | ✅ |
+| Équipes | *Aucune règle* | Escouades enregistrées, réutilisables d'une séance à l'autre | 🧪 confort |
+
+**La notion de « différence » était le point à ne pas rater.** Le chapitre 28 écrit « on compare
+les deux différences et c'est la plus élevée qui emporte l'action », puis note les exemples sous la
+forme « Poursuiveur Serdaigle 1 : Quidditch 40 ». Lu naïvement, cela ressemble à un jet brut où le
+plus haut gagne — ce qui inverserait tout le système, bâti sur le jet sous la valeur. La ligne 3066
+tranche définitivement, ailleurs dans le livre : « il lance les dés et obtient 046 soit une
+**différence de 58−46 = 12** ». La différence est donc la **marge de réussite**, et les « 40 » des
+exemples sont des marges, pas des dés. Les trois exemples du chapitre se recalculent exactement
+sur cette base.
+
+> **Contradiction de la source.** Le tableau des rôles annonce « Repérer le vif d'or (**PER×5**) »
+> alors que le texte qui le suit impose « un jet de **Perception × 3** » (l. 29710) et réserve le
+> ×5 à l'observation de l'attrapeur adverse (l. 29713). Le texte l'emporte sur le tableau, dont la
+> mise en page a manifestement fusionné les deux lignes : c'est PER×3 pour repérer, PER×5 pour lire
+> l'adversaire.
+
+> **La « gêne » de −10 n'est pas une règle.** Elle n'apparaît que dans l'exemple 1 (l. 29857) et
+> nulle part ailleurs. Le résolveur la demande donc au MJ au lieu de la coder en dur.
+
+> **Non implémenté volontairement** : la déclaration d'intention. Le livre veut que tous les
+> joueurs annoncent leur action *avant* toute résolution (l. 29694). C'est une discipline de table,
+> pas une mécanique — l'imposer par l'interface obligerait à verrouiller les jets jusqu'à ce que
+> chacun ait déclaré, pour un bénéfice nul en jeu.
+
+**R-29** — traité.
+
 **R-37** — Le schéma `character` comporte `animagus.{form, mastery, transformed, declared}` avec
 quatre niveaux de maîtrise (`none`/`learning`/`partial`/`full`). Le livre ne décrit **rien de
 tel** : seulement un avantage donnant une compétence. Ces champs sont donc 🧪 **maison** et
@@ -494,7 +601,6 @@ Aucun code à écrire : il s'agit d'empêcher que du homebrew soit pris pour du 
 | R-10 | Documenter les `base`/`max` de `config.mjs` comme valeurs maison |
 | R-04 | Documenter la table de dommages créature comme extension |
 | R-22 | Trancher l'origine de `preSchool` / `POU×3` |
-| R-24 | Clarifier que `fougue.max` n'est pas plafonné par le livre |
 | R-37 | Documenter les champs `animagus` comme extension |
 
 ### P2 — Mécaniques centrales manquantes
@@ -508,12 +614,11 @@ Aucun code à écrire : il s'agit d'empêcher que du homebrew soit pris pour du 
 | ID | Action |
 |----|--------|
 | R-11 | Mentorat : +5 %/an en base et en maximale, dès la 3ᵉ année, plafond 95 % |
-| R-29 | Quidditch |
 | R-30 | Examens B.U.S.E. / A.S.P.I.C. |
 | R-33 · R-34 | Duels, Legilimancie/Occlumancie : procédures et jets en opposition |
 | R-32 · R-35 | Gestion du temps, création d'objets |
 | R-02 · R-06 · R-07 | Assistant de création `2d6+6`, malus d'âge, progression annuelle FOR/TAI/CON |
-| R-12 · R-21 · R-25 | Plafonds de compétences, disciplines de sorts, gain/reset de fougue |
+| R-12 · R-21 | Plafonds de compétences, disciplines de sorts |
 
 ---
 
@@ -525,7 +630,6 @@ invention, mais tranchés explicitement par le MJ ou par une décision de concep
 | Sujet | État de la source |
 |-------|-------------------|
 | Durée du round en secondes | « quelques secondes » — l. 1084 |
-| Plafond de fougue | Non précisé |
 | Sorts informulés | Aucune pénalité publiée |
 | Maladresse en fabrication de potion | Aucun effet publié |
 | Compétence de lancement par discipline | Pas de table unifiée ; à lire sort par sort dans le Grimoire |

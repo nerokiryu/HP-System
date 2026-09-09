@@ -28,6 +28,8 @@
         "rarity": "rare",
         "available": false
       }
-    ]
+    ],
+    "virulence": null,
+    "duration": ""
   }
 }

@@ -457,3 +457,193 @@
     }
   }
 }
+
+// Chase sprint link under the fougue counter (§1.7.7).
+&.actor .resource .fougue-sprint {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0.85;
+
+  &:hover {
+    opacity: 1;
+    text-shadow: 0 0 6px rgba(var(--hogwarts-accent-rgb), 0.6);
+  }
+}
+
+// Quidditch match dashboard (ch. 28).
+&.quidditch {
+  .quidditch-app { display: flex; flex-direction: column; gap: 8px; }
+
+  .quidditch-hint { margin: 0; font-style: italic; opacity: 0.8; }
+
+  .quidditch-scoreboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    align-items: start;
+
+    .quidditch-side {
+      background: rgba(255, 255, 255, 0.5);
+      border: 1px solid rgba(var(--hogwarts-accent-rgb), 0.2);
+      border-radius: 4px;
+      padding: 6px 8px;
+      text-align: center;
+    }
+
+    .quidditch-score { font-size: 30px; font-weight: bold; line-height: 1.1; }
+    .quidditch-score-actions { display: flex; gap: 4px; margin-top: 4px; }
+    .quidditch-round { grid-column: 1 / -1; text-align: center; }
+  }
+
+  .quidditch-controls { display: flex; gap: 6px; }
+
+  .quidditch-snitch,
+  .quidditch-lineup,
+  .quidditch-fouls,
+  .quidditch-teams {
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(var(--hogwarts-accent-rgb), 0.2);
+    border-radius: 4px;
+    padding: 6px 8px;
+
+    > header {
+      font-weight: bold;
+      margin-bottom: 4px;
+      border-bottom: 1px solid rgba(var(--hogwarts-accent-rgb), 0.2);
+    }
+  }
+
+  .snitch-on { color: #b8860b; font-weight: bold; }
+  .snitch-off { opacity: 0.7; }
+  .quidditch-snitch-actions { display: flex; gap: 6px; margin-top: 4px; }
+
+  .quidditch-player {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 4px 0;
+
+    + .quidditch-player { border-top: 1px solid rgba(var(--hogwarts-accent-rgb), 0.15); }
+
+    .player-name { flex: 1 1 120px; font-weight: bold; }
+    .player-init { flex: 0 0 2.5em; text-align: right; opacity: 0.8; }
+    .player-actions { flex: 1 0 100%; display: flex; flex-wrap: wrap; gap: 4px; }
+
+    button { font-size: 11px; padding: 1px 6px; width: auto; line-height: 1.6; }
+    .bludger { color: #8b0000; }
+  }
+
+  .quidditch-foul-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 4px;
+
+    > label { flex: 0 0 30%; }
+    > select, > input { flex: 1 1 auto; min-width: 0; }
+    > button { flex: 0 0 auto; width: auto; }
+  }
+}
+
+// ApplicationV2 leaves `.window-content` with overflow hidden, so a dashboard
+// taller than the viewport is clipped with no way to reach the rest.
+&.quidditch,
+&.house-points,
+&.quidditch-team {
+  > .window-content {
+    overflow-y: auto;
+    // A flex child refuses to shrink below its content without this.
+    min-height: 0;
+  }
+}
+
+// Role badge shown in the combat tracker during a Quidditch match.
+.hogwarts-quidditch-role {
+  color: var(--color-text-light-highlight, #f0f0e0);
+  opacity: 0.9;
+
+  &.role-seeker { color: #d4af37; }
+  &.role-beater { color: #c85a3a; }
+  &.role-keeper { color: #4a90d9; }
+  &.role-chaser { color: #6aa84f; }
+}
+
+// Quidditch team actor sheet.
+&.quidditch-team {
+  .quidditch-team-sheet { display: flex; flex-direction: column; gap: 8px; }
+
+  .team-identity { margin-top: 6px; }
+
+  .team-lineup-check {
+    border-radius: 4px;
+    padding: 6px 10px;
+    border: 1px solid;
+
+    &.ok { background: rgba(106, 168, 79, 0.15); border-color: rgba(106, 168, 79, 0.5); }
+    &.warn { background: rgba(200, 90, 58, 0.15); border-color: rgba(200, 90, 58, 0.5); }
+
+    ul { margin: 4px 0 0; padding-left: 20px; }
+  }
+
+  .team-roster,
+  .team-record,
+  .team-prose {
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(var(--hogwarts-accent-rgb), 0.2);
+    border-radius: 4px;
+    padding: 6px 8px;
+
+    > header {
+      font-weight: bold;
+      margin-bottom: 4px;
+      border-bottom: 1px solid rgba(var(--hogwarts-accent-rgb), 0.2);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      > a { margin-left: auto; cursor: pointer; }
+    }
+  }
+
+  .team-hint { margin: 0 0 6px; font-size: 11px; font-style: italic; opacity: 0.75; }
+
+  .team-player {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 0;
+
+    + .team-player { border-top: 1px solid rgba(var(--hogwarts-accent-rgb), 0.15); }
+
+    &.missing .player-name { opacity: 0.5; font-style: italic; }
+
+    .player-name { flex: 1 1 auto; font-weight: bold; cursor: pointer; }
+    > select { flex: 0 0 9em; }
+
+    .captain-toggle { opacity: 0.3; cursor: pointer; }
+    .captain-toggle.active { opacity: 1; color: #d4af37; }
+  }
+
+  .record-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+
+  .team-prose prose-mirror { min-height: 90px; display: block; }
+}
+
+// Read-only squad line on the character sheet.
+.quidditch-team-field {
+  .quidditch-team-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+
+    .team-role { opacity: 0.8; font-size: 11px; }
+    .captain { color: #d4af37; }
+  }
+
+  .quidditch-team-none { opacity: 0.6; font-style: italic; }
+}

@@ -566,14 +566,14 @@ export class HogwartsItemSheet extends api.HandlebarsApplicationMixin(
 
     // Identify sibling items based on adjacent HTML elements
     const siblings = [];
-    for (let el of dropTarget.parentElement.children) {
+    for (const el of dropTarget.parentElement.children) {
       const siblingId = el.dataset.effectId;
       if (siblingId && siblingId !== effect.id)
         siblings.push(effects.get(el.dataset.effectId));
     }
 
     // Perform the sort
-    const sortUpdates = SortingHelpers.performIntegerSort(effect, {
+    const sortUpdates = foundry.utils.performIntegerSort(effect, {
       target,
       siblings,
     });

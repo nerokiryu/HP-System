@@ -28,6 +28,8 @@
         "rarity": "commun",
         "available": false
       }
-    ]
+    ],
+    "virulence": null,
+    "duration": "POUvoir heures"
   }
 }
