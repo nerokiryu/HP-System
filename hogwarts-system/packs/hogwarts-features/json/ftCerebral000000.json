@@ -1,0 +1,33 @@
+{
+  "_id": "ftCerebral000000",
+  "name": "Cérébral",
+  "type": "feature",
+  "img": "icons/svg/castle.svg",
+  "system": {
+    "description": "<p>Vous avez tendance à trop réfléchir avant d’agir, si bien que vous perdez un temps précieux dans les situations périlleuses. Cela se traduit par un malus de 1 lorsque vous déterminez l’initiative de votre personnage pour agir. Remarque : Axiome des Serdaigles</p><p><em>Axiome de Maison : accordé d'office, il n'entre pas dans le calcul des points de création (§5).</em></p>",
+    "perkType": "houseAxiom",
+    "pbpCost": 0
+  },
+  "effects": [
+    {
+      "_id": "feCerebral000000",
+      "name": "Cérébral",
+      "img": "icons/svg/castle.svg",
+      "type": "base",
+      "changes": [
+        {
+          "key": "system.initiativeBonus",
+          "mode": 2,
+          "value": "-1",
+          "priority": 20
+        }
+      ],
+      "disabled": false,
+      "transfer": true,
+      "description": "",
+      "duration": {},
+      "statuses": [],
+      "flags": {}
+    }
+  ]
+}

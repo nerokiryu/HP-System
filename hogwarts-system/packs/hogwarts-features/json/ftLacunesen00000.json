@@ -1,0 +1,33 @@
+{
+  "_id": "ftLacunesen00000",
+  "name": "Lacunes en …",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Vous avec des difficultés pour apprendre dans une certaine matière scolaire. Donne un malus de 10% dans une matière scolaire. Chaque jet pour gagner de l’expérience dans cette matière octroie 1/3 de point(s) en en moins.</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -1
+  },
+  "effects": [
+    {
+      "_id": "feLacunesen00000",
+      "name": "Lacunes en …",
+      "img": "icons/svg/downgrade.svg",
+      "type": "base",
+      "changes": [
+        {
+          "key": "system.skillBonus.COMPETENCE-A-CHOISIR",
+          "mode": 2,
+          "value": "-10",
+          "priority": 20
+        }
+      ],
+      "disabled": true,
+      "transfer": true,
+      "description": "<p>Remplacez « COMPETENCE-A-CHOISIR » dans la clé de la modification par le nom exact de la compétence choisie, puis activez l'effet.</p>",
+      "duration": {},
+      "statuses": [],
+      "flags": {}
+    }
+  ]
+}

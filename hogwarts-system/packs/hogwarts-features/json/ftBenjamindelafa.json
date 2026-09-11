@@ -1,0 +1,12 @@
+{
+  "_id": "ftBenjamindelafa",
+  "name": "Benjamin de la famille",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Vous êtes issu d’une grande famille et, malheureusement pour vous, vous êtes le dernier né. Vous récupérez toutes les affaires de vos grands frères/sœurs et celles-ci sont loin d’être en bon état. De quoi attirer les moqueries de vos camarades.</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -0.5
+  },
+  "effects": []
+}

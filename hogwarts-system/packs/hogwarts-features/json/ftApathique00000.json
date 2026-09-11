@@ -1,0 +1,33 @@
+{
+  "_id": "ftApathique00000",
+  "name": "Apathique",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Vous avez toujours du mal à vous lancer dans l’action, ce qui se traduit naturellement par un malus de 2 en initiative.</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -0.5
+  },
+  "effects": [
+    {
+      "_id": "feApathique00000",
+      "name": "Apathique",
+      "img": "icons/svg/downgrade.svg",
+      "type": "base",
+      "changes": [
+        {
+          "key": "system.initiativeBonus",
+          "mode": 2,
+          "value": "-2",
+          "priority": 20
+        }
+      ],
+      "disabled": false,
+      "transfer": true,
+      "description": "",
+      "duration": {},
+      "statuses": [],
+      "flags": {}
+    }
+  ]
+}

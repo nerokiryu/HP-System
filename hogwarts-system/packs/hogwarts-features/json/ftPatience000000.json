@@ -1,0 +1,12 @@
+{
+  "_id": "ftPatience000000",
+  "name": "Patience",
+  "type": "feature",
+  "img": "icons/svg/castle.svg",
+  "system": {
+    "description": "<p>Vous êtes patient ce qui se traduit par un bonus de 15% aux recherches magiques, enchantements d’objets, rituels longs et complexes… réduit également le temps de préparation des potions d’1/3. Remarque : Axiome des Poufsouffle</p><p><em>Axiome de Maison : accordé d'office, il n'entre pas dans le calcul des points de création (§5).</em></p>",
+    "perkType": "houseAxiom",
+    "pbpCost": 0
+  },
+  "effects": []
+}

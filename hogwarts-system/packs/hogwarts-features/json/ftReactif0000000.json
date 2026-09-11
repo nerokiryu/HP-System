@@ -1,0 +1,33 @@
+{
+  "_id": "ftReactif0000000",
+  "name": "Réactif",
+  "type": "feature",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Toujours sur le qui-vive, vous être très réactif pour agir en premier, ce qui se traduit naturellement par un bonus en initiative de +2 lors de vos actions.</p>",
+    "perkType": "advantage",
+    "pbpCost": 0.5
+  },
+  "effects": [
+    {
+      "_id": "feReactif0000000",
+      "name": "Réactif",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "changes": [
+        {
+          "key": "system.initiativeBonus",
+          "mode": 2,
+          "value": "2",
+          "priority": 20
+        }
+      ],
+      "disabled": false,
+      "transfer": true,
+      "description": "",
+      "duration": {},
+      "statuses": [],
+      "flags": {}
+    }
+  ]
+}

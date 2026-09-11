@@ -97,6 +97,17 @@ export function prepareEffectAttributes(doc) {
     for (let i = 0; i < skills.length; i++) {
       const s = skills[i];
       const label = s.spec ? `${s.name} (${s.spec})` : s.name;
+      // Listed first because it is the only skill key that survives being copied
+      // to another sheet: the index below depends on this actor's own ordering.
+      if (s.name && !s.name.includes('.')) {
+        rows.push({
+          key: `system.skillBonus.${s.name}`,
+          label: `${label} — bonus (portable)`,
+          value: system.skillBonus?.[s.name] ?? 0,
+          dtype: 'Number',
+          section: 'skills',
+        });
+      }
       for (const f of skillFields) {
         rows.push({
           key: `system.skills.${i}.${f}`,

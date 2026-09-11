@@ -1,0 +1,12 @@
+{
+  "_id": "ftFaiblesseimmun",
+  "name": "Faiblesse immunitaire",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Vous possédez un système immunitaire défaillant et vous avez l’impression d’attraper toutes les maladies qui traînent. Vous résistez aussi difficilement aux poisons et autres venins. Quand vous devez effectuer un jet de résistance contre la VIRulence d’une maladie ou d’un poison, celle-ci est augmenté de 2. Un conseil, gardez toujours une fiole d’antidote à portée de main, ça pourrait s’avérer utile.</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -0.5
+  },
+  "effects": []
+}

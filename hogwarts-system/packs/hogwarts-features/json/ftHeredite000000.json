@@ -1,0 +1,12 @@
+{
+  "_id": "ftHeredite000000",
+  "name": "Hérédité",
+  "type": "feature",
+  "img": "icons/svg/sun.svg",
+  "system": {
+    "description": "<p>Votre famille est connue pour posséder un don magique héréditaire qu’elle vous a transmis. Vous êtes capable de respirer sous l’eau, de léviter, de parler le fourchelange et donc de commander aux serpents, ou de vous rendre invisible durant quelques minutes.</p>",
+    "perkType": "fateBoon",
+    "pbpCost": 0
+  },
+  "effects": []
+}

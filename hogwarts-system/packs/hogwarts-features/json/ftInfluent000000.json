@@ -1,0 +1,12 @@
+{
+  "_id": "ftInfluent000000",
+  "name": "Influent",
+  "type": "feature",
+  "img": "icons/svg/sun.svg",
+  "system": {
+    "description": "<p>Votre famille est influente dans le monde des sorciers et tous connaissent votre nom. Cela vous ouvre certaines portes, vous évite certaines punitions ou peut vous aider quand vous vous mettez dans certaines situations délicates</p>",
+    "perkType": "fateBoon",
+    "pbpCost": 0
+  },
+  "effects": []
+}

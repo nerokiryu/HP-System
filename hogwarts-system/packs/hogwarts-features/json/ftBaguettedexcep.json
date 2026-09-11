@@ -1,0 +1,12 @@
+{
+  "_id": "ftBaguettedexcep",
+  "name": "Baguette d’exception",
+  "type": "feature",
+  "img": "icons/svg/sun.svg",
+  "system": {
+    "description": "<p>Votre baguette possède une puissance hors du commun. Lors de sa création, vous pouvez choisir entre ces deux options : 1 : Affinité de 10% dans le lancement de tous les types de sortilèges et possibilité d’augmenter cette affinité de 10% supplémentaire grâce aux points de création de personnage 2 : Diminue de moitié le malus appliqué lors du lancement de tous les sortilèges, mais l’affinité de la baguette ne peut pas être augmentée grâce aux points de création de personnage.</p>",
+    "perkType": "fateBoon",
+    "pbpCost": 0
+  },
+  "effects": []
+}

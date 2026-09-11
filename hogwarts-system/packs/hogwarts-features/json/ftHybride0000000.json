@@ -1,0 +1,12 @@
+{
+  "_id": "ftHybride0000000",
+  "name": "Hybride",
+  "type": "feature",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "description": "<p>Vous être un hybride de première génération, ce qui signifie que l’un de vos parents est un être magique. De plus, ce dernier est une créatures peu recommandable, comme un Géant ou un Troll, ou vous avez hérité de nombreuses caractéristiques physiques visibles et difficilement dissimulables. Pour connaître les avantages et désavantages de votre ancêtre magique en fonction de la génération à laquelle vous appartenez, rendez-vous aux chapitre « Jouer un personnage hybride » de ce manuel.</p>",
+    "perkType": "fateBane",
+    "pbpCost": 0
+  },
+  "effects": []
+}

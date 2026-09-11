@@ -1,0 +1,12 @@
+{
+  "_id": "ftBoucemissaire0",
+  "name": "Bouc émissaire",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Vous ne savez pas pourquoi mais vous êtes toujours au mauvais endroit, au mauvais moment. Les punitions et les retraits de points de Maison semblent pleuvoir sur vous en permanence, même si vous êtes rarement responsable.</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -0.5
+  },
+  "effects": []
+}

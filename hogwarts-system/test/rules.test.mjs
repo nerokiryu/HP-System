@@ -186,3 +186,37 @@ test('quidditch — effectif réglementaire 3/2/1/1 pour sept joueurs (l. 29488)
   assert.deepEqual(ecarts({ chaser: 2, beater: 2, keeper: 1, seeker: 1 }), ['chaser']);
   assert.deepEqual(ecarts({ chaser: 3, beater: 2, keeper: 1 }), ['seeker']);
 });
+
+test('compétences préréglées — aucune paire catégorie/nom en double', async () => {
+  const { HOGWARTS } = await import('../module/helpers/config.mjs');
+  const vues = new Set();
+  const doublons = [];
+  for (const [categorie, liste] of Object.entries(HOGWARTS.skillPresets)) {
+    for (const entree of liste) {
+      const cle = `${categorie}:${entree.name}`;
+      if (vues.has(cle)) doublons.push(cle);
+      vues.add(cle);
+    }
+  }
+  // La fiche adresse les compétences par index : un doublon décalerait les lignes.
+  assert.deepEqual(doublons, []);
+  assert.ok(vues.size > 50);
+});
+
+test('compétences préréglées — aucun nom ne contient de point', async () => {
+  const { HOGWARTS } = await import('../module/helpers/config.mjs');
+  // `foundry.utils.setProperty` découpe les chemins sur le point, donc un nom
+  // qui en contient ne peut pas être visé par `system.skillBonus.<nom>`.
+  const fautifs = Object.values(HOGWARTS.skillPresets).flat()
+    .map((s) => s.name)
+    .filter((n) => n.includes('.') && !n.includes('(...)'));
+  assert.deepEqual(fautifs, []);
+});
+
+test('compétences préréglées — base jamais au-dessus de la maîtrise maximale', async () => {
+  const { HOGWARTS } = await import('../module/helpers/config.mjs');
+  const fautifs = Object.values(HOGWARTS.skillPresets).flat()
+    .filter((s) => Number(s.base) > Number(s.max))
+    .map((s) => `${s.name} ${s.base}/${s.max}`);
+  assert.deepEqual(fautifs, []);
+});

@@ -1,0 +1,12 @@
+{
+  "_id": "ftOpposantplusag",
+  "name": "Opposant plus âgé",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Un élève bien plus âgé que vous ou un préfet ne vous aime pas du tout et fera tout pour vous mettre des bâtons dans les roues durant votre scolarité. Remarque : Quand votre opposant quitte l’école, il sera remplacé par un nouvel élève que vous vous serez mis à dos entre-temps.</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -0.5
+  },
+  "effects": []
+}

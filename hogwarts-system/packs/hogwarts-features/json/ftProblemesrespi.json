@@ -1,0 +1,12 @@
+{
+  "_id": "ftProblemesrespi",
+  "name": "Problèmes respiratoires",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Vous êtes asthmatique, à moins que vous ne possédiez une grosse allergie à un élément commun comme le pollen, la poussière ou les acariens. Sans vos médicaments, toute activité physique devient très difficile</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -1
+  },
+  "effects": []
+}

@@ -119,6 +119,7 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
       deleteSkill: this._deleteSkill,
       toggleSkillMaxAuto: this._toggleSkillMaxAuto,
       openQuidditchTeam: this._onOpenQuidditchTeam,
+      animagusTransform: this._onAnimagusTransform,
       fougueSprint: this._onFougueSprint,
       restRecovery: this._onRestRecovery,
       rollDodge: this._onRollDodge,
@@ -1183,9 +1184,7 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
       const isPercentile = !!dataset.target;
       const { mod, useFougue } = await this._promptRollModifier.call(this, { showFougue: isPercentile });
       let formula = String(dataset.roll);
-      // The skill templates tag their labels with a legacy `Skill: ` marker; it must
-      // never surface in the chat card, which already carries a localized badge.
-      const labelBase = dataset.label ? String(dataset.label).replace(/^Skill:\s*/, '') : '';
+      const labelBase = dataset.label ? String(dataset.label) : '';
 
       // Percentile check support: if a target is provided, evaluate success levels
       if (dataset.target) {
@@ -1277,6 +1276,63 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
   static async _onOpenQuidditchTeam(event, target) {
     event.preventDefault();
     game.actors.get(target.dataset.teamId)?.sheet.render(true);
+  }
+
+  /**
+   * Change between human and animal form. Chapter 16 describes the ten-step
+   * process (§16.1) and the animal-category test (§16.2) but never puts a number
+   * on the transformation itself, so the roll below is a house extension: 1d100
+   * under the Animagus skill the advantage grants. Reverting always succeeds —
+   * the book only calls the first transformation difficult.
+   * @this HogwartsActorSheet
+   */
+  static async _onAnimagusTransform(event) {
+    event.preventDefault();
+    const animagus = this.actor.system.animagus;
+    if (animagus?.transformed) {
+      await this.actor.update({ 'system.animagus.transformed': false });
+      return ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+        content: `<div class="hogwarts-chat-card">
+          <header class="card-header"><h3>${game.i18n.localize('HOGWARTS.Actor.Animagus.Title')}</h3>
+          <span class="card-type">${game.i18n.localize('HOGWARTS.Actor.Animagus.Revert')}</span></header>
+          <div class="card-row">${game.i18n.localize('HOGWARTS.Actor.Animagus.Reverted')}</div>
+        </div>`,
+      });
+    }
+
+    const skill = this.actor.system.skills?.find((s) => s.name === 'Animagus');
+    if (!skill) return ui.notifications.warn(game.i18n.localize('HOGWARTS.Actor.Animagus.NoSkill'));
+
+    const { mod } = await this._promptRollModifier.call(this, { showFougue: false });
+    const roll = new Roll('1d100', this.actor.getRollData());
+    await roll.evaluate();
+    const r = Number(roll.total) || 0;
+    const stressMalus = Number(this.actor.system.stress?.value) || 0;
+    const target = (Number(skill.value) || 0) + mod - stressMalus;
+    const degree = _degreeOf(r, target);
+    const success = ['Critical', 'Extreme', 'Hard', 'Success'].includes(degree);
+
+    if (success) await this.actor.update({ 'system.animagus.transformed': true });
+
+    const forme = animagus?.form
+      ? ` — ${animagus.form}`
+      : '';
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+      content: `<div class="hogwarts-chat-card">
+        <header class="card-header"><h3>${game.i18n.localize('HOGWARTS.Actor.Animagus.Title')}${forme}</h3>
+        <span class="card-type">${game.i18n.localize('HOGWARTS.Actor.Animagus.Transform')}</span></header>
+        <div class="card-row"><strong>${game.i18n.localize('HOGWARTS.Chat.Target')}:</strong> ${skill.value}${mod ? ` → ${target}` : ''}</div>
+        <div class="card-row"><strong>${game.i18n.localize('HOGWARTS.Chat.Roll')}:</strong>
+          <span class="roll-value">${r}</span> → ${_degreeBadge(degree)}</div>
+        <div class="card-row">${game.i18n.localize(success
+          ? 'HOGWARTS.Actor.Animagus.TransformSuccess'
+          : 'HOGWARTS.Actor.Animagus.TransformFailure')}</div>
+      </div>`,
+      rolls: [roll],
+      rollMode: game.settings.get('core', 'rollMode'),
+    });
   }
 
   /**
@@ -1388,8 +1444,11 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
     const actor = this.actor;
     if (!actor) return;
 
-    // Get dexterity value from actor data (fallback to 0)
-    const dex = Number(actor.system?.stats?.dex?.value) || 0;
+    // Same terms as CONFIG.Combat.initiative: `total` carries the ancestry
+    // modifier (§17.2) and `initiativeBonus` is what features such as Apathique
+    // or Réactif (§5.2) drive through an Active Effect.
+    const dex = Number(actor.system?.stats?.dex?.total ?? actor.system?.stats?.dex?.value) || 0;
+    const initiativeBonus = Number(actor.system?.initiativeBonus) || 0;
 
     // Prompt for an optional bonus/penalty to the initiative roll
     const { mod } = await this._promptRollModifier.call(this);
@@ -1405,14 +1464,18 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
     await roll.evaluate();
 
     const rollTotal = Number(roll.total) || 0;
-    const total = rollTotal + dex;
+    const total = rollTotal + dex + initiativeBonus;
 
     // Build a chat card with details
+    const bonusRow = initiativeBonus
+      ? `<div class="card-row"><strong>${game.i18n.localize('HOGWARTS.Chat.InitiativeBonus')}:</strong> ${initiativeBonus > 0 ? '+' : ''}${initiativeBonus}</div>`
+      : '';
     const content = `
       <div class="hogwarts-chat-card">
         <header class="card-header"><h3>${game.i18n.localize('HOGWARTS.Chat.Initiative')}</h3><span class="card-type">1d6 + DEX</span></header>
         <div class="card-row"><strong>${game.i18n.localize('HOGWARTS.Chat.Roll')}:</strong> ${rollFormula} = ${rollTotal}</div>
         <div class="card-row"><strong>DEX:</strong> ${dex}</div>
+        ${bonusRow}
         <div class="card-row"><strong>${game.i18n.localize('HOGWARTS.Chat.Total')}:</strong> <span class="roll-value">${total}</span></div>
       </div>`;
 
@@ -1662,7 +1725,10 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
     // On success: increase quantity and consume ingredients
     let brewResult = '';
     if (success) {
-      const newQty = (item.system.quantity || 0) + (degree === 'Critical' ? 2 : 1);
+      // A critical yields a « potion parfaite » (l. 12922): the book maximises the
+      // potion's variable effects, it does not double the yield. Those effects are
+      // published as prose, so the card states the outcome for the Gamemaster.
+      const newQty = (item.system.quantity || 0) + 1;
       const updateData = { 'system.quantity': newQty, 'system.crafted': true };
       // Mark ingredients as consumed (unavailable)
       if (ingredientList.length > 0) {
@@ -1670,7 +1736,10 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
         updateData['system.ingredientList'] = consumed;
       }
       await item.update(updateData);
-      brewResult = `<div class="brew-success"><i class="fas fa-check-circle"></i> ${game.i18n.localize('HOGWARTS.Item.Potion.BrewSuccess')}${degree === 'Critical' ? ` (×2!)` : ''}</div>`;
+      const perfect = degree === 'Critical'
+        ? `<div class="brew-perfect"><i class="fas fa-star"></i> ${game.i18n.localize('HOGWARTS.Item.Potion.BrewPerfect')}</div>`
+        : '';
+      brewResult = `<div class="brew-success"><i class="fas fa-check-circle"></i> ${game.i18n.localize('HOGWARTS.Item.Potion.BrewSuccess')}</div>${perfect}`;
     } else {
       // On failure: ingredients consumed, no potion
       if (ingredientList.length > 0) {

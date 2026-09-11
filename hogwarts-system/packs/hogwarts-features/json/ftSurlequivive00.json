@@ -1,0 +1,45 @@
+{
+  "_id": "ftSurlequivive00",
+  "name": "Sur le qui-vive",
+  "type": "feature",
+  "img": "icons/svg/castle.svg",
+  "system": {
+    "description": "<p>Vous bénéficiez naturellement d’un bonus de 15% à tous les jets de compétences visant à dissimuler vos mauvaises actions (vigilance et discrétion pour ne pas vous faire repérer, et persuasion/baratin quand vous devez vous justifier). Remarque : Axiome des Serpentards</p><p><em>Axiome de Maison : accordé d'office, il n'entre pas dans le calcul des points de création (§5).</em></p>",
+    "perkType": "houseAxiom",
+    "pbpCost": 0
+  },
+  "effects": [
+    {
+      "_id": "feSurlequivive00",
+      "name": "Sur le qui-vive",
+      "img": "icons/svg/castle.svg",
+      "type": "base",
+      "changes": [
+        {
+          "key": "system.skillBonus.Vigilance",
+          "mode": 2,
+          "value": "15",
+          "priority": 20
+        },
+        {
+          "key": "system.skillBonus.Discrétion",
+          "mode": 2,
+          "value": "15",
+          "priority": 20
+        },
+        {
+          "key": "system.skillBonus.Persuasion/Baratin",
+          "mode": 2,
+          "value": "15",
+          "priority": 20
+        }
+      ],
+      "disabled": false,
+      "transfer": true,
+      "description": "",
+      "duration": {},
+      "statuses": [],
+      "flags": {}
+    }
+  ]
+}

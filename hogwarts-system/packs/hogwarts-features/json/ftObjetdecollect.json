@@ -1,0 +1,12 @@
+{
+  "_id": "ftObjetdecollect",
+  "name": "Objet de collection",
+  "type": "feature",
+  "img": "icons/svg/sun.svg",
+  "system": {
+    "description": "<p>Vous êtes l’heureux détenteur d’un objet de collection qui fait l’admiration de tous, comme un balai dernière génération, une tenue de Quidditch d’un joueur vedette, un livre rare dédicacé par un sorcier célèbre ou le tout dernier set pour la fabrication de potions d’un sorcier connu. Pourquoi ne pas prêter cet objet contre certains petits services de la part de vos camarades ?</p>",
+    "perkType": "fateBoon",
+    "pbpCost": 0
+  },
+  "effects": []
+}

@@ -120,13 +120,19 @@
   // ── Apply Damage buttons ────────────────────────────────────────────────
   .card-buttons {
     display: flex;
+    flex-wrap: wrap;
     gap: 4px;
     padding: 6px 12px;
     border-top: 1px solid rgba(var(--hogwarts-accent-rgb), 0.2);
     background: rgba(0, 0, 0, 0.02);
 
     button {
-      flex: 1;
+      // Foundry pins buttons to a fixed height; long labels in a ~280 px card
+      // then wrapped to three lines and spilled outside the button box.
+      flex: 1 1 calc(50% - 4px);
+      min-width: calc(50% - 4px);
+      height: auto;
+      min-height: var(--button-size, 32px);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -134,10 +140,16 @@
       padding: 5px 8px;
       font-size: 0.85em;
       font-weight: 600;
+      line-height: 1.15;
+      text-align: center;
       border: 1px solid rgba(0, 0, 0, 0.15);
       border-radius: 4px;
       cursor: pointer;
       transition: all 0.15s ease;
+
+      i {
+        flex: 0 0 auto;
+      }
 
       &.apply-damage {
         background: rgba(192, 57, 43, 0.1);
@@ -196,6 +208,15 @@
     background: rgba(192, 57, 43, 0.12);
     border-top: 1px solid rgba(192, 57, 43, 0.3);
     color: #c0392b;
+    font-weight: 600;
+    i { margin-right: 6px; }
+  }
+
+  .brew-perfect {
+    padding: 6px 12px;
+    background: rgba(184, 134, 11, 0.14);
+    border-top: 1px solid rgba(184, 134, 11, 0.35);
+    color: #8a6508;
     font-weight: 600;
     i { margin-right: 6px; }
   }

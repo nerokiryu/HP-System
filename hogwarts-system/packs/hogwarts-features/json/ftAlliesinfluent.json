@@ -1,0 +1,12 @@
+{
+  "_id": "ftAlliesinfluent",
+  "name": "Allié(s) influent(s)",
+  "type": "feature",
+  "img": "icons/svg/sun.svg",
+  "system": {
+    "description": "<p>Vous possédez un allié influent à l’intérieur de votre école. Qu’il s’agisse d’un professeur, d’un préfet en chef ou d’autres élèves des années supérieures, vous avez toujours quelqu’un qui peut vous venir en aide en cas de problème.</p>",
+    "perkType": "fateBoon",
+    "pbpCost": 0
+  },
+  "effects": []
+}

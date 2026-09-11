@@ -70,6 +70,10 @@ HOGWARTS.archetypes = {
  * Preset skills with base and max values, grouped by category.
  * Names are provided by the user; you can adjust later.
  */
+// EXTENSION MAISON : le livre décrit le fonctionnement des maîtrises de base et
+// maximale (§6.10) mais ne publie aucune table de référence — un seul couple
+// chiffré apparaît en exemple (l. 6599). Les valeurs ci-dessous sont donc des
+// choix de ce système, pas du canon.
 HOGWARTS.skillPresets = {
   general: [
     { name: 'Acrobatie/Quidditch', base: 10, max: 60 },
@@ -140,8 +144,34 @@ HOGWARTS.skillPresets = {
     { name: 'Duels', base: 0, max: 95 },
     // Base/max granted by the Legilimens and Occlumens advantages.
     { name: 'Legilimancie', base: 15, max: 80 },
-    { name: 'Occlumancie', base: 15, max: 80 }
+    { name: 'Occlumancie', base: 15, max: 80 },
+    // La source se contredit : le tableau des avantages (l. 3753) annonce
+    // 20 % / max 90 %, la fin du chapitre 16 (l. 24645) 10 % / max 80 %.
+    // Le chapitre dédié fait foi ; les deux colonnes restent éditables.
+    { name: 'Animagus', base: 10, max: 80 }
   ]
+};
+
+/**
+ * Les six profils publiés au §16.2. Le livre les détermine par un questionnaire
+ * dont les puces réponse → profil sont des dessins, illisibles hors du PDF : le
+ * système propose donc directement le résultat du test.
+ */
+HOGWARTS.animagusProfiles = {
+  brave: 'HOGWARTS.Actor.Animagus.Profile.brave',
+  wise: 'HOGWARTS.Actor.Animagus.Profile.wise',
+  loyal: 'HOGWARTS.Actor.Animagus.Profile.loyal',
+  playful: 'HOGWARTS.Actor.Animagus.Profile.playful',
+  solitary: 'HOGWARTS.Actor.Animagus.Profile.solitary',
+  timid: 'HOGWARTS.Actor.Animagus.Profile.timid',
+};
+
+/** Paliers de progression — extension maison, absents du livre. */
+HOGWARTS.animagusMastery = {
+  none: 'HOGWARTS.Actor.Animagus.MasteryNone',
+  learning: 'HOGWARTS.Actor.Animagus.MasteryLearning',
+  partial: 'HOGWARTS.Actor.Animagus.MasteryPartial',
+  full: 'HOGWARTS.Actor.Animagus.MasteryFull',
 };
 
 // Build a mapping from preset display names to i18n keys

@@ -1,0 +1,12 @@
+{
+  "_id": "ftBavard00000000",
+  "name": "Bavard",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Vous avez tendance à parler plus que les autres et, lorsque vous êtes lancés dans une conversation, il est difficile de vous arrêter, un comportement que vos professeurs et vos camarades n’apprécient pas toujours.</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -0.5
+  },
+  "effects": []
+}

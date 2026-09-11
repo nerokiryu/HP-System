@@ -1,0 +1,12 @@
+{
+  "_id": "ftMalchanceux000",
+  "name": "Malchanceux",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Vous semblez attirer la malchance sur vous. A chaque fois qu’on vous demande un jet de chance, celui-ci se fait avec un malus de 15%</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -0.5
+  },
+  "effects": []
+}

@@ -1,0 +1,12 @@
+{
+  "_id": "ftParleavoixbass",
+  "name": "Parle à voix basse",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Vous parlez à voix basse et il est difficile de vous comprendre. On doit souvent vous demander de répéter ce que vous dites et cela à tendance à agacer votre interlocuteur. Pour vous, crier revient à parler fort pour un élève classique.</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -0.5
+  },
+  "effects": []
+}

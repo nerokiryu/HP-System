@@ -1,0 +1,12 @@
+{
+  "_id": "ftAmoureuxcollan",
+  "name": "Amoureux collant",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Un élève est follement amoureux de vous, mais ce n’est pas réciproque. Vertueux, il n’aura de cesse de vous couvrir d’attentions et de vous suivre partout. Embêtant pour vos sorties nocturnes et vos tentatives de triche.</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -1
+  },
+  "effects": []
+}

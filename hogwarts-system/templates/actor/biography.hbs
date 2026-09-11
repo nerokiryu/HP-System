@@ -323,6 +323,77 @@
     </div>
   </div>
 
+  {{! Animagus (ch. 16) }}
+  <div class='bio-section'>
+    <h3 class='collapsible' data-action='toggleBioSection' data-section='animagus'>
+      <i class='fas fa-chevron-down'></i>
+      {{localize 'HOGWARTS.Actor.Animagus.Title'}}
+    </h3>
+    <div class='bio-content animagus-block' data-section='animagus'>
+      <div class='form-group'>
+        <label>{{localize 'HOGWARTS.Actor.Animagus.Form'}}</label>
+        <input type='text' name='system.animagus.form' value='{{system.animagus.form}}'
+               placeholder='{{localize "HOGWARTS.Actor.Animagus.FormHint"}}' />
+      </div>
+
+      <div class='form-group'>
+        <label data-tooltip='{{localize "HOGWARTS.Actor.Animagus.ProfileHint"}}'>
+          {{localize 'HOGWARTS.Actor.Animagus.ProfileLabel'}}
+        </label>
+        <select name='system.animagus.profile'>
+          <option value='' {{#unless system.animagus.profile}}selected{{/unless}}>
+            {{localize 'HOGWARTS.Actor.Animagus.ProfileNone'}}
+          </option>
+          {{#each config.animagusProfiles as |key id|}}
+            <option value='{{id}}' {{#if (eq @root.system.animagus.profile id)}}selected{{/if}}>
+              {{localize key}}
+            </option>
+          {{/each}}
+        </select>
+      </div>
+
+      <div class='form-group'>
+        <label data-tooltip='{{localize "HOGWARTS.Actor.Animagus.MasteryHint"}}'>
+          {{localize 'HOGWARTS.Actor.Animagus.Mastery'}}
+        </label>
+        <select name='system.animagus.mastery'>
+          {{#each config.animagusMastery as |key id|}}
+            <option value='{{id}}' {{#if (eq @root.system.animagus.mastery id)}}selected{{/if}}>
+              {{localize key}}
+            </option>
+          {{/each}}
+        </select>
+      </div>
+
+      <div class='form-group animagus-flags'>
+        <label>
+          <input type='checkbox' name='system.animagus.declared' {{#if system.animagus.declared}}checked{{/if}} />
+          {{localize 'HOGWARTS.Actor.Animagus.Declared'}}
+        </label>
+        <span class='animagus-state {{#if system.animagus.transformed}}active{{/if}}'>
+          <i class='fas {{#if system.animagus.transformed}}fa-paw{{else}}fa-person{{/if}}'></i>
+          {{#if system.animagus.transformed}}
+            {{localize 'HOGWARTS.Actor.Animagus.Transformed'}}
+          {{else}}
+            {{localize 'HOGWARTS.Actor.Animagus.HumanForm'}}
+          {{/if}}
+        </span>
+      </div>
+
+      <div class='form-group'>
+        <a class='rollable animagus-transform' data-action='animagusTransform'
+           data-tooltip='{{localize "HOGWARTS.Actor.Animagus.TransformHint"}}'>
+          <i class='fas fa-paw'></i>
+          {{#if system.animagus.transformed}}
+            {{localize 'HOGWARTS.Actor.Animagus.Revert'}}
+          {{else}}
+            {{localize 'HOGWARTS.Actor.Animagus.Transform'}}
+          {{/if}}
+        </a>
+      </div>
+    </div>
+  </div>
+
   {{! Boggart }}
   <div class='bio-section'>
     <h3 class='collapsible' data-action='toggleBioSection' data-section='boggart'>

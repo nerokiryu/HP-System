@@ -22,6 +22,7 @@ const PACKS = [
 // their ids -- see `mapHierarchy` in @foundryvtt/foundryvtt-cli. A parent holding
 // inline objects, or none at all, loads with an empty collection and no error.
 const EMBEDDED = {
+  Item: { sublevel: "items", collections: ["effects"] },
   JournalEntry: { sublevel: "journal", collections: ["pages"] },
 };
 

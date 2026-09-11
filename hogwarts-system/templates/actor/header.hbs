@@ -195,9 +195,9 @@
       <div class='resource flex-group-center'>
         <label class='resource-label'>{{localize 'HOGWARTS.Actor.Character.Initiative'}}</label>
         <div class='resource-content flexrow flex-center flex-between'>
-          <a class='rollable damage-roll' data-action='rollInitiative' data-tooltip='1d6 + DEX'>
+          <a class='rollable damage-roll' data-action='rollInitiative' data-tooltip='1d6 + DEX{{#if system.initiativeBonus}} {{numberFormat system.initiativeBonus sign=true}}{{/if}}'>
             <i class='fas fa-dice-d20'></i>
-            <span>1d6 + {{system.stats.dex.total}}</span>
+            <span>1d6 + {{system.stats.dex.total}}{{#if system.initiativeBonus}} {{numberFormat system.initiativeBonus sign=true}}{{/if}}</span>
           </a>
         </div>
       </div>

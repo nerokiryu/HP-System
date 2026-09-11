@@ -1,7 +1,7 @@
 # Hogwarts System
 
 ![Foundry v14](https://img.shields.io/badge/foundry-v14-green)
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Version](https://img.shields.io/badge/version-1.0.1-blue)
 ![Licence](https://img.shields.io/badge/licence-MIT-lightgrey)
 
 Système Foundry VTT pour le jeu de rôle amateur **Harry Potter JdR** (v1.12) et ses

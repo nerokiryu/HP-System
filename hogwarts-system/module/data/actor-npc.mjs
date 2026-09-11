@@ -55,6 +55,21 @@ export default class HogwartsNPC extends HogwartsActorBase {
     return schema;
   }
 
+  prepareBaseData() {
+    // Computed before Active Effects so an effect targeting `system.skills.N.value`
+    // is not overwritten by the recomputation in prepareDerivedData.
+    this._computeSkillValues();
+    for (const s of this.skills ?? []) s._preEffectValue = s.value;
+  }
+
+  /** Set `value = base + spent` for every skill. */
+  _computeSkillValues() {
+    if (!Array.isArray(this.skills)) return;
+    for (const s of this.skills) {
+      s.value = (Number(s.base) || 0) + (Number(s.spent) || 0);
+    }
+  }
+
   prepareDerivedData() {
     this.xp = this.cr * this.cr * 100;
 
@@ -91,13 +106,15 @@ export default class HogwartsNPC extends HogwartsActorBase {
     // Full brawling damage formula (1d3 + damage bonus)
     this.brawlingDamage = total <= 24 ? '1d3' : '1d3' + this.damageBonus;
 
-    // Derive skill values
+    // Derive skill values, preserving what Active Effects added since prepareBaseData.
     if (Array.isArray(this.skills)) {
-      for (const s of this.skills) {
-        const b = Number(s.base) || 0;
-        const p = Number(s.spent) || 0;
-        s.value = b + p;
-      }
+      const effectDeltas = this.skills.map(
+        (s) => (Number(s.value) || 0) - (Number(s._preEffectValue) || 0),
+      );
+      this._computeSkillValues();
+      this.skills.forEach((s, i) => {
+        s.value = (Number(s.value) || 0) + effectDeltas[i];
+      });
     }
   }
 

@@ -1,0 +1,33 @@
+{
+  "_id": "ftBaguettebruyan",
+  "name": "Baguette bruyante",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Votre baguette produit de petites détonations à chaque fois que vous lancez un sortilège, ce qui ne vous facilite pas la vie pour passer inaperçu. Occasionne un malus de 15% en discrétion quand vous lancez un sortilège.</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -0.5
+  },
+  "effects": [
+    {
+      "_id": "feBaguettebruyan",
+      "name": "Baguette bruyante",
+      "img": "icons/svg/downgrade.svg",
+      "type": "base",
+      "changes": [
+        {
+          "key": "system.skillBonus.Discrétion",
+          "mode": 2,
+          "value": "-15",
+          "priority": 20
+        }
+      ],
+      "disabled": true,
+      "transfer": true,
+      "description": "<p>Le livre limite ce modificateur à une situation précise : activez l'effet le temps qu'elle dure.</p>",
+      "duration": {},
+      "statuses": [],
+      "flags": {}
+    }
+  ]
+}

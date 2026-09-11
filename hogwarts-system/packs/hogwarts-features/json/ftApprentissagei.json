@@ -1,0 +1,12 @@
+{
+  "_id": "ftApprentissagei",
+  "name": "Apprentissage inné",
+  "type": "feature",
+  "img": "icons/svg/sun.svg",
+  "system": {
+    "description": "<p>Apprendre est pour vous une seconde nature. Vous êtes capable de faire vos devoirs en 1/3 du temps nécessaire. De plus, l’apprentissage de sorts et de potions des années supérieures se fait avec la moitié des malus classiques.</p>",
+    "perkType": "fateBoon",
+    "pbpCost": 0
+  },
+  "effects": []
+}

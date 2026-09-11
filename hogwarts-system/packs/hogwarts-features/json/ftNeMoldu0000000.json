@@ -1,0 +1,12 @@
+{
+  "_id": "ftNeMoldu0000000",
+  "name": "Né-Moldu",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Vous n’avez découvert la magie que très récemment, lors de l’arrivée de la lettre d’admission à Poudlard. Personne n’a pu vous apprendre la magie jusque-là, ce qui fait que vous ne possédez pas le sort gratuit lors de la création de votre personnage. Certaines incompréhensions et quiproquo sont à prévoir durant votre première année scolaire.</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -1
+  },
+  "effects": []
+}

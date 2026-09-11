@@ -1,0 +1,12 @@
+{
+  "_id": "ftForcedame00000",
+  "name": "Force d’âme",
+  "type": "feature",
+  "img": "icons/svg/castle.svg",
+  "system": {
+    "description": "<p>Octroie un bonus de 25% aux jets visant à résister à la peur quand vous luttez contre des créatures malveillantes ou que vous subissez un sortilège de ce registre. Remarque : Axiome des Gryffondors</p><p><em>Axiome de Maison : accordé d'office, il n'entre pas dans le calcul des points de création (§5).</em></p>",
+    "perkType": "houseAxiom",
+    "pbpCost": 0
+  },
+  "effects": []
+}

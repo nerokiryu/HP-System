@@ -1,0 +1,45 @@
+{
+  "_id": "ftSportif0000000",
+  "name": "Sportif",
+  "type": "feature",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Le sport est votre sacerdoce. Vous bénéficiez naturellement d’un bonus de 10% en acrobatie/Quidditch, en athlétisme et en bagarre</p>",
+    "perkType": "advantage",
+    "pbpCost": 1
+  },
+  "effects": [
+    {
+      "_id": "feSportif0000000",
+      "name": "Sportif",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "changes": [
+        {
+          "key": "system.skillBonus.Acrobatie/Quidditch",
+          "mode": 2,
+          "value": "10",
+          "priority": 20
+        },
+        {
+          "key": "system.skillBonus.Athlétisme",
+          "mode": 2,
+          "value": "10",
+          "priority": 20
+        },
+        {
+          "key": "system.skillBonus.Bagarre",
+          "mode": 2,
+          "value": "10",
+          "priority": 20
+        }
+      ],
+      "disabled": false,
+      "transfer": true,
+      "description": "",
+      "duration": {},
+      "statuses": [],
+      "flags": {}
+    }
+  ]
+}

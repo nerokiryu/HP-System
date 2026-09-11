@@ -1,0 +1,33 @@
+{
+  "_id": "ftAffiniteavec00",
+  "name": "Affinité avec…",
+  "type": "feature",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Vous possédez une affinité particulière avec d’autres créatures et êtres, comme les êtres de l’eau, des créatures surnaturelles, les esprits ou certains animaux fantastiques, qui vous octroient un bonus de 15% en cas d’interaction avec elles.</p>",
+    "perkType": "advantage",
+    "pbpCost": 1
+  },
+  "effects": [
+    {
+      "_id": "feAffiniteavec00",
+      "name": "Affinité avec…",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "changes": [
+        {
+          "key": "system.skillBonus.COMPETENCE-A-CHOISIR",
+          "mode": 2,
+          "value": "15",
+          "priority": 20
+        }
+      ],
+      "disabled": true,
+      "transfer": true,
+      "description": "<p>Remplacez « COMPETENCE-A-CHOISIR » dans la clé de la modification par le nom exact de la compétence choisie, puis activez l'effet.</p>",
+      "duration": {},
+      "statuses": [],
+      "flags": {}
+    }
+  ]
+}

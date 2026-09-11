@@ -1,0 +1,12 @@
+{
+  "_id": "ftProdige0000000",
+  "name": "Prodige",
+  "type": "feature",
+  "img": "icons/svg/sun.svg",
+  "system": {
+    "description": "<p>Depuis votre naissance, vous êtes doté d’une grande force, d’une endurance hors du commun ou d’une capacité intellectuelle qui dépasse celle des autres enfants de votre âge. La magie vous a fait un don précieux qui double la valeur de l’une de vos caractéristiques.</p>",
+    "perkType": "fateBoon",
+    "pbpCost": 0
+  },
+  "effects": []
+}

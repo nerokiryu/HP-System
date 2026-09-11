@@ -1,0 +1,12 @@
+{
+  "_id": "ftAmourasensuniq",
+  "name": "Amour à sens unique",
+  "type": "feature",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "description": "<p>Vous êtes tombé amoureux d’une personne qui vous déteste ou qui ne connaît même pas votre existence. Malgré tous vos efforts, celle-ci n’arrive pas à vous considérer autrement que comme un élève parmi tant d’autres et cela vous brise le cœur. Peut-être même cette personne est-elle votre rival(e) d’une des autres Maisons ? Pas toujours facile à vivre au quotidien.</p>",
+    "perkType": "fateBane",
+    "pbpCost": 0
+  },
+  "effects": []
+}

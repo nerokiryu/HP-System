@@ -1,0 +1,12 @@
+{
+  "_id": "ftPhobies0000000",
+  "name": "Phobie(s)",
+  "type": "feature",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "description": "<p>Vous possédez une ou plusieurs phobies qui vous rendent la vie impossible. Vous avez peur des oiseaux, des chats ou des rats. Vous ne supportez pas les plumes d’oiseau ou vous avez peur du noir. Qu’importe la phobie de laquelle vous souffrez, celle-ci vous rend la vie impossible.</p>",
+    "perkType": "fateBane",
+    "pbpCost": 0
+  },
+  "effects": []
+}

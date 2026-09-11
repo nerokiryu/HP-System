@@ -27,8 +27,9 @@ Toutes les captures ont été prises avec un personnage de démonstration,
 12. [Créatures, familiers et PNJ](#12-créatures-familiers-et-pnj)
 13. [Les compendiums](#13-les-compendiums)
 14. [Réglages du monde](#14-réglages-du-monde)
-15. [Dépannage](#15-dépannage)
-16. [Aide-mémoire](#16-aide-mémoire)
+15. [Extensions maison](#15-extensions-maison)
+16. [Dépannage](#16-dépannage)
+17. [Aide-mémoire](#17-aide-mémoire)
 
 ---
 
@@ -509,7 +510,34 @@ contiennent aucun texte de règle recopié : vous devez posséder les ouvrages.
 
 ---
 
-## 15. Dépannage
+## 15. Extensions maison
+
+Le système suit le livre partout où celui-ci tranche. Quelques éléments, en
+revanche, **ne figurent dans aucune source** : ils sont listés ici pour que vous
+ne les preniez pas pour du canon, et pour que vous puissiez les écarter à votre
+table.
+
+| Élément | Ce que dit la source | Ce que fait le système |
+|---|---|---|
+| **Paliers de réussite étendus** | Le livre ne définit que la réussite critique et la maladresse | Réglage *désactivé par défaut* ajoutant *Extrême* et *Difficile*, empruntés au BRP générique, avec un arrondi au supérieur qu'aucun exemple chiffré ne confirme |
+| **Maîtrises de base et maximales** | Le fonctionnement est décrit (§6.10) mais **aucune table n'est publiée** — un seul couple chiffré en exemple | Plus de soixante couples `base`/`max` fournis par le système |
+| **Bonus de dégâts des créatures** | Introuvable dans le livre de base, le *Bestiaire* et l'*Encyclopédie* | Table prolongée hors du domaine humain : −1d4, −1d2, +3d6, +4d6 |
+| **Sorts instinctifs (POU × 3)** | Le principe d'une magie enfantine incontrôlée est évoqué ; **aucune résolution chiffrée** | Case « Sort instinctif » déclenchant un jet sous POU × 3 |
+| **Animagus** | Le chapitre 16 publie le processus en dix étapes et un test de personnalité donnant la catégorie d'animal, mais **aucun jet de transformation** | Paliers de maîtrise et bouton de transformation (jet sous la compétence Animagus) |
+
+> **Animagus — deux valeurs dans la source.** Le tableau des avantages annonce la compétence à
+> 20 % (max 90 %), la fin du chapitre 16 à 10 % (max 80 %). Le système retient le chapitre dédié ;
+> les colonnes *Base* et *Max* de la fiche restent modifiables si vous préférez l'autre lecture.
+> Le questionnaire du §16.2 n'est pas reproduit — ses puces sont des dessins, illisibles hors du
+> livre : la fiche propose directement les six profils de résultat.
+
+Les trois premiers points sont signalés directement dans l'interface : survolez
+les colonnes *Base* et *Max* de l'onglet Compétences, ou la case « Sort
+instinctif » d'une fiche de sortilège.
+
+---
+
+## 16. Dépannage
 
 **Une valeur ne veut pas changer.**
 Elle est dérivée. Cherchez ce qui l'alimente : la *Valeur* d'une compétence vient de
@@ -538,7 +566,7 @@ Le champ *affinité* de la baguette doit mentionner l'école : « enchantements 
 
 ---
 
-## 16. Aide-mémoire
+## 17. Aide-mémoire
 
 ### Degrés de réussite
 

@@ -1,0 +1,12 @@
+{
+  "_id": "ftPetiteamie0000",
+  "name": "Petit(e) ami(e)",
+  "type": "feature",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Vous êtes amoureux ou amoureuse et c’est réciproque. La personne aimée vous sera d’une grande aide durant votre scolarité mais cela vous laissera beaucoup moins de temps pour vos activités extrascolaires.</p>",
+    "perkType": "advantage",
+    "pbpCost": 1
+  },
+  "effects": []
+}

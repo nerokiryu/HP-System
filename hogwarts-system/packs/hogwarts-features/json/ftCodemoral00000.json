@@ -1,0 +1,12 @@
+{
+  "_id": "ftCodemoral00000",
+  "name": "Code moral",
+  "type": "feature",
+  "img": "icons/svg/castle.svg",
+  "system": {
+    "description": "<p>Vous possédez un code moral strict qui dicte vos actions dans votre vie quotidienne. Vous ne pouvez, par exemple, agir qu’en cas de légitime défense ou vous ne pouvez pas tricher, vous devez impérativement respecter la parole donnée, vous ne pouvez pas mentir ou vous êtes obligé de combattre les injustices. Choisissez un code moral, en accord avec le Maître du Jeu, et tenez-vous-y durant toute votre scolarité. Remarque : Axiome des Poufsouffles</p><p><em>Axiome de Maison : accordé d'office, il n'entre pas dans le calcul des points de création (§5).</em></p>",
+    "perkType": "houseAxiom",
+    "pbpCost": 0
+  },
+  "effects": []
+}

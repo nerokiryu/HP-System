@@ -1,0 +1,12 @@
+{
+  "_id": "ftMauvaisen00000",
+  "name": "Mauvais en…",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Vous êtes mauvais dans une compétence non-scolaire. Chaque jet pour gagner de l’expérience dans cette matière octroie 1/3 de point(s) en en moins.</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -1
+  },
+  "effects": []
+}

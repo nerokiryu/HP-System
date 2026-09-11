@@ -1,0 +1,12 @@
+{
+  "_id": "ftProblemesvisue",
+  "name": "Problèmes visuels",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Sans vos lunettes, vous ne pouvez pas voir de près ou de loin ou alors tout devient déformé. Vos jets de PERception (vue) se font alors comme PERx1 au lieu de PERx5.</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -1
+  },
+  "effects": []
+}

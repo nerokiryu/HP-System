@@ -647,3 +647,45 @@
 
   .quidditch-team-none { opacity: 0.6; font-style: italic; }
 }
+
+.animagus-block {
+  .animagus-flags {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+
+    label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+  }
+
+  .animagus-state {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.06);
+    font-size: 11px;
+    opacity: 0.7;
+
+    &.active {
+      background: rgba(139, 69, 19, 0.18);
+      color: #8b4513;
+      opacity: 1;
+      font-weight: 600;
+    }
+  }
+
+  .animagus-transform {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+}

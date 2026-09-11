@@ -1,0 +1,12 @@
+{
+  "_id": "ftFauche00000000",
+  "name": "Fauché",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Vos parents n’ont que peu de moyens ou ne veulent pas vous donner trop d’argent de poche, ce qui est frustrant lors des sorties ou pour des achats extra-scolaires. Vous débutez votre année scolaire avec uniquement 8 Gallions d’argent de poche (contre 15 en temps normal)</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -0.5
+  },
+  "effects": []
+}

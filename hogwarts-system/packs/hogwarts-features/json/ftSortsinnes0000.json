@@ -1,0 +1,12 @@
+{
+  "_id": "ftSortsinnes0000",
+  "name": "Sorts innés",
+  "type": "feature",
+  "img": "icons/svg/sun.svg",
+  "system": {
+    "description": "<p>Bien avant de savoir qu’il vous fallait une baguette pour lancer des sorts, vous vous êtes entraîné et avez appris à les lancer de manière innée. Vous maîtrisez 3 sorts basiques (niveau 0 ou 1) que vous lancez comme des sortilèges innés.</p>",
+    "perkType": "fateBoon",
+    "pbpCost": 0
+  },
+  "effects": []
+}

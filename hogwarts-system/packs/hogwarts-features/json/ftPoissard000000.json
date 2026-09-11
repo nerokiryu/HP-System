@@ -1,0 +1,12 @@
+{
+  "_id": "ftPoissard000000",
+  "name": "Poissard",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Peu importe ce que vous faites, il semble que la poisse vous poursuive. Vous êtes d’un naturel maladroit et vous laissez souvent tout tomber par terre. La zone pour les échecs critiques passe de 091-100 Remarque : non compatible avec Chanceux</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -2
+  },
+  "effects": []
+}

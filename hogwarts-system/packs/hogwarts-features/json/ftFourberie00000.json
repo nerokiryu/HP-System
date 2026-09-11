@@ -1,0 +1,12 @@
+{
+  "_id": "ftFourberie00000",
+  "name": "Fourberie",
+  "type": "feature",
+  "img": "icons/svg/castle.svg",
+  "system": {
+    "description": "<p>Le joueur peut – une fois par scénario – faire preuve de fourberie pour mettre au point un plan visant à nuire à une personne ou un groupe de personnes ou visant à enfreindre les règles. Cela se traduira par un bonus à toutes ses actions de 30% durant la mise au point de ce plan. Remarque : Axiome des Serpentards</p><p><em>Axiome de Maison : accordé d'office, il n'entre pas dans le calcul des points de création (§5).</em></p>",
+    "perkType": "houseAxiom",
+    "pbpCost": 0
+  },
+  "effects": []
+}

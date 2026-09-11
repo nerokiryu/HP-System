@@ -322,7 +322,7 @@ localisée, soit c'est une extension maison. À trancher avant de bâtir davanta
 |---------|-----------------|----------------|--------|--------|
 | Compétence utilisée | Compétence **Potions** − malus du niveau | `_onBrewPotion` sur la compétence Potions | ✅ | — |
 | Malus par niveau | Propre à chaque potion, publié dans le Grimoire | Champ `malus` par potion | ✅ | — |
-| Réussite critique | **« permet de créer une potion parfaite »** — l. 12922 | Produit `quantity + 2` au lieu de `+1` | ⚠️ | R-23 |
+| Réussite critique | **« permet de créer une potion parfaite »** — l. 12922 | Une dose, et la carte annonce les effets variables maximisés | ✅ | Corrigé |
 | Maladresse | **NON PRÉCISÉE PAR LA SOURCE** | Aucun effet | ❓ | Aucune action — ne pas inventer |
 | Ingrédients | Liste + rareté par potion | `ingredientList[]` avec rareté et disponibilité | ✅ | — |
 | Virulence | Publiée, mais **dans la prose** : `VIRulence : N` au sein du champ `effets` | Extraite par le générateur — **19 potions** renseignées | ✅ | Corrigé |
@@ -498,6 +498,70 @@ contrepartie dans le système.
 | ~~**Personnages hybrides**~~ | Sous-races : ajustements de caractéristiques, capacités magiques | ch. 17 | ✅ **Implémenté** |
 | **Animagus** | **Uniquement un avantage** octroyant la compétence Animagus à 20 %, max 90 %. **Aucune procédure de transformation n'est publiée** | 3 752 | R-37 |
 
+### Correctif appliqué — avantages, désavantages et destin (§4 et §5)
+
+Le compendium ne contenait que **30 entrées**, dont **14 introuvables dans le livre** (Ambidextre,
+Bonne mémoire, Robuste, Séduisant, Sens aiguisés…). Vérification faite en jeu, **aucun acteur du
+monde ne les possédait**, alors que plusieurs personnages avaient saisi *à la main* des entrées
+pourtant publiées (Surdoué, Empathie, Sportif, Problèmes visuels, Lent à la détente) : le manque se
+faisait sentir en pratique. Les 14 inventées ont été retirées.
+
+Le pack est désormais **généré depuis le livre** par `build-compendia.mjs`, au même titre que les
+sorts, potions, ingrédients et créatures — **104 documents** :
+
+| Catégorie | Nombre | Source |
+|-----------|--------|--------|
+| Coups de pouce du destin | 12 | §4.1 |
+| Croche-pattes du destin | 12 | §4.2 |
+| Avantages | 34 | §5.2 |
+| Désavantages | 34 | §5.2 |
+| Axiomes de maison | 12 | §5.2, repérés par la mention « Axiome des… » |
+
+Deux points de fidélité tranchés au passage :
+
+- **Sens du coût.** Le livre note un avantage `-1` et un désavantage `+1`, du point de vue du
+  joueur. La fiche, elle, calcule `max − total des coûts` : le signe est donc **inversé** à la
+  génération. Sportif (livre `-1`) vaut `pbpCost: 1`, Poissard (livre `+2`) vaut `pbpCost: -2`.
+- **Les axiomes ne coûtent rien.** Le §5 est explicite : « Ces axiomes de maison n'entrent pas dans
+  le calcul total des points attribués lors de la création du personnage. » Les douze entrées
+  portaient toutes `pbpCost: 1` — un Gryffondor perdait donc 3 points de création sans raison. Elles
+  valent désormais 0.
+- **« Hybride » est publié deux fois** : en croche-patte du §4.2 (première génération, subie) et en
+  avantage du §5.2 (toute génération, achetée). Les deux sont conservés.
+
+#### Effets actifs
+
+Les compétences sont stockées dans un **tableau**, donc une clé `system.skills.N.value` dépend de
+l'ordre propre à chaque fiche et reste inutilisable depuis un objet de compendium. Un champ
+`system.skillBonus` indexé par **nom** a été ajouté au personnage : `system.skillBonus.Athlétisme`
+est stable partout. Chaque compétence reçoit une case numérique à 0 avant l'exécution des effets —
+sans quoi Foundry, qui déduit le type de la valeur en place, stockerait la chaîne « 15 » au lieu du
+nombre. Comportement vérifié en jeu sur la v14.365.
+
+**18 features** portent un effet. Neuf sont **actifs d'office** parce que le livre donne un bonus
+permanent sur des compétences qu'il nomme : Communicatif, Réservé, Empathie, Sportif, Surpoids,
+Sur le qui-vive (compétences), Apathique, Cérébral, Réactif (initiative). Neuf sont livrés
+**désactivés**, prêts à être basculés : soit le livre restreint le bonus à une situation (Baguette
+bruyante, Initié au duel, Lent à la détente), soit il laisse la compétence au choix du joueur et
+seule la valeur est connue (Affinité avec…, Doué pour…, Érudition, Excellent joueur de…, Facilités
+en…, Lacunes en …).
+
+Le reste demeure descriptif, faute de champ à viser : les bonus « une fois par scénario » de
+`+30 %` à **toutes** les actions (Courageux, Fourberie, Justicier), les décalages de VIRulence
+(Faiblesse / Résistance immunitaire), les `PERx4` du Troisième œil, et les features qui accordent
+une **compétence entière** (Animagus, Legilimens, Occlumens, Métamorphomage) — un effet actif ne
+sait pas ajouter une entrée dans un tableau.
+
+**Deux bugs d'initiative corrigés au passage**, tous deux vérifiés en jeu sur la v14.365 :
+
+- La **formule du tracker de combat** lisait `@system.initiativeBonus`. Or `Actor#getRollData()`
+  renvoie `system` *lui-même* : ses clés sont à la racine et il n'existe aucune clé `system`
+  imbriquée. La référence ne résolvait donc rien et le jet valait toujours `+0`. Mesuré sur un
+  personnage à `initiativeBonus = −2` : `1d6 + 10 + 0` avant, `1d6 + 10 − 2` après. Le champ
+  n'avait jamais fonctionné depuis sa création.
+- Le **bouton d'initiative de la fiche** calculait `1d6 + DEX.value`, en ignorant à la fois
+  `initiativeBonus` et le modificateur d'ascendance (`DEX.total`).
+
 ### Correctif appliqué — points de maison (§24.2)
 
 Le réglage `housePoints` existait déjà mais **rien ne le lisait ni ne l'écrivait**. Un suivi complet
@@ -579,10 +643,29 @@ sur cette base.
 
 **R-29** — traité.
 
-**R-37** — Le schéma `character` comporte `animagus.{form, mastery, transformed, declared}` avec
-quatre niveaux de maîtrise (`none`/`learning`/`partial`/`full`). Le livre ne décrit **rien de
-tel** : seulement un avantage donnant une compétence. Ces champs sont donc 🧪 **maison** et
-devraient soit être adossés à une règle explicite, soit être documentés comme extension.
+**R-37** — ⚠️ **Analyse précédente erronée, corrigée le 2026-09-10.** Il était écrit ici que le
+livre ne publiait qu'un avantage et aucune procédure. La lecture du PDF montre un **chapitre 16
+complet** :
+
+| Source | Contenu |
+|--------|---------|
+| §16.1 (l. 24465) | Le processus en dix étapes de J.K. Rowling : feuille de mandragore gardée un mois, fiole de cristal, incantation *Amato Animo Animato Animagus* matin et soir, attente de l'orage, potion rouge sang. **Narratif, aucun jet.** |
+| §16.2 (l. 24515) | Un test de personnalité de 14 questions donnant la **catégorie d'animal**, avec six profils de résultat. |
+| l. 24645 | « Animagus : Maîtrise de base 10 % / Maîtrise maximale : 80 % » |
+
+**Contradiction de la source** : le tableau des avantages (l. 3753) annonce « Animagus à 20 %
+(degré de maîtrise maximal : 90 %) », la fin du chapitre 16 « base 10 % / max 80 % ». Le
+système retient le chapitre dédié (10 / 80), les deux colonnes restant éditables sur la fiche.
+
+**Ce qui reste hors source** : les quatre paliers `mastery` et le jet de transformation sont une
+extension maison, signalée comme telle par une infobulle et par le chapitre « Extensions maison »
+du guide.
+
+> **Test des 14 questions non reproduit.** Les puces qui associent chaque réponse à un profil sont
+> des tracés vectoriels dans le PDF (92 `constructPath` sur la page, aucune police de symboles,
+> trois couleurs de remplissage seulement) : la grille réponse → profil n'est pas récupérable par
+> extraction. La fiche propose donc directement les six profils publiés, et renvoie au livre pour
+> le questionnaire.
 
 ---
 
@@ -593,21 +676,23 @@ Les identifiants ci-dessous alimentent le backlog global de
 
 ### P1 — Étiquetage du contenu hors règles
 
-Aucun code à écrire : il s'agit d'empêcher que du homebrew soit pris pour du canon.
+✅ **Traité.** Chaque écart est désormais signalé à trois endroits : un commentaire
+`EXTENSION MAISON` dans le code, une infobulle dans l'interface là où le champ se saisit,
+et le chapitre « Extensions maison » du guide du MJ.
 
-| ID | Action |
-|----|--------|
-| R-05 | Intituler `useExtendedSuccessTiers` comme règle optionnelle absente du livre ; documenter l'arrondi `Math.ceil` |
-| R-10 | Documenter les `base`/`max` de `config.mjs` comme valeurs maison |
-| R-04 | Documenter la table de dommages créature comme extension |
-| R-22 | Trancher l'origine de `preSchool` / `POU×3` |
-| R-37 | Documenter les champs `animagus` comme extension |
+| ID | Action | Où c'est signalé |
+|----|--------|------------------|
+| R-05 | Paliers étendus donnés pour une règle optionnelle absente du livre, arrondi documenté | Libellé du réglage `useExtendedSuccessTiers` + guide |
+| R-10 | `base`/`max` donnés pour des valeurs maison | Commentaire dans `config.mjs`, infobulles des colonnes *Base* et *Max* + guide |
+| R-04 | Table de dommages créature donnée pour une extension | Commentaire dans `actor-creature.mjs` + guide |
+| R-22 | `preSchool` / `POU×3` : aucune source, extension assumée | Commentaire dans `item-spell.mjs`, infobulle de la case + guide |
+| R-37 | Champs `animagus` donnés pour une extension | Commentaire dans `actor-character.mjs` + guide. **Complété** : compétence Animagus 10 %/80 % ajoutée, six profils du §16.2, bloc de fiche et jet de transformation |
 
 ### P2 — Mécaniques centrales manquantes
 
-| ID | Action |
-|----|--------|
-| R-23 | « Potion parfaite » = effets maximisés, pas quantité doublée |
+| ID | Action | État |
+|----|--------|------|
+| R-23 | « Potion parfaite » = effets maximisés, pas quantité doublée | ✅ Corrigé : la réussite critique produit une dose comme une réussite ordinaire et la carte de chat annonce la potion parfaite |
 
 ### P3 — Sous-systèmes
 

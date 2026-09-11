@@ -1,0 +1,12 @@
+{
+  "_id": "ftMaudit00000000",
+  "name": "Maudit",
+  "type": "feature",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "description": "<p>Vous avez été la cible d’une malédiction durant votre enfance. Vous êtes désormais incapable d’effectuer une action particulière, comme mentir, parler d’un sujet en particulier, blesser une personne volontairement, tricher, ... sans quoi vous êtes atteint de violentes douleurs.</p>",
+    "perkType": "fateBane",
+    "pbpCost": 0
+  },
+  "effects": []
+}

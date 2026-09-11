@@ -1,0 +1,12 @@
+{
+  "_id": "ftOubliette00000",
+  "name": "Oublietté",
+  "type": "feature",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "description": "<p>Durant votre enfance, vous avez reçu un sortilège d’oubliette volontairement et une partie de votre passé a été totalement effacée. Vous n’avez désormais aucune idée de ce qu’il s’est passé durant cette période, ni les raisons pour laquelle vous avez subi ce sort. Quel secret votre passé recèle-t-il ?</p>",
+    "perkType": "fateBane",
+    "pbpCost": 0
+  },
+  "effects": []
+}

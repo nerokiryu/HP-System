@@ -1,0 +1,12 @@
+{
+  "_id": "ftResurgence0000",
+  "name": "Résurgence",
+  "type": "feature",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>L’un de vos ancêtres lointains était un être magique et certaines de ses caractéristiques, capacités et traits physiques ont refait surface, bien que vos parents soient humains Ancêtre magique possible : Tous Pour connaître les avantages et désavantages de votre ancêtre magique, rendez-vous aux chapitre « Jouer un personnage hybride » de ce manuel.</p>",
+    "perkType": "advantage",
+    "pbpCost": 0.5
+  },
+  "effects": []
+}

@@ -1,0 +1,12 @@
+{
+  "_id": "ftEndormi0000000",
+  "name": "Endormi",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Vous manquez d’énergie dans votre vie de tous les jour et il vous faut généralement quelques heures de sommeil en plus pour vous sentir apte à attaquer la journée. Pour vous, les activités extrascolaires sont synonymes de sommeil en moins, ce qui vous rebute</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -0.5
+  },
+  "effects": []
+}

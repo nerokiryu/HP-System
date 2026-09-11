@@ -1,0 +1,12 @@
+{
+  "_id": "ftSangPur0000000",
+  "name": "Sang-Pur",
+  "type": "feature",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Votre famille ne comprend que des sorciers depuis des générations et des générations et votre nom est connu dans le monde des sorciers. Bien souvent, votre famille est conservatrice anti-sang-de-bourbe et anti-hybride mais possède un grand domaine et des richesses et domestiques qui vont avec.</p>",
+    "perkType": "advantage",
+    "pbpCost": 0.5
+  },
+  "effects": []
+}

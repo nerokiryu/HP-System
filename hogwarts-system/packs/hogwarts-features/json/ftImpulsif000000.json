@@ -1,0 +1,12 @@
+{
+  "_id": "ftImpulsif000000",
+  "name": "Impulsif",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Vous avez du mal à maîtriser vos émotions et c’est souvent elles qui vous font agir, au détriment du bon sens. Tous les jets visant à résister au stress ou aux pertes de sang-froid se font avec un malus de 10%.</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -0.5
+  },
+  "effects": []
+}

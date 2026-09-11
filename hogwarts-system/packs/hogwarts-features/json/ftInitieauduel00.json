@@ -1,0 +1,33 @@
+{
+  "_id": "ftInitieauduel00",
+  "name": "Initié au duel",
+  "type": "feature",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Vous êtes un habitué des duels magiques et vous connaissez quelques petites techniques pour être plus rapide que vos adversaires. Dès lors, vous bénéficiez d’un bonus de +2 en initiative pour attaquer votre adversaire (lorsque vous lancez des sorts classiques)</p>",
+    "perkType": "advantage",
+    "pbpCost": 0.5
+  },
+  "effects": [
+    {
+      "_id": "feInitieauduel00",
+      "name": "Initié au duel",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "changes": [
+        {
+          "key": "system.initiativeBonus",
+          "mode": 2,
+          "value": "2",
+          "priority": 20
+        }
+      ],
+      "disabled": true,
+      "transfer": true,
+      "description": "<p>Le livre limite ce modificateur à une situation précise : activez l'effet le temps qu'elle dure.</p>",
+      "duration": {},
+      "statuses": [],
+      "flags": {}
+    }
+  ]
+}

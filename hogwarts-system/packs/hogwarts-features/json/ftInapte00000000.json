@@ -1,0 +1,12 @@
+{
+  "_id": "ftInapte00000000",
+  "name": "Inapte",
+  "type": "feature",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "description": "<p>Vous êtes mauvais dans une matière enseignée (vol en balais, métamorphose, Défense contre les Forces du Mal, Potions, etc.) et même le fait de bosser comme un fou ne vous permet pas de vous en sortir. Vous avez beau connaître tous vos cours par cœur, vous êtes incapable de mettre en pratique ce qui vous est demandé. Avec le temps, cette inaptitude peut laisser la place à un résultat médiocre, mais n’espérez pas trop.</p>",
+    "perkType": "fateBane",
+    "pbpCost": 0
+  },
+  "effects": []
+}

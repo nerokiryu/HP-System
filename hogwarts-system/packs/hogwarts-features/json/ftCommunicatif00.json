@@ -1,0 +1,45 @@
+{
+  "_id": "ftCommunicatif00",
+  "name": "Communicatif",
+  "type": "feature",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Vous êtes à l’aise lorsque vous devez communiquer et à vous faire comprendre de votre interlocuteur. Toute interaction sociale (commandement, baratin, persuasion, psychologie, etc.) se fait avec un bonus de 10%.</p>",
+    "perkType": "advantage",
+    "pbpCost": 1.5
+  },
+  "effects": [
+    {
+      "_id": "feCommunicatif00",
+      "name": "Communicatif",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "changes": [
+        {
+          "key": "system.skillBonus.Commandement",
+          "mode": 2,
+          "value": "10",
+          "priority": 20
+        },
+        {
+          "key": "system.skillBonus.Persuasion/Baratin",
+          "mode": 2,
+          "value": "10",
+          "priority": 20
+        },
+        {
+          "key": "system.skillBonus.Psychologie",
+          "mode": 2,
+          "value": "10",
+          "priority": 20
+        }
+      ],
+      "disabled": false,
+      "transfer": true,
+      "description": "",
+      "duration": {},
+      "statuses": [],
+      "flags": {}
+    }
+  ]
+}

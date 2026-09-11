@@ -1,0 +1,12 @@
+{
+  "_id": "ftAmesliees00000",
+  "name": "Âmes liées",
+  "type": "feature",
+  "img": "icons/svg/sun.svg",
+  "system": {
+    "description": "<p>Vous êtes liés à un familier magique (Phœnix, Boursoufflet, Fléreur, Focifère, Dragfeu, etc.) d’une manière très particulière. Vous êtes naturellement capable de ressentir ses sentiments, de communiquer avec lui et pouvez même voir par ses yeux lorsque vous vous concentrez. Bien que normalement interdit à Poudlard, vous avez obtenu toutes les autorisations nécessaires pour prendre ce familier avec vous durant votre scolarité.</p>",
+    "perkType": "fateBoon",
+    "pbpCost": 0
+  },
+  "effects": []
+}

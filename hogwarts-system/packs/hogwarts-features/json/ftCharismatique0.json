@@ -1,0 +1,12 @@
+{
+  "_id": "ftCharismatique0",
+  "name": "Charismatique",
+  "type": "feature",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Vous êtes plus charismatique que la moyenne ou c’est peut-être votre beauté exotique qui vous rend si irrésistible. Tous vos jets d’APParence pour séduire ou intimider une personne se font avec un bonus de +15%</p>",
+    "perkType": "advantage",
+    "pbpCost": 0.5
+  },
+  "effects": []
+}

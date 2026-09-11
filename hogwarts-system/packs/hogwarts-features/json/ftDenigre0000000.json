@@ -1,0 +1,12 @@
+{
+  "_id": "ftDenigre0000000",
+  "name": "Dénigré",
+  "type": "feature",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "description": "<p>Des rumeurs courent sur vous. Celles-ci peuvent être vraies ou fausses, mais elles persistent quoi que vous fassiez, vous empêchant de donner votre plein potentiel quand il s’agit de négocier ou de lier de nouvelles relations. Vous attirez également plus l’attention des personnes sensées vous surveiller car – même si ces rumeurs sont fausses – elles pourraient bien posséder un fond de vérité.</p>",
+    "perkType": "fateBane",
+    "pbpCost": 0
+  },
+  "effects": []
+}

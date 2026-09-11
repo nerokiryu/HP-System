@@ -1,0 +1,12 @@
+{
+  "_id": "ftBetenoiredunpr",
+  "name": "Bête noire d’un professeur",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Un professeur a décidé que tout ce qui ne va pas dans sa classe est nécessairement de votre faute. Préparez-vous à subir des punitions injustes, à recevoir des mauvaises notes non méritées et à perdre des points de Maison sans raison apparente.</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -1
+  },
+  "effects": []
+}

@@ -1,0 +1,12 @@
+{
+  "_id": "ftFourchelangue0",
+  "name": "Fourchelangue",
+  "type": "feature",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Ajoute une nouvelle langue à 20% de maîtrise et qui possède un degré de maîtrise maximal de 80%</p>",
+    "perkType": "advantage",
+    "pbpCost": 1
+  },
+  "effects": []
+}

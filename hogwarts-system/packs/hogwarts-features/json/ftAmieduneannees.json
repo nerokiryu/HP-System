@@ -1,0 +1,12 @@
+{
+  "_id": "ftAmieduneannees",
+  "name": "Ami(e) d’une année supérieure",
+  "type": "feature",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Bien que débutant dans votre école, vous vous êtes déjà lié d’amitié avec un élève évoluant dans une année supérieure à la vôtre. Cet ami vous sera d’une grande aide en cas de problème ou de question, ou pourra être une source de réconfort en cas de problème ou de peine de cœur.</p>",
+    "perkType": "advantage",
+    "pbpCost": 1
+  },
+  "effects": []
+}

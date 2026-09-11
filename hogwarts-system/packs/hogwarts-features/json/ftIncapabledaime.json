@@ -1,0 +1,12 @@
+{
+  "_id": "ftIncapabledaime",
+  "name": "Incapable d’aimer",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Vous avez été conçu alors que l’un de vos parents était sous l’effet du Philtre d’amour Amortentia. De fait, vous êtes incapable d’aimer ou de ressentir de l’amour pour quiconque.</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -1
+  },
+  "effects": []
+}

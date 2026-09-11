@@ -136,7 +136,25 @@
         "Transformed": "Sous forme animale",
         "Transform": "Se transformer",
         "Revert": "Reprendre forme humaine",
-        "Declared": "Déclaré au Ministère"
+        "Declared": "Déclaré au Ministère",
+        "Profile": {
+          "brave": "Courageux, héroïque, fonceur — lion, ours, cerf, cheval…",
+          "wise": "Libre, sage, à l'intelligence aiguisée — aigle, chouette, hibou…",
+          "loyal": "Fidèle et dévoué sans faille — chien, loup, blaireau…",
+          "playful": "Joueur, espiègle et revanchard — chat, loutre, belette, écureuil, pie, renard…",
+          "solitary": "Solitaire, se vengeant sournoisement — serpent, araignée, chauve-souris, rat…",
+          "timid": "Craintif, effacé, bon de nature — chevreuil, biche, hérisson, petits rongeurs, lapin…"
+        },
+        "ProfileLabel": "Profil (§16.2)",
+        "ProfileHint": "Résultat du test de personnalité du §16.2, qui indique la catégorie d'animal. Le questionnaire lui-même n'est pas reproduit : reportez-vous au livre.",
+        "ProfileNone": "Non déterminé",
+        "MasteryHint": "Extension maison : le livre ne publie aucun palier de maîtrise.",
+        "TransformHint": "Extension maison : jet sous la compétence Animagus. Le livre décrit le processus (§16.1) sans le chiffrer.",
+        "NoSkill": "Ce personnage n'a pas la compétence Animagus.",
+        "TransformSuccess": "La transformation réussit.",
+        "TransformFailure": "La transformation échoue.",
+        "Reverted": "Reprend forme humaine.",
+        "HumanForm": "Forme humaine"
       },
       "base": {
         "FIELDS": {
@@ -304,7 +322,10 @@
         "muggle": "Compétences moldus",
         "school": "Matières scolaires",
         "special": "Compétences spéciales"
-      }
+      },
+      "BaseHint": "Extension maison : le livre ne publie aucune table de maîtrises de base ; ces valeurs sont propres au système.",
+      "MaxHint": "Extension maison : le livre ne publie aucune table de maîtrises maximales ; ces valeurs sont propres au système.",
+      "FeatureBonus": "Dont accordé par un avantage ou un désavantage :"
     },
     "SkillDisplay": {
       "Acrobatie/Quidditch": "Acrobatie/Quidditch",
@@ -363,7 +384,8 @@
       "Alchimie": "Alchimie",
       "Duels": "Duels",
       "Legilimancie": "Legilimancie",
-      "Occlumancie": "Occlumancie"
+      "Occlumancie": "Occlumancie",
+      "Animagus": "Animagus"
     },
     "Item": {
       "Tabs": {
@@ -473,7 +495,8 @@
             "label": "Possède une formule extrême"
           },
           "preSchool": {
-            "label": "Sort instinctif (pré-scolaire)"
+            "label": "Sort instinctif (pré-scolaire)",
+            "hint": "Extension maison : le jet sous POU × 3 ne figure pas dans le livre. Décochez pour utiliser la compétence d'école."
           },
           "malusMastered": {
             "label": "Malus de base une fois maîtrisée"
@@ -554,6 +577,7 @@
         "Use": "Utiliser une dose",
         "Brewing": "Préparation",
         "BrewSuccess": "Potion préparée avec succès !",
+        "BrewPerfect": "Potion parfaite : les effets variables de la potion sont maximisés (l. 12922).",
         "BrewFailure": "La préparation a échoué. Les ingrédients sont perdus.",
         "BrewFumble": "Désastre ! Un effet secondaire inattendu se produit !",
         "MissingIngredients": "Tous les ingrédients ne sont pas disponibles !",
@@ -718,6 +742,7 @@
       "NoTarget": "Aucune cible sélectionnée",
       "Damage": "Dégâts",
       "Initiative": "Initiative",
+      "InitiativeBonus": "Modificateur permanent",
       "Roll": "Jet",
       "Result": "Résultat",
       "Target": "Cible",

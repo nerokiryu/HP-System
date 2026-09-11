@@ -1059,6 +1059,41 @@ h3.collapsible.collapsed + .collapsible-content {
   opacity: 0.6;
   font-style: italic;
 }
+.hogwarts-system .animagus-block .animagus-flags {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.hogwarts-system .animagus-block .animagus-flags label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+.hogwarts-system .animagus-block .animagus-state {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.06);
+  font-size: 11px;
+  opacity: 0.7;
+}
+.hogwarts-system .animagus-block .animagus-state.active {
+  background: rgba(139, 69, 19, 0.18);
+  color: #8b4513;
+  opacity: 1;
+  font-weight: 600;
+}
+.hogwarts-system .animagus-block .animagus-transform {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
 .hogwarts-system .wounds-full-width {
   width: 100%;
   margin: 16px 0 8px;
@@ -1944,7 +1979,7 @@ h3.collapsible.collapsed + .collapsible-content {
   padding: 0;
 }
 .hogwarts-system .brooms-section .items-list .items-header {
-  height: 28px;
+  min-height: 28px;
   margin: 2px 0;
   padding: 5px;
   align-items: center;
@@ -2803,13 +2838,17 @@ h3.collapsible.collapsed + .collapsible-content {
 }
 .hogwarts-chat-card .card-buttons, .hogwarts-roll-card .card-buttons, .hogwarts-item-card .card-buttons {
   display: flex;
+  flex-wrap: wrap;
   gap: 4px;
   padding: 6px 12px;
   border-top: 1px solid rgba(var(--hogwarts-accent-rgb), 0.2);
   background: rgba(0, 0, 0, 0.02);
 }
 .hogwarts-chat-card .card-buttons button, .hogwarts-roll-card .card-buttons button, .hogwarts-item-card .card-buttons button {
-  flex: 1;
+  flex: 1 1 calc(50% - 4px);
+  min-width: calc(50% - 4px);
+  height: auto;
+  min-height: var(--button-size, 32px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2817,10 +2856,15 @@ h3.collapsible.collapsed + .collapsible-content {
   padding: 5px 8px;
   font-size: 0.85em;
   font-weight: 600;
+  line-height: 1.15;
+  text-align: center;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.15s ease;
+}
+.hogwarts-chat-card .card-buttons button i, .hogwarts-roll-card .card-buttons button i, .hogwarts-item-card .card-buttons button i {
+  flex: 0 0 auto;
 }
 .hogwarts-chat-card .card-buttons button.apply-damage, .hogwarts-roll-card .card-buttons button.apply-damage, .hogwarts-item-card .card-buttons button.apply-damage {
   background: rgba(192, 57, 43, 0.1);
@@ -2874,6 +2918,16 @@ h3.collapsible.collapsed + .collapsible-content {
   font-weight: 600;
 }
 .hogwarts-chat-card .brew-failure i, .hogwarts-roll-card .brew-failure i, .hogwarts-item-card .brew-failure i {
+  margin-right: 6px;
+}
+.hogwarts-chat-card .brew-perfect, .hogwarts-roll-card .brew-perfect, .hogwarts-item-card .brew-perfect {
+  padding: 6px 12px;
+  background: rgba(184, 134, 11, 0.14);
+  border-top: 1px solid rgba(184, 134, 11, 0.35);
+  color: #8a6508;
+  font-weight: 600;
+}
+.hogwarts-chat-card .brew-perfect i, .hogwarts-roll-card .brew-perfect i, .hogwarts-item-card .brew-perfect i {
   margin-right: 6px;
 }
 .hogwarts-chat-card .fougue-tag, .hogwarts-roll-card .fougue-tag, .hogwarts-item-card .fougue-tag {

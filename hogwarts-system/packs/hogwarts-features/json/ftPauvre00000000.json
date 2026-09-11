@@ -1,0 +1,12 @@
+{
+  "_id": "ftPauvre00000000",
+  "name": "Pauvre",
+  "type": "feature",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "description": "<p>Votre famille est pauvre et – par extension – vous aussi. Vous récupérez toujours les vêtements de vos frères et sœurs, ou des affaires de seconde main. Bien entendu, toutes vos possessions – de vos habits à votre matériel scolaire – sont défectueuses. Peut-être même avez-vous hérité d’une baguette qui n’est pas faite pour vous. De plus, vous débutez l’année scolaire avec uniquement 5 Gallions.</p>",
+    "perkType": "fateBane",
+    "pbpCost": 0
+  },
+  "effects": []
+}

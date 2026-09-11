@@ -1,0 +1,12 @@
+{
+  "_id": "ftObjetmagique00",
+  "name": "Objet magique",
+  "type": "feature",
+  "img": "icons/svg/sun.svg",
+  "system": {
+    "description": "<p>Vous êtes en possession d’un objet magique de grande valeur comme une cape d’invisibilité, une bourse sans fond, un éteignoir ou une carte du château intelligente indiquant les divers passages secrets du château, un chaudron en or ou en carapace de crabe de feu par exemple. Gardez le secret à moins que vous ne désiriez attirer la convoitise des autres élèves.</p>",
+    "perkType": "fateBoon",
+    "pbpCost": 0
+  },
+  "effects": []
+}

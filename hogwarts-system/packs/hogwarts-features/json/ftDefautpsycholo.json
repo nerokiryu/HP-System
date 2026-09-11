@@ -1,0 +1,12 @@
+{
+  "_id": "ftDefautpsycholo",
+  "name": "Défaut psychologique",
+  "type": "feature",
+  "img": "icons/svg/castle.svg",
+  "system": {
+    "description": "<p>Vous possédez une limitation psychologique qui vous limite dans vos relations sociales. Vous pouvez être ambitieux, râleur, menteur, orgueilleux, sans scrupules, susceptible, paresseux, cafteur, colérique, envieux, cleptomane, raciste, violent, etc. Remarque : Axiome des Serpentards</p><p><em>Axiome de Maison : accordé d'office, il n'entre pas dans le calcul des points de création (§5).</em></p>",
+    "perkType": "houseAxiom",
+    "pbpCost": 0
+  },
+  "effects": []
+}

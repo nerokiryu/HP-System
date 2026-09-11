@@ -1,5 +1,52 @@
 # CHANGELOG
 
+## 1.0.1
+
+### Avantages, désavantages et destin
+
+Le compendium passe de **30 à 104 entrées**, désormais générées depuis le livre
+au même titre que les sortilèges et les potions : 12 coups de pouce du destin
+(§4.1), 12 croche-pattes (§4.2), 34 avantages, 34 désavantages et 12 axiomes de
+Maison (§5.2). Les 14 entrées qui ne figuraient dans aucun livre ont été
+retirées ; aucun personnage ne les utilisait.
+
+**18 features portent un effet actif.** Neuf s'appliquent d'office, le livre
+donnant un bonus permanent sur des compétences qu'il nomme (Communicatif,
+Réservé, Empathie, Sportif, Surpoids, Sur le qui-vive, Apathique, Cérébral,
+Réactif). Neuf sont livrées désactivées : soit le bonus est lié à une situation
+(Baguette bruyante, Initié au duel, Lent à la détente), soit la compétence visée
+est au choix du joueur et seule la valeur est connue (Affinité avec…, Doué
+pour…, Érudition, Excellent joueur de…, Facilités en…, Lacunes en …).
+
+Nouveau champ `system.skillBonus`, indexé par nom de compétence : c'est la seule
+cible praticable pour un effet venu d'un compendium, la liste des compétences
+étant un tableau dont l'ordre varie d'une fiche à l'autre.
+
+### Corrections
+
+- **Compétences préréglées enfin enregistrées.** Elles n'étaient ajoutées qu'en
+  mémoire : un personnage neuf en affichait 58 sans en stocker aucune, et une
+  mise à jour du système ajoutant un préréglage laissait les fiches existantes
+  en décalage. La fiche n'en souffrait pas — elle renvoie toutes les lignes à
+  chaque saisie et reconstruit donc le tableau complet — mais toute écriture
+  ciblée sur un seul indice, depuis une macro ou un module, remplaçait le
+  tableau par des lignes vides. Les personnages sont désormais créés avec leurs
+  compétences et les fiches existantes sont réconciliées au chargement du monde.
+- **Assistant de clés d'effet.** Il propose maintenant `system.skillBonus.<nom>`
+  en tête de chaque compétence : c'est la seule clé qui reste valable une fois
+  l'effet copié sur une autre fiche.
+- **Initiative : le modificateur permanent était ignoré.** La formule du
+  tracker de combat visait `@system.initiativeBonus`, alors que `getRollData()`
+  place les clés du système à la racine — elle valait donc toujours `+0`. Le
+  bouton de la fiche, lui, ignorait à la fois ce modificateur et celui
+  d'ascendance. Les deux lisent maintenant la même chose, et la fiche affiche la
+  formule complète.
+- **Axiomes de Maison facturés à tort.** Les douze coûtaient 1 point chacun,
+  alors que le §5 précise qu'ils « n'entrent pas dans le calcul total des points
+  attribués lors de la création ». Un Gryffondor perdait 3 points sans raison.
+- **En-tête des balais tronqué.** « Caractéristiques et bonus » passait à deux
+  lignes et débordait sur la ligne suivante, la hauteur étant figée à 28 px.
+
 ## 1.0.0
 
 Première version publique.

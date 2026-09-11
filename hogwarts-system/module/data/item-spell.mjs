@@ -84,7 +84,10 @@ export default class HogwartsSpell extends HogwartsItemBase {
       initial: false,
     });
 
-    // Instinctive / pre-school spell: roll POWer×3 instead of school skill
+    // Instinctive / pre-school spell: roll POWer×3 instead of school skill.
+    // EXTENSION MAISON : aucune règle « POU×3 » ne figure dans le livre ni dans le
+    // Grimoire. Le principe d'une magie enfantine incontrôlée y est évoqué, mais
+    // sa résolution chiffrée est propre à ce système.
     schema.preSchool = new fields.BooleanField({
       required: false,
       initial: false,

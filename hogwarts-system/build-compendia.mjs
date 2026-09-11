@@ -40,6 +40,7 @@ const RULES = path.join(__dirname, '..', 'rules', 'md');
 const GRIMOIRE = 'Grimoire-des-sortileges-potions-et-ingredients-V1.11.md';
 const BESTIAIRE = 'Bestiaire-des-animaux-fantastiques.md';
 const ENCYCLOPEDIE = 'Encyclopedie-des-Esprits-Etres-et-Non-etres.md';
+const CORE = 'Harry-Potter-JdR-v1.12.md';
 
 /* ─── Reading the sources ───────────────────────────────────────────────── */
 
@@ -307,6 +308,194 @@ function buildCreatures(used) {
   return out;
 }
 
+/* ─── Features: §4.1, §4.2 and §5.2 of the core book ────────────────────── */
+
+/**
+ * The core book is not extracted as `kind`/`records` blocks like the Grimoire:
+ * its tables arrive as `compact_rows`. Sections are located by heading rather
+ * than by line number so a book revision cannot silently shift the ranges.
+ */
+function coreRows(fromHeading, toHeading) {
+  const text = fs.readFileSync(path.join(RULES, CORE), 'utf-8');
+  const from = text.indexOf(fromHeading);
+  const to = text.indexOf(toHeading, from);
+  if (from < 0 || to < 0) throw new Error(`Section introuvable : ${fromHeading} → ${toHeading}`);
+  const rows = [];
+  for (const m of text.matchAll(/```json\n([\s\S]*?)\n```/g)) {
+    if (m.index < from || m.index > to) continue;
+    try { rows.push(...(JSON.parse(m[1]).compact_rows ?? [])); } catch { /* extraction noise */ }
+  }
+  return rows;
+}
+
+/** Column headers survive extraction as ordinary rows, and repeat on each page. */
+const FEATURE_HEADER = /^(D1[02]|Avantages et|d.savantages|Description|Co.t|Coups de pouce|Croche-pattes)$/i;
+
+/** "Remarque : Axiome des Serdaigles" is how §5.2 marks the twelve axioms. */
+const AXIOM_NOTE = /Axiome\s+des?\s+\w+/i;
+
+/**
+ * §4.1 and §4.2 print "d12 | name | description"; §5.2 prints
+ * "name | description | cost".
+ */
+function featureRows(fromHeading, toHeading, diced) {
+  const out = [];
+  for (const r of coreRows(fromHeading, toHeading)) {
+    if (r.length < 2) continue;
+    const name = clean(diced ? r[1] : r[0]);
+    if (!name || FEATURE_HEADER.test(name)) continue;
+    out.push({ name, description: clean(diced ? r[2] : r[1]), cost: diced ? '' : clean(r[2]) });
+  }
+  return out;
+}
+
+/**
+ * The cost column reads from the player's side: "-1" for an advantage that eats
+ * a point, "+1" for a disadvantage that hands one back. `pbpCost` is summed
+ * *against* the budget (actor-sheet.mjs: `max - totalCost`), so the sign flips
+ * here. Variable entries print every tier ("-2 -1.5 -1", "+0.5 ou +1"); the
+ * first is kept and the description carries the full range.
+ */
+function pbpCost(raw) {
+  const m = /[+-]?\d+(?:[.,]\d+)?/.exec(clean(raw));
+  return m ? -Number(m[0].replace(',', '.')) : 0;
+}
+
+/**
+ * Numeric effects, transcribed by hand from §5.2. A regex over the prose would
+ * mis-read "1/3 du temps", "PERx5" or "VIRulence augmentée de 2", and half the
+ * published figures name no skill at all.
+ *
+ * Only permanent bonuses on skills the system actually publishes ship enabled.
+ * Two other cases ship *disabled*, ready to be switched on:
+ *  - `conditional` — the book restricts the bonus to a situation (a magical
+ *    duel, the round a spell is cast), so leaving it always-on would be wrong;
+ *  - `pick` — the book leaves the target skill to the player ("Doué pour…"),
+ *    so the figure is filled in but the skill name has to be completed.
+ * Everything else stays descriptive: once-per-scenario "+30 % à toutes ses
+ * actions" (Courageux, Fourberie, Justicier), virulence shifts, PERx4, and the
+ * features that grant a whole new skill (Animagus, Legilimens, Occlumens,
+ * Métamorphomage) which an Active Effect cannot add to an array.
+ */
+const PICK_PLACEHOLDER = 'COMPETENCE-A-CHOISIR';
+
+const FEATURE_EFFECTS = {
+  // Permanent, on skills the book names outright.
+  'Communicatif': { skills: { 'Commandement': 10, 'Persuasion/Baratin': 10, 'Psychologie': 10 } },
+  'Réservé': { skills: { 'Commandement': -10, 'Persuasion/Baratin': -10, 'Psychologie': -10 } },
+  'Empathie': { skills: { 'Psychologie': 15 } },
+  'Sportif': { skills: { 'Acrobatie/Quidditch': 10, 'Athlétisme': 10, 'Bagarre': 10 } },
+  'Surpoids': { skills: { 'Acrobatie/Quidditch': -10, 'Athlétisme': -10, 'Bagarre': -10 } },
+  'Sur le qui-vive': { skills: { 'Vigilance': 15, 'Discrétion': 15, 'Persuasion/Baratin': 15 } },
+  'Apathique': { initiative: -2 },
+  'Cérébral': { initiative: -1 },
+  'Réactif': { initiative: 2 },
+  // Tied to a situation, so shipped off.
+  'Baguette bruyante': { skills: { 'Discrétion': -15 }, conditional: true },
+  'Initié au duel': { initiative: 2, conditional: true },
+  'Lent à la détente': { initiative: -3, conditional: true },
+  // The player picks the skill; only the figure is known here.
+  'Affinité avec…': { pick: 15 },
+  'Doué pour…': { pick: 10 },
+  'Érudition': { pick: 15 },
+  'Excellent joueur de…': { pick: 20 },
+  'Facilités en…': { pick: 10 },
+  'Lacunes en …': { pick: -10 },
+};
+
+const ADD_MODE = 2; // CONST.ACTIVE_EFFECT_MODES.ADD
+
+/** One transferable effect per feature, or none when nothing is automatable. */
+function featureEffect(name, img, used) {
+  const spec = FEATURE_EFFECTS[name];
+  if (!spec) return [];
+
+  const changes = [];
+  for (const [skill, delta] of Object.entries(spec.skills ?? {})) {
+    changes.push({ key: `system.skillBonus.${skill}`, mode: ADD_MODE, value: String(delta), priority: 20 });
+  }
+  if (spec.pick !== undefined) {
+    changes.push({ key: `system.skillBonus.${PICK_PLACEHOLDER}`, mode: ADD_MODE, value: String(spec.pick), priority: 20 });
+  }
+  if (spec.initiative !== undefined) {
+    changes.push({ key: 'system.initiativeBonus', mode: ADD_MODE, value: String(spec.initiative), priority: 20 });
+  }
+
+  return [{
+    _id: makeId('fe', name, used),
+    name,
+    img,
+    type: 'base',
+    changes,
+    disabled: Boolean(spec.conditional) || spec.pick !== undefined,
+    transfer: true,
+    description: spec.pick !== undefined
+      ? `<p>Remplacez « ${PICK_PLACEHOLDER} » dans la clé de la modification par le nom exact de la compétence choisie, puis activez l'effet.</p>`
+      : spec.conditional
+        ? '<p>Le livre limite ce modificateur à une situation précise : activez l\'effet le temps qu\'elle dure.</p>'
+        : '',
+    duration: {},
+    statuses: [],
+    flags: {},
+  }];
+}
+
+const FEATURE_ICON = {
+  fateBoon: 'icons/svg/sun.svg',
+  fateBane: 'icons/svg/terror.svg',
+  houseAxiom: 'icons/svg/castle.svg',
+  advantage: 'icons/svg/upgrade.svg',
+  disadvantage: 'icons/svg/downgrade.svg',
+};
+
+function buildFeatures(used) {
+  const sections = [
+    { from: '## 4.1 COUPS DE POUCE', to: '## 4.2 CROCHE-PATTES', diced: true, kind: 'fateBoon' },
+    { from: '## 4.2 CROCHE-PATTES', to: '# 5 AXIOMES DE MAISON', diced: true, kind: 'fateBane' },
+    { from: '## 5.2 LES AVANTAGES', to: '## 5.3 POSSESSIONS', diced: false, kind: 'perk' },
+  ];
+
+  const out = [];
+  for (const section of sections) {
+    // Scoped to the section: "Hybride" is published twice, once as a §4.2
+    // croche-patte (first generation, imposed) and once as a §5.2 advantage
+    // (any generation, bought), and both are needed.
+    const seen = new Set();
+    for (const entry of featureRows(section.from, section.to, section.diced)) {
+      if (seen.has(entry.name.toLowerCase())) continue;
+      seen.add(entry.name.toLowerCase());
+
+      const cost = pbpCost(entry.cost);
+      let type = section.kind;
+      if (type === 'perk') {
+        type = AXIOM_NOTE.test(entry.description) ? 'houseAxiom' : cost > 0 ? 'advantage' : 'disadvantage';
+      }
+
+      // §5: "Ces axiomes de maison n'entrent pas dans le calcul total des points
+      // attribués lors de la création du personnage" — so they cost nothing,
+      // whatever figure §5.1 and §5.2 print for them.
+      const free = type === 'houseAxiom' || type === 'fateBoon' || type === 'fateBane';
+      const note = free && type === 'houseAxiom'
+        ? '<p><em>Axiome de Maison : accordé d\'office, il n\'entre pas dans le calcul des points de création (§5).</em></p>'
+        : '';
+
+      out.push({
+        _id: makeId('ft', entry.name, used),
+        name: entry.name,
+        type: 'feature',
+        img: FEATURE_ICON[type],
+        system: {
+          description: html(entry.description) + note,
+          perkType: type,
+          pbpCost: free ? 0 : cost,
+        },
+        effects: featureEffect(entry.name, FEATURE_ICON[type], used),
+      });
+    }
+  }
+  return out;
+}
+
 /* ─── Writing ───────────────────────────────────────────────────────────── */
 
 function write(pack, docs) {
@@ -327,4 +516,5 @@ write('hogwarts-spells', buildSpells(used));
 write('hogwarts-potions', buildPotions(used));
 write('hogwarts-components', buildComponents(used));
 write('hogwarts-creatures', buildCreatures(used));
+write('hogwarts-features', buildFeatures(used));
 console.log('\nCompiler ensuite avec : node build-packs.mjs');

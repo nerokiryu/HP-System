@@ -18,7 +18,7 @@ export default class HogwartsActorBase extends foundry.abstract
     schema.biography = new fields.HTMLField();
 
     // Initiative bonus placeholder so Roll formulas referencing
-    // `@system.initiativeBonus` always have a defined numeric value.
+    // `@initiativeBonus` always have a defined numeric value.
     schema.initiativeBonus = new fields.NumberField({ required: true, nullable: false, initial: 0 });
 
     // Non-lethal damage (separate pool, heals at 1/hour of rest — Chap. 1.8)

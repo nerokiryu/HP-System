@@ -1,0 +1,12 @@
+{
+  "_id": "ftPhysiquedisgra",
+  "name": "Physique disgracieux",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Vous possédez une particularité physique qui fait que vous êtes hors des normes de beauté classiques (acné, verrues, cicatrice mal guérie, bec de lièvre, strabisme, oreilles en feuilles de chou, etc.). Cela vous inflige un malus de 10% dans la compétence APParence et provoque les moqueries de vos camarades.</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -0.5
+  },
+  "effects": []
+}

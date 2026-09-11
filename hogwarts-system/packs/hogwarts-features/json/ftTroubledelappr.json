@@ -1,0 +1,12 @@
+{
+  "_id": "ftTroubledelappr",
+  "name": "Trouble de l’apprentissage",
+  "type": "feature",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "description": "<p>Vous êtes plein de bonne volonté mais vous possédez un problème que vous empêche d’apprendre correctement vos leçons. Que ce soient des troubles de la mémoire, de la dyslexie, des troubles de l’attention ou simplement une capacité extraordinaire à oublier où se trouvent vos affaires et vos devoirs, vous ne pouvez pas vous en sortir sans l’aide précieuse de vos amis.</p>",
+    "perkType": "fateBane",
+    "pbpCost": 0
+  },
+  "effects": []
+}

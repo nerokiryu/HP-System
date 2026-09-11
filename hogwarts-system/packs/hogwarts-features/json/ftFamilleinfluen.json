@@ -1,0 +1,12 @@
+{
+  "_id": "ftFamilleinfluen",
+  "name": "Famille influente",
+  "type": "feature",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Votre famille est très connue et influente dans le monde des sorciers, ce qui provoque l’admiration de la part des autres élèves et professeurs de Poudlard.</p>",
+    "perkType": "advantage",
+    "pbpCost": 1
+  },
+  "effects": []
+}

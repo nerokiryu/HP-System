@@ -1,6 +1,6 @@
 # AUDIT TECHNIQUE — Conformité Foundry VTT v14
 
-**Système :** `hogwarts-system` v1.0.0
+**Système :** `hogwarts-system` v1.0.1
 **Compatibilité déclarée :** minimum `14` · vérifié `14.365`
 **Commit audité :** `54bfeeb`
 **Dernière révision :** 8 septembre 2026
@@ -80,9 +80,10 @@ Le champ a été retiré du manifeste au profit de `trackableAttributes`.
 **T-03** ✅ **Résolu.** `CONFIG.Actor.trackableAttributes` est désormais déclaré par type dans
 le hook `init`, ce qui alimente correctement la configuration des barres de Token.
 
-**T-04** ⚪ **Ouvert, sans incidence.** Aucun `filePathFields` déclaré. Sans effet tant
-qu'aucun chemin de fichier n'est stocké dans `system` — à prévoir si des illustrations de
-créatures sont ajoutées (cf. **T-17**).
+**T-04** ✅ **Clos — sans objet.** Vérification faite : aucun schéma `system` ne stocke de
+chemin de fichier (les images d'acteur et d'objet vivent dans le champ `img` du document,
+géré par Foundry). Déclarer `filePathFields` reviendrait à déclarer un ensemble vide.
+À rouvrir si une illustration est un jour stockée dans `system` (cf. **T-17**).
 
 ---
 
@@ -133,24 +134,23 @@ utilisent désormais `static migrateData()` :
 Ordre imposé : `prepareData()` → `prepareBaseData()` → `applyActiveEffects()` →
 `prepareDerivedData()`.
 
-Deux correctifs antérieurs sont **corrects et doivent être conservés** :
+Un correctif antérieur est **correct et doit être conservé** :
 
 1. **`super.prepareBaseData()`** dans [actor.mjs](hogwarts-system/module/documents/actor.mjs) —
    sans lui, `_clearData()` ne réinitialise pas les phases d'Active Effect, d'où une exception
    « phase has already completed » à chaque mise à jour après la première.
    ✅ **VÉRIFIÉ** : plus aucune occurrence en jeu.
-2. **`_applySkillActiveEffects()`** — les DataModels recalculent `skill.value = base + spent`
-   dans `prepareDerivedData`, donc **après** les effets, écrasant tout effet visant
-   `system.skills.N.value`. Le correctif les réapplique.
 
-**T-06** 🟡 **Ouvert — contournement assumé.** Le motif officiel consiste à calculer
-`base + spent` dans `prepareBaseData()` (donc *avant* les effets) et à réserver
-`prepareDerivedData()` aux bornages. Le contournement actuel applique certains changements
-**deux fois** si un effet cible à la fois `…N.base` et `…N.value`, et ignore la sémantique
-d'ordre des modes `UPGRADE`/`DOWNGRADE`.
+Le second, `_applySkillActiveEffects()`, réappliquait les effets après coup ; il a été
+remplacé par le motif officiel décrit ci-dessous.
 
-> Non bloquant, aucun symptôme observé. À traiter lors d'une refonte du calcul des
-> compétences, pas en urgence.
+**T-06** ✅ **Résolu.** Le calcul suit désormais le motif officiel : `base + spent` est
+établi dans `prepareBaseData()`, donc **avant** les effets, et `prepareDerivedData()` ne
+fait plus qu'ajouter les bonus d'ascendance et le bornage. Pour qu'un effet visant
+`…N.base` reste pris en compte *sans* qu'un effet visant `…N.value` soit écrasé, la
+phase dérivée mesure l'écart introduit par les effets (`_preEffectValue`) et le réapplique
+après recalcul : chaque changement compte exactement une fois, ce qui supprime la double
+application signalée ici. `_applySkillActiveEffects()` a été supprimé.
 
 ---
 
@@ -375,14 +375,56 @@ T-23, 2 comparaisons lâches et 11 avertissements de style. Tous traités.
 
 | ID | Gravité | Action | Pourquoi c'est reporté |
 |----|---------|--------|------------------------|
-| T-27 | 🟡 | Ordre du tracker de combat désynchronisé de `combat.turns` | Reproduit le 2026-01-08 sur un combat rattaché à une scène : après `setupTurns()`, `combat.turns` vaut `[Elowen 19, Sascha 18, Rykard 16]` alors que le DOM affiche `[Rykard, Elowen, Sascha]`, et deux `ui.combat.render({force:true})` successifs ne corrigent rien. Foundry ne réordonne qu'au changement d'initiative. Impact limité (affichage), contournement : cliquer sur une initiative. Demande d'isoler si le défaut vient du système ou de Foundry v14 |
-| T-22 | 🟡 | Découper `actor-sheet.mjs` (3107 l.) | Refonte large sur le fichier le plus actif ; à faire dans une branche dédiée, pas en fin de cycle |
-| T-28 | 🟡 | Factoriser les quatre blocs identiques de `templates/actor/skills.hbs` | Les cinq lignes de jet de compétence sont dupliquées à l'octet près sur ~80 lignes chacune ; toute correction doit être répétée cinq fois. Découvert en corrigeant le préfixe `Skill:`, qui a dû être neutralisé côté code faute de pouvoir cibler une occurrence unique |
-| T-06 | 🟡 | Supprimer le contournement d'Active Effects sur les compétences | Touche le calcul de toutes les compétences ; aucun symptôme observé aujourd'hui |
-| T-17 | 🟡 | Illustrations des créatures (+ `filePathFields`, T-04) | Demande des ressources graphiques, pas du code |
-| T-04 | ⚪ | Déclarer `filePathFields` | Sans objet tant que T-17 n'est pas fait |
+| T-22 | 🟡 | Découper `actor-sheet.mjs` (3190 l.) | Refonte large sur le fichier le plus actif ; à faire dans une branche dédiée |
+| T-17 | 🟡 | Illustrations des créatures | Demande des ressources graphiques, pas du code |
 
-Tous les points P0 et P1 sont traités.
+T-04, T-06, T-27, T-28, T-29 et T-30 sont traités. Tous les points P0 et P1 sont traités.
+
+**T-29** ✅ **Corrigé en 1.0.1 — compétences préréglées jamais enregistrées.**
+`_backfillPresetSkills()` ne remplissait que les données préparées : un personnage neuf
+affichait 58 compétences sans en stocker **aucune**, et sept des dix personnages du monde de
+test étaient en décalage, l'écart correspondant aux préréglages ajoutés par une mise à jour du
+système — dont la compétence Animagus.
+
+**Portée réelle, mesurée après coup.** J'avais d'abord conclu que la fiche corrompait la liste
+dès la première saisie, parce qu'un `update()` visant un seul indice (`system.skills.42.spent`)
+produit bien 43 lignes vides : Foundry reconstruit l'`ArrayField` à partir des seules clés
+fournies. **C'était faux pour la fiche.** Vérification faite sur une saisie authentique, le
+formulaire renvoie ses 236 champs, soit les 58 lignes, et le tableau est reconstruit en entier :
+une fiche à zéro compétence stockée passe à 58, sans aucune ligne sans nom, et la valeur saisie
+arrive à la bonne compétence. Aucun code du système n'écrit par indice. Le risque ne concernait
+donc que les macros et modules tiers.
+
+Les deux correctifs sont conservés comme garde-fous : `Actor#_preCreate` inscrit les compétences
+préréglées à la création, et `persistBackfilledSkills()` réconcilie les fiches existantes à
+chaque chargement, ce qui absorbe aussi les futurs ajouts de préréglages.
+
+**T-30** ✅ **Corrigé en 1.0.1 — modificateur d'initiative inopérant.** `CONFIG.Combat.initiative`
+visait `@system.initiativeBonus`, alors que `Actor#getRollData()` renvoie `system` lui-même :
+ses clés sont à la racine et il n'existe aucune clé `system` imbriquée. La référence ne résolvait
+rien et le jet valait toujours `+0` — le champ n'avait jamais fonctionné depuis sa création.
+Mesuré avant/après sur un personnage à `−2` : `1d6 + 10 + 0` puis `1d6 + 10 − 2`, confirmé par un
+jet réel dans le tracker (total 13 pour un dé à 5). Le bouton de la fiche, qui recalculait le jet
+de son côté, ignorait en plus le modificateur d'ascendance (`dex.value` au lieu de `dex.total`).
+
+**T-27** ✅ **Clos — extérieur au système.** Mesuré le 2026-09-10 sur un combat rattaché à
+une scène, dans un seul appel :
+
+| Ce qui est mesuré | Ordre obtenu |
+|---|---|
+| `combat.turns` | Sascha, Elowen, Rykard |
+| Contexte de rendu (`_prepareTrackerContext`) | Sascha, Elowen, Rykard |
+| Gabarit `tracker.hbs` rendu à la main | Sascha, Elowen, Rykard |
+| **DOM affiché** | **Sascha, Rykard, Elowen** |
+
+Le tri du système, `setupTurns()`, le contexte et le gabarit **concordent tous** : la
+divergence apparaît *après* le rendu. Chaque `<li>` porte la classe `dsn-initiative-pending`
+de **Dice So Nice! 6.1.0**, seul module à instrumenter le tracker (avec `dice-calculator`,
+`find-the-culprit` et les deux modules Forge). Le nombre d'initiative masqué par un sablier,
+attribué à tort au badge de phase lors d'un relévé précédent, vient de la même source.
+
+> Aucun correctif côté système. À confirmer côté utilisateur en désactivant Dice So Nice!
+> le temps d'un lancement si la gêne persiste en partie.
 
 ---
 

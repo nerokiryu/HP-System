@@ -105,7 +105,10 @@ export default class HogwartsCreature extends HogwartsActorBase {
     }
     if (this.healthNonLethal) this.healthNonLethal.max = this.health.max;
 
-    // Damage bonus based on STR + SIZ
+    // Damage bonus based on STR + SIZ.
+    // EXTENSION MAISON : le livre de base, le Bestiaire et l'Encyclopédie ne
+    // publient aucune table de dommages pour les créatures. Les paliers hors du
+    // domaine humain (−1d4, −1d2, +3d6, +4d6) prolongent la table des personnages.
     const str = Number(this.stats.str?.value) || 0;
     const total = str + siz;
     if (total <= 12) {

@@ -1,0 +1,12 @@
+{
+  "_id": "ftParlefort00000",
+  "name": "Parle fort",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Vous avez tendance à parler trop fort, ce qui ennuie vos camarades et vos professeurs. Pour vous, chuchoter revient à parler normalement pour un autre élève. Vous êtes souvent rappelé à l’ordre en cours et dans les couloirs, et il n’est pas rare que vous écopiez de punitions.</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -0.5
+  },
+  "effects": []
+}

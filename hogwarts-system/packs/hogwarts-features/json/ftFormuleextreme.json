@@ -1,0 +1,12 @@
+{
+  "_id": "ftFormuleextreme",
+  "name": "Formule extrême",
+  "type": "feature",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Vous êtes capable de maîtriser la formule extrême du sortilège de niveau 1 que vous obtenez gratuitement. Remarque : incompatible avec le désavantage Milieu Moldu, qui ne donne pas accès au sort de niveau 1</p>",
+    "perkType": "advantage",
+    "pbpCost": 1
+  },
+  "effects": []
+}

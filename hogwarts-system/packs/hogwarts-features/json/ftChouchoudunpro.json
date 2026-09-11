@@ -1,0 +1,12 @@
+{
+  "_id": "ftChouchoudunpro",
+  "name": "Chouchou d’un professeur",
+  "type": "feature",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>L’un de vos professeurs vous adore et semble ne vous questionner que quand vous connaissez la réponse ou qu’il s’agit d’un thème qu’il sait que vous maîtrisez. A vous les points de Maison, même si ce n’est que rarement mérité</p>",
+    "perkType": "advantage",
+    "pbpCost": 1
+  },
+  "effects": []
+}

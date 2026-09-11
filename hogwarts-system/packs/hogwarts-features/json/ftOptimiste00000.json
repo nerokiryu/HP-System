@@ -1,0 +1,12 @@
+{
+  "_id": "ftOptimiste00000",
+  "name": "Optimiste",
+  "type": "feature",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Vous êtes d’un naturel optimiste et il en faut beaucoup pour vous démoraliser. Aussi mauvaise que la situation puisse être, vous arrivez toujours à voir le positif. Les malus qui s’appliquent à cause de la tristesse ou du découragement ne s’appliquent pas à vous</p>",
+    "perkType": "advantage",
+    "pbpCost": 0.5
+  },
+  "effects": []
+}

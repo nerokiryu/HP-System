@@ -1,0 +1,12 @@
+{
+  "_id": "ftChanceux000000",
+  "name": "Chanceux",
+  "type": "feature",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Tout semble vous sourire et la majeure partie des actions que vous entreprenez se solde par de brillantes réussites. Vous êtes naturellement doué dans tout ce que vous faites. La zone de réussite critique passe à 001-010.</p>",
+    "perkType": "advantage",
+    "pbpCost": 2
+  },
+  "effects": []
+}

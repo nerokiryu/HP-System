@@ -1,0 +1,12 @@
+{
+  "_id": "ftSouffredouleur",
+  "name": "Souffre-douleur",
+  "type": "feature",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "description": "<p>Une personne influente de votre entourage ne vous supporte pas et vous le fait savoir au quotidien, vous rendant la vie impossible. Qu’il s’agisse d’un professeur, d’un préfet ou d’un camarade influant, attendez-vous à passer de sales moments au cours de votre formation.</p>",
+    "perkType": "fateBane",
+    "pbpCost": 0
+  },
+  "effects": []
+}

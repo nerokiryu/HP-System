@@ -1,0 +1,78 @@
+{{! Une catégorie de compétences : en-tête de colonnes puis une ligne par entrée.
+    Attendu dans le contexte : `category` (clé), `label` (clé de traduction) et
+    `rows` (le tableau `skillsByCategory.<category>`). }}
+<div class='skill-category'>
+  <h3 class='collapsible' data-action='toggleSkillCategory' data-category='{{category}}'>
+    <i class='fas fa-chevron-down'></i>
+    {{localize label}}
+  </h3>
+  <div class='skill-category-content' data-category='{{category}}'>
+    <ol class='items-list'>
+      <li class='item flexrow items-header'>
+        <div class='item-name'>{{localize 'HOGWARTS.Name'}}</div>
+        <div class='item-prop'>{{localize 'HOGWARTS.Skills.Specialization'}}</div>
+        <div class='item-prop' data-tooltip='{{localize "HOGWARTS.Skills.BaseHint"}}'>{{localize 'HOGWARTS.Skills.Base'}}</div>
+        <div class='item-prop' data-tooltip='{{localize "HOGWARTS.Skills.MaxHint"}}'>{{localize 'HOGWARTS.Skills.Max'}}</div>
+        <div class='item-prop'>{{localize 'HOGWARTS.Skills.Spent'}}</div>
+        <div class='item-prop'>{{localize 'HOGWARTS.Skills.Value'}}</div>
+        <div class='item-prop xp-col'>{{localize 'HOGWARTS.Skills.XPCheck'}}</div>
+        <div class='item-controls'>
+          <a class='item-control' data-action='addSkill' data-category='{{category}}' data-tooltip='{{localize "HOGWARTS.Skills.Add"}}'>
+            <i class='fas fa-plus'></i>
+          </a>
+        </div>
+      </li>
+      {{#each rows as |row|}}
+        <li class='item flexrow {{#if (gt row.entry.base row.entry.max)}}is-invalid{{/if}}'>
+          <div class='item-name'>
+            {{#if row.entry.custom}}
+              <input type='text' name='system.skills.{{row.index}}.name' value='{{row.entry.name}}' data-dtype='String' />
+            {{else}}
+              {{skillName row.entry.name}}
+            {{/if}}
+          </div>
+          <div class='item-prop'>
+            {{#if (includes row.entry.name '(...)')}}
+              <input type='text' name='system.skills.{{row.index}}.spec' value='{{row.entry.spec}}' data-dtype='String' placeholder='{{localize "HOGWARTS.Skills.Specialization"}}' />
+            {{else}}-
+            {{/if}}
+          </div>
+          <div class='item-prop'>
+            <input type='number' name='system.skills.{{row.index}}.base' value='{{row.entry.base}}' data-dtype='Number' />
+          </div>
+          <div class='item-prop'>
+            <input type='number' name='system.skills.{{row.index}}.max' value='{{row.entry.max}}' data-dtype='Number' />
+          </div>
+          <div class='item-prop'>
+            <input type='number'
+                   name='system.skills.{{row.index}}.spent'
+                   value='{{row.entry.spent}}'
+                   data-dtype='Number'
+                   min='0'
+                   max='{{subtract row.entry.max row.entry.base}}'
+                   title='{{localize "HOGWARTS.Skills.SpentCap"}} 0–{{subtract row.entry.max row.entry.base}}'
+                   data-tooltip='{{localize "HOGWARTS.Skills.SpentCap"}} 0–{{subtract row.entry.max row.entry.base}}' />
+          </div>
+          <div class='item-prop'{{#if row.entry.featureBonus}} data-tooltip='{{localize "HOGWARTS.Skills.FeatureBonus"}} {{numberFormat row.entry.featureBonus sign=true}}'{{/if}}>{{row.entry.value}}</div>
+          <div class='item-prop xp-col'>
+            <input type='checkbox' name='system.skills.{{row.index}}.xpCheck' {{#if row.entry.xpCheck}}checked{{/if}} />
+          </div>
+          <div class='item-controls'>
+            <a class='rollable'
+               data-action='roll'
+               data-roll='1d100'
+               data-label='{{skillName row.entry.name}}{{#if row.entry.spec}} ({{row.entry.spec}}){{/if}}'
+               data-target='{{row.entry.value}}'>
+              <i class='fas fa-dice-d10'></i>
+            </a>
+            {{#if row.entry.custom}}
+              <a class='item-control' data-action='deleteSkill' data-index='{{row.index}}' data-tooltip='{{localize "HOGWARTS.Skills.Delete"}}'>
+                <i class='fas fa-minus'></i>
+              </a>
+            {{/if}}
+          </div>
+        </li>
+      {{/each}}
+    </ol>
+  </div>
+</div>

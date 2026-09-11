@@ -1,0 +1,12 @@
+{
+  "_id": "ftHonni000000000",
+  "name": "Honni",
+  "type": "feature",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "description": "<p>Votre famille vous déteste et vous le fait savoir. Vous ne recevrez aucune aide venant de sa part et n’espérez surtout pas passer vos vacances chez vous. Plus vous serez loin d’elle et plus elle se portera bien. N’espérez pas de signature de leur part pour une éventuelle sortie ou tout autre événement qui pourrait vous rendre heureux.</p>",
+    "perkType": "fateBane",
+    "pbpCost": 0
+  },
+  "effects": []
+}

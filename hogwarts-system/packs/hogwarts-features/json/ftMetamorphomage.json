@@ -1,0 +1,12 @@
+{
+  "_id": "ftMetamorphomage",
+  "name": "Métamorphomage",
+  "type": "feature",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Vous possédez la capacité magique de vous métamorphoser spontanément, sans l'aide d’une potion ou d’un sortilège. Vous pouvez ainsi prendre l’apparence de n’importe qui ou simplement changer votre âge, votre sexe ou une partie de votre physique. Avec de la concentration, un métamorphomage peut même prendre l’apparence d’un fantôme. Lorsque vous ressentez de puissants sentiments (joie, colère, tristesse), votre chevelure se colore spontanément, devenant rose, bleu, violette selon votre humeur. Cet avantage octroie une nouvelle compétence : Métamorphomage à 20% (degré de maîtrise maximal : 90%).</p>",
+    "perkType": "advantage",
+    "pbpCost": 2
+  },
+  "effects": []
+}

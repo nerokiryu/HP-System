@@ -1,0 +1,12 @@
+{
+  "_id": "ftResistanceimmu",
+  "name": "Résistance immunitaire",
+  "type": "feature",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>D’aussi loin que vous vous souvenez, vous avez toujours été plus résistant que vos camarades aux maladies et autres substances potentiellement dangereuses pour votre organisme. Quand vous devez effectuer un jet de résistance contre la VIRulence d’une maladie ou d’un poison, celle-ci est diminuée de 2. Les maladies ou poisons de VIRulence 2 ou moins ne vous affectent donc pas.</p>",
+    "perkType": "advantage",
+    "pbpCost": 0.5
+  },
+  "effects": []
+}

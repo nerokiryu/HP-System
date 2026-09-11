@@ -1,0 +1,12 @@
+{
+  "_id": "ftDetteeternelle",
+  "name": "Dette éternelle",
+  "type": "feature",
+  "img": "icons/svg/sun.svg",
+  "system": {
+    "description": "<p>Vous ou votre famille a rendu un service inestimable à un club, une famille rivale ou tout autre organisation influente de l’école dans laquelle vous suivez vos études. Cette dette vous octroie une aide providentielle quand vous en aurez le plus besoin et celle-ci durera durant toute votre scolarité.</p>",
+    "perkType": "fateBoon",
+    "pbpCost": 0
+  },
+  "effects": []
+}

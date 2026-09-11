@@ -44,6 +44,10 @@ Hooks.once('init', function () {
   // Add custom constants for configuration.
   CONFIG.HOGWARTS = HOGWARTS;
 
+  foundry.applications.handlebars.loadTemplates({
+    hogwartsSkillCategory: 'systems/hogwarts-system/templates/actor/parts/skill-category.hbs',
+  });
+
   /**
    * Set an initiative formula for the system
    * @type {String}
@@ -53,7 +57,9 @@ Hooks.once('init', function () {
     // Include a system-local `initiativeBonus` so Active Effects can add a dedicated
     // initiative modifier without altering the DEX stat itself. Use a simple token
     // reference (no JS operators) so the Roll parser can parse the formula.
-    formula: '1d6 + @stats.dex.total + @system.initiativeBonus',
+    // `Actor#getRollData` returns `system` itself, so its keys sit at the root:
+    // `@system.initiativeBonus` resolves to nothing and silently rolls as 0.
+    formula: '1d6 + @stats.dex.total + @initiativeBonus',
     decimals: 2,
   };
 
@@ -308,11 +314,48 @@ Handlebars.registerHelper('skillName', function (name) {
 /*  Ready Hook                                  */
 /* -------------------------------------------- */
 
+/**
+ * Persist the skills `_backfillPresetSkills` only ever added in memory.
+ *
+ * The sheet edits skills by array index, so a stored list shorter than the
+ * prepared one makes an edit land on the wrong row and pads the array with
+ * nameless entries. Runs on every load rather than once, because the gap
+ * reappears each time a system update publishes a new preset skill.
+ */
+async function persistBackfilledSkills() {
+  if (!game.user?.isGM) return;
+  const KEYS = ['name', 'base', 'max', 'maxOverride', 'spent', 'category', 'spec', 'custom', 'xpCheck'];
+  const updates = [];
+
+  for (const actor of game.actors) {
+    if (actor.type !== 'character') continue;
+    const stored = actor._source?.system?.skills ?? [];
+    const prepared = actor.system?.skills ?? [];
+    const blanks = stored.filter((s) => !s.name).length;
+    if (!blanks && stored.length === prepared.length) continue;
+
+    const skills = prepared.filter((s) => s.name).map((s) => {
+      const kept = Object.fromEntries(KEYS.map((k) => [k, s[k]]));
+      kept.value = Math.max(kept.base, Math.min(kept.base + kept.spent, kept.max || Infinity));
+      return kept;
+    });
+    updates.push({ _id: actor.id, 'system.skills': skills });
+  }
+
+  if (!updates.length) return;
+  await Actor.updateDocuments(updates);
+  console.log(`HOGWARTS | Compétences préréglées enregistrées sur ${updates.length} personnage(s)`);
+}
+
 Hooks.once('ready', async function () {
   // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
   Hooks.on('hotbarDrop', (bar, data, slot) => createDocMacro(data, slot));
 
-
+  try {
+    await persistBackfilledSkills();
+  } catch (e) {
+    console.error('HOGWARTS | Échec de l\'enregistrement des compétences préréglées', e);
+  }
 
   // Migration framework: register versioned migrations and run those
   try {

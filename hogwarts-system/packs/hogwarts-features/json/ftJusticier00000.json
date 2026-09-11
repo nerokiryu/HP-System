@@ -1,0 +1,12 @@
+{
+  "_id": "ftJusticier00000",
+  "name": "Justicier",
+  "type": "feature",
+  "img": "icons/svg/castle.svg",
+  "system": {
+    "description": "<p>Le joueur peut – une fois par scénario – appliquer son code de l’honneur pour empêcher un acte malveillant. Cela se traduira par un bonus à toutes ses actions de 30% durant cet acte. Remarque : Axiome des Poufsouffle</p><p><em>Axiome de Maison : accordé d'office, il n'entre pas dans le calcul des points de création (§5).</em></p>",
+    "perkType": "houseAxiom",
+    "pbpCost": 0
+  },
+  "effects": []
+}

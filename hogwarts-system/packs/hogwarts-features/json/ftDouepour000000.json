@@ -1,0 +1,33 @@
+{
+  "_id": "ftDouepour000000",
+  "name": "Doué pour…",
+  "type": "feature",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Vous avez de grandes facilités une langue étrangère, les runes, les énigmes ou tout autre domaine qui sort du cadre scolaire. Donne un bonus de 10% dans ce domaine. Chaque jet pour gagner de l’expérience dans ce domaine octroie 1/3 de point(s) en plus.</p>",
+    "perkType": "advantage",
+    "pbpCost": 1
+  },
+  "effects": [
+    {
+      "_id": "feDouepour000000",
+      "name": "Doué pour…",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "changes": [
+        {
+          "key": "system.skillBonus.COMPETENCE-A-CHOISIR",
+          "mode": 2,
+          "value": "10",
+          "priority": 20
+        }
+      ],
+      "disabled": true,
+      "transfer": true,
+      "description": "<p>Remplacez « COMPETENCE-A-CHOISIR » dans la clé de la modification par le nom exact de la compétence choisie, puis activez l'effet.</p>",
+      "duration": {},
+      "statuses": [],
+      "flags": {}
+    }
+  ]
+}

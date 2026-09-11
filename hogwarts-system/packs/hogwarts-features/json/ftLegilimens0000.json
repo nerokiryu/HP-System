@@ -1,0 +1,12 @@
+{
+  "_id": "ftLegilimens0000",
+  "name": "Legilimens",
+  "type": "feature",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Vous possédez la capacité de pénétrer les pensées d’une personne (à l’aide du sortilège Legilimens) pour en extraire les souvenirs. Avec de l’entraînement, vous pouvez également modifier des souvenirs ou en imposer de faux sans que la personne ne s’en aperçoive. Donne une compétence Legilimancie à 15% de maîtrise. Maîtrise maximale 80%</p>",
+    "perkType": "advantage",
+    "pbpCost": 2
+  },
+  "effects": []
+}

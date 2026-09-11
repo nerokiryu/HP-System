@@ -1,0 +1,12 @@
+{
+  "_id": "ftRiche000000000",
+  "name": "Riche",
+  "type": "feature",
+  "img": "icons/svg/sun.svg",
+  "system": {
+    "description": "<p>Vous et votre famille êtes riches, pour ne pas dire richissimes. Vous possédez tant d’argent que vous ne savez pas quoi en faire. Chaque trimestre, vous possédez plusieurs dizaines de Gallions (généralement 100 par année) pour vos emplettes. Pratique quand il s’agit d’obtenir des ingrédients pour potions ou tout autre matériel pour vos escapades nocturnes.</p>",
+    "perkType": "fateBoon",
+    "pbpCost": 0
+  },
+  "effects": []
+}

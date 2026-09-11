@@ -1,0 +1,12 @@
+{
+  "_id": "ftSomnambulisme0",
+  "name": "Somnambulisme",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Vous vous déplacez dans votre sommeil et il n’est pas rare que vous vous réveilliez hors de votre chambre. Un conseil, dormez avec des chaussures aux pieds car le sol des écoles de magie a tendance à être froid.</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -1
+  },
+  "effects": []
+}

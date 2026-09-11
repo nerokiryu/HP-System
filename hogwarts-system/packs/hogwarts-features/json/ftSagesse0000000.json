@@ -1,0 +1,12 @@
+{
+  "_id": "ftSagesse0000000",
+  "name": "Sagesse",
+  "type": "feature",
+  "img": "icons/svg/castle.svg",
+  "system": {
+    "description": "<p>En recherche de paix intérieure et d’harmonie avec l’univers, le sage cherche sa voie sur le chemin de la méditation. Nouvelle compétence de méditation à 15% (degré de maîtrise maximal : 95%) permettant de se relaxer, de récupérer de la fatigue et du stress, de survivre dans des conditions météorologiques horribles, de résoudre une énigme… Remarque : Axiome des Serdaigles</p><p><em>Axiome de Maison : accordé d'office, il n'entre pas dans le calcul des points de création (§5).</em></p>",
+    "perkType": "houseAxiom",
+    "pbpCost": 0
+  },
+  "effects": []
+}

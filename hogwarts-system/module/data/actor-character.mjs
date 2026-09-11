@@ -72,6 +72,18 @@ export default class HogwartsCharacter extends HogwartsActorBase {
       })
     );
 
+    // Bonus de compétence indexé par nom, et unique cible praticable des Active
+    // Effects : `skills` étant un tableau, la clé `system.skills.N.value` dépend
+    // de l'ordre des compétences du personnage, qu'un objet de compendium ne peut
+    // pas connaître. `system.skillBonus.Athlétisme` est stable partout, donc un
+    // avantage comme Sportif (§5.2) s'applique tel quel à n'importe quelle fiche.
+    //
+    // Surtout pas d'`initial: {}` : un littéral est évalué une seule fois et la
+    // même référence serait partagée par toutes les fiches sans valeur stockée,
+    // faisant fuir les bonus de l'une à l'autre. La valeur par défaut du champ
+    // est une fabrique, qui rend un objet neuf à chaque fois.
+    schema.skillBonus = new fields.ObjectField();
+
     // Family - array of characters
     schema.family = new fields.ArrayField(
       new fields.SchemaField({
@@ -200,9 +212,16 @@ export default class HogwartsCharacter extends HogwartsActorBase {
       otherSchool: new fields.BooleanField({ initial: false })
     });
 
-    // Animagus (Rules: only characters with the 'Animagus Potential' feature)
+    // Le chapitre 16 publie le processus en dix étapes et un test déterminant la
+    // catégorie d'animal (§16.2), mais aucune règle chiffrée de transformation :
+    // `mastery` et le jet associé sont une extension maison.
     schema.animagus = new fields.SchemaField({
       form: new fields.StringField({ blank: true, initial: '' }),
+      profile: new fields.StringField({
+        blank: true,
+        initial: '',
+        choices: ['', 'brave', 'wise', 'loyal', 'playful', 'solitary', 'timid'],
+      }),
       mastery: new fields.StringField({
         blank: true,
         initial: 'none',
@@ -249,29 +268,75 @@ export default class HogwartsCharacter extends HogwartsActorBase {
 
   prepareBaseData() {
     if (!Array.isArray(this.skills)) this.skills = [];
-    const presets = CONFIG.HOGWARTS?.skillPresets;
-    if (!presets) return;
+    this._backfillPresetSkills();
+    this._seedSkillBonuses();
 
-    // Preset skills cannot be deleted from the sheet, so a missing one always
-    // means the system added it after this actor was created. Backfilling here
-    // covers both a brand-new actor and one predating a preset being added.
-    const known = new Set(this.skills.map(s => `${s.category}:${s.name}`));
+    // Computed here, before Active Effects run, so an effect targeting
+    // `system.skills.N.value` has a coherent number to modify. The snapshot lets
+    // prepareDerivedData tell an effect's contribution apart from its own
+    // recomputation instead of destroying one with the other.
+    this._computeSkillValues();
+    for (const s of this.skills) s._preEffectValue = s.value;
+  }
+
+  /**
+   * Give every skill a numeric bonus slot before Active Effects run.
+   *
+   * Foundry infers a change's type from the value already in place, so an ADD
+   * landing on an absent key would store the string "15" instead of the number.
+   * Names containing a dot are skipped: `foundry.utils.setProperty` splits paths
+   * on it, so the "(...)" specialisation skills are not addressable — they are
+   * per-character anyway and no published feature targets them.
+   */
+  _seedSkillBonuses() {
+    if (!this.skillBonus || typeof this.skillBonus !== 'object') this.skillBonus = {};
+    for (const s of this.skills) {
+      if (!s.name || s.name.includes('.')) continue;
+      this.skillBonus[s.name] = Number(this.skillBonus[s.name]) || 0;
+    }
+  }
+
+  /**
+   * Preset skills as *stored* data. The sheet edits skills by array index
+   * (`system.skills.N.spent`), so the stored array has to hold every skill the
+   * prepared one shows, or an edit lands on the wrong row.
+   * @returns {object[]}
+   */
+  static presetSkills() {
+    const presets = CONFIG.HOGWARTS?.skillPresets ?? {};
+    const out = [];
     for (const [category, list] of Object.entries(presets)) {
       for (const entry of list) {
-        if (known.has(`${category}:${entry.name}`)) continue;
-        this.skills.push({
+        out.push({
           name: entry.name,
           base: Number(entry.base) || 0,
           max: Number(entry.max) || 95,
           maxOverride: false,
-          value: 0,
+          value: Number(entry.base) || 0,
           spent: 0,
           category,
           spec: '',
           custom: false,
-          xpCheck: false
+          xpCheck: false,
         });
       }
+    }
+    return out;
+  }
+
+  /**
+   * Add preset skills the actor is missing. Preset skills cannot be deleted from
+   * the sheet, so a missing one always means the system added it after this actor
+   * was created.
+   */
+  _backfillPresetSkills() {
+    const presets = CONFIG.HOGWARTS?.skillPresets;
+    if (!presets) return;
+
+    const known = new Set(this.skills.map(s => `${s.category}:${s.name}`));
+    for (const entry of this.constructor.presetSkills()) {
+      if (known.has(`${entry.category}:${entry.name}`)) continue;
+      this.skills.push({ ...entry });
     }
 
     // Some ancestries grant a skill an ordinary wizard never has (§17.2.6).
@@ -293,6 +358,44 @@ export default class HogwartsCharacter extends HogwartsActorBase {
       });
       known.add(`general:${skill.name}`);
     }
+  }
+
+  /**
+   * Clamp `spent` against the mastery ceiling and set `value = base + spent`.
+   * @returns {number} Total points spent, school subjects optionally excluded.
+   */
+  _computeSkillValues() {
+    if (!Array.isArray(this.skills)) return 0;
+
+    const year = Number(this.profile?.year) || 1;
+    const excludeSchoolFromCP = game.settings.get('hogwarts-system', 'excludeSchoolSkillsFromCP') ?? false;
+    // Maîtrise maximale scolaire : 30 % en 1re année, +15 %/an, plafonnée à
+    // 100 % (livre v1.12, l. 6707-6714). Un `maxOverride` coupe l'automatisme.
+    const autoSchoolMax = Math.min(100, 30 + (year - 1) * 15);
+    let totalSpent = 0;
+
+    for (const s of this.skills) {
+      const b = Number(s.base) || 0;
+      let m = Number(s.max) || 0;
+
+      if (s.category === 'school' && !s.maxOverride) {
+        m = autoSchoolMax;
+        s.max = autoSchoolMax;
+      }
+
+      const rawSpent = Number(s.spent) || 0;
+      const maxSpent = Math.max(0, m - b);
+      const p = Math.max(0, Math.min(rawSpent, maxSpent));
+      s.spent = p;
+
+      let v = b + p;
+      if (m > 0) v = Math.min(v, m);
+      s.value = Math.max(v, b);
+
+      if (!excludeSchoolFromCP || s.category !== 'school') totalSpent += p;
+    }
+
+    return totalSpent;
   }
 
   /**
@@ -432,43 +535,27 @@ export default class HogwartsCharacter extends HogwartsActorBase {
 
     // Derive value from base + spent and clamp to [base, max];
     // also clamp spent to [0, max - base]
-    const year = Number(this.profile?.year) || 1;
-    const excludeSchoolFromCP = game.settings.get('hogwarts-system', 'excludeSchoolSkillsFromCP') ?? false;
-    let totalSkillsSpent = 0;
+    // An Active Effect ran between prepareBaseData and here. Capture what it
+    // added before recomputing, so an effect on `…N.value` survives while one on
+    // `…N.base` is picked up by the recomputation — each counted exactly once.
+    const effectDeltas = (this.skills ?? []).map(
+      (s) => (Number(s.value) || 0) - (Number(s._preEffectValue) || 0),
+    );
+    const totalSkillsSpent = this._computeSkillValues();
+
     if (Array.isArray(this.skills)) {
-      // Maîtrise maximale scolaire : 30 % en 1re année, +15 %/an, plafonnée à
-      // 100 % (livre v1.12, l. 6707-6714). Un `maxOverride` coupe l'automatisme.
-      const autoSchoolMax = Math.min(100, 30 + (year - 1) * 15);
-
-      for (const s of this.skills) {
-        const b = Number(s.base) || 0;
-        let m = Number(s.max) || 0;
-
-        if (s.category === 'school' && !s.maxOverride) {
-          m = autoSchoolMax;
-          s.max = autoSchoolMax;
-        }
-
-        const rawSpent = Number(s.spent) || 0;
-        const maxSpent = Math.max(0, m - b);
-        const p = Math.max(0, Math.min(rawSpent, maxSpent));
-        s.spent = p;
-        let v = b + p;
-        if (m > 0) v = Math.min(v, m);
-        v = Math.max(v, b);
-
+      this.skills.forEach((s, i) => {
         // Ancestry bonuses sit on top of the mastery ceiling: they are innate,
-        // not points the character spent (§17.2).
+        // not points the character spent (§17.2). Feature bonuses follow the same
+        // rule, which the book states outright for Érudition — its +15 % "peut
+        // vous permettre de dépasser, à la création, le bonus maximal de 50%".
         const hybridBonus = Number(this.hybridEffects?.skillBonus?.[s.name]) || 0;
+        const featureBonus = Number(this.skillBonus?.[s.name]) || 0;
         s.hybridBonus = hybridBonus;
+        s.featureBonus = featureBonus;
         s.hybridXp = this.hybridEffects?.skillXp?.includes(s.name) ?? false;
-        s.value = v + hybridBonus;
-
-        // Accumulate total spent points (school subjects optionally excluded)
-        if (!excludeSchoolFromCP || s.category !== 'school') {
-          totalSkillsSpent += p;
-        }
-      }
+        s.value = (Number(s.value) || 0) + hybridBonus + featureBonus + effectDeltas[i];
+      });
     }
 
     // Auto-calculate creation points spent based on skills

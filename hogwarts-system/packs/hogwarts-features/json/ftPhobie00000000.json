@@ -1,0 +1,12 @@
+{
+  "_id": "ftPhobie00000000",
+  "name": "Phobie",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Vous possédez une phobie (araignée, noir, eau, claustrophobie, etc.) qui vous limite dans un certain domaine. Cela vous inflige de gros malus quand vous êtes en contact avec l’objet de votre phobie.</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -0.5
+  },
+  "effects": []
+}

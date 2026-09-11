@@ -1,0 +1,12 @@
+{
+  "_id": "ftTemeraire00000",
+  "name": "Téméraire",
+  "type": "feature",
+  "img": "icons/svg/castle.svg",
+  "system": {
+    "description": "<p>Vous avez tendance à confondre courage et témérité et vous vous mettez dans des situations dangereuses en ne le remarquant que quand il est trop tard. Remarque : Axiome des Gryffondors</p><p><em>Axiome de Maison : accordé d'office, il n'entre pas dans le calcul des points de création (§5).</em></p>",
+    "perkType": "houseAxiom",
+    "pbpCost": 0
+  },
+  "effects": []
+}

@@ -1,0 +1,12 @@
+{
+  "_id": "ftDernierdelacla",
+  "name": "Dernier de la classe",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Travailler n’est pas votre fort ou vous avez besoin de tricher en permanence pour finir vos devoirs et passer vos examens. Accéder aux années supérieures s’avèrera difficile.</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -2
+  },
+  "effects": []
+}

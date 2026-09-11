@@ -1,0 +1,33 @@
+{
+  "_id": "ftLentaladetente",
+  "name": "Lent à la détente",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Les duels magiques ne sont pas votre fort et vous ne parvenez pas à lire le comportement de votre adversaire durant ceux-ci. Lors de duel magique, vous lancez vos sortilèges avec un malus de -3 en initiative</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -0.5
+  },
+  "effects": [
+    {
+      "_id": "feLentaladetente",
+      "name": "Lent à la détente",
+      "img": "icons/svg/downgrade.svg",
+      "type": "base",
+      "changes": [
+        {
+          "key": "system.initiativeBonus",
+          "mode": 2,
+          "value": "-3",
+          "priority": 20
+        }
+      ],
+      "disabled": true,
+      "transfer": true,
+      "description": "<p>Le livre limite ce modificateur à une situation précise : activez l'effet le temps qu'elle dure.</p>",
+      "duration": {},
+      "statuses": [],
+      "flags": {}
+    }
+  ]
+}

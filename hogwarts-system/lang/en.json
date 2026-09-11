@@ -136,7 +136,25 @@
         "Transformed": "In animal form",
         "Transform": "Transform",
         "Revert": "Revert to human form",
-        "Declared": "Registered with the Ministry"
+        "Declared": "Registered with the Ministry",
+        "Profile": {
+          "brave": "Brave, heroic, headstrong — lion, bear, stag, horse…",
+          "wise": "Free-spirited, wise, sharp-witted — eagle, owl…",
+          "loyal": "Loyal and unfailingly devoted — dog, wolf, badger…",
+          "playful": "Playful, mischievous and vengeful — cat, otter, weasel, squirrel, magpie, fox…",
+          "solitary": "Solitary, taking revenge slyly — snake, spider, bat, rat…",
+          "timid": "Timid, retiring, good-natured — roe deer, doe, hedgehog, small rodents, rabbit…"
+        },
+        "ProfileLabel": "Profile (§16.2)",
+        "ProfileHint": "Result of the §16.2 personality test, which gives the animal category. The questionnaire itself is not reproduced: refer to the book.",
+        "ProfileNone": "Undetermined",
+        "MasteryHint": "House extension: the book publishes no mastery tiers.",
+        "TransformHint": "House extension: roll against the Animagus skill. The book describes the process (§16.1) without any numbers.",
+        "NoSkill": "This character does not have the Animagus skill.",
+        "TransformSuccess": "The transformation succeeds.",
+        "TransformFailure": "The transformation fails.",
+        "Reverted": "Returns to human form.",
+        "HumanForm": "Human form"
       },
       "base": {
         "FIELDS": {
@@ -304,7 +322,10 @@
         "muggle": "Muggle Skills",
         "school": "School Subjects",
         "special": "Special Skills"
-      }
+      },
+      "BaseHint": "House extension: the book publishes no table of base masteries; these values belong to this system.",
+      "MaxHint": "House extension: the book publishes no table of maximum masteries; these values belong to this system.",
+      "FeatureBonus": "Of which granted by an advantage or disadvantage:"
     },
     "SkillDisplay": {
       "Acrobatie/Quidditch": "Acrobatie/Quidditch",
@@ -363,7 +384,8 @@
       "Alchimie": "Alchimie",
       "Duels": "Duels",
       "Legilimancie": "Legilimancie",
-      "Occlumancie": "Occlumancie"
+      "Occlumancie": "Occlumancie",
+      "Animagus": "Animagus"
     },
     "Item": {
       "Tabs": {
@@ -473,7 +495,8 @@
             "label": "Has an extreme formula"
           },
           "preSchool": {
-            "label": "Instinctive Spell (Pre-school)"
+            "label": "Instinctive Spell (Pre-school)",
+            "hint": "House extension: the POW × 3 roll does not appear in the book. Uncheck to use the school skill instead."
           },
           "malusMastered": {
             "label": "Base malus once mastered"
@@ -554,6 +577,7 @@
         "Use": "Use a dose",
         "Brewing": "Brewing",
         "BrewSuccess": "Potion brewed successfully!",
+        "BrewPerfect": "Perfect potion: the potion's variable effects are maximised (l. 12922).",
         "BrewFailure": "Brewing failed. Ingredients are lost.",
         "BrewFumble": "Disaster! An unexpected side effect occurs!",
         "MissingIngredients": "Not all ingredients are available!",
@@ -718,6 +742,7 @@
       "NoTarget": "No target selected",
       "Damage": "Damage",
       "Initiative": "Initiative",
+      "InitiativeBonus": "Permanent modifier",
       "Roll": "Roll",
       "Result": "Result",
       "Target": "Target",

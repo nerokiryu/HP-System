@@ -1,0 +1,12 @@
+{
+  "_id": "ftMaldesPortoloi",
+  "name": "Mal des Portoloins",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Comme certaines personnes souffrent de mal des transports, vous êtes malade dès que vous utilisez des Portoloins. En utiliser ne serait-ce qu’un vous procure des nausées violentes et vous rend incapable d’agir.</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -0.5
+  },
+  "effects": []
+}

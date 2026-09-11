@@ -1,0 +1,12 @@
+{
+  "_id": "ftParanoiaque000",
+  "name": "Paranoïaque",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Vous avez l’impression que le monde entier vous veut du mal et qu’on vous surveille en permanence. Vous avez tendance à voir des conspirations à votre encontre là où il n’y a rien, ce qui vous empêche souvent de dormir ou de vous concentrer sur vos tâches.</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -1
+  },
+  "effects": []
+}

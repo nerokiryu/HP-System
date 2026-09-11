@@ -1,0 +1,12 @@
+{
+  "_id": "ftEducationmixte",
+  "name": "Éducation mixte",
+  "type": "feature",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Bien que né-sorcier, vous avez été élevé chez des moldus ou inversement. Donne accès aux compétences moldus en même temps que celles des sorciers. Vous n’avez cependant la maîtrise de base que de l’une des deux catégories de compétences (au choix du joueur) Remarque : Adaptation du background en conséquence</p>",
+    "perkType": "advantage",
+    "pbpCost": 1.5
+  },
+  "effects": []
+}

@@ -1,0 +1,12 @@
+{
+  "_id": "ftPerfectionnist",
+  "name": "Perfectionniste",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Vous ne supportez pas que vos devoirs soient laissés en plans ou bâclés et vous prenez toujours plus de temps que les autres pour qu’ils soient parfaits. Cela vous attire de bonnes notes mais diminue considérablement votre temps libre. Augmente de 1/3 le temps nécessaire pour faire ses devoirs et inflige un malus de 15% dans les compétences intellectuelles durant 24 heures si ceux-ci ne sont pas faits correctement</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -1
+  },
+  "effects": []
+}

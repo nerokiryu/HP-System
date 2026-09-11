@@ -4,6 +4,22 @@
  */
 export class HogwartsActor extends Actor {
 
+  /**
+   * @override
+   * Store the preset skills at creation. The sheet addresses skills by array
+   * index, so a character born with an empty stored list would have its first
+   * skill edit written into the wrong slot, padding the array with blank rows.
+   */
+  async _preCreate(data, options, user) {
+    const allowed = await super._preCreate(data, options, user);
+    if (allowed === false) return false;
+    if (this.type === 'character' && !this._source.system?.skills?.length) {
+      const model = CONFIG.Actor.dataModels.character;
+      this.updateSource({ 'system.skills': model.presetSkills() });
+    }
+    return allowed;
+  }
+
   /** @override */
   prepareBaseData() {
     // IMPORTANT (Foundry v14): call super so that Actor#prepareBaseData runs
@@ -24,35 +40,6 @@ export class HogwartsActor extends Actor {
    */
   prepareDerivedData() {
     super.prepareDerivedData();
-
-    // Re-apply Active Effect changes that target skill entries.
-    //
-    // Foundry's preparation pipeline runs in the order:
-    //   prepareBaseData → applyActiveEffects → prepareDerivedData
-    // The actor DataModels recompute each skill's `value` (and `spent`) from
-    // `base + spent` inside prepareDerivedData. Because that runs AFTER Active
-    // Effects have been applied, it destructively overwrites any effect that
-    // targets `system.skills.N.value`, so the bonus never shows up.
-    //
-    // Re-applying those specific changes here, on top of the freshly computed
-    // values, restores the intended effect contribution.
-    this._applySkillActiveEffects();
-  }
-
-  /**
-   * Re-apply Active Effect changes whose key targets a skill entry
-   * (`system.skills.*`), after derived data has recomputed skill values.
-   * @protected
-   */
-  _applySkillActiveEffects() {
-    if (!Array.isArray(this.system?.skills)) return;
-    for (const effect of this.appliedEffects) {
-      for (const change of effect.changes) {
-        if (typeof change.key === 'string' && change.key.startsWith('system.skills.')) {
-          effect.apply(this, change);
-        }
-      }
-    }
   }
 
   /**

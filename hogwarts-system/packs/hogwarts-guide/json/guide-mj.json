@@ -256,6 +256,24 @@
     },
     {
       "_id": "hogwartsguide014",
+      "name": "Extensions maison",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "format": 1,
+        "content": "<p>Le système suit le livre partout où celui-ci tranche. Quelques éléments, en revanche, <strong>ne figurent dans aucune source</strong> : ils sont listés ici pour que vous ne les preniez pas pour du canon, et pour que vous puissiez les écarter à votre table.</p>\n<table><thead><tr><th>Élément</th><th>Ce que dit la source</th><th>Ce que fait le système</th></tr></thead><tbody><tr><td><strong>Paliers de réussite étendus</strong></td><td>Le livre ne définit que la réussite critique et la maladresse</td><td>Réglage <em>désactivé par défaut</em> ajoutant <em>Extrême</em> et <em>Difficile</em>, empruntés au BRP générique, avec un arrondi au supérieur qu&#39;aucun exemple chiffré ne confirme</td></tr><tr><td><strong>Maîtrises de base et maximales</strong></td><td>Le fonctionnement est décrit (§6.10) mais <strong>aucune table n&#39;est publiée</strong> — un seul couple chiffré en exemple</td><td>Plus de soixante couples <code>base</code>/<code>max</code> fournis par le système</td></tr><tr><td><strong>Bonus de dégâts des créatures</strong></td><td>Introuvable dans le livre de base, le <em>Bestiaire</em> et l&#39;<em>Encyclopédie</em></td><td>Table prolongée hors du domaine humain : −1d4, −1d2, +3d6, +4d6</td></tr><tr><td><strong>Sorts instinctifs (POU × 3)</strong></td><td>Le principe d&#39;une magie enfantine incontrôlée est évoqué ; <strong>aucune résolution chiffrée</strong></td><td>Case « Sort instinctif » déclenchant un jet sous POU × 3</td></tr><tr><td><strong>Animagus</strong></td><td>Le chapitre 16 publie le processus en dix étapes et un test de personnalité donnant la catégorie d&#39;animal, mais <strong>aucun jet de transformation</strong></td><td>Paliers de maîtrise et bouton de transformation (jet sous la compétence Animagus)</td></tr></tbody></table>\n<blockquote><p><strong>Animagus — deux valeurs dans la source.</strong> Le tableau des avantages annonce la compétence à 20 % (max 90 %), la fin du chapitre 16 à 10 % (max 80 %). Le système retient le chapitre dédié ; les colonnes <em>Base</em> et <em>Max</em> de la fiche restent modifiables si vous préférez l&#39;autre lecture. Le questionnaire du §16.2 n&#39;est pas reproduit — ses puces sont des dessins, illisibles hors du livre : la fiche propose directement les six profils de résultat.</p></blockquote>\n<p>Les trois premiers points sont signalés directement dans l&#39;interface : survolez les colonnes <em>Base</em> et <em>Max</em> de l&#39;onglet Compétences, ou la case « Sort instinctif » d&#39;une fiche de sortilège.</p>"
+      },
+      "sort": 1500000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "hogwartsguide015",
       "name": "Dépannage",
       "type": "text",
       "title": {
@@ -266,14 +284,14 @@
         "format": 1,
         "content": "<p><strong>Une valeur ne veut pas changer.</strong> Elle est dérivée. Cherchez ce qui l&#39;alimente : la <em>Valeur</em> d&#39;une compétence vient de <em>Base + Dépenses</em>, les PV viennent de CON et TAI, le bonus de dégâts de FOR et TAI.</p>\n<p><strong>Le thème de couleur ne correspond pas à la maison.</strong> Le thème suit le sélecteur de maison de l&#39;en-tête. Refermez et rouvrez la fiche si le changement vient d&#39;être fait par un autre utilisateur.</p>\n<p><strong>Une fenêtre déborde de l&#39;écran.</strong> Toutes les fenêtres du système sont redimensionnables et défilables. Attrapez le coin inférieur droit.</p>\n<p><strong>Le tableau de bord de Quidditch dit qu&#39;il n&#39;y a pas de combat.</strong> Il s&#39;appuie sur le combat en cours. Créez un combat avec les joueurs concernés avant de lancer le match.</p>\n<p><strong>L&#39;ordre du tour semble figé après un match de Quidditch.</strong> Foundry ne recalcule l&#39;ordre que lorsqu&#39;une initiative change. Le système force le recalcul en début et en fin de match ; si l&#39;affichage reste décalé, cliquez sur une valeur d&#39;initiative pour forcer le rafraîchissement.</p>\n<p><strong>Un sort ne prend pas en compte l&#39;affinité de la baguette.</strong> Le champ <em>affinité</em> de la baguette doit mentionner l&#39;école : « enchantements », « métamorphose » ou « mauvais sorts ».</p>"
       },
-      "sort": 1500000,
+      "sort": 1600000,
       "ownership": {
         "default": -1
       },
       "flags": {}
     },
     {
-      "_id": "hogwartsguide015",
+      "_id": "hogwartsguide016",
       "name": "Aide-mémoire",
       "type": "text",
       "title": {
@@ -284,7 +302,7 @@
         "format": 1,
         "content": "<h3>Degrés de réussite</h3>\n<table><thead><tr><th>Jet</th><th>Résultat</th></tr></thead><tbody><tr><td><code>01</code>–<code>05</code></td><td>Réussite critique</td></tr><tr><td>≤ cible</td><td>Réussite</td></tr><tr><td>&gt; cible</td><td>Échec</td></tr><tr><td><code>96</code>–<code>00</code></td><td>Maladresse (évaluée en premier)</td></tr></tbody></table>\n<h3>Modificateurs cumulés sur un lancer de sort</h3>\n<table><thead><tr><th>Source</th><th>Modificateur</th></tr></thead><tbody><tr><td>Malus du sort</td><td>Variable, indiqué sur la fiche du sort</td></tr><tr><td>Sans baguette</td><td>−75 %</td></tr><tr><td>Informulé</td><td>−30 %</td></tr><tr><td>Affinité de baguette</td><td>+10 %</td></tr><tr><td>Stress</td><td>−1 % par point de stress</td></tr><tr><td>Circonstances</td><td>Au choix du MJ, dans le dialogue</td></tr></tbody></table>\n<h3>Composition réglementaire d&#39;une équipe de Quidditch</h3>\n<table><thead><tr><th>Poste</th><th>Nombre</th></tr></thead><tbody><tr><td>Poursuiveur</td><td>3</td></tr><tr><td>Batteur</td><td>2</td></tr><tr><td>Gardien</td><td>1</td></tr><tr><td>Attrapeur</td><td>1</td></tr><tr><td><strong>Total</strong></td><td><strong>7</strong></td></tr></tbody></table>\n<h3>Score au Quidditch</h3>\n<table><thead><tr><th>Action</th><th>Points</th></tr></thead><tbody><tr><td>But</td><td>10</td></tr><tr><td>Prise du vif d&#39;or</td><td>150, et fin du match</td></tr></tbody></table>\n<h3>Raccourcis du tracker de combat</h3>\n<table><thead><tr><th>Geste</th><th>Effet</th></tr></thead><tbody><tr><td>Clic sur le badge numéroté</td><td>Fait tourner la phase déclarée (1 → 2 → 3)</td></tr><tr><td>Alt + clic sur le badge</td><td>Marque ou retire l&#39;état <strong>surpris</strong></td></tr></tbody></table>\n<hr />\n<p><em>Ce guide accompagne le système Hogwarts System pour Foundry VTT. Les règles elles-mêmes appartiennent au jeu de rôle amateur</em> Harry Potter JdR <em>et à ses suppléments, que ce système ne reproduit pas.</em></p>"
       },
-      "sort": 1600000,
+      "sort": 1700000,
       "ownership": {
         "default": -1
       },

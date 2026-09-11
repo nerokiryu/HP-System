@@ -1,0 +1,12 @@
+{
+  "_id": "ftHybride0000002",
+  "name": "Hybride",
+  "type": "feature",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Vous possédez un ancêtre qui est un être magique ce qui vous a fait hérité de certaines de ses caractéristiques, capacités et traits physiques. En fonction du nombre de générations qui vous séparent de ce dernier, ces capacités et traits sont plus ou moins prononcés. Ancêtre magique possible : Elfe de maison, Gobelin, Vampire, Vélane Ancêtre déconseillé : Géant, Troll Pour connaître les avantages et désavantages de votre ancêtre magique en fonction de la génération à laquelle vous appartenez ainsi que le coût lors de la création de votre personnage, rendez-vous aux chapitre « Jouer un personnage hybride » de ce manuel.</p>",
+    "perkType": "advantage",
+    "pbpCost": 2
+  },
+  "effects": []
+}

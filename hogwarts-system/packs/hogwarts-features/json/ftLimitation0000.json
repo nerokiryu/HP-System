@@ -1,0 +1,12 @@
+{
+  "_id": "ftLimitation0000",
+  "name": "Limitation",
+  "type": "feature",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "description": "<p>Un objet que vous possédez est vital pour vous (lunettes, gouttes pour les yeux, le nez, inhalateur, etc.) et vous êtes considérablement limité sans lui.</p>",
+    "perkType": "fateBane",
+    "pbpCost": 0
+  },
+  "effects": []
+}

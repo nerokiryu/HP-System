@@ -1,0 +1,45 @@
+{
+  "_id": "ftSurpoids000000",
+  "name": "Surpoids",
+  "type": "feature",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "description": "<p>Vous avez tendance à grignoter entre les repas et vous êtes un peu trop gros pour votre âge. Ce surpoids vous inflige un malus de 10% dans les compétences bagarre, Athlétisme et Acrobatie/Quidditch.</p>",
+    "perkType": "disadvantage",
+    "pbpCost": -1
+  },
+  "effects": [
+    {
+      "_id": "feSurpoids000000",
+      "name": "Surpoids",
+      "img": "icons/svg/downgrade.svg",
+      "type": "base",
+      "changes": [
+        {
+          "key": "system.skillBonus.Acrobatie/Quidditch",
+          "mode": 2,
+          "value": "-10",
+          "priority": 20
+        },
+        {
+          "key": "system.skillBonus.Athlétisme",
+          "mode": 2,
+          "value": "-10",
+          "priority": 20
+        },
+        {
+          "key": "system.skillBonus.Bagarre",
+          "mode": 2,
+          "value": "-10",
+          "priority": 20
+        }
+      ],
+      "disabled": false,
+      "transfer": true,
+      "description": "",
+      "duration": {},
+      "statuses": [],
+      "flags": {}
+    }
+  ]
+}
