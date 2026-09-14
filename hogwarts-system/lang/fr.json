@@ -20,6 +20,7 @@
   },
   "HOGWARTS": {
     "Stat": {
+      "ModTooltip": "Ascendance et âge compris. La valeur saisie est celle d'un adulte (16 ans et plus).",
       "Str": {
         "long": "Force",
         "abbr": "FOR"
@@ -221,6 +222,8 @@
           "sportif": "Sportif / Bagarreur"
         },
         "Fougue": "Points de Fougue",
+        "AgeMalus": "Malus d'âge",
+        "AgeMalusHint": "Les 2d6+6 donnent la valeur d'un adulte (16 ans et plus). On retire 1 par année manquante à FOR, CON et TAI ; le malus fond d'un point chaque année.",
         "Stress": "Stress",
         "StressHint": "Malus de stress appliqué à tous les jets (0-25%)",
         "StressLevels": {
@@ -233,7 +236,9 @@
         },
         "Movement": "Mouvement (m/round)",
         "DamageBonus": "Bonus dégâts",
-        "Initiative": "Initiative"
+        "Initiative": "Initiative",
+        "Age": "Âge",
+        "GMNotes": "Notes du Maître du Jeu"
       },
       "NPC": {
         "FIELDS": {
@@ -252,7 +257,20 @@
         },
         "xp": {
           "label": "PX"
-        }
+        },
+        "Identity": "Identité",
+        "Role": "Rôle",
+        "RolePlaceholder": "Professeur, préfet, camarade de classe…",
+        "Budget": "Budget de création",
+        "YearBonus": "dont +{bonus} pour la {year}e année",
+        "YearBonusHint": "§22.2.1 : un personnage créé dans une année avancée reçoit des points de compétences en plus du budget de base. Le plafond retenu est le haut de la fourchette du livre.",
+        "Rival": "Rival (budgets d'un personnage joueur)",
+        "RivalHint": "§21.2 : « il est fortement conseillé de faire des rivaux des anti-héros, soit des personnages créés comme des personnages joueurs ». Coché, le PNJ passe à 400 points de compétence et 6 points d'avantages, au lieu de 350 et 4,5.",
+        "AffinityHint": "L'affinité de la baguette donne +10 % dans un élément ou un type de sortilèges (§21.1).",
+        "Combat": "Combat et déplacement",
+        "GMNotes": "Notes du Maître du Jeu",
+        "DamageHint": "Attaque par défaut, quand le PNJ n'a pas d'arme en équipement.",
+        "Steps": "Étapes du §21.1 traitées ailleurs : compétences et caractéristiques dans leurs onglets, avantages et axiome de Maison dans « Avantages ». Le PNJ démarre avec un sort de niveau 1 et un sort de niveau 0."
       },
       "Creature": {
         "FIELDS": {
@@ -775,6 +793,20 @@
       "GrantFougue": "Accorder un point de Fougue",
       "FougueGranted": "{name} gagne un point de Fougue (total : {total}).",
       "FougueAtMax": "Le maximum de {max} points de Fougue est déjà atteint."
+    },
+    "Creation": {
+      "Title": "Assistant de création",
+      "Open": "Tirer les caractéristiques ({formula})",
+      "Intro": "Huit tirages de 2d6+6 à répartir entre les caractéristiques, selon l'archétype visé. Choisir une valeur déjà placée l'échange avec l'autre caractéristique.",
+      "Pool": "Tirage",
+      "Stat": "Caractéristique",
+      "Adult": "Adulte",
+      "Current": "À son âge",
+      "AgeNote": "À {age} ans, FOR, CON et TAI perdent {malus} point(s). Le malus fond d'un point par année, jusqu'à disparaître à 16 ans.",
+      "Duplicate": "Une valeur du tirage est utilisée deux fois.",
+      "Apply": "Appliquer",
+      "Reroll": "Relancer",
+      "Done": "Caractéristiques écrites sur la fiche de {name}."
     },
     "Derived": {
       "Title": "Caractéristiques dérivées",

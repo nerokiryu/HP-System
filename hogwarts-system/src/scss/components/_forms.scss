@@ -689,3 +689,166 @@
     font-weight: 600;
   }
 }
+
+// Assistant de création (étape 2) et malus d'âge.
+.age-malus {
+  margin-left: 6px;
+  padding: 1px 6px;
+  border-radius: 3px;
+  background: rgba(204, 51, 51, 0.12);
+  color: $c-alert;
+  font-size: 11px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.creation-assistant {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+  padding: 4px 10px;
+  border: 1px solid rgba(101, 67, 33, 0.35);
+  border-radius: 4px;
+  background: rgba(101, 67, 33, 0.08);
+  cursor: pointer;
+  font-size: 12px;
+  &:hover { background: rgba(101, 67, 33, 0.18); }
+}
+
+// Assistant de création (étape 2). `&` obligatoire, comme pour `.house-points` :
+// ApplicationV2 pose toutes les `classes` sur la même racine.
+&.character-creation {
+  .creation-intro p { margin: 0 0 8px; font-size: 12px; }
+
+  .creation-pool {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 8px;
+    .pool-label { font-weight: bold; margin-right: 4px; }
+    .pool-value {
+      min-width: 26px;
+      padding: 2px 6px;
+      border: 1px solid rgba(101, 67, 33, 0.3);
+      border-radius: 3px;
+      background: rgba(101, 67, 33, 0.1);
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+
+  .creation-archetype {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    label { font-weight: bold; white-space: nowrap; }
+  }
+
+  .creation-warning {
+    margin: 0 0 8px;
+    padding: 4px 8px;
+    border-radius: 3px;
+    background: rgba(204, 51, 51, 0.1);
+    color: $c-alert;
+    font-size: 12px;
+  }
+
+  .creation-table {
+    width: 100%;
+    border-collapse: collapse;
+    th, td {
+      padding: 3px 6px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+    th { font-size: 12px; }
+    .stat-name { text-align: left; font-weight: bold; }
+    .stat-current {
+      font-weight: bold;
+      &.aged { color: $c-alert; }
+    }
+    .stat-malus { margin-left: 4px; font-size: 11px; font-weight: normal; }
+    select { width: 70px; text-align: center; }
+  }
+
+  .creation-age {
+    margin: 8px 0 0;
+    font-size: 11px;
+    font-style: italic;
+    opacity: 0.85;
+  }
+
+  .creation-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    > div {
+      flex: 1 1 110px;
+      text-align: center;
+      span { display: block; font-size: 11px; opacity: 0.8; }
+      strong { font-size: 15px; }
+    }
+  }
+
+  footer.form-footer {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    button { flex: 1 1 auto; }
+  }
+}
+
+// Onglet d'identité du PNJ (§21.1).
+.tab.npc {
+  .budget-note {
+    display: block;
+    margin-top: 2px;
+    font-size: 10px;
+    opacity: 0.75;
+  }
+
+  .npc-rival {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    input { flex: 0 0 auto; }
+  }
+
+  .budget-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    .budget-block {
+      flex: 1 1 150px;
+      padding: 5px 8px;
+      border: 1px solid rgba(101, 67, 33, 0.25);
+      border-radius: 4px;
+      background: rgba(101, 67, 33, 0.07);
+      text-align: center;
+      span { display: block; font-size: 11px; opacity: 0.8; }
+      strong { font-size: 15px; }
+      // Budget dépassé : le MJ doit le voir sans avoir à compter.
+      &.over {
+        border-color: rgba(204, 51, 51, 0.5);
+        background: rgba(204, 51, 51, 0.1);
+        strong { color: $c-alert; }
+      }
+    }
+  }
+}
+
+.tab.npc .npc-steps {
+  margin: 8px 0 0;
+  font-size: 11px;
+  font-style: italic;
+  opacity: 0.8;
+}

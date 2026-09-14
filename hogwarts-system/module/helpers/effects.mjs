@@ -96,6 +96,9 @@ export function prepareEffectAttributes(doc) {
     const skillFields = ['value', 'base', 'max', 'spent'];
     for (let i = 0; i < skills.length; i++) {
       const s = skills[i];
+      // Une entrée sans nom ne produirait que des lignes anonymes (« — value ») :
+      // ce sont des résidus, pas des compétences que l'on souhaite viser.
+      if (!s.name) continue;
       const label = s.spec ? `${s.name} (${s.spec})` : s.name;
       // Listed first because it is the only skill key that survives being copied
       // to another sheet: the index below depends on this actor's own ordering.

@@ -303,6 +303,12 @@ Handlebars.registerHelper('eq', function (a, b) {
   return a === b;
 });
 
+// Helper: or(...) -> true si au moins un argument est vrai. Variadique, le
+// dernier argument étant l'objet d'options de Handlebars.
+Handlebars.registerHelper('or', function (...args) {
+  return args.slice(0, -1).some(Boolean);
+});
+
 // Helper: skillName(name) -> localized name for non-custom skills
 Handlebars.registerHelper('skillName', function (name) {
   const key = CONFIG?.HOGWARTS?.skillNameKeys?.[name];
@@ -328,7 +334,7 @@ async function persistBackfilledSkills() {
   const updates = [];
 
   for (const actor of game.actors) {
-    if (actor.type !== 'character') continue;
+    if (!['character', 'npc'].includes(actor.type)) continue;
     const stored = actor._source?.system?.skills ?? [];
     const prepared = actor.system?.skills ?? [];
     const blanks = stored.filter((s) => !s.name).length;
@@ -392,7 +398,34 @@ Hooks.once('ready', async function () {
 
     // Register migrations here. Each migration has a target version; it will be
     // executed when appliedVersion < migration.version <= currentVersion.
-    const MIGRATIONS = [];
+    const MIGRATIONS = [{
+      version: '1.0.2',
+      description: 'FOR/CON/TAI stockées en valeur adulte (malus d\'âge)',
+      migrate: async () => {
+        // Le malus d'âge est désormais appliqué au calcul du total. Les fiches
+        // existantes portaient déjà la valeur de l'enfant : sans rien faire, le
+        // malus serait compté deux fois et les points de vie fondraient de moitié.
+        // On rend donc aux caractéristiques leur valeur adulte, pour que le total
+        // affiché reste exactement celui d'avant la mise à jour.
+        const model = CONFIG.Actor.dataModels.character;
+        const updates = [];
+        for (const actor of game.actors) {
+          if (actor.type !== 'character') continue;
+          const age = Number(actor._source.system?.profile?.age);
+          const malus = Number.isFinite(age) ? Math.max(0, model.ADULT_AGE - age) : 0;
+          if (!malus) continue;
+          const patch = { _id: actor.id };
+          for (const key of model.AGE_MALUS_STATS) {
+            const stocke = Number(actor._source.system?.stats?.[key]?.value);
+            if (!Number.isFinite(stocke)) continue;
+            patch[`system.stats.${key}.value`] = stocke + malus;
+          }
+          if (Object.keys(patch).length > 1) updates.push(patch);
+        }
+        if (updates.length) await Actor.updateDocuments(updates);
+        console.log(`HOGWARTS MIGRATE | ${updates.length} personnage(s) reconvertis en valeur adulte`);
+      },
+    }];
 
     const appliedVersion = game.settings.get('hogwarts-system', 'migrationVersion') || '';
     if (compareSemver(appliedVersion, currentVersion) === 0) {

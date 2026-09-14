@@ -7,6 +7,9 @@
   --hogwarts-system-c-black: #000000;
   --hogwarts-system-c-groove: #eeede0;
 
+  /* Rouge d'alerte : malus d'âge, budget dépassé, doublons du tirage. */
+  --hogwarts-system-c-alert: #8b2b2b;
+
   /* Accent colours (default: Gryffindor) */
   --hogwarts-accent-100: #e06b6b;
   --hogwarts-accent-500: #c0392b;
@@ -22,6 +25,8 @@
   --hogwarts-system-c-white: #000000;
   --hogwarts-system-c-black: #ffffff;
   --hogwarts-system-c-groove: #11121f;
+  /* Le rouge sombre tombe à 2,3:1 sur fond sombre ; il faut 4,5:1. */
+  --hogwarts-system-c-alert: #ef8079;
 }
 
 $c-white: var(--hogwarts-system-c-white);
@@ -33,6 +38,7 @@ $c-beige: var(--hogwarts-system-c-beige);
 $c-tan: var(--hogwarts-system-c-tan);
 
 $c-groove: var(--hogwarts-system-c-groove);
+$c-alert: var(--hogwarts-system-c-alert);
 
 /* Per-house overrides. The actor sheet will get a class `house-{name}` on its root element
    (e.g. `.hogwarts-system.house-slytherin`) which will switch the accent colours while

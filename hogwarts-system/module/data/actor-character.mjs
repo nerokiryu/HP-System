@@ -6,6 +6,27 @@ export default class HogwartsCharacter extends HogwartsActorBase {
     'HOGWARTS.Actor.Character',
   ];
 
+  /**
+   * Étape 2 : « La valeur obtenue en lançant les 2d6+6 est celle d'un personnage
+   * adulte, soit un personnage de 16 et plus. On retire 1 à cette valeur si on
+   * incarne un Sorcier de 15 ans, 2 pour un Sorcier de 14 ans, etc. » (l. 571).
+   * Seules FOR, CON et TAI portent cette remarque ; les cinq autres
+   * caractéristiques n'en ont aucune.
+   */
+  static ADULT_AGE = 16;
+  static AGE_MALUS_STATS = ['str', 'con', 'siz'];
+
+  /**
+   * « Malus qui diminuera de 1 chaque année » (l. 574) : ce dégel *est* la
+   * progression annuelle, le livre n'en publie aucune autre.
+   * @returns {number} Positif, à retrancher.
+   */
+  get ageMalus() {
+    const age = Number(this.profile?.age);
+    if (!Number.isFinite(age)) return 0;
+    return Math.max(0, HogwartsCharacter.ADULT_AGE - age);
+  }
+
   static defineSchema() {
     const fields = foundry.data.fields;
     const requiredInteger = { required: true, nullable: false, integer: true };
@@ -402,9 +423,9 @@ export default class HogwartsCharacter extends HogwartsActorBase {
    * Resolve the hybrid ancestry into per-stat modifiers and the aggregated
    * numeric effects of the granted capabilities (Chap. 17).
    *
-   * Sets `stats.<k>.hybridMod` and `stats.<k>.total`; every derived value below
-   * reads `total`, never `value`, so an ancestry actually reaches hit points,
-   * the damage bonus and initiative.
+   * Sets `stats.<k>.hybridMod`, `stats.<k>.ageMod` and `stats.<k>.total`; every
+   * derived value below reads `total`, never `value`, so an ancestry and the age
+   * malus both actually reach hit points, the damage bonus and initiative.
    */
   _prepareHybrid() {
     const { race, generation, pickBonus, pickMalus, pickCapability } = this.hybrid ?? {};
@@ -424,9 +445,13 @@ export default class HogwartsCharacter extends HogwartsActorBase {
     for (const key in this.stats) {
       const value = Number(this.stats[key].value) || 0;
       const mod = Number(mods[key]) || 0;
+      // La valeur saisie est celle de l'adulte ; l'âge la rabote (§Étape 2).
+      const ageMod = HogwartsCharacter.AGE_MALUS_STATS.includes(key) ? -this.ageMalus : 0;
       this.stats[key].hybridMod = mod;
+      this.stats[key].ageMod = ageMod;
+      this.stats[key].mod = mod + ageMod;
       // A characteristic can never be reduced below 1.
-      this.stats[key].total = Math.max(1, value + mod);
+      this.stats[key].total = Math.max(1, value + mod + ageMod);
     }
 
     const effects = { skillBonus: {}, skillXp: [], newSkills: [], spellMalus: 0, potionMalus: 0, wandless: 0 };

@@ -15,3 +15,8 @@ Thumbs.db
 
 # ... sauf les journaux LevelDB des compendiums, qui SONT les données
 !hogwarts-system/packs/**/*.log
+
+# Livres de règles : œuvres de tiers, conservées en local pour alimenter
+# build-compendia.mjs mais jamais publiées. Elles restent dans l'historique
+# antérieur à v1.1.0, que seule une réécriture effacerait.
+rules/

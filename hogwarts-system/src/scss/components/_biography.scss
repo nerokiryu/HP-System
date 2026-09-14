@@ -1,4 +1,7 @@
+// L'onglet d'identité du PNJ reprend le balisage de la biographie (bio-section,
+// form-grid) : il doit donc partager la même identité visuelle.
 .tab.biography,
+.tab.npc,
 .biography-container {
   padding: 10px;
   

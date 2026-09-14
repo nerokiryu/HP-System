@@ -1,0 +1,66 @@
+{{! Assistant de l'étape 2 : répartir huit tirages de 2d6+6 (l. 565-575).
+    ApplicationV2 exige une racine unique par part, d'où ce conteneur. }}
+<div class='creation-body'>
+<div class='creation-intro'>
+  <p>{{localize 'HOGWARTS.Creation.Intro'}}</p>
+  <div class='creation-pool'>
+    <span class='pool-label'>{{localize 'HOGWARTS.Creation.Pool'}} ({{formule}})</span>
+    {{#each pool}}<span class='pool-value'>{{this}}</span>{{/each}}
+  </div>
+  <div class='creation-archetype'>
+    <label>{{localize 'HOGWARTS.Actor.Character.FIELDS.profile.archetype.label'}}</label>
+    {{! Pas de data-action : ApplicationV2 les branche sur le clic, ce qui refermerait
+        la liste déroulante au moment même de l'ouvrir. Traité dans _onChangeForm. }}
+    <select name='archetype'>
+      {{#each archetypes as |label key|}}
+        <option value='{{key}}' {{#if (eq key @root.archetype)}}selected{{/if}}>{{localize label}}</option>
+      {{/each}}
+    </select>
+  </div>
+</div>
+
+{{#if doublons}}
+  <p class='creation-warning'><i class='fas fa-triangle-exclamation'></i> {{localize 'HOGWARTS.Creation.Duplicate'}}</p>
+{{/if}}
+
+<table class='creation-table'>
+  <thead>
+    <tr>
+      <th>{{localize 'HOGWARTS.Creation.Stat'}}</th>
+      <th>{{localize 'HOGWARTS.Creation.Adult'}}</th>
+      <th>{{localize 'HOGWARTS.Creation.Current'}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each stats as |stat|}}
+      <tr>
+        <td class='stat-name'>{{stat.label}}</td>
+        <td>
+          <select name='stat.{{stat.key}}'>
+            {{#each @root.pool as |v|}}
+              <option value='{{v}}' {{#if (eq v stat.adulte)}}selected{{/if}}>{{v}}</option>
+            {{/each}}
+          </select>
+        </td>
+        <td class='stat-current {{#if stat.touchee}}aged{{/if}}'>
+          {{stat.actuel}}
+          {{#if stat.touchee}}{{#if @root.malus}}<span class='stat-malus'>−{{@root.malus}}</span>{{/if}}{{/if}}
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+{{#if malus}}
+  <p class='creation-age' data-tooltip='{{localize "HOGWARTS.Actor.Character.AgeMalusHint"}}'>
+    {{localize 'HOGWARTS.Creation.AgeNote' age=age malus=malus}}
+  </p>
+{{/if}}
+
+<div class='creation-preview'>
+  <div><span>{{localize 'HOGWARTS.Actor.base.FIELDS.health.value.label'}}</span><strong>{{apercu.health}}</strong></div>
+  <div><span>{{localize 'HOGWARTS.Actor.Character.DamageBonus'}}</span><strong>{{apercu.damage}}</strong></div>
+  <div><span>{{localize 'HOGWARTS.Derived.Idea'}}</span><strong>{{apercu.idea}}</strong></div>
+  <div><span>{{localize 'HOGWARTS.Derived.Luck'}}</span><strong>{{apercu.luck}}</strong></div>
+</div>
+</div>

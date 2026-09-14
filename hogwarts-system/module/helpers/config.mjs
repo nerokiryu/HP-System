@@ -67,6 +67,20 @@ HOGWARTS.archetypes = {
 };
 
 /**
+ * Ordre de priorité des quatre caractéristiques dominantes de chaque archétype,
+ * « depuis la valeur la plus forte à la valeur la plus faible » (l. 640-646).
+ * Les caractéristiques non citées reçoivent le reste des valeurs tirées.
+ */
+HOGWARTS.archetypePriority = {
+  canaille: ['dex', 'per', 'int', 'pow'],
+  cerebral: ['int', 'pow', 'per', 'dex'],
+  honnete: ['app', 'int', 'per', 'pow'],
+  manipulateur: ['int', 'per', 'app', 'pow'],
+  naturaliste: ['per', 'dex', 'con', 'int'],
+  sportif: ['str', 'con', 'siz', 'dex'],
+};
+
+/**
  * Preset skills with base and max values, grouped by category.
  * Names are provided by the user; you can adjust later.
  */

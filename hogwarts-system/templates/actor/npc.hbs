@@ -1,0 +1,125 @@
+{{! Onglet d'identité du PNJ : les étapes du §21.1 qui n'ont pas leur propre
+    onglet. Même balisage repliable que la biographie du personnage, pour le
+    style comme pour le gestionnaire `toggleBioSection`. }}
+<section class='tab npc scrollable {{tab.cssClass}}' data-group='primary' data-tab='npc'>
+
+  {{! Identité }}
+  <div class='bio-section'>
+    <h3 class='collapsible' data-action='toggleBioSection' data-section='identity'>
+      <i class='fas fa-chevron-down'></i>
+      {{localize 'HOGWARTS.Actor.NPC.Identity'}}
+    </h3>
+    <div class='bio-content' data-section='identity'>
+      <div class='form-grid'>
+        <div class='form-group'>
+          <label>{{localize 'HOGWARTS.Actor.NPC.Role'}}</label>
+          <input type='text' name='system.profile.role' value='{{system.profile.role}}'
+                 placeholder='{{localize "HOGWARTS.Actor.NPC.RolePlaceholder"}}' />
+        </div>
+        <div class='form-group'>
+          <label>{{localize 'HOGWARTS.Actor.Character.FIELDS.profile.archetype.label'}}</label>
+          <select name='system.profile.archetype'>
+            {{#each config.archetypes as |label key|}}
+              <option value='{{key}}' {{#if (eq key @root.system.profile.archetype)}}selected{{/if}}>{{localize label}}</option>
+            {{/each}}
+          </select>
+        </div>
+        <div class='form-group'>
+          <label>{{localize 'HOGWARTS.Actor.Character.Age'}}</label>
+          <input type='number' name='system.profile.age' value='{{system.profile.age}}' min='1' />
+          {{#if system.ageMalus}}
+            <span class='age-malus' data-tooltip='{{localize "HOGWARTS.Actor.Character.AgeMalusHint"}}'>
+              {{localize 'HOGWARTS.Actor.Character.AgeMalus'}} −{{system.ageMalus}}
+            </span>
+          {{/if}}
+        </div>
+        <div class='form-group'>
+          <label>{{localize 'HOGWARTS.Biography.BloodStatus'}}</label>
+          <select name='system.information.bloodStatus'>
+            <option value='muggleborn' {{#if (eq system.information.bloodStatus 'muggleborn')}}selected{{/if}}>{{localize 'HOGWARTS.Biography.BloodStatusMuggleBorn'}}</option>
+            <option value='halfblood' {{#if (eq system.information.bloodStatus 'halfblood')}}selected{{/if}}>{{localize 'HOGWARTS.Biography.BloodStatusHalfBlood'}}</option>
+            <option value='pureblood' {{#if (eq system.information.bloodStatus 'pureblood')}}selected{{/if}}>{{localize 'HOGWARTS.Biography.BloodStatusPureBlood'}}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{! Budget de création — §21.2 pour la bascule Rival }}
+  <div class='bio-section'>
+    <h3 class='collapsible' data-action='toggleBioSection' data-section='budget'>
+      <i class='fas fa-chevron-down'></i>
+      {{localize 'HOGWARTS.Actor.NPC.Budget'}}
+    </h3>
+    <div class='bio-content npc-budget' data-section='budget'>
+      <label class='npc-rival' data-tooltip='{{localize "HOGWARTS.Actor.NPC.RivalHint"}}'>
+        <input type='checkbox' name='system.rival' {{#if system.rival}}checked{{/if}} />
+        {{localize 'HOGWARTS.Actor.NPC.Rival'}}
+      </label>
+      <div class='budget-row'>
+        <div class='budget-block {{#if (gt system.experience.creationPoints.spent system.experience.creationPoints.max)}}over{{/if}}'>
+          <span>{{localize 'HOGWARTS.Experience.CreationPoints'}}</span>
+          <strong>{{system.experience.creationPoints.spent}} / {{system.experience.creationPoints.max}}</strong>
+          {{#if system.experience.creationPoints.yearBonus}}
+            <em class='budget-note' data-tooltip='{{localize "HOGWARTS.Actor.NPC.YearBonusHint"}}'>
+              {{localize 'HOGWARTS.Actor.NPC.YearBonus' year=system.profile.year bonus=system.experience.creationPoints.yearBonus}}
+            </em>
+          {{/if}}
+        </div>
+        <div class='budget-block {{#if personalBonusCurrentNegative}}over{{/if}}'>
+          <span>{{localize 'HOGWARTS.Experience.PersonalBonusPoints'}}</span>
+          <strong>{{#if personalBonusCurrentDefined}}{{personalBonusCurrent}}{{else}}—{{/if}} / {{system.experience.personalBonusPoints.max}}</strong>
+        </div>
+      </div>
+      <p class='npc-steps'>{{localize 'HOGWARTS.Actor.NPC.Steps'}}</p>
+    </div>
+  </div>
+
+  {{! Combat et déplacement }}
+  <div class='bio-section'>
+    <h3 class='collapsible' data-action='toggleBioSection' data-section='combat'>
+      <i class='fas fa-chevron-down'></i>
+      {{localize 'HOGWARTS.Actor.NPC.Combat'}}
+    </h3>
+    <div class='bio-content' data-section='combat'>
+      <div class='form-grid'>
+        <div class='form-group'>
+          <label>{{localize 'HOGWARTS.Actor.NPC.FIELDS.cr.label'}}</label>
+          <input type='number' name='system.cr' value='{{system.cr}}' min='0' />
+        </div>
+        <div class='form-group'>
+          <label>{{localize 'HOGWARTS.Actor.Character.Movement'}}</label>
+          <input type='number' name='system.movement' value='{{system.movement}}' min='0' />
+        </div>
+        <div class='form-group'>
+          <label>{{localize 'HOGWARTS.Actor.Creature.Armor'}}</label>
+          <input type='number' name='system.armor' value='{{system.armor}}' min='0' />
+        </div>
+        <div class='form-group'>
+          <label>{{localize 'HOGWARTS.Actor.NPC.FIELDS.damage.label'}}</label>
+          <input type='text' name='system.damage' value='{{system.damage}}'
+                 data-tooltip='{{localize "HOGWARTS.Actor.NPC.DamageHint"}}' />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{! Notes du Maître du Jeu }}
+  <div class='bio-section'>
+    <h3 class='collapsible' data-action='toggleBioSection' data-section='notes'>
+      <i class='fas fa-chevron-down'></i>
+      {{localize 'HOGWARTS.Actor.NPC.GMNotes'}}
+    </h3>
+    <div class='bio-content' data-section='notes'>
+      <div class='form-group'>
+        {{#if editable}}
+          <prose-mirror name='system.notes.gmNotes' data-document-uuid='{{actor.uuid}}' value='{{system.notes.gmNotes}}'>
+          </prose-mirror>
+        {{else}}
+          {{{enrichedGMNotes}}}
+        {{/if}}
+      </div>
+    </div>
+  </div>
+
+</section>

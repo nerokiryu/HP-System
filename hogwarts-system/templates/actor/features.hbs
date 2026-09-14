@@ -7,6 +7,13 @@
   <div class='features-layout'>
     <div class='features-column'>
       <h3>{{localize 'HOGWARTS.Actor.Tabs.Features'}}</h3>
+      {{#unless (eq actor.type 'familiar')}}
+        {{#if @root.editable}}
+          <a class='creation-assistant' data-action='openCreation'>
+            <i class='fas fa-dice'></i> {{localize 'HOGWARTS.Creation.Open' formula=creationFormula}}
+          </a>
+        {{/if}}
+      {{/unless}}
       <div class='abilities flexcol'>
         {{#each system.stats as |stat key|}}
           <div class='ability flexrow flex-group-center'>
@@ -22,11 +29,11 @@
               step='1'
               data-dtype='Number'
             />
-            {{#if stat.hybridMod}}
+            {{#if stat.mod}}
               <span
-                class='hybrid-mod {{#if (gt stat.hybridMod 0)}}bonus{{else}}malus{{/if}}'
-                data-tooltip='{{localize "HOGWARTS.Hybrid.StatTooltip"}}'
-              >{{#if (gt stat.hybridMod 0)}}+{{/if}}{{stat.hybridMod}} = {{stat.total}}</span>
+                class='hybrid-mod {{#if (gt stat.mod 0)}}bonus{{else}}malus{{/if}}'
+                data-tooltip='{{localize "HOGWARTS.Stat.ModTooltip"}}'
+              >{{numberFormat stat.mod sign=true}} = {{stat.total}}</span>
             {{/if}}
             <span
               class='ability-mod rollable'

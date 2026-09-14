@@ -220,3 +220,131 @@ test('compétences préréglées — base jamais au-dessus de la maîtrise maxim
     .map((s) => `${s.name} ${s.base}/${s.max}`);
   assert.deepEqual(fautifs, []);
 });
+
+test('malus d’âge — 1 point par année avant 16 ans (l. 571-574)', () => {
+  const malus = (age) => Math.max(0, 16 - age);
+  assert.equal(malus(11), 5); // « Un Sorcier de 11 ans aura donc un malus de 5 »
+  assert.equal(malus(14), 2); // « 2 pour un Sorcier de 14 ans »
+  assert.equal(malus(15), 1); // « On retire 1 à cette valeur si on incarne un Sorcier de 15 ans »
+  assert.equal(malus(16), 0); // « celle d’un personnage adulte, soit un personnage de 16 et plus »
+  assert.equal(malus(20), 0); // et jamais de bonus au-delà
+  // Le dégel d’un point par an *est* la progression annuelle : aucune autre n’est publiée.
+  const suite = [11, 12, 13, 14, 15, 16].map(malus);
+  assert.deepEqual(suite, [5, 4, 3, 2, 1, 0]);
+  assert.ok(suite.every((v, i) => i === 0 || v === suite[i - 1] - 1));
+});
+
+test('malus d’âge — ne touche que FOR, CON et TAI', async () => {
+  const { HOGWARTS } = await import('../module/helpers/config.mjs');
+  const touchees = ['str', 'con', 'siz'];
+  // Les cinq autres caractéristiques ne portent aucune remarque sur les jeunes sorciers.
+  const autres = Object.keys(HOGWARTS.stats).filter((k) => !touchees.includes(k));
+  assert.deepEqual(autres.sort(), ['app', 'dex', 'int', 'per', 'pow']);
+});
+
+test('génération — 2d6+6 couvre exactement la fourchette 8-18 des PJ (l. 566)', () => {
+  const valeurs = [];
+  for (let d1 = 1; d1 <= 6; d1++) for (let d2 = 1; d2 <= 6; d2++) valeurs.push(d1 + d2 + 6);
+  assert.equal(Math.min(...valeurs), 8);
+  assert.equal(Math.max(...valeurs), 18);
+});
+
+test('archétypes — quatre caractéristiques dominantes, valides et distinctes (l. 640-646)', async () => {
+  const { HOGWARTS } = await import('../module/helpers/config.mjs');
+  const connues = Object.keys(HOGWARTS.stats);
+  for (const [nom, ordre] of Object.entries(HOGWARTS.archetypePriority)) {
+    assert.equal(ordre.length, 4, `${nom} : le livre en donne quatre`);
+    assert.equal(new Set(ordre).size, 4, `${nom} : doublon`);
+    for (const stat of ordre) assert.ok(connues.includes(stat), `${nom} : caractéristique inconnue ${stat}`);
+  }
+  // Chaque archétype nommé dans la liste déroulante a sa priorité, sauf « aucun ».
+  const archetypes = Object.keys(HOGWARTS.archetypes).filter(Boolean);
+  assert.deepEqual(archetypes.sort(), Object.keys(HOGWARTS.archetypePriority).sort());
+});
+
+test('PNJ — budgets de création du §21.1 et du §21.2', () => {
+  // « Les personnages non-joueurs ne possèdent que 4,5 points (contrairement à 6
+  // pour les personnages joueurs) » et « un total de 350 points de compétences
+  // (contre 400 pour les PJ) ».
+  const BUDGETS = {
+    standard: { skillPoints: 350, perkPoints: 4.5 },
+    rival: { skillPoints: 400, perkPoints: 6 },
+  };
+  assert.deepEqual(BUDGETS.standard, { skillPoints: 350, perkPoints: 4.5 });
+  // §21.2 : un rival se crée « comme un personnage joueur », donc aux mêmes budgets.
+  assert.deepEqual(BUDGETS.rival, { skillPoints: 400, perkPoints: 6 });
+  assert.ok(BUDGETS.rival.skillPoints > BUDGETS.standard.skillPoints);
+  assert.ok(BUDGETS.rival.perkPoints > BUDGETS.standard.perkPoints);
+});
+
+test('PNJ — bonus de points des années supérieures (§22.2.1)', async () => {
+  // « Augmentation totale : +40 à 50 | +90 à 110 | +150 à 180 | +210 à 250 |
+  // +280 à 330 | +350 à 410 » pour les années 2 à 7. On retient le haut de la
+  // fourchette, que le §22.2.1 autorise explicitement.
+  const HAUT_DE_FOURCHETTE = { 1: 0, 2: 50, 3: 110, 4: 180, 5: 250, 6: 330, 7: 410 };
+
+  // On lit la source plutôt que de recopier la table : une copie ne détecterait
+  // pas une dérive entre le test et le code.
+  const fs = await import('node:fs');
+  const src = fs.readFileSync('module/data/actor-npc.mjs', 'utf-8');
+  const litteral = src.match(/YEAR_SKILL_BONUS\s*=\s*(\{[^}]*\})/)?.[1];
+  assert.ok(litteral, 'YEAR_SKILL_BONUS introuvable dans le modèle de données');
+  assert.deepEqual(JSON.parse(litteral.replace(/(\d+):/g, '"$1":')), HAUT_DE_FOURCHETTE);
+
+  // Le bonus est cumulatif et strictement croissant : une année de plus ne peut
+  // pas rendre un PNJ moins compétent.
+  const annees = Object.keys(HAUT_DE_FOURCHETTE).map(Number).sort((a, b) => a - b);
+  for (let i = 1; i < annees.length; i++) {
+    assert.ok(HAUT_DE_FOURCHETTE[annees[i]] > HAUT_DE_FOURCHETTE[annees[i - 1]]);
+  }
+
+  // Un rival de 7e année reste l'adversaire le plus solide que le livre permette.
+  assert.equal(400 + HAUT_DE_FOURCHETTE[7], 810);
+  assert.equal(350 + HAUT_DE_FOURCHETTE[1], 350);
+});
+
+test('génération — 3d6 pour un PNJ, 2d6+6 pour un PJ (l. 566 et §21.1)', () => {
+  const etendue = (des, socle) => {
+    const min = des * 1 + socle;
+    const max = des * 6 + socle;
+    return [min, max];
+  };
+  // Le PJ est un héros : le livre le borne à 8-18.
+  assert.deepEqual(etendue(2, 6), [8, 18]);
+  // Le PNJ ordinaire descend jusqu'à 3, d'où la remarque du livre invitant le MJ
+  // à réajuster « ne tirer que des 3 ou 4 rendrait le PNJ injouable ».
+  assert.deepEqual(etendue(3, 0), [3, 18]);
+  // Les deux partagent le même plafond, seule la base diffère.
+  assert.equal(etendue(2, 6)[1], etendue(3, 0)[1]);
+});
+
+test('fiches — aucun champ de formulaire déclaré dans deux onglets', async () => {
+  const fs = await import('node:fs');
+  // Deux <input> portant le même `name` dans un formulaire envoient un tableau,
+  // et le modèle rejette la valeur avec « must be a number ». Les onglets d'une
+  // fiche étant rendus ensemble, le conflit est invisible à la lecture.
+  // On dédoublonne par fichier : au sein d'un gabarit, un champ répété relève
+  // presque toujours de branches {{#if}}/{{else}} exclusives.
+  const ONGLETS = {
+    character: ['header', 'biography', 'skills', 'features', 'perks', 'gear', 'spells', 'potions', 'familiar', 'settings'],
+    npc: ['header', 'npc', 'skills', 'features', 'perks', 'gear', 'spells', 'potions', 'settings'],
+    familiar: ['header', 'biography', 'features', 'perks', 'skills', 'settings'],
+    creature: ['header', 'creature', 'settings'],
+  };
+  const PARTIELS = { skills: ['parts/skill-category'] };
+
+  for (const [type, onglets] of Object.entries(ONGLETS)) {
+    const vus = new Map();
+    for (const nom of onglets.flatMap((o) => [o, ...(PARTIELS[o] ?? [])])) {
+      const src = fs.readFileSync(`templates/actor/${nom}.hbs`, 'utf-8');
+      const champs = new Set([...src.matchAll(/name=['"](system\.[^'"{]+)['"]/g)].map((m) => m[1]));
+      for (const champ of champs) {
+        if (!vus.has(champ)) vus.set(champ, []);
+        vus.get(champ).push(nom);
+      }
+    }
+    const doublons = [...vus].filter(([, f]) => f.length > 1)
+      .map(([champ, f]) => `${type} : ${champ} dans ${f.join(' + ')}`);
+    assert.deepEqual(doublons, []);
+  }
+});

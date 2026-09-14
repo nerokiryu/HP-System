@@ -13,7 +13,7 @@ export class HogwartsActor extends Actor {
   async _preCreate(data, options, user) {
     const allowed = await super._preCreate(data, options, user);
     if (allowed === false) return false;
-    if (this.type === 'character' && !this._source.system?.skills?.length) {
+    if (['character', 'npc'].includes(this.type) && !this._source.system?.skills?.length) {
       const model = CONFIG.Actor.dataModels.character;
       this.updateSource({ 'system.skills': model.presetSkills() });
     }

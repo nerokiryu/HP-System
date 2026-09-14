@@ -20,6 +20,7 @@
   },
   "HOGWARTS": {
     "Stat": {
+      "ModTooltip": "Ancestry and age included. The value entered is an adult's (16 and over).",
       "Str": {
         "long": "Strength",
         "abbr": "STR"
@@ -221,6 +222,8 @@
           "sportif": "Athlete / Brawler"
         },
         "Fougue": "Heroism Points",
+        "AgeMalus": "Age malus",
+        "AgeMalusHint": "2d6+6 gives an adult's value (16 and over). One point is removed from STR, CON and SIZ per missing year; the malus shrinks by one each year.",
         "Stress": "Stress",
         "StressHint": "Stress malus applied to all rolls (0-25%)",
         "StressLevels": {
@@ -233,7 +236,9 @@
         },
         "Movement": "Movement (m/round)",
         "DamageBonus": "DMG Bonus",
-        "Initiative": "Initiative"
+        "Initiative": "Initiative",
+        "Age": "Age",
+        "GMNotes": "Gamemaster notes"
       },
       "NPC": {
         "FIELDS": {
@@ -252,7 +257,20 @@
         },
         "xp": {
           "label": "XP"
-        }
+        },
+        "Identity": "Identity",
+        "Role": "Role",
+        "RolePlaceholder": "Teacher, prefect, classmate…",
+        "Budget": "Creation budget",
+        "YearBonus": "including +{bonus} for year {year}",
+        "YearBonusHint": "§22.2.1: a character created in an advanced year gains skill points on top of the base budget. The ceiling used is the top of the book's range.",
+        "Rival": "Rival (player character budgets)",
+        "RivalHint": "§21.2 advises building rivals as anti-heroes, created like player characters. When ticked, the NPC gets 400 skill points and 6 perk points instead of 350 and 4.5.",
+        "AffinityHint": "A wand affinity grants +10% in one element or one type of spell (§21.1).",
+        "Combat": "Combat and movement",
+        "GMNotes": "Gamemaster notes",
+        "DamageHint": "Default attack, used when the NPC carries no weapon.",
+        "Steps": "§21.1 steps handled elsewhere: skills and characteristics in their own tabs, perks and house axiom under Perks. An NPC starts with one level 1 spell and one level 0 spell."
       },
       "Creature": {
         "FIELDS": {
@@ -775,6 +793,20 @@
       "GrantFougue": "Award a Heroism point",
       "FougueGranted": "{name} gains a Heroism point (total: {total}).",
       "FougueAtMax": "The maximum of {max} Heroism points is already reached."
+    },
+    "Creation": {
+      "Title": "Creation assistant",
+      "Open": "Roll characteristics ({formula})",
+      "Intro": "Eight 2d6+6 rolls to spread across the characteristics, guided by the archetype. Picking a value already placed swaps it with the other characteristic.",
+      "Pool": "Rolled",
+      "Stat": "Characteristic",
+      "Adult": "Adult",
+      "Current": "At their age",
+      "AgeNote": "At {age}, STR, CON and SIZ lose {malus} point(s). The malus shrinks by one each year until it is gone at 16.",
+      "Duplicate": "One rolled value is used twice.",
+      "Apply": "Apply",
+      "Reroll": "Reroll",
+      "Done": "Characteristics written to {name}'s sheet."
     },
     "Derived": {
       "Title": "Derived Characteristics",

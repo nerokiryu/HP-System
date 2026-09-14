@@ -1,5 +1,104 @@
 # CHANGELOG
 
+## 1.1.0
+
+### Fiche de personnage non-joueur
+
+Une fiche propre, aux budgets du livre. L'onglet d'identité regroupe en quatre
+sections repliables les étapes du §21.1 qui n'avaient pas leur place ailleurs :
+rôle, archétype, âge, statut de sang, budget, combat et notes du Maître du Jeu.
+
+**Budgets du §21.1.** Un PNJ dispose de **350 points de compétences et 4,5 points
+d'avantages**, contre 400 et 6 pour un personnage joueur. La case **Rival**
+bascule sur les budgets d'un PJ, comme le conseille le §21.2 : « il est fortement
+conseillé de faire des rivaux des anti-héros […] de cette manière, les
+confrontations entre les PJ et les rivaux se feront à force égale. »
+
+**Tirage en 3d6.** « On lance 3d6 pour les 8 caractéristiques » (§21.1), là où un
+PJ reste à 2d6+6. L'assistant de création s'adapte au type d'acteur et le bouton
+annonce la formule employée.
+
+**Années supérieures (§22.2.1).** Un PNJ créé dans une année avancée reçoit des
+points de compétences en plus du budget de base : +50 en 2ᵉ année, +110 en 3ᵉ,
++180 en 4ᵉ, +250 en 5ᵉ, +330 en 6ᵉ, +410 en 7ᵉ. C'est le haut de la fourchette
+publiée, que le livre autorise explicitement. Un rival de 7ᵉ année atteint donc
+**810 points** — l'adversaire le plus solide que les règles permettent, sans
+inventer de catégorie hors-livre. Les points d'avantages, eux, ne changent pas :
+le §22 n'y touche pas.
+
+Les coups de pouce et croche-pattes du destin sont acceptés sur un PNJ, le §21.1
+le prévoyant : « il est tout à fait possible d'en choisir un pour un PNJ ».
+
+### Caractéristiques : tirage, âge et progression
+
+Trois points du livre qui n'étaient pas implémentés, et qui n'en faisaient en
+réalité que deux.
+
+**Malus d'âge (§Étape 2).** « La valeur obtenue en lançant les 2d6+6 est celle
+d'un personnage adulte, soit un personnage de 16 et plus. On retire 1 à cette
+valeur si on incarne un Sorcier de 15 ans, 2 pour un Sorcier de 14 ans, etc. »
+Le malus vaut donc `16 − âge` et ne touche que **FOR, CON et TAI** — seules ces
+trois caractéristiques portent la remarque, les cinq autres n'en ont aucune. Il
+est appliqué au total, donc il atteint les points de vie, le bonus aux dégâts et
+l'initiative.
+
+**Progression annuelle.** Le livre n'en publie aucune : « malus qui diminuera de
+1 chaque année ». C'est le dégel du malus ci-dessus, rien d'autre. Il suffit de
+vieillir le personnage d'un an pour qu'il gagne son point.
+
+**Assistant de création.** Un bouton dans l'onglet Caractéristiques tire les huit
+valeurs et les répartit selon l'ordre de priorité publié pour l'archétype
+(l. 640-646). Le tirage reste un pool : choisir une valeur déjà placée l'échange
+avec l'autre caractéristique, comme au brouillon. L'aperçu montre en direct les
+points de vie, le bonus aux dégâts, l'Idée, la Chance, et ce que l'âge retranche.
+
+### Corrections
+
+- **Sélecteur d'archétype inutilisable.** Il était branché sur `data-action`, que
+  Foundry déclenche au **clic** — c'est-à-dire le geste qui déroule la liste. Le
+  re-rendu la refermait aussitôt : impossible de choisir quoi que ce soit. Il
+  réagit désormais au changement, conserve le choix et rend le focus au clavier.
+- **Case « formule extrême » sans effet.** Elle n'était reliée ni à son action,
+  qui n'existait pas, ni au formulaire, qui ne retenait que `system.quantity`
+  avant de jeter le reste. Tous les champs visant un objet embarqué sont
+  maintenant transmis.
+- **Styles jamais appliqués.** L'assistant de création ciblait
+  `.hogwarts-system .character-creation` en descendant, alors qu'ApplicationV2
+  pose toutes les classes sur le **même** élément. L'onglet d'identité du PNJ,
+  lui, réutilisait le balisage de la biographie sans que les règles couvrent
+  `.tab.npc` : titres à la taille par défaut du navigateur, sans l'accent de
+  Maison, et champs hors grille.
+- **Contraste illisible.** Le rouge des alertes — malus d'âge, budget dépassé,
+  valeur vieillie, doublon de tirage — tombait à 2,3:1 sur le thème sombre, pour
+  un minimum de 4,5:1. Il suit désormais le thème et atteint 7,5:1.
+- **Initiative.** La formule de combat référençait `@system.initiativeBonus`, qui
+  ne se résolvait jamais ; le bouton de la fiche ignorait à la fois la Dextérité
+  et le bonus.
+- **Champs de formulaire en double.** Plusieurs champs du PNJ étaient déclarés
+  dans deux onglets, ce qui provoquait des erreurs de validation à la saisie et
+  corrompait silencieusement les valeurs de type tableau.
+
+### Qualité
+
+L'immense fiche d'acteur, 3 271 lignes, est découpée en sept modules par domaine.
+Les 71 fonctions déplacées ont été comparées une à une avant et après : aucune
+différence.
+
+**37 tests automatiques**, dont sept nouveaux tests d'intégrité structurelle :
+actions déclarées, absence de `data-action` sur un contrôle de saisie, clés de
+traduction présentes et symétriques entre le français et l'anglais, gabarits
+existants, sélecteurs de classe racine, cohérence de `system.json`. Chacun est né
+d'une panne réelle. `npm run test:mutations` réintroduit chaque défaut un par un
+pour vérifier que le test correspondant vire bien au rouge.
+
+### Migration
+
+Les fiches existantes portaient la valeur de l'enfant, pas celle de l'adulte :
+appliquer le malus par-dessus l'aurait compté deux fois et aurait divisé par deux
+les points de vie de sept personnages sur dix du monde de test. Une migration
+rend donc aux caractéristiques leur valeur adulte, de sorte que **rien ne change
+à l'écran** après la mise à jour.
+
 ## 1.0.1
 
 ### Avantages, désavantages et destin
