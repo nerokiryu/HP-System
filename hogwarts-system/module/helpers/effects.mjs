@@ -96,8 +96,8 @@ export function prepareEffectAttributes(doc) {
     const skillFields = ['value', 'base', 'max', 'spent'];
     for (let i = 0; i < skills.length; i++) {
       const s = skills[i];
-      // Une entrée sans nom ne produirait que des lignes anonymes (« — value ») :
-      // ce sont des résidus, pas des compétences que l'on souhaite viser.
+      // A nameless entry would only yield anonymous rows (« — value »):
+      // these are leftovers, not skills anyone would want to target.
       if (!s.name) continue;
       const label = s.spec ? `${s.name} (${s.spec})` : s.name;
       // Listed first because it is the only skill key that survives being copied

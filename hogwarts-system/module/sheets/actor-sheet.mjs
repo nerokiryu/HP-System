@@ -5,6 +5,7 @@ import * as biography from './actor/biography.mjs';
 import * as creature from './actor/creature.mjs';
 import * as experience from './actor/experience.mjs';
 import * as magic from './actor/magic.mjs';
+import * as mind from './actor/mind.mjs';
 import * as rolls from './actor/rolls.mjs';
 import * as skills from './actor/skills.mjs';
 
@@ -47,6 +48,8 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
       brewPotion: magic.onBrewPotion,
       usePotion: magic.onUsePotion,
       rollOpposition: rolls.onRollOpposition,
+      rollOpposedSkill: rolls.onRollOpposedSkill,
+      rollLegilimency: mind.onRollLegilimency,
       resolveXP: experience.onResolveXP,
       schoolTermXP: experience.onSchoolTermXP,
       yearEndXP: experience.onYearEndXP,
@@ -155,9 +158,9 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
         options.parts.push('skills', 'features', 'perks', 'gear', 'spells', 'potions', 'familiar', 'settings');
         break;
       case 'npc':
-        // §21.1 : le PNJ suit les mêmes étapes qu'un PJ, il lui faut donc les
-        // mêmes onglets — sauf le familier, réservé aux héros.
-        options.parts.push('npc', 'skills', 'features', 'perks', 'gear', 'spells', 'potions', 'settings');
+        // §21.1: an NPC follows the same steps as a player character, so it needs
+        // the same tabs.
+        options.parts.push('npc', 'skills', 'features', 'perks', 'gear', 'spells', 'potions', 'familiar', 'settings');
         break;
       case 'familiar':
         options.parts.push('features', 'perks', 'skills', 'settings');
@@ -288,11 +291,14 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
         break;
       case 'features':
         context.tab = context.tabs[partId];
-        // Le livre ne tire pas les caractéristiques de la même façon selon le type
-        // d'acteur : le bouton doit annoncer la formule qu'il appliquera.
-        context.creationFormula = (CharacterCreationApp.FORMULES[this.actor.type]
-          ?? CharacterCreationApp.FORMULES.character).libelle;
+        // The book does not roll characteristics the same way for every actor
+        // per actor type: the button must announce the formula it will apply.
+        context.creationFormula = (CharacterCreationApp.FORMULAS[this.actor.type]
+          ?? CharacterCreationApp.FORMULAS.character).label;
         if (this.actor.type === 'character') context.hybrid = this._prepareHybridContext();
+        // The duel block only makes sense for the two actor types that duel.
+        context.duelling = ['character', 'npc'].includes(this.actor.type);
+        context.hasLegilimency = (this.actor.system.skills ?? []).some((s) => s.name === 'Legilimancie');
         // Compute total PBP cost across all owned items for display in familiar sheets
         try {
           const total = (this.document.items || []).reduce((acc, it) => {
@@ -412,18 +418,18 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
         break;
       case 'npc':
         context.tab = context.tabs[partId];
-        // Budget d'avantages du §21.1 : le coût des objets et de la baguette se
-        // retranche du maximum, sans les cas particuliers du personnage joueur
-        // (familier lié, autre école) que le PNJ n'a pas.
+        // §21.1 perk budget: the cost of items and of the wand is subtracted from
+        // the maximum, without the player-character special cases (linked
+        // familiar, another school) that an NPC does not have.
         {
-          const coutObjets = (this.document.items ?? [])
+          const itemCost = (this.document.items ?? [])
             .reduce((s, it) => s + (Number(it.system?.pbpCost) || 0), 0);
           const coutBaguette = Number(this.actor.system?.wand?.pbpCost) || 0;
-          const restant = (Number(this.actor.system?.experience?.personalBonusPoints?.max) || 0)
-            - coutObjets - coutBaguette;
-          context.personalBonusCurrent = restant;
+          const remaining = (Number(this.actor.system?.experience?.personalBonusPoints?.max) || 0)
+            - itemCost - coutBaguette;
+          context.personalBonusCurrent = remaining;
           context.personalBonusCurrentDefined = true;
-          context.personalBonusCurrentNegative = restant < 0;
+          context.personalBonusCurrentNegative = remaining < 0;
         }
         context.enrichedGMNotes = await foundry.applications.ux.TextEditor.enrichHTML(
           this.actor.system.notes?.gmNotes || '',
@@ -558,7 +564,7 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
           break;
         case 'settings':
           tab.id = 'settings';
-          tab.label = ''; // Pas de label, uniquement l'icône
+          tab.label = ''; // Icon only, no label
           tab.icon = 'fas fa-cog';
           break;
       }
@@ -1155,8 +1161,7 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
    * Optionally includes a fougue checkbox if the actor has fougue points.
    * Returns { mod: number, useFougue: boolean }.
    */
-  async _promptRollModifier({ showFougue = false, showDifficulty = false, showAssistance = false, showCasting = false, showExtreme = false } = {}) {
-    const title = game.i18n.localize('HOGWARTS.Roll.ModifierTitle');
+  async _promptRollModifier({ showFougue = false, showDifficulty = false, showAssistance = false, showCasting = false, showExtreme = false } = {}) {    const title = game.i18n.localize('HOGWARTS.Roll.ModifierTitle');
     const label = game.i18n.localize('HOGWARTS.Roll.ModifierLabel');
     const fougueAvailable = showFougue && Number(this.actor.system?.fougue?.value) > 0;
     const fougueHtml = fougueAvailable
@@ -1238,7 +1243,7 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
       },
       rejectClose: false,
       modal: true,
-    }).then(result => result ?? { mod: 0, useFougue: false }).catch(() => ({ mod: 0, useFougue: false }));
+    });
   }
 
 
@@ -1329,7 +1334,7 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
       }
     }
 
-    // Champs de formulaire visant un objet embarqué : `items.<id>.<chemin>`.
+    // Field names aimed at an embedded item: `items.<id>.<path>`.
     if (submitData.items) {
       const itemUpdates = Object.entries(submitData.items)
         .map(([_id, data]) => ({ _id, ...foundry.utils.flattenObject(data) }))
@@ -1339,7 +1344,7 @@ export class HogwartsActorSheet extends api.HandlebarsApplicationMixin(
         await this.document.updateEmbeddedDocuments('Item', itemUpdates);
       }
 
-      // Retiré de la charge utile : `items` n'est pas un champ de l'acteur.
+      // Dropped from the payload: `items` is not an actor field.
       delete submitData.items;
     }
     

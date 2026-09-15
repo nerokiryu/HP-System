@@ -1,4 +1,5 @@
 import HogwartsActorBase from './base-actor.mjs';
+import { deriveSenses } from '../helpers/senses.mjs';
 
 export default class HogwartsCharacter extends HogwartsActorBase {
   static LOCALIZATION_PREFIXES = [
@@ -7,19 +8,19 @@ export default class HogwartsCharacter extends HogwartsActorBase {
   ];
 
   /**
-   * Étape 2 : « La valeur obtenue en lançant les 2d6+6 est celle d'un personnage
-   * adulte, soit un personnage de 16 et plus. On retire 1 à cette valeur si on
-   * incarne un Sorcier de 15 ans, 2 pour un Sorcier de 14 ans, etc. » (l. 571).
-   * Seules FOR, CON et TAI portent cette remarque ; les cinq autres
-   * caractéristiques n'en ont aucune.
+   * Step 2 of character creation: « La valeur obtenue en lançant les 2d6+6 est
+   * celle d'un personnage adulte, soit un personnage de 16 et plus. On retire 1 à
+   * cette valeur si on incarne un Sorcier de 15 ans, 2 pour un Sorcier de 14 ans,
+   * etc. » (l. 571). Only STR, CON and SIZ carry that remark; the other five
+   * characteristics carry none.
    */
   static ADULT_AGE = 16;
   static AGE_MALUS_STATS = ['str', 'con', 'siz'];
 
   /**
-   * « Malus qui diminuera de 1 chaque année » (l. 574) : ce dégel *est* la
-   * progression annuelle, le livre n'en publie aucune autre.
-   * @returns {number} Positif, à retrancher.
+   * « Malus qui diminuera de 1 chaque année » (l. 574): that thaw *is* the yearly
+   * progression, the book publishes no other.
+   * @returns {number} Positive, meant to be subtracted.
    */
   get ageMalus() {
     const age = Number(this.profile?.age);
@@ -93,17 +94,22 @@ export default class HogwartsCharacter extends HogwartsActorBase {
       })
     );
 
-    // Bonus de compétence indexé par nom, et unique cible praticable des Active
-    // Effects : `skills` étant un tableau, la clé `system.skills.N.value` dépend
-    // de l'ordre des compétences du personnage, qu'un objet de compendium ne peut
-    // pas connaître. `system.skillBonus.Athlétisme` est stable partout, donc un
-    // avantage comme Sportif (§5.2) s'applique tel quel à n'importe quelle fiche.
+    // Skill bonus indexed by name, and the only practical target for an Active
+    // Effect: `skills` being an array, the key `system.skills.N.value` depends on
+    // each character's own skill ordering, which a compendium item cannot know.
+    // `system.skillBonus.Athlétisme` is stable everywhere, so an advantage such as
+    // Sportif (§5.2) applies as-is to any sheet.
     //
-    // Surtout pas d'`initial: {}` : un littéral est évalué une seule fois et la
-    // même référence serait partagée par toutes les fiches sans valeur stockée,
-    // faisant fuir les bonus de l'une à l'autre. La valeur par défaut du champ
-    // est une fabrique, qui rend un objet neuf à chaque fois.
+    // Never use `initial: {}`: a literal is evaluated once, so the same reference
+    // would be shared by every sheet that has no stored value, leaking bonuses
+    // from one to another. The field default is a factory returning a fresh object.
     schema.skillBonus = new fields.ObjectField();
+
+    // PERception multipliers per sense. `derived` is recomputed on every data
+    // preparation, so an Active Effect cannot target it directly: it targets this
+    // field, which the computation then reads back. A missing key falls back to
+    // the default; `thirdEye` only exists when an advantage adds it.
+    schema.senseMult = new fields.ObjectField();
 
     // Family - array of characters
     schema.family = new fields.ArrayField(
@@ -233,9 +239,9 @@ export default class HogwartsCharacter extends HogwartsActorBase {
       otherSchool: new fields.BooleanField({ initial: false })
     });
 
-    // Le chapitre 16 publie le processus en dix étapes et un test déterminant la
-    // catégorie d'animal (§16.2), mais aucune règle chiffrée de transformation :
-    // `mastery` et le jet associé sont une extension maison.
+    // Chapter 16 publishes the ten-step process and a test determining the animal
+    // category (§16.2), but no numeric transformation rule: `mastery` and its roll
+    // are a house extension.
     schema.animagus = new fields.SchemaField({
       form: new fields.StringField({ blank: true, initial: '' }),
       profile: new fields.StringField({
@@ -271,6 +277,12 @@ export default class HogwartsCharacter extends HogwartsActorBase {
       notes: new fields.HTMLField({ blank: true })
     });
 
+    // Years spent in a duelling club: +1 initiative each, up to +5, cumulative
+    // with the *Initié au duel* advantage (l. 28569-28577).
+    schema.duelClubYears = new fields.NumberField({
+      required: true, nullable: false, integer: true, initial: 0, min: 0, max: 5,
+    });
+
     return schema;
   }
 
@@ -285,6 +297,16 @@ export default class HogwartsCharacter extends HogwartsActorBase {
       source.bio.history = source.biography;
     }
     return super.migrateData(source);
+  }
+
+  /**
+   * Maximum mastery of a school skill: 30 % in year 1, +15 %/year, capped at
+   * 100 % (l. 6707-6714). A `maxOverride` switches the automation off.
+   * @param {number} year
+   * @returns {number}
+   */
+  static autoSchoolMax(year) {
+    return Math.min(100, 30 + ((Number(year) || 1) - 1) * 15);
   }
 
   prepareBaseData() {
@@ -379,6 +401,35 @@ export default class HogwartsCharacter extends HogwartsActorBase {
       });
       known.add(`general:${skill.name}`);
     }
+
+    this._grantFeatureSkills(known);
+  }
+
+  /**
+   * Skills opened up by an advantage: Animagus, Legilimens, Occlumens,
+   * Métamorphomage. Nothing is stored — removing the advantage removes the row.
+   * @param {Set<string>} known
+   */
+  _grantFeatureSkills(known) {
+    for (const item of this.parent?.items ?? []) {
+      if (item.type !== 'feature') continue;
+      const grant = item.system?.grantsSkill;
+      if (!grant?.name || known.has(`special:${grant.name}`)) continue;
+      this.skills.push({
+        name: grant.name,
+        base: Number(grant.base) || 0,
+        max: Number(grant.max) || 95,
+        maxOverride: true,
+        value: Number(grant.base) || 0,
+        spent: 0,
+        category: 'special',
+        spec: '',
+        custom: false,
+        xpCheck: false,
+        grantedBy: item.name,
+      });
+      known.add(`special:${grant.name}`);
+    }
   }
 
   /**
@@ -390,9 +441,7 @@ export default class HogwartsCharacter extends HogwartsActorBase {
 
     const year = Number(this.profile?.year) || 1;
     const excludeSchoolFromCP = game.settings.get('hogwarts-system', 'excludeSchoolSkillsFromCP') ?? false;
-    // Maîtrise maximale scolaire : 30 % en 1re année, +15 %/an, plafonnée à
-    // 100 % (livre v1.12, l. 6707-6714). Un `maxOverride` coupe l'automatisme.
-    const autoSchoolMax = Math.min(100, 30 + (year - 1) * 15);
+    const autoSchoolMax = HogwartsCharacter.autoSchoolMax(year);
     let totalSpent = 0;
 
     for (const s of this.skills) {
@@ -445,7 +494,7 @@ export default class HogwartsCharacter extends HogwartsActorBase {
     for (const key in this.stats) {
       const value = Number(this.stats[key].value) || 0;
       const mod = Number(mods[key]) || 0;
-      // La valeur saisie est celle de l'adulte ; l'âge la rabote (§Étape 2).
+      // The stored figure is the adult one; age shaves it down (§Étape 2).
       const ageMod = HogwartsCharacter.AGE_MALUS_STATS.includes(key) ? -this.ageMalus : 0;
       this.stats[key].hybridMod = mod;
       this.stats[key].ageMod = ageMod;
@@ -520,29 +569,13 @@ export default class HogwartsCharacter extends HogwartsActorBase {
       .reduce((best, i) => Math.max(best, Number(i.system?.shieldBonus) || 0), 0);
 
     // Derived characteristics: senses, idea, luck
-    const per = Number(this.stats.per?.total) || 0;
-    const int = Number(this.stats.int?.total) || 0;
-    const pow = Number(this.stats.pow?.total) || 0;
-    // Use configurable multipliers from CONFIG.HOGWARTS.derivedMultipliers if present,
-    // otherwise fall back to sensible defaults.
-    const dm = CONFIG.HOGWARTS?.derivedMultipliers ?? {
-      taste: 3,
-      smell: 3,
-      hearing: 4,
-      touch: 3,
-      sight: 5,
-      idea: 5,
-      luck: 5,
-    };
-    this.derived = {
-      taste: per * (dm.taste ?? 3),
-      smell: per * (dm.smell ?? 3),
-      hearing: per * (dm.hearing ?? 4),
-      touch: per * (dm.touch ?? 3),
-      sight: per * (dm.sight ?? 5),
-      idea: int * (dm.idea ?? 5),
-      luck: pow * (dm.luck ?? 5),
-    };
+    this.derived = deriveSenses({
+      per: Number(this.stats.per?.total) || 0,
+      int: Number(this.stats.int?.total) || 0,
+      pow: Number(this.stats.pow?.total) || 0,
+      senseMult: this.senseMult,
+      multipliers: CONFIG.HOGWARTS?.derivedMultipliers,
+    });
 
     // Ensure a sensible default for personal bonus points max, but do not
     // overwrite a value that the user or world has explicitly set. The

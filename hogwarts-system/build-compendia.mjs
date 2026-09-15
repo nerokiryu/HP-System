@@ -373,11 +373,35 @@ function pbpCost(raw) {
  *  - `pick` — the book leaves the target skill to the player ("Doué pour…"),
  *    so the figure is filled in but the skill name has to be completed.
  * Everything else stays descriptive: once-per-scenario "+30 % à toutes ses
- * actions" (Courageux, Fourberie, Justicier), virulence shifts, PERx4, and the
- * features that grant a whole new skill (Animagus, Legilimens, Occlumens,
- * Métamorphomage) which an Active Effect cannot add to an array.
+ * actions" (Courageux, Fourberie, Justicier) and virulence shifts.
  */
 const PICK_PLACEHOLDER = 'COMPETENCE-A-CHOISIR';
+
+/**
+ * PERception multipliers. `derived` is recomputed on every data preparation,
+ * so the effect targets `system.senseMult`, which the computation reads back.
+ */
+const FEATURE_SENSES = {
+  // « Cette compétence s'ajoute à vos autres perceptions et se fait comme un jet
+  // de PERceptionx4. » An extra sense: nobody has it out of the box.
+  'Troisième œil': { senses: { thirdEye: 4 } },
+  // « Sans vos lunettes » — PERx1 instead of PERx5, hence conditional.
+  'Problèmes visuels': { senses: { sight: 1 }, conditional: true },
+};
+
+/**
+ * Whole skills opened up by an advantage. An Active Effect cannot add a row to
+ * an array, so the figures are stored on the item and the actor composes its
+ * list from the advantages it carries.
+ */
+const FEATURE_SKILLS = {
+  // The advantage table (l. 3753) says 20 / 90, the end of chapter 16
+  // (l. 24645) says 10 / 80. The dedicated chapter prevails.
+  'Animagus': { name: 'Animagus', base: 10, max: 80 },
+  'Legilimens': { name: 'Legilimancie', base: 15, max: 80 },
+  'Occlumens': { name: 'Occlumancie', base: 15, max: 80 },
+  'Métamorphomage': { name: 'Métamorphomage', base: 20, max: 90 },
+};
 
 const FEATURE_EFFECTS = {
   // Permanent, on skills the book names outright.
@@ -404,15 +428,19 @@ const FEATURE_EFFECTS = {
 };
 
 const ADD_MODE = 2; // CONST.ACTIVE_EFFECT_MODES.ADD
+const OVERRIDE_MODE = 5; // CONST.ACTIVE_EFFECT_MODES.OVERRIDE
 
 /** One transferable effect per feature, or none when nothing is automatable. */
 function featureEffect(name, img, used) {
-  const spec = FEATURE_EFFECTS[name];
+  const spec = FEATURE_EFFECTS[name] ?? FEATURE_SENSES[name];
   if (!spec) return [];
 
   const changes = [];
   for (const [skill, delta] of Object.entries(spec.skills ?? {})) {
     changes.push({ key: `system.skillBonus.${skill}`, mode: ADD_MODE, value: String(delta), priority: 20 });
+  }
+  for (const [sens, facteur] of Object.entries(spec.senses ?? {})) {
+    changes.push({ key: `system.senseMult.${sens}`, mode: OVERRIDE_MODE, value: String(facteur), priority: 20 });
   }
   if (spec.pick !== undefined) {
     changes.push({ key: `system.skillBonus.${PICK_PLACEHOLDER}`, mode: ADD_MODE, value: String(spec.pick), priority: 20 });
@@ -488,6 +516,7 @@ function buildFeatures(used) {
           description: html(entry.description) + note,
           perkType: type,
           pbpCost: free ? 0 : cost,
+          ...(FEATURE_SKILLS[entry.name] ? { grantsSkill: FEATURE_SKILLS[entry.name] } : {}),
         },
         effects: featureEffect(entry.name, FEATURE_ICON[type], used),
       });

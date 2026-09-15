@@ -1,5 +1,115 @@
 # CHANGELOG
 
+## 1.2.0
+
+### Duel magique (ch. 27)
+
+Une fenêtre de duel, accessible depuis les contrôles de scène, s'appuie sur la
+rencontre en cours comme le fait déjà le Quidditch.
+
+- **Les quatre types de duel** du §27.4, avec leur condition de disqualification.
+  Dans les types *a* et *b*, la fenêtre rappelle que 1 point de dégât disqualifie.
+- **La table des sortilèges autorisés** du §27.5 : **67 entrées**, filtrées par
+  type de duel. Les sorts que le livre étoile sont signalés, les Impardonnables
+  ne sont proposés que dans le duel à mort.
+- **L'échelle de priorité** du §27.3 remplace les phases de combat pendant un
+  duel : 1 innés, 2 protection, 3 informulés (+3 initiative) et classiques,
+  4 formules extrêmes (−3). Le rang apparaît dans le suivi de combat.
+- **L'entraînement** : un champ « années de club de duel » sur la fiche vaut +1
+  à l'initiative de duel par année, jusqu'à +5, cumulable avec l'avantage
+  *Initié au duel* — exactement l'exemple de Mary Macmilliam (l. 28577).
+- **Le point de fougue** peut être dépensé sur le jet d'initiative pour relancer
+  le d6 avec +2 (l. 28683).
+- Le lancement applique le malus du sort, le stress et les −30 % d'un informulé.
+  Un sort inné ne rate jamais : un jet manqué compte comme une réussite de
+  différence 0 (l. 23197).
+
+> **Trois noms de la table du §27.5 ne correspondent à aucun sortilège** — ni
+> dans le livre, ni dans le Grimoire : *Annulation de sort*, *Immobilisation
+> totale* et *Explosion*. Ils sont conservés et marqués d'un « ? » plutôt que
+> rapprochés d'un candidat plausible. Deux autres n'étaient que des coquilles et
+> ont été rapprochées : *Jambencoton* et *Mouche-Sadrines*.
+
+### Jets en opposition (§28.3.4)
+
+La règle n'était implémentée que dans la fenêtre de Quidditch, alors que le
+livre s'en sert aussi dans les exemples de combat du chapitre 2 (esquive
+l. 3067, bagarre l. 3081). Elle est désormais générale :
+
+- chaque ligne de compétence porte un bouton qui publie la **différence**
+  (valeur − jet) au lieu du degré de réussite ;
+- un résolveur unique compare deux différences publiées, gère la gêne et tranche
+  l'égalité en faveur du premier à l'initiative ;
+- le Quidditch et le duel utilisent ce même résolveur.
+
+**Changement de comportement** : la table des résistances est bornée à 5-95 au
+lieu de 1-99. La table imprimée ne descend jamais sous 05 ni ne monte au-dessus
+de 95 (l. 1038) ; l'ancienne borne ne venait d'aucune source.
+
+### Legilimancie et Occlumancie (ch. 15)
+
+Le chapitre 15 est entièrement descriptif : il ne publie ni dé ni chiffre. Un
+bouton sur l'onglet Avantages, visible seulement si le personnage possède la
+compétence, oppose la Legilimancie à l'Occlumancie de la cible.
+
+> **Extension maison assumée.** Résoudre une intrusion par une opposition de
+> compétences, et la retourner contre le Legilimens quand la défense réussit,
+> sont une lecture du §15.1 « Dangers » (l. 24365). Le livre n'attache aucun
+> nombre à cette phrase ; la carte de chat le rappelle.
+
+### Personnages non-joueurs et avantages
+
+- **Les compétences octroyées par un avantage** (Animagus, Legilimancie,
+  Occlumancie, Métamorphomage) ne sont plus semées sur tout le monde : elles
+  apparaissent avec l'avantage et disparaissent avec lui, sans jamais être
+  écrites en base.
+- **Les sens octroyés** — *Troisième œil* (PER×4) et *Problèmes visuels*
+  (Vue ×1) — fonctionnent désormais aussi sur une fiche de PNJ. Le calcul des
+  sens vivait dans le seul modèle du personnage ; il est partagé.
+- **§22.2.1** : le budget de compétences d'un PNJ gagne le bonus d'année
+  (+50 à +410), affiché à part pour rester ajustable.
+- L'onglet *Familier* est présent sur une fiche de PNJ, comme sur celle d'un
+  joueur.
+
+### Quidditch
+
+Les boutons de score ne savaient qu'**ajouter**. S'ajoutent un **ajustement ±
+par équipe** et une **remise à zéro** qui conserve la composition et l'état du
+Vif d'or. Le score ne peut pas devenir négatif.
+
+### Corrections
+
+- **Fermer une fenêtre de jet lançait les dés.** `DialogV2.prompt` renvoie
+  `null` à la fermeture, mais la valeur était convertie en réponse valide.
+- **Le plafond de maîtrise scolaire lisait une valeur périmée** : cliquer le
+  cadenas fait sortir du champ voisin, et l'enregistrement n'était pas encore
+  arrivé. Un reverrouillage demande maintenant confirmation.
+- **L'avantage *Initié au duel* était compté deux fois** : livré comme effet
+  conditionnel sur `initiativeBonus`, son +2 y figurait déjà une fois activé.
+- **Déclarer une formule extrême rendait la plupart des sorts plus faciles.**
+  Le livre imprime « Formule extrême : - » pour la majorité d'entre eux, ce qui
+  se traduit par un malus de 0 ; ce zéro était lu comme le coût de la formule.
+  **251 sorts sur 366** étaient concernés.
+- **L'assistant de création annonçait `2d6+6` à un PNJ** alors que le tirage
+  était bien en `3d6`.
+- L'icône par défaut d'une équipe de Quidditch est `icons/svg/tower-flag.svg`.
+
+### Sous le capot
+
+- `actor-sheet.mjs` passe de 3 271 à 1 531 lignes, découpé en huit modules par
+  domaine ; les fonctions déplacées ont été comparées une à une, sans écart.
+- Commentaires, identifiants et intitulés de test sont en anglais. **Les
+  citations du livre restent en français**, verbatim et avec leur numéro de
+  ligne : elles servent de preuve.
+- **51 tests** et une vérification par mutation, qui réintroduit neuf défauts un
+  par un pour s'assurer que la suite sait virer au rouge.
+
+### Migration
+
+Les compétences d'avantage déjà stockées sur des fiches qui ne portent pas
+l'avantage sont retirées — **sauf** celles où des points ont été investis, qui
+sont conservées telles quelles.
+
 ## 1.1.0
 
 ### Fiche de personnage non-joueur

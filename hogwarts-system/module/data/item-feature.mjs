@@ -26,6 +26,15 @@ export default class HogwartsFeature extends HogwartsItemBase {
       step: 0.5
     });
 
+    // Some advantages grant a whole skill (Animagus, Legilimens, Occlumens,
+    // Métamorphomage). An Active Effect cannot add a row to an array, so the
+    // actor reads this field to compose its list.
+    schema.grantsSkill = new fields.SchemaField({
+      name: new fields.StringField({ blank: true, initial: '' }),
+      base: new fields.NumberField({ ...{ required: true, nullable: false, integer: true }, initial: 0, min: 0 }),
+      max: new fields.NumberField({ ...{ required: true, nullable: false, integer: true }, initial: 0, min: 0 }),
+    });
+
     return schema;
   }
 }

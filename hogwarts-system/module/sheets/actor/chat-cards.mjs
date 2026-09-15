@@ -1,8 +1,8 @@
 /**
- * Boutons des cartes de chat, partagés par tous les jets de la fiche.
+ * Chat card buttons, shared by every roll on the sheet.
  *
- * Ils produisent du HTML brut plutôt qu'un gabarit : les cartes sont assemblées
- * par concaténation dans les gestionnaires, et les écouteurs sont posés une fois
+ * They emit raw HTML rather than a template: the cards are assembled by string
+ * concatenation in the handlers, and the listeners are wired once
  * pour toutes par le hook `renderChatMessageHTML`.
  */
 

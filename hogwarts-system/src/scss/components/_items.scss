@@ -1,8 +1,8 @@
 // Section Header
 .items-header {
-  // `min-height` plutôt que `height` : certains en-têtes (colonnes des sorts,
-  // boutons « Ajouter niveau N ») dépassent 28 px et chevauchaient la ligne
-  // suivante lorsque la hauteur était figée.
+  // `min-height` rather than `height`: some headers (spell columns, « Ajouter
+  // niveau N » buttons) exceed 28 px and overlapped the next row when the height
+  // was fixed.
   min-height: 28px;
   margin: 2px 0;
   padding: 0;
@@ -140,7 +140,7 @@
   .item-prop {
     // `.item` centre ses enfants : sans `stretch`, la cellule garde la hauteur du
     // texte et ses bordures deviennent de courts traits flottants au lieu de
-    // séparateurs de colonnes.
+    // column separators.
     align-self: stretch;
     display: flex;
     align-items: center;
@@ -187,7 +187,7 @@
     text-align: center;
   }
 
-  // XP check (coche d'expérience) column
+  // XP check column
   .xp-col {
     flex: 0 0 36px;
     text-align: center;
@@ -297,7 +297,7 @@
 }
 
 // -----------------------------------------
-// Onglet Sorts : libellés de colonnes longs
+// Spells tab: long column labels
 // -----------------------------------------
 .tab.spells {
   .item-extreme {

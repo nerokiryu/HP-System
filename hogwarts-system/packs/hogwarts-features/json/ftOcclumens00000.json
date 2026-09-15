@@ -6,7 +6,12 @@
   "system": {
     "description": "<p>Vous possédez la capacité de vous protéger contre les intrusions mentales et contre certaines capacités de créatures magiques. Donne une compétence Occlumancie à 15% de maîtrise. Maîtrise maximale 80%</p>",
     "perkType": "advantage",
-    "pbpCost": 1
+    "pbpCost": 1,
+    "grantsSkill": {
+      "name": "Occlumancie",
+      "base": 15,
+      "max": 80
+    }
   },
   "effects": []
 }

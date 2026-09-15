@@ -34,7 +34,7 @@
           </div>
         </div>
       {{/if}}
-      {{#if (eq actor.type 'character')}}
+      {{#if (or (eq actor.type 'character') (eq actor.type 'npc'))}}
       <div class="form-group familiar-actions">
         {{#if actor.system.familiar.linkedActor}}
           <a class='item-control' data-action='viewLinkedFamiliar' data-id='{{actor.system.familiar.linkedActor}}' data-tooltip='{{localize "HOGWARTS.Actor.Familiar.ViewLinked"}}'>

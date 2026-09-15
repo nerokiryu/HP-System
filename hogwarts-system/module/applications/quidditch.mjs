@@ -5,6 +5,8 @@ import {
   QUIDDITCH_POINTS,
   snitchChance,
 } from '../helpers/quidditch.mjs';
+import { marginRow, openOppositionResolver } from './opposition.mjs';
+import { resistanceChance } from '../helpers/opposition.mjs';
 
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
 
@@ -33,6 +35,8 @@ export class QuidditchApp extends HandlebarsApplicationMixin(ApplicationV2) {
       startMatch: QuidditchApp._onStartMatch,
       endMatch: QuidditchApp._onEndMatch,
       score: QuidditchApp._onScore,
+      adjustScore: QuidditchApp._onAdjust,
+      resetScore: QuidditchApp._onResetScore,
       setTeam: QuidditchApp._onSetTeam,
       setRole: QuidditchApp._onSetRole,
       rollAction: QuidditchApp._onRollAction,
@@ -236,6 +240,55 @@ export class QuidditchApp extends HandlebarsApplicationMixin(ApplicationV2) {
     QuidditchApp.refreshAll();
   }
 
+  /**
+   * Manual correction from the +/- controls. Scoring buttons only ever add, so
+   * without this a mis-click could not be undone short of restarting the match,
+   * which also clears the line-up.
+   * @this QuidditchApp
+   */
+  static async _onAdjust(event, target) {
+    const side = Number(target.dataset.side);
+    const input = this.element.querySelector(`input[name="delta-${side}"]`);
+    const amount = Math.abs(Number(input?.value) || 0);
+    if (!amount) return ui.notifications.warn(game.i18n.localize('HOGWARTS.Quidditch.NoAmount'));
+
+    const delta = target.dataset.sign === '-' ? -amount : amount;
+    const match = QuidditchApp.match;
+    const score = [...match.score];
+    // A score cannot go negative: the book knows no penalty that takes points away.
+    score[side] = Math.max(0, (Number(score[side]) || 0) + delta);
+
+    await QuidditchApp.setMatch({ score });
+    await ChatMessage.create({
+      content: `<div class="hogwarts-chat-card">
+        <header class="card-header"><h3>${game.i18n.localize('HOGWARTS.Quidditch.Adjusted')}</h3></header>
+        <div class="card-row">${delta >= 0 ? '+' : ''}${delta} → <strong>${score[0]} — ${score[1]}</strong></div>
+      </div>`,
+    });
+    if (input) input.value = '';
+    QuidditchApp.refreshAll();
+  }
+
+  /** Put the score back to 0-0 without touching the line-up or the snitch. */
+  static async _onResetScore() {
+    const ok = await foundry.applications.api.DialogV2.confirm({
+      window: { title: game.i18n.localize('HOGWARTS.Quidditch.ResetScore') },
+      content: `<p>${game.i18n.localize('HOGWARTS.Quidditch.ResetScoreConfirm')}</p>`,
+      rejectClose: false,
+      modal: true,
+    }).catch(() => false);
+    if (!ok) return;
+
+    await QuidditchApp.setMatch({ score: [0, 0] });
+    await ChatMessage.create({
+      content: `<div class="hogwarts-chat-card">
+        <header class="card-header"><h3>${game.i18n.localize('HOGWARTS.Quidditch.ResetScore')}</h3></header>
+        <div class="card-row"><strong>0 — 0</strong></div>
+      </div>`,
+    });
+    QuidditchApp.refreshAll();
+  }
+
   /* ─── Line-up ─────────────────────────────────────────────────────────── */
 
   static async _onSetTeam(event, target) {
@@ -355,10 +408,9 @@ export class QuidditchApp extends HandlebarsApplicationMixin(ApplicationV2) {
 
     const actionLabel = game.i18n.localize(spec?.label ?? action);
     const modText = mod ? ` ${mod >= 0 ? '+' : ''}${mod}` : '';
-    const marginRow = spec?.opposed
-      ? `<div class="card-row quidditch-margin" data-margin="${margin}" data-combatant-id="${combatant?.id ?? ''}">
-           <strong>${game.i18n.localize('HOGWARTS.Quidditch.Margin')}:</strong> ${finalTarget} − ${roll.total} = <strong>${margin}</strong>
-         </div>`
+    const marginDetail = `${finalTarget} − ${roll.total} = ${margin}`;
+    const resultRow = spec?.opposed
+      ? marginRow(margin, { combatantId: combatant?.id ?? '', label: `${game.i18n.localize('HOGWARTS.Opposition.Margin')} (${marginDetail})` })
       : `<div class="card-row"><strong>${game.i18n.localize('HOGWARTS.Chat.Roll')}:</strong> ${roll.total} →
            ${game.i18n.localize(success ? 'HOGWARTS.Roll.Degree.Success' : 'HOGWARTS.Roll.Degree.Fail')}</div>`;
 
@@ -368,7 +420,7 @@ export class QuidditchApp extends HandlebarsApplicationMixin(ApplicationV2) {
         <header class="card-header"><h3>${actionLabel}</h3>
         <span class="card-type">${game.i18n.localize('HOGWARTS.Quidditch.Title')}</span></header>
         <div class="card-row"><strong>${game.i18n.localize('HOGWARTS.Chat.Target')}:</strong> ${label} ${target}${modText}</div>
-        ${marginRow}
+        ${resultRow}
         ${QuidditchApp._followUp(action, success, combatant)}
       </div>`,
       rolls: [roll],
@@ -456,8 +508,7 @@ export class QuidditchApp extends HandlebarsApplicationMixin(ApplicationV2) {
     await roll.evaluate();
     const nonLethal = Math.max(0, roll.total);
     const remaining = Math.max(0, (Number(actor.system.health?.value) || 0) - nonLethal - 1);
-    // Resistance table: 50 + (active − passive) × 5, capped to 1-99.
-    const chance = Math.clamp(50 + (nonLethal - remaining) * 5, 1, 99);
+    const chance = resistanceChance(nonLethal, remaining);
     const ko = new Roll('1d100');
     await ko.evaluate();
     const knockedOut = ko.total <= chance || remaining <= 0;
@@ -502,54 +553,8 @@ export class QuidditchApp extends HandlebarsApplicationMixin(ApplicationV2) {
 
   /* ─── Opposition resolver ─────────────────────────────────────────────── */
 
-  /**
-   * Collect the margins published this round and let the Gamemaster pick the
-   * opposing pair, plus any hindrance. The chapter's worked example subtracts a
-   * hindrance from the acting player's margin: 40 − 10 − 28 = 2 (l. 29857).
-   */
+  /** The margin rule is general (§28.3.4), so the resolver is shared. */
   static async _onOpenResolver() {
-    const margins = [];
-    for (const m of game.messages.contents.slice(-40)) {
-      const el = document.createElement('div');
-      el.innerHTML = m.content;
-      const row = el.querySelector('.quidditch-margin');
-      if (row) margins.push({ name: m.speaker?.alias ?? '?', margin: Number(row.dataset.margin) || 0 });
-    }
-    if (margins.length < 2) return ui.notifications.warn(game.i18n.localize('HOGWARTS.Quidditch.NeedTwoMargins'));
-
-    const options = margins.map((m, i) => `<option value="${i}">${m.name} (${m.margin})</option>`).join('');
-    const result = await foundry.applications.api.DialogV2.prompt({
-      window: { title: game.i18n.localize('HOGWARTS.Quidditch.Resolver') },
-      content: `
-        <div class="form-group"><label>${game.i18n.localize('HOGWARTS.Quidditch.Acting')}</label>
-          <select name="a">${options}</select></div>
-        <div class="form-group"><label>${game.i18n.localize('HOGWARTS.Quidditch.Opposing')}</label>
-          <select name="b">${options}</select></div>
-        <div class="form-group"><label>${game.i18n.localize('HOGWARTS.Quidditch.Hindrance')}</label>
-          <input type="number" name="hindrance" value="0" min="0" step="1" /></div>`,
-      ok: {
-        callback: (ev, btn) => ({
-          a: Number(btn.form.elements.a.value),
-          b: Number(btn.form.elements.b.value),
-          hindrance: Number(btn.form.elements.hindrance.value) || 0,
-        }),
-      },
-    }).catch(() => null);
-    if (!result || result.a === result.b) return;
-
-    const A = margins[result.a];
-    const B = margins[result.b];
-    const total = A.margin - result.hindrance - B.margin;
-    // A tie goes to whoever acts first in the initiative order (l. 29822).
-    const winner = total >= 0 ? A.name : B.name;
-
-    await ChatMessage.create({
-      content: `<div class="hogwarts-chat-card">
-        <header class="card-header"><h3>${game.i18n.localize('HOGWARTS.Quidditch.Resolver')}</h3></header>
-        <div class="card-row">${A.name} <strong>${A.margin}</strong>${result.hindrance ? ` − ${result.hindrance}` : ''} − ${B.name} <strong>${B.margin}</strong> = <strong>${total}</strong></div>
-        <div class="card-row"><strong>${game.i18n.format('HOGWARTS.Quidditch.Winner', { name: winner })}</strong></div>
-        ${total === 0 ? `<div class="card-row"><em>${game.i18n.localize('HOGWARTS.Quidditch.TieRule')}</em></div>` : ''}
-      </div>`,
-    });
+    return openOppositionResolver();
   }
 }

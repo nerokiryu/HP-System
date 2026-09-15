@@ -1,10 +1,11 @@
-{{! Assistant de l'étape 2 : répartir huit tirages de 2d6+6 (l. 565-575).
+{{! Assistant de l'étape 2 : répartir huit tirages (l. 565-575). La formule
+    dépend du type d'acteur, elle vient donc du contexte.
     ApplicationV2 exige une racine unique par part, d'où ce conteneur. }}
 <div class='creation-body'>
 <div class='creation-intro'>
-  <p>{{localize 'HOGWARTS.Creation.Intro'}}</p>
+  <p>{{localize 'HOGWARTS.Creation.Intro' formula=formula}}</p>
   <div class='creation-pool'>
-    <span class='pool-label'>{{localize 'HOGWARTS.Creation.Pool'}} ({{formule}})</span>
+    <span class='pool-label'>{{localize 'HOGWARTS.Creation.Pool'}} ({{formula}})</span>
     {{#each pool}}<span class='pool-value'>{{this}}</span>{{/each}}
   </div>
   <div class='creation-archetype'>
@@ -19,7 +20,7 @@
   </div>
 </div>
 
-{{#if doublons}}
+{{#if duplicates}}
   <p class='creation-warning'><i class='fas fa-triangle-exclamation'></i> {{localize 'HOGWARTS.Creation.Duplicate'}}</p>
 {{/if}}
 
@@ -38,29 +39,29 @@
         <td>
           <select name='stat.{{stat.key}}'>
             {{#each @root.pool as |v|}}
-              <option value='{{v}}' {{#if (eq v stat.adulte)}}selected{{/if}}>{{v}}</option>
+              <option value='{{v}}' {{#if (eq v stat.adult)}}selected{{/if}}>{{v}}</option>
             {{/each}}
           </select>
         </td>
-        <td class='stat-current {{#if stat.touchee}}aged{{/if}}'>
-          {{stat.actuel}}
-          {{#if stat.touchee}}{{#if @root.malus}}<span class='stat-malus'>−{{@root.malus}}</span>{{/if}}{{/if}}
+        <td class='stat-current {{#if stat.aged}}aged{{/if}}'>
+          {{stat.current}}
+          {{#if stat.aged}}{{#if @root.ageMalus}}<span class='stat-malus'>−{{@root.ageMalus}}</span>{{/if}}{{/if}}
         </td>
       </tr>
     {{/each}}
   </tbody>
 </table>
 
-{{#if malus}}
+{{#if ageMalus}}
   <p class='creation-age' data-tooltip='{{localize "HOGWARTS.Actor.Character.AgeMalusHint"}}'>
-    {{localize 'HOGWARTS.Creation.AgeNote' age=age malus=malus}}
+    {{localize 'HOGWARTS.Creation.AgeNote' age=age malus=ageMalus}}
   </p>
 {{/if}}
 
 <div class='creation-preview'>
-  <div><span>{{localize 'HOGWARTS.Actor.base.FIELDS.health.value.label'}}</span><strong>{{apercu.health}}</strong></div>
-  <div><span>{{localize 'HOGWARTS.Actor.Character.DamageBonus'}}</span><strong>{{apercu.damage}}</strong></div>
-  <div><span>{{localize 'HOGWARTS.Derived.Idea'}}</span><strong>{{apercu.idea}}</strong></div>
-  <div><span>{{localize 'HOGWARTS.Derived.Luck'}}</span><strong>{{apercu.luck}}</strong></div>
+  <div><span>{{localize 'HOGWARTS.Actor.base.FIELDS.health.value.label'}}</span><strong>{{preview.health}}</strong></div>
+  <div><span>{{localize 'HOGWARTS.Actor.Character.DamageBonus'}}</span><strong>{{preview.damage}}</strong></div>
+  <div><span>{{localize 'HOGWARTS.Derived.Idea'}}</span><strong>{{preview.idea}}</strong></div>
+  <div><span>{{localize 'HOGWARTS.Derived.Luck'}}</span><strong>{{preview.luck}}</strong></div>
 </div>
 </div>

@@ -6,7 +6,12 @@
   "system": {
     "description": "<p>Vous possédez la capacité magique de vous métamorphoser en un animal qui est le reflet de votre personnalité (cf. chapitre Animagus de ce manuel). Octroie une nouvelle compétence Animagus à 20% (degré de maîtrise maximal : 90%). Vous pouvez choisir d’être déclaré au Ministère de la Magie ou non, avec toutes les conséquences que cela implique.</p>",
     "perkType": "advantage",
-    "pbpCost": 2
+    "pbpCost": 2,
+    "grantsSkill": {
+      "name": "Animagus",
+      "base": 10,
+      "max": 80
+    }
   },
   "effects": []
 }

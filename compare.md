@@ -1,9 +1,9 @@
 # COMPARAISON RÈGLES ↔ SYSTÈME
 
-**Livre de référence :** Harry Potter JdR v1.12 (`rules/md/Harry-Potter-JdR-v1.12.md`, 29 694 lignes)
+**Livre de référence :** Harry Potter JdR v1.12 (29 694 lignes)
 **Suppléments :** Grimoire v1.11 · Bestiaire · Encyclopédie · Maladies & Blessures
-**Système :** `hogwarts-system` v3.1.0, commit `cf0b986`
-**Date :** 7 septembre 2026
+**Système :** `hogwarts-system` v1.2.0
+**Date :** 15 septembre 2026
 **Périmètre :** fidélité aux règles du jeu.
 La conformité technique Foundry v14 est traitée dans [AUDIT_FOUNDRY_V14.md](AUDIT_FOUNDRY_V14.md).
 
@@ -14,6 +14,9 @@ La conformité technique Foundry v14 est traitée dans [AUDIT_FOUNDRY_V14.md](AU
 Chaque ligne cite le **numéro de ligne exact** dans le fichier markdown du livre. C'est délibéré :
 un relecteur peut re-vérifier n'importe quel constat par un simple `sed -n '740,745p'` sans relire
 29 694 lignes. **Tout constat non sourcé a été écarté.**
+
+> **Les livres ne sont plus dans le dépôt** depuis la v1.1.0 : ce sont des œuvres de tiers. Les
+> numéros de ligne restent valables pour qui dispose des fichiers en local.
 
 | Statut | Signification |
 |--------|---------------|
@@ -37,14 +40,17 @@ Les actions correctives portent un identifiant `R-nn`, repris dans le backlog de
 
 | Domaine | ✅ | ⚠️ | ❌ | 🧪 |
 |---------|----|----|----|----|
-| Caractéristiques & dérivées | 6 | 2 | 3 | 1 |
-| Compétences | 6 | 2 | 0 | 3 |
+| Caractéristiques & dérivées | 9 | 1 | 0 | 1 |
+| Compétences | 7 | 2 | 0 | 3 |
 | Résolution & jets | 3 | 0 | 1 | 1 |
 | Combat & santé | 15 | 0 | 0 | 0 |
-| Magie | 5 | 1 | 0 | 2 |
+| Magie | 6 | 1 | 0 | 2 |
 | Potions | 2 | 1 | 1 | 0 |
 | Fougue | 11 | 1 | 0 | 0 |
 | Expérience | 6 | 1 | 0 | 1 |
+| Personnages non-joueurs | 5 | 0 | 0 | 0 |
+| Duel magique | 11 | 0 | 0 | 0 |
+| Legilimancie / Occlumancie | 2 | 0 | 1 | 2 |
 | Vie scolaire | 3 | 1 | 2 | 0 |
 
 **Trois constats structurants :**
@@ -56,10 +62,10 @@ Les actions correctives portent un identifiant `R-nn`, repris dans le backlog de
    *Extreme* et *Hard* ; la source ne définit que 01-05 et 96-00. Ce n'est pas un bug, mais ce
    n'est pas non plus une règle du jeu — c'est un emprunt au BRP générique qui doit être étiqueté
    comme tel.
-3. **Le socle est solide, la couche « vie scolaire » est absente.** Tout ce qui touche aux
-   caractéristiques, aux dérivées, aux jets, à la magie et désormais aux blessures est fidèle. En
-   revanche l'école elle-même — progression scolaire, examens, mentorat, Quidditch, emploi du
-   temps — n'est pas implémentée, alors que le livre lui consacre des règles chiffrées complètes.
+3. **La création de personnage est désormais couverte, la vie scolaire reste absente.** Le malus
+   d'âge, l'assistant de tirage, les budgets de PNJ et les compétences octroyées par avantage sont
+   implémentés. En revanche l'école elle-même — examens, mentorat, emploi du temps — n'est
+   toujours pas traitée, alors que le livre lui consacre des règles chiffrées complètes.
 
 ---
 
@@ -68,17 +74,18 @@ Les actions correctives portent un identifiant `R-nn`, repris dans le backlog de
 | Élément | Règle canonique | Implémentation | Statut | Action |
 |---------|-----------------|----------------|--------|--------|
 | Nombre de caractéristiques | 8 : FOR CON TAI PER DEX INT APP POU — l. 565 | `stats{str,con,siz,dex,int,pow,app,per}` | ✅ | — |
-| Génération | `2d6+6` pour toutes — l. 566 | Pas d'assistant de création ; saisie manuelle | ⚠️ | R-02 |
+| Génération | `2d6+6` pour toutes — l. 566 | Assistant de création — [character-creation.mjs](hogwarts-system/module/applications/character-creation.mjs) | ✅ | Corrigé |
 | Points de vie | `(CON+TAI)/2`, **« on arrondit au supérieur »** — l. 740-741 | `Math.ceil((siz+con)/2)` — [actor-character.mjs:252](hogwarts-system/module/data/actor-character.mjs#L252) | ✅ | — |
 | Bonus aux dommages | `2-24:0 · 25-32:+1d3 · 33-40:+1d6 · 41-60:+2d6` — l. 743-745 | Idem, mais dernier palier `>40` non borné — [actor-character.mjs:260-266](hogwarts-system/module/data/actor-character.mjs#L260) | ⚠️ | R-03 |
 | Bonus de dommages **créature** | **Introuvable dans le livre de base, le Bestiaire et l'Encyclopédie** | Table étendue `−1d4 … +4d6` — [actor-creature.mjs:110-124](hogwarts-system/module/data/actor-creature.mjs#L110) | 🧪 | R-04 |
 | Idée | `INT × 5` — l. 752 | `this.idea = int * 5` | ✅ | — |
 | Chance | `POU × 5` — l. 756 | `this.luck = pow * 5` | ✅ | — |
-| Perception (5 sens) | Goût ×3 · Odorat ×3 · Ouïe ×4 · Toucher ×3 · Vue ×5 — l. 3118-3122 | Identique | ✅ | — |
+| Perception (5 sens) | Goût ×3 · Odorat ×3 · Ouïe ×4 · Toucher ×3 · Vue ×5 — l. 3118-3122 | Identique, multiplicateurs surchargeables par avantage | ✅ | — |
+| Sixième sens | `PER × 4`, accordé par l'avantage *Troisième œil* | Sens supplémentaire calculé via `senseMult` | ✅ | Corrigé |
 | Initiative | `1d6 + DEX` — l. 1084 s. | `CONFIG.Combat.initiative` — [hogwarts-system.mjs:49](hogwarts-system/module/hogwarts-system.mjs#L49) | ✅ | — |
 | Mouvement | 8 m/round — l. 1512, 1520 | Champ `movement`, défaut 8 | ✅ | — |
-| Malus d'âge | Appliqué au calcul des PV — l. 740 | Aucun | ❌ | R-06 |
-| Progression annuelle | FOR/TAI/CON `+1`/an jusqu'à la fin de 5ᵉ année | Aucune automatisation | ❌ | R-07 |
+| Malus d'âge | Appliqué au calcul des PV — l. 740 | `ageMalus` sur FOR/CON/TAI sous 16 ans, avec migration | ✅ | Corrigé |
+| Progression annuelle | FOR/TAI/CON `+1`/an jusqu'à la fin de 5ᵉ année | Découle du dégel progressif du malus d'âge | ✅ | Corrigé |
 | Durée du round | « quelques secondes », **non chiffrée** — l. 1084 | — | ❓ | Aucune action : la source est volontairement floue |
 
 **R-03** — Le livre arrête sa table à `41-60`. Le code applique `+2d6` à tout total `> 40`, ce qui
@@ -98,6 +105,7 @@ maison (**R-04**).
 | Gain par période | An 1-2 : `1d6+1` · An 3-4 : `1d4+1` · An 5-7 : `1d4`, 3 périodes/an — l. 6850 | Deux modes au choix (voir §8) | ✅ | Corrigé |
 | Filtrage par statut du sang | Sang-pur : sorcier seul · Né-moldu : moldu seul · Sang-mêlé : les deux **sans bonus de base** — l. 782-792 | Implémenté via `unavailable` | ✅ | — |
 | Compétences spécifiques | **Alchimie, Duels, Occlumancie, Legilimancie** — §6.6, l. 6498-6508 | Catégorie `special` — [config.mjs](hogwarts-system/module/helpers/config.mjs) | ✅ | Corrigé |
+| Compétences octroyées par un avantage | Legilimancie, Occlumancie, Animagus, Métamorphomage | Champ `grantsSkill` sur l'objet *avantage* | ✅ | Corrigé |
 | Valeurs `base`/`max` par compétence | **Le livre ne publie aucune table de référence** (un seul exemple chiffré, l. 6599) | 60+ couples `base`/`max` codés en dur dans `config.mjs` | 🧪 | R-10 |
 | Mentorat | **+5 %/an**, effectifs **à la fois en base et en maximale** ; dès la 3ᵉ année ; 2 h/semaine/compétence ; plafond **95 %** — l. 6781-6790 | Aucun | ❌ | R-11 |
 | Compétences plafonnées | Ex. Acrobatie/Quidditch bloquée à 60 % | `max` librement éditable, aucun verrou | ⚠️ | R-12 |
@@ -118,11 +126,31 @@ sinon placé d'emblée à 90 % de maîtrise maximale.
 |------------|------|-----|--------|
 | Alchimie | 0 % | 95 % | 🧪 **non publié** — défaut du schéma |
 | Duels | 0 % | 95 % | 🧪 **non publié** — défaut du schéma |
-| Legilimancie | 15 % | 80 % | ✅ l. 4257 (avantage *Legilimens*, coût −2) |
-| Occlumancie | 15 % | 80 % | ✅ l. 4297 (avantage *Occlumens*) |
 
 Le livre ne publie aucun pourcentage pour Alchimie ni pour Duels : les valeurs retenues sont le
 défaut neutre du schéma, pas une lecture de la source.
+
+### Correctif ultérieur — les compétences d'avantage ne sont plus des acquis par défaut
+
+Legilimancie et Occlumancie avaient d'abord été semées comme compétences `special` sur **tout**
+personnage. C'était une erreur de lecture : le livre ne les accorde qu'avec l'avantage
+correspondant. Elles sont retirées de la liste par défaut et rattachées à leur avantage :
+
+| Avantage | Compétence accordée | Base | Max | Source |
+|----------|---------------------|------|-----|--------|
+| *Legilimens* | Legilimancie | 15 % | 80 % | ✅ l. 4257 (coût −2) |
+| *Occlumens* | Occlumancie | 15 % | 80 % | ✅ l. 4297 |
+| *Animagus* | Animagus | 10 % | 80 % | ✅ |
+| *Métamorphomage* | Métamorphomage | 20 % | 90 % | ✅ |
+
+La compétence apparaît sur la fiche dès que l'avantage est possédé, et disparaît s'il est retiré.
+Elle est **calculée, jamais stockée** : son plafond échappe à la progression scolaire annuelle
+(`maxOverride`), et elle porte la trace de l'avantage qui l'accorde.
+
+> **Piège rencontré :** le semis persistant écrivait ces lignes calculées dans les données de
+> l'acteur, les figeant définitivement. Il ignore désormais toute compétence portant un
+> `grantedBy`. Une migration (1.2.0) nettoie les résidus des mondes existants, **en conservant**
+> les lignes où des points avaient déjà été dépensés.
 
 > Variante non implémentée : *Legilimancie innée* et *Occlumancie innée* à **50 % / 95 %**
 > (l. 24416-24419), réservées à certains hybrides et utilisables **sans baguette**. Relève du
@@ -547,10 +575,19 @@ seule la valeur est connue (Affinité avec…, Doué pour…, Érudition, Excell
 en…, Lacunes en …).
 
 Le reste demeure descriptif, faute de champ à viser : les bonus « une fois par scénario » de
-`+30 %` à **toutes** les actions (Courageux, Fourberie, Justicier), les décalages de VIRulence
-(Faiblesse / Résistance immunitaire), les `PERx4` du Troisième œil, et les features qui accordent
-une **compétence entière** (Animagus, Legilimens, Occlumens, Métamorphomage) — un effet actif ne
-sait pas ajouter une entrée dans un tableau.
+`+30 %` à **toutes** les actions (Courageux, Fourberie, Justicier) et les décalages de VIRulence
+(Faiblesse / Résistance immunitaire).
+
+**Deux catégories sont depuis sorties du descriptif**, non par un effet actif mais par un champ
+dédié — un effet actif ne sait ni ajouter une entrée dans un tableau, ni changer un multiplicateur :
+
+- **Les compétences accordées par un avantage.** L'objet *avantage* porte un champ `grantsSkill`
+  (nom, base, max) ; le modèle de données injecte la ligne correspondante à chaque calcul. Quatre
+  avantages en bénéficient : Animagus, Legilimens, Occlumens, Métamorphomage. Voir §2.
+- **Les multiplicateurs de sens.** Un champ `senseMult`, indexé par sens, surcharge les
+  multiplicateurs par défaut. Le `PER × 4` du *Troisième œil* ajoute un sixième sens ; *Problèmes
+  visuels* ramène la Vue de `×5` à `×1` et est livré désactivé, le livre le conditionnant au port
+  de lunettes.
 
 **Deux bugs d'initiative corrigés au passage**, tous deux vérifiés en jeu sur la v14.365 :
 
@@ -700,10 +737,97 @@ et le chapitre « Extensions maison » du guide du MJ.
 |----|--------|
 | R-11 | Mentorat : +5 %/an en base et en maximale, dès la 3ᵉ année, plafond 95 % |
 | R-30 | Examens B.U.S.E. / A.S.P.I.C. |
-| R-33 · R-34 | Duels, Legilimancie/Occlumancie : procédures et jets en opposition |
+| R-33 · R-34 | ✅ **Traité** — voir §12 |
 | R-32 · R-35 | Gestion du temps, création d'objets |
-| R-02 · R-06 · R-07 | Assistant de création `2d6+6`, malus d'âge, progression annuelle FOR/TAI/CON |
+| R-02 · R-06 · R-07 | ✅ **Traité** — voir §1 et la section « Personnages non-joueurs » |
 | R-12 · R-21 | Plafonds de compétences, disciplines de sorts |
+
+---
+
+## 11. Personnages non-joueurs (§21-22)
+
+| Élément | Règle canonique | Implémentation | Statut |
+|---------|-----------------|----------------|--------|
+| Tirage des caractéristiques | `3d6` — §21.1 | Assistant partagé, formule `3d6` au lieu de `2d6+6` | ✅ |
+| Budget standard | 350 points de compétence, 4,5 points d'avantage — §21.2 | `BUDGETS.standard` | ✅ |
+| Budget rival | 400 points de compétence, 6 points d'avantage — §21.2 | `BUDGETS.rival` | ✅ |
+| Bonus d'expérience par année | +50 · +110 · +180 · +250 · +330 · +410 (années 2 à 7) — §22.2.1 | `YEAR_SKILL_BONUS`, ajouté au budget de compétences | ✅ |
+| Familier | Mêmes règles que pour un personnage joueur | Onglet *Familier* identique à la fiche joueur | ✅ |
+
+Le livre donne une fourchette pour le bonus annuel ; le système retient la **borne haute**, valeur
+affichée à part sur la fiche pour que le MJ puisse la réduire en connaissance de cause. La jauge
+de budget passe au rouge dès dépassement.
+
+> **Il n'existe pas de palier au-dessus de « rival ».** Le livre ne publie que deux niveaux de
+> puissance ; aucun archétype de némésis n'est défini. La montée en puissance d'un adversaire
+> récurrent passe par le bonus d'année du §22.2.1, pas par un troisième budget.
+
+---
+
+## 12. Duel magique et jets en opposition (ch. 27, §28.3.4, ch. 15)
+
+### Jets en opposition — la règle est générale, pas spécifique au Quidditch
+
+Le livre publie **deux** mécaniques d'opposition, qu'il ne faut pas confondre :
+
+| Mécanique | Source | Usage |
+|-----------|--------|-------|
+| Table des résistances | §1.5, l. 1010-1060 | Une caractéristique « active » contre une « passive » |
+| Comparaison des différences | §28.3.4, l. 29823 | Deux jets de **compétence** opposent leurs marges |
+
+La seconde est énoncée dans le chapitre Quidditch mais le livre s'en sert dès le chapitre 2 :
+l'esquive de Rebecca (l. 3067) et la bagarre (l. 3081) se résolvent exactement ainsi. Chacun jette,
+la marge vaut `valeur − résultat`, la plus haute l'emporte, une gêne se soustrait à celui qui agit,
+et l'égalité revient au premier à l'initiative.
+
+| Élément | Règle canonique | Implémentation | Statut |
+|---------|-----------------|----------------|--------|
+| Formule de la table des résistances | `50 − (passive × 5) + (active × 5)` — l. 1031 | `resistanceChance` | ✅ |
+| Bornes de la table | La table imprimée va de 05 à 95 — l. 1038 | Borné à 5-95 | ✅ |
+| Marge d'un jet | « 58-46 = 12 » — l. 3066 | `marginOf` | ✅ |
+| Résolution d'une opposition | Plus haute marge, gêne soustraite — l. 29857 | Résolveur commun | ✅ |
+| Égalité | Au premier dans l'ordre d'initiative — l. 29822 | Idem | ✅ |
+
+> Le système bornait auparavant la table à 1-99. Ce n'était pas une lecture de la source : la table
+> imprimée ne descend jamais sous 05 ni ne monte au-dessus de 95.
+
+### Duel magique (ch. 27)
+
+| Élément | Règle canonique | Implémentation | Statut |
+|---------|-----------------|----------------|--------|
+| Déroulement | Neuf étapes ordonnées — §27.3, l. 28581 | Rappelées dans la fenêtre de duel | ✅ |
+| Types de duel | `a` premier sort touchant · `b` mise hors combat · `c` première blessure · `d` à mort — §27.4 | `DUEL_TYPES` | ✅ |
+| Disqualification | « 1 point de dégât = disqualification » en `a` et `b` — §27.4 | Rappel + bascule manuelle | ✅ |
+| Sortilèges autorisés | Table de 67 lignes × 4 colonnes — §27.5, l. 28628 | `DUEL_SPELLS`, filtrée par type | ✅ |
+| Priorités d'initiative | 1 innés · 2 protection · 3 informulés (+3) et classiques · 4 formules extrêmes (−3) — l. 28610 | Remplace les phases du ch. 2 | ✅ |
+| Point de fougue à l'initiative | Relance du d6 **avec +2** — l. 28683 | Proposé avant le jet | ✅ |
+| Entraînement en club | +1/an jusqu'à +5, **cumulable** avec *Initié au duel* (+2) — l. 28577 | Champ `duelClubYears` | ✅ |
+| Modalités particulières | Informulés, innés, sorts blessants, formules extrêmes — §27.6 | Quatre bascules | ✅ |
+| Témoins et arbitre | Un témoin par participant, un arbitre — §27.1 | Rôles sur les participants | ✅ |
+| Malus d'informulé | −30 % — l. 23224 | Appliqué au lancement | ✅ |
+| Sort inné | Réussi d'office ; sur opposition, jet raté = différence 0 — l. 23197 | Marge plafonnée à 0 minimum | ✅ |
+
+**Trois entrées de la table §27.5 ne correspondent à aucun sortilège**, ni dans le livre, ni dans le
+Grimoire : *Annulation de sort* (niv. 4), *Immobilisation totale* (niv. 4) et *Explosion* (niv. 5).
+Elles sont conservées et marquées « ? », plutôt que rapprochées d'un candidat plausible : c'est une
+incohérence de la source, et le MJ doit la voir. Deux autres n'étaient que des coquilles —
+*Jambencoton* pour *Maléfice de Jambencoton*, *Mouche-Sadrines* pour *Mouche-Sardine*.
+
+### Legilimancie et Occlumancie (ch. 15)
+
+**Le chapitre 15 ne publie ni dé ni chiffre.** Les §15.1 et §15.2 sont entièrement descriptifs.
+Tout ce qui est mécanique se trouve ailleurs :
+
+| Élément | Règle canonique | Implémentation | Statut |
+|---------|-----------------|----------------|--------|
+| Sort *Legilimens* | Niveau 5, `FC : 80%`, `Opposition : POU/(POUx1)` — l. 22189 | Sort du compendium | ✅ |
+| Compétences | 15 % / 80 %, accordées par les avantages — l. 4182, 4216 | Voir §2 | ✅ |
+| Versions innées | 50 % / 95 %, sans baguette — l. 24416 | Aucune | ❌ R-36 |
+| Intrusion résolue en opposition | **Non publiée** | Opposition Legilimancie / Occlumancie | 🧪 |
+| Renversement | « elle pourra alors pénétrer dans ses pensées sans que le lanceur puisse se protéger » — l. 24365, **sans aucun nombre** | Déclenché quand la défense réussit vraiment | 🧪 |
+
+Les deux dernières lignes sont des **extensions maison**, signalées comme telles dans la carte de
+chat qui les produit. Sans elles, l'avantage *Occlumens* n'aurait toujours aucun effet mécanique.
 
 ---
 

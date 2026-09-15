@@ -8,5 +8,26 @@
     "perkType": "disadvantage",
     "pbpCost": -1
   },
-  "effects": []
+  "effects": [
+    {
+      "_id": "feProblemesvisue",
+      "name": "Problèmes visuels",
+      "img": "icons/svg/downgrade.svg",
+      "type": "base",
+      "changes": [
+        {
+          "key": "system.senseMult.sight",
+          "mode": 5,
+          "value": "1",
+          "priority": 20
+        }
+      ],
+      "disabled": true,
+      "transfer": true,
+      "description": "<p>Le livre limite ce modificateur à une situation précise : activez l'effet le temps qu'elle dure.</p>",
+      "duration": {},
+      "statuses": [],
+      "flags": {}
+    }
+  ]
 }

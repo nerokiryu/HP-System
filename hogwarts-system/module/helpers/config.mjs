@@ -26,6 +26,14 @@ HOGWARTS.statAbbreviations = {
   per: 'HOGWARTS.Stat.Per.abbr',
 };
 
+/** School skill each spell type is rolled under. `X` (Autres) has none. */
+HOGWARTS.spellSkills = {
+  E: 'Enchantements',
+  M: 'Métamorphose',
+  S: 'Mauvais sorts',
+  X: null,
+};
+
 /**
  * Example skills list (placeholders, adjust to taste).
  */
@@ -67,9 +75,9 @@ HOGWARTS.archetypes = {
 };
 
 /**
- * Ordre de priorité des quatre caractéristiques dominantes de chaque archétype,
+ * Priority order of the four dominant characteristics of each archetype,
  * « depuis la valeur la plus forte à la valeur la plus faible » (l. 640-646).
- * Les caractéristiques non citées reçoivent le reste des valeurs tirées.
+ * Characteristics the book does not name receive the remaining rolled values.
  */
 HOGWARTS.archetypePriority = {
   canaille: ['dex', 'per', 'int', 'pow'],
@@ -84,10 +92,10 @@ HOGWARTS.archetypePriority = {
  * Preset skills with base and max values, grouped by category.
  * Names are provided by the user; you can adjust later.
  */
-// EXTENSION MAISON : le livre décrit le fonctionnement des maîtrises de base et
-// maximale (§6.10) mais ne publie aucune table de référence — un seul couple
-// chiffré apparaît en exemple (l. 6599). Les valeurs ci-dessous sont donc des
-// choix de ce système, pas du canon.
+// HOUSE EXTENSION: the book describes how base and maximum masteries work
+// (§6.10) but publishes no reference table — a single numeric pair shows up in an
+// example (l. 6599). The values below are therefore choices made by this system,
+// not canon.
 HOGWARTS.skillPresets = {
   general: [
     { name: 'Acrobatie/Quidditch', base: 10, max: 60 },
@@ -155,21 +163,39 @@ HOGWARTS.skillPresets = {
   // they start in year 3 or 6, so the yearly max progression must not apply.
   special: [
     { name: 'Alchimie', base: 0, max: 95 },
-    { name: 'Duels', base: 0, max: 95 },
-    // Base/max granted by the Legilimens and Occlumens advantages.
-    { name: 'Legilimancie', base: 15, max: 80 },
-    { name: 'Occlumancie', base: 15, max: 80 },
-    // La source se contredit : le tableau des avantages (l. 3753) annonce
-    // 20 % / max 90 %, la fin du chapitre 16 (l. 24645) 10 % / max 80 %.
-    // Le chapitre dédié fait foi ; les deux colonnes restent éditables.
-    { name: 'Animagus', base: 10, max: 80 }
+    { name: 'Duels', base: 0, max: 95 }
   ]
 };
 
 /**
- * Les six profils publiés au §16.2. Le livre les détermine par un questionnaire
- * dont les puces réponse → profil sont des dessins, illisibles hors du PDF : le
- * système propose donc directement le résultat du test.
+ * Skills that an advantage opens up, and that an ordinary wizard does not have.
+ * They are therefore absent from the presets: the row shows up on the sheet when
+ * the item is present, and disappears with it.
+ *
+ * Pour Animagus, la source se contredit : le tableau des avantages (l. 3753)
+ * annonce 20 % / max 90 %, la fin du chapitre 16 (l. 24645) 10 % / max 80 %.
+ * The dedicated chapter prevails.
+ */
+HOGWARTS.featureSkills = {
+  'Animagus': { name: 'Animagus', base: 10, max: 80 },
+  'Legilimens': { name: 'Legilimancie', base: 15, max: 80 },
+  'Occlumens': { name: 'Occlumancie', base: 15, max: 80 },
+  'Métamorphomage': { name: 'Métamorphomage', base: 20, max: 90 }
+};
+
+/**
+ * Multiplicateurs de PERception qu'un avantage modifie. `sight` remplace la
+ * default, `thirdEye` is a sense nobody has out of the box.
+ */
+HOGWARTS.featureSenses = {
+  'Troisième œil': { thirdEye: 4 },
+  'Problèmes visuels': { sight: 1, conditional: true }
+};
+
+/**
+ * The six profiles published in §16.2. The book determines them through a
+ * questionnaire whose answer-to-profile bullets are drawings, unreadable outside
+ * the PDF: the system therefore offers the outcome directly.
  */
 HOGWARTS.animagusProfiles = {
   brave: 'HOGWARTS.Actor.Animagus.Profile.brave',

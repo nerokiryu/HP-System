@@ -8,5 +8,26 @@
     "perkType": "advantage",
     "pbpCost": 2
   },
-  "effects": []
+  "effects": [
+    {
+      "_id": "feTroisiemeil000",
+      "name": "Troisième œil",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "changes": [
+        {
+          "key": "system.senseMult.thirdEye",
+          "mode": 5,
+          "value": "4",
+          "priority": 20
+        }
+      ],
+      "disabled": false,
+      "transfer": true,
+      "description": "",
+      "duration": {},
+      "statuses": [],
+      "flags": {}
+    }
+  ]
 }

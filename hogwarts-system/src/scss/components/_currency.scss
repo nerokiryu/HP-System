@@ -83,8 +83,8 @@
     padding: 0;
 
     .items-header {
-      // `min-height` : « Caractéristiques et bonus » passe à deux lignes dans sa
-      // colonne de 135 px et débordait de l'en-tête quand la hauteur était figée.
+      // `min-height`: « Caractéristiques et bonus » wraps onto two lines in its
+      // 135 px column and overflowed the header when the height was fixed.
       min-height: 28px;
       margin: 2px 0;
       padding: 5px;

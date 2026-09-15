@@ -1,6 +1,5 @@
 /**
- * Compétences du personnage : ajout, suppression, plafond automatique et repli
- * des catégories.
+ * Character skills: adding, removing, automatic ceiling and category collapsing.
  */
 
 /**
@@ -58,12 +57,40 @@ export async function toggleSkillMaxAuto(event, target) {
   event.preventDefault();
   const idx = Number(target.dataset.index);
   if (!Number.isInteger(idx)) return;
+  const currentSkill = () => (this.actor.system.skills ?? [])[idx];
+  if (!currentSkill()) return;
+
+  // Switching back to automatic loses the player's setting, so confirmation is
+  // always asked. Even when the manual figure equals the year's, manual mode is
+  // itself a choice — it freezes a mastery the automation would raise next year.
+  // The other direction loses nothing, so nothing to confirm.
+  if (currentSkill().maxOverride) {
+    const auto = CONFIG.Actor.dataModels.character.autoSchoolMax(this.actor.system?.profile?.year);
+    // Clicking the padlock blurs the neighbouring field, whose save is still in
+    // flight: the sheet therefore holds a fresher value than the actor.
+    const shown = Number(target.closest('.skill-max')?.querySelector('input')?.value);
+    const manual = Number.isFinite(shown) ? shown : (Number(currentSkill().max) || 0);
+    const message = manual === auto
+      ? game.i18n.format('HOGWARTS.Skills.MaxAuto.RestoreConfirmSame', { skill: currentSkill().name, auto })
+      : game.i18n.format('HOGWARTS.Skills.MaxAuto.RestoreConfirm', { skill: currentSkill().name, manual: manual, auto });
+    const ok = await foundry.applications.api.DialogV2.confirm({
+      window: { title: game.i18n.localize('HOGWARTS.Skills.MaxAuto.RestoreTitle') },
+      content: `<p>${message}</p>`,
+      yes: { label: game.i18n.localize('HOGWARTS.Skills.MaxAuto.RestoreYes') },
+      // Foundry ships no French translation of its core, so a house key avoids
+      // an English « Cancel » in the middle of everything else.
+      no: { label: game.i18n.localize('HOGWARTS.Cancel'), default: true },
+    }).catch(() => false);
+    if (!ok) return;
+  }
+
+  // Read now rather than at the start: the save triggered by leaving the field
+  // has had time to land. Starting from the initial clone would rewrite the
+  // value as it stood before the edit.
   const skills = foundry.utils.deepClone(this.actor.system.skills ?? []);
-  const entry = skills[idx];
-  if (!entry) return;
-  // Cloned from prepared data, so `max` already holds the derived value the
-  // player sees; keeping it seeds the manual field with that number.
-  entry.maxOverride = !entry.maxOverride;
+  if (!skills[idx]) return;
+  // `max` already carries the value the player sees, which seeds the manual field.
+  skills[idx].maxOverride = !skills[idx].maxOverride;
   await this.actor.update({ 'system.skills': skills });
 }
 

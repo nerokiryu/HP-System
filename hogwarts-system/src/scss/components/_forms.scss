@@ -3,9 +3,9 @@
 }
 
 .sheet-header {
-  // flex-shrink doit rester à 0 : sinon les onglets au contenu haut (compétences,
-  // équipement) compriment l'en-tête, et `overflow: hidden` masque le reste sans
-  // aucun indice visuel. Le contenu des onglets défile déjà de son côté.
+  // flex-shrink must stay at 0: otherwise tabs with tall content (skills, gear)
+  // squeeze the header, and `overflow: hidden` hides the rest with no visual
+  // cue. Tab content already scrolls on its own.
   flex: 0 0 auto;
   overflow: hidden;
   display: flex;
@@ -495,6 +495,18 @@
 
     .quidditch-score { font-size: 30px; font-weight: bold; line-height: 1.1; }
     .quidditch-score-actions { display: flex; gap: 4px; margin-top: 4px; }
+
+    .quidditch-score-adjust {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      margin-top: 4px;
+
+      input { flex: 0 0 60px; text-align: center; }
+      .item-control { flex: 0 0 auto; cursor: pointer; }
+    }
+
     .quidditch-round { grid-column: 1 / -1; text-align: center; }
   }
 
@@ -552,12 +564,175 @@
 // ApplicationV2 leaves `.window-content` with overflow hidden, so a dashboard
 // taller than the viewport is clipped with no way to reach the rest.
 &.quidditch,
+&.duel,
 &.house-points,
 &.quidditch-team {
   > .window-content {
     overflow-y: auto;
     // A flex child refuses to shrink below its content without this.
     min-height: 0;
+  }
+}
+
+// Wizard duel dashboard (ch. 27).
+&.duel {
+  .duel-app { display: flex; flex-direction: column; gap: 8px; }
+
+  .duel-hint { margin: 0; font-style: italic; opacity: 0.8; }
+
+  .duel-rules,
+  .duel-participants,
+  .duel-spell-list,
+  .duel-steps {
+    border: 1px solid rgba(var(--hogwarts-accent-rgb), 0.3);
+    border-radius: 4px;
+    padding: 6px 8px;
+
+    > header {
+      font-weight: bold;
+      color: var(--hogwarts-accent);
+      margin-bottom: 4px;
+    }
+  }
+
+  .duel-passes {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    > label { flex: 0 0 30%; }
+    > input { flex: 0 0 70px; }
+    > button { flex: 0 0 auto; width: auto; }
+  }
+
+  .duel-pass-counter { margin-left: auto; opacity: 0.85; }
+
+  .duel-modalities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 6px;
+
+    .duel-modality {
+      width: auto;
+      flex: 0 0 auto;
+      font-size: 12px;
+
+      &.off { opacity: 0.5; text-decoration: line-through; }
+    }
+  }
+
+  .duel-warning {
+    margin: 6px 0 0;
+    color: $c-alert;
+    font-size: 12px;
+  }
+
+  .duel-controls { display: flex; gap: 6px; }
+
+  .duel-participant {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 6px;
+    padding: 4px 0;
+
+    + .duel-participant { border-top: 1px solid rgba(var(--hogwarts-accent-rgb), 0.15); }
+
+    // The declaration carries three controls plus three buttons, so it drops to
+    // its own line rather than squeezing the name down to nothing.
+    .duel-identity {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex: 1 1 200px;
+      min-width: 0;
+    }
+
+    .duel-declaration {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex: 1 1 100%;
+      min-width: 0;
+    }
+
+    img { flex: 0 0 auto; border: none; border-radius: 3px; }
+
+    .duel-name {
+      flex: 1 1 auto;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .duel-identity select { flex: 0 0 120px; }
+    .duel-declaration select { flex: 1 1 0; min-width: 0; }
+
+    button { flex: 0 0 auto; width: auto; }
+
+    &.disqualified { opacity: 0.45; text-decoration: line-through; }
+  }
+
+  .duel-priority,
+  .duel-init {
+    flex: 0 0 auto;
+    min-width: 26px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .duel-flag {
+    flex: 0 0 auto;
+    font-weight: bold;
+
+    &.warns { color: $c-alert; }
+    &.unlinked { opacity: 0.7; }
+  }
+
+  .duel-spell-list {
+    > header > button { width: auto; text-align: left; }
+
+    ul { list-style: none; margin: 4px 0 0; padding: 0; }
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+
+      &.unforgivable { color: $c-alert; }
+    }
+
+    .duel-spell-level { flex: 0 0 24px; opacity: 0.7; }
+    .duel-spell-name { flex: 1 1 auto; }
+    .duel-spell-priority { flex: 0 0 24px; opacity: 0.7; }
+  }
+
+  .duel-steps ol { margin: 0; padding-left: 18px; font-size: 12px; }
+}
+
+// Priority badge shown in the combat tracker during a duel.
+.hogwarts-duel-priority {
+  font-weight: bold;
+  font-size: 11px;
+  opacity: 0.9;
+
+  &.priority-1 { color: #d4af37; }
+  &.priority-2 { color: #4a90d9; }
+  &.priority-3 { color: var(--color-text-light-highlight, #f0f0e0); }
+  &.priority-4 { color: #c85a3a; }
+}
+
+// Duel block on the features tab.
+.duel-block {
+  margin-top: 8px;
+
+  .duel-legilimency {
+    display: inline-block;
+    margin-top: 4px;
+    cursor: pointer;
   }
 }
 
@@ -690,7 +865,7 @@
   }
 }
 
-// Assistant de création (étape 2) et malus d'âge.
+// Creation assistant (step 2) and age malus.
 .age-malus {
   margin-left: 6px;
   padding: 1px 6px;
@@ -716,8 +891,8 @@
   &:hover { background: rgba(101, 67, 33, 0.18); }
 }
 
-// Assistant de création (étape 2). `&` obligatoire, comme pour `.house-points` :
-// ApplicationV2 pose toutes les `classes` sur la même racine.
+// Creation assistant (step 2). The `&` is required, as for `.house-points`:
+// ApplicationV2 puts every entry of `classes` on the same root element.
 &.character-creation {
   .creation-intro p { margin: 0 0 8px; font-size: 12px; }
 
@@ -804,7 +979,7 @@
   }
 }
 
-// Onglet d'identité du PNJ (§21.1).
+// NPC identity tab (§21.1).
 .tab.npc {
   .budget-note {
     display: block;
@@ -836,7 +1011,7 @@
       text-align: center;
       span { display: block; font-size: 11px; opacity: 0.8; }
       strong { font-size: 15px; }
-      // Budget dépassé : le MJ doit le voir sans avoir à compter.
+      // Budget exceeded: the gamemaster must see it without counting.
       &.over {
         border-color: rgba(204, 51, 51, 0.5);
         background: rgba(204, 51, 51, 0.1);

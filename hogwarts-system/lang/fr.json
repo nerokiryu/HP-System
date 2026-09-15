@@ -76,6 +76,7 @@
       "QuidditchTeam": "Fiche d’équipe de Quidditch"
     },
     "Name": "Nom",
+    "Cancel": "Annuler",
     "Actor": {
       "Tabs": {
         "Biography": "Biographie",
@@ -330,7 +331,11 @@
       "Max": "Max",
       "MaxAuto": {
         "Override": "Définir cette maîtrise maximale manuellement (arrête la progression annuelle)",
-        "Restore": "Revenir à la maîtrise maximale automatique par année"
+        "Restore": "Revenir à la maîtrise maximale automatique par année",
+        "RestoreTitle": "Revenir à la maîtrise automatique",
+        "RestoreConfirm": "La maîtrise maximale de « {skill} » est réglée à la main sur <strong>{manual} %</strong>. Revenir à l'automatique la ramènera à <strong>{auto} %</strong>, calculé d'après l'année, et votre saisie sera perdue.",
+        "RestoreConfirmSame": "La maîtrise maximale de « {skill} » est réglée à la main. Revenir à l'automatique la fera de nouveau suivre l'année scolaire — <strong>{auto} %</strong> aujourd'hui, puis davantage à chaque année — et votre réglage sera perdu.",
+        "RestoreYes": "Revenir à l’automatique"
       },
       "Value": "Valeur",
       "XPCheck": "XP",
@@ -797,7 +802,7 @@
     "Creation": {
       "Title": "Assistant de création",
       "Open": "Tirer les caractéristiques ({formula})",
-      "Intro": "Huit tirages de 2d6+6 à répartir entre les caractéristiques, selon l'archétype visé. Choisir une valeur déjà placée l'échange avec l'autre caractéristique.",
+      "Intro": "Huit tirages de {formula} à répartir entre les caractéristiques, selon l'archétype visé. Choisir une valeur déjà placée l'échange avec l'autre caractéristique.",
       "Pool": "Tirage",
       "Stat": "Caractéristique",
       "Adult": "Adulte",
@@ -815,6 +820,8 @@
       "Hearing": "Ouïe",
       "Touch": "Toucher",
       "Sight": "Vue",
+      "ThirdEye": "Troisième œil",
+      "ThirdEyeHint": "Vue magique accordée par l'avantage « Troisième œil » : elle s'ajoute aux autres perceptions et se jette sous PERception × 4.",
       "Idea": "Idée",
       "Luck": "Chance"
     },
@@ -1024,6 +1031,98 @@
       "LegendGain": "mauvaise / neutre / bonne humeur",
       "LegendLoss": "bonne / neutre / mauvaise humeur"
     },
+    "Opposition": {
+      "Margin": "Différence",
+      "Resolver": "Résoudre une opposition",
+      "Acting": "Personnage qui agit",
+      "Opposing": "Personnage qui s’oppose",
+      "Hindrance": "Gêne (malus)",
+      "Winner": "{name} emporte l’action",
+      "TieRule": "Égalité : l’action revient au premier dans l’ordre d’initiative (l. 29822).",
+      "NeedTwoMargins": "Il faut au moins deux différences publiées dans le chat.",
+      "RollHint": "Jet en opposition : publie la différence au lieu du degré de réussite (§28.3.4)."
+    },
+    "Duel": {
+      "Title": "Duel magique",
+      "Rules": "Règles convenues",
+      "TypeLabel": "Type de duel",
+      "Type": {
+        "a": "a — Premier sort touchant effectif",
+        "b": "b — Mise hors combat de l’adversaire",
+        "c": "c — Première blessure",
+        "d": "d — Duel à mort"
+      },
+      "Mode": {
+        "innate": "Inné (priorité 1)",
+        "unspoken": "Informulé (+3)",
+        "classic": "Classique",
+        "extreme": "Formule extrême (−3)"
+      },
+      "Modality": {
+        "unspoken": "Informulés",
+        "innate": "Sorts innés",
+        "wounding": "Sorts blessants",
+        "extreme": "Formules extrêmes"
+      },
+      "Role": {
+        "duellist": "Duelliste",
+        "second": "Témoin / second",
+        "referee": "Arbitre"
+      },
+      "Step": {
+        "challenge": "Le défi est lancé et accepté par tous les participants",
+        "referee": "Choix de l’arbitre qui décidera du vainqueur",
+        "seconds": "Chaque sorcier choisit un témoin, qui lui sert aussi de second",
+        "type": "Choix du type de duel",
+        "modalities": "Définition des modalités particulières",
+        "stance": "Position de duel, baguettes brandies",
+        "declaration": "Sélection du sort et déclaration d’intention",
+        "countdown": "Les participants comptent jusqu’à trois",
+        "initiative": "Jets d’initiative, puis résolution dans l’ordre obtenu"
+      },
+      "Start": "Ouvrir le duel",
+      "End": "Terminer le duel",
+      "Over": "Fin du duel",
+      "NextPass": "Passe suivante",
+      "Passes": "Nombre de passes",
+      "PassLabel": "Passe",
+      "Participants": "Participants",
+      "NoParticipants": "Aucun participant dans la rencontre.",
+      "NoCombat": "Ouvrez d’abord une rencontre : le duel s’appuie sur le suivi de combat.",
+      "NoSpell": "— aucun sort déclaré —",
+      "NoDeclaration": "Déclarez d’abord un sortilège.",
+      "SpellNotOwned": "Ce sortilège ne figure pas sur la fiche : la cible doit être saisie à la main.",
+      "NoExtremeFormula": "Ce sortilège n’a pas de formule extrême (le livre imprime « Formule extrême : - ») : le malus normal s’applique.",
+      "AllowedSpells": "Sortilèges autorisés",
+      "Procedure": "Déroulement (§27.3)",
+      "Initiative": "Initiative de duel",
+      "Cast": "Lancer le sortilège déclaré",
+      "Disqualify": "Disqualifier",
+      "Disqualified": "Disqualification",
+      "DamageDisqualifies": "Dans ce type de duel, 1 point de dégât entraîne la disqualification immédiate (§27.4).",
+      "WarnStar": "Le livre étoile ce sortilège : il peut blesser ou tuer dans certains cas particuliers.",
+      "UnlinkedHint": "Ce nom figure dans la table des duels mais ne correspond à aucun sortilège du livre ni du Grimoire.",
+      "PriorityHint": "Ordre de résolution : 1 innés, 2 protection, 3 informulés et classiques, 4 formules extrêmes (§27.3).",
+      "Training": "Entraînement",
+      "ClubYears": "Années de club de duel",
+      "ClubYearsHint": "+1 à l’initiative de duel par année, jusqu’à +5, cumulable avec l’avantage « Initié au duel » (l. 28569).",
+      "Bow": "Les duellistes se font face et s’inclinent, puis se placent en position de combat.",
+      "FougueTitle": "Point de fougue",
+      "FouguePrompt": "Dépenser un point de fougue pour relancer le d6 avec un bonus de +2 ? Vous ne savez pas encore dans quel ordre agiront vos adversaires (l. 28683).",
+      "FougueSpent": "Point de fougue dépensé : d6 relancé avec +2."
+    },
+    "Mind": {
+      "Title": "Legilimancie et Occlumancie",
+      "Defender": "Cible de l’intrusion",
+      "Intrude": "Pénétrer un esprit",
+      "MissingSkill": "Ce personnage ne possède pas la compétence {skill}.",
+      "NoDefender": "Aucun acteur ne possède la compétence Occlumancie.",
+      "ProximityHint": "La proximité physique et le contact visuel facilitent l’intrusion ; une cible calme et sur ses gardes la rend plus difficile (§15.1). Traduisez-le par un modificateur.",
+      "Intruded": "L’esprit de la cible est pénétré",
+      "Blocked": "L’intrusion échoue",
+      "Reversed": "L’intrusion se retourne contre le Legilimens",
+      "ReversalNote": "{defender} bloque le sortilège au moment où il est lancé et pénètre les pensées de {attacker}, qui ne peut pas s’en protéger (§15.1, l. 24365). Extension maison : le livre ne chiffre pas cette règle."
+    },
     "Quidditch": {
       "Title": "Quidditch",
       "Start": "Lancer le match",
@@ -1041,14 +1140,12 @@
       "TeamSaved": "Équipe « {name} » enregistrée ({count} joueurs).",
       "NoTeamName": "Donnez un nom à l’équipe.",
       "NoPlayers": "Aucun joueur affecté à ce côté.",
-      "Margin": "Différence",
-      "Resolver": "Résoudre une opposition",
-      "Acting": "Joueur qui agit",
-      "Opposing": "Joueur qui s’oppose",
-      "Hindrance": "Gêne (malus)",
-      "Winner": "{name} emporte l’action",
-      "TieRule": "Égalité : l’action revient au premier dans l’ordre d’initiative (l. 29822).",
-      "NeedTwoMargins": "Il faut au moins deux différences publiées dans le chat.",
+      "Add": "Ajouter des points",
+      "Remove": "Retirer des points",
+      "NoAmount": "Saisissez d’abord un nombre de points.",
+      "Adjusted": "Score corrigé",
+      "ResetScore": "Remettre le score à zéro",
+      "ResetScoreConfirm": "Remettre le score à 0 — 0 ? La composition des équipes et l’état du Vif d’or sont conservés.",
       "Fouls": "Fautes",
       "CallFoul": "Siffler",
       "FoulCalled": "Faute sifflée",

@@ -1,9 +1,9 @@
 # AUDIT TECHNIQUE — Conformité Foundry VTT v14
 
-**Système :** `hogwarts-system` v1.0.1
+**Système :** `hogwarts-system` v1.2.0
 **Compatibilité déclarée :** minimum `14` · vérifié `14.365`
-**Commit audité :** `54bfeeb`
-**Dernière révision :** 8 septembre 2026
+**État audité :** `v1.2.0`
+**Dernière révision :** 15 septembre 2026
 **Périmètre :** conformité aux API et pratiques Foundry VTT v14.
 La fidélité aux règles du jeu est traitée séparément dans [compare.md](compare.md).
 
@@ -18,11 +18,11 @@ avec Foundry v14.
 
 | # | Famille | État | Constat |
 |---|---------|------|---------|
-| 1 | Contenu des compendiums | ✅ Résolu | Les 5 packs sont générés depuis `rules/md/` par [build-compendia.mjs](hogwarts-system/build-compendia.mjs) : 1008 documents, couverture 100 %, zéro déchet d'extraction. Voir §7. |
+| 1 | Contenu des compendiums | ✅ Résolu | Les 6 packs sont générés depuis les livres par [build-compendia.mjs](hogwarts-system/build-compendia.mjs) : 1082 documents, couverture 100 %, zéro déchet d'extraction. Voir §7. |
 | 2 | API dépréciées | ✅ Résolu | `renderChatMessage`, `TextEditor` global et `SortingHelpers` traités. Voir §6 et §10. |
-| 3 | Distribution | ✅ Résolu | Manifeste publiable, release `v1.0.0` en ligne. Voir §3. |
-| 4 | Outillage | ✅ Résolu | 9 tests unitaires et un linter, tous deux au vert. Voir §11. |
-| 5 | Dette structurelle | 🟡 Ouvert | `actor-sheet.mjs` fait 3107 lignes ; le contournement d'Active Effects sur les compétences subsiste. Voir §5 et §11. |
+| 3 | Distribution | ✅ Résolu | Manifeste publiable, release `v1.1.0` en ligne. Voir §3. |
+| 4 | Outillage | ✅ Résolu | 50 tests unitaires, un linter, et une vérification par mutation. Voir §11. |
+| 5 | Dette structurelle | ✅ Résolu | `actor-sheet.mjs` est passé de 3 271 à 1 531 lignes, découpé en sept modules. Voir §11. |
 
 **Verdict :** le système est **distribuable** et **prêt pour la v15**.
 
@@ -35,11 +35,16 @@ avec Foundry v14.
   toute affirmation de ce document portant la mention ✅ **VÉRIFIÉ** a été mesurée en jeu,
   pas déduite du code.
 - Comparaison programmatique des documents des packs contre les données structurées des
-  livres dans `rules/md/`.
+  livres.
 - Documentation officielle : [Introduction to System
   Development](https://foundryvtt.com/article/system-development/),
   [API](https://foundryvtt.com/api/), [wiki communautaire
   ApplicationV2](https://foundryvtt.wiki/en/development/api/applicationv2).
+
+> **Les livres sources ne sont plus dans le dépôt.** Depuis la v1.1.0, `rules/` est exclu du
+> suivi Git : ce sont des œuvres de tiers. Les fichiers restent en local pour alimenter
+> `build-compendia.mjs`, mais un clone neuf ne peut plus régénérer les compendiums — seuls
+> les packs compilés, eux versionnés, permettent au système de fonctionner.
 
 Chaque constat porte un identifiant (`T-nn`) et une gravité.
 **Gravités :** 🔴 Bloquant · 🟠 Majeur · 🟡 Mineur · ⚪ Information
@@ -60,8 +65,8 @@ Chaque constat porte un identifiant (`T-nn`) et une gravité.
 | `id` | `hogwarts-system` | ✅ correspond au dossier |
 | `compatibility` | `{minimum: "14", verified: "14.365"}` | ✅ aligné sur le serveur testé |
 | `esmodules` | `["module/hogwarts-system.mjs"]` | ✅ préféré à `scripts` |
-| `documentTypes` | 4 Actors, 8 Items, avec `htmlFields` | ✅ obligatoire pour les DataModels |
-| `packs` | 5 packs, `system` et `ownership` renseignés | ✅ |
+| `documentTypes` | **5 Actors**, 8 Items, avec `htmlFields` | ✅ obligatoire pour les DataModels |
+| `packs` | **6 packs**, `system` et `ownership` renseignés | ✅ |
 | `packFolders` | Arborescence à 2 niveaux, couleurs | ✅ fonctionnalité v12+ |
 | `url` · `bugs` · `manifest` · `download` | URL GitHub complètes | ✅ **T-01 résolu** |
 | `primaryTokenAttribute` | `health` | ✅ |
@@ -70,7 +75,7 @@ Chaque constat porte un identifiant (`T-nn`) et une gravité.
 | `flags.hotReload` | `css`, `html`, `hbs`, `json` | ✅ confort de développement |
 
 **T-01** ✅ **Résolu.** Les quatre URL étaient vides, rendant l'installation par manifeste et
-la détection des mises à jour impossibles. La release `v1.0.0` est publiée et
+la détection des mises à jour impossibles. La release `v1.1.0` est publiée et
 `releases/latest/download/system.json` répond en HTTP 200 avec la bonne version.
 
 **T-02** ✅ **Résolu.** `secondaryTokenAttribute` valait `fougue`, un champ que seul le type
@@ -198,7 +203,8 @@ main, et ne doivent pas être corrigés à la main.
 | Potions | **139** | 100 % |
 | Ingrédients | **310** | 100 % |
 | Créatures | **162** | 100 % (Bestiaire + Encyclopédie) |
-| Avantages | 31 | — |
+| Avantages, désavantages et destin | **104** | 100 % (§4.1, §4.2, §5.2) |
+| Guide du MJ | 1 | — |
 
 Pour mémoire, l'état antérieur, saisi à la main : 292 sorts dont **52 % avec au moins un champ
 faux** (36 % de malus erronés, 24 % de cibles erronées) et **11 documents dont le `name` était
@@ -244,15 +250,16 @@ combine les deux ouvrages.
 
 > **Piège découvert en production.** Trois icônes du cœur ont été **supprimées en v14** :
 > `icons/svg/leaf.svg` (utilisée par 310 documents), `icons/svg/transform.svg` (84) et
-> `icons/skills/social_dark.svg` (12). Elles s'affichaient en image cassée. Remplacées par
-> `oak.svg`, `upgrade.svg` et `statue.svg`. ✅ **VÉRIFIÉ** : 0 image cassée sur 1008 documents.
-> À revérifier à chaque version majeure de Foundry — le manifeste ne signale pas ces retraits.
+> `icons/skills/social_dark.svg` (12). Elles s'affichaient en image cassée. ✅ **VÉRIFIÉ** : les
+> **1082 documents** des six packs ne référencent plus que **11 icônes**, toutes présentes en
+> v14.365, et aucune des trois retirées. À revérifier à chaque version majeure de Foundry — le
+> manifeste ne signale pas ces retraits.
 
 ---
 
 ## 8. Localisation
 
-`lang/en.json` et `lang/fr.json` sont synchronisés (1113 lignes chacun).
+`lang/en.json` et `lang/fr.json` sont synchronisés (1307 lignes chacun).
 `LOCALIZATION_PREFIXES` est utilisé sur tous les DataModels, ce qui automatise la localisation
 des libellés de champs. Les libellés de types (`TYPES.Actor.*`, `TYPES.Item.*`) sont présents.
 
@@ -339,11 +346,25 @@ sont simplement déclarés dans la configuration du linter.
 
 ## 11. Qualité de code
 
-**T-22** 🟡 **Ouvert.** `actor-sheet.mjs` fait **3107 lignes** et concentre les gestionnaires
-d'action, la logique de jets, les compétences, la famille, le familier et les créatures. Un
-découpage par domaine (`sheets/parts/rolls.mjs`, `skills.mjs`, `creature.mjs`) réduirait le
-risque de régression. Refonte volontairement reportée : elle touche le fichier le plus actif
-du dépôt.
+**T-22** ✅ **Résolu.** `actor-sheet.mjs` faisait **3 271 lignes** et concentrait les gestionnaires
+d'action, la logique de jets, les compétences, la famille, le familier et les créatures. Il est
+découpé en **sept modules** par domaine sous `module/sheets/actor/`, et retombe à **1 531 lignes** :
+
+| Module | Rôle |
+|--------|------|
+| `rolls.mjs` | jets de compétence, initiative, dégâts, oppositions, réactions, fougue |
+| `experience.mjs` | gains, bilans de trimestre et d'année, réserve, repos |
+| `magic.mjs` | lancement, apprentissage, préparation et usage des potions |
+| `creature.mjs` | attaques, compétences libres et jets de créature |
+| `biography.mjs` | famille, sections repliables, transformation d'Animagus |
+| `skills.mjs` | ajout, suppression, plafond automatique |
+| `chat-cards.mjs` | boutons partagés des cartes de chat |
+
+> **Vérification du découpage.** Les 71 fonctions déplacées ont été comparées une à une, avant et
+> après, par empreinte normalisée : **aucune différence**. Les 47 actions déclarées se résolvent
+> toutes à l'exécution. Un premier extracteur automatique avait mordu sur `#onSubmitActorForm` et
+> dupliqué `toggleSettingsSection` : il a été réécrit avec un suivi de parité des accolades
+> inverses et un refus de tout chevauchement.
 
 **T-23** ✅ **Résolu.** La logique de degrés était dupliquée — **9 fois, pas 5** comme
 l'affirmait la première version de ce document. Elle est factorisée dans
@@ -361,13 +382,47 @@ L'apprentissage de sort conserve sa propre logique à 4 issues, documentée sur 
 
 | Outil | Commande | État |
 |-------|----------|------|
-| Tests unitaires | `npm test` | **9 tests, 0 échec** |
+| Tests unitaires | `npm test` | **50 tests, 0 échec** |
 | Linter | `npm run lint` | **0 erreur, 0 avertissement** |
+| Vérification par mutation | `npm run test:mutations` | **9 défauts sur 9 détectés** |
 
 La configuration ([eslint.config.mjs](hogwarts-system/eslint.config.mjs)) déclare les globaux
-Foundry, sans quoi `no-undef` produit un bruit ininterprétable. Le premier passage a signalé
+Foundry, sans quoi `no-undef` produit un bruit inexploitable. Le premier passage a signalé
 29 problèmes : 8 erreurs (dont **T-25**), 8 variables mortes laissées par la factorisation
 T-23, 2 comparaisons lâches et 11 avertissements de style. Tous traités.
+
+**T-31** ✅ **Résolu — tests d'intégrité structurelle.** Les tests d'origine ne couvraient que
+l'arithmétique des règles ; rien ne vérifiait que le code tenait debout. Neuf tests
+([test/integrity.test.mjs](hogwarts-system/test/integrity.test.mjs)) comblent ce trou, chacun
+né d'une panne réelle :
+
+| Test | Ce qu'il empêche |
+|------|------------------|
+| Actions déclarées | ApplicationV2 ignore un `data-action` inconnu **en silence** |
+| Actions atteignables | Une action déclarée sans bouton est une fonctionnalité invisible |
+| Pas de `data-action` sur un `<select>` | Le clic est le geste qui déroule la liste ; le re-rendu la referme |
+| Clés de traduction présentes | Un libellé affiché en brut à l'écran |
+| Arguments de `localize` | Un `{malus}` non substitué après renommage d'un seul côté |
+| `fr` et `en` symétriques | Un champ traduit d'un seul côté |
+| Gabarits existants | Un chemin `PARTS` cassé lors d'un renommage |
+| Sélecteurs racine CSS | `.hogwarts-system .x` ne correspond jamais à rien |
+| `system.json` cohérent | Version désynchronisée, pack ou langue absent |
+
+> **Un test vert ne prouve rien s'il ne sait pas virer au rouge.**
+> [tools/check-tests.py](hogwarts-system/tools/check-tests.py) réintroduit chaque défaut un par
+> un, relance la suite et restaure toujours le fichier. Neuf mutations, neuf détections.
+
+**T-32** ✅ **Résolu — code en anglais.** Commentaires, identifiants et intitulés de test sont
+en anglais dans tout le code. **Les citations du livre restent en français**, verbatim et avec
+leur numéro de ligne : elles servent de preuve et doivent rester retrouvables dans les sources.
+Un contrôle confronte chaque citation longue au texte du livre, après normalisation des accents
+et des espaces.
+
+> **Trois dégâts causés par les renommages en masse**, tous rattrapés : une citation du livre
+> corrompue (« la valeur » devenue « la valueOf »), une classe CSS renommée (`stat-malus`), et
+> un argument de traduction désaligné de son marqueur. Le linter a attrapé toutes les références
+> oubliées, mais **aucun de ces trois cas** : ils sont invisibles pour un analyseur JavaScript.
+> D'où le test sur les arguments de `localize`, ajouté en conséquence.
 
 ---
 
@@ -375,10 +430,38 @@ T-23, 2 comparaisons lâches et 11 avertissements de style. Tous traités.
 
 | ID | Gravité | Action | Pourquoi c'est reporté |
 |----|---------|--------|------------------------|
-| T-22 | 🟡 | Découper `actor-sheet.mjs` (3190 l.) | Refonte large sur le fichier le plus actif ; à faire dans une branche dédiée |
 | T-17 | 🟡 | Illustrations des créatures | Demande des ressources graphiques, pas du code |
 
-T-04, T-06, T-27, T-28, T-29 et T-30 sont traités. Tous les points P0 et P1 sont traités.
+T-04, T-06, T-22, T-27, T-28, T-29, T-30, T-31, T-32 et T-35 sont traités. Tous les points P0 et
+P1 sont traités.
+
+**T-35** ✅ **Résolu en 1.2.0 — une règle générale implémentée à un seul endroit.** La comparaison
+des marges du §28.3.4 ne vivait que dans l'application Quidditch, alors que le livre l'emploie dès
+le chapitre 2. Elle est extraite dans `helpers/opposition.mjs` (arithmétique, testable sans
+Foundry) et `applications/opposition.mjs` (cartes de chat et résolveur). Le Quidditch, le duel et
+la Legilimancie passent tous par ce code, et la classe CSS de la ligne de marge est devenue
+`hogwarts-margin` au lieu de `quidditch-margin`.
+
+> **Effet de bord assumé** : la table des résistances est désormais bornée à 5-95 au lieu de 1-99,
+> parce que la table imprimée ne sort jamais de cet intervalle (l. 1038). L'ancienne borne ne
+> venait d'aucune source. Le jet d'opposition des fiches et la résistance au cognard s'en trouvent
+> tous deux modifiés aux valeurs extrêmes.
+
+**T-33** ✅ **Corrigé en 1.2.0 — fermer une fenêtre de jet lançait les dés.** `DialogV2.prompt`
+renvoie `null` à la fermeture, mais la valeur était convertie en réponse valide : fermer par la
+croix revenait à cliquer OK avec un modificateur de zéro. Reproduit en jeu avant correction. Les
+six appels concernés renoncent désormais. Les huit autres boîtes de dialogue du système géraient
+déjà la fermeture correctement.
+
+**T-34** ✅ **Corrigé en 1.2.0 — lecture de données périmées.** Le cadenas du plafond de maîtrise
+lisait l'acteur au moment du clic. Or cliquer le cadenas fait sortir du champ voisin : le `change`
+part, mais l'enregistrement n'est **pas encore arrivé**. Mesuré : seul un délai de 0 ms échoue,
+dès 50 ms tout fonctionne — or un clic humain, c'est précisément 0 ms. Le gestionnaire lit
+maintenant la valeur affichée sur la fiche, et relit le tableau **après** la confirmation.
+
+> Leçon de méthode : simuler un `change` puis cliquer n'équivaut pas à un vrai clic, puisque
+> c'est le clic lui-même qui déclenche le `change`. Trois campagnes de tests automatisés sont
+> passées au vert sur un code cassé avant que le protocole manuel de l'utilisateur ne tranche.
 
 **T-29** ✅ **Corrigé en 1.0.1 — compétences préréglées jamais enregistrées.**
 `_backfillPresetSkills()` ne remplissait que les données préparées : un personnage neuf
@@ -430,7 +513,7 @@ attribué à tort au badge de phase lors d'un relévé précédent, vient de la 
 
 ## 13. Vérifications en conditions réelles
 
-Instance Foundry **14.365**, sur les versions de développement ayant abouti à la v1.0.0.
+Instance Foundry **14.365**, sur les versions de développement ayant abouti à la v1.2.0.
 
 | Test | Résultat |
 |------|----------|
@@ -444,9 +527,22 @@ Instance Foundry **14.365**, sur les versions de développement ayant abouti à 
 | Plafond de maîtrise scolaire | an 1 → 30 · an 3 → 60 · an 5 → 90 · an 6 → 100 · an 7 → 100 |
 | Rattrapage des presets | 55 compétences persistées → 59 préparées, sur 8 personnages |
 | Bascule auto → manuel du plafond | an 3 auto = 60 → manuel 42 → passage en an 5 : reste 42 |
-| Images cassées dans les compendiums | 0 sur 1008 documents |
+| Images cassées dans les compendiums | 0 sur 1082 documents |
 | Fiches d'objets, 8 types | Un seul onglet visible à la fois, en-tête à 140 px pour tous |
 | Malus de formule extrême maîtrisée | non maîtrisée −30 · maîtrisée −20 · mode extrême −40 |
+| Fermeture d'une fenêtre de jet | Plus aucun dé lancé, sur les 6 appels concernés |
+| Onglet *Familier* sur une fiche de PNJ | Présent (9 onglets), création et liaison fonctionnelles |
+| Cadenas du plafond scolaire | Déverrouillage immédiat, reverrouillage toujours confirmé — 18 essais sur 18 à la souris réelle |
+| Budget de PNJ, §22.2.1 | standard 350/460/600/760 · rival 400/510/650/810 (années 1/3/5/7) |
+| Avantage *Troisième œil* | Sens à `PER × 4` apparaît et disparaît avec l'avantage |
+| Avantage *Problèmes visuels* | Livré désactivé ; une fois activé, Vue 70 → 14 |
+| Compétences octroyées par avantage | 4 lignes apparaissent et disparaissent, jamais écrites en base |
+| Bonus de duel *Initié au duel* | 26 que l'effet conditionnel soit allumé ou éteint (était 28 / 26) |
+| Mode formule extrême | 0 sortilège sur 366 rendu plus facile qu'en mode classique (était 251) |
+| Tri du tracker en duel | À initiative égale, P1 avant P3 et P2 avant P4 |
+| Legilimancie contre Occlumancie | Intrusion / échec / renversement / égalité au Legilimens |
+| Migration `1.2.0` | Exécutée : 0 résidu sur 11 acteurs, 2219 points de compétence préservés |
+| Identité visuelle de la fiche PNJ | Titres à 16,8 px, accent de maison appliqué, grille correcte |
 
 **Faux positif à ignorer** : un avertissement porte sur le global `FilePicker`, mais sa pile
 d'appel pointe `forge-vtt.com/js/forgevtt-module.js` — il vient du **module Forge**, pas du
@@ -461,18 +557,23 @@ hogwarts-system/
   system.json              manifeste
   eslint.config.mjs        configuration du linter
   module/
-    hogwarts-system.mjs     955 l.  point d'entrée, hooks, réglages, migrations
-    documents/              actor.mjs, item.mjs, combat.mjs
-    data/                   16 modèles (4 Actor, 8 Item, 2 bases, house-points, _module)
-    sheets/                 actor-sheet.mjs (3107 l.), item-sheet.mjs (630 l.)
-    applications/           house-points.mjs
-    helpers/                config.mjs, degrees.mjs, effects.mjs
-  templates/               24 fichiers .hbs
-  lang/                    en.json, fr.json (1113 l. chacun)
-  packs/                   5 compendiums + sources JSON
-  test/                    9 tests unitaires
+    hogwarts-system.mjs    1130 l.  point d'entrée, hooks, réglages, migrations
+    documents/             actor.mjs, item.mjs, combat.mjs
+    data/                  17 modèles (5 Actor, 8 Item, 2 bases, house-points, _module)
+    sheets/                actor-sheet.mjs (1531 l.), item-sheet.mjs (630 l.),
+                           quidditch-team-sheet.mjs, actor/ (8 modules par domaine)
+    applications/          house-points.mjs, quidditch.mjs, character-creation.mjs,
+                           duel.mjs, opposition.mjs
+    helpers/               config.mjs, degrees.mjs, effects.mjs, quidditch.mjs,
+                           duel.mjs, opposition.mjs
+  templates/               30 fichiers .hbs
+  lang/                    en.json, fr.json
+  packs/                   6 compendiums + sources JSON
+  test/                    rules.test.mjs, integrity.test.mjs — 50 tests
+  tools/                   check-tests.py (vérification par mutation)
   build-compendia.mjs      livres → JSON
   build-packs.mjs          JSON → LevelDB
 ```
 
 **Hors périmètre :** `node_modules/`, `src/scss/`, `css/`.
+**Hors dépôt :** `rules/` — livres de tiers, conservés en local (voir §2).

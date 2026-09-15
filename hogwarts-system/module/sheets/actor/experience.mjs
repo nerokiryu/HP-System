@@ -1,6 +1,6 @@
 /**
- * Expérience : résolution des jets de gain, bilans de trimestre, de fin d'année
- * et de vacances, dépense de la réserve et récupération au repos.
+ * Experience: gain rolls, term and year-end reviews, holiday rolls, spending the
+ * pool and rest recovery.
  */
 
 /**

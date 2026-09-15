@@ -1,8 +1,8 @@
 /**
- * Sortilèges et potions : jets de lancement, apprentissage, préparation et
- * consommation d'une dose.
+ * Spells and potions: casting rolls, learning, brewing and drinking a dose.
  */
 import { degreeOf, degreeBadge } from '../../helpers/degrees.mjs';
+import { HOGWARTS } from '../../helpers/config.mjs';
 import { fougueButton, fougueGainButton } from './chat-cards.mjs';
 
 /**
@@ -28,7 +28,9 @@ export async function onRollPotion(event, target) {
   const targetValue = potionsSkill.value;
   
   // Prompt for additional modifier
-  const { mod: additionalMod } = await this._promptRollModifier.call(this);
+  const choice = await this._promptRollModifier.call(this);
+  if (!choice) return;
+  const additionalMod = choice.mod;
   
   // Roll 1d100
   const roll = new Roll('1d100', this.actor.getRollData());
@@ -96,7 +98,9 @@ export async function onBrewPotion(event, target) {
   const targetValue = potionsSkill.value;
 
   // Prompt for additional modifier
-  const { mod: additionalMod } = await this._promptRollModifier.call(this);
+  const choice = await this._promptRollModifier.call(this);
+  if (!choice) return;
+  const additionalMod = choice.mod;
 
   // Roll 1d100
   const roll = new Roll('1d100', this.actor.getRollData());
@@ -223,15 +227,8 @@ export async function onRollSpell(event, target) {
     .join(' / ');
 
   // Map spell type to skill name
-  const skillMap = {
-    'E': 'Enchantements',
-    'M': 'Métamorphose',
-    'S': 'Mauvais sorts',
-    'X': null
-  };
+  const skillName = HOGWARTS.spellSkills[spellType] ?? null;
 
-  const skillName = skillMap[spellType];
-  
   let targetValue = 0;
   let skillDisplayName = 'Aucune compétence';
   
@@ -271,7 +268,8 @@ export async function onRollSpell(event, target) {
 
   // Prompt for additional modifier
   const { mod: additionalMod, wandless, wandlessPenalty, silent, useExtreme } =
-    await this._promptRollModifier.call(this, { showCasting: true, showExtreme: hasExtreme });
+    (await this._promptRollModifier.call(this, { showCasting: true, showExtreme: hasExtreme })) ?? {};
+  if (additionalMod === undefined) return;
   const isExtreme = hasExtreme && useExtreme;
   const appliedMalus = isExtreme ? malusExtreme : malusMastered;
   

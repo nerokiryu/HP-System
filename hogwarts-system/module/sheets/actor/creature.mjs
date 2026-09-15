@@ -1,6 +1,6 @@
 /**
- * Fiches de créature et de PNJ : attaques maison, compétences libres et jets de
- * caractéristique.
+ * Creature and NPC sheets: house attacks, free-form skills and characteristic
+ * rolls.
  */
 import { degreeOf, degreeBadge } from '../../helpers/degrees.mjs';
 import { damageButtons } from './chat-cards.mjs';

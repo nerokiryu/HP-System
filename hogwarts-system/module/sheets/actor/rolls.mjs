@@ -1,8 +1,10 @@
 /**
- * Résolution des jets : compétences, initiative, dégâts, oppositions, réactions
- * et dépense de Fougue.
+ * Roll resolution: skills, initiative, damage, oppositions, reactions and
+ * spending Fougue points.
  */
 import { degreeOf, degreeBadge, fougueDegree, reverseDice } from '../../helpers/degrees.mjs';
+import { resistanceChance } from '../../helpers/opposition.mjs';
+import { marginRow, rollMargin } from '../../applications/opposition.mjs';
 import { damageButtons, fougueButton, fougueGainButton } from './chat-cards.mjs';
 
 /**
@@ -73,7 +75,9 @@ export async function onRoll(event, target) {
   if (dataset.roll) {
     // Prompt for a roll modifier (bonus/penalty) and optionally fougue.
     const isPercentile = !!dataset.target;
-    const { mod, useFougue } = await this._promptRollModifier.call(this, { showFougue: isPercentile });
+    const choice = await this._promptRollModifier.call(this, { showFougue: isPercentile });
+    if (!choice) return;
+    const { mod, useFougue } = choice;
     let formula = String(dataset.roll);
     const labelBase = dataset.label ? String(dataset.label) : '';
 
@@ -279,7 +283,9 @@ export async function rollInitiative(event, target) {
   const initiativeBonus = Number(actor.system?.initiativeBonus) || 0;
 
   // Prompt for an optional bonus/penalty to the initiative roll
-  const { mod } = await this._promptRollModifier.call(this);
+  const choice = await this._promptRollModifier.call(this);
+  if (!choice) return;
+  const { mod } = choice;
 
   // Build the roll formula (1d6 plus optional modifier)
   let rollFormula = '1d6';
@@ -403,6 +409,44 @@ export async function onRollParry(event) {
 }
 
 /**
+ * Opposed **skill** roll (§28.3.4, l. 29823), the rule the book also uses for
+ * dodges and brawls in chapter 2 (l. 3067, l. 3081). Only the margin is
+ * published here; the Gamemaster compares two of them with the resolver.
+ * @this HogwartsActorSheet
+ * @param {PointerEvent} event
+ * @param {HTMLElement} target
+ */
+export async function onRollOpposedSkill(event, target) {
+  event.preventDefault();
+  const base = Number(target.dataset.target) || 0;
+  const label = target.dataset.label ?? '';
+
+  const choice = await this._promptRollModifier.call(this, { showFougue: false });
+  if (!choice) return;
+
+  const stress = Number(this.actor.system.stress?.value) || 0;
+  const finalTarget = base + (Number(choice.mod) || 0) - stress;
+  const { roll, margin, success } = await rollMargin(finalTarget);
+
+  const stressText = stress ? ` −${stress}` : '';
+  const modText = choice.mod ? ` ${choice.mod >= 0 ? '+' : ''}${choice.mod}` : '';
+
+  await ChatMessage.create({
+    speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+    content: `<div class="hogwarts-chat-card">
+      <header class="card-header"><h3>${label}</h3>
+      <span class="card-type">${game.i18n.localize('HOGWARTS.Chat.Opposition')}</span></header>
+      <div class="card-row"><strong>${game.i18n.localize('HOGWARTS.Chat.Target')}:</strong> ${base}${modText}${stressText} = ${finalTarget}</div>
+      <div class="card-row"><strong>${game.i18n.localize('HOGWARTS.Chat.Roll')}:</strong> ${roll.total} →
+        ${game.i18n.localize(success ? 'HOGWARTS.Roll.Degree.Success' : 'HOGWARTS.Roll.Degree.Fail')}</div>
+      ${marginRow(margin, { label: `${game.i18n.localize('HOGWARTS.Opposition.Margin')} (${finalTarget} − ${roll.total})` })}
+    </div>`,
+    rolls: [roll],
+    rollMode: game.settings.get('core', 'rollMode'),
+  });
+}
+
+/**
  * Opposition roll helper (Resistance Table): 50% - (passive×5) + (active×5)
  * Prompts for active and passive characteristic values, then rolls d100.
  * @this HogwartsActorSheet
@@ -444,7 +488,7 @@ export async function onRollOpposition(event, target) {
   if (!result) return;
 
   const { active, passive } = result;
-  const targetValue = Math.max(1, Math.min(99, 50 - (passive * 5) + (active * 5)));
+  const targetValue = resistanceChance(active, passive);
 
   const roll = new Roll('1d100', this.actor.getRollData());
   await roll.evaluate();

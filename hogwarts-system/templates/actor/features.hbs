@@ -177,6 +177,16 @@
             <i class='fas fa-dice-d20'></i>
           </span>
         </div>
+        {{! N'existe que si un avantage l'a ouvert (Troisième œil, §5.2). }}
+        {{#if system.derived.thirdEye}}
+        <div class='ability flexrow flex-group-center'>
+          <label class='resource-label flexlarge align-left' data-tooltip='{{localize "HOGWARTS.Derived.ThirdEyeHint"}}'>{{localize 'HOGWARTS.Derived.ThirdEye'}}</label>
+          <span class='ability-value'>{{system.derived.thirdEye}}</span>
+          <span class='ability-mod rollable' data-action='roll' data-roll='1d100' data-target='{{system.derived.thirdEye}}' data-label='{{localize "HOGWARTS.Derived.ThirdEye"}}'>
+            <i class='fas fa-dice-d20'></i>
+          </span>
+        </div>
+        {{/if}}
         <div class='ability flexrow flex-group-center'>
           <label class='resource-label flexlarge align-left'>{{localize 'HOGWARTS.Derived.Idea'}}</label>
           <span class='ability-value'>{{system.derived.idea}}</span>
@@ -194,6 +204,23 @@
       </div>
     </div>
   </div>
+
+  {{#if duelling}}
+  <div class='duel-block'>
+    <h3>{{localize 'HOGWARTS.Duel.Title'}}</h3>
+    <div class='ability flexrow flex-group-center'>
+      <label class='resource-label flexlarge align-left'
+             data-tooltip='{{localize "HOGWARTS.Duel.ClubYearsHint"}}'>{{localize 'HOGWARTS.Duel.ClubYears'}}</label>
+      <input type='number' name='system.duelClubYears' value='{{system.duelClubYears}}'
+             min='0' max='5' step='1' data-dtype='Number' />
+    </div>
+    {{#if hasLegilimency}}
+      <a class='rollable duel-legilimency' data-action='rollLegilimency'>
+        <i class='fas fa-brain'></i> {{localize 'HOGWARTS.Mind.Intrude'}}
+      </a>
+    {{/if}}
+  </div>
+  {{/if}}
 
   {{#unless (eq actor.type "familiar")}}
   <div class='wounds-full-width'>

@@ -8,6 +8,7 @@
  */
 
 import { snitchChance } from '../helpers/quidditch.mjs';
+import { DUEL_MODES } from '../helpers/duel.mjs';
 
 export const COMBAT_PHASES = {
   1: 'HOGWARTS.Combat.Phase.First',
@@ -20,6 +21,23 @@ export const DEFAULT_PHASE = 2;
 /** True when this encounter is being run as a Quidditch match (ch. 28). */
 export function isQuidditch(combat) {
   return combat?.getFlag?.('hogwarts-system', 'quidditch.active') === true;
+}
+
+/** True when this encounter is being run as a wizard duel (ch. 27). */
+export function isDuel(combat) {
+  return combat?.getFlag?.('hogwarts-system', 'duel.active') === true;
+}
+
+/**
+ * A duel replaces the combat phases with the priority ladder of §27.3
+ * (l. 28610): innate spells first, then protection, then unspoken and classic,
+ * extreme formulas last.
+ * @param {Combatant} c
+ * @returns {number} 1 to 4
+ */
+export function duelPriorityOf(c) {
+  const p = Number(c?.getFlag?.('hogwarts-system', 'duelPriority'));
+  return [1, 2, 3, 4].includes(p) ? p : DUEL_MODES.classic.priority;
 }
 
 /**
@@ -64,6 +82,10 @@ export class HogwartsCombat extends Combat {
       const ta = quidditchTier(a);
       const tb = quidditchTier(b);
       if (ta !== tb) return ta - tb;
+    } else if (isDuel(combat)) {
+      const da = duelPriorityOf(a);
+      const db = duelPriorityOf(b);
+      if (da !== db) return da - db;
     } else {
       const pa = combatantPhase(a, round);
       const pb = combatantPhase(b, round);

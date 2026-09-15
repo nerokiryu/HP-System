@@ -76,6 +76,7 @@
       "QuidditchTeam": "Quidditch Team Sheet"
     },
     "Name": "Name",
+    "Cancel": "Cancel",
     "Actor": {
       "Tabs": {
         "Biography": "Biography",
@@ -330,7 +331,11 @@
       "Max": "Max",
       "MaxAuto": {
         "Override": "Set this maximum manually (stops the per-year progression)",
-        "Restore": "Back to the automatic per-year maximum"
+        "Restore": "Back to the automatic per-year maximum",
+        "RestoreTitle": "Back to the automatic maximum",
+        "RestoreConfirm": "The maximum for \"{skill}\" is set manually to <strong>{manual}%</strong>. Switching back to automatic will reset it to <strong>{auto}%</strong>, derived from the school year, and your entry will be lost.",
+        "RestoreConfirmSame": "The maximum for \"{skill}\" is set manually. Switching back to automatic will make it follow the school year again — <strong>{auto}%</strong> today, more each year — and your setting will be lost.",
+        "RestoreYes": "Back to automatic"
       },
       "Value": "Value",
       "XPCheck": "XP",
@@ -797,7 +802,7 @@
     "Creation": {
       "Title": "Creation assistant",
       "Open": "Roll characteristics ({formula})",
-      "Intro": "Eight 2d6+6 rolls to spread across the characteristics, guided by the archetype. Picking a value already placed swaps it with the other characteristic.",
+      "Intro": "Eight {formula} rolls to spread across the characteristics, guided by the archetype. Picking a value already placed swaps it with the other characteristic.",
       "Pool": "Rolled",
       "Stat": "Characteristic",
       "Adult": "Adult",
@@ -815,6 +820,8 @@
       "Hearing": "Hearing",
       "Touch": "Touch",
       "Sight": "Sight",
+      "ThirdEye": "Third Eye",
+      "ThirdEyeHint": "Magical sight granted by the \"Third Eye\" advantage: it adds to the other senses and is rolled under PERception × 4.",
       "Idea": "Idea",
       "Luck": "Luck"
     },
@@ -1024,6 +1031,98 @@
       "LegendGain": "bad / neutral / good mood",
       "LegendLoss": "good / neutral / bad mood"
     },
+    "Opposition": {
+      "Margin": "Margin",
+      "Resolver": "Resolve an opposition",
+      "Acting": "Acting character",
+      "Opposing": "Opposing character",
+      "Hindrance": "Hindrance (penalty)",
+      "Winner": "{name} wins the action",
+      "TieRule": "Tie: the action goes to whoever acts first in initiative order (l. 29822).",
+      "NeedTwoMargins": "At least two margins must be posted in chat.",
+      "RollHint": "Opposed roll: posts the margin instead of a success level (§28.3.4)."
+    },
+    "Duel": {
+      "Title": "Wizard duel",
+      "Rules": "Agreed rules",
+      "TypeLabel": "Duel type",
+      "Type": {
+        "a": "a — First spell to take effect",
+        "b": "b — Put the opponent out of the fight",
+        "c": "c — First wound",
+        "d": "d — Duel to the death"
+      },
+      "Mode": {
+        "innate": "Innate (priority 1)",
+        "unspoken": "Unspoken (+3)",
+        "classic": "Classic",
+        "extreme": "Extreme formula (−3)"
+      },
+      "Modality": {
+        "unspoken": "Unspoken spells",
+        "innate": "Innate spells",
+        "wounding": "Wounding spells",
+        "extreme": "Extreme formulas"
+      },
+      "Role": {
+        "duellist": "Duellist",
+        "second": "Witness / second",
+        "referee": "Referee"
+      },
+      "Step": {
+        "challenge": "The challenge is issued and accepted by every participant",
+        "referee": "Choose the referee who will declare the winner",
+        "seconds": "Each wizard picks a witness, who also stands in as their second",
+        "type": "Choose the duel type",
+        "modalities": "Agree on the particular modalities",
+        "stance": "Duelling stance, wands raised",
+        "declaration": "Pick a spell and declare intent",
+        "countdown": "The participants count to three",
+        "initiative": "Roll initiative, then resolve in the resulting order"
+      },
+      "Start": "Open the duel",
+      "End": "End the duel",
+      "Over": "Duel over",
+      "NextPass": "Next pass",
+      "Passes": "Number of passes",
+      "PassLabel": "Pass",
+      "Participants": "Participants",
+      "NoParticipants": "No participant in the encounter.",
+      "NoCombat": "Open an encounter first: the duel rides on the combat tracker.",
+      "NoSpell": "— no spell declared —",
+      "NoDeclaration": "Declare a spell first.",
+      "SpellNotOwned": "This spell is not on the sheet: the target number must be entered by hand.",
+      "NoExtremeFormula": "This spell has no extreme formula (the book prints “Formule extrême : -”): the normal malus applies.",
+      "AllowedSpells": "Allowed spells",
+      "Procedure": "Procedure (§27.3)",
+      "Initiative": "Duel initiative",
+      "Cast": "Cast the declared spell",
+      "Disqualify": "Disqualify",
+      "Disqualified": "Disqualification",
+      "DamageDisqualifies": "In this duel type, 1 point of damage means immediate disqualification (§27.4).",
+      "WarnStar": "The book stars this spell: it can wound or kill in some cases.",
+      "UnlinkedHint": "This name appears in the duel table but matches no spell in the rulebook nor in the Grimoire.",
+      "PriorityHint": "Resolution order: 1 innate, 2 protection, 3 unspoken and classic, 4 extreme formulas (§27.3).",
+      "Training": "Training",
+      "ClubYears": "Years in a duelling club",
+      "ClubYearsHint": "+1 duel initiative per year, up to +5, cumulative with the “Initié au duel” advantage (l. 28569).",
+      "Bow": "The duellists face each other and bow, then take their fighting stance.",
+      "FougueTitle": "Fougue point",
+      "FouguePrompt": "Spend a Fougue point to reroll the d6 with a +2 bonus? You do not yet know in which order your opponents will act (l. 28683).",
+      "FougueSpent": "Fougue point spent: d6 rerolled with +2."
+    },
+    "Mind": {
+      "Title": "Legilimency and Occlumency",
+      "Defender": "Target of the intrusion",
+      "Intrude": "Enter a mind",
+      "MissingSkill": "This character does not have the {skill} skill.",
+      "NoDefender": "No actor has the Occlumancie skill.",
+      "ProximityHint": "Physical proximity and eye contact make the intrusion easier; a calm and wary target makes it harder (§15.1). Translate that into a modifier.",
+      "Intruded": "The target's mind is breached",
+      "Blocked": "The intrusion fails",
+      "Reversed": "The intrusion turns back on the Legilimens",
+      "ReversalNote": "{defender} blocks the spell as it is cast and enters {attacker}'s thoughts, who cannot shield themselves (§15.1, l. 24365). House extension: the book puts no numbers on this rule."
+    },
     "Quidditch": {
       "Title": "Quidditch",
       "Start": "Start match",
@@ -1041,14 +1140,12 @@
       "TeamSaved": "Squad \"{name}\" saved ({count} players).",
       "NoTeamName": "Give the squad a name.",
       "NoPlayers": "No player assigned to this side.",
-      "Margin": "Margin",
-      "Resolver": "Resolve an opposition",
-      "Acting": "Acting player",
-      "Opposing": "Opposing player",
-      "Hindrance": "Hindrance (penalty)",
-      "Winner": "{name} wins the action",
-      "TieRule": "Tie: the action goes to whoever acts first in initiative order (l. 29822).",
-      "NeedTwoMargins": "At least two margins must be posted in chat.",
+      "Add": "Add points",
+      "Remove": "Remove points",
+      "NoAmount": "Enter a number of points first.",
+      "Adjusted": "Score corrected",
+      "ResetScore": "Reset the score",
+      "ResetScoreConfirm": "Reset the score to 0 — 0? The line-up and the snitch state are kept.",
       "Fouls": "Fouls",
       "CallFoul": "Call",
       "FoulCalled": "Foul called",

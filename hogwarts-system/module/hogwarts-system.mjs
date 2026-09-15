@@ -1,13 +1,14 @@
 // Import document classes.
 import { HogwartsActor } from './documents/actor.mjs';
 import { HogwartsItem } from './documents/item.mjs';
-import { HogwartsCombat, COMBAT_PHASES, combatantPhase, DEFAULT_PHASE, isQuidditch } from './documents/combat.mjs';
+import { HogwartsCombat, COMBAT_PHASES, combatantPhase, DEFAULT_PHASE, isQuidditch, isDuel, duelPriorityOf } from './documents/combat.mjs';
 // Import sheet classes.
 import { HogwartsActorSheet } from './sheets/actor-sheet.mjs';
 import { HogwartsQuidditchTeamSheet } from './sheets/quidditch-team-sheet.mjs';
 import { HogwartsItemSheet } from './sheets/item-sheet.mjs';
 import { HousePointsApp } from './applications/house-points.mjs';
 import { QuidditchApp } from './applications/quidditch.mjs';
+import { DuelApp } from './applications/duel.mjs';
 // Import helper/utility classes and constants.
 import { HOGWARTS } from './helpers/config.mjs';
 import { degreeOf, fougueDegree, reverseDice } from './helpers/degrees.mjs';
@@ -303,8 +304,8 @@ Handlebars.registerHelper('eq', function (a, b) {
   return a === b;
 });
 
-// Helper: or(...) -> true si au moins un argument est vrai. Variadique, le
-// dernier argument étant l'objet d'options de Handlebars.
+// Helper: or(...) -> true when at least one argument is truthy. Variadic, with
+// the last argument being Handlebars' options object.
 Handlebars.registerHelper('or', function (...args) {
   return args.slice(0, -1).some(Boolean);
 });
@@ -336,7 +337,10 @@ async function persistBackfilledSkills() {
   for (const actor of game.actors) {
     if (!['character', 'npc'].includes(actor.type)) continue;
     const stored = actor._source?.system?.skills ?? [];
-    const prepared = actor.system?.skills ?? [];
+    // Skills opened up by an advantage are recomputed on every data preparation:
+    // writing them here would freeze them, and removing the advantage would no
+    // retirerait plus.
+    const prepared = (actor.system?.skills ?? []).filter((s) => !s.grantedBy);
     const blanks = stored.filter((s) => !s.name).length;
     if (!blanks && stored.length === prepared.length) continue;
 
@@ -402,11 +406,11 @@ Hooks.once('ready', async function () {
       version: '1.0.2',
       description: 'FOR/CON/TAI stockées en valeur adulte (malus d\'âge)',
       migrate: async () => {
-        // Le malus d'âge est désormais appliqué au calcul du total. Les fiches
-        // existantes portaient déjà la valeur de l'enfant : sans rien faire, le
-        // malus serait compté deux fois et les points de vie fondraient de moitié.
-        // On rend donc aux caractéristiques leur valeur adulte, pour que le total
-        // affiché reste exactement celui d'avant la mise à jour.
+        // The age malus is now applied when computing the total. Existing sheets
+        // already carried the child's figure: doing nothing would count the malus
+        // twice and halve their hit points. Characteristics are therefore restored
+        // to their adult value, so the displayed total stays exactly what it was
+        // before the update.
         const model = CONFIG.Actor.dataModels.character;
         const updates = [];
         for (const actor of game.actors) {
@@ -424,6 +428,37 @@ Hooks.once('ready', async function () {
         }
         if (updates.length) await Actor.updateDocuments(updates);
         console.log(`HOGWARTS MIGRATE | ${updates.length} personnage(s) reconvertis en valeur adulte`);
+      },
+    }, {
+      version: '1.2.0',
+      description: 'Compétences d\'avantage retirées des fiches qui ne portent pas l\'avantage',
+      migrate: async () => {
+        // Animagus, Legilimancie and Occlumancie used to be preset for everyone;
+        // they are now opened up by the matching advantage. Rows already stored
+        // would otherwise stay put. Rows where points have been invested are left
+        // alone: dropping them would destroy a player's work.
+        const parCompetence = Object.fromEntries(
+          Object.entries(CONFIG.HOGWARTS?.featureSkills ?? {}).map(([avantage, s]) => [s.name, avantage]),
+        );
+        const updates = [];
+        let conservees = 0;
+
+        for (const actor of game.actors) {
+          if (!['character', 'npc'].includes(actor.type)) continue;
+          const stored = actor._source?.system?.skills ?? [];
+          const porte = new Set(actor.items.filter((i) => i.type === 'feature').map((i) => i.name));
+
+          const restantes = stored.filter((s) => {
+            const avantage = parCompetence[s.name];
+            if (!avantage || porte.has(avantage)) return true;
+            if ((Number(s.spent) || 0) > 0) { conservees++; return true; }
+            return false;
+          });
+          if (restantes.length !== stored.length) updates.push({ _id: actor.id, 'system.skills': restantes });
+        }
+
+        if (updates.length) await Actor.updateDocuments(updates);
+        console.log(`HOGWARTS MIGRATE | ${updates.length} fiche(s) nettoyée(s), ${conservees} compétence(s) conservée(s) car déjà investies`);
       },
     }];
 
@@ -558,6 +593,15 @@ Hooks.on('getSceneControlButtons', (controls) => {
     visible: true,
     onChange: () => new QuidditchApp().render(true),
   };
+  group.tools.duel = {
+    name: 'duel',
+    order: Object.keys(group.tools).length + 1,
+    title: 'HOGWARTS.Duel.Title',
+    icon: 'fas fa-wand-sparkles',
+    button: true,
+    visible: true,
+    onChange: () => new DuelApp().render(true),
+  };
 });
 
 /**
@@ -585,6 +629,28 @@ function _renderQuidditchRoles(el, combat) {
 }
 
 /**
+ * Show each duellist's priority rank in the tracker. A duel replaces the
+ * chapter 2 phases with the priority ladder of §27.3, so the phase badge would
+ * be showing a number that no longer drives the order.
+ * @param {HTMLElement} el
+ * @param {Combat} combat
+ */
+function _renderDuelPriorities(el, combat) {
+  for (const row of el.querySelectorAll('.combatant[data-combatant-id]')) {
+    const combatant = combat.combatants.get(row.dataset.combatantId);
+    const controls = row.querySelector('.combatant-controls');
+    if (!combatant || !controls || controls.querySelector('.hogwarts-duel-priority')) continue;
+
+    const priority = duelPriorityOf(combatant);
+    const badge = document.createElement('span');
+    badge.className = `inline-control combatant-control hogwarts-duel-priority priority-${priority}`;
+    badge.textContent = `P${priority}`;
+    badge.dataset.tooltip = game.i18n.localize('HOGWARTS.Duel.PriorityHint');
+    controls.prepend(badge);
+  }
+}
+
+/**
  * Add a phase badge to every combatant row (Chap. 2.4). Clicking cycles the
  * declared phase; Alt-clicking marks the combatant as surprised, which forces
  * them into the third phase for the opening round.
@@ -597,6 +663,8 @@ Hooks.on('renderCombatTracker', (app, html) => {
   // A Quidditch match has no combat phases: show each player's role instead,
   // which is otherwise invisible outside the match dashboard.
   if (isQuidditch(combat)) return _renderQuidditchRoles(el, combat);
+  // A duel sorts on the declared spell's priority, not on the phases.
+  if (isDuel(combat)) return _renderDuelPriorities(el, combat);
 
   for (const row of el.querySelectorAll('.combatant[data-combatant-id]')) {
     const combatant = combat.combatants.get(row.dataset.combatantId);

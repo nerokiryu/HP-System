@@ -846,6 +846,21 @@ h3.collapsible.collapsed + .collapsible-content {
   gap: 4px;
   margin-top: 4px;
 }
+.hogwarts-system.quidditch .quidditch-scoreboard .quidditch-score-adjust {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 4px;
+}
+.hogwarts-system.quidditch .quidditch-scoreboard .quidditch-score-adjust input {
+  flex: 0 0 60px;
+  text-align: center;
+}
+.hogwarts-system.quidditch .quidditch-scoreboard .quidditch-score-adjust .item-control {
+  flex: 0 0 auto;
+  cursor: pointer;
+}
 .hogwarts-system.quidditch .quidditch-scoreboard .quidditch-round {
   grid-column: 1/-1;
   text-align: center;
@@ -934,9 +949,205 @@ h3.collapsible.collapsed + .collapsible-content {
   flex: 0 0 auto;
   width: auto;
 }
-.hogwarts-system.quidditch > .window-content, .hogwarts-system.house-points > .window-content, .hogwarts-system.quidditch-team > .window-content {
+.hogwarts-system.quidditch > .window-content, .hogwarts-system.duel > .window-content, .hogwarts-system.house-points > .window-content, .hogwarts-system.quidditch-team > .window-content {
   overflow-y: auto;
   min-height: 0;
+}
+.hogwarts-system.duel .duel-app {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.hogwarts-system.duel .duel-hint {
+  margin: 0;
+  font-style: italic;
+  opacity: 0.8;
+}
+.hogwarts-system.duel .duel-rules,
+.hogwarts-system.duel .duel-participants,
+.hogwarts-system.duel .duel-spell-list,
+.hogwarts-system.duel .duel-steps {
+  border: 1px solid rgba(var(--hogwarts-accent-rgb), 0.3);
+  border-radius: 4px;
+  padding: 6px 8px;
+}
+.hogwarts-system.duel .duel-rules > header,
+.hogwarts-system.duel .duel-participants > header,
+.hogwarts-system.duel .duel-spell-list > header,
+.hogwarts-system.duel .duel-steps > header {
+  font-weight: bold;
+  color: var(--hogwarts-accent);
+  margin-bottom: 4px;
+}
+.hogwarts-system.duel .duel-passes {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.hogwarts-system.duel .duel-passes > label {
+  flex: 0 0 30%;
+}
+.hogwarts-system.duel .duel-passes > input {
+  flex: 0 0 70px;
+}
+.hogwarts-system.duel .duel-passes > button {
+  flex: 0 0 auto;
+  width: auto;
+}
+.hogwarts-system.duel .duel-pass-counter {
+  margin-left: auto;
+  opacity: 0.85;
+}
+.hogwarts-system.duel .duel-modalities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 6px;
+}
+.hogwarts-system.duel .duel-modalities .duel-modality {
+  width: auto;
+  flex: 0 0 auto;
+  font-size: 12px;
+}
+.hogwarts-system.duel .duel-modalities .duel-modality.off {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+.hogwarts-system.duel .duel-warning {
+  margin: 6px 0 0;
+  color: var(--hogwarts-system-c-alert);
+  font-size: 12px;
+}
+.hogwarts-system.duel .duel-controls {
+  display: flex;
+  gap: 6px;
+}
+.hogwarts-system.duel .duel-participant {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 6px;
+  padding: 4px 0;
+}
+.hogwarts-system.duel .duel-participant + .duel-participant {
+  border-top: 1px solid rgba(var(--hogwarts-accent-rgb), 0.15);
+}
+.hogwarts-system.duel .duel-participant .duel-identity {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1 1 200px;
+  min-width: 0;
+}
+.hogwarts-system.duel .duel-participant .duel-declaration {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1 1 100%;
+  min-width: 0;
+}
+.hogwarts-system.duel .duel-participant img {
+  flex: 0 0 auto;
+  border: none;
+  border-radius: 3px;
+}
+.hogwarts-system.duel .duel-participant .duel-name {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.hogwarts-system.duel .duel-participant .duel-identity select {
+  flex: 0 0 120px;
+}
+.hogwarts-system.duel .duel-participant .duel-declaration select {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.hogwarts-system.duel .duel-participant button {
+  flex: 0 0 auto;
+  width: auto;
+}
+.hogwarts-system.duel .duel-participant.disqualified {
+  opacity: 0.45;
+  text-decoration: line-through;
+}
+.hogwarts-system.duel .duel-priority,
+.hogwarts-system.duel .duel-init {
+  flex: 0 0 auto;
+  min-width: 26px;
+  text-align: center;
+  font-weight: bold;
+}
+.hogwarts-system.duel .duel-flag {
+  flex: 0 0 auto;
+  font-weight: bold;
+}
+.hogwarts-system.duel .duel-flag.warns {
+  color: var(--hogwarts-system-c-alert);
+}
+.hogwarts-system.duel .duel-flag.unlinked {
+  opacity: 0.7;
+}
+.hogwarts-system.duel .duel-spell-list > header > button {
+  width: auto;
+  text-align: left;
+}
+.hogwarts-system.duel .duel-spell-list ul {
+  list-style: none;
+  margin: 4px 0 0;
+  padding: 0;
+}
+.hogwarts-system.duel .duel-spell-list li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+.hogwarts-system.duel .duel-spell-list li.unforgivable {
+  color: var(--hogwarts-system-c-alert);
+}
+.hogwarts-system.duel .duel-spell-list .duel-spell-level {
+  flex: 0 0 24px;
+  opacity: 0.7;
+}
+.hogwarts-system.duel .duel-spell-list .duel-spell-name {
+  flex: 1 1 auto;
+}
+.hogwarts-system.duel .duel-spell-list .duel-spell-priority {
+  flex: 0 0 24px;
+  opacity: 0.7;
+}
+.hogwarts-system.duel .duel-steps ol {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 12px;
+}
+.hogwarts-system .hogwarts-duel-priority {
+  font-weight: bold;
+  font-size: 11px;
+  opacity: 0.9;
+}
+.hogwarts-system .hogwarts-duel-priority.priority-1 {
+  color: #d4af37;
+}
+.hogwarts-system .hogwarts-duel-priority.priority-2 {
+  color: #4a90d9;
+}
+.hogwarts-system .hogwarts-duel-priority.priority-3 {
+  color: var(--color-text-light-highlight, #f0f0e0);
+}
+.hogwarts-system .hogwarts-duel-priority.priority-4 {
+  color: #c85a3a;
+}
+.hogwarts-system .duel-block {
+  margin-top: 8px;
+}
+.hogwarts-system .duel-block .duel-legilimency {
+  display: inline-block;
+  margin-top: 4px;
+  cursor: pointer;
 }
 .hogwarts-system .hogwarts-quidditch-role {
   color: var(--color-text-light-highlight, #f0f0e0);
@@ -2803,6 +3014,24 @@ h3.collapsible.collapsed + .collapsible-content {
 }
 .hogwarts-system .tab.skills .skill-category .skill-category-content {
   transition: all 0.3s ease;
+}
+.hogwarts-system .tab.skills .skill-category .skill-max {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.hogwarts-system .tab.skills .skill-category .skill-max input[readonly] {
+  opacity: 0.7;
+  cursor: default;
+}
+.hogwarts-system .tab.skills .skill-category .skill-max .max-auto {
+  flex: 0 0 auto;
+  cursor: pointer;
+  font-size: 11px;
+  opacity: 0.6;
+}
+.hogwarts-system .tab.skills .skill-category .skill-max .max-auto:hover {
+  opacity: 1;
 }
 .hogwarts-system .tab.features .features-layout {
   display: grid;

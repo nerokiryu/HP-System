@@ -1,0 +1,158 @@
+<div class='duel-app'>
+
+  {{#unless hasCombat}}
+    <p class='duel-hint'>{{localize 'HOGWARTS.Duel.NoCombat'}}</p>
+  {{/unless}}
+
+  {{! Agreed rules of the duel (§27.1, §27.6) }}
+  <section class='duel-rules'>
+    <header><i class='fas fa-scroll'></i> {{localize 'HOGWARTS.Duel.Rules'}}</header>
+
+    <div class='form-group'>
+      <label>{{localize 'HOGWARTS.Duel.TypeLabel'}}</label>
+      <select name='type' data-change='setType' {{#unless isGM}}disabled{{/unless}}>
+        {{#each types as |t|}}
+          <option value='{{t.key}}' {{#if (eq t.key @root.type)}}selected{{/if}}>{{t.label}}</option>
+        {{/each}}
+      </select>
+    </div>
+
+    <div class='form-group duel-passes'>
+      <label>{{localize 'HOGWARTS.Duel.Passes'}}</label>
+      <input type='number' name='passes' min='1' max='10' step='1' value='{{passes}}'
+             {{#unless isGM}}disabled{{/unless}} />
+      <button type='button' data-action='setPasses' {{#unless isGM}}disabled{{/unless}}>
+        <i class='fas fa-check'></i>
+      </button>
+      <span class='duel-pass-counter'>{{localize 'HOGWARTS.Duel.PassLabel'}} <strong>{{pass}}</strong> / {{passes}}</span>
+    </div>
+
+    <div class='duel-modalities'>
+      {{#each modalities as |m|}}
+        <button type='button' class='duel-modality {{#if m.allowed}}on{{else}}off{{/if}}'
+                data-action='toggleModality' data-modality='{{m.key}}' {{#unless @root.isGM}}disabled{{/unless}}>
+          <i class='fas {{#if m.allowed}}fa-check{{else}}fa-ban{{/if}}'></i> {{m.label}}
+        </button>
+      {{/each}}
+    </div>
+
+    {{#if damageDisqualifies}}
+      <p class='duel-warning'>{{localize 'HOGWARTS.Duel.DamageDisqualifies'}}</p>
+    {{/if}}
+  </section>
+
+  {{#if isGM}}
+    <section class='duel-controls'>
+      <button type='button' data-action='startDuel'>
+        <i class='fas fa-handshake'></i> {{localize 'HOGWARTS.Duel.Start'}}
+      </button>
+      <button type='button' data-action='nextPass'>
+        <i class='fas fa-forward'></i> {{localize 'HOGWARTS.Duel.NextPass'}}
+      </button>
+      <button type='button' data-action='openResolver'>
+        <i class='fas fa-scale-balanced'></i> {{localize 'HOGWARTS.Opposition.Resolver'}}
+      </button>
+      <button type='button' data-action='endDuel'>
+        <i class='fas fa-flag-checkered'></i> {{localize 'HOGWARTS.Duel.End'}}
+      </button>
+    </section>
+  {{/if}}
+
+  {{! Participants and their declaration for the current pass }}
+  <section class='duel-participants'>
+    <header><i class='fas fa-users'></i> {{localize 'HOGWARTS.Duel.Participants'}}</header>
+
+    {{#each participants as |p|}}
+      <div class='duel-participant {{#if p.disqualified}}disqualified{{/if}}'>
+        <div class='duel-identity'>
+          <img src='{{p.img}}' alt='{{p.name}}' width='32' height='32' />
+          <span class='duel-name'>{{p.name}}</span>
+
+          <select data-change='setRole' data-combatant-id='{{p.id}}' {{#unless @root.isGM}}disabled{{/unless}}>
+            {{#each @root.roles as |r|}}
+              <option value='{{r.key}}' {{#if (eq r.key p.role)}}selected{{/if}}>{{r.label}}</option>
+            {{/each}}
+          </select>
+        </div>
+
+        {{#if p.isDuellist}}
+          <div class='duel-declaration'>
+            <select data-change='setSpell' data-combatant-id='{{p.id}}'>
+              <option value=''>{{localize 'HOGWARTS.Duel.NoSpell'}}</option>
+              {{#each @root.spells as |s|}}
+                <option value='{{s.name}}' {{#if (eq s.name p.spell)}}selected{{/if}}>
+                  {{s.level}} · {{s.name}}{{#if s.warns}} *{{/if}}{{#if s.unlinked}} ?{{/if}}
+                </option>
+              {{/each}}
+            </select>
+
+            <select data-change='setMode' data-combatant-id='{{p.id}}'>
+              {{#each @root.modes as |m|}}
+                <option value='{{m.key}}' {{#if (eq m.key p.mode)}}selected{{/if}}>{{m.label}}</option>
+              {{/each}}
+            </select>
+
+            {{#if p.spellWarns}}
+              <span class='duel-flag warns' data-tooltip='{{localize "HOGWARTS.Duel.WarnStar"}}'>*</span>
+            {{/if}}
+            {{#if p.spellUnlinked}}
+              <span class='duel-flag unlinked' data-tooltip='{{localize "HOGWARTS.Duel.UnlinkedHint"}}'>?</span>
+            {{/if}}
+
+            <span class='duel-priority' data-tooltip='{{localize "HOGWARTS.Duel.PriorityHint"}}'>P{{p.priority}}</span>
+            <span class='duel-init' data-tooltip='{{localize "HOGWARTS.Duel.Initiative"}}'>{{p.initiativeDisplay}}</span>
+
+            <button type='button' data-action='rollDuelInitiative' data-combatant-id='{{p.id}}'
+                    data-tooltip='{{localize "HOGWARTS.Duel.Initiative"}}'>
+              <i class='fas fa-dice-d6'></i>
+            </button>
+            <button type='button' data-action='castDeclared' data-combatant-id='{{p.id}}'
+                    data-tooltip='{{localize "HOGWARTS.Duel.Cast"}}'>
+              <i class='fas fa-wand-sparkles'></i>
+            </button>
+            {{#if @root.isGM}}
+              <button type='button' data-action='disqualify' data-combatant-id='{{p.id}}'
+                      data-tooltip='{{localize "HOGWARTS.Duel.Disqualify"}}'>
+                <i class='fas fa-circle-xmark'></i>
+              </button>
+            {{/if}}
+          </div>
+        {{/if}}
+      </div>
+    {{else}}
+      <p class='duel-hint'>{{localize 'HOGWARTS.Duel.NoParticipants'}}</p>
+    {{/each}}
+  </section>
+
+  {{! Reference list of the spells the agreed type allows (§27.5) }}
+  <section class='duel-spell-list'>
+    <header>
+      <button type='button' data-action='toggleSpellList'>
+        <i class='fas {{#if showSpells}}fa-chevron-down{{else}}fa-chevron-right{{/if}}'></i>
+        {{localize 'HOGWARTS.Duel.AllowedSpells'}} ({{spells.length}}) — {{typeLabel}}
+      </button>
+    </header>
+    {{#if showSpells}}
+      <ul>
+        {{#each spells as |s|}}
+          <li class='{{#if s.unforgivable}}unforgivable{{/if}}'>
+            <span class='duel-spell-level'>{{s.level}}</span>
+            <span class='duel-spell-name'>{{s.name}}</span>
+            <span class='duel-spell-priority'>P{{s.priority}}</span>
+            {{#if s.warns}}<span class='duel-flag warns' data-tooltip='{{localize "HOGWARTS.Duel.WarnStar"}}'>*</span>{{/if}}
+            {{#if s.unlinked}}<span class='duel-flag unlinked' data-tooltip='{{localize "HOGWARTS.Duel.UnlinkedHint"}}'>?</span>{{/if}}
+          </li>
+        {{/each}}
+      </ul>
+    {{/if}}
+  </section>
+
+  {{! The nine steps the chapter runs a duel through (§27.3) }}
+  <section class='duel-steps'>
+    <header><i class='fas fa-list-ol'></i> {{localize 'HOGWARTS.Duel.Procedure'}}</header>
+    <ol>
+      {{#each steps as |s|}}<li>{{s}}</li>{{/each}}
+    </ol>
+  </section>
+
+</div>

@@ -4,6 +4,11 @@
  */
 export class HogwartsActor extends Actor {
 
+  /** Icon set at creation time, per actor type. */
+  static DEFAULT_ICONS = {
+    quidditchTeam: 'icons/svg/tower-flag.svg',
+  };
+
   /**
    * @override
    * Store the preset skills at creation. The sheet addresses skills by array
@@ -17,6 +22,10 @@ export class HogwartsActor extends Actor {
       const model = CONFIG.Actor.dataModels.character;
       this.updateSource({ 'system.skills': model.presetSkills() });
     }
+    // Foundry otherwise falls back to the anonymous silhouette, which says
+    // nothing about a team.
+    const icone = HogwartsActor.DEFAULT_ICONS[this.type];
+    if (icone && !data.img) this.updateSource({ img: icone });
     return allowed;
   }
 

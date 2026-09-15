@@ -30,7 +30,9 @@ export async function onAnimagusTransform(event) {
   const skill = this.actor.system.skills?.find((s) => s.name === 'Animagus');
   if (!skill) return ui.notifications.warn(game.i18n.localize('HOGWARTS.Actor.Animagus.NoSkill'));
 
-  const { mod } = await this._promptRollModifier.call(this, { showFougue: false });
+  const choice = await this._promptRollModifier.call(this, { showFougue: false });
+  if (!choice) return;
+  const { mod } = choice;
   const roll = new Roll('1d100', this.actor.getRollData());
   await roll.evaluate();
   const r = Number(roll.total) || 0;

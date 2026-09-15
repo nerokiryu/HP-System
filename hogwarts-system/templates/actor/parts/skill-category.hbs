@@ -40,8 +40,21 @@
           <div class='item-prop'>
             <input type='number' name='system.skills.{{row.index}}.base' value='{{row.entry.base}}' data-dtype='Number' />
           </div>
-          <div class='item-prop'>
-            <input type='number' name='system.skills.{{row.index}}.max' value='{{row.entry.max}}' data-dtype='Number' />
+          <div class='item-prop skill-max'>
+            {{#if (eq row.entry.category 'school')}}
+              {{! Sans bascule, la valeur calculée par année écraserait toute saisie. }}
+              {{#if row.entry.maxOverride}}
+                <input type='number' name='system.skills.{{row.index}}.max' value='{{row.entry.max}}' data-dtype='Number' />
+                <a class='max-auto' data-action='toggleSkillMaxAuto' data-index='{{row.index}}'
+                   data-tooltip='{{localize "HOGWARTS.Skills.MaxAuto.Restore"}}'><i class='fas fa-lock-open'></i></a>
+              {{else}}
+                <input type='number' name='system.skills.{{row.index}}.max' value='{{row.entry.max}}' data-dtype='Number' readonly />
+                <a class='max-auto' data-action='toggleSkillMaxAuto' data-index='{{row.index}}'
+                   data-tooltip='{{localize "HOGWARTS.Skills.MaxAuto.Override"}}'><i class='fas fa-lock'></i></a>
+              {{/if}}
+            {{else}}
+              <input type='number' name='system.skills.{{row.index}}.max' value='{{row.entry.max}}' data-dtype='Number' />
+            {{/if}}
           </div>
           <div class='item-prop'>
             <input type='number'
@@ -64,6 +77,13 @@
                data-label='{{skillName row.entry.name}}{{#if row.entry.spec}} ({{row.entry.spec}}){{/if}}'
                data-target='{{row.entry.value}}'>
               <i class='fas fa-dice-d10'></i>
+            </a>
+            <a class='rollable'
+               data-action='rollOpposedSkill'
+               data-label='{{skillName row.entry.name}}{{#if row.entry.spec}} ({{row.entry.spec}}){{/if}}'
+               data-target='{{row.entry.value}}'
+               data-tooltip='{{localize "HOGWARTS.Opposition.RollHint"}}'>
+              <i class='fas fa-scale-balanced'></i>
             </a>
             {{#if row.entry.custom}}
               <a class='item-control' data-action='deleteSkill' data-index='{{row.index}}' data-tooltip='{{localize "HOGWARTS.Skills.Delete"}}'>
