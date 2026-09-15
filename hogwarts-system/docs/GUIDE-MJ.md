@@ -21,15 +21,16 @@ Toutes les captures ont été prises avec un personnage de démonstration,
 6. [Magie](#6-magie)
 7. [Potions](#7-potions)
 8. [Combat](#8-combat)
-9. [Progression et expérience](#9-progression-et-expérience)
-10. [Points de maison](#10-points-de-maison)
-11. [Quidditch](#11-quidditch)
-12. [Créatures, familiers et PNJ](#12-créatures-familiers-et-pnj)
-13. [Les compendiums](#13-les-compendiums)
-14. [Réglages du monde](#14-réglages-du-monde)
-15. [Extensions maison](#15-extensions-maison)
-16. [Dépannage](#16-dépannage)
-17. [Aide-mémoire](#17-aide-mémoire)
+9. [Duel magique](#9-duel-magique)
+10. [Progression et expérience](#10-progression-et-expérience)
+11. [Points de maison](#11-points-de-maison)
+12. [Quidditch](#12-quidditch)
+13. [Créatures, familiers et PNJ](#13-créatures-familiers-et-pnj)
+14. [Les compendiums](#14-les-compendiums)
+15. [Réglages du monde](#15-réglages-du-monde)
+16. [Extensions maison](#16-extensions-maison)
+17. [Dépannage](#17-dépannage)
+18. [Aide-mémoire](#18-aide-mémoire)
 
 ---
 
@@ -65,7 +66,7 @@ personnages existants :
 | **Méthode d'assommement** | Table de résistance (§2.7.1) ou paliers de 25/50/75 % de PV (§2.7.2). |
 | **Exclure les matières scolaires des PC** | Détermine si les points investis dans les matières scolaires consomment ou non les Points de Création. |
 
-Le détail complet des onze réglages est en [section 14](#14-réglages-du-monde).
+Le détail complet des onze réglages est en [section 15](#15-réglages-du-monde).
 
 ---
 
@@ -196,11 +197,29 @@ la source ne les définit pas.
 Le bouton **Utiliser la Fougue** sous la carte permet de dépenser un point *après*
 coup — voir la section suivante.
 
-### Jets d'opposition
+### Jets en opposition
 
-Le bouton **Jet d'opposition**, en haut de l'onglet *Compétences*, ouvre un
-résolveur : choisissez les deux compétences opposées, le système lance les deux jets
-et compare les marges.
+Le livre publie **deux** mécaniques d'opposition, qu'il ne faut pas confondre.
+
+**Caractéristique contre caractéristique** — la table des résistances du §1.5. Le
+bouton **Jet d'opposition**, en haut de l'onglet *Compétences*, demande la valeur
+active et la valeur passive, puis lance le jet sous le pourcentage qui en découle :
+`50 + (active − passive) × 5`, borné à 5-95 comme la table imprimée.
+
+**Compétence contre compétence** — la règle du §28.3.4, que le livre emploie aussi
+dans les exemples de combat du chapitre 2 (esquive l. 3067, bagarre l. 3081). Chaque
+ligne de compétence porte une **icône balance** à côté du dé : elle publie la
+**différence** du jet (`valeur − résultat`) au lieu du degré de réussite.
+
+Une fois deux différences publiées, le bouton **Résoudre une opposition** — présent
+dans les tableaux de bord du duel et du Quidditch — compare la paire de votre choix :
+
+- la plus haute différence l'emporte ;
+- une **gêne** se soustrait à celui qui agit, comme dans l'exemple `40 − 10 − 28 = 2`
+  du livre ;
+- à égalité, l'action revient au **premier dans l'ordre d'initiative**.
+
+Une différence négative reste comparable : deux échecs se départagent donc normalement.
 
 ---
 
@@ -283,6 +302,31 @@ Cliquez sur l'icône du sort dans l'onglet *Sorts*. Le système :
 > livres la notent `FE : A%/B%`, où `A` est le malus une fois la formule maîtrisée et
 > `B` celui du lancer en mode extrême.
 
+### Legilimancie et Occlumancie
+
+Les deux compétences ne sont **pas** acquises par tout le monde : elles viennent des
+avantages *Legilimens* et *Occlumens*, qui les ouvrent à 15 % (maîtrise maximale
+80 %). La ligne apparaît sur la fiche dès que l'avantage est possédé et disparaît s'il
+est retiré ; elle n'est jamais écrite en dur dans les données.
+
+Un bouton **Pénétrer un esprit** s'affiche dans l'onglet *Avantages* du seul
+personnage qui possède la Legilimancie. Il demande la cible parmi les acteurs dotés
+d'Occlumancie, puis oppose les deux compétences. Trois issues :
+
+| Résultat | Signification |
+|----------|---------------|
+| **L'esprit de la cible est pénétré** | Le Legilimens l'emporte |
+| **L'intrusion échoue** | La défense l'emporte sans avoir réussi son propre jet |
+| **L'intrusion se retourne** | La défense réussit **et** l'emporte : c'est le Legilimens dont les pensées s'ouvrent |
+
+La proximité physique, le contact visuel et le calme de la cible modifient la
+difficulté (§15.1) : traduisez-les par le modificateur proposé dans la boîte.
+
+> **Extension maison.** Le chapitre 15 est entièrement descriptif : il ne publie ni dé
+> ni chiffre. Résoudre l'intrusion par une opposition de compétences, et la retourner
+> quand la défense réussit, sont une lecture de la phrase du §15.1 « Dangers »
+> (l. 24365). Le livre n'y attache aucun nombre, et la carte de chat le rappelle.
+
 ---
 
 ## 7. Potions
@@ -346,7 +390,90 @@ protection magique se lance depuis le sort correspondant.
 
 ---
 
-## 9. Progression et expérience
+## 9. Duel magique
+
+Le duel (chapitre 27) a ses propres règles, distinctes du combat : il dispose d'un
+**tableau de bord** accessible par l'icône baguette des contrôles de scène. Comme le
+Quidditch, il s'appuie sur une rencontre ouverte dans le tracker.
+
+### Les règles convenues
+
+Avant de commencer, les duellistes fixent les modalités (§27.1, §27.6). Le tableau de
+bord les reprend :
+
+| Réglage | Effet |
+|---------|-------|
+| **Type de duel** | `a` premier sort touchant · `b` mise hors combat · `c` première blessure · `d` duel à mort (§27.4) |
+| **Nombre de passes** | 1 à 10 ; chaque passe est un round |
+| **Modalités** | Informulés, sorts innés, sorts blessants et formules extrêmes, chacun autorisé ou interdit |
+
+Dans les types `a` et `b`, le tableau rappelle que **1 point de dégât disqualifie**.
+La disqualification reste un geste du MJ : lui seul sait si le dégât vient du sort ou
+de la chute qui a suivi.
+
+### Déclarer un sortilège
+
+Chaque participant reçoit un rôle — **duelliste**, **témoin/second** ou **arbitre**
+(§27.1). Seuls les duellistes déclarent un sort.
+
+La liste ne propose que les sortilèges **autorisés dans le type de duel choisi**,
+reprise de la table du §27.5 (67 entrées). Deux marques complètent l'affichage :
+
+- **`*`** : le livre étoile le sort — il peut blesser ou tuer dans certains cas ;
+- **`?`** : le nom figure dans la table du livre mais ne correspond à aucun
+  sortilège publié, ni dans le livre de base ni dans le Grimoire. Ils sont conservés
+  tels quels plutôt que rapprochés d'un candidat plausible : c'est une incohérence de
+  la source, et vous devez la voir.
+
+Les Impardonnables ne sont proposés que dans le duel à mort.
+
+### L'ordre de résolution
+
+Le duel remplace les phases de combat par l'**échelle de priorité** du §27.3. Le rang
+s'affiche dans le tracker à la place du badge de phase habituel :
+
+| Rang | Sortilèges | Initiative |
+|------|-----------|-----------|
+| **P1** | Innés | — |
+| **P2** | Protection | — |
+| **P3** | Informulés | **+3** |
+| **P3** | Classiques | — |
+| **P4** | Formules extrêmes | **−3** |
+
+La colonne de priorité imprimée dans la table du §27.5 fait foi ; seuls les modes
+*inné* et *formule extrême* la surchargent.
+
+Le bouton **dé** de chaque duelliste lance `1d6 + DEX`, augmenté du modificateur de
+mode et de l'entraînement. Si le personnage a des points de fougue, le système propose
+de **relancer le d6 avec un bonus de +2** (l. 28683) — le choix se fait avant de
+connaître l'ordre adverse, comme le veut le livre.
+
+### L'entraînement au duel
+
+Le champ **Années de club de duel** de l'onglet *Avantages* vaut **+1 à l'initiative
+de duel par année, jusqu'à +5** (§27.2). Il se cumule avec l'avantage *Initié au
+duel* (+2), exactement comme dans l'exemple de Mary Macmilliam.
+
+> L'avantage est livré comme un effet **conditionnel**. S'il est activé, son +2 est
+> déjà compté dans le modificateur d'initiative de la fiche et le tableau de bord ne
+> l'ajoute pas une seconde fois. Le total est le même quel que soit votre réglage.
+
+### Lancer le sort déclaré
+
+Le bouton **baguette** applique automatiquement le degré de maîtrise dans la
+compétence associée, le malus du sort, le stress, et les **−30 %** d'un informulé.
+
+- Une **formule extrême** n'est prise en compte que si le sort en possède une. La
+  plupart affichent « Formule extrême : - » : dans ce cas le malus normal s'applique
+  et la boîte de lancement vous le signale.
+- Un **sort inné** ne rate jamais. Sur une opposition, un jet manqué compte comme une
+  réussite de différence 0 (l. 23197).
+
+La carte publie la **différence** du jet, prête pour le résolveur d'opposition.
+
+---
+
+## 10. Progression et expérience
 
 Tous les outils sont réunis en haut de l'onglet *Compétences* :
 
@@ -367,7 +494,7 @@ dépense fait passer un total sous zéro — utile pour rattraper une saisie err
 
 ---
 
-## 10. Points de maison
+## 11. Points de maison
 
 ![Points de maison](../assets/tutorial/07-points-de-maison.png)
 
@@ -391,7 +518,7 @@ zéro — typiquement en fin d'année scolaire.
 
 ---
 
-## 11. Quidditch
+## 12. Quidditch
 
 Le Quidditch (chapitre 28) dispose d'un sous-système complet : un **tableau de bord de
 match** et un **type d'acteur « Équipe de Quidditch »**.
@@ -430,13 +557,16 @@ Icône **balai** dans la barre d'outils de scène. Le tableau de bord s'appuie s
    propres actions — un poursuiveur peut *Tirer au but*, un gardien *Arrêter le tir*,
    un attrapeur *Repérer le vif d'or*.
 3. **Score** : `+10 But` et `+150 Vif d'or` pour chaque camp. La prise du vif d'or
-   termine le match.
+   termine le match. Les boutons ne font qu'**ajouter** : pour corriger une erreur de
+   saisie, utilisez le champ **± sous chaque score**, ou **Remettre le score à zéro**
+   qui conserve la composition et l'état du vif d'or. Un score ne descend jamais sous
+   zéro, et chaque correction est publiée dans le chat.
 4. **Vif d'or** : la chance d'apparition augmente à chaque round. *Tester
    l'apparition* effectue le jet ; une fois le vif repéré, *Combler 5 m* réduit la
    distance qui sépare l'attrapeur de la balle.
-5. **Résoudre une opposition** : ouvre le résolveur pour les actions opposées
-   (interception, arrêt, duel d'attrapeurs). La marge de réussite est publiée dans la
-   carte de chat, ce qui permet de trancher immédiatement.
+5. **Résoudre une opposition** : ouvre le résolveur décrit en
+   [section 4](#4-faire-un-jet), pour les actions opposées (interception, arrêt, duel
+   d'attrapeurs).
 6. **Terminer le match** : publie le score final et rebascule le combat en mode normal.
 
 En mode Quidditch, le tracker de combat remplace le badge de phase par le **poste** de
@@ -446,7 +576,7 @@ chaque joueur, et l'ordre du tour suit les postes plutôt que l'initiative :
 
 ---
 
-## 12. Créatures, familiers et PNJ
+## 13. Créatures, familiers et PNJ
 
 | Type d'acteur | Usage |
 |---|---|
@@ -463,7 +593,7 @@ ses jets et ses dégâts sont alors accessibles directement depuis la fiche du m
 
 ---
 
-## 13. Les compendiums
+## 14. Les compendiums
 
 | Compendium | Type | Documents | Source |
 |---|---|---:|---|
@@ -484,7 +614,7 @@ contiennent aucun texte de règle recopié : vous devez posséder les ouvrages.
 
 ---
 
-## 14. Réglages du monde
+## 15. Réglages du monde
 
 ![Réglages du système](../assets/tutorial/12-parametres.png)
 
@@ -492,7 +622,7 @@ contiennent aucun texte de règle recopié : vous devez posséder les ouvrages.
 
 | Réglage | Défaut | Effet |
 |---|---|---|
-| **Points de maison** | — | Ouvre le sablier (voir section 10) |
+| **Points de maison** | — | Ouvre le sablier (voir section 11) |
 | **Avertir en cas d'expérience négative** | activé | Notifie si une dépense passe sous zéro |
 | **Utiliser des icônes pour les onglets** | activé | Icônes plutôt que libellés. Préférence **client** |
 | **Paliers de réussite étendus** | désactivé | Ajoute *Extrême* et *Difficile*, empruntés au BRP. Hors règles officielles |
@@ -510,7 +640,7 @@ contiennent aucun texte de règle recopié : vous devez posséder les ouvrages.
 
 ---
 
-## 15. Extensions maison
+## 16. Extensions maison
 
 Le système suit le livre partout où celui-ci tranche. Quelques éléments, en
 revanche, **ne figurent dans aucune source** : ils sont listés ici pour que vous
@@ -524,6 +654,7 @@ table.
 | **Bonus de dégâts des créatures** | Introuvable dans le livre de base, le *Bestiaire* et l'*Encyclopédie* | Table prolongée hors du domaine humain : −1d4, −1d2, +3d6, +4d6 |
 | **Sorts instinctifs (POU × 3)** | Le principe d'une magie enfantine incontrôlée est évoqué ; **aucune résolution chiffrée** | Case « Sort instinctif » déclenchant un jet sous POU × 3 |
 | **Animagus** | Le chapitre 16 publie le processus en dix étapes et un test de personnalité donnant la catégorie d'animal, mais **aucun jet de transformation** | Paliers de maîtrise et bouton de transformation (jet sous la compétence Animagus) |
+| **Legilimancie contre Occlumancie** | Le chapitre 15 est **entièrement descriptif** : ni dé, ni chiffre. Seul le sort *Legilimens* porte une opposition POU/POU (l. 22189) | Opposition des deux compétences, et renversement contre le Legilimens quand la défense réussit — lecture de la phrase du §15.1 « Dangers » (l. 24365), à laquelle le livre n'attache aucun nombre |
 
 > **Animagus — deux valeurs dans la source.** Le tableau des avantages annonce la compétence à
 > 20 % (max 90 %), la fin du chapitre 16 à 10 % (max 80 %). Le système retient le chapitre dédié ;
@@ -533,11 +664,21 @@ table.
 
 Les trois premiers points sont signalés directement dans l'interface : survolez
 les colonnes *Base* et *Max* de l'onglet Compétences, ou la case « Sort
-instinctif » d'une fiche de sortilège.
+instinctif » d'une fiche de sortilège. L'opposition mentale le signale dans sa
+carte de chat.
+
+### Trois sortilèges de la table des duels n'existent pas
+
+La table du §27.5 nomme *Annulation de sort*, *Immobilisation totale* et
+*Explosion* : aucun de ces trois noms ne correspond à un sortilège publié, ni dans
+le livre de base, ni dans le Grimoire. Ils sont **conservés tels quels et marqués
+d'un « ? »** plutôt que rapprochés d'un candidat plausible : c'est une incohérence
+de la source, et le choix vous revient. Deux autres n'étaient que des coquilles et
+ont été rapprochées sans ambiguïté : *Jambencoton* et *Mouche-Sadrines*.
 
 ---
 
-## 16. Dépannage
+## 17. Dépannage
 
 **Une valeur ne veut pas changer.**
 Elle est dérivée. Cherchez ce qui l'alimente : la *Valeur* d'une compétence vient de
@@ -564,9 +705,24 @@ valeur d'initiative pour forcer le rafraîchissement.
 Le champ *affinité* de la baguette doit mentionner l'école : « enchantements »,
 « métamorphose » ou « mauvais sorts ».
 
+**Le résolveur d'opposition dit qu'il manque des différences.**
+Il lit les cartes de chat récentes. Chaque camp doit d'abord publier la sienne, par
+l'icône balance d'une ligne de compétence, par une action de Quidditch opposée ou
+par un sort lancé en duel.
+
+**Un duelliste n'apparaît pas au bon rang.**
+Le tri suit la **priorité du sort déclaré**, pas l'initiative seule. Un sort de
+protection passe toujours avant un sort classique, quelle que soit l'initiative.
+Déclarez le sort avant de lancer l'initiative.
+
+**Le bonus d'« Initié au duel » semble manquer.**
+Il est bien là : si vous avez activé l'effet conditionnel de l'avantage, son +2 est
+déjà compté dans le modificateur d'initiative de la fiche, et la ligne
+*Entraînement* de la carte ne montre alors que les années de club.
+
 ---
 
-## 17. Aide-mémoire
+## 18. Aide-mémoire
 
 ### Degrés de réussite
 
@@ -611,6 +767,32 @@ Le champ *affinité* de la baguette doit mentionner l'école : « enchantements 
 |---|---|
 | Clic sur le badge numéroté | Fait tourner la phase déclarée (1 → 2 → 3) |
 | Alt + clic sur le badge | Marque ou retire l'état **surpris** |
+
+En duel, le badge numéroté est remplacé par le **rang de priorité** (`P1` à `P4`),
+qui se règle en déclarant un sortilège, pas en cliquant.
+
+### Priorités et initiative en duel
+
+| Rang | Sortilèges | Initiative |
+|---|---|---|
+| `P1` | Innés | — |
+| `P2` | Protection | — |
+| `P3` | Informulés | +3 |
+| `P3` | Classiques | — |
+| `P4` | Formules extrêmes | −3 |
+
+Bonus d'entraînement : **+1 par année de club** (maximum +5), cumulable avec
+l'avantage *Initié au duel* (+2).
+
+### Les deux oppositions
+
+| Mécanique | Source | Quand |
+|---|---|---|
+| Table des résistances | §1.5 | Une caractéristique contre une autre |
+| Comparaison des différences | §28.3.4 | Une compétence contre une autre |
+
+Différence = `valeur effective − résultat du dé`. La plus haute l'emporte ; à égalité,
+le premier dans l'ordre d'initiative.
 
 ---
 

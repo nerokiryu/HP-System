@@ -1,5 +1,22 @@
 # CHANGELOG
 
+## 1.2.1
+
+### Documentation
+
+Le guide du Maître du Jeu gagne une section **Duel magique** (règles convenues,
+déclaration, échelle de priorité, entraînement en club, lancement du sort) et une
+sous-section **Legilimancie et Occlumancie**.
+
+La section sur les jets distingue désormais les **deux mécaniques d'opposition** que
+publie le livre — table des résistances du §1.5 et comparaison des différences du
+§28.3.4 — là où le guide n'en décrivait qu'une, inexactement.
+
+Complètent la mise à jour : l'ajustement manuel du score de Quidditch, les trois
+sortilèges introuvables de la table du §27.5 parmi les ambiguïtés des sources,
+l'opposition mentale parmi les extensions maison, quatre entrées de dépannage et
+trois tableaux d'aide-mémoire. Le README suit.
+
 ## 1.2.0
 
 ### Duel magique (ch. 27)

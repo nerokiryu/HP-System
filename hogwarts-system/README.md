@@ -1,7 +1,7 @@
 # Hogwarts System
 
 ![Foundry v14](https://img.shields.io/badge/foundry-v14-green)
-![Version](https://img.shields.io/badge/version-1.2.0-blue)
+![Version](https://img.shields.io/badge/version-1.2.1-blue)
 ![Licence](https://img.shields.io/badge/licence-MIT-lightgrey)
 
 Système Foundry VTT pour le jeu de rôle amateur **Harry Potter JdR** (v1.12) et ses
@@ -107,6 +107,21 @@ seuil dépasse 96, conformément au livre (« non seulement l'action est manqué
 
 Un réglage facultatif ajoute les paliers étendus *Extrême* et *Difficile* du BRP.
 
+### Oppositions
+
+Le livre publie deux mécaniques distinctes, toutes deux implémentées :
+
+- **Table des résistances** (§1.5) : une caractéristique active contre une passive,
+  `50 + (active − passive) × 5`, borné à 5-95 comme la table imprimée.
+- **Comparaison des différences** (§28.3.4) : deux jets de compétence opposent leur
+  marge `valeur − résultat`. La plus haute l'emporte, une gêne se soustrait à celui
+  qui agit, et l'égalité revient au premier dans l'ordre d'initiative. Le livre
+  emploie cette règle bien au-delà du Quidditch : les exemples d'esquive et de bagarre
+  du chapitre 2 se résolvent ainsi.
+
+Chaque ligne de compétence peut publier sa différence, et un résolveur commun tranche
+la paire choisie.
+
 ### Magie
 
 - Écoles : Enchantements, Métamorphose, Mauvais sorts, et les sorts hors école.
@@ -121,6 +136,10 @@ Un réglage facultatif ajoute les paliers étendus *Extrême* et *Difficile* du 
 - **Affinité de baguette** : +10 % lorsque le champ `affinity` de la baguette
   mentionne l'école du sort lancé (« enchantements », « métamorphose »,
   « mauvais sorts » et leurs variantes).
+- **Legilimancie et Occlumancie** : les deux compétences viennent des avantages
+  correspondants et s'opposent l'une à l'autre, avec renversement contre le
+  Legilimens quand la défense réussit. Le chapitre 15 étant purement descriptif,
+  cette résolution est une extension maison, signalée comme telle.
 
 ### Combat
 
@@ -131,6 +150,20 @@ Un réglage facultatif ajoute les paliers étendus *Extrême* et *Difficile* du 
 - **Blessures** : seuils de dégâts, inconscience, mort et récupération.
   Deux procédures d'assommement sont proposées par le livre, toutes deux disponibles.
 - L'armure peut être déduite automatiquement des dégâts.
+
+### Duel magique
+
+Tableau de bord dédié pour le chapitre 27, distinct du combat ordinaire :
+
+- les **quatre types de duel** du §27.4 et leurs conditions de disqualification ;
+- la **table des 67 sortilèges autorisés** du §27.5, filtrée par type, les sorts
+  étoilés signalés et les Impardonnables réservés au duel à mort ;
+- l'**échelle de priorité** du §27.3, qui remplace les phases de combat : innés,
+  protection, informulés (+3) et classiques, formules extrêmes (−3) ;
+- l'**entraînement en club**, +1 par année jusqu'à +5, cumulable avec l'avantage
+  *Initié au duel* ;
+- la **dépense d'un point de fougue** sur le jet d'initiative, qui relance le d6
+  avec +2.
 
 ### Progression
 
@@ -213,14 +246,20 @@ module/
   hogwarts-system.mjs      Point d'entrée : hooks, réglages, migrations, helpers Handlebars
   data/                    Modèles de données (TypeDataModel) par type d'acteur et d'objet
   documents/               Classes Actor, Item et Combat
-  sheets/                  Fiches ApplicationV2 des acteurs et des objets
-  applications/            Applications autonomes (points de maison)
-  helpers/                 Configuration, degrés de réussite, effets actifs
+  sheets/                  Fiches ApplicationV2 ; sheets/actor/ découpe la fiche par domaine
+  applications/            Applications autonomes : points de maison, Quidditch, duel,
+                           assistant de création, résolveur d'opposition
+  helpers/                 Configuration, degrés, effets, sens, oppositions, duel, Quidditch
 templates/                 Gabarits Handlebars
 src/scss/                  Sources du thème
 packs/                     Compendiums (base LevelDB) et leur source JSON
-test/                      Tests unitaires
+test/                      Tests unitaires et tests d'intégrité structurelle
+tools/                     Vérification des tests par mutation
+docs/                      Guide du Maître du Jeu
 ```
+
+Les fichiers de `helpers/` ne référencent aucune API Foundry : l'arithmétique des
+règles reste testable sans démarrer le jeu.
 
 ### Points d'attention pour Foundry v14
 
@@ -248,6 +287,7 @@ npm run compendia
 ```
 
 `build-compendia.mjs` lit les livres et écrit `packs/<pack>/json/*.json` ;
+`build-guide.mjs` convertit le guide du MJ en entrée de compendium ;
 `build-packs.mjs` compile ensuite ces fichiers vers la base LevelDB que Foundry lit.
 
 Conventions appliquées par le générateur, documentées en tête de `build-compendia.mjs` :
@@ -272,6 +312,8 @@ silencieusement : il expose un réglage ou documente le choix retenu.
 | Moyenne annuelle de 1ʳᵉ année | §7.3 annonce 21 %, mais sa propre formule `10+3d6+3` donne 23,5 | La formule fait foi |
 | Signe des malus | Les sortilèges sont notés `FC : 20%`, les potions `-10%`, le livre de base parfois `FC : -20%` | Normalisé en négatif |
 | Assommement | Le livre décrit deux procédures (§2.7.1 et §2.7.2) | Réglage `knockoutMethod` |
+| Compétence Animagus | Le tableau des avantages donne 20 %/90 %, le chapitre 16 donne 10 %/80 % | Le chapitre dédié fait foi, les colonnes restent modifiables |
+| Sortilèges de la table des duels | Trois noms du §27.5 — *Annulation de sort*, *Immobilisation totale*, *Explosion* — ne correspondent à aucun sortilège publié | Conservés et marqués « ? » plutôt que rapprochés d'un candidat |
 
 Deux affirmations d'audits antérieurs se sont révélées fausses à la vérification et
 ne doivent pas être réintroduites : le *Bestiaire* publie bien plusieurs valeurs de
